@@ -14,6 +14,10 @@ export function getStaticPaths() {
 
 const { programme } = Astro.props;
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
+const contentItems =
+	programme.content?.[0]?.type === 'image' && programme.content[0]?.src === programme.hero_image
+		? programme.content.slice(1)
+		: programme.content;
 const badges = [
 	...(programme.duration ? [programme.duration] : []),
 	...programme.audiences.map((audience) => audience.label),
@@ -34,5 +38,5 @@ const badges = [
 		badges={badges}
 	/>
 	<HeroMedia src={programme.hero_image} alt={programme.title} />
-	<RichContent items={programme.content} />
+	<RichContent items={contentItems} />
 </BaseLayout>

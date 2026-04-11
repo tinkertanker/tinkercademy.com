@@ -1,27 +1,48 @@
+- id: ai
+  label: AI and Machine Learning with Data Science
+  source_id: vpWDOwfOJ
 - id: ai-and-machine-learning-with-data-science
   label: AI and Machine Learning with Data Science
   source_id: ai-and-machine-learning-with-data-science
+- id: cs
+  label: Computer Science Fundamentals
+  source_id: uMQrqiRw1
 - id: computer-science-fundamentals
   label: Computer Science Fundamentals
   source_id: computer-science-fundamentals
+- id: making
+  label: Creativity, Craft, and Making
+  source_id: e_A2k1nRU
 - id: creativity-craft-and-making
   label: Creativity, Craft, and Making
   source_id: creativity-craft-and-making
 - id: cryptography
   label: Cryptography
-  source_id: cryptography
+  source_id: V6cZ3Rf_S
 - id: design-thinking
   label: Design Thinking
-  source_id: design-thinking
+  source_id: Tykfon5ZF
+- id: uiux
+  label: Design, Prototyping, and UI/UX
+  source_id: R7ku5ShhB
 - id: design-prototyping-and-ui-ux
   label: Design, Prototyping, and UI/UX
   source_id: design-prototyping-and-ui-ux
+- id: gamedev
+  label: Game Development
+  source_id: JJfAJSl1s
 - id: game-development
   label: Game Development
   source_id: game-development
+- id: iot
+  label: Microcontrollers & IoT
+  source_id: y29slfr8O
 - id: microcontrollers-iot
   label: Microcontrollers & IoT
   source_id: microcontrollers-iot
+- id: appdev
+  label: Mobile App Development
+  source_id: sBqWC3exH
 - id: mobile-app-development
   label: Mobile App Development
   source_id: mobile-app-development
@@ -30,7 +51,10 @@
   source_id: professional-productivity-with-technology
 - id: software-engineering
   label: Software Engineering
-  source_id: software-engineering
+  source_id: IgMVqCDv3
+- id: webdev
+  label: Web Development
+  source_id: I6HoEEJFg
 - id: web-development
   label: Web Development
   source_id: web-development

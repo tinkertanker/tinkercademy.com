@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { load } from 'cheerio';
 import YAML from 'yaml';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
@@ -35,17 +36,76 @@ function uniqueBy(items, keyFn) {
 	});
 }
 
+function uniqueStrings(values) {
+	return [...new Set((values ?? []).filter(Boolean))];
+}
+
+function sameBlock(left, right) {
+	return left?.tag === right?.tag && left?.text === right?.text;
+}
+
+function sameChunk(blocks, leftStart, rightStart, size) {
+	if (rightStart + size > blocks.length) return false;
+
+	for (let index = 0; index < size; index += 1) {
+		if (!sameBlock(blocks[leftStart + index], blocks[rightStart + index])) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function collapseRepeatedChunks(blocks) {
+	const source = blocks ?? [];
+	const collapsed = [];
+
+	for (let cursor = 0; cursor < source.length; ) {
+		let matchedChunk = false;
+		const maxChunkSize = Math.min(12, Math.floor((source.length - cursor) / 2));
+
+		for (let size = maxChunkSize; size >= 2; size -= 1) {
+			if (!sameChunk(source, cursor, cursor + size, size)) continue;
+
+			let nextCursor = cursor + size;
+			while (sameChunk(source, cursor, nextCursor, size)) {
+				nextCursor += size;
+			}
+
+			collapsed.push(...source.slice(cursor, cursor + size));
+			cursor = nextCursor;
+			matchedChunk = true;
+			break;
+		}
+
+		if (!matchedChunk) {
+			collapsed.push(source[cursor]);
+			cursor += 1;
+		}
+	}
+
+	return collapsed;
+}
+
+function getBlocks(page) {
+	return collapseRepeatedChunks(page.contentBlocks ?? []);
+}
+
 function pickLead(page) {
-	const richText = page.framer?.structured?.content?.find((entry) => entry.kind === 'richtext')?.text;
-	const paragraph = page.contentBlocks?.find((block) => block.tag === 'p')?.text;
+	const firstRichText = page.framer?.structured?.content?.find((entry) => entry.kind === 'richtext');
+	const richParagraph = firstRichText?.html ? cleanText(load(firstRichText.html)('p').first().text()) : '';
+	const richText = richParagraph || firstRichText?.text;
+	const paragraph = getBlocks(page).find((block) => block.tag === 'p' && block.text.length > 32)?.text;
 	return richText || paragraph || page.seo?.description || null;
 }
 
 function pickTitle(page) {
+	const blocks = getBlocks(page);
+	const heroHeading = blocks.find((block) => block.tag === 'h1')?.text ?? null;
 	const contentHeading =
-		page.contentBlocks?.find((block) => block.tag === 'h1')?.text ??
-		page.contentBlocks?.find((block) => block.tag === 'h2')?.text;
+		heroHeading ?? blocks.find((block) => block.tag === 'h2')?.text;
 
+	if (page.path === '/' && contentHeading) return contentHeading;
 	if (page.framer?.structured?.title) return page.framer.structured.title;
 	if (contentHeading) return contentHeading;
 	return (page.seo?.title ?? page.path).replace(/\s+-\s+Tinkercademy.*$/, '');
@@ -75,13 +135,14 @@ function blocksAfterLabel(blocks, label) {
 }
 
 function inferProgrammeFallbacks(page) {
-	const duration = blocksAfterLabel(page.contentBlocks, 'Duration:')[0] ?? null;
-	const audiences = blocksAfterLabel(page.contentBlocks, 'Audiences:').map((label) => ({
+	const blocks = getBlocks(page);
+	const duration = blocksAfterLabel(blocks, 'Duration:')[0] ?? null;
+	const audiences = blocksAfterLabel(blocks, 'Audiences:').map((label) => ({
 		id: slugify(label),
 		label,
 		source_id: slugify(label),
 	}));
-	const topics = blocksAfterLabel(page.contentBlocks, 'Type:').map((label) => ({
+	const topics = blocksAfterLabel(blocks, 'Type:').map((label) => ({
 		id: slugify(label),
 		label,
 		source_id: slugify(label),
@@ -91,7 +152,7 @@ function inferProgrammeFallbacks(page) {
 }
 
 function inferLocation(contactPage) {
-	const joined = (contactPage?.contentBlocks ?? []).map((block) => block.text).join(' ');
+	const joined = getBlocks(contactPage ?? {}).map((block) => block.text).join(' ');
 	const match = joined.match(/59 Jalan Pemimpin #04-01,\s*L&Y Building,\s*Singapore 577218/i);
 	if (!match) return [];
 
@@ -145,10 +206,11 @@ function makeContentItems(page) {
 		});
 	}
 
+	const sourceBlocks = getBlocks(page);
 	const blocks = [];
 	let currentList = null;
 
-	for (const block of page.contentBlocks ?? []) {
+	for (const block of sourceBlocks) {
 		if (block.tag === 'li') {
 			currentList ??= [];
 			currentList.push(block.text);
@@ -176,6 +238,125 @@ function makeContentItems(page) {
 	}
 
 	return blocks;
+}
+
+function toRenderedCta(cta) {
+	return {
+		label: cta.label,
+		url: cta.url,
+		type: classifyCtaType(cta.url),
+	};
+}
+
+function pickCtasByLabel(ctas, labels) {
+	const uniqueCtas = uniqueBy(ctas ?? [], (cta) => `${cta.label}::${cta.url}`);
+	return labels
+		.map((label) => uniqueCtas.find((cta) => cta.label === label))
+		.filter(Boolean)
+		.map(toRenderedCta);
+}
+
+function extractFlagshipItems(page, blocks) {
+	const startIndex = blocks.findIndex((block) => /^Our Flagship/.test(block.text));
+	if (startIndex === -1) return [];
+
+	const endIndex = blocks.findIndex((block, index) => index > startIndex && /^Popular Courses?$/.test(block.text));
+	const slice = blocks.slice(startIndex + 1, endIndex === -1 ? blocks.length : endIndex);
+	const images = (page.images ?? [])
+		.filter((image) => {
+			const width = Number(image.width);
+			const height = Number(image.height);
+			return Number.isFinite(width) && Number.isFinite(height) && width >= 320 && width <= 720 && height >= 320 && height <= 720;
+		})
+		.slice(0, 3);
+	const items = [];
+	let currentItem = null;
+
+	for (const block of slice) {
+		if (block.tag === 'h3') {
+			if (currentItem) items.push(currentItem);
+			currentItem = { title: block.text, description: '' };
+			continue;
+		}
+
+		if (currentItem && block.tag === 'p' && block.text !== 'Read More') {
+			currentItem.description = currentItem.description
+				? `${currentItem.description} ${block.text}`
+				: block.text;
+		}
+	}
+
+	if (currentItem) items.push(currentItem);
+
+	return items.slice(0, 3).map((item, index) => ({
+		...item,
+		image: images[index]?.src ?? null,
+	}));
+}
+
+function extractHomePageData(page) {
+	const blocks = getBlocks(page);
+	const heroHeadings = uniqueStrings(blocks.filter((block) => block.tag === 'h1').map((block) => block.text));
+	const partnerStatement =
+		uniqueStrings(
+			blocks
+				.filter((block) => /Official training partner/.test(block.text))
+				.map((block) => block.text),
+		)[0] ?? null;
+	const focusStart = blocks.findIndex(
+		(block) => block.tag === 'p' && block.text === 'Courses available in a wide variety of modern, practical domains.',
+	);
+	const focusAreas = [];
+
+	for (let index = focusStart + 1; index < blocks.length; index += 1) {
+		const block = blocks[index];
+		if (/^Led by experts/.test(block.text) || /^Our Flagship/.test(block.text)) break;
+		if (block.tag === 'p') focusAreas.push(block.text);
+	}
+
+	const proofPoints = uniqueStrings(
+		blocks
+			.filter((block) => /^(Led by experts|Curriculum designed)/.test(block.text))
+			.map((block) => block.text),
+	).slice(0, 2);
+
+	const featuredProgrammeSlugs = uniqueBy(
+		(page.ctas ?? [])
+			.map((cta) => {
+				const match = cta.url.match(/^https:\/\/tinkercademy\.com\/programmes\/([^/?#]+)/);
+				return match ? { slug: decodeURIComponent(match[1]) } : null;
+			})
+			.filter(Boolean),
+		(item) => item.slug,
+	).map((item) => item.slug);
+
+	const closingStatement =
+		uniqueStrings(
+			blocks
+				.filter((block) => /^Join us for the best coding and digital making experiences/.test(block.text))
+				.map((block) => block.text),
+		)[0] ?? null;
+
+	const partnerStripImage =
+		(page.images ?? []).find((image, index) => {
+			const width = Number(image.width);
+			const height = Number(image.height);
+			return index > 1 && Number.isFinite(width) && Number.isFinite(height) && width / Math.max(height, 1) > 2.5;
+		})?.src ?? null;
+
+	return {
+		hero_title: heroHeadings[0] ?? pickTitle(page),
+		hero_lead: heroHeadings[1] ?? page.seo?.description ?? null,
+		hero_actions: pickCtasByLabel(page.ctas, ['Programmes', 'Professionals', 'Schools', 'Individuals']),
+		partner_statement: partnerStatement,
+		partner_strip_image: partnerStripImage,
+		focus_areas: uniqueStrings(focusAreas),
+		proof_points: proofPoints,
+		flagship_items: extractFlagshipItems(page, blocks),
+		featured_programme_slugs: featuredProgrammeSlugs,
+		closing_statement: closingStatement,
+		closing_ctas: pickCtasByLabel(page.ctas, ['Our Courses', 'Our Projects']),
+	};
 }
 
 function toProgrammeRecord(page) {
@@ -222,7 +403,7 @@ function toTutorialRecord(page) {
 }
 
 function toStaticPage(page) {
-	return {
+	const record = {
 		path: page.path,
 		slug: page.path === '/' ? 'home' : page.path.replace(/^\/|\/$/g, ''),
 		title: pickTitle(page),
@@ -232,6 +413,15 @@ function toStaticPage(page) {
 		ctas: page.ctas ?? [],
 		content: makeContentItems(page),
 	};
+
+	if (page.path === '/') {
+		return {
+			...record,
+			...extractHomePageData(page),
+		};
+	}
+
+	return record;
 }
 
 async function writeYamlFile(fileName, value) {
@@ -281,7 +471,7 @@ const contacts = uniqueBy(
 			id: slugify(`${contact.type}-${contact.value}`),
 			label: contact.type === 'email' ? 'Email' : 'Phone',
 			channel_type: contact.type,
-			value: contact.value,
+			value: contact.value.trim(),
 		})),
 	(contact) => contact.id,
 );

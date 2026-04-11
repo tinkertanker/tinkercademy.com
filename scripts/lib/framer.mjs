@@ -109,6 +109,52 @@ export function renderRichTextPointer(pointer) {
 	}
 }
 
+function parseLeadingJsonObject(value) {
+	if (typeof value !== 'string' || !value.startsWith('{')) return null;
+
+	let depth = 0;
+	let inString = false;
+	let escaped = false;
+
+	for (let index = 0; index < value.length; index += 1) {
+		const char = value[index];
+
+		if (inString) {
+			if (escaped) {
+				escaped = false;
+				continue;
+			}
+			if (char === '\\') {
+				escaped = true;
+				continue;
+			}
+			if (char === '"') {
+				inString = false;
+			}
+			continue;
+		}
+
+		if (char === '"') {
+			inString = true;
+			continue;
+		}
+
+		if (char === '{') {
+			depth += 1;
+			continue;
+		}
+
+		if (char === '}') {
+			depth -= 1;
+			if (depth === 0) {
+				return value.slice(0, index + 1);
+			}
+		}
+	}
+
+	return null;
+}
+
 function parseQueryPairs(data) {
 	const pairs = [];
 
@@ -120,7 +166,7 @@ function parseQueryPairs(data) {
 		}
 
 		try {
-			const query = JSON.parse(candidate);
+			const query = JSON.parse(parseLeadingJsonObject(candidate) ?? candidate);
 			const records = next.map((entry) => resolveReference(data, entry)).filter(Boolean);
 			pairs.push({ index, query, records });
 		} catch {
