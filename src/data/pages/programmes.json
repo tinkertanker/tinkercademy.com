@@ -1,0 +1,4681 @@
+[
+  {
+    "id": "imda-phaser-2025",
+    "slug": "imda-phaser-2025",
+    "title": "AI-Driven Game Development on Phaser",
+    "subtitle": null,
+    "duration": "24 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "game-development"
+    ],
+    "cta_ids": [
+      "zenitant-https-zenitanteducation-com",
+      "3d-tronics-micro-controller-challenge-https-3dtronics-asia",
+      "email-us-mailto-yjsoon-tk-sg",
+      "vscodeedu-com-https-vscodeedu-com",
+      "phaser-io-download-https-phaser-io-download",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-phaser-2025",
+      "openGraph": {
+        "title": "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "AI-Driven Game Development on Phaser"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Game Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design fundamentals, including sprite animation, physics, user input, and level creation. They will apply structured development workflows—planning, prototyping, and testing—to build engaging browser-based games from scratch."
+      },
+      {
+        "type": "p",
+        "text": "This course is designed for beginners with no prior programming or game development experience but are eager to learn how to craft fun, playable games. By the end, students will have the skills to bring their game ideas to life and share them with others."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Familiarize with HTML, JavaScript, VSCode",
+          "Design and build 2D games using Phaser.js",
+          "Implement game mechanics like character movement, scoring systems, and level transitions.",
+          "Work with assets (images, animations, sound) and optimize them for web-based games.",
+          "Debug and test games to ensure smooth gameplay and fix common issues."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Zenitant is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Students will be guided through the process of signing up for their free GitHub Edu pack, offering GitHub Copilot licenses for AI-assisted coding (usually US$10/month). Training is provided under Zenitant Pte Ltd., with curriculum designed by Tinkercademy — email us to find out more."
+      },
+      {
+        "type": "p",
+        "text": "Hardware: Windows, Mac, or ChromebookSoftware:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "VS Code (via vscodeedu.com)",
+          "A modern browser (Chrome, Firefox, Edge, or Safari)",
+          "Padlet",
+          "Phaser (via phaser.io/download)"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-apple-2025-b",
+    "slug": "imda-apple-2025-b",
+    "title": "App Development Basics with Swift Playgrounds",
+    "subtitle": null,
+    "duration": "26 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "mobile-app-development"
+    ],
+    "cta_ids": [
+      "swift-explorers-challenge-https-swiftexplorers-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "App Development Basics with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+      "openGraph": {
+        "title": "App Development Basics with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "App Development Basics with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "App Development Basics with Swift Playgrounds"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro."
+      },
+      {
+        "type": "p",
+        "text": "Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand and implement basic programming concepts in the Swift language",
+          "Use the Swift Playgrounds development environment to create and run apps",
+          "Create mobile user interfaces with SwiftUI controls and views",
+          "Utilise the SwiftUI framework to design and build a series of interactive apps."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Project"
+      },
+      {
+        "type": "p",
+        "text": "Students will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge."
+      },
+      {
+        "type": "p",
+        "text": "Requirements"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.",
+          "Software: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-apple-2025-c",
+    "slug": "imda-apple-2025-c",
+    "title": "App Development Explorations with Swift Playgrounds",
+    "subtitle": null,
+    "duration": "26 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "mobile-app-development"
+    ],
+    "cta_ids": [
+      "swift-explorers-challenge-https-swiftexplorers-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-apple-2025-c",
+      "openGraph": {
+        "title": "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "App Development Explorations with Swift Playgrounds"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented Reality, Machine Learning, and more."
+      },
+      {
+        "type": "p",
+        "text": "Students will have a chance to go deep into toolkits and features that power the latest apps on iPhone, iPad, and even the Apple Vision Pro. This track is recommended for students who have completed any app development courses in the IMDA Swift LEARN Roadmaps in 2023/2024."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Read and apply documentation and tutorials on further concepts in Swift and SwiftUI",
+          "Understand how to extend apps using online data available from application programming interfaces (APIs)",
+          "Utilise intermediate-to-advanced level libraries and tools such as Vision, CoreML, Reality Composer, and ARKit to create mobile apps with machine learning and augmented reality built-in."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Project"
+      },
+      {
+        "type": "p",
+        "text": "Students will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge."
+      },
+      {
+        "type": "p",
+        "text": "Requirements"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.",
+          "Software: Swift Playgrounds 4.5 or newer. Free from Apple App Store."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-apple-2025-a",
+    "slug": "imda-apple-2025-a",
+    "title": "App Prototyping with Keynote and Swift Playgrounds",
+    "subtitle": null,
+    "duration": "26 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "design-prototyping-and-ui-ux",
+      "computer-science-fundamentals"
+    ],
+    "cta_ids": [
+      "swift-explorers-challenge-https-swiftexplorers-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "App Prototyping with Keynote and Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-apple-2025-a",
+      "openGraph": {
+        "title": "App Prototyping with Keynote and Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "App Prototyping with Keynote and Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "App Prototyping with Keynote and Swift Playgrounds"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Design, Prototyping, and UI/UX"
+      },
+      {
+        "type": "p",
+        "text": "Computer Science Fundamentals"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines."
+      },
+      {
+        "type": "p",
+        "text": "This programme is suitable for students who are new to coding, and are interested in designing and prototyping mobile apps using Keynote."
+      },
+      {
+        "type": "p",
+        "text": "Beyond no-code prototyping, students can learn some syntax-based programming in Apple’s Swift language by solving fun, interactive coding puzzles and creating simple apps in SwiftUI."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Know and implement app design concepts from Apple’s Human Interface Guidelines",
+          "Understand the design thinking process in relation to app development",
+          "Create low-fidelity and high-fidelity app prototype designs",
+          "Create interactive app prototypes to showcase ideas",
+          "Read and write basic Swift code to solve coding puzzles and create simple apps."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Project"
+      },
+      {
+        "type": "p",
+        "text": "Students will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge."
+      },
+      {
+        "type": "p",
+        "text": "Requirements"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.",
+          "Software: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "build-for-mobile-with-react-native",
+    "slug": "build-for-mobile-with-react-native",
+    "title": "Build for Mobile: App Development with React Native",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "software-engineering",
+      "mobile-app-development"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+      "openGraph": {
+        "title": "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Build for Mobile: App Development with React Native"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Software Engineering"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Jump into mobile app development and build real apps that work on both iOS and Android!"
+      },
+      {
+        "type": "p",
+        "text": "Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences that run seamlessly across platforms? The secret is React Native: Meta's powerful framework that lets you write code once, and deploy everywhere."
+      },
+      {
+        "type": "p",
+        "text": "This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality."
+      },
+      {
+        "type": "p",
+        "text": "Perfect for web developers looking to expand into mobile, or anyone wanting to prototype app ideas quickly. By the end, you'll have three working apps in your portfolio and the confidence to build your own mobile projects. No prior mobile development experience required; just bring your curiosity and a laptop."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "This comprehensive React Native program will teach you modern mobile app development using JavaScript and industry-standard tools."
+      },
+      {
+        "type": "p",
+        "text": "You'll gain practical experience building three progressively complex applications, learning essential mobile development patterns and best practices along the way. The course emphasises hands-on coding with immediate feedback through live device testing."
+      },
+      {
+        "type": "p",
+        "text": "By the end of the program, you will:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Try React Native fundamentals including components, JSX syntax, and styling with React Native's CSS-like StyleSheet system",
+          "Build interactive mobile UIs using state management with React hooks, event handling, and conditional rendering",
+          "Navigate between screens using React Navigation with stack and tab navigators for professional app flows",
+          "Work with real data by importing JSON data, mapping arrays to UI components, and building dynamic lists",
+          "Create reusable components following React patterns for maintainable, scalable mobile applications",
+          "Deploy and test apps on physical devices using Expo, plus set up local development environments",
+          "Integrate third-party libraries like React Native Paper for polished UI components and vector icons",
+          "Use modern JavaScript features including ES6+ syntax, destructuring, template literals, and arrow functions"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)"
+      },
+      {
+        "type": "p",
+        "text": "Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more information"
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "building-agents-with-openclaw",
+    "slug": "building-agents-with-openclaw",
+    "title": "Building Agents with OpenClaw",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Building Agents with OpenClaw - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+      "openGraph": {
+        "title": "Building Agents with OpenClaw - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Building Agents with OpenClaw - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Stop building chatbots. Start deploying autonomous systems. The future of AI isn't a text box; it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier open-source framework for building agents that can plan, use tools, and self-correct in real-time."
+      },
+      {
+        "type": "p",
+        "text": "While others are stuck in \"prompt-and-hope\" cycles, you will learn to build systems that possess agency—the ability to decompose complex goals, interact with external APIs, and execute long-horizon tasks without constant human intervention."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "By the end of this course, you will:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The Agentic Loop: Mastering the Plan → Act → Observe → Re-plan cycle.",
+          "Tool-Augmented Generation (TAG): Building secure interfaces between OpenClaw and your private data/APIs.",
+          "Multi-Agent Orchestration: Learning when one agent isn't enough and how to manage a \"swarm\" of OpenClaw instances.",
+          "Local & Cloud Deployment: Leveraging the open-source nature of OpenClaw to deploy on your own infrastructure for maximum data privacy."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course."
+      },
+      {
+        "type": "p",
+        "text": "Fees (excl. GST) per participant:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "16 participants and above: $650",
+          "12-15 participants: $750",
+          "8-11 participants: $870"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "For 7 or fewer participants, we charge a flat fee of S$6,800 total."
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+    "slug": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+    "title": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making",
+    "subtitle": null,
+    "duration": "17 days",
+    "description": "Businesses",
+    "hero_image": "https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360",
+    "audience_ids": [
+      "businesses",
+      "public"
+    ],
+    "topic_ids": [
+      "microcontrollers-iot"
+    ],
+    "cta_ids": [
+      "here-https-academy-smu-edu-sg-courses-certificate-technology-foundations-harnessing-power-internet-things-and-creative-digital",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+      "openGraph": {
+        "title": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Microcontrollers & IoT"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance our standards of living. Welcome to the world of digital making, where collision of ideas and technology can either make or break. Participants in this programme can find their stroke of genius as they learn the building blocks of digital making from coding concepts and microcontrollers (Micro:bit, Arduino, and Raspberry Pi) and create prototypes that respond to sound, touch and light. Click here for more info."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand what “digital making” is, and how it applies to modern prototyping with electronics",
+          "Appreciate the world of “Internet of Things” by sending sensor data online for practical applications"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Topic/Structure"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Learn and apply introductory coding concepts, such as loops, variables, and functions, through block-based languages and PythonLearn to programme microcontrollers such as the micro:bit, Arduino, and Raspberry Pi",
+          "Connect a variety of input sensors and output devices to microcontrollers, and control them through code"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Assessment"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Project presentations",
+          "Group assignments"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+    "slug": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+    "title": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology",
+    "subtitle": null,
+    "duration": "17 days",
+    "description": "Businesses",
+    "hero_image": "https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360",
+    "audience_ids": [
+      "businesses",
+      "public"
+    ],
+    "topic_ids": [
+      "cryptography"
+    ],
+    "cta_ids": [
+      "here-https-academy-smu-edu-sg-courses-certificate-technology-foundations-unleash-potential-blockchain-technology",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+      "openGraph": {
+        "title": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Cryptography"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and what makes it so intriguing. This programme discusses real-world examples and contrasts between specific blockchain implementations, such as Bitcoin, Ethereum and Stellar, for a better understanding to the concept of blockchain technology. Click here to find out more."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand what is a blockchain, how and why it works",
+          "Explain relevant concepts such as cryptography and signatures that make blockchain relevant"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Topic/Structure"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Appreciate mathematical underpinnings of the blockchain",
+          "Create a simple decentralised app on the Blockchain with Stellar",
+          "Discuss meaningfully applications of blockchain in various industries"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Assessment"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Project presentations",
+          "Group assignments"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "code-for-fun-ai-workshop",
+    "slug": "code-for-fun-ai-workshop",
+    "title": "Code For Fun AI Workshop",
+    "subtitle": null,
+    "duration": "10 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science",
+      "computer-science-fundamentals"
+    ],
+    "cta_ids": [
+      "imda-codesg-imda-gov-sg-mailto-imda-codesg-imda-gov-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Code For Fun AI Workshop - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/code-for-fun-ai-workshop",
+      "openGraph": {
+        "title": "Code For Fun AI Workshop - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Code For Fun AI Workshop - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Code For Fun AI Workshop"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "p",
+        "text": "Computer Science Fundamentals"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "h2",
+        "text": "AI for Fun for Primary Schools"
+      },
+      {
+        "type": "p",
+        "text": "Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, two new 5-hour AI for Fun modules will be offered to primary schools. Students will get to learn more about Generative AI and AI with Smart Robots through these engaging AI courses. Under the two modules, students will have hands-on experience in learning the following:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Generative AINatural Language ProcessingSafe and responsible use of Generative AIApplying Generative AI for ideation and content creation",
+          "Natural Language Processing",
+          "Safe and responsible use of Generative AI",
+          "Applying Generative AI for ideation and content creation",
+          "AI with Smart RobotsComputer visionHow smart robots respond to inputs via sensorsIntegrating Computer vision with smart robots to solve problems",
+          "Computer vision",
+          "How smart robots respond to inputs via sensors",
+          "Integrating Computer vision with smart robots to solve problems"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI for Fun for Secondary Schools"
+      },
+      {
+        "type": "p",
+        "text": "Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, a new 10-hour AI for Fun module will be offered to secondary schools."
+      },
+      {
+        "type": "p",
+        "text": "Under the AI for Fun module, students will have hands-on experience in learning the following:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "How the quantity and quality of training data affects AI performance",
+          "How biases are formed in AI-generated content",
+          "The societal implications of AI",
+          "Large Language Models",
+          "Custom chatbots",
+          "Writing effective prompts for Generative AI",
+          "Applying Generative AI to solve problems related to a theme such as Sustainable Living"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "h2",
+        "text": "How to apply?"
+      },
+      {
+        "type": "p",
+        "text": "All Ministry of Education (MOE) government and government-aided secondary schools are eligible to apply for the AI for Fun module. Students are required to complete the Code for Fun programme or a comparable programme before they are eligible to participate in the AI for Fun module. If schools are on Code for Fun, AI for Fun may be taken up by the same cohort (e.g. Secondary 1 cohort to do both CFF and AIFF) or a later cohort (e.g. Secondary 1 cohort to do CFF, Secondary 2 cohort to do AIFF). Application instructions will be sent to all MOE government and government-aided secondary schools between September to October annually. Schools keen to apply for the programme should submit their application within the application window stated. For enquires regarding AI for Fun for secondary schools, please contact us at imda_codesg@imda.gov.sg."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "code-for-fun-baseline-workshop",
+    "slug": "code-for-fun-baseline-workshop",
+    "title": "Code For Fun Baseline Workshop",
+    "subtitle": null,
+    "duration": "10 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "computer-science-fundamentals",
+      "design-thinking"
+    ],
+    "cta_ids": [
+      "imda-codesg-imda-gov-sg-mailto-imda-codesg-imda-gov-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Code For Fun Baseline Workshop - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/code-for-fun-baseline-workshop",
+      "openGraph": {
+        "title": "Code For Fun Baseline Workshop - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Code For Fun Baseline Workshop - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Code For Fun Baseline Workshop"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Computer Science Fundamentals"
+      },
+      {
+        "type": "p",
+        "text": "Design Thinking"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "h2",
+        "text": "Code for Fun for Primary Schools"
+      },
+      {
+        "type": "p",
+        "text": "The Code for Fun programme offers upper primary students 10 hours of lessons on computational thinking, coding, and introduction to emerging technologies such as Artificial Intelligence (AI)."
+      },
+      {
+        "type": "p",
+        "text": "Through the programme, students will:- Learn about core computational thinking concepts and how it can be applied to daily life.- Understand basic programming concepts such as debugging, events, loops, variables, functions, and conditionals.- Develop logical thinking and problem-solving skills.- Discover how emerging technologies such as AI are part of, and influence our daily lives."
+      },
+      {
+        "type": "h2",
+        "text": "Code for Fun for Secondary Schools"
+      },
+      {
+        "type": "p",
+        "text": "For secondary school students, Code for Fun strengthens students’ inventive thinking, design thinking and digital making skills and complements Ministry of Education (MOE)’s EdTech Masterplan 2030 and other existing technology-related curriculum."
+      },
+      {
+        "type": "p",
+        "text": "The programme offers 10 hours of lessons which:- Focuses on digital making and design prototyping using microcontrollers.- Reinforces students’ digital literacy and understanding through practical project work and real-world examples.- Includes two programming tracks for schools to choose from – block-based programming and text-based programming."
+      },
+      {
+        "type": "p",
+        "text": "The following enhancements to the Code for Fun programme were introduced from 2023:1. Training hardware will be delivered by a vendor and funded by IMDA and MOE HQ. Schools can also choose between a vendor delivering student training or conducting it internally.2. Better integration with schools’ Applied Learning Programmes (ALP) via student projects involving ALP themes such as sustainability and the future of transportation.3. Inclusion of emerging tech through hands-on project work using hardware such as AI-enabled camera."
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "h2",
+        "text": "How to apply?"
+      },
+      {
+        "type": "p",
+        "text": "All MOE government and government-aided secondary schools are eligible to apply for the Code for Fun programme for secondary schools. Application instructions will be sent to all Ministry of Education (MOE) government and government-aided secondary schools between September to October annually. Schools applying for the programme should submit their application within the application period provided. For enquiries regarding Code for Fun for secondary schools, please contact us at imda_codesg@imda.gov.sg."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "code-exp-2025",
+    "slug": "code-exp-2025",
+    "title": "CODE_EXP 2025",
+    "subtitle": null,
+    "duration": "4 days",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science",
+      "mobile-app-development"
+    ],
+    "cta_ids": [
+      "https-tk-sg-codeexp25-qualifiers-https-tk-sg-codeexp25-qualifiers",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/code-exp-2025",
+      "openGraph": {
+        "title": "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "CODE_EXP 2025"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "4 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "CODE_EXP is a mobile dev hackathon spread over three phases:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Phase 1: Training sessions",
+          "Phase 2: Qualifiers",
+          "Phase 3: Finals"
+        ]
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Gain Hands-on Experience with React NativeUnderstand the fundamentals of React Native for cross-platform mobile development.Build functional mobile UI components and integrate backend services.",
+          "Understand the fundamentals of React Native for cross-platform mobile development.",
+          "Build functional mobile UI components and integrate backend services.",
+          "Master the End-to-End Prototyping ProcessLearn how to ideate, wireframe, and prototype a mobile app concept effectively.Translate user needs into intuitive app designs.",
+          "Learn how to ideate, wireframe, and prototype a mobile app concept effectively.",
+          "Translate user needs into intuitive app designs.",
+          "Integrate Generative AI into Mobile AppsExplore how to leverage generative AI tools (e.g. LLMs) to enhance app functionality.Understand practical use cases and best practices for AI integration.",
+          "Explore how to leverage generative AI tools (e.g. LLMs) to enhance app functionality.",
+          "Understand practical use cases and best practices for AI integration.",
+          "Work with Edge LLMsLearn about deploying LLMs on-device or on the edge for faster, privacy-preserving AI features.Understand the trade-offs and constraints of edge computing in mobile environments.",
+          "Learn about deploying LLMs on-device or on the edge for faster, privacy-preserving AI features.",
+          "Understand the trade-offs and constraints of edge computing in mobile environments.",
+          "Develop Communication & Pitching SkillsCraft a compelling 1-minute elevator pitch video.Create a persuasive slide deck that clearly articulates the value proposition and architecture of your app.",
+          "Craft a compelling 1-minute elevator pitch video.",
+          "Create a persuasive slide deck that clearly articulates the value proposition and architecture of your app.",
+          "Learn Agile, Time-Conscious Product DevelopmentPractice working within tight deadlines to ideate, develop, and iterate on a mobile app concept.Experience what it's like to build MVPs in a fast-paced, real-world scenario.",
+          "Practice working within tight deadlines to ideate, develop, and iterate on a mobile app concept.",
+          "Experience what it's like to build MVPs in a fast-paced, real-world scenario.",
+          "Compete and Collaborate Under PressureImprove teamwork and decision-making in a live, competitive setting.Receive feedback from judges and peers to iterate on your project.",
+          "Improve teamwork and decision-making in a live, competitive setting.",
+          "Receive feedback from judges and peers to iterate on your project."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "h2",
+        "text": "Phase 1: Levelling Up"
+      },
+      {
+        "type": "p",
+        "text": "Training Schedule:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Welcome Brief and Intro to Prototyping • 11 May (Sun) • 9:30am-12:30pm",
+          "React Native 1 • 11 May (Sun) • 2pm - 5pm",
+          "React Native 2 • 12 May (Mon) • 9:30am-12:30pm",
+          "React Native 3 • 12 May (Mon) • 2pm - 5pm",
+          "Working with Generative AI • 13 May (Tue) • 9:30am-12:30pm",
+          "Edge LLMs • 14 May (Wed) • 9:30am-12:30pm"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Phase 2: Qualifiers"
+      },
+      {
+        "type": "p",
+        "text": "Deadline: 1200hrs, 24 May 2025"
+      },
+      {
+        "type": "p",
+        "text": "Submission: https://tk.sg/codeexp25_qualifiers"
+      },
+      {
+        "type": "p",
+        "text": "Submission requirements:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Proposal (Value proposition slide deck, no more than 15 slides)",
+          "Elevator Pitch (1-minute video)",
+          "Architecture",
+          "Wireframe"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Phase 3: Finals"
+      },
+      {
+        "type": "p",
+        "text": "Marina Bay Sands Expo & Convention Centre"
+      },
+      {
+        "type": "p",
+        "text": "11 & 12 June 2024"
+      },
+      {
+        "type": "list",
+        "items": [
+          "40 teams will compete live for cash prizes",
+          "Put in the final touches to your mobile app",
+          "Pitch and impress the Panel of Judges"
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "iotmaker",
+    "slug": "iotmaker",
+    "title": "Digital Maker: Create with 3D Printing and IOT",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "creativity-craft-and-making",
+      "microcontrollers-iot"
+    ],
+    "cta_ids": [
+      "here-https-iotmaker-tk-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/iotmaker",
+      "openGraph": {
+        "title": "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Digital Maker: Create with 3D Printing and IOT"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Creativity, Craft, and Making"
+      },
+      {
+        "type": "p",
+        "text": "Microcontrollers & IoT"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Ever wondered how things are made, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are transforming our daily routines, making life more convenient and connected."
+      },
+      {
+        "type": "p",
+        "text": "In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing."
+      },
+      {
+        "type": "p",
+        "text": "This course is perfect whether you’re looking to start a new project, boost your tech skills, or just have some fun creating. It’s practical, engaging, and designed to help you bring your ideas to life. Come join us and experience the thrill of digital making! Find out more here."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "In this introductory course to digital making, you'll dive into the core technologies that power smart devices like smart fridges, smart doorbells, Amazon Echo, and Google Home first using programmable microcontrollers."
+      },
+      {
+        "type": "p",
+        "text": "For a complete learning journey, you'll also explore beginning techniques in 3D printing and digital fabrication, with an interactive experience designing, sourcing, and fabricating practical projects. This hands-on approach ensures you gain practical experience and a solid foundation in digital maker development."
+      },
+      {
+        "type": "p",
+        "text": "By the end of the program, you will have learned to:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand what \"digital making\" is, and how it applies to modern prototyping and crafting",
+          "Appreciate the world of \"Internet of Things\" (loT) by sending sensor data online for practical applications",
+          "Learn and apply introductory coding concepts to program microcontrollers",
+          "Understand the fundamentals of 3D modelling for practical applications",
+          "Design and 3D print custom components"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)"
+      },
+      {
+        "type": "p",
+        "text": "Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more information"
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-microbit-2025",
+    "slug": "imda-microbit-2025",
+    "title": "Digital Making with micro:bit",
+    "subtitle": null,
+    "duration": "24 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "microcontrollers-iot",
+      "creativity-craft-and-making"
+    ],
+    "cta_ids": [
+      "zenitant-https-zenitanteducation-com",
+      "3d-tronics-micro-controller-challenge-https-3dtronics-asia",
+      "hello-tinkerclass-tech-mailto-hello-tinkerclass-tech",
+      "email-us-mailto-yjsoon-tk-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Digital Making with micro:bit - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-microbit-2025",
+      "openGraph": {
+        "title": "Digital Making with micro:bit - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Digital Making with micro:bit - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Digital Making with micro:bit"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Microcontrollers & IoT"
+      },
+      {
+        "type": "p",
+        "text": "Creativity, Craft, and Making"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to learners of all ages. The micro:bit can be easily programmed through a block-based coding language called MakeCode. Students will explore computational thinking through the use of the micro:bit and various other external components designed to engage and enthrall students. With components that move (servo), light up (LED strip) and make noise (buzzer), students will wield the power to control the physical world in code."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Program microcontrollers",
+          "Introduce coding, electronics, and hands-on digital making",
+          "Learn MakeCode",
+          "Reinforce design thinking, creativity, and maker principles"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Zenitant is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at hello@tinkerclass.tech to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — email us to find out more."
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Course Code"
+      },
+      {
+        "type": "p",
+        "text": "Hours"
+      },
+      {
+        "type": "p",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Digital Making with micro:bit"
+      },
+      {
+        "type": "p",
+        "text": "P-MICROSOFT-MAKE-BASIC / P-MICROSOFT-MAKE-INTM"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "Suitable for schools with PCs, Macs, iPads, and Chromebooks. micro:bit required."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "digital-making-with-micro-bit-iot",
+    "slug": "digital-making-with-micro-bit-iot",
+    "title": "Digital Making with micro:bit & IoT",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Businesses",
+    "hero_image": "https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500",
+    "audience_ids": [
+      "businesses",
+      "public"
+    ],
+    "topic_ids": [
+      "microcontrollers-iot",
+      "computer-science-fundamentals"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/digital-making-with-micro-bit-iot",
+      "openGraph": {
+        "title": "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Digital Making with micro:bit & IoT"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Microcontrollers & IoT"
+      },
+      {
+        "type": "p",
+        "text": "Computer Science Fundamentals"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the digital and physical world. With micro:bit's user-friendly interface and IoT's vast connectivity, learners can build smart devices, automate tasks, and explore endless possibilities."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the fundamentals of micro:bit programming: Students will learn basic programming concepts and how to use the micro:bit's built-in features to create simple interactive projects.",
+          "Explore the basics of IoT and its applications: Students will gain knowledge about the Internet of Things, its components, and real-world examples of IoT devices.",
+          "Design and implement a small-scale IoT project: Students will apply their understanding of micro:bit programming and IoT concepts to create a functional IoT project, such as a remote-controlled device or a sensor-based automation system."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: TBC"
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)"
+      },
+      {
+        "type": "p",
+        "text": "Fees (figures in parantheses include GST)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Individual sign-up: $1,600 ($1,744)",
+          "Groups of up to 7: $11,200 ($12,208)",
+          "Groups of 8-15: $12,400 ($13,516)",
+          "Groups of 16 and above: Please email for more information All quoted prices are in SGD. Invoicing terms available."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "unityarvr",
+    "slug": "unityarvr",
+    "title": "Enter the Metaverse: Get started with Unity for AR/VR",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "game-development"
+    ],
+    "cta_ids": [
+      "here-https-unityarvr-tk-sg",
+      "unity-hardware-requirements-at-unity3d-com-https-docs-unity3d-com-manual-system-requirements-html",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Enter the Metaverse: Get started with Unity for AR/VR - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/unityarvr",
+      "openGraph": {
+        "title": "Enter the Metaverse: Get started with Unity for AR/VR - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Enter the Metaverse: Get started with Unity for AR/VR - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Enter the Metaverse: Get started with Unity for AR/VR"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Game Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working on detailed digital twins, Unity is the tool you need to turn your big ideas into reality."
+      },
+      {
+        "type": "p",
+        "text": "In this course, we'll guide you through Unity's core features and functionalities. On Day 1, you'll get familiar with the Unity interface, learn some C# scripting, and start creating interactive 3D environments. Then on Day 2, we'll dive into advanced AR/VR techniques and show you how to build amazing experiences for the metaverse."
+      },
+      {
+        "type": "p",
+        "text": "This hands-on, intuitive course is perfect for aspiring developers, tech enthusiasts, and innovators. By the end, you'll have the skills to make the most of Unity, whether you're aiming to develop the next hit game, an innovative AR app, or a captivating virtual world."
+      },
+      {
+        "type": "p",
+        "text": "Join us and transform your ideas into reality with Unity! Find out more here."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "In this broad introduction to Unity development, you'll dive into the core technologies that power interactive 3D experiences and get hands-on experience building your own versatile projects using Unity."
+      },
+      {
+        "type": "p",
+        "text": "For a complete learning journey, you'll also explore advanced techniques in AR/VR development through practical projects, gaining exposure to Unity's powerful capabilities for creating immersive experiences. This hands-on approach ensures you gain practical experience and a solid foundation in Unity development."
+      },
+      {
+        "type": "p",
+        "text": "By the end of the programme, you will learn to:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the fundamentals of Unity development, including the Unity interface, C# scripting, and creating interactive 3D environments.",
+          "Create a basic AR/VR application using Unity's advanced features (Day 2).",
+          "Learn how to integrate physics, animations, and user interactions to create compelling and immersive experiences (Day 2)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. (iPads and Chromebooks are not supported.) Read more about the Unity hardware requirements at unity3d.com."
+      },
+      {
+        "type": "p",
+        "text": "Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more information"
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-unity-2025",
+    "slug": "imda-unity-2025",
+    "title": "Game Development Bootcamp with Unity",
+    "subtitle": null,
+    "duration": "32 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "game-development"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-unity-2025",
+      "openGraph": {
+        "title": "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Game Development Bootcamp with Unity"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "32 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Game Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates."
+      },
+      {
+        "type": "p",
+        "text": "Unity is a powerful and versatile game engine, with cross-platform features that appeal to both small developers and large game studios. 40% of the top 1000 mobile games and 50% of all new mobile games are built with Unity. By learning Unity, students will be better poised to enter and contribute to these industries."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand Unity’s interface and workflow (scenes, GameObjects, components).",
+          "Design 2D/3D game levels using Unity’s tools (Tilemap, ProBuilder, or basic primitives).",
+          "Implement game mechanics (player movement, collisions, physics, scoring systems).",
+          "Script in C# to create interactivity (variables, loops, conditionals, functions).",
+          "Work with assets (import sprites, 3D models, audio) and optimize them for games.",
+          "Debug and test games using Unity’s Console and Play Mode.",
+          "Publish a standalone game (build for WebGL, PC, or mobile).",
+          "Apply iterative design through prototyping, playtesting, and feedback."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Tinkercademy has been one of the first infocomm vendors to offer Unity training to schools since the early 2010s, introducing game development in Unity to over 1,000 students from Infocomm Clubs all over Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Hours"
+      },
+      {
+        "type": "p",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "2022 for Infocomm Club training"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "We ran this programme for 15 secondary schools and JCs in 2022."
+      },
+      {
+        "type": "p",
+        "text": "2023 bootcamp edition"
+      },
+      {
+        "type": "p",
+        "text": "32 hours over 5 days"
+      },
+      {
+        "type": "p",
+        "text": "Our first run is happening June 5 to 9 at St. Patrick's School! Stay tuned for more details."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-minecraft-2025",
+    "slug": "imda-minecraft-2025",
+    "title": "Game Development in MakeCode Arcade & MineCraft",
+    "subtitle": null,
+    "duration": "24 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450",
+    "audience_ids": [
+      "students"
+    ],
+    "topic_ids": [
+      "design-thinking",
+      "game-development"
+    ],
+    "cta_ids": [
+      "zenitant-https-zenitanteducation-com",
+      "3d-tronics-micro-controller-challenge-https-3dtronics-asia",
+      "hello-tinkerclass-tech-mailto-hello-tinkerclass-tech",
+      "email-us-mailto-yjsoon-tk-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Game Development in MakeCode Arcade & MineCraft - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-minecraft-2025",
+      "openGraph": {
+        "title": "Game Development in MakeCode Arcade & MineCraft - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Game Development in MakeCode Arcade & MineCraft - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Game Development in MakeCode Arcade & MineCraft"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Design Thinking"
+      },
+      {
+        "type": "p",
+        "text": "Game Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a beginner-friendly game development platform from Microsoft, students will be exposed to basic coding concepts and challenged to use code to solve logic programming problems in order to create their own retro-style games. Using Minecraft: Education's integrated coding editor, students will apply block-based coding to create exciting virtual 3D world environments. We believe that as students see their code take effect in a virtual 3D world environment, they will be excited to understand, explore and exploit the full capabilities of coding constructs such as variables, iterations and conditionals to create complex interactions. In 2025, schools will be able to sign up for beginner- and intermediate-level courses, for a total of 2 × 24-hour programmes."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Equip computational thinking skills",
+          "Learn the MakeCode Arcade platform and explore basic doing concepts",
+          "Use Minecraft: Education's coding editor to apply block-based coding to create virtual 3D world environments",
+          "Explore variables, iterations, and conditionals to create complex interactions"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Zenitant is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at hello@tinkerclass.tech to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — email us to find out more."
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Course Code"
+      },
+      {
+        "type": "p",
+        "text": "Hours"
+      },
+      {
+        "type": "p",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Game Development in MakeCode Arcade & MineCraft"
+      },
+      {
+        "type": "p",
+        "text": "P-MICROSOFT-GAME-BASIC / P-MICROSOFT-GAME-INTM"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "Suitable for schools with PCs, Macs, iPads, and Chromebooks."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "knowledge-powered-ai-with-chatgpt",
+    "slug": "knowledge-powered-ai-with-chatgpt",
+    "title": "Knowledge-Powered AI with ChatGPT",
+    "subtitle": null,
+    "duration": "½, 1, 2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+      "openGraph": {
+        "title": "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Knowledge-Powered AI with ChatGPT"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "½, 1, 2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Generative AI isn't just transforming how we create content. It's revolutionising how organisations access and leverage their knowledge. Whether you're looking to enhance customer service, automate content creation, or develop intelligent knowledge systems, this workshop will equip you with the tools to harness AI's full potential within your organization."
+      },
+      {
+        "type": "p",
+        "text": "In this course, available as half-, one, or two-day versions, we'll guide you through the cutting edge of generative AI technology. You'll start by understanding the digital landscape and exploring how large language models like ChatGPT function, before diving into practical applications of ChatGPT and other AI tools:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understanding Large Language Models (LLMs), generative AI possibilities and limitations",
+          "Prompt engineering",
+          "Image generation with GPT-4o",
+          "Canvas for collaborative writing and coding with AI",
+          "Data analysis tools",
+          "Projects",
+          "Deep Research",
+          "Retrieval-Augmented Generation"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "This hands-on, executive-focused workshop is perfect for senior leaders, innovation teams, and decision-makers. By the end, you'll have created a prototype web app powered by generative AI, and developed a concrete understanding of how these technologies can transform your operations."
+      },
+      {
+        "type": "p",
+        "text": "Join us and discover how to unlock the true potential of AI by combining it with your organisation's unique knowledge assets!"
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "Through this programme, you will:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the fundamentals of generative AI, including how large language models work, their capabilities, limitations, and ethical consideration",
+          "Create product concepts, marketing materials, and business strategies using AI tools",
+          "Explore digital presence creation with AI-assisted development tools",
+          "Evaluate the potential of AI integration in your own organization's workflows and knowledge management systems",
+          "Experience how RAG technology enhances AI responses by grounding them in specific knowledge bases and data sources"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "For ½-day, 1-day, and 2-day course formats, we're happy to collaborate with you to tailor content and focus areas to your specific needs."
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: ½, 1, or 2 days; can be configured over multiple sessions. Please write in to enquire."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street, or your preferred venue."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants should have a ChatGPT account (free tier sufficient; Plus or Business tier recommended) — or we can provide access during the workshop."
+      },
+      {
+        "type": "p",
+        "text": "Fees (with GST in parantheses):"
+      },
+      {
+        "type": "p",
+        "text": "Participants"
+      },
+      {
+        "type": "p",
+        "text": "2 day"
+      },
+      {
+        "type": "p",
+        "text": "1 day"
+      },
+      {
+        "type": "p",
+        "text": "½ day"
+      },
+      {
+        "type": "p",
+        "text": "1 to 9 (flat fee)"
+      },
+      {
+        "type": "p",
+        "text": "$6,600 ($7,194)"
+      },
+      {
+        "type": "p",
+        "text": "$3,630 ($3,956.70)"
+      },
+      {
+        "type": "p",
+        "text": "$1,980 ($2,158.20)"
+      },
+      {
+        "type": "p",
+        "text": "10 to 19 (per pax)*"
+      },
+      {
+        "type": "p",
+        "text": "$690 ($752.10)"
+      },
+      {
+        "type": "p",
+        "text": "$380 ($414.20)"
+      },
+      {
+        "type": "p",
+        "text": "$210 ($228.90)"
+      },
+      {
+        "type": "p",
+        "text": "20+ (per pax)"
+      },
+      {
+        "type": "p",
+        "text": "$600 ($654)"
+      },
+      {
+        "type": "p",
+        "text": "$330 ($359.70)"
+      },
+      {
+        "type": "p",
+        "text": "$160 ($174.40)"
+      },
+      {
+        "type": "p",
+        "text": "*Price capped at cost of 20 pax."
+      },
+      {
+        "type": "p",
+        "text": "We can provide ChatGPT Business Plan access to participants for the duration of the workshop for an additional fee of $50 ($54.50 with GST) per participant. Please note that participants' chats will not be retained once access expires — this is due to the nature of the ChatGPT Business Plan."
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "vibe-coding-for-digital-builders-lovable-replit",
+    "slug": "vibe-coding-for-digital-builders-lovable-replit",
+    "title": "Level Up Your Vibe Coding (Lovable and Replit)",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Level Up Your Vibe Coding (Lovable and Replit) - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+      "openGraph": {
+        "title": "Level Up Your Vibe Coding (Lovable and Replit) - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Level Up Your Vibe Coding (Lovable and Replit) - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic power of Lovable for rapid UI generation and Replit’s professional cloud environment to build, secure, and deploy."
+      },
+      {
+        "type": "p",
+        "text": "You won't just learn to prompt; you’ll learn to manage a fleet of AI agents to handle the heavy lifting of the development lifecycle, from initial scaffold to production release.We focus on the agentic critical path: moving a project from a conceptual UI into a hardened, data-persistent application. You will learn to transition seamlessly from AI-driven design to professional backend logic, ensuring your \"AI-generated\" code meets enterprise standards for security and stability."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "By the end of this course, you will:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Agentic UI Orchestration: Rapidly iterating frontends with Lovable.",
+          "Backend Hardening: Using Replit Agents to bridge UI to secure databases.",
+          "Production Guardrails: Implementing environment security and data persistence.",
+          "The Handoff: Creating clean, modular codebases that are human-readable and easy to maintain."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course."
+      },
+      {
+        "type": "p",
+        "text": "Fees (excl. GST) per participant:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "16 participants and above: $650",
+          "12-15 participants: $750",
+          "8-11 participants: $870"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "For 7 or fewer participants, we charge a flat fee of S$6,800 total."
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "mastering-the-web",
+    "slug": "mastering-the-web",
+    "title": "Mastering the Web: Understand Full-Stack Development",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "web-development",
+      "software-engineering"
+    ],
+    "cta_ids": [
+      "here-https-webmaster-tk-sg",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Mastering the Web: Understand Full-Stack Development - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/mastering-the-web",
+      "openGraph": {
+        "title": "Mastering the Web: Understand Full-Stack Development - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Mastering the Web: Understand Full-Stack Development - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Mastering the Web: Understand Full-Stack Development"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Web Development"
+      },
+      {
+        "type": "p",
+        "text": "Software Engineering"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Discover the inner workings of web applications in just 1-2 days!"
+      },
+      {
+        "type": "p",
+        "text": "Web apps are part of everyday life, from banking, to email, to shopping, and productivity. What actually happens, though, between the moment you click on a URL, and when a fully-fledged web app shows up in your favourite browser?"
+      },
+      {
+        "type": "p",
+        "text": "This programme takes you from the basics of HTML, CSS, and JavaScript on the frontend (day 1), to servers and databases on the backend (day 2). Get a taste of web development, and gain the skills to communicate effectively with tech teams and understand the web's potential."
+      },
+      {
+        "type": "p",
+        "text": "Perfect for fuelling your startup idea or web app prototype, this hands-on, intuitive course will have you interfacing confidently with developers in no time. Join us and unlock the power of web technologies! Find out more here."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "In this broad web development programme, you will learn to appreciate core technologies that power the internet, and get hands-on building your own versatile websites with core front-end web technologies: HTML, CSS, and JavaScript."
+      },
+      {
+        "type": "p",
+        "text": "Gain exposure too to server-side web development through hands-on projects involving Python and Flask, a flexible web development framework. Through this process, you will gain practical experience and a solid foundation in web development."
+      },
+      {
+        "type": "p",
+        "text": "By the end of the programme, you will learn:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the fundamentals of front-end web development with the HTML, CSS, and JavaScript languages",
+          "Create a basic back-end web application using Flask and Python programming (day 2)",
+          "What application programming interfaces (APIs) are, and how they let you access complex capabilities from providers such as Google and OpenAI (day 2)"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)"
+      },
+      {
+        "type": "p",
+        "text": "Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more information"
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-copilot",
+    "slug": "microsoft-copilot",
+    "title": "Microsoft Copilot",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Businesses",
+    "hero_image": "https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080",
+    "audience_ids": [
+      "businesses",
+      "public"
+    ],
+    "topic_ids": [
+      "professional-productivity-with-technology"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Microsoft Copilot - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/microsoft-copilot",
+      "openGraph": {
+        "title": "Microsoft Copilot  - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Microsoft Copilot  - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Microsoft Copilot"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Professional Productivity with Technology"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of artificial intelligence to revolutionize the way you work. By automating routine tasks, providing intelligent suggestions, and enhancing creativity, Copilot empowers you to focus on strategic initiatives and achieve greater productivity."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the basics of AI and its applications: Learn about the fundamentals of artificial intelligence, its capabilities, and how it can be used to enhance productivity and decision-making.",
+          "Explore the features and benefits of Microsoft Copilot: Discover the various features of Microsoft Copilot, including its ability to generate text, summarize information, and provide intelligent suggestions.",
+          "Apply Copilot to real-world tasks: Learn how to effectively use Copilot to automate routine tasks, improve efficiency, and enhance creativity in your daily work."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: TBC"
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)"
+      },
+      {
+        "type": "p",
+        "text": "Fees (figures in parantheses include GST)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Individual sign-up: $1,600 ($1,744)",
+          "Groups of up to 7: $11,200 ($12,208)",
+          "Groups of 8-15: $12,400 ($13,516)",
+          "Groups of 16 and above: Please email for more information"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "no-code-machine-learning",
+    "slug": "no-code-machine-learning",
+    "title": "No-Code Machine Learning",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "No-Code Machine Learning - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/no-code-machine-learning",
+      "openGraph": {
+        "title": "No-Code Machine Learning - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "No-Code Machine Learning - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "No-Code Machine Learning"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and deploy sophisticated machine learning models. This course will guide you through the entire process, from data preparation to model deployment, enabling you to unlock the potential of AI and drive data-driven insights."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Master the fundamentals of machine learning: Understand core concepts such as supervised and unsupervised learning, classification, regression, and clustering.",
+          "Gain proficiency in using Orange: Learn how to navigate the Orange interface, import and clean data, build and train machine learning models, and evaluate their performance.",
+          "Apply machine learning to real-world problems: Use Orange to solve practical problems, such as predicting customer churn, identifying fraudulent transactions, or categorising text documents."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: TBC"
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Fees (figures in parantheses include GST)",
+          "Individual sign-up: $1,600 ($1,744)",
+          "Groups of up to 7: $11,200 ($12,208)",
+          "Groups of 8-15: $12,400 ($13,516)",
+          "Groups of 16 and above: Please email for more information"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "no-code-web-design-framer",
+    "slug": "no-code-web-design-framer",
+    "title": "No-code Web Design (Framer)",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Businesses",
+    "hero_image": "https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256",
+    "audience_ids": [
+      "businesses",
+      "public"
+    ],
+    "topic_ids": [
+      "design-prototyping-and-ui-ux"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/no-code-web-design-framer",
+      "openGraph": {
+        "title": "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "No-code Web Design (Framer)"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Design, Prototyping, and UI/UX"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and drive conversions. This course empowers you to create stunning, user-friendly websites without writing a single line of code. Learn the principles of UI/UX design and leverage the power of no-code tools like Framer to bring your digital visions to life."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Master the fundamentals of UI/UX design: Students will learn the core principles of user interface and user experience design, including layout, typography, color theory, and information hierarchy.",
+          "Gain proficiency in using no-code tools, specifically Framer: Students will develop practical skills in using Framer to create interactive prototypes and design web applications without coding.",
+          "Design and prototype a functional website or web application: Students will apply their knowledge of UI/UX design and no-code tools to create a real-world project, showcasing their ability to design user-centered digital experiences."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups."
+      },
+      {
+        "type": "p",
+        "text": "Location: TBC"
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Fees (figures in parantheses include GST)",
+          "Individual sign-up: $1,600 ($1,744)",
+          "Groups of up to 7: $11,200 ($12,208)",
+          "Groups of 8-15: $12,400 ($13,516)",
+          "Groups of 16 and above: Please email for more information"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "professional-certificate-in-mobile-application-development",
+    "slug": "professional-certificate-in-mobile-application-development",
+    "title": "Professional Certificate in Mobile Application Development",
+    "subtitle": null,
+    "duration": "2 days/module",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "mobile-app-development",
+      "design-prototyping-and-ui-ux"
+    ],
+    "cta_ids": [
+      "module-1-designing-and-prototyping-app-user-interfaces-for-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-designing-and-prototyping",
+      "module-2-introduction-to-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-introduction-mobile-app",
+      "module-3-building-database-driven-mobile-apps-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-building-database-driven",
+      "module-4-interfacing-mobile-apps-with-web-back-ends-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-interfacing-mobile-apps-web",
+      "module-5-building-a-full-stack-mobile-application-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-building-full-stack-mobile",
+      "module-6-further-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-further-mobile-app",
+      "module-7-executing-projects-in-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-executing-projects-mobile",
+      "advanced-diploma-in-web-mobile-application-development-https-academy-smu-edu-sg-advanced-diploma-mobile-web-application-development-4131",
+      "advanced-diploma-in-multiplatform-mobile-app-development-and-cloud-management-https-academy-smu-edu-sg-advanced-diploma-multiplatform-mobile-app-development-and-cloud-management-7886",
+      "https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-pcmob-fee-table-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-pcmob-fee-table",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/professional-certificate-in-mobile-application-development",
+      "openGraph": {
+        "title": "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Professional Certificate in Mobile Application Development"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "p",
+        "text": "Design, Prototyping, and UI/UX"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps for iOS and Android platforms. You'll learn essential programming languages, design principles, and development tools to bring your app ideas to life."
+      },
+      {
+        "type": "h3",
+        "text": "Who Should Attend"
+      },
+      {
+        "type": "p",
+        "text": "Aspiring app developers who want to build full-stack mobile applications that can be published online for download or saleAnyone with an interest in learning the fundamentals of mobile app design and developmentProfessionals with coding experience, but new to mobile app development."
+      },
+      {
+        "type": "p",
+        "text": "PREREQUISITES: Experience in other programming languages"
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand and apply basic app design and prototyping concepts such as mock-ups, typography, iconography",
+          "Install and run a basic app using Android Studio on PC or Mac, and (if available) Xcode on Mac",
+          "Explain the difference between a relational (SQL) and document-based (No SQL) database, and be able to select one for a given project",
+          "Understand what an Application Programming Interface (API) is, and how to read the documentation when working with common APIs",
+          "Understand how apps and websites use APIs and Representational State Transfer (REST) web services to communicate",
+          "Understand and use modern JavaScript language features from the ES6 specification, such as arrow functions, spread operators, and destructuring",
+          "Demonstrate a solid foundation in back-end and front-end mobile app development",
+          "Master Mobile App Development Fundamentals: Learn the core concepts of mobile app development, including programming languages like Swift (for iOS) and Kotlin/Java (for Android), as well as essential frameworks and tools.",
+          "Design User-Centric Mobile Apps: Understand the principles of user interface and user experience design, and apply them to create intuitive and visually appealing mobile apps.",
+          "Build and Deploy Mobile Apps: Learn how to build, test, and deploy mobile apps to the Apple App Store and Google Play Store"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Topic/Structure:"
+      },
+      {
+        "type": "p",
+        "text": "Module 1: Designing and Prototyping App User Interfaces for Mobile App DevelopmentModule 2: Introduction to Mobile App DevelopmentModule 3: Building Database-Driven Mobile AppsModule 4: Interfacing Mobile Apps with Web Back-EndsModule 5: Building a Full-Stack Mobile ApplicationModule 6: Further Mobile App DevelopmentModule 7: Executing Projects in Mobile App DevelopmentThis course is also a part of the following programmes: Advanced Diploma in Web & Mobile Application DevelopmentAdvanced Diploma in Multiplatform Mobile App Development and Cloud Management"
+      },
+      {
+        "type": "p",
+        "text": "Assessment: Individual assessment, project presentations.Certification: Upon completion of all 7 modules within a maximum duration of 3 years, participants will be awarded a digital Professional Certificate in Mobile Application Development."
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: Please write in to enquire."
+      },
+      {
+        "type": "p",
+        "text": "Location: Singapore Management University (SMU)"
+      },
+      {
+        "type": "p",
+        "text": "Fees: As low as $1,422.40. For more information refer to: https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "professional-certificate-in-web-application-development",
+    "slug": "professional-certificate-in-web-application-development",
+    "title": "Professional Certificate in Web Application Development",
+    "subtitle": null,
+    "duration": "2 days/module",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "design-prototyping-and-ui-ux"
+    ],
+    "cta_ids": [
+      "module-1-prototyping-and-user-interface-design-for-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-prototyping-and-user-interface",
+      "module-2-introduction-to-front-end-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-introduction-front-end-web-app",
+      "module-3-building-database-driven-web-apps-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-building-database-driven-web",
+      "module-4-back-end-web-app-development-with-databases-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-back-end-web-app-development",
+      "module-5-building-a-full-stack-web-application-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-building-full-stack-web",
+      "module-6-frameworks-for-full-stack-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-frameworks-full-stack-web-app",
+      "module-7-practical-tools-for-web-app-development-project-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-practical-tools-web-app",
+      "advanced-diploma-in-web-mobile-application-development-https-academy-smu-edu-sg-courses-advanced-diploma-web-and-mobile-application-development",
+      "advanced-diploma-in-full-stack-web-app-development-and-cloud-management-https-academy-smu-edu-sg-courses-advanced-diploma-full-stack-web-app-development-and-cloud-management",
+      "here-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-pcweb-fee-table",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Professional Certificate in Web Application Development - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/professional-certificate-in-web-application-development",
+      "openGraph": {
+        "title": "Professional Certificate in Web Application Development - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Professional Certificate in Web Application Development - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Professional Certificate in Web Application Development"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Design, Prototyping, and UI/UX"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to create stunning and functional user interfaces using powerful no-code tools like Framer and Bubble. By mastering prototyping techniques and UI/UX design principles, you'll be able to build exceptional web applications that captivate your users and drive business results."
+      },
+      {
+        "type": "p",
+        "text": "PREREQUISITES"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Must have at least a Polytechnic Diploma",
+          "Must have basic HTML/ CSS knowledge",
+          "Must be computer literate"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "SYSTEM REQUIREMENTS"
+      },
+      {
+        "type": "p",
+        "text": "Functional Laptop: (1) CPU must be of at least intel core I3, (2) GPU must have an integrated graphics card and (3) RAM must be of at least 4GB"
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Introduction to CSS Syntax, and how to select HTML with classes and IDs",
+          "Design fundamentals and resources for icons and typography",
+          "Getting started with Bubble to build simple web app prototypes",
+          "A brief introduction to JavaScript and jQuery for simple manipulation",
+          "Understand the need for software source control, and how it applies to usage in teams",
+          "Understand and implement roles in a software development team",
+          "Master Prototyping Techniques: Learn how to create interactive prototypes using Framer to visualize and validate your web application ideas.",
+          "Understand UI/UX Design Principles: Gain a solid understanding of user interface and user experience design principles, including layout, typography, color theory, and information architecture.",
+          "Build Functional Web Applications with Bubble & Framer: Learn how to use web tools to build fully functional web applications without writing code, focusing on user interface design and data management."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Topic/Structure:"
+      },
+      {
+        "type": "p",
+        "text": "Module 1: Prototyping and User Interface Design for Web App DevelopmentModule 2: Introduction to Front End Web App DevelopmentModule 3: Building Database-Driven Web AppsModule 4: Back-End Web App Development with DatabasesModule 5: Building a Full-Stack Web ApplicationModule 6: Frameworks for Full-Stack Web App DevelopmentModule 7: Practical Tools for Web App Development Project"
+      },
+      {
+        "type": "p",
+        "text": "This course is also a part of the following programmes: Advanced Diploma in Web & Mobile Application DevelopmentAdvanced Diploma in Full Stack Web App Development and Cloud Management"
+      },
+      {
+        "type": "p",
+        "text": "Assessment: Individual assessments, project presentations."
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: Weeknights (7pm - 10:30pm), Saturday (9am - 12.30pm). Please write in to enquire."
+      },
+      {
+        "type": "p",
+        "text": "Location: Singapore Management University (SMU). This programme is conducted online."
+      },
+      {
+        "type": "p",
+        "text": "Fees: SGD12,208* (as low as SGD1,422.40 after maximum funding). Learn more here."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "ri-futurecreate-maker-programme-2025",
+    "slug": "ri-futurecreate-maker-programme-2025",
+    "title": "RI FutureCreate Maker Programme 2025",
+    "subtitle": null,
+    "duration": "4 years",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "creativity-craft-and-making",
+      "design-thinking"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/ri-futurecreate-maker-programme-2025",
+      "openGraph": {
+        "title": "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "RI FutureCreate Maker Programme 2025"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "4 years"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Creativity, Craft, and Making"
+      },
+      {
+        "type": "p",
+        "text": "Design Thinking"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "The RI FutureCreate Maker Programme is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven interactive sessions, participants will dive into fabrication techniques, structural design, motion mechanics, and sensory experiences like sound and light. From crafting everyday solutions to building whimsical contraptions, students will experiment with materials, tools, and innovative processes to bring their visions to life. Whether shaping, assembling, coding, or storytelling through movement, this programme encourages a maker’s mindset—blending art, science, and problem-solving to inspire the next generation of inventors."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "Broad Overview of CurriculumYear 1: Analog Fabrication Skills Development"
+      },
+      {
+        "type": "list",
+        "items": [
+          "pick up a wide variety of maker skills",
+          "get accustomed to getting hands dirty",
+          "adopt a culture of try first, worry later",
+          "cultivating ‘let’s make our own!, instead of just buy lah’ mindset",
+          "inspire fulfilment in designing & making for oneself"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Year 2: Digital Fabrication Skills Development"
+      },
+      {
+        "type": "list",
+        "items": [
+          "acquire basic electronics know-how",
+          "bridging electronics, code & physical making to create real-world objects",
+          "making as a ‘superpower’, to customise the world around you; solving daily challenges or making beautiful/quirky things for amusement",
+          "understanding how the real world works vs ‘passive consumption & studying theoretical concepts’"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Year 3: Craftsmanship, Self-Reflection, Making & Tinkering as a Way of Life"
+      },
+      {
+        "type": "list",
+        "items": [
+          "identify areas of interest and further develop skills in that area(analog + digital)",
+          "small focused projects that develop new skills or improve competencies",
+          "reflect what drives one’s desire to create; pleasure, purpose or profit?",
+          "choose and explore 1-2 areas which is not part of core interest; trying something that is beyond comfort-zone, stimulate experimentation.",
+          "self research + experimentation, instructor can help troubleshoot/provide additional resources on request/consult"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Year 4: Self-Discovery Project; Exploration and Expression"
+      },
+      {
+        "type": "list",
+        "items": [
+          "identifying one’s core interests; art, science, music etc.",
+          "explore existing works for inspiration",
+          "prototype small experiments to test ideas and techniques",
+          "refine craftsmanship and acquire required new skills",
+          "execution, refinement and polish",
+          "show and tell"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Location: Raffles Institution"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "swift-accelerator",
+    "slug": "swift-accelerator",
+    "title": "Swift Accelerator",
+    "subtitle": null,
+    "duration": "8 months",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "mobile-app-development"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Swift Accelerator - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/swift-accelerator",
+      "openGraph": {
+        "title": "Swift Accelerator - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Swift Accelerator - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Swift Accelerator"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "8 months"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications. Through hands-on projects and expert mentorship, participants will master the Swift programming language, adhere to Apple's Human Interface Guidelines, and leverage the latest development tools. The program culminates in the development and publishing of a fully functional iOS app on the App Store."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Master Swift Programming: Gain a deep understanding of the Swift programming language, including its syntax, data structures, control flow, and object-oriented programming principles.",
+          "Apply Apple's Human Interface Guidelines: Learn how to design and develop user-friendly and visually appealing iOS and macOS apps that adhere to Apple's design standards and best practices.",
+          "Build and Deploy iOS Apps: Develop and test iOS apps, integrate with Apple's frameworks and APIs, and successfully deploy them to the App Store."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Location: Apple Singapore Office"
+      },
+      {
+        "type": "p",
+        "text": "Fees: This innovative program is fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "imda-figma-2025",
+    "slug": "imda-figma-2025",
+    "title": "UI/UX Design with Figma",
+    "subtitle": null,
+    "duration": "26 hours",
+    "description": "Students",
+    "hero_image": "https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260",
+    "audience_ids": [
+      "students",
+      "teachers"
+    ],
+    "topic_ids": [
+      "design-prototyping-and-ui-ux"
+    ],
+    "cta_ids": [
+      "swift-explorers-challenge-https-swiftexplorers-sg",
+      "figurative-https-figurative-design",
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "UI/UX Design with Figma - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/imda-figma-2025",
+      "openGraph": {
+        "title": "UI/UX Design with Figma - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "UI/UX Design with Figma - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "UI/UX Design with Figma"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "Design, Prototyping, and UI/UX"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX tools utilised by professionals: FigJam for collaborative brainstorming, Figma for creating visually appealing interactive UI/UX designs, and Figma Slides to effectively communicate their design solutions."
+      },
+      {
+        "type": "p",
+        "text": "This course is suitable for students with no programming or design experience, but are interested in developing instincts for building web and mobile applications for users."
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the design thinking process",
+          "Explore FigJam for brainstorming",
+          "Utilise Figma for visual and interactive prototyping",
+          "Explore and understand UI/UX concepts",
+          "Create visually appealing and intuitive digital designs for web and mobile apps",
+          "Communicate design solutions"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Project"
+      },
+      {
+        "type": "p",
+        "text": "Students will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge."
+      },
+      {
+        "type": "p",
+        "text": "Requirements"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hardware: Windows, Mac, Chromebook, iPad",
+          "Software: Chrome, Firefox, Safari, or Edge. Figma is a web-based application. For iPad, we recommend the free Figurative app."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "id": "vibe-coding-for-digital-builders",
+    "slug": "vibe-coding-for-digital-builders",
+    "title": "Vibe Coding for Digital Builders",
+    "subtitle": null,
+    "duration": "2 days",
+    "description": "Public",
+    "hero_image": "https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832",
+    "audience_ids": [
+      "public",
+      "businesses"
+    ],
+    "topic_ids": [
+      "ai-and-machine-learning-with-data-science"
+    ],
+    "cta_ids": [
+      "our-courses-https-tinkercademy-com-courses-all",
+      "our-projects-https-tinkercademy-com-showcase",
+      "tinkertanker-pte-ltd-http-tinkertanker-com",
+      "sign-up-https-form-jotform-com-223001013827440",
+      "get-hacking-store-https-gethacking-com",
+      "tinker-class-pte-ltd-https-tinkerclass-tech",
+      "tinkermind-https-tinkermind-sg",
+      "hello-tk-sg-mailto-hello-tk-sg",
+      "6917-6920-tel-69176920",
+      "69176920-tel-69176920"
+    ],
+    "seo": {
+      "title": "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+      "openGraph": {
+        "title": "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "h3",
+        "text": "Content"
+      },
+      {
+        "type": "h1",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "h4",
+        "text": "Audiences:"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h4",
+        "text": "Duration:"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "h4",
+        "text": "Type:"
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "h2",
+        "text": "Course Overview"
+      },
+      {
+        "type": "p",
+        "text": "Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in leveraging AI-driven tools like ChatGPT, Figma, and Lovable to rapidly prototype, design, and deploy web applications."
+      },
+      {
+        "type": "p",
+        "text": "In this practical two-day course, you'll explore how generative AI can be effectively integrated into your organisation's workflow."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Starting with problem discovery and analysis, you'll harness ChatGPT for deep research, solution proposals, user persona creation, and user acceptance testing (UAT) writing.",
+          "You'll then transition into visual design with Figma, creating user-centric prototypes and UI definitions.",
+          "Finally, you'll employ Lovable, a powerful vibe-coding platform, to build and debug a complete web app, backed by Supabase, using natural language prompts."
+        ]
+      },
+      {
+        "type": "h1",
+        "text": "Lesson Outcomes"
+      },
+      {
+        "type": "p",
+        "text": "By the end of this course, you will:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Understand the fundamentals and practical applications of generative AI tools like ChatGPT.",
+          "Conduct in-depth problem analysis and generate comprehensive solution proposals.",
+          "Develop responsive user interface designs and wireframes using Figma.",
+          "Rapidly build and deploy web applications through vibe coding with Lovable and Supabase.",
+          "Evaluate the impact and integration strategies of AI tools within your organisation’s digital transformation initiatives, and for your personal development."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Details"
+      },
+      {
+        "type": "p",
+        "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire."
+      },
+      {
+        "type": "p",
+        "text": "Location: CT HUB 2, 114 Lavender Street."
+      },
+      {
+        "type": "p",
+        "text": "Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course."
+      },
+      {
+        "type": "p",
+        "text": "Fees (excl. GST) per participant:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "16 participants and above: $650",
+          "12-15 participants: $750",
+          "8-11 participants: $870"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "For 7 or fewer participants, we charge a flat fee of S$6,800 total."
+      },
+      {
+        "type": "p",
+        "text": "All quoted prices are in SGD. Invoicing terms available."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  }
+]

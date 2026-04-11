@@ -1,0 +1,51 @@
+---
+type Block = { type: string; text?: string; items?: string[] };
+
+const props = Astro.props as { blocks?: Block[] };
+const blocks = props.blocks ?? [];
+
+const groups: Block[] = [];
+let currentList: string[] = [];
+
+for (const block of blocks) {
+	if (block.type === 'list') {
+		groups.push(block);
+		continue;
+	}
+
+	if (block.type === 'li') {
+		if (block.text) currentList.push(block.text);
+		continue;
+	}
+
+	if (currentList.length > 0) {
+		groups.push({ type: 'list', items: currentList });
+		currentList = [];
+	}
+
+	groups.push(block);
+}
+
+if (currentList.length > 0) {
+	groups.push({ type: 'list', items: currentList });
+}
+---
+
+<section class="shell prose">
+	{groups.map((block: Block) => {
+		if (block.type === 'list' && block.items) {
+			return (
+				<ul>
+					{block.items.map((item: string) => <li>{item}</li>)}
+				</ul>
+			);
+		}
+
+		const text = block.text ?? '';
+		if (block.type === 'h1') return <h1>{text}</h1>;
+		if (block.type === 'h2') return <h2>{text}</h2>;
+		if (block.type === 'h3') return <h3>{text}</h3>;
+		if (block.type === 'h4') return <h4>{text}</h4>;
+		return <p>{text}</p>;
+	})}
+</section>

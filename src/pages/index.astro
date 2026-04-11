@@ -1,0 +1,50 @@
+---
+import ContentBlocks from '../components/ContentBlocks.astro';
+import PageHero from '../components/PageHero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteData, getStaticPage } from '../lib/data.js';
+
+const site = getSiteData();
+const page = getStaticPage('/');
+const featuredProgrammes = site.programmes.slice(0, 6);
+const featuredTutorials = site.tutorials.slice(0, 6);
+---
+
+<BaseLayout
+	title={page?.seo?.title ?? 'Tinkercademy'}
+	description={page?.seo?.description ?? ''}
+	canonical="https://tinkercademy.com/"
+	image={page?.hero_image ?? undefined}
+>
+	<PageHero
+		eyebrow="Framer crawl rebuild"
+		title={page?.title ?? 'Tinkercademy'}
+		lead={page?.description ?? 'Crawl-driven Astro rebuild of the current public site.'}
+	/>
+
+	{page && <ContentBlocks blocks={page.content} />}
+
+	<section class="shell section">
+		<h2 class="section-title">Programmes</h2>
+		<div class="card-grid">
+			{featuredProgrammes.map((programme) => (
+				<a class="card" href={`/programmes/${programme.slug}`}>
+					<h3>{programme.title}</h3>
+					<p>{programme.description}</p>
+				</a>
+			))}
+		</div>
+	</section>
+
+	<section class="shell section">
+		<h2 class="section-title">Tutorials</h2>
+		<div class="card-grid">
+			{featuredTutorials.map((tutorial) => (
+				<a class="card" href={`/tutorials/${tutorial.slug}`}>
+					<h3>{tutorial.title}</h3>
+					<p>{tutorial.description}</p>
+				</a>
+			))}
+		</div>
+	</section>
+</BaseLayout>

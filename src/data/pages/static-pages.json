@@ -1,0 +1,6031 @@
+[
+  {
+    "path": "/",
+    "slug": "home",
+    "title": "Illuminate your journey into tech.",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=4068&height=2000",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Programmes",
+        "url": "https://tinkercademy.com/#programmes",
+        "type": "internal"
+      },
+      {
+        "label": "Professionals",
+        "url": "https://tinkercademy.com/professionals",
+        "type": "internal"
+      },
+      {
+        "label": "Schools",
+        "url": "https://tinkercademy.com/schools",
+        "type": "internal"
+      },
+      {
+        "label": "Individuals",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Read More",
+        "url": "https://swiftinsg.org/",
+        "type": "external"
+      },
+      {
+        "label": "LEARN Roadmap",
+        "url": "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps",
+        "type": "external"
+      },
+      {
+        "label": "Read More",
+        "url": "https://infocomm.club/",
+        "type": "external"
+      },
+      {
+        "label": "Read More",
+        "url": "https://codeforfun.sg/",
+        "type": "external"
+      },
+      {
+        "label": "BusinessesBuilding Agents with OpenClawCorporate training2 daysCourse",
+        "url": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesLevel Up Your Vibe Coding (Lovable and Replit)Corporate training2 daysCourse",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesVibe Coding for Digital BuildersCorporate training2 daysCourse",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesKnowledge-Powered AI with ChatGPTCorporate training½, 1, 2 daysCourse",
+        "url": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+        "type": "internal"
+      },
+      {
+        "label": "PublicBuild for Mobile: App Development with React NativeCorporate training, 21 & 22 August 20252 daysCourse",
+        "url": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+        "type": "internal"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Illuminate your journey into tech."
+      },
+      {
+        "type": "h1",
+        "text": "Learn coding and digital making from expert coders and makers."
+      },
+      {
+        "type": "p",
+        "text": "Programmes"
+      },
+      {
+        "type": "p",
+        "text": "Professionals"
+      },
+      {
+        "type": "p",
+        "text": "Schools"
+      },
+      {
+        "type": "p",
+        "text": "Individuals"
+      },
+      {
+        "type": "p",
+        "text": "Official training partner for tech companies, universities, and the Singapore government."
+      },
+      {
+        "type": "h3",
+        "text": "Official training partner for tech companies, universities, and the Singapore government."
+      },
+      {
+        "type": "h2",
+        "text": "Learn from qualified educators and engineers."
+      },
+      {
+        "type": "p",
+        "text": "Courses available in a wide variety of modern, practical domains."
+      },
+      {
+        "type": "p",
+        "text": "AI and Machine Learning with Data Science"
+      },
+      {
+        "type": "p",
+        "text": "Computer Science Fundamentals"
+      },
+      {
+        "type": "p",
+        "text": "Creativity, Craft, and Making"
+      },
+      {
+        "type": "p",
+        "text": "Cryptography"
+      },
+      {
+        "type": "p",
+        "text": "Cybersecurity"
+      },
+      {
+        "type": "p",
+        "text": "Design Thinking"
+      },
+      {
+        "type": "p",
+        "text": "Design, Prototyping, and UI/UX"
+      },
+      {
+        "type": "p",
+        "text": "Game Development"
+      },
+      {
+        "type": "p",
+        "text": "Microcontrollers & IoT"
+      },
+      {
+        "type": "p",
+        "text": "Mobile App Development"
+      },
+      {
+        "type": "p",
+        "text": "Professional Productivity with Technology"
+      },
+      {
+        "type": "p",
+        "text": "Software Engineering"
+      },
+      {
+        "type": "p",
+        "text": "Web Development"
+      },
+      {
+        "type": "p",
+        "text": "Led by experts with qualifications and experience from world-class institutions."
+      },
+      {
+        "type": "h3",
+        "text": "Led by experts with qualifications and experience from world-class institutions."
+      },
+      {
+        "type": "p",
+        "text": "Curriculum designed and delivered by officially certified instructors."
+      },
+      {
+        "type": "h3",
+        "text": "Curriculum designed and delivered by officially certified instructors."
+      },
+      {
+        "type": "h2",
+        "text": "Our FlagshipProgrammes"
+      },
+      {
+        "type": "h2",
+        "text": "Our Flagship Programmes"
+      },
+      {
+        "type": "h3",
+        "text": "Swift Accelerator"
+      },
+      {
+        "type": "p",
+        "text": "Learn about this intensive talent development programme for secondary school students where you can build an iOS app using Apple's own programming language, Swift."
+      },
+      {
+        "type": "p",
+        "text": "Read More"
+      },
+      {
+        "type": "h3",
+        "text": "IMDA LEARN Roadmap"
+      },
+      {
+        "type": "p",
+        "text": "We are proud to offer tech education courses to Infocomm Media Clubs for Primary Schools, secondary schools, and junior colleges, as part of IMDA's LEARN Roadmap."
+      },
+      {
+        "type": "p",
+        "text": "Read More"
+      },
+      {
+        "type": "h3",
+        "text": "Code For Fun"
+      },
+      {
+        "type": "p",
+        "text": "Discover how students can learn coding, computational thinking, and AI through hands-on experience with microcontrollers. We offer fully subsidised training for up to 2 cohorts per school."
+      },
+      {
+        "type": "p",
+        "text": "Read More"
+      },
+      {
+        "type": "h2",
+        "text": "Popular courses"
+      },
+      {
+        "type": "h2",
+        "text": "Popular Courses"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Knowledge-Powered AI with ChatGPT"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "½, 1, 2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Build for Mobile: App Development with React Native"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 21 & 22 August 2025"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Course"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/professionals",
+    "slug": "professionals",
+    "title": "Data, Coding, IoT Tinkering, and Tech Productivity Training",
+    "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
+    "hero_image": "https://framerusercontent.com/images/EaWUVtwMDagcJ2vVgiB5QFWhI.jpg?width=5338&height=4284",
+    "seo": {
+      "title": "Tinkercademy at Work: Expert-Led Tech Upskilling",
+      "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
+      "canonical": "https://tinkercademy.com/professionals",
+      "openGraph": {
+        "title": "Tinkercademy at Work: Expert-Led Tech Upskilling",
+        "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
+        "image": "https://framerusercontent.com/assets/Hpib447RIgaq1OV8VQAc9Vxhac.png"
+      },
+      "twitter": {
+        "title": "Tinkercademy at Work: Expert-Led Tech Upskilling",
+        "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
+        "image": "https://framerusercontent.com/assets/Hpib447RIgaq1OV8VQAc9Vxhac.png"
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Schools",
+        "url": "https://tinkercademy.com/schools",
+        "type": "internal"
+      },
+      {
+        "label": "Individuals",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Browse Courses",
+        "url": "https://tinkercademy.com/courses-professionals",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesBuilding Agents with OpenClawBusinesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesLevel Up Your Vibe Coding (Lovable and Replit)Businesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesVibe Coding for Digital BuildersBusinesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesKnowledge-Powered AI with ChatGPTBusinesses½, 1, 2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+        "type": "internal"
+      },
+      {
+        "label": "PublicBuild for Mobile: App Development with React NativePublic2 daysCorporate training, 21 & 22 August 2025",
+        "url": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+        "type": "internal"
+      },
+      {
+        "label": "PublicMastering the Web: Understand Full-Stack DevelopmentPublic2 daysCorporate training, 3 & 4 July 2025",
+        "url": "https://tinkercademy.com/programmes/mastering-the-web",
+        "type": "internal"
+      },
+      {
+        "label": "PublicProfessional Certificate in Mobile Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/professional-certificate-in-mobile-application-development",
+        "type": "internal"
+      },
+      {
+        "label": "PublicProfessional Certificate in Web Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/professional-certificate-in-web-application-development",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesCertificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital MakingBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesCertificate in Technology Foundations: Unleash the Potential of Blockchain TechnologyBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+        "type": "internal"
+      },
+      {
+        "label": "PublicDigital Maker: Create with 3D Printing and IOTPublic2 days14 - 15 January 2025",
+        "url": "https://tinkercademy.com/programmes/iotmaker",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesEnter the Metaverse: Get started with Unity for AR/VRBusinesses2 days11 - 12 February 2025",
+        "url": "https://tinkercademy.com/programmes/unityarvr",
+        "type": "internal"
+      },
+      {
+        "label": "PublicNo-code Web Design (Framer)Public2 daysAn introductory course on building websites using Framer.",
+        "url": "https://tinkercademy.com/programmes/no-code-web-design-framer",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesMicrosoft Copilot Businesses2 daysAn introductory course on leveraging Microsoft Copilot to enhance productivity.",
+        "url": "https://tinkercademy.com/programmes/microsoft-copilot",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesDigital Making with micro:bit & IoTBusinesses2 daysAn introductory course on digital making with Micro:bit & IoT.",
+        "url": "https://tinkercademy.com/programmes/digital-making-with-micro-bit-iot",
+        "type": "internal"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Data, Coding, IoT Tinkering, and Tech Productivity Training"
+      },
+      {
+        "type": "h1",
+        "text": "Real skills for real impact."
+      },
+      {
+        "type": "p",
+        "text": "Schools"
+      },
+      {
+        "type": "p",
+        "text": "Individuals"
+      },
+      {
+        "type": "h2",
+        "text": "Our Partners"
+      },
+      {
+        "type": "h3",
+        "text": "Our Partners"
+      },
+      {
+        "type": "h2",
+        "text": "Our Value Proposition"
+      },
+      {
+        "type": "h3",
+        "text": "CUSTOMISED TECH UPSKILLING"
+      },
+      {
+        "type": "p",
+        "text": "Your business goals are unique. So is our training. We design learning experiences (GenAI, vibe coding, tech training) precisely for your team and your objectives in Singapore. They get the skills to make a real impact."
+      },
+      {
+        "type": "h3",
+        "text": "EXPERTINSTRUCTORS"
+      },
+      {
+        "type": "h3",
+        "text": "EXPERT TRAINERS"
+      },
+      {
+        "type": "p",
+        "text": "Your team will be guided by experts from Ivy-league universities and leading tech companies. They bring powerful insights to inspire innovation within your office."
+      },
+      {
+        "type": "h3",
+        "text": "TRACK RECORD"
+      },
+      {
+        "type": "p",
+        "text": "Singapore companies trust us. Consistently rated 5 stars. Client partnerships over 8 years strong. We ensure learning turns into action, helping your team meet your business objectives."
+      },
+      {
+        "type": "h2",
+        "text": "Our Clients"
+      },
+      {
+        "type": "h2",
+        "text": "Let's Work Together!"
+      },
+      {
+        "type": "p",
+        "text": "Browse Courses"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Courses"
+      },
+      {
+        "type": "h3",
+        "text": "Professional Courses"
+      },
+      {
+        "type": "h4",
+        "text": "Search"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Knowledge-Powered AI with ChatGPT"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "½, 1, 2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Build for Mobile: App Development with React Native"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 21 & 22 August 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Mastering the Web: Understand Full-Stack Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 3 & 4 July 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Mobile Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Web Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Maker: Create with 3D Printing and IOT"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "14 - 15 January 2025"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Enter the Metaverse: Get started with Unity for AR/VR"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "11 - 12 February 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "No-code Web Design (Framer)"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on building websites using Framer."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Microsoft Copilot"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on leveraging Microsoft Copilot to enhance productivity."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit & IoT"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on digital making with Micro:bit & IoT."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/microbit",
+    "slug": "microbit",
+    "title": "micro:bit Tutorials",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/3wvrDe3ohG9X1GAVgOtYRjkdWCs.jpg?width=2880&height=929",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/microbit",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Tutorials",
+        "url": "https://tinkercademy.com/microbit#tutorials",
+        "type": "internal"
+      },
+      {
+        "label": "Individuals",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Professionals",
+        "url": "https://tinkercademy.com/professionals",
+        "type": "internal"
+      },
+      {
+        "label": "Schools",
+        "url": "https://tinkercademy.com/schools",
+        "type": "internal"
+      },
+      {
+        "label": "Digital Maker Programme",
+        "url": "https://microbit.org/impact/foundation-reports/singapore/digital-maker-programme/#:~:text=The%20Digital%20Maker%20Programme%20%28DMP%29%20was%20then%20launched,to%20all%20primary%20school%20levels%20P1%20to%20P6.",
+        "type": "external"
+      },
+      {
+        "label": "Buy the micro:bit and kit",
+        "url": "https://gethacking.com/collections/microbit",
+        "type": "external"
+      },
+      {
+        "label": "microbit.org",
+        "url": "http://microbit.org/",
+        "type": "external"
+      },
+      {
+        "label": "microbit.org/code",
+        "url": "http://microbit.org/code",
+        "type": "external"
+      },
+      {
+        "label": "Microsoft MakeCode",
+        "url": "http://pxt.microbit.org/",
+        "type": "external"
+      },
+      {
+        "label": "check here",
+        "url": "http://microbit.org/en/2017-03-07-javascript-block-resources/",
+        "type": "external"
+      },
+      {
+        "label": "Instructables",
+        "url": "http://www.instructables.com/member/Digital%20Maker%20SG",
+        "type": "external"
+      },
+      {
+        "label": "here",
+        "url": "https://microbit.org/impact/foundation-reports/singapore/digital-maker-programme/",
+        "type": "external"
+      },
+      {
+        "label": "Digital Making course",
+        "url": "https://tinkercademy.com/programmes/imda-microbit-2025",
+        "type": "internal"
+      },
+      {
+        "label": "Buy the micro:bit Breakout Board",
+        "url": "https://gethacking.com/collections/microbit/breakout-board#filter-by",
+        "type": "external"
+      },
+      {
+        "label": "Access Denied! A Door Entry TutorialAccess Denied! A Door Entry Tutorial",
+        "url": "https://tinkercademy.com/tutorials/access-denied-a-door-entry-tutorial",
+        "type": "internal"
+      },
+      {
+        "label": "Ang Bao CollectorAng Bao Collector",
+        "url": "https://tinkercademy.com/tutorials/ang-bao-collector",
+        "type": "internal"
+      },
+      {
+        "label": "Build your own Micro:bit Security Door!Build your own Micro:bit Security Door!",
+        "url": "https://tinkercademy.com/tutorials/build-your-own-micro-bit-security-door",
+        "type": "internal"
+      },
+      {
+        "label": "Coin Sorter with Micro:bitCoin Sorter with Micro:bit",
+        "url": "https://tinkercademy.com/tutorials/coin-sorter",
+        "type": "internal"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "micro:bit Tutorials"
+      },
+      {
+        "type": "p",
+        "text": "Get started with our BBC Micro:bit Kit and the Breakout Board here!"
+      },
+      {
+        "type": "p",
+        "text": "Tutorials"
+      },
+      {
+        "type": "p",
+        "text": "Individuals"
+      },
+      {
+        "type": "p",
+        "text": "Professionals"
+      },
+      {
+        "type": "p",
+        "text": "Schools"
+      },
+      {
+        "type": "h2",
+        "text": "Getting started with the micro:bit Tinker Kit"
+      },
+      {
+        "type": "p",
+        "text": "Tinkercademy is proud to present our very own Micro:bit Tinker Kit. Made in Singapore! The kit comes with:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Our custom breakout board, which makes it super easy to make projects with the micro:bit!",
+          "A variety of Octopus parts: components with colour-coded plugs that connect easily with the breakout board."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Follow the graphical guide to get started on using the Breakout Board, and try out the tutorials below."
+      },
+      {
+        "type": "p",
+        "text": "We’re proud to be a launch partner of the Infocomm Media Development Authority for the launch of the Digital Maker Programme, which aims to nurture a new generation of digital natives with a passion for technology. Read more about our Digital Maker Programme initiatives at our blog."
+      },
+      {
+        "type": "p",
+        "text": "Buy the micro:bit and kit"
+      },
+      {
+        "type": "h2",
+        "text": "Have a new micro:bit? Here’s where you can get started:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The official micro:bit site at microbit.org",
+          "Want to jump straight into coding? See microbit.org/code, or go straight to Microsoft MakeCode.",
+          "microbit.org has lots of great MakeCode lessons to get started—check here!",
+          "Try out more projects from the Digital Maker Programme on Instructables. Find out more about the Digital Maker Programme, by the Infocomm Media Development Authority of Singapore, here.",
+          "Sign up for our Digital Making course to explore the functionalities of micro:bit.",
+          "Try our tutorials below! Some components may require extra libraries, which are available for download in the tutorials."
+        ]
+      },
+      {
+        "type": "h3",
+        "text": "Introducing the micro:bit Breakout Board"
+      },
+      {
+        "type": "p",
+        "text": "Buy the micro:bit Breakout Board"
+      },
+      {
+        "type": "h2",
+        "text": "Ready to tinker with your new micro:bit?Look through our micro:bit tutorials!"
+      },
+      {
+        "type": "h2",
+        "text": "Access Denied! A Door Entry Tutorial"
+      },
+      {
+        "type": "h2",
+        "text": "Ang Bao Collector"
+      },
+      {
+        "type": "h2",
+        "text": "Build your own Micro:bit Security Door!"
+      },
+      {
+        "type": "h2",
+        "text": "Coin Sorter with Micro:bit"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/tinker-x",
+    "slug": "tinker-x",
+    "title": "Tinker X",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/3cybNehmDehCXeBSMBiUWGpbgI.jpg?width=1000&height=667",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/tinker-x",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "blog",
+        "url": "https://ghost.tk.sg/",
+        "type": "external"
+      },
+      {
+        "label": "Get Started",
+        "url": "https://tinkercademy.com/contact-us",
+        "type": "internal"
+      },
+      {
+        "label": "Get Started",
+        "url": "https://app.acuityscheduling.com/schedule/b7469ae8/category/Tinker%2520X%2520Single%2520Sessions/appointment/9896622/calendar/2925143",
+        "type": "external"
+      },
+      {
+        "label": "Get Started",
+        "url": "https://app.acuityscheduling.com/catalog/b7469ae8?categories=Packages",
+        "type": "external"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Tinker X"
+      },
+      {
+        "type": "h3",
+        "text": "A flexible program for hands-on learning in coding and making."
+      },
+      {
+        "type": "p",
+        "text": "Welcome to Tinker X, an open-ended program for anyone interested in coding and engineering. Unlike a traditional classroom, we offer a flexible mix of hands-on instruction and independent work. We give you the resources and support to learn at your own pace, whether you’re following a structured curriculum or bringing your own project to life."
+      },
+      {
+        "type": "p",
+        "text": "AI is already disrupting traditional education, moving it away from a rigid, one-size-fits-all model toward a more personalized and efficient system. We've embraced this change. Our program uses a flipped classroom approach where you actively engage with materials on your own, applying a \"just-in-time\" learning approach. This means you focus on learning the skills you need to complete a project you're excited about."
+      },
+      {
+        "type": "p",
+        "text": "This process is designed to be challenging and, at times, frustrating—and that's by design. By learning to push through obstacles and solve problems on your own, you'll develop grit, critical thinking, and initiative — skills that are essential for a future where technology is constantly changing. We seek to nurture independent, motivated, and skilled learners and creators who adapt and thrive in a rapidly changing world."
+      },
+      {
+        "type": "h3",
+        "text": "Extensive Materials"
+      },
+      {
+        "type": "p",
+        "text": "We offer a wide range of course materials for all skill levels and interests, from introductory coding to data science, and AI. Our curriculum has been used with thousands of students."
+      },
+      {
+        "type": "p",
+        "text": "We also use high-quality online content and will recommend resources that best fit your needs, while providing support along the way."
+      },
+      {
+        "type": "p",
+        "text": "We provide a wide range of materials to cater to learners of all levels."
+      },
+      {
+        "type": "h3",
+        "text": "Maker Library"
+      },
+      {
+        "type": "p",
+        "text": "Don’t have the space (or you’re just too sensible) to put a laser cutter at home? No problem! We have the equipment you need to make and tinker: electronics modules, laser cutter, 3D printer, soldering station, miter saw, and much more."
+      },
+      {
+        "type": "p",
+        "text": "We also have an extensive library of kits and robots you can tinker and play with."
+      },
+      {
+        "type": "p",
+        "text": "We have an extensive library of kits and robots you can tinker and play with."
+      },
+      {
+        "type": "h3",
+        "text": "Community"
+      },
+      {
+        "type": "p",
+        "text": "It can get lonely learning on your own. Even if you do not talk to anyone else here at Tinker X, it is still inspirational and motivational to join a community of like-minded people who just want to see what happens when you connect this to that and spend hours tinkering with code and electronics."
+      },
+      {
+        "type": "p",
+        "text": "We love to see people learn and grow. To that end, we offer Tinker X scholarships to enthusiastic and passionate young students, so that they can contribute back to the community with their new skills and knowledge."
+      },
+      {
+        "type": "p",
+        "text": "Join other like-minded tinkerers and learners."
+      },
+      {
+        "type": "p",
+        "text": "Read more project updates on our blog."
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "p",
+        "text": "Is there a curriculum?"
+      },
+      {
+        "type": "p",
+        "text": "What can I choose to learn?"
+      },
+      {
+        "type": "p",
+        "text": "Is this suitable for my child?"
+      },
+      {
+        "type": "p",
+        "text": "Am I too old for your program?"
+      },
+      {
+        "type": "p",
+        "text": "Why should I go for this over a traditional enrichment centre?"
+      },
+      {
+        "type": "h3",
+        "text": "Try a free trial session and see what we're all about! After that, you can continue with individual sessions, or sign up for a package for additional savings."
+      },
+      {
+        "type": "h2",
+        "text": "Trial Session"
+      },
+      {
+        "type": "p",
+        "text": "New to us"
+      },
+      {
+        "type": "p",
+        "text": "$0"
+      },
+      {
+        "type": "p",
+        "text": "SGD"
+      },
+      {
+        "type": "p",
+        "text": "New here? Try us out!"
+      },
+      {
+        "type": "p",
+        "text": "Write in to us for details"
+      },
+      {
+        "type": "p",
+        "text": "Get Started"
+      },
+      {
+        "type": "h2",
+        "text": "Single Session"
+      },
+      {
+        "type": "p",
+        "text": "Weekly"
+      },
+      {
+        "type": "p",
+        "text": "$50"
+      },
+      {
+        "type": "p",
+        "text": "SGD"
+      },
+      {
+        "type": "p",
+        "text": "Full access for one day"
+      },
+      {
+        "type": "p",
+        "text": "Great for small projects"
+      },
+      {
+        "type": "p",
+        "text": "Get Started"
+      },
+      {
+        "type": "h2",
+        "text": "4 Sessions"
+      },
+      {
+        "type": "p",
+        "text": "Monthly"
+      },
+      {
+        "type": "p",
+        "text": "$180"
+      },
+      {
+        "type": "p",
+        "text": "SGD"
+      },
+      {
+        "type": "p",
+        "text": "Save $20!"
+      },
+      {
+        "type": "p",
+        "text": "120-day validity"
+      },
+      {
+        "type": "p",
+        "text": "Get Started"
+      },
+      {
+        "type": "h2",
+        "text": "12 Sessions"
+      },
+      {
+        "type": "p",
+        "text": "Quarterly"
+      },
+      {
+        "type": "p",
+        "text": "$480"
+      },
+      {
+        "type": "p",
+        "text": "SGD"
+      },
+      {
+        "type": "p",
+        "text": "Save $120!!"
+      },
+      {
+        "type": "p",
+        "text": "180-day validity"
+      },
+      {
+        "type": "p",
+        "text": "Get Started"
+      },
+      {
+        "type": "h1",
+        "text": "Tinker X Scholars"
+      },
+      {
+        "type": "h3",
+        "text": "A scholarship opportunity for students who demonstrate a passion for technology."
+      },
+      {
+        "type": "p",
+        "text": "Technology education is often treated as an enrichment activity, which can create inequality in who has access to it. To help make technology education more equitable and accessible, we are offering Tinker X scholarships for students."
+      },
+      {
+        "type": "p",
+        "text": "These scholarships provide highly subsidized membership to students who are passionate about technology but lack access to expert mentors, guidance, or tools."
+      },
+      {
+        "type": "p",
+        "text": "To be considered, students should submit a portfolio of their previous tech-related work. We're not looking for perfect results, but rather a clear demonstration of effort and passion. Applicants must also show a need for financial assistance."
+      },
+      {
+        "type": "p",
+        "text": "In return, Tinker X scholars will be expected to give back to the community, helping to inspire the next generation of learners."
+      },
+      {
+        "type": "p",
+        "text": "If you or someone you know might be a good fit, please contact us at hello@tinkercademy.com to learn more or to apply. We are accepting applications now."
+      }
+    ]
+  },
+  {
+    "path": "/showcase",
+    "slug": "showcase",
+    "title": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/1mmWhHMr6MnhWIa0MEoHFHdS4I.jpg?scale-down-to=4096&width=7086&height=6532",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/showcase",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "https://www.apple.com/education/college-students/success-stories/yee/",
+        "url": "https://www.apple.com/education/college-students/success-stories/yee/",
+        "type": "external"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys"
+      },
+      {
+        "type": "h4",
+        "text": "Meet the bright minds who’ve learned, built, and grown with us, from classroom projects to professional success."
+      },
+      {
+        "type": "h2",
+        "text": "Our Students"
+      },
+      {
+        "type": "h4",
+        "text": "Our students have built some pretty cool things, ranging from apps to games to remote controlled devices and beyond!"
+      },
+      {
+        "type": "h2",
+        "text": "Our Interns"
+      },
+      {
+        "type": "h4",
+        "text": "Through hands-on experience and mentorship, our interns work on real projects that shape the future of education and technology. Here are what they have to say about their experiences!"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "list",
+        "items": [
+          "RaynoldSoftware Development Intern,2017This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Raynold"
+      },
+      {
+        "type": "list",
+        "items": [
+          "ColinMachine Learning & Data Science Intern, 2017Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Colin"
+      },
+      {
+        "type": "list",
+        "items": [
+          "JoelleComputer Engineering Intern, 2017I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I’m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Joelle"
+      },
+      {
+        "type": "list",
+        "items": [
+          "MarkTeaching & Curriculum Design Intern, 2023Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It’s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mark"
+      },
+      {
+        "type": "list",
+        "items": [
+          "EnricComputer Science Intern, 2023All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Enric"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Yun XuanSoftware Development Intern, 2024Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Yun Xuan"
+      },
+      {
+        "type": "h2",
+        "text": "Meet Jia Chen"
+      },
+      {
+        "type": "p",
+        "text": "Swift Accelerator Programme Trainer at Tinkertanker"
+      },
+      {
+        "type": "p",
+        "text": "Image from apple.com"
+      },
+      {
+        "type": "p",
+        "text": "Meet Jia Chen, a young visionary from Singapore whose journey into the world of technology began with childhood exploration and the transformative power of mobile apps. Inspired by the seamless fusion of science and technology, Jia Chen embarked on a swift learning curve, mastering the Swift programming language and unveiling his debut iOS app on the App Store at a remarkably young age. Now, an Information Technology diploma graduate from Ngee Ann Polytechnic, Jia Chen's creative process is seamlessly integrated into the Apple ecosystem, from sketching app designs on iPad to bringing them to life with Xcode on Mac. His commitment to inclusivity is palpable through projects such as \"ExploreAbility,\" designed to empower users with accessibility features. Collaborating with renowned brands like Bernina, Jia Chen showcases his innovative spirit with apps like \"Bianco,\" demonstrating the potential of ARKit and iPad. With six apps already gracing the App Store and two Swift Student Challenge triumphs under his belt, Jia Chen epitomizes the next generation of creators and innovators, harnessing the power of Swift to realize his boundless ideas with precision and flair."
+      },
+      {
+        "type": "p",
+        "text": "As featured on Apple: https://www.apple.com/education/college-students/success-stories/yee/"
+      },
+      {
+        "type": "h2",
+        "text": "Learn more about what our alumni have done!"
+      },
+      {
+        "type": "h3",
+        "text": "We’re building software, electronics, curriculum—and the next generation of coders, makers, and creators. Come check out our build log and contribute to it one day!"
+      },
+      {
+        "type": "p",
+        "text": "Build Log"
+      },
+      {
+        "type": "h2",
+        "text": "Learn more about what our alumni have done!"
+      },
+      {
+        "type": "h3",
+        "text": "We’re building software, electronics, curriculum—and the next generation of coders, makers, and creators. Come check out our build log and contribute to it one day!"
+      },
+      {
+        "type": "p",
+        "text": "Build Log"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/about-us",
+    "slug": "about-us",
+    "title": "We’re coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore.",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/a30diESkHyoGIgdzYg4dQoU5vHA.jpg?width=2160&height=2700",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/about-us",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Get Hacking",
+        "url": "http://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "GuestDay",
+        "url": "http://guestday.com/",
+        "type": "external"
+      },
+      {
+        "label": "IC Photo",
+        "url": "https://apps.apple.com/sg/app/ic-photo-singapore/id483078253",
+        "type": "external"
+      },
+      {
+        "label": "Helpling Singapore",
+        "url": "http://helpling.com.sg/",
+        "type": "external"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "We’re coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore."
+      },
+      {
+        "type": "h4",
+        "text": "We bring an unparalleled depth of experience in education and technology to our classes and curriculum."
+      },
+      {
+        "type": "p",
+        "text": "Tinkertanker Pte Ltd is a technology and education company of tinkerers and teachers. We run Tinkercademy, where we teach coding and digital making to students of all ages, in a wide variety of fields such as micro:bit, iOS, Python, Arduino, Node, cyber-security, Unity, and more. We also curate and sell educational technology toys at our Get Hacking online store, and build our own tech apps and products, e.g. GuestDay, an iPad-based guest registration service; an IC Photo app for Singaporeans to take useful selfies; and Spickify, now Helpling Singapore."
+      },
+      {
+        "type": "h3",
+        "text": "We are certified"
+      },
+      {
+        "type": "h2",
+        "text": "Partners"
+      },
+      {
+        "type": "p",
+        "text": "We collaborate with with industry leaders and educational institutions to drive innovation in learning. Our partners make it possible for us to create impactful solutions that empower educators and students alike."
+      },
+      {
+        "type": "h2",
+        "text": "Our Clients"
+      },
+      {
+        "type": "p",
+        "text": "We’ve had the privilege of teaching, and working with, many preschools, primary schools, secondary schools, IP schools, junior colleges, tertiary institutions, and companies. Here’s a random sample of our clients:"
+      },
+      {
+        "type": "h1",
+        "text": "50+"
+      },
+      {
+        "type": "h3",
+        "text": "Primary and Secondary Schools We've Taught at for IMDA Infocomm Club"
+      },
+      {
+        "type": "h1",
+        "text": "160+"
+      },
+      {
+        "type": "h3",
+        "text": "Preschools We've Developed Curriculum for in the Playmaker Programme"
+      },
+      {
+        "type": "h1",
+        "text": "3000+"
+      },
+      {
+        "type": "h3",
+        "text": "Students We've Reached Through the Code@SG Movement"
+      },
+      {
+        "type": "h2",
+        "text": "Our Team"
+      },
+      {
+        "type": "p",
+        "text": "Tinkercademy comprises a team of dedicated education specialists from top universities worldwide. With our extensive training in technology, design, and educational pedagogy, combined with years of experience creating real-world apps and electronics, we bring an unparalleled breadth and depth of technology education to our classes and curriculum."
+      },
+      {
+        "type": "p",
+        "text": "YJ"
+      },
+      {
+        "type": "p",
+        "text": "Master Trainer"
+      },
+      {
+        "type": "p",
+        "text": "Stanford CS graduate, YJ, trusted by tech giants like Apple and Microsoft, spearheads our corporate training programs with unparalleled expertise."
+      },
+      {
+        "type": "p",
+        "text": "Mike"
+      },
+      {
+        "type": "p",
+        "text": "Master Trainer"
+      },
+      {
+        "type": "p",
+        "text": "Wharton MBA turned Master Trainer. Mike distills complex topics into clear actionable takeaways for diverse audiences."
+      },
+      {
+        "type": "p",
+        "text": "Akmal"
+      },
+      {
+        "type": "p",
+        "text": "Master Trainer"
+      },
+      {
+        "type": "p",
+        "text": "Your friendly tech guru! Cornell grad (CS & EE) with government consulting experience."
+      },
+      {
+        "type": "p",
+        "text": "Yixue"
+      },
+      {
+        "type": "p",
+        "text": "Associate Trainer"
+      },
+      {
+        "type": "p",
+        "text": "Lucasfilm alum with 15+ years in media brings real-world expertise to your tinkering journey."
+      },
+      {
+        "type": "p",
+        "text": "Win"
+      },
+      {
+        "type": "p",
+        "text": "Associate Trainer"
+      },
+      {
+        "type": "p",
+        "text": "MBA in Automation & Control (NUS). Makes learning tech fun and collaborative."
+      },
+      {
+        "type": "p",
+        "text": "Ben"
+      },
+      {
+        "type": "p",
+        "text": "Lead Trainer"
+      },
+      {
+        "type": "p",
+        "text": "With 15 years of diverse experience spanning tech, finance, and education, Ben makes learning accessible to all, blending real-world insights with engaging instruction."
+      },
+      {
+        "type": "p",
+        "text": "Tracey"
+      },
+      {
+        "type": "p",
+        "text": "Lead Trainer"
+      },
+      {
+        "type": "p",
+        "text": "Santa Clara University graduate with over 15 years of experience in coding and education. Enlists engaging coding instruction to bring robots to life."
+      },
+      {
+        "type": "p",
+        "text": "Steven"
+      },
+      {
+        "type": "p",
+        "text": "Lead Trainer"
+      },
+      {
+        "type": "p",
+        "text": "MIT alum and tech guru, Steven sets you on a transformative tech path with his profound knowledge and innovative insights."
+      },
+      {
+        "type": "p",
+        "text": "Grace"
+      },
+      {
+        "type": "p",
+        "text": "Education Marketing"
+      },
+      {
+        "type": "p",
+        "text": "NTU alum and ex-Apple employee, Grace leads impactful campaigns to empower learning through technology."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/schools",
+    "slug": "schools",
+    "title": "Code, Tinker,and Make with Us.",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/wEov0B4hJYhOdxuoqXnMW7uwgm8.jpg?width=4608&height=2592",
+    "seo": {
+      "title": "Tinkercademy in Schools: Expert-led instruction for students",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/schools",
+      "openGraph": {
+        "title": "Tinkercademy in Schools: Expert-led instruction for students",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy in Schools: Expert-led instruction for students",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Professionals",
+        "url": "https://tinkercademy.com/professionals",
+        "type": "internal"
+      },
+      {
+        "label": "Individuals",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Professionals",
+        "url": "https://tinkercademy.com/courses-schools",
+        "type": "internal"
+      },
+      {
+        "label": "Individuals",
+        "url": "https://tinkercademy.com/courses-schools",
+        "type": "internal"
+      },
+      {
+        "label": "Code for Fun programme",
+        "url": "https://codeforfun.sg/",
+        "type": "external"
+      },
+      {
+        "label": "Infocomm Learning Roadmap",
+        "url": "https://tinkercademy.com/infocomm-club",
+        "type": "internal"
+      },
+      {
+        "label": "Code@SG scheme",
+        "url": "https://www.imda.gov.sg/how-we-can-help/code-at-sg",
+        "type": "external"
+      },
+      {
+        "label": "Learn More",
+        "url": "https://codeforfun.sg/",
+        "type": "external"
+      },
+      {
+        "label": "LEARN Roadmap",
+        "url": "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps",
+        "type": "external"
+      },
+      {
+        "label": "Learn More",
+        "url": "https://tinkercademy.com/infocomm-club",
+        "type": "internal"
+      },
+      {
+        "label": "Browse Courses",
+        "url": "https://tinkercademy.com/courses-schools",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCode For Fun AI WorkshopStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+        "url": "https://tinkercademy.com/programmes/code-for-fun-ai-workshop",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCode For Fun Baseline WorkshopStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+        "url": "https://tinkercademy.com/programmes/code-for-fun-baseline-workshop",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsRI FutureCreate Maker Programme 2025Students4 yearsA hands-on digital maker programme for RI students.",
+        "url": "https://tinkercademy.com/programmes/ri-futurecreate-maker-programme-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsDigital Making with micro:bitStudents24 hoursAn IMDA Infocom LEARN Roadmap course with micro:bit.",
+        "url": "https://tinkercademy.com/programmes/imda-microbit-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsGame Development in MakeCode Arcade & MineCraftStudents24 hoursAn IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.",
+        "url": "https://tinkercademy.com/programmes/imda-minecraft-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsGame Development Bootcamp with UnityStudents32 hoursAn IMDA Infocom LEARN Roadmap bootcamp with Unity.",
+        "url": "https://tinkercademy.com/programmes/imda-unity-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsUI/UX Design with FigmaStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Figma.",
+        "url": "https://tinkercademy.com/programmes/imda-figma-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsAI-Driven Game Development on PhaserStudents24 hoursAn IMDA Infocom LEARN Roadmap course with Phaser.",
+        "url": "https://tinkercademy.com/programmes/imda-phaser-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsSwift AcceleratorStudents8 monthsAn IMDA-Supported Course: Fully Subsidized for Successful Applicants",
+        "url": "https://tinkercademy.com/programmes/swift-accelerator",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Prototyping with Keynote and Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-a",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+        "url": "https://tinkercademy.com/programmes/code-exp-2025",
+        "type": "internal"
+      },
+      {
+        "label": "TeachersNo-Code Machine LearningTeachers2 daysAn introductory course on machine learning models using Orange.",
+        "url": "https://tinkercademy.com/programmes/no-code-machine-learning",
+        "type": "internal"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Code, Tinker,and Make with Us."
+      },
+      {
+        "type": "h1",
+        "text": "Real skills for real impact."
+      },
+      {
+        "type": "p",
+        "text": "Professionals"
+      },
+      {
+        "type": "p",
+        "text": "Individuals"
+      },
+      {
+        "type": "p",
+        "text": "Professionals"
+      },
+      {
+        "type": "p",
+        "text": "Individuals"
+      },
+      {
+        "type": "h2",
+        "text": "Programmes for Schools"
+      },
+      {
+        "type": "h2",
+        "text": "Programmesfor Schools"
+      },
+      {
+        "type": "p",
+        "text": "We offer a variety of courses for schools. As one of the first vendors for the Code for Fun programme, and the Infocomm Learning Roadmap, we’re well-equipped with the curriculum and experience to deliver first-rate coding training for students of all levels. Read on to find out more about our programmes, or send us an email if you have any questions."
+      },
+      {
+        "type": "h2",
+        "text": "Code for Fun"
+      },
+      {
+        "type": "p",
+        "text": "Established as one of the earliest Code for Fun initiators under the Code@SG scheme, we've been providing an array of cost-friendly, thorough courses aimed at inculcating coding and making methodologies using Arduino to a broad student base, since 2015."
+      },
+      {
+        "type": "p",
+        "text": "Learn More"
+      },
+      {
+        "type": "h2",
+        "text": "Infocomm Learning Roadmap"
+      },
+      {
+        "type": "p",
+        "text": "In collaboration with IMDA, our industry associates, and educational partners, we provide technology learning programs to Infocomm Media Clubs across primary, secondary, and junior colleges. This is part of the LEARN Roadmap initiative by IMDA."
+      },
+      {
+        "type": "p",
+        "text": "Learn More"
+      },
+      {
+        "type": "h2",
+        "text": "Let's Work Together!"
+      },
+      {
+        "type": "p",
+        "text": "Browse Courses"
+      },
+      {
+        "type": "h3",
+        "text": "School Courses"
+      },
+      {
+        "type": "h4",
+        "text": "Search"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Code For Fun AI Workshop"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "p",
+        "text": "A CODE@SG initiative by IMDA and MOE."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Code For Fun Baseline Workshop"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "p",
+        "text": "A CODE@SG initiative by IMDA and MOE."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "RI FutureCreate Maker Programme 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 years"
+      },
+      {
+        "type": "p",
+        "text": "A hands-on digital maker programme for RI students."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development in MakeCode Arcade & MineCraft"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development Bootcamp with Unity"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "32 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "UI/UX Design with Figma"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Figma."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "AI-Driven Game Development on Phaser"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Phaser."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Swift Accelerator"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "8 months"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Basics with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Explorations with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Prototyping with Keynote and Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "CODE_EXP 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 days"
+      },
+      {
+        "type": "p",
+        "text": "11 May 2025"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h2",
+        "text": "No-Code Machine Learning"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on machine learning models using Orange."
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/courses-professionals",
+    "slug": "courses-professionals",
+    "title": "Popular Courses",
+    "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+    "hero_image": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425",
+    "seo": {
+      "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
+      "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+      "canonical": "https://tinkercademy.com/courses-professionals",
+      "openGraph": {
+        "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
+        "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+      },
+      "twitter": {
+        "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
+        "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "BusinessesBuilding Agents with OpenClawBusinesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesLevel Up Your Vibe Coding (Lovable and Replit)Businesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesVibe Coding for Digital BuildersBusinesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesKnowledge-Powered AI with ChatGPTBusinesses½, 1, 2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+        "type": "internal"
+      },
+      {
+        "label": "PublicBuild for Mobile: App Development with React NativePublic2 daysCorporate training, 21 & 22 August 2025",
+        "url": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+        "type": "internal"
+      },
+      {
+        "label": "PublicMastering the Web: Understand Full-Stack DevelopmentPublic2 daysCorporate training, 3 & 4 July 2025",
+        "url": "https://tinkercademy.com/programmes/mastering-the-web",
+        "type": "internal"
+      },
+      {
+        "label": "PublicProfessional Certificate in Mobile Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/professional-certificate-in-mobile-application-development",
+        "type": "internal"
+      },
+      {
+        "label": "PublicProfessional Certificate in Web Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/professional-certificate-in-web-application-development",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesCertificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital MakingBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesCertificate in Technology Foundations: Unleash the Potential of Blockchain TechnologyBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+        "type": "internal"
+      },
+      {
+        "label": "PublicDigital Maker: Create with 3D Printing and IOTPublic2 days14 - 15 January 2025",
+        "url": "https://tinkercademy.com/programmes/iotmaker",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesEnter the Metaverse: Get started with Unity for AR/VRBusinesses2 days11 - 12 February 2025",
+        "url": "https://tinkercademy.com/programmes/unityarvr",
+        "type": "internal"
+      },
+      {
+        "label": "PublicNo-code Web Design (Framer)Public2 daysAn introductory course on building websites using Framer.",
+        "url": "https://tinkercademy.com/programmes/no-code-web-design-framer",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesMicrosoft Copilot Businesses2 daysAn introductory course on leveraging Microsoft Copilot to enhance productivity.",
+        "url": "https://tinkercademy.com/programmes/microsoft-copilot",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesDigital Making with micro:bit & IoTBusinesses2 daysAn introductory course on digital making with Micro:bit & IoT.",
+        "url": "https://tinkercademy.com/programmes/digital-making-with-micro-bit-iot",
+        "type": "internal"
+      },
+      {
+        "label": "Back to Professionals",
+        "url": "https://tinkercademy.com/professionals",
+        "type": "internal"
+      },
+      {
+        "label": "All Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "School Courses",
+        "url": "https://tinkercademy.com/courses-schools",
+        "type": "internal"
+      },
+      {
+        "label": "Individual Courses",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h2",
+        "text": "Popular Courses"
+      },
+      {
+        "type": "h4",
+        "text": "Search"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Knowledge-Powered AI with ChatGPT"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "½, 1, 2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Build for Mobile: App Development with React Native"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 21 & 22 August 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Mastering the Web: Understand Full-Stack Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 3 & 4 July 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Mobile Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Web Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Courses"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Knowledge-Powered AI with ChatGPT"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "½, 1, 2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Build for Mobile: App Development with React Native"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 21 & 22 August 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Mastering the Web: Understand Full-Stack Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 3 & 4 July 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Mobile Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Web Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Maker: Create with 3D Printing and IOT"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "14 - 15 January 2025"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Enter the Metaverse: Get started with Unity for AR/VR"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "11 - 12 February 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "No-code Web Design (Framer)"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on building websites using Framer."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Microsoft Copilot"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on leveraging Microsoft Copilot to enhance productivity."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit & IoT"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on digital making with Micro:bit & IoT."
+      },
+      {
+        "type": "h2",
+        "text": "Let's Work Together!"
+      },
+      {
+        "type": "p",
+        "text": "Back to Professionals"
+      },
+      {
+        "type": "p",
+        "text": "All Courses"
+      },
+      {
+        "type": "p",
+        "text": "School Courses"
+      },
+      {
+        "type": "p",
+        "text": "Individual Courses"
+      }
+    ]
+  },
+  {
+    "path": "/courses-all",
+    "slug": "courses-all",
+    "title": "All Courses",
+    "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+    "hero_image": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+    "seo": {
+      "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
+      "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+      "canonical": "https://tinkercademy.com/courses-all",
+      "openGraph": {
+        "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
+        "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+      },
+      "twitter": {
+        "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
+        "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
+        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "StudentsCode For Fun AI WorkshopAge GroupStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+        "url": "https://tinkercademy.com/programmes/code-for-fun-ai-workshop",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCode For Fun Baseline WorkshopAge GroupStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+        "url": "https://tinkercademy.com/programmes/code-for-fun-baseline-workshop",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesBuilding Agents with OpenClawBusinesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesLevel Up Your Vibe Coding (Lovable and Replit)Businesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesVibe Coding for Digital BuildersBusinesses2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesKnowledge-Powered AI with ChatGPTBusinesses½, 1, 2 daysCorporate training",
+        "url": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+        "type": "internal"
+      },
+      {
+        "label": "PublicBuild for Mobile: App Development with React NativePublic2 daysCorporate training, 21 & 22 August 2025",
+        "url": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+        "type": "internal"
+      },
+      {
+        "label": "PublicMastering the Web: Understand Full-Stack DevelopmentPublic2 daysCorporate training, 3 & 4 July 2025",
+        "url": "https://tinkercademy.com/programmes/mastering-the-web",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsRI FutureCreate Maker Programme 2025Students4 yearsA hands-on digital maker programme for RI students.",
+        "url": "https://tinkercademy.com/programmes/ri-futurecreate-maker-programme-2025",
+        "type": "internal"
+      },
+      {
+        "label": "PublicProfessional Certificate in Mobile Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/professional-certificate-in-mobile-application-development",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsDigital Making with micro:bitStudents24 hoursAn IMDA Infocom LEARN Roadmap course with micro:bit.",
+        "url": "https://tinkercademy.com/programmes/imda-microbit-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsGame Development in MakeCode Arcade & MineCraftStudents24 hoursAn IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.",
+        "url": "https://tinkercademy.com/programmes/imda-minecraft-2025",
+        "type": "internal"
+      },
+      {
+        "label": "PublicProfessional Certificate in Web Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/professional-certificate-in-web-application-development",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesCertificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital MakingBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesCertificate in Technology Foundations: Unleash the Potential of Blockchain TechnologyBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+        "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsGame Development Bootcamp with UnityStudents32 hoursAn IMDA Infocom LEARN Roadmap bootcamp with Unity.",
+        "url": "https://tinkercademy.com/programmes/imda-unity-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsUI/UX Design with FigmaStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Figma.",
+        "url": "https://tinkercademy.com/programmes/imda-figma-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsAI-Driven Game Development on PhaserStudents24 hoursAn IMDA Infocom LEARN Roadmap course with Phaser.",
+        "url": "https://tinkercademy.com/programmes/imda-phaser-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsSwift AcceleratorStudents8 monthsAn IMDA-Supported Course: Fully Subsidized for Successful Applicants",
+        "url": "https://tinkercademy.com/programmes/swift-accelerator",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Prototyping with Keynote and Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-a",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+        "url": "https://tinkercademy.com/programmes/code-exp-2025",
+        "type": "internal"
+      },
+      {
+        "label": "PublicDigital Maker: Create with 3D Printing and IOTAge GroupPublic2 days14 - 15 January 2025",
+        "url": "https://tinkercademy.com/programmes/iotmaker",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesEnter the Metaverse: Get started with Unity for AR/VRAge GroupBusinesses2 days11 - 12 February 2025",
+        "url": "https://tinkercademy.com/programmes/unityarvr",
+        "type": "internal"
+      },
+      {
+        "label": "TeachersNo-Code Machine LearningAge GroupTeachers2 daysAn introductory course on machine learning models using Orange.",
+        "url": "https://tinkercademy.com/programmes/no-code-machine-learning",
+        "type": "internal"
+      },
+      {
+        "label": "PublicNo-code Web Design (Framer)Age GroupPublic2 daysAn introductory course on building websites using Framer.",
+        "url": "https://tinkercademy.com/programmes/no-code-web-design-framer",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesMicrosoft Copilot Age GroupBusinesses2 daysAn introductory course on leveraging Microsoft Copilot to enhance productivity.",
+        "url": "https://tinkercademy.com/programmes/microsoft-copilot",
+        "type": "internal"
+      },
+      {
+        "label": "BusinessesDigital Making with micro:bit & IoTAge GroupBusinesses2 daysAn introductory course on digital making with Micro:bit & IoT.",
+        "url": "https://tinkercademy.com/programmes/digital-making-with-micro-bit-iot",
+        "type": "internal"
+      },
+      {
+        "label": "Back to Home",
+        "url": "https://tinkercademy.com/",
+        "type": "internal"
+      },
+      {
+        "label": "Professional Courses",
+        "url": "https://tinkercademy.com/courses-professionals",
+        "type": "internal"
+      },
+      {
+        "label": "School Courses",
+        "url": "https://tinkercademy.com/courses-schools",
+        "type": "internal"
+      },
+      {
+        "label": "Individual Courses",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h2",
+        "text": "All Courses"
+      },
+      {
+        "type": "h4",
+        "text": "Search"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Code For Fun AI Workshop"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "p",
+        "text": "A CODE@SG initiative by IMDA and MOE."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Code For Fun Baseline Workshop"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "p",
+        "text": "A CODE@SG initiative by IMDA and MOE."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Building Agents with OpenClaw"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Level Up Your Vibe Coding (Lovable and Replit)"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Vibe Coding for Digital Builders"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Knowledge-Powered AI with ChatGPT"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "½, 1, 2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Build for Mobile: App Development with React Native"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 21 & 22 August 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Mastering the Web: Understand Full-Stack Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "Corporate training, 3 & 4 July 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "RI FutureCreate Maker Programme 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 years"
+      },
+      {
+        "type": "p",
+        "text": "A hands-on digital maker programme for RI students."
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Mobile Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development in MakeCode Arcade & MineCraft"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Professional Certificate in Web Application Development"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days/module"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "17 days"
+      },
+      {
+        "type": "p",
+        "text": "A SkillsFuture-Supported Course Offered by SMU Academy"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development Bootcamp with Unity"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "32 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "UI/UX Design with Figma"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Figma."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "AI-Driven Game Development on Phaser"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Phaser."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Swift Accelerator"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "8 months"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Basics with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Explorations with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Prototyping with Keynote and Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "CODE_EXP 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 days"
+      },
+      {
+        "type": "p",
+        "text": "11 May 2025"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Maker: Create with 3D Printing and IOT"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "14 - 15 January 2025"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Enter the Metaverse: Get started with Unity for AR/VR"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "11 - 12 February 2025"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h2",
+        "text": "No-Code Machine Learning"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on machine learning models using Orange."
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "h2",
+        "text": "No-code Web Design (Framer)"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Public"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on building websites using Framer."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Microsoft Copilot"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on leveraging Microsoft Copilot to enhance productivity."
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit & IoT"
+      },
+      {
+        "type": "p",
+        "text": "Age Group"
+      },
+      {
+        "type": "p",
+        "text": "Businesses"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on digital making with Micro:bit & IoT."
+      },
+      {
+        "type": "h2",
+        "text": "Let's Work Together!"
+      },
+      {
+        "type": "p",
+        "text": "Back to Home"
+      },
+      {
+        "type": "p",
+        "text": "Professional Courses"
+      },
+      {
+        "type": "p",
+        "text": "School Courses"
+      },
+      {
+        "type": "p",
+        "text": "Individual Courses"
+      }
+    ]
+  },
+  {
+    "path": "/individuals",
+    "slug": "individuals",
+    "title": "Self-directedLearning Opportunities",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/6gctHPSd4luM1PjI9WIcmXL25k.jpg?width=7360&height=4912",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/individuals",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Professionals",
+        "url": "https://tinkercademy.com/professionals",
+        "type": "internal"
+      },
+      {
+        "label": "Schools",
+        "url": "https://tinkercademy.com/schools",
+        "type": "internal"
+      },
+      {
+        "label": "Courses for IndividualsCourses for Individuals",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Courses for Individuals",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "micro:bit",
+        "url": "https://tinkercademy.com/microbit",
+        "type": "internal"
+      },
+      {
+        "label": "Tinker X",
+        "url": "https://tinkercademy.com/tinker-x",
+        "type": "internal"
+      },
+      {
+        "label": "Back to Home",
+        "url": "https://tinkercademy.com/",
+        "type": "internal"
+      },
+      {
+        "label": "All Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Professional Courses",
+        "url": "https://tinkercademy.com/courses-professionals",
+        "type": "internal"
+      },
+      {
+        "label": "School Courses",
+        "url": "https://tinkercademy.com/courses-schools",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Self-directedLearning Opportunities"
+      },
+      {
+        "type": "h1",
+        "text": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses"
+      },
+      {
+        "type": "p",
+        "text": "Professionals"
+      },
+      {
+        "type": "p",
+        "text": "Schools"
+      },
+      {
+        "type": "h2",
+        "text": "Programme Types"
+      },
+      {
+        "type": "h2",
+        "text": "Courses for Individuals"
+      },
+      {
+        "type": "h2",
+        "text": "micro:bit"
+      },
+      {
+        "type": "h2",
+        "text": "Tinker X"
+      },
+      {
+        "type": "h2",
+        "text": "Let's Work Together!"
+      },
+      {
+        "type": "p",
+        "text": "Back to Home"
+      },
+      {
+        "type": "p",
+        "text": "All Courses"
+      },
+      {
+        "type": "p",
+        "text": "Professional Courses"
+      },
+      {
+        "type": "p",
+        "text": "School Courses"
+      }
+    ]
+  },
+  {
+    "path": "/courses-schools",
+    "slug": "courses-schools",
+    "title": "Popular Courses",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/WeIaLloGW571bF6elC5cFIYTEQ.png?width=335&height=181",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/courses-schools",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "StudentsRI FutureCreate Maker Programme 2025Students4 yearsA hands-on digital maker programme for RI students.",
+        "url": "https://tinkercademy.com/programmes/ri-futurecreate-maker-programme-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsDigital Making with micro:bitStudents24 hoursAn IMDA Infocom LEARN Roadmap course with micro:bit.",
+        "url": "https://tinkercademy.com/programmes/imda-microbit-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsGame Development in MakeCode Arcade & MineCraftStudents24 hoursAn IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.",
+        "url": "https://tinkercademy.com/programmes/imda-minecraft-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsGame Development Bootcamp with UnityStudents32 hoursAn IMDA Infocom LEARN Roadmap bootcamp with Unity.",
+        "url": "https://tinkercademy.com/programmes/imda-unity-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsUI/UX Design with FigmaStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Figma.",
+        "url": "https://tinkercademy.com/programmes/imda-figma-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsAI-Driven Game Development on PhaserStudents24 hoursAn IMDA Infocom LEARN Roadmap course with Phaser.",
+        "url": "https://tinkercademy.com/programmes/imda-phaser-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsSwift AcceleratorStudents8 monthsAn IMDA-Supported Course: Fully Subsidized for Successful Applicants",
+        "url": "https://tinkercademy.com/programmes/swift-accelerator",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsApp Prototyping with Keynote and Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-a",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+        "url": "https://tinkercademy.com/programmes/code-exp-2025",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCode For Fun AI WorkshopStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+        "url": "https://tinkercademy.com/programmes/code-for-fun-ai-workshop",
+        "type": "internal"
+      },
+      {
+        "label": "StudentsCode For Fun Baseline WorkshopStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+        "url": "https://tinkercademy.com/programmes/code-for-fun-baseline-workshop",
+        "type": "internal"
+      },
+      {
+        "label": "TeachersNo-Code Machine LearningTeachers2 daysAn introductory course on machine learning models using Orange.",
+        "url": "https://tinkercademy.com/programmes/no-code-machine-learning",
+        "type": "internal"
+      },
+      {
+        "label": "Back to Schools",
+        "url": "https://tinkercademy.com/schools",
+        "type": "internal"
+      },
+      {
+        "label": "All Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Professional Courses",
+        "url": "https://tinkercademy.com/courses-professionals",
+        "type": "internal"
+      },
+      {
+        "label": "Individual Courses",
+        "url": "https://tinkercademy.com/individuals",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h2",
+        "text": "Popular Courses"
+      },
+      {
+        "type": "h4",
+        "text": "Search"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "RI FutureCreate Maker Programme 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 years"
+      },
+      {
+        "type": "p",
+        "text": "A hands-on digital maker programme for RI students."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development in MakeCode Arcade & MineCraft"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development Bootcamp with Unity"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "32 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "UI/UX Design with Figma"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Figma."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "AI-Driven Game Development on Phaser"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Phaser."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Swift Accelerator"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "8 months"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Basics with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Explorations with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Prototyping with Keynote and Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "CODE_EXP 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 days"
+      },
+      {
+        "type": "p",
+        "text": "11 May 2025"
+      },
+      {
+        "type": "h2",
+        "text": "School Courses"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Code For Fun AI Workshop"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "p",
+        "text": "A CODE@SG initiative by IMDA and MOE."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Code For Fun Baseline Workshop"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "10 hours"
+      },
+      {
+        "type": "p",
+        "text": "A CODE@SG initiative by IMDA and MOE."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "RI FutureCreate Maker Programme 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 years"
+      },
+      {
+        "type": "p",
+        "text": "A hands-on digital maker programme for RI students."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Digital Making with micro:bit"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development in MakeCode Arcade & MineCraft"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Game Development Bootcamp with Unity"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "32 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "UI/UX Design with Figma"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Figma."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "AI-Driven Game Development on Phaser"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "24 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Phaser."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "Swift Accelerator"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "8 months"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Basics with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Development Explorations with Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "App Prototyping with Keynote and Swift Playgrounds"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "26 hours"
+      },
+      {
+        "type": "p",
+        "text": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "h2",
+        "text": "CODE_EXP 2025"
+      },
+      {
+        "type": "p",
+        "text": "Students"
+      },
+      {
+        "type": "p",
+        "text": "4 days"
+      },
+      {
+        "type": "p",
+        "text": "11 May 2025"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "h2",
+        "text": "No-Code Machine Learning"
+      },
+      {
+        "type": "p",
+        "text": "Teachers"
+      },
+      {
+        "type": "p",
+        "text": "2 days"
+      },
+      {
+        "type": "p",
+        "text": "An introductory course on machine learning models using Orange."
+      },
+      {
+        "type": "h2",
+        "text": "Let's Work Together!"
+      },
+      {
+        "type": "p",
+        "text": "Back to Schools"
+      },
+      {
+        "type": "p",
+        "text": "All Courses"
+      },
+      {
+        "type": "p",
+        "text": "Professional Courses"
+      },
+      {
+        "type": "p",
+        "text": "Individual Courses"
+      }
+    ]
+  },
+  {
+    "path": "/contact-us",
+    "slug": "contact-us",
+    "title": "Get in touch",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/Y5ckhN7Nwo504xYtcd1f4y6Wy78.png?width=1018&height=762",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/contact-us",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Get in touch"
+      },
+      {
+        "type": "h1",
+        "text": "Getting here"
+      },
+      {
+        "type": "h2",
+        "text": "Address"
+      },
+      {
+        "type": "p",
+        "text": "59 Jalan Pemimpin #04-01, L&Y Building, Singapore 577218Weekdays: 10 am – 5.30 pmWeekends: 10 am – 1 pm"
+      },
+      {
+        "type": "h2",
+        "text": "Directions"
+      },
+      {
+        "type": "p",
+        "text": "Nearest MRT: Marymount By Bus: From Bishan MRT and Bus Stop 53239 (Bus 13, 50, 52, 54, 55, 55B, 58, 71, 88, 156).From Bus Stop 53131 (Bus 54, 74, 851, 852). Once you reach the L&Y Building, go around the building to find the entrance.Take the lift to the 4th floor and turn right. You made it!"
+      },
+      {
+        "type": "h2",
+        "text": "Parking"
+      },
+      {
+        "type": "p",
+        "text": "The car park is accessible from the front entrance, beside Jackie's yellow and blue building."
+      },
+      {
+        "type": "p",
+        "text": "Parking rates:Mon – Sat 8 am – 6 pm $1.20 per hour or part thereof 6 pm – 8 am $2.00 per entrySunday & Public Holidays $2.00 per entry"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  },
+  {
+    "path": "/infocomm-club",
+    "slug": "infocomm-club",
+    "title": "Infocomm Club Courses",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "hero_image": "https://framerusercontent.com/images/HcdNlviMb6etFvqiKcJkxSLAtHQ.jpeg?width=1200&height=500",
+    "seo": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "canonical": "https://tinkercademy.com/infocomm-club",
+      "openGraph": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "twitter": {
+        "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "ctas": [
+      {
+        "label": "the training cost is fully funded by IMDA.",
+        "url": "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps",
+        "type": "external"
+      },
+      {
+        "label": "hello@tinkercademy.com. 🙋🏻‍♀️",
+        "url": "mailto: hello@tinkercademy.com",
+        "type": "email"
+      },
+      {
+        "label": "READ MORE",
+        "url": "https://tinkercademy.com/programmes/imda-figma-2025",
+        "type": "internal"
+      },
+      {
+        "label": "Registration for MOE Primary SchoolsRegistration for MOE Pri Schools",
+        "url": "https://form.gov.sg/6704f86a5c3070b1b3c9c1b2",
+        "type": "external"
+      },
+      {
+        "label": "Registration for MOE Secondary Schools / Junior CollegeRegistration for MOE Sec Schools / JC",
+        "url": "https://form.gov.sg/6704f97536fa07f9b3e3a283",
+        "type": "external"
+      },
+      {
+        "label": "Our Courses",
+        "url": "https://tinkercademy.com/courses-all",
+        "type": "internal"
+      },
+      {
+        "label": "Our Projects",
+        "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Tinkertanker Pte Ltd",
+        "url": "http://tinkertanker.com/",
+        "type": "external"
+      },
+      {
+        "label": "Sign Up",
+        "url": "https://form.jotform.com/223001013827440",
+        "type": "form"
+      },
+      {
+        "label": "Get Hacking Store",
+        "url": "https://gethacking.com/",
+        "type": "external"
+      },
+      {
+        "label": "Tinker Class Pte Ltd",
+        "url": "https://tinkerclass.tech/",
+        "type": "external"
+      },
+      {
+        "label": "Tinkermind",
+        "url": "https://tinkermind.sg/",
+        "type": "external"
+      },
+      {
+        "label": "hello@tk.sg",
+        "url": "mailto:hello@tk.sg",
+        "type": "email"
+      },
+      {
+        "label": "6917 6920",
+        "url": "tel:69176920",
+        "type": "phone"
+      },
+      {
+        "label": "69176920",
+        "url": "tel:69176920",
+        "type": "phone"
+      }
+    ],
+    "content": [
+      {
+        "type": "h1",
+        "text": "Infocomm Club Courses"
+      },
+      {
+        "type": "h2",
+        "text": "We’ve created training courses designed specifically for Infocomm Club students. These courses are held during CCA hours at MOE schools. They help build fundamental skills in topics across tech and media domains such as App Design, Development, UI/UX. Each MOE school receives support for up to two classes annually, where the training cost is fully funded by IMDA.To find out more, speak to us at hello@tinkercademy.com. 🙋🏻‍♀️"
+      },
+      {
+        "type": "h2",
+        "text": "Apple: App Development"
+      },
+      {
+        "type": "h3",
+        "text": "App Development - Prototype"
+      },
+      {
+        "type": "p",
+        "text": "Apply Apple’s design principles and create beautiful prototypes using Keynote."
+      },
+      {
+        "type": "h3",
+        "text": "App Development - Basic"
+      },
+      {
+        "type": "p",
+        "text": "Learn Swift & SwiftUI on iPad and build real apps, explore UI design, navigation, and more!"
+      },
+      {
+        "type": "h3",
+        "text": "App Development - Exploration"
+      },
+      {
+        "type": "p",
+        "text": "Dive deep into AR, ML, and cutting-edge tech to build next-gen apps!"
+      },
+      {
+        "type": "h2",
+        "text": "Figma: UI/UX Design"
+      },
+      {
+        "type": "h3",
+        "text": "UI/UX Design"
+      },
+      {
+        "type": "p",
+        "text": "Learn design thinking and UI/UX tools. Create interactive prototypes! No coding experience needed!"
+      },
+      {
+        "type": "p",
+        "text": "READ MORE"
+      },
+      {
+        "type": "h2",
+        "text": "Sign up today!"
+      },
+      {
+        "type": "p",
+        "text": "Registration for MOE Primary Schools"
+      },
+      {
+        "type": "p",
+        "text": "Registration for MOE Pri Schools"
+      },
+      {
+        "type": "p",
+        "text": "Registration for MOE Secondary Schools / Junior College"
+      },
+      {
+        "type": "p",
+        "text": "Registration for MOE Sec Schools / JC"
+      },
+      {
+        "type": "h3",
+        "text": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond."
+      },
+      {
+        "type": "p",
+        "text": "Our Courses"
+      },
+      {
+        "type": "p",
+        "text": "Our Projects"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+---
+type NavLink = { label: string; href: string };
+
+const props = Astro.props as { navigation?: NavLink[] };
+const navigation = props.navigation ?? [];
+---
+
+<header class="site-header">
+	<div class="shell header-inner">
+		<a class="brand" href="/">Tinkercademy</a>
+		<nav aria-label="Primary">
+			<ul>
+				{navigation.map((link) => (
+					<li><a href={link.href}>{link.label}</a></li>
+				))}
+			</ul>
+		</nav>
+	</div>
+</header>

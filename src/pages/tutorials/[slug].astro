@@ -1,0 +1,36 @@
+---
+import PageHero from '../../components/PageHero.astro';
+import RichContent from '../../components/RichContent.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSiteData } from '../../lib/data.js';
+
+export function getStaticPaths() {
+	return getSiteData().tutorials.map((tutorial) => ({
+		params: { slug: tutorial.slug },
+		props: { tutorial },
+	}));
+}
+
+const { tutorial } = Astro.props;
+const canonical = new URL(`/tutorials/${tutorial.slug}`, 'https://tinkercademy.com').toString();
+const badges = [
+	...(tutorial.subtitle ? [tutorial.subtitle] : []),
+	...tutorial.audiences.map((audience) => audience.label),
+	...tutorial.topics.map((topic) => topic.label),
+];
+---
+
+<BaseLayout
+	title={tutorial.seo?.title ?? tutorial.title}
+	description={tutorial.seo?.description ?? tutorial.description ?? ''}
+	canonical={canonical}
+	image={tutorial.hero_image ?? undefined}
+>
+	<PageHero
+		eyebrow="Tutorial"
+		title={tutorial.title}
+		lead={tutorial.description}
+		badges={badges}
+	/>
+	<RichContent items={tutorial.content} />
+</BaseLayout>

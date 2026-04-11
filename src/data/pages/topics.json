@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ai-and-machine-learning-with-data-science",
+    "label": "AI and Machine Learning with Data Science",
+    "source_id": "ai-and-machine-learning-with-data-science"
+  },
+  {
+    "id": "computer-science-fundamentals",
+    "label": "Computer Science Fundamentals",
+    "source_id": "computer-science-fundamentals"
+  },
+  {
+    "id": "creativity-craft-and-making",
+    "label": "Creativity, Craft, and Making",
+    "source_id": "creativity-craft-and-making"
+  },
+  {
+    "id": "cryptography",
+    "label": "Cryptography",
+    "source_id": "cryptography"
+  },
+  {
+    "id": "design-thinking",
+    "label": "Design Thinking",
+    "source_id": "design-thinking"
+  },
+  {
+    "id": "design-prototyping-and-ui-ux",
+    "label": "Design, Prototyping, and UI/UX",
+    "source_id": "design-prototyping-and-ui-ux"
+  },
+  {
+    "id": "game-development",
+    "label": "Game Development",
+    "source_id": "game-development"
+  },
+  {
+    "id": "microcontrollers-iot",
+    "label": "Microcontrollers & IoT",
+    "source_id": "microcontrollers-iot"
+  },
+  {
+    "id": "mobile-app-development",
+    "label": "Mobile App Development",
+    "source_id": "mobile-app-development"
+  },
+  {
+    "id": "professional-productivity-with-technology",
+    "label": "Professional Productivity with Technology",
+    "source_id": "professional-productivity-with-technology"
+  },
+  {
+    "id": "software-engineering",
+    "label": "Software Engineering",
+    "source_id": "software-engineering"
+  },
+  {
+    "id": "web-development",
+    "label": "Web Development",
+    "source_id": "web-development"
+  }
+]

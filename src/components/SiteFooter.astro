@@ -1,0 +1,47 @@
+---
+type Contact = { label: string; channel_type: string; value: string };
+type Location = { address: string };
+type SocialLink = { label: string; url: string };
+
+const props = Astro.props as {
+	contacts?: Contact[];
+	locations?: Location[];
+	socialLinks?: SocialLink[];
+};
+const contacts = props.contacts ?? [];
+const locations = props.locations ?? [];
+const socialLinks = props.socialLinks ?? [];
+---
+
+<footer class="site-footer">
+	<div class="shell footer-grid">
+		<div>
+			<p class="eyebrow">Contact</p>
+			<ul class="footer-list">
+				{contacts.map((contact) => (
+					<li>
+						<a href={contact.channel_type === 'email' ? `mailto:${contact.value}` : `tel:${contact.value}`}>
+							{contact.value}
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
+		<div>
+			<p class="eyebrow">Location</p>
+			<ul class="footer-list">
+				{locations.map((location) => (
+					<li>{location.address}</li>
+				))}
+			</ul>
+		</div>
+		<div>
+			<p class="eyebrow">Elsewhere</p>
+			<ul class="footer-list">
+				{socialLinks.map((link) => (
+					<li><a href={link.url}>{link.label}</a></li>
+				))}
+			</ul>
+		</div>
+	</div>
+</footer>

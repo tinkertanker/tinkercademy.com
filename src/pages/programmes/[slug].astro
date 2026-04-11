@@ -1,0 +1,36 @@
+---
+import PageHero from '../../components/PageHero.astro';
+import RichContent from '../../components/RichContent.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSiteData } from '../../lib/data.js';
+
+export function getStaticPaths() {
+	return getSiteData().programmes.map((programme) => ({
+		params: { slug: programme.slug },
+		props: { programme },
+	}));
+}
+
+const { programme } = Astro.props;
+const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
+const badges = [
+	...(programme.duration ? [programme.duration] : []),
+	...programme.audiences.map((audience) => audience.label),
+	...programme.topics.map((topic) => topic.label),
+];
+---
+
+<BaseLayout
+	title={programme.seo?.title ?? programme.title}
+	description={programme.seo?.description ?? programme.description ?? ''}
+	canonical={canonical}
+	image={programme.hero_image ?? undefined}
+>
+	<PageHero
+		eyebrow="Programme"
+		title={programme.title}
+		lead={programme.description}
+		badges={badges}
+	/>
+	<RichContent items={programme.content} />
+</BaseLayout>

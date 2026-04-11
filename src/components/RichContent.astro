@@ -1,0 +1,58 @@
+---
+type ContentItem = {
+	type: string;
+	text?: string;
+	label?: string | null;
+	html?: string;
+	items?: string[];
+	src?: string;
+	alt?: string;
+	width?: number | null;
+	height?: number | null;
+};
+
+const props = Astro.props as { items?: ContentItem[] };
+const items = props.items ?? [];
+---
+
+<section class="shell prose rich-content">
+	{items.map((item: ContentItem) => {
+		if (item.type === 'image' && item.src) {
+			return (
+				<figure class="content-image">
+					<img
+						src={item.src}
+						alt={item.alt ?? ''}
+						loading="lazy"
+						width={item.width ?? undefined}
+						height={item.height ?? undefined}
+					/>
+				</figure>
+			);
+		}
+
+		if (item.type === 'richtext' && item.html) {
+			return (
+				<div class="rich-section">
+					{item.label ? <p class="section-label">{item.label}</p> : null}
+					<div set:html={item.html} />
+				</div>
+			);
+		}
+
+		if (item.type === 'list' && item.items) {
+			return (
+				<ul>
+					{item.items.map((entry: string) => <li>{entry}</li>)}
+				</ul>
+			);
+		}
+
+		if (item.text && item.type.startsWith('h')) {
+			const Tag = item.type;
+			return <Tag>{item.text}</Tag>;
+		}
+
+		return item.text ? <p>{item.text}</p> : null;
+	})}
+</section>

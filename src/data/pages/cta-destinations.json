@@ -1,0 +1,1106 @@
+[
+  {
+    "id": "programmes-https-tinkercademy-com-programmes",
+    "label": "Programmes",
+    "url": "https://tinkercademy.com/#programmes",
+    "type": "internal"
+  },
+  {
+    "id": "professionals-https-tinkercademy-com-professionals",
+    "label": "Professionals",
+    "url": "https://tinkercademy.com/professionals",
+    "type": "internal"
+  },
+  {
+    "id": "schools-https-tinkercademy-com-schools",
+    "label": "Schools",
+    "url": "https://tinkercademy.com/schools",
+    "type": "internal"
+  },
+  {
+    "id": "individuals-https-tinkercademy-com-individuals",
+    "label": "Individuals",
+    "url": "https://tinkercademy.com/individuals",
+    "type": "internal"
+  },
+  {
+    "id": "read-more-https-swiftinsg-org",
+    "label": "Read More",
+    "url": "https://swiftinsg.org/",
+    "type": "external"
+  },
+  {
+    "id": "learn-roadmap-https-www-imda-gov-sg-how-we-can-help-infocomm-media-clubs-learn-roadmaps",
+    "label": "LEARN Roadmap",
+    "url": "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps",
+    "type": "external"
+  },
+  {
+    "id": "read-more-https-infocomm-club",
+    "label": "Read More",
+    "url": "https://infocomm.club/",
+    "type": "external"
+  },
+  {
+    "id": "read-more-https-codeforfun-sg",
+    "label": "Read More",
+    "url": "https://codeforfun.sg/",
+    "type": "external"
+  },
+  {
+    "id": "businessesbuilding-agents-with-openclawcorporate-training2-dayscourse-https-tinkercademy-com-programmes-building-agents-with-openclaw",
+    "label": "BusinessesBuilding Agents with OpenClawCorporate training2 daysCourse",
+    "url": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+    "type": "internal"
+  },
+  {
+    "id": "businesseslevel-up-your-vibe-coding-lovable-and-replit-corporate-training2-dayscourse-https-tinkercademy-com-programmes-vibe-coding-for-digital-builders-lovable-replit",
+    "label": "BusinessesLevel Up Your Vibe Coding (Lovable and Replit)Corporate training2 daysCourse",
+    "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+    "type": "internal"
+  },
+  {
+    "id": "businessesvibe-coding-for-digital-builderscorporate-training2-dayscourse-https-tinkercademy-com-programmes-vibe-coding-for-digital-builders",
+    "label": "BusinessesVibe Coding for Digital BuildersCorporate training2 daysCourse",
+    "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+    "type": "internal"
+  },
+  {
+    "id": "businessesknowledge-powered-ai-with-chatgptcorporate-training-1-2-dayscourse-https-tinkercademy-com-programmes-knowledge-powered-ai-with-chatgpt",
+    "label": "BusinessesKnowledge-Powered AI with ChatGPTCorporate training½, 1, 2 daysCourse",
+    "url": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+    "type": "internal"
+  },
+  {
+    "id": "publicbuild-for-mobile-app-development-with-react-nativecorporate-training-21-22-august-20252-dayscourse-https-tinkercademy-com-programmes-build-for-mobile-with-react-native",
+    "label": "PublicBuild for Mobile: App Development with React NativeCorporate training, 21 & 22 August 20252 daysCourse",
+    "url": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+    "type": "internal"
+  },
+  {
+    "id": "our-courses-https-tinkercademy-com-courses-all",
+    "label": "Our Courses",
+    "url": "https://tinkercademy.com/courses-all",
+    "type": "internal"
+  },
+  {
+    "id": "our-projects-https-tinkercademy-com-showcase",
+    "label": "Our Projects",
+    "url": "https://tinkercademy.com/showcase",
+    "type": "internal"
+  },
+  {
+    "id": "tinkertanker-pte-ltd-http-tinkertanker-com",
+    "label": "Tinkertanker Pte Ltd",
+    "url": "http://tinkertanker.com/",
+    "type": "external"
+  },
+  {
+    "id": "sign-up-https-form-jotform-com-223001013827440",
+    "label": "Sign Up",
+    "url": "https://form.jotform.com/223001013827440",
+    "type": "form"
+  },
+  {
+    "id": "get-hacking-store-https-gethacking-com",
+    "label": "Get Hacking Store",
+    "url": "https://gethacking.com/",
+    "type": "external"
+  },
+  {
+    "id": "tinker-class-pte-ltd-https-tinkerclass-tech",
+    "label": "Tinker Class Pte Ltd",
+    "url": "https://tinkerclass.tech/",
+    "type": "external"
+  },
+  {
+    "id": "tinkermind-https-tinkermind-sg",
+    "label": "Tinkermind",
+    "url": "https://tinkermind.sg/",
+    "type": "external"
+  },
+  {
+    "id": "hello-tk-sg-mailto-hello-tk-sg",
+    "label": "hello@tk.sg",
+    "url": "mailto:hello@tk.sg",
+    "type": "email"
+  },
+  {
+    "id": "6917-6920-tel-69176920",
+    "label": "6917 6920",
+    "url": "tel:69176920",
+    "type": "phone"
+  },
+  {
+    "id": "69176920-tel-69176920",
+    "label": "69176920",
+    "url": "tel:69176920",
+    "type": "phone"
+  },
+  {
+    "id": "browse-courses-https-tinkercademy-com-courses-professionals",
+    "label": "Browse Courses",
+    "url": "https://tinkercademy.com/courses-professionals",
+    "type": "internal"
+  },
+  {
+    "id": "businessesbuilding-agents-with-openclawbusinesses2-dayscorporate-training-https-tinkercademy-com-programmes-building-agents-with-openclaw",
+    "label": "BusinessesBuilding Agents with OpenClawBusinesses2 daysCorporate training",
+    "url": "https://tinkercademy.com/programmes/building-agents-with-openclaw",
+    "type": "internal"
+  },
+  {
+    "id": "businesseslevel-up-your-vibe-coding-lovable-and-replit-businesses2-dayscorporate-training-https-tinkercademy-com-programmes-vibe-coding-for-digital-builders-lovable-replit",
+    "label": "BusinessesLevel Up Your Vibe Coding (Lovable and Replit)Businesses2 daysCorporate training",
+    "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders-lovable-replit",
+    "type": "internal"
+  },
+  {
+    "id": "businessesvibe-coding-for-digital-buildersbusinesses2-dayscorporate-training-https-tinkercademy-com-programmes-vibe-coding-for-digital-builders",
+    "label": "BusinessesVibe Coding for Digital BuildersBusinesses2 daysCorporate training",
+    "url": "https://tinkercademy.com/programmes/vibe-coding-for-digital-builders",
+    "type": "internal"
+  },
+  {
+    "id": "businessesknowledge-powered-ai-with-chatgptbusinesses-1-2-dayscorporate-training-https-tinkercademy-com-programmes-knowledge-powered-ai-with-chatgpt",
+    "label": "BusinessesKnowledge-Powered AI with ChatGPTBusinesses½, 1, 2 daysCorporate training",
+    "url": "https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt",
+    "type": "internal"
+  },
+  {
+    "id": "publicbuild-for-mobile-app-development-with-react-nativepublic2-dayscorporate-training-21-22-august-2025-https-tinkercademy-com-programmes-build-for-mobile-with-react-native",
+    "label": "PublicBuild for Mobile: App Development with React NativePublic2 daysCorporate training, 21 & 22 August 2025",
+    "url": "https://tinkercademy.com/programmes/build-for-mobile-with-react-native",
+    "type": "internal"
+  },
+  {
+    "id": "publicmastering-the-web-understand-full-stack-developmentpublic2-dayscorporate-training-3-4-july-2025-https-tinkercademy-com-programmes-mastering-the-web",
+    "label": "PublicMastering the Web: Understand Full-Stack DevelopmentPublic2 daysCorporate training, 3 & 4 July 2025",
+    "url": "https://tinkercademy.com/programmes/mastering-the-web",
+    "type": "internal"
+  },
+  {
+    "id": "publicprofessional-certificate-in-mobile-application-developmentpublic2-days-modulea-skillsfuture-supported-course-offered-by-smu-academy-https-tinkercademy-com-programmes-professional-certificate-in-mobile-application-development",
+    "label": "PublicProfessional Certificate in Mobile Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+    "url": "https://tinkercademy.com/programmes/professional-certificate-in-mobile-application-development",
+    "type": "internal"
+  },
+  {
+    "id": "publicprofessional-certificate-in-web-application-developmentpublic2-days-modulea-skillsfuture-supported-course-offered-by-smu-academy-https-tinkercademy-com-programmes-professional-certificate-in-web-application-development",
+    "label": "PublicProfessional Certificate in Web Application DevelopmentPublic2 days/moduleA SkillsFuture-Supported Course Offered by SMU Academy",
+    "url": "https://tinkercademy.com/programmes/professional-certificate-in-web-application-development",
+    "type": "internal"
+  },
+  {
+    "id": "businessescertificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-makingbusinesses17-daysa-skillsfuture-supported-course-offered-by-smu-academy-https-tinkercademy-com-programmes-certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+    "label": "BusinessesCertificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital MakingBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+    "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+    "type": "internal"
+  },
+  {
+    "id": "businessescertificate-in-technology-foundations-unleash-the-potential-of-blockchain-technologybusinesses17-daysa-skillsfuture-supported-course-offered-by-smu-academy-https-tinkercademy-com-programmes-certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+    "label": "BusinessesCertificate in Technology Foundations: Unleash the Potential of Blockchain TechnologyBusinesses17 daysA SkillsFuture-Supported Course Offered by SMU Academy",
+    "url": "https://tinkercademy.com/programmes/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+    "type": "internal"
+  },
+  {
+    "id": "publicdigital-maker-create-with-3d-printing-and-iotpublic2-days14-15-january-2025-https-tinkercademy-com-programmes-iotmaker",
+    "label": "PublicDigital Maker: Create with 3D Printing and IOTPublic2 days14 - 15 January 2025",
+    "url": "https://tinkercademy.com/programmes/iotmaker",
+    "type": "internal"
+  },
+  {
+    "id": "businessesenter-the-metaverse-get-started-with-unity-for-ar-vrbusinesses2-days11-12-february-2025-https-tinkercademy-com-programmes-unityarvr",
+    "label": "BusinessesEnter the Metaverse: Get started with Unity for AR/VRBusinesses2 days11 - 12 February 2025",
+    "url": "https://tinkercademy.com/programmes/unityarvr",
+    "type": "internal"
+  },
+  {
+    "id": "publicno-code-web-design-framer-public2-daysan-introductory-course-on-building-websites-using-framer-https-tinkercademy-com-programmes-no-code-web-design-framer",
+    "label": "PublicNo-code Web Design (Framer)Public2 daysAn introductory course on building websites using Framer.",
+    "url": "https://tinkercademy.com/programmes/no-code-web-design-framer",
+    "type": "internal"
+  },
+  {
+    "id": "businessesmicrosoft-copilot-businesses2-daysan-introductory-course-on-leveraging-microsoft-copilot-to-enhance-productivity-https-tinkercademy-com-programmes-microsoft-copilot",
+    "label": "BusinessesMicrosoft Copilot Businesses2 daysAn introductory course on leveraging Microsoft Copilot to enhance productivity.",
+    "url": "https://tinkercademy.com/programmes/microsoft-copilot",
+    "type": "internal"
+  },
+  {
+    "id": "businessesdigital-making-with-micro-bit-iotbusinesses2-daysan-introductory-course-on-digital-making-with-micro-bit-iot-https-tinkercademy-com-programmes-digital-making-with-micro-bit-iot",
+    "label": "BusinessesDigital Making with micro:bit & IoTBusinesses2 daysAn introductory course on digital making with Micro:bit & IoT.",
+    "url": "https://tinkercademy.com/programmes/digital-making-with-micro-bit-iot",
+    "type": "internal"
+  },
+  {
+    "id": "tutorials-https-tinkercademy-com-microbit-tutorials",
+    "label": "Tutorials",
+    "url": "https://tinkercademy.com/microbit#tutorials",
+    "type": "internal"
+  },
+  {
+    "id": "digital-maker-programme-https-microbit-org-impact-foundation-reports-singapore-digital-maker-programme-text-the-20digital-20maker-20programme-20-28dmp-29-20was-20then-20launched-to-20all-20primary-20school-20levels-20p1-20to-20p6",
+    "label": "Digital Maker Programme",
+    "url": "https://microbit.org/impact/foundation-reports/singapore/digital-maker-programme/#:~:text=The%20Digital%20Maker%20Programme%20%28DMP%29%20was%20then%20launched,to%20all%20primary%20school%20levels%20P1%20to%20P6.",
+    "type": "external"
+  },
+  {
+    "id": "buy-the-micro-bit-and-kit-https-gethacking-com-collections-microbit",
+    "label": "Buy the micro:bit and kit",
+    "url": "https://gethacking.com/collections/microbit",
+    "type": "external"
+  },
+  {
+    "id": "microbit-org-http-microbit-org",
+    "label": "microbit.org",
+    "url": "http://microbit.org/",
+    "type": "external"
+  },
+  {
+    "id": "microbit-org-code-http-microbit-org-code",
+    "label": "microbit.org/code",
+    "url": "http://microbit.org/code",
+    "type": "external"
+  },
+  {
+    "id": "microsoft-makecode-http-pxt-microbit-org",
+    "label": "Microsoft MakeCode",
+    "url": "http://pxt.microbit.org/",
+    "type": "external"
+  },
+  {
+    "id": "check-here-http-microbit-org-en-2017-03-07-javascript-block-resources",
+    "label": "check here",
+    "url": "http://microbit.org/en/2017-03-07-javascript-block-resources/",
+    "type": "external"
+  },
+  {
+    "id": "instructables-http-www-instructables-com-member-digital-20maker-20sg",
+    "label": "Instructables",
+    "url": "http://www.instructables.com/member/Digital%20Maker%20SG",
+    "type": "external"
+  },
+  {
+    "id": "here-https-microbit-org-impact-foundation-reports-singapore-digital-maker-programme",
+    "label": "here",
+    "url": "https://microbit.org/impact/foundation-reports/singapore/digital-maker-programme/",
+    "type": "external"
+  },
+  {
+    "id": "digital-making-course-https-tinkercademy-com-programmes-imda-microbit-2025",
+    "label": "Digital Making course",
+    "url": "https://tinkercademy.com/programmes/imda-microbit-2025",
+    "type": "internal"
+  },
+  {
+    "id": "buy-the-micro-bit-breakout-board-https-gethacking-com-collections-microbit-breakout-board-filter-by",
+    "label": "Buy the micro:bit Breakout Board",
+    "url": "https://gethacking.com/collections/microbit/breakout-board#filter-by",
+    "type": "external"
+  },
+  {
+    "id": "access-denied-a-door-entry-tutorialaccess-denied-a-door-entry-tutorial-https-tinkercademy-com-tutorials-access-denied-a-door-entry-tutorial",
+    "label": "Access Denied! A Door Entry TutorialAccess Denied! A Door Entry Tutorial",
+    "url": "https://tinkercademy.com/tutorials/access-denied-a-door-entry-tutorial",
+    "type": "internal"
+  },
+  {
+    "id": "ang-bao-collectorang-bao-collector-https-tinkercademy-com-tutorials-ang-bao-collector",
+    "label": "Ang Bao CollectorAng Bao Collector",
+    "url": "https://tinkercademy.com/tutorials/ang-bao-collector",
+    "type": "internal"
+  },
+  {
+    "id": "build-your-own-micro-bit-security-door-build-your-own-micro-bit-security-door-https-tinkercademy-com-tutorials-build-your-own-micro-bit-security-door",
+    "label": "Build your own Micro:bit Security Door!Build your own Micro:bit Security Door!",
+    "url": "https://tinkercademy.com/tutorials/build-your-own-micro-bit-security-door",
+    "type": "internal"
+  },
+  {
+    "id": "coin-sorter-with-micro-bitcoin-sorter-with-micro-bit-https-tinkercademy-com-tutorials-coin-sorter",
+    "label": "Coin Sorter with Micro:bitCoin Sorter with Micro:bit",
+    "url": "https://tinkercademy.com/tutorials/coin-sorter",
+    "type": "internal"
+  },
+  {
+    "id": "blog-https-ghost-tk-sg",
+    "label": "blog",
+    "url": "https://ghost.tk.sg/",
+    "type": "external"
+  },
+  {
+    "id": "get-started-https-tinkercademy-com-contact-us",
+    "label": "Get Started",
+    "url": "https://tinkercademy.com/contact-us",
+    "type": "internal"
+  },
+  {
+    "id": "get-started-https-app-acuityscheduling-com-schedule-b7469ae8-category-tinker-2520x-2520single-2520sessions-appointment-9896622-calendar-2925143",
+    "label": "Get Started",
+    "url": "https://app.acuityscheduling.com/schedule/b7469ae8/category/Tinker%2520X%2520Single%2520Sessions/appointment/9896622/calendar/2925143",
+    "type": "external"
+  },
+  {
+    "id": "get-started-https-app-acuityscheduling-com-catalog-b7469ae8-categories-packages",
+    "label": "Get Started",
+    "url": "https://app.acuityscheduling.com/catalog/b7469ae8?categories=Packages",
+    "type": "external"
+  },
+  {
+    "id": "https-www-apple-com-education-college-students-success-stories-yee-https-www-apple-com-education-college-students-success-stories-yee",
+    "label": "https://www.apple.com/education/college-students/success-stories/yee/",
+    "url": "https://www.apple.com/education/college-students/success-stories/yee/",
+    "type": "external"
+  },
+  {
+    "id": "get-hacking-http-gethacking-com",
+    "label": "Get Hacking",
+    "url": "http://gethacking.com/",
+    "type": "external"
+  },
+  {
+    "id": "guestday-http-guestday-com",
+    "label": "GuestDay",
+    "url": "http://guestday.com/",
+    "type": "external"
+  },
+  {
+    "id": "ic-photo-https-apps-apple-com-sg-app-ic-photo-singapore-id483078253",
+    "label": "IC Photo",
+    "url": "https://apps.apple.com/sg/app/ic-photo-singapore/id483078253",
+    "type": "external"
+  },
+  {
+    "id": "helpling-singapore-http-helpling-com-sg",
+    "label": "Helpling Singapore",
+    "url": "http://helpling.com.sg/",
+    "type": "external"
+  },
+  {
+    "id": "professionals-https-tinkercademy-com-courses-schools",
+    "label": "Professionals",
+    "url": "https://tinkercademy.com/courses-schools",
+    "type": "internal"
+  },
+  {
+    "id": "individuals-https-tinkercademy-com-courses-schools",
+    "label": "Individuals",
+    "url": "https://tinkercademy.com/courses-schools",
+    "type": "internal"
+  },
+  {
+    "id": "code-for-fun-programme-https-codeforfun-sg",
+    "label": "Code for Fun programme",
+    "url": "https://codeforfun.sg/",
+    "type": "external"
+  },
+  {
+    "id": "infocomm-learning-roadmap-https-tinkercademy-com-infocomm-club",
+    "label": "Infocomm Learning Roadmap",
+    "url": "https://tinkercademy.com/infocomm-club",
+    "type": "internal"
+  },
+  {
+    "id": "code-sg-scheme-https-www-imda-gov-sg-how-we-can-help-code-at-sg",
+    "label": "Code@SG scheme",
+    "url": "https://www.imda.gov.sg/how-we-can-help/code-at-sg",
+    "type": "external"
+  },
+  {
+    "id": "learn-more-https-codeforfun-sg",
+    "label": "Learn More",
+    "url": "https://codeforfun.sg/",
+    "type": "external"
+  },
+  {
+    "id": "learn-more-https-tinkercademy-com-infocomm-club",
+    "label": "Learn More",
+    "url": "https://tinkercademy.com/infocomm-club",
+    "type": "internal"
+  },
+  {
+    "id": "browse-courses-https-tinkercademy-com-courses-schools",
+    "label": "Browse Courses",
+    "url": "https://tinkercademy.com/courses-schools",
+    "type": "internal"
+  },
+  {
+    "id": "studentscode-for-fun-ai-workshopstudents10-hoursa-code-sg-initiative-by-imda-and-moe-https-tinkercademy-com-programmes-code-for-fun-ai-workshop",
+    "label": "StudentsCode For Fun AI WorkshopStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+    "url": "https://tinkercademy.com/programmes/code-for-fun-ai-workshop",
+    "type": "internal"
+  },
+  {
+    "id": "studentscode-for-fun-baseline-workshopstudents10-hoursa-code-sg-initiative-by-imda-and-moe-https-tinkercademy-com-programmes-code-for-fun-baseline-workshop",
+    "label": "StudentsCode For Fun Baseline WorkshopStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+    "url": "https://tinkercademy.com/programmes/code-for-fun-baseline-workshop",
+    "type": "internal"
+  },
+  {
+    "id": "studentsri-futurecreate-maker-programme-2025students4-yearsa-hands-on-digital-maker-programme-for-ri-students-https-tinkercademy-com-programmes-ri-futurecreate-maker-programme-2025",
+    "label": "StudentsRI FutureCreate Maker Programme 2025Students4 yearsA hands-on digital maker programme for RI students.",
+    "url": "https://tinkercademy.com/programmes/ri-futurecreate-maker-programme-2025",
+    "type": "internal"
+  },
+  {
+    "id": "studentsdigital-making-with-micro-bitstudents24-hoursan-imda-infocom-learn-roadmap-course-with-micro-bit-https-tinkercademy-com-programmes-imda-microbit-2025",
+    "label": "StudentsDigital Making with micro:bitStudents24 hoursAn IMDA Infocom LEARN Roadmap course with micro:bit.",
+    "url": "https://tinkercademy.com/programmes/imda-microbit-2025",
+    "type": "internal"
+  },
+  {
+    "id": "studentsgame-development-in-makecode-arcade-minecraftstudents24-hoursan-imda-infocom-learn-roadmap-course-with-makecode-arcade-minecraft-https-tinkercademy-com-programmes-imda-minecraft-2025",
+    "label": "StudentsGame Development in MakeCode Arcade & MineCraftStudents24 hoursAn IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.",
+    "url": "https://tinkercademy.com/programmes/imda-minecraft-2025",
+    "type": "internal"
+  },
+  {
+    "id": "studentsgame-development-bootcamp-with-unitystudents32-hoursan-imda-infocom-learn-roadmap-bootcamp-with-unity-https-tinkercademy-com-programmes-imda-unity-2025",
+    "label": "StudentsGame Development Bootcamp with UnityStudents32 hoursAn IMDA Infocom LEARN Roadmap bootcamp with Unity.",
+    "url": "https://tinkercademy.com/programmes/imda-unity-2025",
+    "type": "internal"
+  },
+  {
+    "id": "studentsui-ux-design-with-figmastudents26-hoursan-imda-infocom-learn-roadmap-course-with-figma-https-tinkercademy-com-programmes-imda-figma-2025",
+    "label": "StudentsUI/UX Design with FigmaStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Figma.",
+    "url": "https://tinkercademy.com/programmes/imda-figma-2025",
+    "type": "internal"
+  },
+  {
+    "id": "studentsai-driven-game-development-on-phaserstudents24-hoursan-imda-infocom-learn-roadmap-course-with-phaser-https-tinkercademy-com-programmes-imda-phaser-2025",
+    "label": "StudentsAI-Driven Game Development on PhaserStudents24 hoursAn IMDA Infocom LEARN Roadmap course with Phaser.",
+    "url": "https://tinkercademy.com/programmes/imda-phaser-2025",
+    "type": "internal"
+  },
+  {
+    "id": "studentsswift-acceleratorstudents8-monthsan-imda-supported-course-fully-subsidized-for-successful-applicants-https-tinkercademy-com-programmes-swift-accelerator",
+    "label": "StudentsSwift AcceleratorStudents8 monthsAn IMDA-Supported Course: Fully Subsidized for Successful Applicants",
+    "url": "https://tinkercademy.com/programmes/swift-accelerator",
+    "type": "internal"
+  },
+  {
+    "id": "studentsapp-development-basics-with-swift-playgroundsstudents26-hoursan-imda-infocom-learn-roadmap-course-with-apple-singapore-https-tinkercademy-com-programmes-imda-apple-2025-b",
+    "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+    "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+    "type": "internal"
+  },
+  {
+    "id": "studentsapp-development-explorations-with-swift-playgroundsstudents26-hoursan-imda-infocom-learn-roadmap-course-with-apple-singapore-https-tinkercademy-com-programmes-imda-apple-2025-c",
+    "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+    "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
+    "type": "internal"
+  },
+  {
+    "id": "studentsapp-prototyping-with-keynote-and-swift-playgroundsstudents26-hoursan-imda-infocom-learn-roadmap-course-with-apple-singapore-https-tinkercademy-com-programmes-imda-apple-2025-a",
+    "label": "StudentsApp Prototyping with Keynote and Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+    "url": "https://tinkercademy.com/programmes/imda-apple-2025-a",
+    "type": "internal"
+  },
+  {
+    "id": "studentscode-exp-2025students4-days11-may-2025-https-tinkercademy-com-programmes-code-exp-2025",
+    "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+    "url": "https://tinkercademy.com/programmes/code-exp-2025",
+    "type": "internal"
+  },
+  {
+    "id": "teachersno-code-machine-learningteachers2-daysan-introductory-course-on-machine-learning-models-using-orange-https-tinkercademy-com-programmes-no-code-machine-learning",
+    "label": "TeachersNo-Code Machine LearningTeachers2 daysAn introductory course on machine learning models using Orange.",
+    "url": "https://tinkercademy.com/programmes/no-code-machine-learning",
+    "type": "internal"
+  },
+  {
+    "id": "back-to-professionals-https-tinkercademy-com-professionals",
+    "label": "Back to Professionals",
+    "url": "https://tinkercademy.com/professionals",
+    "type": "internal"
+  },
+  {
+    "id": "all-courses-https-tinkercademy-com-courses-all",
+    "label": "All Courses",
+    "url": "https://tinkercademy.com/courses-all",
+    "type": "internal"
+  },
+  {
+    "id": "school-courses-https-tinkercademy-com-courses-schools",
+    "label": "School Courses",
+    "url": "https://tinkercademy.com/courses-schools",
+    "type": "internal"
+  },
+  {
+    "id": "individual-courses-https-tinkercademy-com-individuals",
+    "label": "Individual Courses",
+    "url": "https://tinkercademy.com/individuals",
+    "type": "internal"
+  },
+  {
+    "id": "studentscode-for-fun-ai-workshopage-groupstudents10-hoursa-code-sg-initiative-by-imda-and-moe-https-tinkercademy-com-programmes-code-for-fun-ai-workshop",
+    "label": "StudentsCode For Fun AI WorkshopAge GroupStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+    "url": "https://tinkercademy.com/programmes/code-for-fun-ai-workshop",
+    "type": "internal"
+  },
+  {
+    "id": "studentscode-for-fun-baseline-workshopage-groupstudents10-hoursa-code-sg-initiative-by-imda-and-moe-https-tinkercademy-com-programmes-code-for-fun-baseline-workshop",
+    "label": "StudentsCode For Fun Baseline WorkshopAge GroupStudents10 hoursA CODE@SG initiative by IMDA and MOE.",
+    "url": "https://tinkercademy.com/programmes/code-for-fun-baseline-workshop",
+    "type": "internal"
+  },
+  {
+    "id": "publicdigital-maker-create-with-3d-printing-and-iotage-grouppublic2-days14-15-january-2025-https-tinkercademy-com-programmes-iotmaker",
+    "label": "PublicDigital Maker: Create with 3D Printing and IOTAge GroupPublic2 days14 - 15 January 2025",
+    "url": "https://tinkercademy.com/programmes/iotmaker",
+    "type": "internal"
+  },
+  {
+    "id": "businessesenter-the-metaverse-get-started-with-unity-for-ar-vrage-groupbusinesses2-days11-12-february-2025-https-tinkercademy-com-programmes-unityarvr",
+    "label": "BusinessesEnter the Metaverse: Get started with Unity for AR/VRAge GroupBusinesses2 days11 - 12 February 2025",
+    "url": "https://tinkercademy.com/programmes/unityarvr",
+    "type": "internal"
+  },
+  {
+    "id": "teachersno-code-machine-learningage-groupteachers2-daysan-introductory-course-on-machine-learning-models-using-orange-https-tinkercademy-com-programmes-no-code-machine-learning",
+    "label": "TeachersNo-Code Machine LearningAge GroupTeachers2 daysAn introductory course on machine learning models using Orange.",
+    "url": "https://tinkercademy.com/programmes/no-code-machine-learning",
+    "type": "internal"
+  },
+  {
+    "id": "publicno-code-web-design-framer-age-grouppublic2-daysan-introductory-course-on-building-websites-using-framer-https-tinkercademy-com-programmes-no-code-web-design-framer",
+    "label": "PublicNo-code Web Design (Framer)Age GroupPublic2 daysAn introductory course on building websites using Framer.",
+    "url": "https://tinkercademy.com/programmes/no-code-web-design-framer",
+    "type": "internal"
+  },
+  {
+    "id": "businessesmicrosoft-copilot-age-groupbusinesses2-daysan-introductory-course-on-leveraging-microsoft-copilot-to-enhance-productivity-https-tinkercademy-com-programmes-microsoft-copilot",
+    "label": "BusinessesMicrosoft Copilot Age GroupBusinesses2 daysAn introductory course on leveraging Microsoft Copilot to enhance productivity.",
+    "url": "https://tinkercademy.com/programmes/microsoft-copilot",
+    "type": "internal"
+  },
+  {
+    "id": "businessesdigital-making-with-micro-bit-iotage-groupbusinesses2-daysan-introductory-course-on-digital-making-with-micro-bit-iot-https-tinkercademy-com-programmes-digital-making-with-micro-bit-iot",
+    "label": "BusinessesDigital Making with micro:bit & IoTAge GroupBusinesses2 daysAn introductory course on digital making with Micro:bit & IoT.",
+    "url": "https://tinkercademy.com/programmes/digital-making-with-micro-bit-iot",
+    "type": "internal"
+  },
+  {
+    "id": "back-to-home-https-tinkercademy-com",
+    "label": "Back to Home",
+    "url": "https://tinkercademy.com/",
+    "type": "internal"
+  },
+  {
+    "id": "professional-courses-https-tinkercademy-com-courses-professionals",
+    "label": "Professional Courses",
+    "url": "https://tinkercademy.com/courses-professionals",
+    "type": "internal"
+  },
+  {
+    "id": "courses-for-individualscourses-for-individuals-https-tinkercademy-com-courses-all",
+    "label": "Courses for IndividualsCourses for Individuals",
+    "url": "https://tinkercademy.com/courses-all",
+    "type": "internal"
+  },
+  {
+    "id": "courses-for-individuals-https-tinkercademy-com-courses-all",
+    "label": "Courses for Individuals",
+    "url": "https://tinkercademy.com/courses-all",
+    "type": "internal"
+  },
+  {
+    "id": "micro-bit-https-tinkercademy-com-microbit",
+    "label": "micro:bit",
+    "url": "https://tinkercademy.com/microbit",
+    "type": "internal"
+  },
+  {
+    "id": "tinker-x-https-tinkercademy-com-tinker-x",
+    "label": "Tinker X",
+    "url": "https://tinkercademy.com/tinker-x",
+    "type": "internal"
+  },
+  {
+    "id": "back-to-schools-https-tinkercademy-com-schools",
+    "label": "Back to Schools",
+    "url": "https://tinkercademy.com/schools",
+    "type": "internal"
+  },
+  {
+    "id": "the-training-cost-is-fully-funded-by-imda-https-www-imda-gov-sg-how-we-can-help-infocomm-media-clubs-learn-roadmaps",
+    "label": "the training cost is fully funded by IMDA.",
+    "url": "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps",
+    "type": "external"
+  },
+  {
+    "id": "hello-tinkercademy-com-mailto-hello-tinkercademy-com",
+    "label": "hello@tinkercademy.com. 🙋🏻‍♀️",
+    "url": "mailto: hello@tinkercademy.com",
+    "type": "email"
+  },
+  {
+    "id": "read-more-https-tinkercademy-com-programmes-imda-figma-2025",
+    "label": "READ MORE",
+    "url": "https://tinkercademy.com/programmes/imda-figma-2025",
+    "type": "internal"
+  },
+  {
+    "id": "registration-for-moe-primary-schoolsregistration-for-moe-pri-schools-https-form-gov-sg-6704f86a5c3070b1b3c9c1b2",
+    "label": "Registration for MOE Primary SchoolsRegistration for MOE Pri Schools",
+    "url": "https://form.gov.sg/6704f86a5c3070b1b3c9c1b2",
+    "type": "external"
+  },
+  {
+    "id": "registration-for-moe-secondary-schools-junior-collegeregistration-for-moe-sec-schools-jc-https-form-gov-sg-6704f97536fa07f9b3e3a283",
+    "label": "Registration for MOE Secondary Schools / Junior CollegeRegistration for MOE Sec Schools / JC",
+    "url": "https://form.gov.sg/6704f97536fa07f9b3e3a283",
+    "type": "external"
+  },
+  {
+    "id": "makecode-microbit-org-https-makecode-microbit-org",
+    "label": "makecode.microbit.org",
+    "url": "https://makecode.microbit.org/",
+    "type": "external"
+  },
+  {
+    "id": "here-https-tinkercademy-com-tutorials-getting-started-with-microbit",
+    "label": "here",
+    "url": "https://tinkercademy.com/tutorials/getting-started-with-microbit/",
+    "type": "internal"
+  },
+  {
+    "id": "get-in-touch-https-tinkercademy-com-contact-us",
+    "label": "get in touch",
+    "url": "https://tinkercademy.com/contact-us",
+    "type": "internal"
+  },
+  {
+    "id": "get-micro-bit-and-kits-https-gethacking-com-collections-microbit",
+    "label": "Get micro:bit and kits",
+    "url": "https://gethacking.com/collections/microbit",
+    "type": "external"
+  },
+  {
+    "id": "back-to-micro-bit-projects-homepage-https-tinkercademy-com-microbit",
+    "label": "Back to micro:bit projects homepage",
+    "url": "https://tinkercademy.com/microbit",
+    "type": "internal"
+  },
+  {
+    "id": "click-here-for-the-full-project-https-makecode-microbit-org-42973-83238-85843-19119",
+    "label": "Click here for the full project",
+    "url": "https://makecode.microbit.org/42973-83238-85843-19119",
+    "type": "external"
+  },
+  {
+    "id": "avoid-the-asteroids-https-tk-sg-asteroids",
+    "label": "Avoid the Asteroids",
+    "url": "https://tk.sg/asteroids",
+    "type": "external"
+  },
+  {
+    "id": "maze-runner-https-tk-sg-mazerunner",
+    "label": "Maze Runner",
+    "url": "https://tk.sg/mazerunner",
+    "type": "external"
+  },
+  {
+    "id": "flappy-bird-https-tk-sg-flappybird",
+    "label": "Flappy Bird",
+    "url": "https://tk.sg/flappybird",
+    "type": "external"
+  },
+  {
+    "id": "https-codewith-mu-https-codewith-mu",
+    "label": "https://codewith.mu/",
+    "url": "https://codewith.mu/",
+    "type": "external"
+  },
+  {
+    "id": "here-https-microbit-micropython-readthedocs-io-en-latest-tutorials-introduction-html",
+    "label": "here",
+    "url": "https://microbit-micropython.readthedocs.io/en/latest/tutorials/introduction.html",
+    "type": "external"
+  },
+  {
+    "id": "recursively-http-pages-cs-wisc-edu-calvin-cs110-recursion-html",
+    "label": "recursively",
+    "url": "http://pages.cs.wisc.edu/~calvin/cs110/RECURSION.html",
+    "type": "external"
+  },
+  {
+    "id": "here-https-tinkercademy-com-tutorials-finger-dexterity-game-tutorials-quick-maths",
+    "label": "here",
+    "url": "https://tinkercademy.com/tutorials/finger-dexterity-game/tutorials/quick-maths/",
+    "type": "internal"
+  },
+  {
+    "id": "let-us-not-get-into-the-discussion-as-to-where-true-randomness-can-really-be-generated-https-engineering-mit-edu-engage-ask-an-engineer-can-a-computer-generate-a-truly-random-number",
+    "label": "let us not get into the discussion as to where true randomness can really be generated",
+    "url": "https://engineering.mit.edu/engage/ask-an-engineer/can-a-computer-generate-a-truly-random-number/",
+    "type": "external"
+  },
+  {
+    "id": "event-listener-https-www-computerhope-com-jargon-e-event-listener-htm",
+    "label": "event listener",
+    "url": "https://www.computerhope.com/jargon/e/event-listener.htm",
+    "type": "external"
+  },
+  {
+    "id": "note-that-we-use-an-index-that-starts-with-0-this-means-that-the-top-left-corner-is-0-0-https-skillcrush-com-2013-01-17-why-programmers-start-counting-at-zero",
+    "label": "Note that we use an index that starts with 0 – this means that the top left corner is (0,0)",
+    "url": "https://skillcrush.com/2013/01/17/why-programmers-start-counting-at-zero/",
+    "type": "external"
+  },
+  {
+    "id": "execution-contexts-which-is-beyond-the-scope-of-this-tutorial-https-stackoverflow-com-questions-9384758-what-is-the-execution-context-in-javascript-exactly",
+    "label": "execution contexts, which is beyond the scope of this tutorial.",
+    "url": "https://stackoverflow.com/questions/9384758/what-is-the-execution-context-in-javascript-exactly",
+    "type": "external"
+  },
+  {
+    "id": "click-here-to-download-code-https-makecode-microbit-org-h1ag5dhf1jtp",
+    "label": "Click here to download code",
+    "url": "https://makecode.microbit.org/_H1Ag5dHF1JtP",
+    "type": "external"
+  },
+  {
+    "id": "here-https-lancaster-university-github-io-microbit-docs-offline-toolchains",
+    "label": "here.",
+    "url": "https://lancaster-university.github.io/microbit-docs/offline-toolchains/",
+    "type": "external"
+  },
+  {
+    "id": "ubit-https-lancaster-university-github-io-microbit-docs-ubit",
+    "label": "uBit",
+    "url": "https://lancaster-university.github.io/microbit-docs/ubit/",
+    "type": "external"
+  },
+  {
+    "id": "ubit-init-https-lancaster-university-github-io-microbit-docs-ubit-init",
+    "label": "uBit.init().",
+    "url": "https://lancaster-university.github.io/microbit-docs/ubit/#init",
+    "type": "external"
+  },
+  {
+    "id": "ubit-display-scroll-https-lancaster-university-github-io-microbit-docs-ubit-display-scroll",
+    "label": "uBit.display.scroll()",
+    "url": "https://lancaster-university.github.io/microbit-docs/ubit/display/#scroll",
+    "type": "external"
+  },
+  {
+    "id": "ubit-display-https-lancaster-university-github-io-microbit-docs-ubit-display",
+    "label": "uBit.display",
+    "url": "https://lancaster-university.github.io/microbit-docs/ubit/display/",
+    "type": "external"
+  },
+  {
+    "id": "messagebus-https-lancaster-university-github-io-microbit-docs-ubit-messagebus",
+    "label": "messageBus",
+    "url": "https://lancaster-university.github.io/microbit-docs/ubit/messageBus/",
+    "type": "external"
+  },
+  {
+    "id": "official-micro-bit-python-editor-http-python-microbit-org",
+    "label": "official micro:bit Python editor",
+    "url": "http://python.microbit.org/",
+    "type": "external"
+  },
+  {
+    "id": "transmitter-https-pastebin-com-qm7zjxhj",
+    "label": "transmitter",
+    "url": "https://pastebin.com/Qm7ZjxHJ",
+    "type": "external"
+  },
+  {
+    "id": "receiver-https-pastebin-com-jlekpyys",
+    "label": "receiver",
+    "url": "https://pastebin.com/JLEkPyYS",
+    "type": "external"
+  },
+  {
+    "id": "ascii-https-en-wikipedia-org-wiki-ascii",
+    "label": "ASCII",
+    "url": "https://en.wikipedia.org/wiki/ASCII",
+    "type": "external"
+  },
+  {
+    "id": "hamming-codes-https-en-wikipedia-org-wiki-hamming-code",
+    "label": "Hamming codes",
+    "url": "https://en.wikipedia.org/wiki/Hamming_code",
+    "type": "external"
+  },
+  {
+    "id": "error-correcting-codes-https-en-wikipedia-org-wiki-error-detection-and-correction",
+    "label": "error-correcting codes",
+    "url": "https://en.wikipedia.org/wiki/Error_detection_and_correction",
+    "type": "external"
+  },
+  {
+    "id": "mu-https-codewith-mu",
+    "label": "mu",
+    "url": "https://codewith.mu/",
+    "type": "external"
+  },
+  {
+    "id": "micro-bit-simulator-https-create-withcode-uk",
+    "label": "micro:bit simulator",
+    "url": "https://create.withcode.uk/",
+    "type": "external"
+  },
+  {
+    "id": "our-tutorial-here-https-tinkercademy-com-tutorials-make-a-microbit-car",
+    "label": "our tutorial here",
+    "url": "https://tinkercademy.com/tutorials/make-a-microbit-car/",
+    "type": "internal"
+  },
+  {
+    "id": "our-introductory-tutorial-here-https-tinkercademy-com-tutorials-getting-started-with-microbit",
+    "label": "our introductory tutorial here!",
+    "url": "https://tinkercademy.com/tutorials/getting-started-with-microbit/",
+    "type": "internal"
+  },
+  {
+    "id": "whole-code-here-https-makecode-microbit-org-htm3afgh4f8f",
+    "label": "whole code here",
+    "url": "https://makecode.microbit.org/_hTm3afgh4F8f",
+    "type": "external"
+  },
+  {
+    "id": "tinker-kit-https-gethacking-com-products-micro-bit-tinker-kit",
+    "label": "Tinker Kit",
+    "url": "https://gethacking.com/products/micro-bit-tinker-kit)",
+    "type": "external"
+  },
+  {
+    "id": "save-your-tired-fingers-and-download-the-code-https-makecode-microbit-org-37809-40456-69584-39554",
+    "label": "Save your tired fingers and download the code",
+    "url": "https://makecode.microbit.org/37809-40456-69584-39554",
+    "type": "external"
+  },
+  {
+    "id": "standard-rules-https-www-python-org-dev-peps-pep-0008",
+    "label": "standard rules",
+    "url": "https://www.python.org/dev/peps/pep-0008/",
+    "type": "external"
+  },
+  {
+    "id": "here-http-microbit-micropython-readthedocs-io-en-latest-tutorials-images-html",
+    "label": "here",
+    "url": "http://microbit-micropython.readthedocs.io/en/latest/tutorials/images.html",
+    "type": "external"
+  },
+  {
+    "id": "imda-codesg-imda-gov-sg-mailto-imda-codesg-imda-gov-sg",
+    "label": "imda_codesg@imda.gov.sg",
+    "url": "mailto:imda_codesg@imda.gov.sg",
+    "type": "email"
+  },
+  {
+    "id": "here-https-webmaster-tk-sg",
+    "label": "here",
+    "url": "https://webmaster.tk.sg/",
+    "type": "external"
+  },
+  {
+    "id": "module-1-designing-and-prototyping-app-user-interfaces-for-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-designing-and-prototyping",
+    "label": "Module 1: Designing and Prototyping App User Interfaces for Mobile App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-designing-and-prototyping",
+    "type": "external"
+  },
+  {
+    "id": "module-2-introduction-to-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-introduction-mobile-app",
+    "label": "Module 2: Introduction to Mobile App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-introduction-mobile-app",
+    "type": "external"
+  },
+  {
+    "id": "module-3-building-database-driven-mobile-apps-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-building-database-driven",
+    "label": "Module 3: Building Database-Driven Mobile Apps",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-building-database-driven",
+    "type": "external"
+  },
+  {
+    "id": "module-4-interfacing-mobile-apps-with-web-back-ends-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-interfacing-mobile-apps-web",
+    "label": "Module 4: Interfacing Mobile Apps with Web Back-Ends",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-interfacing-mobile-apps-web",
+    "type": "external"
+  },
+  {
+    "id": "module-5-building-a-full-stack-mobile-application-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-building-full-stack-mobile",
+    "label": "Module 5: Building a Full-Stack Mobile Application",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-building-full-stack-mobile",
+    "type": "external"
+  },
+  {
+    "id": "module-6-further-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-further-mobile-app",
+    "label": "Module 6: Further Mobile App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-further-mobile-app",
+    "type": "external"
+  },
+  {
+    "id": "module-7-executing-projects-in-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-executing-projects-mobile",
+    "label": "Module 7: Executing Projects in Mobile App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-executing-projects-mobile",
+    "type": "external"
+  },
+  {
+    "id": "advanced-diploma-in-web-mobile-application-development-https-academy-smu-edu-sg-advanced-diploma-mobile-web-application-development-4131",
+    "label": "Advanced Diploma in Web & Mobile Application Development",
+    "url": "https://academy.smu.edu.sg/advanced-diploma-mobile-web-application-development-4131",
+    "type": "external"
+  },
+  {
+    "id": "advanced-diploma-in-multiplatform-mobile-app-development-and-cloud-management-https-academy-smu-edu-sg-advanced-diploma-multiplatform-mobile-app-development-and-cloud-management-7886",
+    "label": "Advanced Diploma in Multiplatform Mobile App Development and Cloud Management",
+    "url": "https://academy.smu.edu.sg/advanced-diploma-multiplatform-mobile-app-development-and-cloud-management-7886",
+    "type": "external"
+  },
+  {
+    "id": "https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-pcmob-fee-table-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-pcmob-fee-table",
+    "label": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table",
+    "type": "external"
+  },
+  {
+    "id": "zenitant-https-zenitanteducation-com",
+    "label": "Zenitant",
+    "url": "https://zenitanteducation.com/",
+    "type": "external"
+  },
+  {
+    "id": "3d-tronics-micro-controller-challenge-https-3dtronics-asia",
+    "label": "3d-tronics Micro-controller Challenge",
+    "url": "https://3dtronics.asia/",
+    "type": "external"
+  },
+  {
+    "id": "hello-tinkerclass-tech-mailto-hello-tinkerclass-tech",
+    "label": "hello@tinkerclass.tech",
+    "url": "mailto:hello@tinkerclass.tech",
+    "type": "email"
+  },
+  {
+    "id": "email-us-mailto-yjsoon-tk-sg",
+    "label": "email us",
+    "url": "mailto:yjsoon@tk.sg",
+    "type": "email"
+  },
+  {
+    "id": "module-1-prototyping-and-user-interface-design-for-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-prototyping-and-user-interface",
+    "label": "Module 1: Prototyping and User Interface Design for Web App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-prototyping-and-user-interface",
+    "type": "external"
+  },
+  {
+    "id": "module-2-introduction-to-front-end-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-introduction-front-end-web-app",
+    "label": "Module 2: Introduction to Front End Web App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-introduction-front-end-web-app",
+    "type": "external"
+  },
+  {
+    "id": "module-3-building-database-driven-web-apps-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-building-database-driven-web",
+    "label": "Module 3: Building Database-Driven Web Apps",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-building-database-driven-web",
+    "type": "external"
+  },
+  {
+    "id": "module-4-back-end-web-app-development-with-databases-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-back-end-web-app-development",
+    "label": "Module 4: Back-End Web App Development with Databases",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-back-end-web-app-development",
+    "type": "external"
+  },
+  {
+    "id": "module-5-building-a-full-stack-web-application-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-building-full-stack-web",
+    "label": "Module 5: Building a Full-Stack Web Application",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-building-full-stack-web",
+    "type": "external"
+  },
+  {
+    "id": "module-6-frameworks-for-full-stack-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-frameworks-full-stack-web-app",
+    "label": "Module 6: Frameworks for Full-Stack Web App Development",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-frameworks-full-stack-web-app",
+    "type": "external"
+  },
+  {
+    "id": "module-7-practical-tools-for-web-app-development-project-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-practical-tools-web-app",
+    "label": "Module 7: Practical Tools for Web App Development Project",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-practical-tools-web-app",
+    "type": "external"
+  },
+  {
+    "id": "advanced-diploma-in-web-mobile-application-development-https-academy-smu-edu-sg-courses-advanced-diploma-web-and-mobile-application-development",
+    "label": "Advanced Diploma in Web & Mobile Application Development",
+    "url": "https://academy.smu.edu.sg/courses/advanced-diploma-web-and-mobile-application-development",
+    "type": "external"
+  },
+  {
+    "id": "advanced-diploma-in-full-stack-web-app-development-and-cloud-management-https-academy-smu-edu-sg-courses-advanced-diploma-full-stack-web-app-development-and-cloud-management",
+    "label": "Advanced Diploma in Full Stack Web App Development and Cloud Management",
+    "url": "https://academy.smu.edu.sg/courses/advanced-diploma-full-stack-web-app-development-and-cloud-management",
+    "type": "external"
+  },
+  {
+    "id": "here-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-pcweb-fee-table",
+    "label": "here",
+    "url": "https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-pcweb#fee-table",
+    "type": "external"
+  },
+  {
+    "id": "here-https-academy-smu-edu-sg-courses-certificate-technology-foundations-harnessing-power-internet-things-and-creative-digital",
+    "label": "here",
+    "url": "https://academy.smu.edu.sg/courses/certificate-technology-foundations-harnessing-power-internet-things-and-creative-digital",
+    "type": "external"
+  },
+  {
+    "id": "here-https-academy-smu-edu-sg-courses-certificate-technology-foundations-unleash-potential-blockchain-technology",
+    "label": "here",
+    "url": "https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology",
+    "type": "external"
+  },
+  {
+    "id": "swift-explorers-challenge-https-swiftexplorers-sg",
+    "label": "Swift Explorers Challenge",
+    "url": "https://swiftexplorers.sg/",
+    "type": "external"
+  },
+  {
+    "id": "figurative-https-figurative-design",
+    "label": "Figurative",
+    "url": "https://figurative.design/",
+    "type": "external"
+  },
+  {
+    "id": "vscodeedu-com-https-vscodeedu-com",
+    "label": "vscodeedu.com",
+    "url": "https://vscodeedu.com/",
+    "type": "external"
+  },
+  {
+    "id": "phaser-io-download-https-phaser-io-download",
+    "label": "phaser.io/download",
+    "url": "https://phaser.io/download",
+    "type": "external"
+  },
+  {
+    "id": "https-tk-sg-codeexp25-qualifiers-https-tk-sg-codeexp25-qualifiers",
+    "label": "https://tk.sg/codeexp25_qualifiers",
+    "url": "https://tk.sg/codeexp25_qualifiers",
+    "type": "external"
+  },
+  {
+    "id": "here-https-iotmaker-tk-sg",
+    "label": "here",
+    "url": "https://iotmaker.tk.sg/",
+    "type": "external"
+  },
+  {
+    "id": "here-https-unityarvr-tk-sg",
+    "label": "here",
+    "url": "https://unityarvr.tk.sg/",
+    "type": "external"
+  },
+  {
+    "id": "unity-hardware-requirements-at-unity3d-com-https-docs-unity3d-com-manual-system-requirements-html",
+    "label": "Unity hardware requirements at unity3d.com",
+    "url": "https://docs.unity3d.com/Manual/system-requirements.html",
+    "type": "external"
+  }
+]

@@ -1,0 +1,4 @@
+- id: https-form-jotform-com-223001013827440
+  provider: jotform
+  endpoint: https://form.jotform.com/223001013827440
+  method: link

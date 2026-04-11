@@ -1,0 +1,27 @@
+{
+  "name": "tinkercademy.com",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "crawl:site": "node scripts/crawl-site.mjs",
+    "build:crm": "node scripts/build-crm-data.mjs",
+    "import:live": "npm run crawl:site && npm run build:crm",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^6.1.5",
+    "cheerio": "^1.2.0",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "typescript": "^5.9.3"
+  }
+}

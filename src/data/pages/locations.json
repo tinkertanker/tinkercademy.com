@@ -1,0 +1,10 @@
+[
+  {
+    "id": "jalan-pemimpin-office",
+    "name": "Tinkercademy Office",
+    "address": "59 Jalan Pemimpin #04-01, L&Y Building, Singapore 577218",
+    "delivery_modes": [
+      "in-person"
+    ]
+  }
+]

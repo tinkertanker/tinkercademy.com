@@ -1,0 +1,27 @@
+---
+type PageHeroProps = {
+	eyebrow?: string | null;
+	title: string;
+	lead?: string | null;
+	badges?: string[];
+};
+
+const props = Astro.props as PageHeroProps;
+const eyebrow = props.eyebrow ?? null;
+const title = props.title;
+const lead = props.lead ?? null;
+const badges = props.badges ?? [];
+---
+
+<section class="hero">
+	<div class="shell hero-inner">
+		{eyebrow && <p class="eyebrow">{eyebrow}</p>}
+		<h1>{title}</h1>
+		{lead && <p class="lead">{lead}</p>}
+		{badges.length > 0 && (
+			<ul class="badge-row">
+				{badges.map((badge) => <li>{badge}</li>)}
+			</ul>
+		)}
+	</div>
+</section>

@@ -1,0 +1,76 @@
+{
+  "site_name": "Tinkercademy",
+  "base_url": "https://tinkercademy.com",
+  "default_seo": {
+    "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "canonical": "https://tinkercademy.com/",
+    "openGraph": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "image": null
+    },
+    "twitter": {
+      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "image": null
+    },
+    "robots": "max-image-preview:large"
+  },
+  "breakpoints": [
+    {
+      "hash": "i8hhhf",
+      "mediaQuery": "(min-width: 1600px)"
+    },
+    {
+      "hash": "kdtqod",
+      "mediaQuery": "(min-width: 1200px) and (max-width: 1599.98px)"
+    },
+    {
+      "hash": "okv3ti",
+      "mediaQuery": "(min-width: 810px) and (max-width: 1199.98px)"
+    },
+    {
+      "hash": "o1myt0",
+      "mediaQuery": "(max-width: 809.98px)"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "ABOUT US",
+      "href": "https://tinkercademy.com/about-us"
+    },
+    {
+      "label": "SHOWCASE",
+      "href": "https://tinkercademy.com/showcase"
+    },
+    {
+      "label": "STORE",
+      "href": "https://gethacking.com/"
+    },
+    {
+      "label": "CONTACT US",
+      "href": "https://tinkercademy.com/contact-us"
+    }
+  ],
+  "contact_ids": [
+    "email-hello-tk-sg",
+    "phone-69176920",
+    "email-hello-tinkercademy-com",
+    "email-imda-codesg-imda-gov-sg",
+    "email-hello-tinkerclass-tech",
+    "email-yjsoon-tk-sg"
+  ],
+  "location_ids": [
+    "jalan-pemimpin-office"
+  ],
+  "social_link_ids": [
+    "x",
+    "facebook",
+    "instagram",
+    "linkedin",
+    "github",
+    "blog",
+    "medium"
+  ]
+}

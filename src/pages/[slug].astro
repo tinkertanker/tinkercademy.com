@@ -1,0 +1,31 @@
+---
+import ContentBlocks from '../components/ContentBlocks.astro';
+import PageHero from '../components/PageHero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSiteData } from '../lib/data.js';
+
+export function getStaticPaths() {
+	const site = getSiteData();
+	return site.staticPages
+		.filter((page) => page.path !== '/')
+		.filter((page) => !page.path.startsWith('/programmes/') && !page.path.startsWith('/tutorials/'))
+		.filter((page) => page.path.split('/').filter(Boolean).length === 1)
+		.map((page) => ({
+			params: { slug: page.slug },
+			props: { page },
+		}));
+}
+
+const { page } = Astro.props;
+const canonical = new URL(page.path, 'https://tinkercademy.com').toString();
+---
+
+<BaseLayout
+	title={page.seo?.title ?? page.title}
+	description={page.seo?.description ?? page.description ?? ''}
+	canonical={canonical}
+	image={page.hero_image ?? undefined}
+>
+	<PageHero title={page.title} lead={page.description} />
+	<ContentBlocks blocks={page.content} />
+</BaseLayout>

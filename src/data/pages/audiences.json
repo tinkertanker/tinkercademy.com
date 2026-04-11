@@ -1,0 +1,22 @@
+[
+  {
+    "id": "businesses",
+    "label": "Businesses",
+    "source_id": "businesses"
+  },
+  {
+    "id": "public",
+    "label": "Public",
+    "source_id": "public"
+  },
+  {
+    "id": "students",
+    "label": "Students",
+    "source_id": "students"
+  },
+  {
+    "id": "teachers",
+    "label": "Teachers",
+    "source_id": "teachers"
+  }
+]

@@ -1,0 +1,24 @@
+- id: email-hello-tk-sg
+  label: Email
+  channel_type: email
+  value: hello@tk.sg
+- id: phone-69176920
+  label: Phone
+  channel_type: phone
+  value: "69176920"
+- id: email-hello-tinkercademy-com
+  label: Email
+  channel_type: email
+  value: " hello@tinkercademy.com"
+- id: email-imda-codesg-imda-gov-sg
+  label: Email
+  channel_type: email
+  value: imda_codesg@imda.gov.sg
+- id: email-hello-tinkerclass-tech
+  label: Email
+  channel_type: email
+  value: hello@tinkerclass.tech
+- id: email-yjsoon-tk-sg
+  label: Email
+  channel_type: email
+  value: yjsoon@tk.sg
