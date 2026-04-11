@@ -4,3 +4,4 @@ dist
 scripts/_artifacts
 .codex
 .DS_Store
+output

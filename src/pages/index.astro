@@ -1,5 +1,6 @@
 ---
 import ContentBlocks from '../components/ContentBlocks.astro';
+import HeroMedia from '../components/HeroMedia.astro';
 import PageHero from '../components/PageHero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSiteData, getStaticPage } from '../lib/data.js';
@@ -21,14 +22,16 @@ const featuredTutorials = site.tutorials.slice(0, 6);
 		title={page?.title ?? 'Tinkercademy'}
 		lead={page?.description ?? 'Crawl-driven Astro rebuild of the current public site.'}
 	/>
+	<HeroMedia src={page?.hero_image} alt={page?.title ?? 'Tinkercademy'} />
 
-	{page && <ContentBlocks blocks={page.content} />}
+	{page && <ContentBlocks blocks={page.content.slice(0, 8)} />}
 
 	<section class="shell section">
 		<h2 class="section-title">Programmes</h2>
 		<div class="card-grid">
 			{featuredProgrammes.map((programme) => (
 				<a class="card" href={`/programmes/${programme.slug}`}>
+					{programme.hero_image && <img class="card-image" src={programme.hero_image} alt={programme.title} />}
 					<h3>{programme.title}</h3>
 					<p>{programme.description}</p>
 				</a>
@@ -41,6 +44,7 @@ const featuredTutorials = site.tutorials.slice(0, 6);
 		<div class="card-grid">
 			{featuredTutorials.map((tutorial) => (
 				<a class="card" href={`/tutorials/${tutorial.slug}`}>
+					{tutorial.hero_image && <img class="card-image" src={tutorial.hero_image} alt={tutorial.title} />}
 					<h3>{tutorial.title}</h3>
 					<p>{tutorial.description}</p>
 				</a>
@@ -48,3 +52,14 @@ const featuredTutorials = site.tutorials.slice(0, 6);
 		</div>
 	</section>
 </BaseLayout>
+
+<style>
+	.card-image {
+		width: 100%;
+		height: 160px;
+		object-fit: cover;
+		border-radius: 0.9rem;
+		margin-bottom: 0.9rem;
+		border: 1px solid rgba(45, 42, 38, 0.08);
+	}
+</style>

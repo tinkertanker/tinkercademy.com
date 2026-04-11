@@ -1,0 +1,39 @@
+---
+const props = Astro.props as { src?: string | null; alt?: string; compact?: boolean };
+const src = props.src ?? null;
+const alt = props.alt ?? '';
+const compact = props.compact ?? false;
+---
+
+{
+	src && (
+		<section class:list={['hero-media', compact && 'hero-media--compact']}>
+			<div class="shell">
+				<img src={src} alt={alt} loading="eager" />
+			</div>
+		</section>
+	)
+}
+
+<style>
+	.hero-media {
+		padding-bottom: 2rem;
+	}
+
+	.hero-media .shell {
+		border-radius: 1.5rem;
+		overflow: hidden;
+		box-shadow: 0 22px 44px rgba(45, 42, 38, 0.12);
+		border: 1px solid rgba(45, 42, 38, 0.12);
+	}
+
+	.hero-media img {
+		width: 100%;
+		height: clamp(280px, 48vw, 560px);
+		object-fit: cover;
+	}
+
+	.hero-media--compact img {
+		height: clamp(220px, 34vw, 420px);
+	}
+</style>

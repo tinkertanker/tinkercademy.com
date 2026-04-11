@@ -1,5 +1,6 @@
 ---
 import ContentBlocks from '../components/ContentBlocks.astro';
+import HeroMedia from '../components/HeroMedia.astro';
 import PageHero from '../components/PageHero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSiteData } from '../lib/data.js';
@@ -27,5 +28,6 @@ const canonical = new URL(page.path, 'https://tinkercademy.com').toString();
 	image={page.hero_image ?? undefined}
 >
 	<PageHero title={page.title} lead={page.description} />
+	<HeroMedia src={page.hero_image} alt={page.title} compact={true} />
 	<ContentBlocks blocks={page.content} />
 </BaseLayout>
