@@ -30,8 +30,11 @@ CRM-like files live under `src/data/crm/`:
 
 Static page payloads and asset inventories live under `src/data/pages/`.
 
+The imported home page payload now carries explicit landing-page fields such as hero copy, focus areas, flagship cards, and featured course ordering so the Astro front end does not have to infer those from raw Framer blocks at render time.
+
 ## Notes
 
 - `scripts/_artifacts/` is generated and ignored.
 - The current implementation keeps remote image URLs from Framer while the migration is still in progress.
+- Tutorial pages are rendered as grouped story sections from the imported Framer handover sequence rather than a flat HTML dump.
 - Visual parity checks should be run against both the live site and the local Astro build after each substantial import/render pass.

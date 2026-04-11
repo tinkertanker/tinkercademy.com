@@ -1,7 +1,6 @@
 ---
 import HeroMedia from '../../components/HeroMedia.astro';
-import PageHero from '../../components/PageHero.astro';
-import RichContent from '../../components/RichContent.astro';
+import TutorialStory from '../../components/TutorialStory.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSiteData } from '../../lib/data.js';
 
@@ -14,11 +13,10 @@ export function getStaticPaths() {
 
 const { tutorial } = Astro.props;
 const canonical = new URL(`/tutorials/${tutorial.slug}`, 'https://tinkercademy.com').toString();
-const badges = [
-	...(tutorial.subtitle ? [tutorial.subtitle] : []),
-	...tutorial.audiences.map((audience) => audience.label),
-	...tutorial.topics.map((topic) => topic.label),
-];
+const contentItems =
+	tutorial.content?.[0]?.type === 'image' && tutorial.content[0]?.src === tutorial.hero_image
+		? tutorial.content.slice(1)
+		: tutorial.content;
 ---
 
 <BaseLayout
@@ -27,12 +25,62 @@ const badges = [
 	canonical={canonical}
 	image={tutorial.hero_image ?? undefined}
 >
-	<PageHero
-		eyebrow="Tutorial"
-		title={tutorial.title}
-		lead={tutorial.description}
-		badges={badges}
-	/>
-	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} />
-	<RichContent items={tutorial.content} />
+	<section class="tutorial-banner">
+		<div class="shell tutorial-banner__inner">
+			<p class="eyebrow">Tutorial</p>
+			<h1>{tutorial.title}</h1>
+			{tutorial.subtitle && <p class="tutorial-banner__subtitle">{tutorial.subtitle}</p>}
+			{tutorial.description && <p class="tutorial-banner__lead">{tutorial.description}</p>}
+		</div>
+	</section>
+	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} compact />
+	<TutorialStory items={contentItems} />
 </BaseLayout>
+
+<style>
+	.tutorial-banner {
+		padding: 3.5rem 0 2rem;
+		background:
+			radial-gradient(circle at top left, rgba(242, 93, 87, 0.22), transparent 42%),
+			linear-gradient(135deg, #342c68 0%, #453881 42%, #251e51 100%);
+		color: #fffdf8;
+	}
+
+	.tutorial-banner__inner {
+		display: grid;
+		gap: 0.75rem;
+		padding: 0.5rem 0;
+	}
+
+	.tutorial-banner h1 {
+		margin: 0;
+		max-width: 10ch;
+		font-family: var(--heading);
+		font-size: clamp(2.6rem, 6vw, 4.8rem);
+		line-height: 0.95;
+		text-transform: uppercase;
+	}
+
+	.tutorial-banner :global(.eyebrow) {
+		color: rgba(255, 253, 248, 0.72);
+	}
+
+	.tutorial-banner__subtitle,
+	.tutorial-banner__lead {
+		max-width: 56ch;
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	.tutorial-banner__subtitle {
+		font-size: 1.05rem;
+		font-family: var(--meta);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: rgba(255, 253, 248, 0.82);
+	}
+
+	.tutorial-banner__lead {
+		color: rgba(255, 253, 248, 0.92);
+	}
+</style>

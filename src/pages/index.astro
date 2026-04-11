@@ -1,14 +1,25 @@
 ---
-import ContentBlocks from '../components/ContentBlocks.astro';
-import HeroMedia from '../components/HeroMedia.astro';
-import PageHero from '../components/PageHero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSiteData, getStaticPage } from '../lib/data.js';
+import { toSiteHref } from '../lib/links.js';
 
 const site = getSiteData();
 const page = getStaticPage('/');
-const featuredProgrammes = site.programmes.slice(0, 6);
-const featuredTutorials = site.tutorials.slice(0, 6);
+const featuredProgrammeOrder = new Map((page?.featured_programme_slugs ?? []).map((slug, index) => [slug, index]));
+const featuredProgrammes =
+	featuredProgrammeOrder.size > 0
+		? site.programmes
+				.filter((programme) => featuredProgrammeOrder.has(programme.slug))
+				.sort(
+					(left, right) =>
+						(featuredProgrammeOrder.get(left.slug) ?? 0) - (featuredProgrammeOrder.get(right.slug) ?? 0),
+				)
+		: site.programmes.slice(0, 5);
+const heroActions = page?.hero_actions ?? [];
+const flagshipItems = page?.flagship_items ?? [];
+const closingCtas = page?.closing_ctas ?? [];
+const focusAreas = page?.focus_areas ?? [];
+const proofPoints = page?.proof_points ?? [];
 ---
 
 <BaseLayout
@@ -17,49 +28,358 @@ const featuredTutorials = site.tutorials.slice(0, 6);
 	canonical="https://tinkercademy.com/"
 	image={page?.hero_image ?? undefined}
 >
-	<PageHero
-		eyebrow="Framer crawl rebuild"
-		title={page?.title ?? 'Tinkercademy'}
-		lead={page?.description ?? 'Crawl-driven Astro rebuild of the current public site.'}
-	/>
-	<HeroMedia src={page?.hero_image} alt={page?.title ?? 'Tinkercademy'} />
+	<section class="home-hero">
+		{page?.hero_image && <img class="home-hero__image" src={page.hero_image} alt={page?.hero_title ?? page?.title ?? 'Tinkercademy'} />}
+		<div class="home-hero__overlay">
+			<div class="shell home-hero__inner">
+				<p class="eyebrow">Tinkercademy</p>
+				<h1>{page?.hero_title ?? page?.title ?? 'Tinkercademy'}</h1>
+				<p class="lead">{page?.hero_lead ?? page?.description ?? 'Coding and digital making for schools and professionals.'}</p>
+				{
+					heroActions.length > 0 && (
+						<div class="home-hero__actions">
+							{heroActions.map((cta) => (
+								<a class="home-pill" href={toSiteHref(cta.url)}>
+									{cta.label}
+								</a>
+							))}
+						</div>
+					)
+				}
+			</div>
+		</div>
+	</section>
 
-	{page && <ContentBlocks blocks={page.content.slice(0, 8)} />}
+	{
+		page?.partner_statement && (
+			<section class="home-band">
+				<div class="shell home-band__inner">
+					<p>{page.partner_statement}</p>
+					{page.partner_strip_image && <img src={page.partner_strip_image} alt="Training partners" loading="lazy" />}
+				</div>
+			</section>
+		)
+	}
+
+	{
+		focusAreas.length > 0 && (
+			<section class="shell home-focus">
+				<p class="eyebrow">Focus Areas</p>
+				<ul>
+					{focusAreas.map((area) => <li>{area}</li>)}
+				</ul>
+			</section>
+		)
+	}
+
+	{
+		proofPoints.length > 0 && (
+			<section class="shell home-proof">
+				{proofPoints.map((point) => (
+					<article>
+						<p>{point}</p>
+					</article>
+				))}
+			</section>
+		)
+	}
+
+	{flagshipItems.length > 0 && (
+		<section class="shell section">
+			<p class="eyebrow">Our Flagship Programmes</p>
+			<div class="flagship-grid">
+				{flagshipItems.map((item) => (
+					<article class="flagship-card">
+						{item.image && <img class="flagship-card__image" src={item.image} alt={item.title} loading="lazy" />}
+						<div class="flagship-card__copy">
+							<h2>{item.title}</h2>
+							<p>{item.description}</p>
+						</div>
+					</article>
+				))}
+			</div>
+		</section>
+	)}
 
 	<section class="shell section">
-		<h2 class="section-title">Programmes</h2>
-		<div class="card-grid">
+		<p class="eyebrow">Popular Courses</p>
+		<div class="course-rail">
 			{featuredProgrammes.map((programme) => (
-				<a class="card" href={`/programmes/${programme.slug}`}>
-					{programme.hero_image && <img class="card-image" src={programme.hero_image} alt={programme.title} />}
-					<h3>{programme.title}</h3>
-					<p>{programme.description}</p>
+				<a class="course-card" href={`/programmes/${programme.slug}`}>
+					{programme.hero_image && <img class="course-card__image" src={programme.hero_image} alt={programme.title} loading="lazy" />}
+					<p class="course-card__meta">{programme.audiences[0]?.label ?? 'Programme'}</p>
+					<h2>{programme.title}</h2>
+					{programme.duration && <p class="course-card__duration">{programme.duration}</p>}
 				</a>
 			))}
 		</div>
 	</section>
 
-	<section class="shell section">
-		<h2 class="section-title">Tutorials</h2>
-		<div class="card-grid">
-			{featuredTutorials.map((tutorial) => (
-				<a class="card" href={`/tutorials/${tutorial.slug}`}>
-					{tutorial.hero_image && <img class="card-image" src={tutorial.hero_image} alt={tutorial.title} />}
-					<h3>{tutorial.title}</h3>
-					<p>{tutorial.description}</p>
-				</a>
-			))}
-		</div>
-	</section>
+	{
+		page?.closing_statement && (
+			<section class="home-cta">
+				<div class="shell home-cta__inner">
+					<p class="home-cta__copy">{page.closing_statement}</p>
+					<div class="home-cta__actions">
+						{closingCtas.map((cta) => (
+							<a class="home-pill home-pill--solid" href={toSiteHref(cta.url)}>
+								{cta.label}
+							</a>
+						))}
+					</div>
+				</div>
+			</section>
+		)
+	}
 </BaseLayout>
 
 <style>
-	.card-image {
+	.home-hero {
+		position: relative;
+		min-height: clamp(460px, 74svh, 760px);
+		overflow: clip;
+		background: #111;
+	}
+
+	.home-hero__image {
+		position: absolute;
+		inset: 0;
 		width: 100%;
-		height: 160px;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.home-hero__overlay {
+		position: relative;
+		min-height: inherit;
+		background:
+			linear-gradient(90deg, rgba(10, 10, 12, 0.74) 0%, rgba(10, 10, 12, 0.38) 44%, rgba(10, 10, 12, 0.08) 100%),
+			linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.42) 100%);
+	}
+
+	.home-hero__inner {
+		display: grid;
+		align-content: end;
+		gap: 1rem;
+		min-height: inherit;
+		padding: clamp(2.5rem, 6vw, 5rem) 0;
+		color: #fffdf8;
+	}
+
+	.home-hero h1 {
+		max-width: 8ch;
+		margin: 0;
+		font-family: var(--heading);
+		font-size: clamp(3rem, 7vw, 6rem);
+		line-height: 0.92;
+		text-transform: uppercase;
+	}
+
+	.home-hero .lead {
+		max-width: 40rem;
+		color: rgba(255, 253, 248, 0.92);
+	}
+
+	.home-hero .eyebrow {
+		color: rgba(255, 253, 248, 0.7);
+	}
+
+	.home-hero__actions,
+	.home-cta__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.home-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.7rem 1rem;
+		border-radius: 999px;
+		border: 1px solid rgba(255, 253, 248, 0.22);
+		background: rgba(255, 253, 248, 0.12);
+		color: #fffdf8;
+		text-decoration: none;
+		backdrop-filter: blur(10px);
+	}
+
+	.home-pill--solid {
+		border-color: transparent;
+		background: var(--accent);
+	}
+
+	.home-band {
+		background: linear-gradient(180deg, #191919 0%, #2c2c2c 100%);
+		color: #fffdf8;
+	}
+
+	.home-band__inner {
+		display: grid;
+		gap: 1.5rem;
+		padding: 1.75rem 0 2.25rem;
+		text-align: center;
+	}
+
+	.home-band__inner p {
+		margin: 0;
+		font-size: 0.96rem;
+		color: rgba(255, 253, 248, 0.8);
+	}
+
+	.home-band__inner img {
+		width: min(100%, 920px);
+		margin: 0 auto;
+	}
+
+	.home-focus,
+	.home-proof,
+	.section {
+		padding-top: 3rem;
+	}
+
+	.home-focus ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.8rem;
+		padding: 0;
+		margin: 1rem 0 0;
+		list-style: none;
+	}
+
+	.home-focus li {
+		padding: 0.65rem 0.9rem;
+		border-radius: 999px;
+		background: rgba(240, 93, 87, 0.08);
+		border: 1px solid rgba(240, 93, 87, 0.12);
+	}
+
+	.home-proof {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 1rem;
+	}
+
+	.home-proof article {
+		padding: 1.2rem 1.35rem;
+		border-radius: 1.25rem;
+		background: rgba(255, 255, 255, 0.82);
+		border: 1px solid rgba(45, 42, 38, 0.08);
+		box-shadow: 0 16px 32px rgba(45, 42, 38, 0.05);
+	}
+
+	.home-proof p {
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	.flagship-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.flagship-card {
+		display: grid;
+		grid-template-rows: auto 1fr;
+		border-radius: 1.35rem;
+		overflow: clip;
+		background: rgba(255, 255, 255, 0.85);
+		border: 1px solid rgba(45, 42, 38, 0.08);
+		box-shadow: 0 18px 38px rgba(45, 42, 38, 0.06);
+	}
+
+	.flagship-card__image {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		background: #f2ece7;
+	}
+
+	.flagship-card__copy {
+		display: grid;
+		gap: 0.75rem;
+		padding: 1.35rem;
+	}
+
+	.flagship-card__copy h2,
+	.course-card h2 {
+		margin: 0;
+		font-family: var(--heading);
+		font-size: 1.6rem;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.flagship-card__copy p {
+		margin: 0;
+		line-height: 1.7;
+		color: var(--muted);
+	}
+
+	.course-rail {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.course-card {
+		display: grid;
+		gap: 0.85rem;
+		padding: 0.9rem;
+		border-radius: 1.2rem;
+		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid rgba(45, 42, 38, 0.08);
+		text-decoration: none;
+		box-shadow: 0 14px 30px rgba(45, 42, 38, 0.05);
+	}
+
+	.course-card__image {
+		width: 100%;
+		aspect-ratio: 1 / 1;
 		object-fit: cover;
 		border-radius: 0.9rem;
-		margin-bottom: 0.9rem;
-		border: 1px solid rgba(45, 42, 38, 0.08);
+	}
+
+	.course-card__meta,
+	.course-card__duration {
+		margin: 0;
+		font-size: 0.8rem;
+		font-family: var(--meta);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--accent-dark);
+	}
+
+	.home-cta {
+		padding: 0 0 3.5rem;
+	}
+
+	.home-cta__inner {
+		display: grid;
+		gap: 1rem;
+		padding: 1.4rem;
+		border-radius: 1.4rem;
+		background: linear-gradient(135deg, #2d2a26 0%, #4a433a 100%);
+		color: #fffdf8;
+	}
+
+	.home-cta__copy {
+		margin: 0;
+		max-width: 48rem;
+		font-size: clamp(1.1rem, 2vw, 1.45rem);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 720px) {
+		.home-hero {
+			min-height: 540px;
+		}
+
+		.home-hero h1 {
+			max-width: 7ch;
+		}
 	}
 </style>
