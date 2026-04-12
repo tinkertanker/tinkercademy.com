@@ -6,7 +6,7 @@
     "subtitle": null,
     "duration": "24 hours",
     "description": "Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design fundamentals, including sprite animation, physics, user input, and level creation. They will apply structured development workflows—planning, prototyping, and testing—to build engaging browser-based games from scratch.",
-    "hero_image": "https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438",
+    "hero_image": "/images/remote/RxSGzAwHnPNmiolhpN9izHUQdvs.webp",
     "audience_ids": [
       "students",
       "teachers"
@@ -50,7 +50,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438",
+        "src": "/images/remote/RxSGzAwHnPNmiolhpN9izHUQdvs.webp",
         "width": 800,
         "height": 438
       },
@@ -81,7 +81,7 @@
     "subtitle": null,
     "duration": "26 hours",
     "description": "In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro.",
-    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "hero_image": "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -121,7 +121,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+        "src": "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png",
         "width": 386,
         "height": 214
       },
@@ -152,7 +152,7 @@
     "subtitle": null,
     "duration": "26 hours",
     "description": "This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented Reality, Machine Learning, and more.",
-    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "hero_image": "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -192,7 +192,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+        "src": "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png",
         "width": 386,
         "height": 214
       },
@@ -223,7 +223,7 @@
     "subtitle": null,
     "duration": "26 hours",
     "description": "Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines.",
-    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "hero_image": "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -264,7 +264,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+        "src": "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png",
         "width": 386,
         "height": 214
       },
@@ -295,7 +295,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Jump into mobile app development and build real apps that work on both iOS and Android!",
-    "hero_image": "https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335",
+    "hero_image": "/images/remote/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -335,7 +335,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335",
+        "src": "/images/remote/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg",
         "width": 2000,
         "height": 1335
       },
@@ -366,7 +366,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Stop building chatbots. Start deploying autonomous systems. The future of AI isn't a text box; it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier open-source framework for building agents that can plan, use tools, and self-correct in real-time.",
-    "hero_image": "https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316",
+    "hero_image": "/images/remote/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp",
     "audience_ids": [
       "public",
       "businesses"
@@ -405,7 +405,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316",
+        "src": "/images/remote/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp",
         "width": 480,
         "height": 316
       },
@@ -436,7 +436,7 @@
     "subtitle": null,
     "duration": "17 days",
     "description": "More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance our standards of living. Welcome to the world of digital making, where collision of ideas and technology can either make or break. Participants in this programme can find their stroke of genius as they learn the building blocks of digital making from coding concepts and microcontrollers (Micro:bit, Arduino, and Raspberry Pi) and create prototypes that respond to sound, touch and light. Click here for more info.",
-    "hero_image": "https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360",
+    "hero_image": "/images/remote/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg",
     "audience_ids": [
       "businesses",
       "public"
@@ -476,7 +476,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360",
+        "src": "/images/remote/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg",
         "width": 640,
         "height": 360
       },
@@ -507,7 +507,7 @@
     "subtitle": null,
     "duration": "17 days",
     "description": "Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and what makes it so intriguing. This programme discusses real-world examples and contrasts between specific blockchain implementations, such as Bitcoin, Ethereum and Stellar, for a better understanding to the concept of blockchain technology. Click here to find out more.",
-    "hero_image": "https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360",
+    "hero_image": "/images/remote/WPfvSE5w5gyB6ippvoGs2pZN8.jpg",
     "audience_ids": [
       "businesses",
       "public"
@@ -547,7 +547,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360",
+        "src": "/images/remote/WPfvSE5w5gyB6ippvoGs2pZN8.jpg",
         "width": 640,
         "height": 360
       },
@@ -578,7 +578,7 @@
     "subtitle": null,
     "duration": "10 hours",
     "description": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.",
-    "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+    "hero_image": "/images/remote/uB9togx2WZjo52kW3eDPGODhN8.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -619,7 +619,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+        "src": "/images/remote/uB9togx2WZjo52kW3eDPGODhN8.png",
         "width": 2127,
         "height": 771
       },
@@ -650,7 +650,7 @@
     "subtitle": null,
     "duration": "10 hours",
     "description": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.",
-    "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+    "hero_image": "/images/remote/uB9togx2WZjo52kW3eDPGODhN8.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -691,7 +691,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+        "src": "/images/remote/uB9togx2WZjo52kW3eDPGODhN8.png",
         "width": 2127,
         "height": 771
       },
@@ -722,7 +722,7 @@
     "subtitle": null,
     "duration": "4 days",
     "description": "CODE_EXP is a mobile dev hackathon spread over three phases:",
-    "hero_image": "https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484",
+    "hero_image": "/images/remote/AW3bQ3c9TVwK1z0hWlPAdz6o.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -763,7 +763,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484",
+        "src": "/images/remote/AW3bQ3c9TVwK1z0hWlPAdz6o.png",
         "width": 1375,
         "height": 484
       },
@@ -794,7 +794,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Ever wondered how things are made, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are transforming our daily routines, making life more convenient and connected.",
-    "hero_image": "https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006",
+    "hero_image": "/images/remote/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -835,7 +835,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006",
+        "src": "/images/remote/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png",
         "width": 6015,
         "height": 4006
       },
@@ -866,7 +866,7 @@
     "subtitle": null,
     "duration": "24 hours",
     "description": "In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to learners of all ages. The micro:bit can be easily programmed through a block-based coding language called MakeCode. Students will explore computational thinking through the use of the micro:bit and various other external components designed to engage and enthrall students. With components that move (servo), light up (LED strip) and make noise (buzzer), students will wield the power to control the physical world in code.",
-    "hero_image": "https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245",
+    "hero_image": "/images/remote/URlCPC41VwVGXM7WtFXQcFo4yE.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -910,7 +910,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245",
+        "src": "/images/remote/URlCPC41VwVGXM7WtFXQcFo4yE.png",
         "width": 1920,
         "height": 1245
       },
@@ -941,7 +941,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the digital and physical world. With micro:bit's user-friendly interface and IoT's vast connectivity, learners can build smart devices, automate tasks, and explore endless possibilities.",
-    "hero_image": "https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500",
+    "hero_image": "/images/remote/NwJDnH6HoIQPm3sf8sCAsXvidM.png",
     "audience_ids": [
       "businesses",
       "public"
@@ -981,7 +981,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500",
+        "src": "/images/remote/NwJDnH6HoIQPm3sf8sCAsXvidM.png",
         "width": 6000,
         "height": 4500
       },
@@ -1012,7 +1012,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working on detailed digital twins, Unity is the tool you need to turn your big ideas into reality.",
-    "hero_image": "https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912",
+    "hero_image": "/images/remote/A5Dd868Qo1geG7lsgR36QkJm9c.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -1053,7 +1053,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912",
+        "src": "/images/remote/A5Dd868Qo1geG7lsgR36QkJm9c.png",
         "width": 7360,
         "height": 4912
       },
@@ -1084,7 +1084,7 @@
     "subtitle": null,
     "duration": "32 hours",
     "description": "In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates.",
-    "hero_image": "https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720",
+    "hero_image": "/images/remote/kuS9B3BanadFYL050aWsShzhoM.webp",
     "audience_ids": [
       "students",
       "teachers"
@@ -1123,7 +1123,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720",
+        "src": "/images/remote/kuS9B3BanadFYL050aWsShzhoM.webp",
         "width": 1280,
         "height": 720
       },
@@ -1154,7 +1154,7 @@
     "subtitle": null,
     "duration": "24 hours",
     "description": "In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a beginner-friendly game development platform from Microsoft, students will be exposed to basic coding concepts and challenged to use code to solve logic programming problems in order to create their own retro-style games. Using Minecraft: Education's integrated coding editor, students will apply block-based coding to create exciting virtual 3D world environments. We believe that as students see their code take effect in a virtual 3D world environment, they will be excited to understand, explore and exploit the full capabilities of coding constructs such as variables, iterations and conditionals to create complex interactions. In 2025, schools will be able to sign up for beginner- and intermediate-level courses, for a total of 2 × 24-hour programmes.",
-    "hero_image": "https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450",
+    "hero_image": "/images/remote/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg",
     "audience_ids": [
       "students"
     ],
@@ -1197,7 +1197,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450",
+        "src": "/images/remote/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg",
         "width": 1000,
         "height": 450
       },
@@ -1228,7 +1228,7 @@
     "subtitle": null,
     "duration": "½, 1, 2 days",
     "description": "Generative AI isn't just transforming how we create content. It's revolutionising how organisations access and leverage their knowledge. Whether you're looking to enhance customer service, automate content creation, or develop intelligent knowledge systems, this workshop will equip you with the tools to harness AI's full potential within your organization.",
-    "hero_image": "https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125",
+    "hero_image": "/images/remote/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -1267,7 +1267,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125",
+        "src": "/images/remote/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg",
         "width": 2000,
         "height": 1125
       },
@@ -1298,7 +1298,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic power of Lovable for rapid UI generation and Replit’s professional cloud environment to build, secure, and deploy.",
-    "hero_image": "https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733",
+    "hero_image": "/images/remote/oOitMFgLeulDejOAmyZwxgWuxg.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -1337,7 +1337,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733",
+        "src": "/images/remote/oOitMFgLeulDejOAmyZwxgWuxg.jpg",
         "width": 5600,
         "height": 3733
       },
@@ -1368,7 +1368,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Discover the inner workings of web applications in just 1-2 days!",
-    "hero_image": "https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034",
+    "hero_image": "/images/remote/LvTrPWE98zoDD5wX1uoP1UGit4.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -1409,7 +1409,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034",
+        "src": "/images/remote/LvTrPWE98zoDD5wX1uoP1UGit4.png",
         "width": 4551,
         "height": 3034
       },
@@ -1440,7 +1440,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of artificial intelligence to revolutionize the way you work. By automating routine tasks, providing intelligent suggestions, and enhancing creativity, Copilot empowers you to focus on strategic initiatives and achieve greater productivity.",
-    "hero_image": "https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080",
+    "hero_image": "/images/remote/IRgW5yEXLnHZADRC2V0Chd9ogrc.png",
     "audience_ids": [
       "tech-productivity",
       "businesses",
@@ -1480,7 +1480,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080",
+        "src": "/images/remote/IRgW5yEXLnHZADRC2V0Chd9ogrc.png",
         "width": 1920,
         "height": 1080
       },
@@ -1511,7 +1511,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and deploy sophisticated machine learning models. This course will guide you through the entire process, from data preparation to model deployment, enabling you to unlock the potential of AI and drive data-driven insights.",
-    "hero_image": "https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456",
+    "hero_image": "/images/remote/JxXpAu98LjIbh9p6qymMH0UUMRA.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -1550,7 +1550,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456",
+        "src": "/images/remote/JxXpAu98LjIbh9p6qymMH0UUMRA.png",
         "width": 6144,
         "height": 3456
       },
@@ -1581,7 +1581,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and drive conversions. This course empowers you to create stunning, user-friendly websites without writing a single line of code. Learn the principles of UI/UX design and leverage the power of no-code tools like Framer to bring your digital visions to life.",
-    "hero_image": "https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256",
+    "hero_image": "/images/remote/6AquPe6snR8cp5io7SOUGbf8eGU.png",
     "audience_ids": [
       "businesses",
       "public"
@@ -1620,7 +1620,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256",
+        "src": "/images/remote/6AquPe6snR8cp5io7SOUGbf8eGU.png",
         "width": 2396,
         "height": 1256
       },
@@ -1651,7 +1651,7 @@
     "subtitle": null,
     "duration": "2 days/module",
     "description": "In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps for iOS and Android platforms. You'll learn essential programming languages, design principles, and development tools to bring your app ideas to life.",
-    "hero_image": "https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504",
+    "hero_image": "/images/remote/PuT46Rc7thhhYyLZrhYVo6wObE.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -1701,7 +1701,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504",
+        "src": "/images/remote/PuT46Rc7thhhYyLZrhYVo6wObE.png",
         "width": 8256,
         "height": 5504
       },
@@ -1732,7 +1732,7 @@
     "subtitle": null,
     "duration": "2 days/module",
     "description": "In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to create stunning and functional user interfaces using powerful no-code tools like Framer and Bubble. By mastering prototyping techniques and UI/UX design principles, you'll be able to build exceptional web applications that captivate your users and drive business results.",
-    "hero_image": "https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912",
+    "hero_image": "/images/remote/fWouEVvBE4OgXcNYbaPWP57gdM.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -1781,7 +1781,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912",
+        "src": "/images/remote/fWouEVvBE4OgXcNYbaPWP57gdM.png",
         "width": 7360,
         "height": 4912
       },
@@ -1812,7 +1812,7 @@
     "subtitle": null,
     "duration": "4 years",
     "description": "The RI FutureCreate Maker Programme is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven interactive sessions, participants will dive into fabrication techniques, structural design, motion mechanics, and sensory experiences like sound and light. From crafting everyday solutions to building whimsical contraptions, students will experiment with materials, tools, and innovative processes to bring their visions to life. Whether shaping, assembling, coding, or storytelling through movement, this programme encourages a maker’s mindset—blending art, science, and problem-solving to inspire the next generation of inventors.",
-    "hero_image": "https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600",
+    "hero_image": "/images/remote/wqyxF3zF22qYEH16VE70ko2CEak.jpg",
     "audience_ids": [
       "students",
       "teachers"
@@ -1852,7 +1852,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600",
+        "src": "/images/remote/wqyxF3zF22qYEH16VE70ko2CEak.jpg",
         "width": 800,
         "height": 600
       },
@@ -1883,7 +1883,7 @@
     "subtitle": null,
     "duration": "8 months",
     "description": "The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications. Through hands-on projects and expert mentorship, participants will master the Swift programming language, adhere to Apple's Human Interface Guidelines, and leverage the latest development tools. The program culminates in the development and publishing of a fully functional iOS app on the App Store.",
-    "hero_image": "https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200",
+    "hero_image": "/images/remote/pzZfgIklaSw80TJTGemWvQyrCLo.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -1922,7 +1922,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200",
+        "src": "/images/remote/pzZfgIklaSw80TJTGemWvQyrCLo.png",
         "width": 1200,
         "height": 1200
       },
@@ -1953,7 +1953,7 @@
     "subtitle": null,
     "duration": "26 hours",
     "description": "Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX tools utilised by professionals: FigJam for collaborative brainstorming, Figma for creating visually appealing interactive UI/UX designs, and Figma Slides to effectively communicate their design solutions.",
-    "hero_image": "https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260",
+    "hero_image": "/images/remote/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -1994,7 +1994,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260",
+        "src": "/images/remote/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png",
         "width": 2400,
         "height": 1260
       },
@@ -2025,7 +2025,7 @@
     "subtitle": null,
     "duration": "2 days",
     "description": "Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in leveraging AI-driven tools like ChatGPT, Figma, and Lovable to rapidly prototype, design, and deploy web applications.",
-    "hero_image": "https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832",
+    "hero_image": "/images/remote/ZquQacjrBD49fcKSa0LrIs5hQU.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -2064,7 +2064,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832",
+        "src": "/images/remote/ZquQacjrBD49fcKSa0LrIs5hQU.jpg",
         "width": 1248,
         "height": 832
       },
