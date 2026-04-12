@@ -2,6 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSiteData, getStaticPage } from '../lib/data.js';
 import { toSiteHref } from '../lib/links.js';
+import {
+	HOME_CERTIFICATION_BADGES,
+	HOME_PARTNER_LOGOS,
+	HOME_POPULAR_COURSE_ICONS,
+} from '../lib/site-media.js';
 
 const site = getSiteData();
 const page = getStaticPage('/');
@@ -17,9 +22,32 @@ const featuredProgrammes =
 		: site.programmes.slice(0, 5);
 const heroActions = page?.hero_actions ?? [];
 const flagshipItems = page?.flagship_items ?? [];
-const closingCtas = page?.closing_ctas ?? [];
-const focusAreas = page?.focus_areas ?? [];
 const proofPoints = page?.proof_points ?? [];
+const closingCtas = page?.closing_ctas ?? [];
+const partnerLogos = [...HOME_PARTNER_LOGOS, ...HOME_PARTNER_LOGOS];
+const popularCourseThumbs = featuredProgrammes.map((programme) => {
+	const mapped = HOME_POPULAR_COURSE_ICONS[programme.slug];
+	if (mapped) {
+		return { ...programme, thumb: { kind: 'icon', src: mapped } };
+	}
+
+	if (programme.slug === 'building-agents-with-openclaw' && programme.hero_image) {
+		return { ...programme, thumb: { kind: 'hero', src: programme.hero_image } };
+	}
+
+	return { ...programme, thumb: { kind: 'label', label: programme.title.split(/\s+/).slice(0, 2).join(' ') } };
+});
+
+const flagshipLinks: Record<string, string> = {
+	'Swift Accelerator': 'https://swiftinsg.org/',
+	'IMDA LEARN Roadmap':
+		'https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps',
+	'Code For Fun': 'https://codeforfun.sg/',
+};
+const flagshipCards = flagshipItems.map((item) => ({
+	...item,
+	url: flagshipLinks[item.title] ?? null,
+}));
 ---
 
 <BaseLayout
@@ -29,12 +57,19 @@ const proofPoints = page?.proof_points ?? [];
 	image={page?.hero_image ?? undefined}
 >
 	<section class="home-hero">
-		{page?.hero_image && <img class="home-hero__image" src={page.hero_image} alt={page?.hero_title ?? page?.title ?? 'Tinkercademy'} />}
+		{page?.hero_image && (
+			<img
+				class="home-hero__image"
+				src={page.hero_image}
+				alt={page?.hero_title ?? page?.title ?? 'Tinkercademy'}
+			/>
+		)}
 		<div class="home-hero__overlay">
 			<div class="shell home-hero__inner">
-				<p class="eyebrow">Tinkercademy</p>
 				<h1>{page?.hero_title ?? page?.title ?? 'Tinkercademy'}</h1>
-				<p class="lead">{page?.hero_lead ?? page?.description ?? 'Coding and digital making for schools and professionals.'}</p>
+				<p class="lead">
+					{page?.hero_lead ?? page?.description ?? 'Coding and digital making for schools and professionals.'}
+				</p>
 				{
 					heroActions.length > 0 && (
 						<div class="home-hero__actions">
@@ -50,50 +85,61 @@ const proofPoints = page?.proof_points ?? [];
 		</div>
 	</section>
 
-	{
-		page?.partner_statement && (
-			<section class="home-band">
-				<div class="shell home-band__inner">
-					<p>{page.partner_statement}</p>
-					{page.partner_strip_image && <img src={page.partner_strip_image} alt="Training partners" loading="lazy" />}
+	<section class="partner-marquee">
+		<div class="shell partner-marquee__inner">
+			<p class="partner-marquee__copy">
+				{page?.partner_statement ?? 'Official training partner for tech companies, universities, and the Singapore government.'}
+			</p>
+			<div class="logo-marquee" aria-label="Training partners">
+				<div class="logo-marquee__track">
+					{partnerLogos.map((logo, index) => (
+						<img
+							class="logo-marquee__logo"
+							src={logo.src}
+							alt={index < HOME_PARTNER_LOGOS.length ? logo.label : ''}
+							aria-hidden={index >= HOME_PARTNER_LOGOS.length ? 'true' : undefined}
+							loading="lazy"
+						/>
+					))}
 				</div>
-			</section>
-		)
-	}
+			</div>
+			{proofPoints[0] && <p class="partner-marquee__proof">{proofPoints[0]}</p>}
+		</div>
+	</section>
 
-	{
-		focusAreas.length > 0 && (
-			<section class="shell home-focus">
-				<p class="eyebrow">Focus Areas</p>
-				<ul>
-					{focusAreas.map((area) => <li>{area}</li>)}
-				</ul>
-			</section>
-		)
-	}
-
-	{
-		proofPoints.length > 0 && (
-			<section class="shell home-proof">
-				{proofPoints.map((point) => (
-					<article>
-						<p>{point}</p>
-					</article>
+	<section class="credential-band">
+		<div class="shell credential-band__inner">
+			{proofPoints[1] && <p class="credential-band__copy">{proofPoints[1]}</p>}
+			<div class="credential-band__grid">
+				{HOME_CERTIFICATION_BADGES.map((badge) => (
+					<figure class="credential-card">
+						<img src={badge.src} alt={badge.label} loading="lazy" />
+					</figure>
 				))}
-			</section>
-		)
-	}
+			</div>
+		</div>
+	</section>
 
-	{flagshipItems.length > 0 && (
-		<section class="shell section">
-			<p class="eyebrow">Our Flagship Programmes</p>
-			<div class="flagship-grid">
-				{flagshipItems.map((item) => (
-					<article class="flagship-card">
-						{item.image && <img class="flagship-card__image" src={item.image} alt={item.title} loading="lazy" />}
-						<div class="flagship-card__copy">
+	{flagshipCards.length > 0 && (
+		<section class="shell flagship-section">
+			<div class="flagship-section__intro">
+				<p class="section-kicker">Our Flagship Programmes</p>
+			</div>
+			<div class="flagship-section__stack">
+				{flagshipCards.map((item) => (
+					<article class="flagship-row">
+						{item.image && (
+							<img
+								class="flagship-row__image"
+								src={item.image}
+								alt={item.title}
+								loading="lazy"
+							/>
+						)}
+						<div class="flagship-row__copy">
 							<h2>{item.title}</h2>
 							<p>{item.description}</p>
+							{item.url && <a class="flagship-row__link" href={item.url}>Read more</a>}
 						</div>
 					</article>
 				))}
@@ -101,42 +147,57 @@ const proofPoints = page?.proof_points ?? [];
 		</section>
 	)}
 
-	<section class="shell section">
-		<p class="eyebrow">Popular Courses</p>
-		<div class="course-rail">
-			{featuredProgrammes.map((programme) => (
-				<a class="course-card" href={`/programmes/${programme.slug}`}>
-					{programme.hero_image && <img class="course-card__image" src={programme.hero_image} alt={programme.title} loading="lazy" />}
-					<p class="course-card__meta">{programme.audiences[0]?.label ?? 'Programme'}</p>
+	<section class="shell popular-section" id="programmes">
+		<p class="section-kicker">Popular Courses</p>
+		<div class="popular-grid">
+			{popularCourseThumbs.map((programme) => (
+				<a class="popular-card" href={`/programmes/${programme.slug}`}>
+					<div class="popular-card__thumb">
+						{
+							programme.thumb.kind === 'label' ? (
+								<span>{programme.thumb.label}</span>
+							) : (
+								<img
+									class:list={[
+										'popular-card__thumb-image',
+										programme.thumb.kind === 'hero' && 'popular-card__thumb-image--hero',
+									]}
+									src={programme.thumb.src}
+									alt={programme.title}
+									loading="lazy"
+								/>
+							)
+						}
+					</div>
+					<p class="popular-card__meta">{programme.audiences[0]?.label ?? 'Programme'}</p>
 					<h2>{programme.title}</h2>
-					{programme.duration && <p class="course-card__duration">{programme.duration}</p>}
 				</a>
 			))}
 		</div>
 	</section>
 
-	{
-		page?.closing_statement && (
-			<section class="home-cta">
-				<div class="shell home-cta__inner">
-					<p class="home-cta__copy">{page.closing_statement}</p>
-					<div class="home-cta__actions">
-						{closingCtas.map((cta) => (
-							<a class="home-pill home-pill--solid" href={toSiteHref(cta.url)}>
-								{cta.label}
-							</a>
-						))}
-					</div>
+	{page?.closing_statement && (
+		<section class="shell home-cta">
+			<div class="home-cta__inner">
+				<p class="home-cta__copy">{page.closing_statement}</p>
+				<div class="home-cta__actions">
+					{closingCtas.map((cta) => (
+						<a class="home-pill home-pill--solid" href={toSiteHref(cta.url)}>
+							{cta.label}
+						</a>
+					))}
 				</div>
-			</section>
-		)
-	}
+			</div>
+		</section>
+	)}
 </BaseLayout>
 
 <style>
 	.home-hero {
 		position: relative;
-		min-height: clamp(460px, 74svh, 760px);
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(430px, 62svh, 620px);
 		overflow: clip;
 		background: #111;
 	}
@@ -153,55 +214,55 @@ const proofPoints = page?.proof_points ?? [];
 		position: relative;
 		min-height: inherit;
 		background:
-			linear-gradient(90deg, rgba(10, 10, 12, 0.74) 0%, rgba(10, 10, 12, 0.38) 44%, rgba(10, 10, 12, 0.08) 100%),
-			linear-gradient(180deg, rgba(10, 10, 12, 0.1) 0%, rgba(10, 10, 12, 0.42) 100%);
+			linear-gradient(90deg, rgba(9, 9, 12, 0.7) 0%, rgba(9, 9, 12, 0.3) 44%, rgba(9, 9, 12, 0.08) 100%),
+			linear-gradient(180deg, rgba(9, 9, 12, 0.08) 0%, rgba(9, 9, 12, 0.4) 100%);
 	}
 
 	.home-hero__inner {
 		display: grid;
 		align-content: end;
-		gap: 1rem;
+		gap: 0.85rem;
 		min-height: inherit;
-		padding: clamp(2.5rem, 6vw, 5rem) 0;
+		padding: clamp(2rem, 5vw, 4rem) 0;
 		color: #fffdf8;
 	}
 
 	.home-hero h1 {
-		max-width: 8ch;
+		max-width: 6.5ch;
 		margin: 0;
 		font-family: var(--heading);
-		font-size: clamp(3rem, 7vw, 6rem);
-		line-height: 0.92;
+		font-size: clamp(3rem, 7vw, 6.1rem);
+		line-height: 0.88;
 		text-transform: uppercase;
 	}
 
 	.home-hero .lead {
-		max-width: 40rem;
-		color: rgba(255, 253, 248, 0.92);
-	}
-
-	.home-hero .eyebrow {
-		color: rgba(255, 253, 248, 0.7);
+		max-width: 34rem;
+		margin: 0;
+		font-size: 0.98rem;
+		line-height: 1.6;
+		color: rgba(255, 253, 248, 0.85);
 	}
 
 	.home-hero__actions,
 	.home-cta__actions {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.75rem;
+		gap: 0.55rem;
 	}
 
 	.home-pill {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.7rem 1rem;
+		padding: 0.5rem 0.8rem;
 		border-radius: 999px;
-		border: 1px solid rgba(255, 253, 248, 0.22);
-		background: rgba(255, 253, 248, 0.12);
+		border: 1px solid rgba(255, 253, 248, 0.25);
+		background: rgba(255, 253, 248, 0.14);
 		color: #fffdf8;
 		text-decoration: none;
-		backdrop-filter: blur(10px);
+		font-size: 0.78rem;
+		backdrop-filter: blur(8px);
 	}
 
 	.home-pill--solid {
@@ -209,177 +270,285 @@ const proofPoints = page?.proof_points ?? [];
 		background: var(--accent);
 	}
 
-	.home-band {
-		background: linear-gradient(180deg, #191919 0%, #2c2c2c 100%);
+	.partner-marquee {
+		padding: 1.75rem 0 3.5rem;
+		background: #fff;
+	}
+
+	.partner-marquee__inner {
+		display: grid;
+		gap: 1.85rem;
+	}
+
+	.partner-marquee__copy,
+	.partner-marquee__proof,
+	.credential-band__copy {
+		margin: 0;
+		font-size: 0.72rem;
+		font-family: var(--meta);
+		letter-spacing: 0.03em;
+		text-align: center;
+		color: #7b756e;
+	}
+
+	.partner-marquee__proof {
+		color: #8a847d;
+	}
+
+	.logo-marquee {
+		overflow: clip;
+		mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+	}
+
+	.logo-marquee__track {
+		display: flex;
+		align-items: center;
+		gap: 4.5rem;
+		width: max-content;
+		animation: home-marquee 42s linear infinite;
+		opacity: 0.12;
+	}
+
+	.logo-marquee__logo {
+		flex: none;
+		width: auto;
+		height: clamp(36px, 4vw, 62px);
+		object-fit: contain;
+	}
+
+	.credential-band {
+		background: linear-gradient(180deg, #272522 0%, #3a352e 100%);
 		color: #fffdf8;
 	}
 
-	.home-band__inner {
+	.credential-band__inner {
 		display: grid;
+		gap: 1.35rem;
+		padding: 1.3rem 0 1.5rem;
+	}
+
+	.credential-band__copy {
+		color: rgba(255, 253, 248, 0.72);
+	}
+
+	.credential-band__grid {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		gap: 0.85rem;
+		align-items: center;
+	}
+
+	.credential-card {
+		display: grid;
+		place-items: center;
+		padding: 0.35rem;
+		margin: 0;
+		border-radius: 0.4rem;
+	}
+
+	.credential-card img {
+		width: 100%;
+		height: clamp(44px, 6vw, 76px);
+		object-fit: contain;
+	}
+
+	.flagship-section {
+		display: grid;
+		grid-template-columns: 190px minmax(0, 1fr);
 		gap: 1.5rem;
-		padding: 1.75rem 0 2.25rem;
-		text-align: center;
+		padding: 2.85rem 0 2.4rem;
 	}
 
-	.home-band__inner p {
+	.section-kicker {
 		margin: 0;
-		font-size: 0.96rem;
-		color: rgba(255, 253, 248, 0.8);
+		max-width: 8ch;
+		font-family: var(--heading);
+		font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+		line-height: 0.92;
+		text-transform: uppercase;
+		color: var(--accent);
 	}
 
-	.home-band__inner img {
-		width: min(100%, 920px);
-		margin: 0 auto;
-	}
-
-	.home-focus,
-	.home-proof,
-	.section {
-		padding-top: 3rem;
-	}
-
-	.home-focus ul {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.8rem;
-		padding: 0;
-		margin: 1rem 0 0;
-		list-style: none;
-	}
-
-	.home-focus li {
-		padding: 0.65rem 0.9rem;
-		border-radius: 999px;
-		background: rgba(240, 93, 87, 0.08);
-		border: 1px solid rgba(240, 93, 87, 0.12);
-	}
-
-	.home-proof {
+	.flagship-section__stack {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 		gap: 1rem;
 	}
 
-	.home-proof article {
-		padding: 1.2rem 1.35rem;
-		border-radius: 1.25rem;
-		background: rgba(255, 255, 255, 0.82);
-		border: 1px solid rgba(45, 42, 38, 0.08);
-		box-shadow: 0 16px 32px rgba(45, 42, 38, 0.05);
-	}
-
-	.home-proof p {
-		margin: 0;
-		line-height: 1.7;
-	}
-
-	.flagship-grid {
+	.flagship-row {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: 150px minmax(0, 1fr);
 		gap: 1rem;
-		margin-top: 1rem;
-	}
-
-	.flagship-card {
-		display: grid;
-		grid-template-rows: auto 1fr;
-		border-radius: 1.35rem;
-		overflow: clip;
-		background: rgba(255, 255, 255, 0.85);
+		align-items: center;
+		padding: 0.8rem;
+		border-radius: 0.9rem;
+		background: #fff;
 		border: 1px solid rgba(45, 42, 38, 0.08);
-		box-shadow: 0 18px 38px rgba(45, 42, 38, 0.06);
+		box-shadow: 0 16px 32px rgba(45, 42, 38, 0.06);
 	}
 
-	.flagship-card__image {
+	.flagship-row__image {
 		width: 100%;
 		aspect-ratio: 1 / 1;
 		object-fit: cover;
-		background: #f2ece7;
+		border-radius: 0.35rem;
 	}
 
-	.flagship-card__copy {
+	.flagship-row__copy {
 		display: grid;
-		gap: 0.75rem;
-		padding: 1.35rem;
+		gap: 0.45rem;
 	}
 
-	.flagship-card__copy h2,
-	.course-card h2 {
+	.flagship-row__copy h2,
+	.popular-card h2 {
 		margin: 0;
 		font-family: var(--heading);
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		line-height: 1;
 		text-transform: uppercase;
 	}
 
-	.flagship-card__copy p {
+	.flagship-row__copy p {
 		margin: 0;
-		line-height: 1.7;
 		color: var(--muted);
+		line-height: 1.65;
 	}
 
-	.course-rail {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-		gap: 1rem;
-		margin-top: 1rem;
-	}
-
-	.course-card {
-		display: grid;
-		gap: 0.85rem;
-		padding: 0.9rem;
-		border-radius: 1.2rem;
-		background: rgba(255, 255, 255, 0.9);
-		border: 1px solid rgba(45, 42, 38, 0.08);
-		text-decoration: none;
-		box-shadow: 0 14px 30px rgba(45, 42, 38, 0.05);
-	}
-
-	.course-card__image {
-		width: 100%;
-		aspect-ratio: 1 / 1;
-		object-fit: cover;
-		border-radius: 0.9rem;
-	}
-
-	.course-card__meta,
-	.course-card__duration {
-		margin: 0;
-		font-size: 0.8rem;
-		font-family: var(--meta);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
+	.flagship-row__link {
+		width: fit-content;
+		margin-top: 0.2rem;
+		padding: 0.4rem 0.7rem;
+		border-radius: 999px;
+		border: 1px solid rgba(240, 93, 87, 0.18);
+		background: rgba(240, 93, 87, 0.08);
 		color: var(--accent-dark);
+		text-decoration: none;
+		font-size: 0.76rem;
+	}
+
+	.popular-section {
+		padding-bottom: 2.4rem;
+	}
+
+	.popular-grid {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 1rem;
+		margin-top: 1.1rem;
+	}
+
+	.popular-card {
+		display: grid;
+		gap: 0.7rem;
+		text-decoration: none;
+	}
+
+	.popular-card__thumb {
+		display: grid;
+		place-items: center;
+		aspect-ratio: 1 / 1;
+		padding: 0.65rem;
+		border-radius: 0.45rem;
+		background: #0f0f12;
+		overflow: clip;
+	}
+
+	.popular-card__thumb span {
+		padding: 0 0.4rem;
+		font-family: var(--heading);
+		font-size: 1rem;
+		line-height: 0.95;
+		text-align: center;
+		text-transform: uppercase;
+		color: #fffdf8;
+	}
+
+	.popular-card__thumb-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.popular-card__thumb-image--hero {
+		object-fit: cover;
+	}
+
+	.popular-card__meta {
+		margin: 0;
+		font-family: var(--meta);
+		font-size: 0.68rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #8a847d;
+	}
+
+	.popular-card h2 {
+		font-size: 1rem;
 	}
 
 	.home-cta {
-		padding: 0 0 3.5rem;
+		padding-bottom: 2.8rem;
 	}
 
 	.home-cta__inner {
 		display: grid;
 		gap: 1rem;
-		padding: 1.4rem;
-		border-radius: 1.4rem;
-		background: linear-gradient(135deg, #2d2a26 0%, #4a433a 100%);
+		padding: 1.25rem 1.35rem;
+		border-radius: 1rem;
+		background: linear-gradient(135deg, #3a352e 0%, #52493d 100%);
 		color: #fffdf8;
 	}
 
 	.home-cta__copy {
+		max-width: 42rem;
 		margin: 0;
-		max-width: 48rem;
-		font-size: clamp(1.1rem, 2vw, 1.45rem);
-		line-height: 1.6;
+		font-size: 0.95rem;
+		line-height: 1.7;
+	}
+
+	@keyframes home-marquee {
+		from {
+			transform: translateX(0);
+		}
+
+		to {
+			transform: translateX(calc(-50% - 1.75rem));
+		}
+	}
+
+	@media (max-width: 980px) {
+		.credential-band__grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+
+		.flagship-section {
+			grid-template-columns: 1fr;
+		}
+
+		.section-kicker {
+			max-width: none;
+		}
+
+		.popular-grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 	}
 
 	@media (max-width: 720px) {
 		.home-hero {
-			min-height: 540px;
+			min-height: 480px;
 		}
 
 		.home-hero h1 {
-			max-width: 7ch;
+			max-width: 6ch;
+		}
+
+		.credential-band__grid,
+		.popular-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.flagship-row {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

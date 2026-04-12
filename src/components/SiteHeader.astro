@@ -9,7 +9,11 @@ const navigation = props.navigation ?? [];
 
 <header class="site-header">
 	<div class="shell header-inner">
-		<a class="brand" href="/">Tinkercademy</a>
+		<a class="brand" href="/">
+			<span class="brand__mark" aria-hidden="true"></span>
+			<span class="brand__word">Tinker</span>
+			<span class="brand__academy">Academy</span>
+		</a>
 		<nav aria-label="Primary">
 			<ul>
 				{navigation.map((link) => (
