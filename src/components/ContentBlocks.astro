@@ -1,9 +1,27 @@
 ---
-type Block = { type: string; text?: string; items?: string[] };
+/**
+ * ContentBlocks — renders an array of content blocks (headings, paragraphs,
+ * lists, images, and richtext HTML).
+ *
+ * This component merges the capabilities of the old ContentBlocks (h/p/list)
+ * with image and richtext support.
+ */
+type Block = {
+	type: string;
+	text?: string;
+	items?: string[];
+	html?: string;
+	label?: string | null;
+	src?: string;
+	alt?: string;
+	width?: number | null;
+	height?: number | null;
+};
 
 const props = Astro.props as { blocks?: Block[] };
 const blocks = props.blocks ?? [];
 
+/* Coalesce consecutive li blocks into a single list group */
 const groups: Block[] = [];
 let currentList: string[] = [];
 
@@ -31,8 +49,34 @@ if (currentList.length > 0) {
 }
 ---
 
-<section class="shell prose">
+<section class="shell prose content-blocks">
 	{groups.map((block: Block) => {
+		/* ── Images ─────────────────────────────── */
+		if (block.type === 'image' && block.src) {
+			return (
+				<figure class="content-image">
+					<img
+						src={block.src}
+						alt={block.alt ?? ''}
+						loading="lazy"
+						width={block.width ?? undefined}
+						height={block.height ?? undefined}
+					/>
+				</figure>
+			);
+		}
+
+		/* ── Richtext HTML ─────────────────────── */
+		if (block.type === 'richtext' && block.html) {
+			return (
+				<div class="rich-section">
+					{block.label ? <p class="section-label">{block.label}</p> : null}
+					<div set:html={block.html} />
+				</div>
+			);
+		}
+
+		/* ── Lists ─────────────────────────────── */
 		if (block.type === 'list' && block.items) {
 			return (
 				<ul>
@@ -41,11 +85,40 @@ if (currentList.length > 0) {
 			);
 		}
 
+		/* ── Headings ─────────────────────────── */
 		const text = block.text ?? '';
 		if (block.type === 'h1') return <h1>{text}</h1>;
 		if (block.type === 'h2') return <h2>{text}</h2>;
 		if (block.type === 'h3') return <h3>{text}</h3>;
 		if (block.type === 'h4') return <h4>{text}</h4>;
+
+		/* ── Default: paragraph ───────────────── */
 		return <p>{text}</p>;
 	})}
 </section>
+
+<style>
+	.content-image {
+		margin: 1.5rem 0;
+	}
+
+	.content-image img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+		display: block;
+	}
+
+	.rich-section {
+		margin: 1rem 0;
+	}
+
+	.section-label {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #6e6e6e;
+		margin-bottom: 0.25rem;
+	}
+</style>

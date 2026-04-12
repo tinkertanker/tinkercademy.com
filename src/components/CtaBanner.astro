@@ -1,0 +1,102 @@
+---
+/**
+ * CtaBanner — dark gradient CTA section used at the bottom of every page.
+ *
+ * Props:
+ *   text?  — closing statement (defaults to the standard Tinkercademy blurb)
+ *   ctas?  — array of { label, url } pill links (defaults to Our Courses / Our Projects / Contact Us)
+ */
+import { toSiteHref } from '../lib/links.js';
+
+type Cta = { label: string; url: string };
+
+interface Props {
+	text?: string;
+	ctas?: Cta[];
+}
+
+const DEFAULT_TEXT =
+	'Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond.';
+
+const DEFAULT_CTAS: Cta[] = [
+	{ label: 'Our Courses', url: '/courses-all' },
+	{ label: 'Our Projects', url: '/showcase' },
+	{ label: 'Contact Us', url: '/contact-us' },
+];
+
+const text = Astro.props.text ?? DEFAULT_TEXT;
+const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
+---
+
+<section class="cta-banner">
+	<div class="shell cta-banner__inner">
+		<p class="cta-banner__text">{text}</p>
+		<div class="cta-banner__actions">
+			{ctas.map((cta) => (
+				<a class="cta-pill" href={cta.url.startsWith('/') ? cta.url : toSiteHref(cta.url)}>
+					{cta.label}
+				</a>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	.cta-banner {
+		padding: 0 0 3rem;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+	}
+
+	.cta-banner__inner {
+		max-width: 1160px;
+		margin: 0 auto;
+		padding: 2.5rem clamp(1.5rem, 4vw, 3rem);
+		border-radius: 16px;
+		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(0, 0, 0) 100%);
+		display: grid;
+		gap: 1.25rem;
+	}
+
+	.cta-banner__text {
+		margin: 0;
+		max-width: 50rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.7;
+		color: #ffffff;
+	}
+
+	.cta-banner__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+	}
+
+	.cta-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.55rem 1rem;
+		border-radius: 30px;
+		border: 1px solid rgba(255, 255, 255, 0.6);
+		background: rgba(0, 0, 0, 0.5);
+		color: #ffffff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		font-weight: 400;
+		transition: background 0.15s;
+	}
+
+	.cta-pill:hover {
+		background: rgba(255, 255, 255, 0.15);
+	}
+
+	@media (max-width: 809px) {
+		.cta-banner__inner {
+			margin: 0 0.75rem;
+			border-radius: 12px;
+		}
+	}
+</style>

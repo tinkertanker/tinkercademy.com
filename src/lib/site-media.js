@@ -1,71 +1,92 @@
-export const BRAND_WORDMARK_URL =
-	'https://framerusercontent.com/images/7JzS84mvFUEd3VM3WRXC2AaWn4k.svg?width=340&height=0';
+// ── Brand ──────────────────────────────────────────────────────────
+export const LOGO_BLACK = '/images/logos/tinkercademy-black.png';
+export const LOGO_WHITE = '/images/logos/tinkercademy-white.png';
 
+// ── Partner logos (official training partners) ────────────────────
 export const HOME_PARTNER_LOGOS = [
+	{ label: 'Unity', src: '/images/partners/unity.png', url: 'https://unity.com/' },
 	{
-		label: 'Singapore Management University Academy',
-		src: 'https://framerusercontent.com/images/bGd1tRsNzt3o4FCxPvIiSwK2Is.webp?width=2451&height=733',
+		label: 'Microsoft Global Training Partner',
+		src: '/images/partners/microsoft-gtp.png',
+		url: 'https://partner.microsoft.com/en-US/explore/education/gtp',
 	},
+	{ label: 'Figma', src: '/images/partners/figma.png', url: 'https://figma.com/education' },
 	{
-		label: 'Institute of Singapore Chartered Accountants',
-		src: 'https://framerusercontent.com/images/88NlnwNdHVp2nXxpL87d03gX7s.png?width=1825&height=400',
+		label: 'Apple Consultants Network',
+		src: '/images/partners/apple-consultant.svg',
+		url: 'https://consultants.apple.com/sg/profile/2408934',
 	},
+	{ label: 'IMDA', src: '/images/partners/imda.svg', url: 'https://www.imda.gov.sg/' },
 	{
-		label: 'Cornell University',
-		src: 'https://framerusercontent.com/images/FAFmjdpQNB5z3XtPuM9MB1er3pw.png?width=2048&height=2048',
+		label: 'SMU Academy',
+		src: '/images/partners/smu-academy.webp',
+		url: 'https://www.smu.edu.sg/',
 	},
-	{
-		label: 'Stanford',
-		src: 'https://framerusercontent.com/images/D7rnliPAgSJ20uq2RmGUXQwWUs0.webp?width=400&height=400',
-	},
-	{
-		label: 'University of Pennsylvania',
-		src: 'https://framerusercontent.com/images/aaqKu85Op8Vc3aMhMgq5cqvwvzw.png?width=1600&height=1067',
-	},
-	{
-		label: 'National Institute of Education Singapore',
-		src: 'https://framerusercontent.com/images/yufLsmvPDNJkGCkCqxc6AF0PdY.png?width=636&height=500',
-	},
-	{
-		label: 'Ministry of Education Singapore',
-		src: 'https://framerusercontent.com/images/GFkJUXa19ZpVU6iREhf9t44chg.png?width=244&height=223',
-	},
+	{ label: 'ISCA', src: '/images/partners/isca.png', url: 'https://www.isca.org.sg/' },
 ];
 
+// ── Institution logos (expertise / qualifications) ────────────────
+export const HOME_INSTITUTION_LOGOS = [
+	{ label: 'Cornell University', src: '/images/institutions/cornell.png' },
+	{ label: 'Stanford University', src: '/images/institutions/stanford.webp' },
+	{ label: 'MIT', src: '/images/institutions/mit.png' },
+	{ label: 'Wharton School', src: '/images/institutions/wharton.png' },
+	{ label: 'National Institute of Education', src: '/images/institutions/nie.png' },
+	{ label: 'Ministry of Education Singapore', src: '/images/institutions/moe.png' },
+	{ label: 'Apple', src: '/images/institutions/apple.png' },
+	{ label: 'PayPal', src: '/images/institutions/paypal.png' },
+];
+
+// ── Certification badges ──────────────────────────────────────────
 export const HOME_CERTIFICATION_BADGES = [
+	{ label: 'Apple Professional Learning Specialist', src: '/images/certifications/apls.png' },
 	{
 		label: 'Apple App Development with Swift Certified User',
-		src: 'https://framerusercontent.com/images/xGc8LaAui7lzGskoGhtfY3vr44Y.png?width=460&height=508',
+		src: '/images/certifications/adwscu.png',
 	},
 	{
 		label: 'App Development with Swift Associate',
-		src: 'https://framerusercontent.com/images/HX89QNpCzyE4sg3LLklgM4dS4.png?width=460&height=508',
+		src: '/images/certifications/adwsassoc.png',
 	},
-	{
-		label: 'Microsoft Azure AI Fundamentals',
-		src: 'https://framerusercontent.com/images/QfSsKwLrztQGgtk2kMdkyis57c.png?width=600&height=600',
-	},
-	{
-		label: 'Microsoft Certified Educator',
-		src: 'https://framerusercontent.com/images/TSDhYTLHZpu9hDuSefcJT6R25Ac.png?width=352&height=352',
-	},
-	{
-		label: 'Minecraft Education Trainer',
-		src: 'https://framerusercontent.com/images/gNg7rhp5eIX1new2SYkG6XIwg9Q.png?width=600&height=600',
-	},
+	{ label: 'Microsoft Azure AI Fundamentals', src: '/images/certifications/ai900.png' },
+	{ label: 'Microsoft Innovative Educator', src: '/images/certifications/mie.png' },
+	{ label: 'Microsoft Certified Trainer', src: '/images/certifications/mct1.png' },
+	{ label: 'Minecraft Education Trainer', src: '/images/certifications/mct2.png' },
 	{
 		label: 'Unity Certified Associate Game Developer',
-		src: 'https://framerusercontent.com/images/WswqYSt0BjIpB4AvjMlsljQ0JM.png?width=600&height=600',
+		src: '/images/certifications/ucu.png',
 	},
+	{ label: 'Certified Instructional Professional', src: '/images/certifications/cip.svg' },
 ];
 
+// ── Course domain bubbles ─────────────────────────────────────────
+export const HOME_COURSE_DOMAINS = [
+	'AI and Machine Learning with Data Science',
+	'Computer Science Fundamentals',
+	'Creativity, Craft, and Making',
+	'Cryptography',
+	'Cybersecurity',
+	'Design Thinking',
+	'Design, Prototyping, and UI/UX',
+	'Game Development',
+	'Microcontrollers & IoT',
+	'Mobile App Development',
+	'Professional Productivity with Technology',
+	'Software Engineering',
+	'Web Development',
+];
+
+// ── Flagship programme images ─────────────────────────────────────
+export const HOME_FLAGSHIP_IMAGES = /** @type {Record<string, string>} */ ({
+	'Swift Accelerator': '/images/flagship/swift-accelerator.webp',
+	'IMDA LEARN Roadmap': '/images/flagship/imda-learn.png',
+	'Code For Fun': '/images/flagship/code-for-fun.webp',
+});
+
+// ── Popular course card images ────────────────────────────────────
 export const HOME_POPULAR_COURSE_ICONS = /** @type {Record<string, string>} */ ({
-	'vibe-coding-for-digital-builders-lovable-replit':
-		'https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425',
-	'vibe-coding-for-digital-builders':
-		'https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425',
-	'knowledge-powered-ai-with-chatgpt':
-		'https://framerusercontent.com/images/FId8k56H3S4bGtYZjSSXC24LVI.png?width=765&height=425',
-	'build-for-mobile-with-react-native':
-		'https://framerusercontent.com/images/bZhkNwEa64Xr6qWOth5GdGolk4.png?width=765&height=425',
+	'vibe-coding-for-digital-builders-lovable-replit': '/images/courses/lovable.png',
+	'vibe-coding-for-digital-builders': '/images/courses/lovable.png',
+	'knowledge-powered-ai-with-chatgpt': '/images/courses/chatgpt.png',
+	'build-for-mobile-with-react-native': '/images/courses/react-native.png',
 });

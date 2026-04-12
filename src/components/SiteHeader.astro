@@ -1,25 +1,333 @@
 ---
 import { toSiteHref } from '../lib/links.js';
+import { LOGO_BLACK } from '../lib/site-media.js';
 
-type NavLink = { label: string; href: string };
+type NavLink = { label: string; href: string; hasDropdown?: boolean };
 
 const props = Astro.props as { navigation?: NavLink[] };
-const navigation = props.navigation ?? [];
+const rawNav = props.navigation ?? [];
+
+/* Inject "COURSES" as first nav item with a dropdown chevron if not already present */
+const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all', hasDropdown: true };
+const navigation: NavLink[] = rawNav.some((n) => n.label.toUpperCase() === 'COURSES')
+	? rawNav
+	: [coursesItem, ...rawNav];
+
+/* Dropdown sub-links for COURSES */
+const coursesDropdown = [
+	{ label: 'All Courses', href: '/courses-all' },
+	{ label: 'For Schools', href: '/courses-schools' },
+	{ label: 'For Professionals', href: '/courses-professionals' },
+];
 ---
 
 <header class="site-header">
 	<div class="shell header-inner">
 		<a class="brand" href="/">
-			<span class="brand__mark" aria-hidden="true"></span>
-			<span class="brand__word">Tinker</span>
-			<span class="brand__academy">Academy</span>
+			<img src={LOGO_BLACK} alt="Tinkercademy" class="brand__logo" />
 		</a>
-		<nav aria-label="Primary">
+
+		<nav class="nav-desktop" aria-label="Primary">
 			<ul>
 				{navigation.map((link) => (
-					<li><a href={toSiteHref(link.href)}>{link.label}</a></li>
+					<li class={link.hasDropdown ? 'has-dropdown' : ''}>
+						<a href={toSiteHref(link.href)}>
+							{link.label}
+							{link.hasDropdown && (
+								<svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+									<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							)}
+						</a>
+						{link.hasDropdown && (
+							<ul class="dropdown">
+								{coursesDropdown.map((sub) => (
+									<li><a href={sub.href}>{sub.label}</a></li>
+								))}
+							</ul>
+						)}
+					</li>
 				))}
 			</ul>
 		</nav>
+
+		<button class="nav-search" aria-label="Search">
+			<svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor">
+				<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
+			</svg>
+		</button>
+
+		<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+			<span class="nav-toggle__bar"></span>
+			<span class="nav-toggle__bar"></span>
+			<span class="nav-toggle__bar"></span>
+		</button>
 	</div>
+
+	<nav class="nav-mobile" aria-label="Primary mobile" hidden>
+		<ul>
+			{navigation.map((link) => (
+				<li class={link.hasDropdown ? 'has-dropdown-mobile' : ''}>
+					{link.hasDropdown ? (
+						<button class="mobile-dropdown-toggle" type="button">
+							{link.label}
+							<svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+								<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+					) : (
+						<a href={toSiteHref(link.href)}>{link.label}</a>
+					)}
+					{link.hasDropdown && (
+						<ul class="mobile-dropdown" hidden>
+							{coursesDropdown.map((sub) => (
+								<li><a href={sub.href}>{sub.label}</a></li>
+							))}
+						</ul>
+					)}
+				</li>
+			))}
+		</ul>
+	</nav>
 </header>
+
+<script>
+	/* Hamburger toggle */
+	const toggle = document.querySelector('.nav-toggle');
+	const mobileNav = document.querySelector('.nav-mobile');
+	if (toggle && mobileNav) {
+		toggle.addEventListener('click', () => {
+			const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+			toggle.setAttribute('aria-expanded', String(!isOpen));
+			(mobileNav as HTMLElement).hidden = isOpen;
+		});
+	}
+
+	/* Mobile dropdown toggles */
+	document.querySelectorAll('.mobile-dropdown-toggle').forEach((btn) => {
+		btn.addEventListener('click', () => {
+			const submenu = btn.nextElementSibling;
+			if (submenu && submenu.classList.contains('mobile-dropdown')) {
+				const isOpen = !(submenu as HTMLElement).hidden;
+				(submenu as HTMLElement).hidden = isOpen;
+				btn.classList.toggle('is-open', !isOpen);
+			}
+		});
+	});
+</script>
+
+<style>
+	.site-header {
+		position: sticky;
+		top: 0;
+		z-index: 20;
+		background: rgb(255, 255, 255);
+		border-bottom: 1px solid rgb(181, 181, 181);
+		box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+	}
+
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5rem;
+		padding: 0.75rem 0;
+	}
+
+	.brand__logo {
+		height: 22px;
+		width: auto;
+	}
+
+	/* ── Desktop nav ── */
+	.nav-desktop ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 1.8rem;
+	}
+
+	.nav-desktop a {
+		text-decoration: none;
+		font-family: 'Oswald', sans-serif;
+		font-size: 0.82rem;
+		font-weight: 400;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.nav-desktop a:hover {
+		color: rgb(240, 93, 87);
+	}
+
+	.nav-chevron {
+		flex-shrink: 0;
+		margin-top: 1px;
+		transition: transform 0.2s;
+	}
+
+	/* ── Desktop dropdown ── */
+	.has-dropdown {
+		position: relative;
+	}
+
+	.dropdown {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: -12px;
+		list-style: none;
+		margin: 0.5rem 0 0;
+		padding: 0.5rem 0;
+		background: #fff;
+		border: 1px solid rgb(220, 220, 220);
+		border-radius: 6px;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+		min-width: 180px;
+		z-index: 30;
+	}
+
+	.dropdown li {
+		padding: 0;
+	}
+
+	.dropdown a {
+		display: block;
+		padding: 0.5rem 1rem;
+		font-size: 0.78rem;
+		font-weight: 400;
+		white-space: nowrap;
+	}
+
+	.dropdown a:hover {
+		background: #f5f5f5;
+		color: rgb(240, 93, 87);
+	}
+
+	.has-dropdown:hover .dropdown {
+		display: block;
+	}
+
+	.has-dropdown:hover .nav-chevron {
+		transform: rotate(180deg);
+	}
+
+	/* ── Search icon ── */
+	.nav-search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4px;
+		border: none;
+		background: none;
+		cursor: pointer;
+		color: rgb(23, 23, 23);
+		transition: color 0.15s;
+	}
+
+	.nav-search:hover {
+		color: rgb(240, 93, 87);
+	}
+
+	/* ── Hamburger toggle ── */
+	.nav-toggle {
+		display: none;
+		flex-direction: column;
+		gap: 4px;
+		padding: 6px;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	.nav-toggle__bar {
+		display: block;
+		width: 22px;
+		height: 2px;
+		background: rgb(23, 23, 23);
+		border-radius: 1px;
+		transition: transform 0.2s, opacity 0.2s;
+	}
+
+	/* ── Mobile nav ── */
+	.nav-mobile {
+		border-top: 1px solid rgb(220, 220, 220);
+		padding: 1rem 0;
+	}
+
+	.nav-mobile > ul {
+		list-style: none;
+		padding: 0 max(0.75rem, calc((100vw - 1160px) / 2));
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	.nav-mobile a {
+		text-decoration: none;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+	}
+
+	/* Mobile dropdown toggle button */
+	.mobile-dropdown-toggle {
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.mobile-dropdown-toggle.is-open .nav-chevron {
+		transform: rotate(180deg);
+	}
+
+	.mobile-dropdown {
+		list-style: none;
+		padding: 0.4rem 0 0 1rem;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.mobile-dropdown a {
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 809px) {
+		.nav-desktop {
+			display: none;
+		}
+		.nav-toggle {
+			display: flex;
+		}
+		.nav-search {
+			margin-left: auto;
+		}
+	}
+
+	@media (min-width: 810px) {
+		.nav-mobile {
+			display: none !important;
+		}
+	}
+</style>

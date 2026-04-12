@@ -1,0 +1,197 @@
+---
+/**
+ * CourseGrid — programme card grid with page title, search placeholder,
+ * and the "Let's Work Together!" nav pill section at the bottom.
+ *
+ * Props:
+ *   programmes     — array of { slug, title, heroImage, audienceLabel, audienceId, duration, shortDescription }
+ *   pageTitle      — heading above the grid (e.g. "All Courses")
+ *   navPills?      — array of { label, url } for the bottom navigation row
+ */
+import ProgrammeCard from './ProgrammeCard.astro';
+
+interface Programme {
+	slug: string;
+	title: string;
+	heroImage?: string | null;
+	audienceLabel?: string;
+	audienceId?: string;
+	duration?: string;
+	shortDescription?: string;
+}
+
+interface NavPill {
+	label: string;
+	url: string;
+}
+
+interface Props {
+	programmes: Programme[];
+	pageTitle?: string;
+	navPills?: NavPill[];
+}
+
+const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
+---
+
+<section class="course-listing">
+	<div class="shell">
+		{/* Heading + search bar */}
+		<div class="course-listing__header">
+			<h2 class="course-listing__title">{pageTitle}</h2>
+			<div class="course-listing__search" aria-label="Search courses">
+				<svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor">
+					<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
+				</svg>
+				<span>Search</span>
+			</div>
+		</div>
+
+		{/* Card grid */}
+		<div class="course-listing__grid">
+			{programmes.map((prog) => (
+				<ProgrammeCard
+					slug={prog.slug}
+					title={prog.title}
+					heroImage={prog.heroImage}
+					audienceLabel={prog.audienceLabel}
+					audienceId={prog.audienceId}
+					duration={prog.duration}
+					shortDescription={prog.shortDescription}
+				/>
+			))}
+		</div>
+	</div>
+</section>
+
+{/* Bottom "Let's Work Together!" nav section */}
+{navPills.length > 0 && (
+	<section class="pivot-section">
+		<div class="shell">
+			<h2 class="pivot-section__heading">Let's Work Together!</h2>
+			<div class="pivot-section__pills">
+				{navPills.map((pill) => (
+					<a class="pivot-pill" href={pill.url}>{pill.label}</a>
+				))}
+			</div>
+		</div>
+	</section>
+)}
+
+<style>
+	/* ─── Header ─────────────────────────────────────────── */
+	.course-listing {
+		padding: 2rem 0 0;
+	}
+
+	.course-listing__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.course-listing__title {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 500;
+		font-size: 1.6rem;
+		color: rgb(51, 51, 51);
+		margin: 0;
+	}
+
+	.course-listing__search {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgb(247, 247, 247);
+		border-radius: 20px;
+		padding: 0.5rem 1rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
+		color: rgb(117, 117, 117);
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.course-listing__search svg {
+		color: rgb(240, 93, 87);
+		flex-shrink: 0;
+	}
+
+	/* ─── Grid ───────────────────────────────────────────── */
+	.course-listing__grid {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(4, minmax(200px, 1fr));
+	}
+
+	@media (min-width: 1600px) {
+		.course-listing__grid {
+			grid-template-columns: repeat(5, minmax(200px, 1fr));
+		}
+	}
+
+	@media (max-width: 1199px) {
+		.course-listing__grid {
+			grid-template-columns: repeat(2, minmax(200px, 1fr));
+		}
+	}
+
+	@media (max-width: 809px) {
+		.course-listing__grid {
+			grid-template-columns: repeat(1, minmax(200px, 1fr));
+		}
+	}
+
+	/* ─── Pivot / Nav Section ────────────────────────────── */
+	.pivot-section {
+		padding: 3rem 0;
+	}
+
+	.pivot-section__heading {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 500;
+		font-size: 1.6rem;
+		color: rgb(51, 51, 51);
+		text-align: center;
+		margin: 0 0 1.25rem;
+	}
+
+	.pivot-section__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.pivot-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		padding: 10px 20px;
+		border-radius: 30px;
+		background-color: rgb(240, 93, 87);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		color: #fff;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		font-weight: 400;
+		text-decoration: none;
+		cursor: pointer;
+		transition: opacity 0.15s;
+	}
+
+	.pivot-pill:hover {
+		opacity: 0.85;
+	}
+
+	@media (max-width: 809px) {
+		.pivot-section__pills {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
