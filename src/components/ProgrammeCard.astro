@@ -14,6 +14,7 @@ interface Props {
 	audienceId?: string;
 	duration?: string;
 	shortDescription?: string;
+	searchText?: string;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
 	audienceId = '',
 	duration = '',
 	shortDescription = '',
+	searchText = '',
 } = Astro.props;
 
 const href = `/programmes/${slug}`;
@@ -38,7 +40,12 @@ const AUDIENCE_COLOURS: Record<string, string> = {
 const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 ---
 
-<a class="prog-card" href={href}>
+<a
+	class="prog-card"
+	href={href}
+	data-programme-card
+	data-search={searchText.toLowerCase()}
+>
 	<div class="prog-card__inner">
 		{/* Audience badge */}
 		<span class="prog-card__badge" style={`background-color: ${badgeColour}`}>
@@ -100,6 +107,10 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		text-decoration: none;
 		color: inherit;
 		width: 100%;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease,
+			border-color 0.2s ease;
 	}
 
 	.prog-card__inner {
@@ -107,9 +118,10 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		display: flex;
 		flex-flow: column;
 		border: 1px solid #e3e3e3;
-		border-radius: 0;
+		border-radius: 20px;
 		overflow: hidden;
 		height: 100%;
+		background: #fff;
 	}
 
 	.prog-card__badge {
@@ -128,10 +140,11 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 
 	.prog-card__image {
 		width: 100%;
-		height: 150px;
+		height: 180px;
 		position: relative;
 		overflow: hidden;
 		flex-shrink: 0;
+		background: linear-gradient(135deg, rgba(240, 93, 87, 0.12), rgba(0, 153, 255, 0.08));
 	}
 
 	.prog-card__image img {
@@ -139,6 +152,7 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		height: 100%;
 		object-fit: cover;
 		display: block;
+		transition: transform 0.3s ease;
 	}
 
 	.prog-card__image-placeholder {
@@ -151,7 +165,7 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		display: flex;
 		flex-flow: column;
 		gap: 10px;
-		padding: 0 15px 30px;
+		padding: 0 18px 24px;
 		flex: 1;
 	}
 
@@ -159,9 +173,9 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		margin: 15px 0 0;
 		min-height: 50px;
 		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
+		font-size: 1.05rem;
 		font-weight: 600;
-		line-height: 1.4;
+		line-height: 1.35;
 		color: rgb(51, 51, 51);
 	}
 
@@ -188,12 +202,32 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		line-height: 1.4;
 	}
 
+	.prog-card__meta-row:last-child span {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
 	.prog-card__icon {
 		flex-shrink: 0;
 		width: 16px;
 		height: 16px;
 		margin-top: 2px;
 		color: rgb(117, 117, 117);
+	}
+
+	.prog-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.prog-card:hover .prog-card__inner {
+		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+		border-color: rgba(240, 93, 87, 0.28);
+	}
+
+	.prog-card:hover .prog-card__image img {
+		transform: scale(1.04);
 	}
 
 	.prog-card:hover .prog-card__title {

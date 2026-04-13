@@ -18,6 +18,7 @@ interface Programme {
 	audienceId?: string;
 	duration?: string;
 	shortDescription?: string;
+	searchText?: string;
 }
 
 interface NavPill {
@@ -32,6 +33,7 @@ interface Props {
 }
 
 const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
+const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 ---
 
 <section class="course-listing">
@@ -39,16 +41,16 @@ const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
 		{/* Heading + search bar */}
 		<div class="course-listing__header">
 			<h2 class="course-listing__title">{pageTitle}</h2>
-			<div class="course-listing__search" aria-label="Search courses">
+			<label class="course-listing__search" for={searchId}>
 				<svg viewBox="0 0 256 256" width="20" height="20" fill="currentColor">
 					<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
 				</svg>
-				<span>Search</span>
-			</div>
+				<input id={searchId} type="search" placeholder="Search" autocomplete="off" data-course-search />
+			</label>
 		</div>
 
 		{/* Card grid */}
-		<div class="course-listing__grid">
+		<div class="course-listing__grid" data-course-grid>
 			{programmes.map((prog) => (
 				<ProgrammeCard
 					slug={prog.slug}
@@ -58,9 +60,11 @@ const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
 					audienceId={prog.audienceId}
 					duration={prog.duration}
 					shortDescription={prog.shortDescription}
+					searchText={prog.searchText}
 				/>
 			))}
 		</div>
+		<p class="course-listing__empty" data-course-empty hidden>No courses match that search yet.</p>
 	</div>
 </section>
 
@@ -106,13 +110,13 @@ const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
 		align-items: center;
 		gap: 0.5rem;
 		background: rgb(247, 247, 247);
-		border-radius: 20px;
-		padding: 0.5rem 1rem;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		border-radius: 999px;
+		padding: 0.5rem 0.9rem;
 		font-family: 'Rubik', sans-serif;
 		font-size: 14px;
 		color: rgb(117, 117, 117);
-		cursor: pointer;
-		user-select: none;
+		min-width: min(100%, 18rem);
 	}
 
 	.course-listing__search svg {
@@ -120,11 +124,30 @@ const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
 		flex-shrink: 0;
 	}
 
+	.course-listing__search input {
+		border: 0;
+		background: transparent;
+		font: inherit;
+		color: rgb(51, 51, 51);
+		width: 100%;
+		outline: none;
+	}
+
+	.course-listing__search input::placeholder {
+		color: rgb(117, 117, 117);
+	}
+
 	/* ─── Grid ───────────────────────────────────────────── */
 	.course-listing__grid {
 		display: grid;
 		gap: 20px;
 		grid-template-columns: repeat(4, minmax(200px, 1fr));
+	}
+
+	.course-listing__empty {
+		margin: 1rem 0 0;
+		font-family: 'Rubik', sans-serif;
+		color: rgb(117, 117, 117);
 	}
 
 	@media (min-width: 1600px) {
@@ -195,3 +218,32 @@ const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
 		}
 	}
 </style>
+
+<script>
+	const grids = document.querySelectorAll('[data-course-grid]');
+
+	grids.forEach((grid) => {
+		const section = grid.closest('.course-listing');
+		const input = section?.querySelector('[data-course-search]');
+		const emptyState = section?.querySelector('[data-course-empty]');
+		if (!(input instanceof HTMLInputElement) || !(emptyState instanceof HTMLElement)) return;
+
+		const cards = [...grid.querySelectorAll('[data-programme-card]')];
+		const render = () => {
+			const query = input.value.trim().toLowerCase();
+			let visibleCount = 0;
+
+			cards.forEach((card) => {
+				const haystack = (card.getAttribute('data-search') ?? '').toLowerCase();
+				const isVisible = query === '' || haystack.includes(query);
+				(card as HTMLElement).hidden = !isVisible;
+				if (isVisible) visibleCount += 1;
+			});
+
+			emptyState.hidden = visibleCount > 0;
+		};
+
+		input.addEventListener('input', render);
+		render();
+	});
+</script>

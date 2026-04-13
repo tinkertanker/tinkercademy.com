@@ -39,17 +39,7 @@ const {
 		<SiteFooter
 			contacts={site.contacts}
 			locations={site.locations}
-			socialLinks={(() => {
-				/* Only keep the first entry per platform from the canonical list in site-settings */
-				const canonicalIds = site.siteSettings?.social_link_ids ?? ['x','facebook','instagram','linkedin','github','blog'];
-				const seen = new Set();
-				return (site.socialLinks ?? []).filter((link) => {
-					if (!canonicalIds.includes(link.id)) return false;
-					if (seen.has(link.id)) return false;
-					seen.add(link.id);
-					return true;
-				});
-			})()}
+			socialLinks={site.socialLinks ?? []}
 		/>
 	</body>
 </html>
@@ -58,6 +48,9 @@ const {
 	:root {
 		--accent: #f05d57;
 		--accent-dark: #ca433d;
+		--heading: 'Oswald', sans-serif;
+		--meta: 'Rubik', sans-serif;
+		--text: rgb(51, 51, 51);
 	}
 
 	* {

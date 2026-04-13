@@ -31,11 +31,13 @@ CRM-like files live under `src/data/crm/`:
 Static page payloads and asset inventories live under `src/data/pages/`.
 
 The imported home page payload now carries explicit landing-page fields such as hero copy, focus areas, flagship cards, and featured course ordering so the Astro front end does not have to infer those from raw Framer blocks at render time.
+Static route payloads also retain extracted `blocks`, explicit `course_cards`, and normalised `sections` arrays for programme/tutorial detail routes so bespoke pages and course listings can render without parsing CTA labels at runtime.
 
 ## Notes
 
 - `scripts/_artifacts/` is generated and ignored.
 - The current implementation keeps remote image URLs from Framer while the migration is still in progress.
 - `src/lib/site-media.js` maps the current live homepage brand, partner, badge, and compact course imagery used for the higher-fidelity front-page rebuild.
+- `/professionals`, `/schools`, and `/individuals` are dedicated Astro routes; they are intentionally excluded from the generic `[slug].astro` renderer.
 - Tutorial pages are rendered as grouped story sections from the imported Framer handover sequence rather than a flat HTML dump.
 - Visual parity checks should be run against both the live site and the local Astro build after each substantial import/render pass.

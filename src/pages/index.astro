@@ -55,7 +55,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	if (mapped) {
 		return { ...programme, thumb: { kind: 'icon' as const, src: mapped } };
 	}
-	if (programme.slug === 'building-agents-with-openclaw' && programme.hero_image) {
+	if (programme.hero_image) {
 		return { ...programme, thumb: { kind: 'hero' as const, src: programme.hero_image } };
 	}
 	return {
@@ -81,8 +81,8 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 		<div class="home-hero__gradient"></div>
 		<div class="home-hero__content shell">
 			<h1>
-				<span class="home-hero__line1">Learn coding and digital making</span>
-				<span class="home-hero__line2">from expert coders and makers.</span>
+				<span class="home-hero__line1">{page?.hero_title ?? 'Illuminate your journey into tech.'}</span>
+				<span class="home-hero__line2">{page?.hero_lead ?? 'Learn coding and digital making from expert coders and makers.'}</span>
 			</h1>
 			{heroActions.length > 0 && (
 				<div class="hero-actions">

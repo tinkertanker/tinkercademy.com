@@ -14,6 +14,26 @@ function cleanText(value) {
 	return value.replace(/\s+/g, ' ').replace(/\u00a0/g, ' ').trim();
 }
 
+const AUDIENCE_TEXT = new Set([
+	'Businesses',
+	'Business',
+	'Public',
+	'Students',
+	'Teachers',
+	'Individuals',
+	'Professionals',
+	'Schools',
+	'Parents',
+]);
+const DURATION_RE = /(\d+|½|half|full).*(hours?|days?|weeks?|months?|years?|module|sessions?)/i;
+const CANONICAL_SOCIALS = [
+	{ id: 'x', platform: 'x', matcher: /x\.com\/tinkercademy\/?$/i },
+	{ id: 'facebook', platform: 'facebook', matcher: /facebook\.com\/tinkercademy\/?$/i },
+	{ id: 'instagram', platform: 'instagram', matcher: /instagram\.com\/tinkercademy\/?$/i },
+	{ id: 'linkedin', platform: 'linkedin', matcher: /linkedin\.com\/company\/tinkertanker\/?$/i },
+	{ id: 'blog', platform: 'blog', matcher: /blog\.tinkercademy\.com\/?$/i },
+];
+
 function slugify(value) {
 	return cleanText(value.toLowerCase()).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
@@ -38,6 +58,10 @@ function uniqueBy(items, keyFn) {
 
 function uniqueStrings(values) {
 	return [...new Set((values ?? []).filter(Boolean))];
+}
+
+function isProbablySlug(value) {
+	return /^[a-z0-9-]+$/.test(value ?? '');
 }
 
 function sameBlock(left, right) {
@@ -92,6 +116,13 @@ function getBlocks(page) {
 }
 
 function pickLead(page) {
+	const headings = uniqueStrings(
+		getBlocks(page)
+			.filter((block) => block.tag === 'h1')
+			.map((block) => block.text),
+	);
+	if (headings.length > 1) return headings[1];
+
 	const firstRichText = page.framer?.structured?.content?.find((entry) => entry.kind === 'richtext');
 	const richParagraph = firstRichText?.html ? cleanText(load(firstRichText.html)('p').first().text()) : '';
 	const richText = richParagraph || firstRichText?.text;
@@ -102,11 +133,15 @@ function pickLead(page) {
 function pickTitle(page) {
 	const blocks = getBlocks(page);
 	const heroHeading = blocks.find((block) => block.tag === 'h1')?.text ?? null;
-	const contentHeading =
-		heroHeading ?? blocks.find((block) => block.tag === 'h2')?.text;
+	const contentHeading = heroHeading ?? blocks.find((block) => block.tag === 'h2')?.text;
+	const framerTitle = page.framer?.structured?.title;
 
-	if (page.path === '/' && contentHeading) return contentHeading;
-	if (page.framer?.structured?.title) return page.framer.structured.title;
+	if (page.type === 'static' || page.type === 'root') {
+		if (heroHeading) return heroHeading;
+		if (framerTitle && !isProbablySlug(framerTitle)) return framerTitle;
+	}
+
+	if (framerTitle && !isProbablySlug(framerTitle)) return framerTitle;
 	if (contentHeading) return contentHeading;
 	return (page.seo?.title ?? page.path).replace(/\s+-\s+Tinkercademy.*$/, '');
 }
@@ -240,6 +275,99 @@ function makeContentItems(page) {
 	return blocks;
 }
 
+function extractProgrammeSlug(url) {
+	const match = url?.match(/^https?:\/\/tinkercademy\.com\/programmes\/([^/?#]+)/);
+	return match ? decodeURIComponent(match[1]) : null;
+}
+
+function looksLikeCourseAudience(text) {
+	return AUDIENCE_TEXT.has(text);
+}
+
+function looksLikeDuration(text) {
+	return DURATION_RE.test(text);
+}
+
+function extractCourseCards(page) {
+	const blocks = getBlocks(page);
+	const programmeRefs = uniqueBy(
+		(page.ctas ?? [])
+			.map((cta) => ({
+				slug: extractProgrammeSlug(cta.url),
+				label: cta.label,
+			}))
+			.filter((item) => item.slug),
+		(item) => item.slug,
+	);
+
+	if (programmeRefs.length === 0) return [];
+
+	const shouldStartImmediately = /^\/courses-/.test(page.path);
+	const startIndex = shouldStartImmediately
+		? 0
+		: blocks.findIndex((block) => /^Professional Courses$|^School Courses$/.test(block.text));
+	if (startIndex === -1) return [];
+
+	const cards = [];
+	let current = null;
+
+	for (const block of blocks.slice(startIndex + (shouldStartImmediately ? 0 : 1))) {
+		if (block.text === "Let's Work Together!") break;
+		if (block.text === 'Search' || /^Professional Courses$|^School Courses$|^All Courses$/.test(block.text)) {
+			continue;
+		}
+
+		if (block.tag === 'h2') {
+			if (current?.title) cards.push(current);
+			current = {
+				slug: null,
+				title: block.text,
+				audience_label: '',
+				duration: '',
+				blurb: '',
+			};
+			continue;
+		}
+
+		if (!current || block.tag !== 'p') continue;
+		if (!current.audience_label && looksLikeCourseAudience(block.text)) {
+			current.audience_label = block.text;
+			continue;
+		}
+		if (looksLikeCourseAudience(block.text)) continue;
+		if (!current.duration && looksLikeDuration(block.text)) {
+			current.duration = block.text;
+			continue;
+		}
+		if (block.text === current.audience_label || block.text === current.duration) continue;
+		current.blurb = current.blurb ? `${current.blurb} ${block.text}` : block.text;
+	}
+
+	if (current?.title) cards.push(current);
+
+	return cards
+		.map((card, index) => {
+			const byTitle = programmeRefs.find((ref) => ref.label?.includes(card.title));
+			const byIndex = programmeRefs[index];
+			return {
+				...card,
+				slug: byTitle?.slug ?? byIndex?.slug ?? null,
+			};
+		})
+		.filter((card) => card.slug);
+}
+
+function normaliseSections(contentItems) {
+	return ensureArray(contentItems)
+		.filter((item) => item.type === 'richtext' && item.html)
+		.map((item) => ({
+			heading: item.label || null,
+			html: item.html,
+			text: item.text ?? '',
+			kind: item.label ? 'labelled' : 'richtext',
+		}));
+}
+
 function toRenderedCta(cta) {
 	return {
 		label: cta.label,
@@ -366,6 +494,7 @@ function toProgrammeRecord(page) {
 	const topics = normaliseRelations(page.framer?.structured?.relations, 'topics');
 	const resolvedAudiences = audiences.length > 0 ? audiences : fallback.audiences;
 	const resolvedTopics = topics.length > 0 ? topics : fallback.topics;
+	const content = makeContentItems(page);
 
 	return {
 		id: slug,
@@ -379,7 +508,8 @@ function toProgrammeRecord(page) {
 		topic_ids: resolvedTopics.map((topic) => topic.id),
 		cta_ids: uniqueBy(page.ctas ?? [], (cta) => `${cta.label}::${cta.url}`).map((cta) => slugify(`${cta.label}-${cta.url}`)),
 		seo: page.seo,
-		content: makeContentItems(page),
+		content,
+		sections: normaliseSections(content),
 	};
 }
 
@@ -387,6 +517,7 @@ function toTutorialRecord(page) {
 	const slug = decodeSlug(page.path);
 	const audiences = normaliseRelations(page.framer?.structured?.relations, 'audiences');
 	const topics = normaliseRelations(page.framer?.structured?.relations, 'topics');
+	const content = makeContentItems(page);
 
 	return {
 		id: slug,
@@ -398,20 +529,26 @@ function toTutorialRecord(page) {
 		audience_ids: audiences.map((audience) => audience.id),
 		topic_ids: topics.map((topic) => topic.id),
 		seo: page.seo,
-		content: makeContentItems(page),
+		content,
+		sections: normaliseSections(content),
 	};
 }
 
 function toStaticPage(page) {
+	const blocks = getBlocks(page);
 	const record = {
 		path: page.path,
 		slug: page.path === '/' ? 'home' : page.path.replace(/^\/|\/$/g, ''),
 		title: pickTitle(page),
-		description: page.seo?.description || pickLead(page),
+		description: pickLead(page) || page.seo?.description,
+		hero_title: pickTitle(page),
+		hero_lead: pickLead(page),
 		hero_image: pickHeroImage(page),
 		seo: page.seo,
 		ctas: page.ctas ?? [],
+		blocks,
 		content: makeContentItems(page),
+		course_cards: extractCourseCards(page),
 	};
 
 	if (page.path === '/') {
@@ -479,12 +616,18 @@ const contacts = uniqueBy(
 const locations = inferLocation(contactPage);
 
 const socialLinks = uniqueBy(
-	pages.flatMap((page) => page.socialLinks ?? []).map((link) => ({
-		id: slugify(link.platform),
-		platform: link.platform,
-		label: link.label,
-		url: link.url,
-	})),
+	CANONICAL_SOCIALS.map((expected) => {
+		const match = pages
+			.flatMap((page) => page.socialLinks ?? [])
+			.find((link) => expected.matcher.test(link.url));
+		if (!match) return null;
+		return {
+			id: expected.id,
+			platform: expected.platform,
+			label: match.label,
+			url: match.url,
+		};
+	}).filter(Boolean),
 	(link) => link.url,
 );
 

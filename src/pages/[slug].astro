@@ -11,7 +11,7 @@ import { getSiteData, getProgrammesForPage, getNavPillsForPage } from '../lib/da
 export function getStaticPaths() {
 	/* Pages with dedicated .astro files — exclude from the dynamic catch-all */
 	const dedicatedPages = new Set([
-		'about-us', 'contact-us', 'showcase', 'microbit', 'tinker-x', 'infocomm-club',
+		'about-us', 'contact-us', 'showcase', 'microbit', 'tinker-x', 'infocomm-club', 'professionals', 'schools', 'individuals',
 	]);
 	const site = getSiteData();
 	return site.staticPages
@@ -30,16 +30,13 @@ const canonical = new URL(page.path, 'https://tinkercademy.com').toString();
 
 /* ─── Classify page type ────────────────────────────────────────────── */
 const COURSE_LISTING_SLUGS = ['courses-all', 'courses-professionals', 'courses-schools'];
-const AUDIENCE_LANDING_SLUGS = ['professionals', 'schools', 'individuals'];
-
 const isCourseListing = COURSE_LISTING_SLUGS.includes(page.slug);
-const isAudienceLanding = AUDIENCE_LANDING_SLUGS.includes(page.slug);
 
 /* ─── Data for course listing / audience pages ──────────────────────── */
-const programmes = (isCourseListing || isAudienceLanding)
+const programmes = isCourseListing
 	? getProgrammesForPage(page)
 	: [];
-const navPills = (isCourseListing || isAudienceLanding)
+const navPills = isCourseListing
 	? getNavPillsForPage(page)
 	: [];
 
@@ -49,17 +46,9 @@ const COURSE_PAGE_TITLES: Record<string, string> = {
 	'courses-professionals': 'Professional Courses',
 	'courses-schools': 'School Courses',
 };
-const AUDIENCE_PAGE_TITLES: Record<string, string> = {
-	professionals: 'Professionals',
-	schools: 'Schools',
-	individuals: 'Individuals',
-};
-
 const displayTitle = isCourseListing
 	? COURSE_PAGE_TITLES[page.slug] ?? page.title
-	: isAudienceLanding
-		? AUDIENCE_PAGE_TITLES[page.slug] ?? page.title
-		: page.title;
+	: page.title;
 
 /* ─── Determine if content has rich types (image / richtext) ────────── */
 const contentBlocks = page.content ?? [];
@@ -85,29 +74,6 @@ const hasRichContent = contentBlocks.some(
 			pageTitle={displayTitle}
 			navPills={navPills}
 		/>
-	) : isAudienceLanding ? (
-		/* ════════════════════════════════════════════════════════════════
-		   AUDIENCE LANDING PAGES  (professionals, schools, individuals)
-		   ═══════════════════════════════════════════════════════════════ */
-		<>
-			<PageHero title={displayTitle} lead={page.description} />
-			{page.hero_image && (
-				<HeroMedia src={page.hero_image} alt={displayTitle} compact={true} />
-			)}
-			{contentBlocks.length > 0 && (
-				hasRichContent
-					? <RichContent items={contentBlocks} />
-					: <ContentBlocks blocks={contentBlocks} />
-			)}
-			{programmes.length > 0 && (
-				<CourseGrid
-					programmes={programmes}
-					pageTitle={`${displayTitle} Courses`}
-					navPills={navPills}
-				/>
-			)}
-			<CtaBanner />
-		</>
 	) : (
 		/* ════════════════════════════════════════════════════════════════
 		   RICH CONTENT / DEFAULT PAGES

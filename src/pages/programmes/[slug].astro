@@ -13,30 +13,17 @@ export function getStaticPaths() {
 const { programme } = Astro.props;
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
 
-/* ─── Content blocks ─────────────────────────────────────────────────
-   Every programme has exactly 4 blocks:
-     [0] image  (hero — used as background)
-     [1] richtext  → "Course Overview"
-     [2] richtext  → "Lesson Outcomes"
-     [3] richtext  → "Details"
-   ──────────────────────────────────────────────────────────────────── */
-const content = programme.content ?? [];
-const overviewHtml = content[1]?.html ?? '';
-const outcomesHtml = content[2]?.html ?? '';
-const detailsHtml = content[3]?.html ?? '';
-
 /* ─── Meta info ──────────────────────────────────────────────────── */
 const audienceLabels = programme.audiences?.map((a) => a.label) ?? [];
 const topicLabels = programme.topics?.map((t) => t.label) ?? [];
 const duration = programme.duration ?? '';
 
-/* Section headings for the 3 richtext blocks */
-const SECTION_HEADINGS = ['Course Overview', 'Lesson Outcomes', 'Details'];
-const sections = [
-	{ heading: SECTION_HEADINGS[0], html: overviewHtml },
-	{ heading: SECTION_HEADINGS[1], html: outcomesHtml },
-	{ heading: SECTION_HEADINGS[2], html: detailsHtml },
-].filter((s) => s.html);
+const sections = (programme.sections ?? [])
+	.map((section, index) => ({
+		heading: section.heading ?? ['Course Overview', 'Lesson Outcomes', 'Details'][index] ?? `Section ${index + 1}`,
+		html: section.html,
+	}))
+	.filter((section) => section.html);
 ---
 
 <BaseLayout

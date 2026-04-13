@@ -26,6 +26,8 @@ const SOCIAL_HOSTS = new Set([
 	'medium.com',
 	'blog.tinkercademy.com',
 ]);
+const SOCIAL_PROFILE_PATTERN =
+	/^\/(@?[a-z0-9._-]+\/?)?$/i;
 
 function cleanText(value) {
 	return value.replace(/\s+/g, ' ').replace(/\u00a0/g, ' ').trim();
@@ -218,12 +220,22 @@ function extractContacts(anchors) {
 		});
 }
 
+function isLikelySocialProfile(url) {
+	const hostname = url.hostname.replace(/^www\./, '');
+	if (!SOCIAL_HOSTS.has(hostname)) return false;
+	if (hostname === 'blog.tinkercademy.com') return true;
+	if (hostname === 'github.com') {
+		return /^\/[a-z0-9._-]+\/?$/i.test(url.pathname);
+	}
+	return SOCIAL_PROFILE_PATTERN.test(url.pathname);
+}
+
 function extractSocialLinks(anchors) {
 	return uniqueBy(
 		anchors
 			.filter((anchor) => {
 				try {
-					return SOCIAL_HOSTS.has(new URL(anchor.href).hostname.replace(/^www\./, ''));
+					return isLikelySocialProfile(new URL(anchor.href));
 				} catch {
 					return false;
 				}

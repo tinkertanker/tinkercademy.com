@@ -1,0 +1,159 @@
+---
+import CtaBanner from '../components/CtaBanner.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getStaticPage } from '../lib/data.js';
+
+const page = getStaticPage('/individuals');
+if (!page) return Astro.redirect('/404');
+
+const canonical = new URL('/individuals', 'https://tinkercademy.com').toString();
+const heroLinks = (page.ctas ?? []).filter((cta) => ['Professionals', 'Schools'].includes(cta.label)).slice(0, 2);
+const programmeTypes = [
+	{
+		title: 'Courses for Individuals',
+		body: 'Self-directed technical courses for adults and independent learners who want a practical route into modern tools and workflows.',
+		url: '/courses-all',
+	},
+	{
+		title: 'micro:bit',
+		body: 'Hands-on projects, tutorials, and guided making experiences built around micro:bit and physical computing.',
+		url: '/microbit',
+	},
+	{
+		title: 'Tinker X',
+		body: 'A maker space for young people to build, experiment, and keep learning beyond a single workshop or camp.',
+		url: '/tinker-x',
+	},
+];
+---
+
+<BaseLayout
+	title={page.seo?.title ?? page.title}
+	description={page.seo?.description ?? page.description ?? ''}
+	canonical={canonical}
+	image={page.hero_image ?? undefined}
+>
+	<section class="individuals-hero">
+		<div class="shell">
+			<p class="individuals-hero__eyebrow">For Individuals</p>
+			<h1>{page.hero_title}</h1>
+			<p class="individuals-hero__lead">{page.hero_lead}</p>
+			<div class="individuals-hero__actions">
+				{heroLinks.map((cta) => (
+					<a href={cta.url}>{cta.label}</a>
+				))}
+				<a href="/courses-all">All Courses</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="individuals-types">
+		<div class="shell">
+			<h2>Programme Types</h2>
+			<div class="individuals-types__grid">
+				{programmeTypes.map((item) => (
+					<a class="individuals-card" href={item.url}>
+						<h3>{item.title}</h3>
+						<p>{item.body}</p>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="individuals-links">
+		<div class="shell">
+			<h2>Let&apos;s Work Together!</h2>
+			<div class="individuals-links__pills">
+				<a href="/">Back to Home</a>
+				<a href="/courses-all">All Courses</a>
+				<a href="/courses-professionals">Professional Courses</a>
+			</div>
+		</div>
+	</section>
+
+	<CtaBanner />
+</BaseLayout>
+
+<style>
+	.individuals-hero,
+	.individuals-types,
+	.individuals-links {
+		padding: 3rem 0;
+	}
+
+	.individuals-hero__eyebrow {
+		margin: 0 0 0.75rem;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		color: rgb(202, 67, 61);
+	}
+
+	.individuals-hero h1,
+	.individuals-types h2,
+	.individuals-links h2,
+	.individuals-card h3 {
+		margin: 0 0 1rem;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		line-height: 0.98;
+	}
+
+	.individuals-hero h1 {
+		max-width: 10ch;
+		font-size: clamp(2.2rem, 5vw, 4.4rem);
+	}
+
+	.individuals-hero__lead,
+	.individuals-card p {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+		max-width: 60ch;
+	}
+
+	.individuals-hero__actions,
+	.individuals-links__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+	}
+
+	.individuals-hero__actions a,
+	.individuals-links__pills a {
+		display: inline-flex;
+		padding: 0.75rem 1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+	}
+
+	.individuals-types__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.individuals-card {
+		display: grid;
+		align-content: start;
+		gap: 0.5rem;
+		padding: 1.5rem;
+		border-radius: 24px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: linear-gradient(180deg, rgba(0, 153, 255, 0.05), #fff);
+		text-decoration: none;
+		box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+	}
+
+	@media (max-width: 900px) {
+		.individuals-types__grid {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+</style>

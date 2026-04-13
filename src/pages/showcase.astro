@@ -113,9 +113,11 @@ const testimonials = [
 			<h2 class="showcase-section__heading">Our Interns</h2>
 			<p class="showcase-section__desc">Through hands-on experience and mentorship, our interns work on real projects that shape the future of education and technology. Here are what they have to say about their experiences!</p>
 
-			<div class="testimonials-grid">
+			<div class="carousel-wrapper">
+				<div class="carousel carousel--testimonials" id="testimonial-carousel">
 				{testimonials.map((t) => (
-					<div class="testimonial-card">
+					<div class="carousel__slide carousel__slide--testimonial">
+						<div class="testimonial-card">
 						<div class="testimonial-card__avatar">
 							<span>{t.name.charAt(0)}</span>
 						</div>
@@ -123,7 +125,15 @@ const testimonials = [
 						<p class="testimonial-card__role">{t.role}</p>
 						<blockquote class="testimonial-card__quote">{t.quote}</blockquote>
 					</div>
+					</div>
 				))}
+				</div>
+				<button class="carousel__btn carousel__btn--prev" data-carousel="testimonial-carousel" data-dir="-1" aria-label="Previous testimonial">
+					<img src="/images/remote/6tTbkXggWgQCAJ4DO2QEdXXmgM.svg" alt="" width="24" height="24" />
+				</button>
+				<button class="carousel__btn carousel__btn--next" data-carousel="testimonial-carousel" data-dir="1" aria-label="Next testimonial">
+					<img src="/images/remote/11KSGbIZoRSg4pjdnUoif6MKHI.svg" alt="" width="24" height="24" />
+				</button>
 			</div>
 		</div>
 	</section>
@@ -181,7 +191,7 @@ const testimonials = [
 			if (!carousel) return;
 			const slide = carousel.querySelector('.carousel__slide');
 			if (!slide) return;
-			const slideWidth = (slide as HTMLElement).offsetWidth + 60; /* gap */
+			const slideWidth = (slide as HTMLElement).offsetWidth + 24;
 			carousel.scrollBy({ left: dir * slideWidth, behavior: 'smooth' });
 		});
 	});
@@ -286,6 +296,14 @@ const testimonials = [
 		display: block;
 	}
 
+	.carousel--testimonials {
+		gap: 24px;
+	}
+
+	.carousel--testimonials .carousel__slide {
+		flex: 0 0 min(340px, calc(100vw - 4rem));
+	}
+
 	.carousel__btn {
 		position: absolute;
 		top: 50%;
@@ -345,17 +363,13 @@ const testimonials = [
 		padding: 2rem 0 3rem;
 	}
 
-	.testimonials-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-	}
-
 	.testimonial-card {
+		height: 100%;
 		background: #fafafa;
 		border: 1px solid #e3e3e3;
-		border-radius: 10px;
+		border-radius: 24px;
 		padding: 1.5rem;
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 	}
 
 	.testimonial-card__avatar {
@@ -397,18 +411,6 @@ const testimonials = [
 		color: rgb(110, 110, 110);
 		margin: 0;
 		font-style: normal;
-	}
-
-	@media (max-width: 1199px) {
-		.testimonials-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	@media (max-width: 809px) {
-		.testimonials-grid {
-			grid-template-columns: 1fr;
-		}
 	}
 
 	/* ─── Feature story (Meet Jia Chen) ───────────────────── */

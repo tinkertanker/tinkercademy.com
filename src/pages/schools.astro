@@ -1,0 +1,177 @@
+---
+import CourseGrid from '../components/CourseGrid.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getProgrammesForPage, getStaticPage } from '../lib/data.js';
+
+const page = getStaticPage('/schools');
+if (!page) return Astro.redirect('/404');
+
+const canonical = new URL('/schools', 'https://tinkercademy.com').toString();
+const programmes = getProgrammesForPage(page);
+const heroLinks = (page.ctas ?? []).filter((cta) => ['Professionals', 'Individuals'].includes(cta.label)).slice(0, 2);
+
+const codeForFunLink = page.ctas?.find((cta) => cta.label === 'Code for Fun programme');
+const roadmapLink = page.ctas?.find((cta) => cta.label === 'Infocomm Learning Roadmap');
+---
+
+<BaseLayout
+	title={page.seo?.title ?? page.title}
+	description={page.seo?.description ?? page.description ?? ''}
+	canonical={canonical}
+	image={page.hero_image ?? undefined}
+>
+	<section class="schools-hero">
+		<div class="shell schools-hero__inner">
+			<div>
+				<p class="schools-hero__eyebrow">For Schools</p>
+				<h1>{page.hero_title}</h1>
+				<p class="schools-hero__lead">{page.hero_lead}</p>
+				<div class="schools-hero__actions">
+					{heroLinks.map((cta) => (
+						<a href={cta.url}>{cta.label}</a>
+					))}
+					<a href="/courses-schools">Browse Courses</a>
+				</div>
+			</div>
+			{page.hero_image && <img src={page.hero_image} alt="Students making and coding" class="schools-hero__media" />}
+		</div>
+	</section>
+
+	<section class="schools-intro">
+		<div class="shell">
+			<h2>Programmes for Schools</h2>
+			<p>
+				We offer a wide variety of coding and digital making courses for schools. As one of
+				the first vendors for the Code for Fun programme and the Infocomm Learning Roadmap,
+				we bring curriculum depth and delivery experience to every session.
+			</p>
+		</div>
+	</section>
+
+	<section class="schools-programmes">
+		<div class="shell schools-programmes__grid">
+			<article class="schools-card">
+				<h2>Code for Fun</h2>
+				<p>
+					Established as one of the earliest Code for Fun initiators under the Code@SG
+					scheme, we have delivered affordable and thorough learning experiences for
+					students since 2015.
+				</p>
+				{codeForFunLink && <a href={codeForFunLink.url}>Learn more</a>}
+			</article>
+			<article class="schools-card">
+				<h2>Infocomm Learning Roadmap</h2>
+				<p>
+					In collaboration with IMDA, our industry associates, and educational partners, we
+					provide technology learning programmes to Infocomm Media Clubs across primary,
+					secondary, and junior colleges.
+				</p>
+				{roadmapLink && <a href={roadmapLink.url}>Learn more</a>}
+			</article>
+		</div>
+	</section>
+
+	<CourseGrid
+		programmes={programmes}
+		pageTitle="School Courses"
+		navPills={[
+			{ label: 'Professionals', url: '/professionals' },
+			{ label: 'Individuals', url: '/individuals' },
+			{ label: 'Contact Us', url: '/contact-us' },
+		]}
+	/>
+	<CtaBanner />
+</BaseLayout>
+
+<style>
+	.schools-hero,
+	.schools-intro,
+	.schools-programmes {
+		padding: 3rem 0;
+	}
+
+	.schools-hero__inner {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(320px, 0.85fr);
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.schools-hero__eyebrow {
+		margin: 0 0 0.75rem;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		color: rgb(202, 67, 61);
+	}
+
+	.schools-hero h1,
+	.schools-intro h2,
+	.schools-card h2 {
+		margin: 0 0 1rem;
+		font-family: 'Oswald', sans-serif;
+		text-transform: uppercase;
+		line-height: 0.98;
+	}
+
+	.schools-hero h1 {
+		font-size: clamp(2.2rem, 5vw, 4.2rem);
+	}
+
+	.schools-hero__lead,
+	.schools-intro p,
+	.schools-card p {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+	}
+
+	.schools-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.25rem;
+	}
+
+	.schools-hero__actions a,
+	.schools-card a {
+		display: inline-flex;
+		padding: 0.75rem 1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+	}
+
+	.schools-hero__media {
+		width: 100%;
+		border-radius: 28px;
+		box-shadow: 0 20px 44px rgba(0, 0, 0, 0.08);
+	}
+
+	.schools-programmes__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	.schools-card {
+		display: grid;
+		gap: 1rem;
+		padding: 1.5rem;
+		border-radius: 24px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: linear-gradient(180deg, rgba(240, 93, 87, 0.05), #fff);
+		box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+	}
+
+	@media (max-width: 900px) {
+		.schools-hero__inner,
+		.schools-programmes__grid {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+</style>

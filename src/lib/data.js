@@ -100,6 +100,10 @@ function extractShortDescription(ctaLabel, programmeTitle, programmeDuration) {
 	return rest.trim();
 }
 
+function buildSearchText(values) {
+	return values.filter(Boolean).join(' ').trim();
+}
+
 /**
  * For a given static page, resolve the list of programmes it references
  * (via CTA URLs), enriched with card-display data.
@@ -122,22 +126,40 @@ export function getProgrammesForPage(page) {
 		if (match) ctaLabelBySlug.set(match[1], cta.label);
 	}
 
+	const explicitCards = new Map((page.course_cards ?? []).map((card) => [card.slug, card]));
+
 	return ctaSlugs.reduce((items, slug) => {
 		const prog = programmeBySlug.get(slug);
 		if (!prog) return items;
 
 		const primaryAudience = prog.audiences?.[0];
 		const ctaLabel = ctaLabelBySlug.get(slug) ?? '';
-		const shortDesc = extractShortDescription(ctaLabel, prog.title, prog.duration);
+		const explicit = explicitCards.get(slug);
+		const shortDesc =
+			explicit?.blurb ||
+			prog.card_blurb ||
+			extractShortDescription(ctaLabel, prog.title, prog.duration) ||
+			prog.description ||
+			'';
+		const audienceLabel = explicit?.audience_label || primaryAudience?.label || 'Programme';
+		const duration = explicit?.duration || prog.duration || '';
+		const heroImage = prog.hero_image ?? null;
 
 		items.push({
 			slug: prog.slug,
 			title: prog.title,
-			heroImage: prog.hero_image ?? null,
-			audienceLabel: primaryAudience?.label ?? 'Programme',
+			heroImage,
+			audienceLabel,
 			audienceId: primaryAudience?.id ?? '',
-			duration: prog.duration ?? '',
+			duration,
 			shortDescription: shortDesc,
+			searchText: buildSearchText([
+				prog.title,
+				audienceLabel,
+				duration,
+				shortDesc,
+				...(prog.topics?.map((topic) => topic.label) ?? []),
+			]),
 		});
 
 		return items;
