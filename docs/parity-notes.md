@@ -1,15 +1,21 @@
-# Visual parity notes (pass 1)
+# Visual parity notes
 
 Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
 
-## Compared this pass
+## Pass 2 — re-check (Popular Courses grid)
+
+- **Verified** against `docs/screenshots/live/desktop/home.png`: live “Popular Courses” is a **multi-column grid**, not a horizontal scroller.
+- **Change:** `src/pages/index.astro` — replaced the carousel strip with `popular-grid` (`repeat(4, 1fr)` desktop, 2 columns tablet, 1 column mobile), card `width: 100%`, and hover closer to listing cards (lift, shadow, border tint, image scale, title accent).
+- **Build:** `npm run build` and `npm run check` run clean after the change.
+
+## Pass 1 — compared
 
 - `docs/screenshots/live/desktop/home.png` — hero imagery, marquee copy, section order
 - `docs/screenshots/live/states/home-search-open-desktop.png` — search overlay behaviour
 - `docs/screenshots/live/desktop/courses-all.png` — course cards and listing chrome (for cross-check)
 - `docs/screenshots/live/desktop/programme-knowledge-powered-ai-with-chatgpt.png` — programme hero and meta bar
 
-## Changes implemented
+## Pass 1 — changes implemented
 
 1. **Homepage (`src/pages/index.astro`)**  
    - Hero background uses `hero_image` from `static-pages.json` (Framer URL) instead of the static `/images/hero-bg.jpg` placeholder.  
@@ -27,7 +33,7 @@ Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
 
 ## Known gaps / next iterations
 
-- **Home “Popular Courses”** — still a horizontal scroll strip; live is a multi-row grid with different card aspect and hover (see `home-course-card-hover-desktop` in `states/states-manifest.json`; capture failed on live — verify selector).  
+- **Home “Popular Courses”** — grid layout aligned; fine-tune column count at very wide viewports (live may use 5-up on ultra-wide) and card min-heights vs screenshot. Re-capture `home-course-card-hover-desktop` once the live Playwright selector is fixed (`states/states-manifest.json`).  
 - **Marquee motion** — speed and fade masks may still differ from Framer; tune against `desktop`/`tablet`/`mobile` home captures.  
 - **Flagship block** — layout/spacing vs live home still needs pixel pass.  
 - **Footer** — column widths, typography scale, and link colours vs `desktop` footer crop not fully matched this pass.  
@@ -38,7 +44,7 @@ Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
 
 | Agent focus | Scope | Primary files |
 |-------------|--------|----------------|
-| A | Homepage sections after hero (marquee tuning, popular grid, flagship) | `index.astro`, `site-media.js` |
+| A | Homepage sections after hero (marquee tuning, flagship spacing) | `index.astro`, `site-media.js` |
 | B | Header/footer/nav only | `SiteHeader.astro`, `SiteFooter.astro`, `BaseLayout.astro` |
 | C | Course listings + audience pages | `[slug].astro` (listing branch), `CourseGrid.astro`, `ProgrammeCard.astro` |
 | D | Programme template body + tables + CTA strip | `[slug].astro`, `CtaBanner.astro` |

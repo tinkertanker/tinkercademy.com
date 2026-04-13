@@ -228,34 +228,32 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 			<p class="section-kicker">Popular Courses</p>
 			<a href="/courses-all" class="popular-section__viewall">View all</a>
 		</div>
-		<div class="popular-carousel-wrap">
-			<div class="popular-carousel">
-				{popularCourseThumbs.map((programme) => (
-					<a class="course-card" href={`/programmes/${programme.slug}`}>
-						<div class="course-card__image-wrap">
-							{programme.thumb.kind === 'label' ? (
-								<span class="course-card__label-text">{programme.thumb.label}</span>
-							) : (
-								<img
-									class:list={[
-										'course-card__image',
-										programme.thumb.kind === 'hero' && 'course-card__image--cover',
-									]}
-									src={programme.thumb.src}
-									alt={programme.title}
-									loading="lazy"
-								/>
-							)}
-						</div>
-						<div class="course-card__body">
-							<span class="course-card__tag">
-								{programme.audiences[0]?.label ?? 'Programme'}
-							</span>
-							<h3 class="course-card__title">{programme.title}</h3>
-						</div>
-					</a>
-				))}
-			</div>
+		<div class="popular-grid">
+			{popularCourseThumbs.map((programme) => (
+				<a class="course-card" href={`/programmes/${programme.slug}`}>
+					<div class="course-card__image-wrap">
+						{programme.thumb.kind === 'label' ? (
+							<span class="course-card__label-text">{programme.thumb.label}</span>
+						) : (
+							<img
+								class:list={[
+									'course-card__image',
+									programme.thumb.kind === 'hero' && 'course-card__image--cover',
+								]}
+								src={programme.thumb.src}
+								alt={programme.title}
+								loading="lazy"
+							/>
+						)}
+					</div>
+					<div class="course-card__body">
+						<span class="course-card__tag">
+							{programme.audiences[0]?.label ?? 'Programme'}
+						</span>
+						<h3 class="course-card__title">{programme.title}</h3>
+					</div>
+				</a>
+			))}
 		</div>
 	</section>
 
@@ -551,7 +549,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	}
 
 	/* ═══════════════════════════════════════════════════════════════════
-	   7. POPULAR COURSES (Carousel)
+	   7. POPULAR COURSES (grid — live home is multi-column, not carousel)
 	   ═══════════════════════════════════════════════════════════════════ */
 	.popular-section {
 		padding: 2rem 0 3rem;
@@ -575,36 +573,32 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 		color: rgb(240, 93, 87);
 	}
 
-	.popular-carousel-wrap {
-		overflow-x: auto;
-		overflow-y: hidden;
-		-webkit-overflow-scrolling: touch;
-		scrollbar-width: thin;
-		margin: 0 calc(-0.75rem);
-		padding: 0 0.75rem;
-	}
-
-	.popular-carousel {
-		display: flex;
-		gap: 1rem;
-		width: max-content;
+	.popular-grid {
+		display: grid;
+		gap: 1.25rem;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 
 	.course-card {
 		display: flex;
 		flex-direction: column;
-		width: 240px;
-		flex: none;
+		width: 100%;
+		min-width: 0;
 		text-decoration: none;
 		border-radius: 12px;
 		overflow: clip;
 		border: 1px solid rgb(34, 34, 34);
 		background: rgb(23, 23, 23);
-		transition: transform 0.2s;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease,
+			border-color 0.2s ease;
 	}
 
 	.course-card:hover {
-		transform: translateY(-2px);
+		transform: translateY(-3px);
+		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+		border-color: rgba(240, 93, 87, 0.35);
 	}
 
 	.course-card__image-wrap {
@@ -630,10 +624,15 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+		transition: transform 0.3s ease;
 	}
 
 	.course-card__image--cover {
 		object-fit: cover;
+	}
+
+	.course-card:hover .course-card__image {
+		transform: scale(1.04);
 	}
 
 	.course-card__body {
@@ -659,6 +658,11 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 		text-transform: uppercase;
 		color: #ffffff;
 		line-height: 1.15;
+		transition: color 0.15s ease;
+	}
+
+	.course-card:hover .course-card__title {
+		color: rgb(240, 93, 87);
 	}
 
 	/* ═══════════════════════════════════════════════════════════════════
@@ -667,6 +671,10 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	@media (max-width: 1199px) {
 		.flagship-section {
 			grid-template-columns: 160px minmax(0, 1fr);
+		}
+
+		.popular-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 
@@ -691,8 +699,8 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 			aspect-ratio: 16 / 9;
 		}
 
-		.course-card {
-			width: 200px;
+		.popular-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>
