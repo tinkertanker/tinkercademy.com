@@ -167,6 +167,35 @@ export function getProgrammesForPage(page) {
 }
 
 /**
+ * Minimal programme fields for site-wide search (header overlay).
+ * Consumed by the prerendered `/programme-search-index.json` route (and cached client-side).
+ * Pass an existing `site` from `getSiteData()` to avoid rebuilding site data twice.
+ */
+export function getSearchableProgrammes(site = getSiteData()) {
+	const programmes = site?.programmes ?? [];
+	return programmes.map((p) => {
+		const primary = p.audiences?.[0];
+		const topicLabel = p.topics?.[0]?.label ?? '';
+		return {
+			slug: p.slug,
+			title: p.title,
+			audienceLabel: primary?.label ?? 'Programme',
+			audienceId: primary?.id ?? '',
+			topicLabel,
+			duration: p.duration ?? '',
+			searchText: buildSearchText([
+				p.title,
+				primary?.label,
+				p.duration,
+				topicLabel,
+				...(p.topics?.map((t) => t.label) ?? []),
+				...(p.audiences?.map((a) => a.label) ?? []),
+			]),
+		};
+	});
+}
+
+/**
  * Extract non-programme navigation CTA pills from a page's CTAs.
  * These are internal links that don't point to /programmes/ and aren't
  * footer/utility links (external, form, email, phone).
