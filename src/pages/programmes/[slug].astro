@@ -16,8 +16,14 @@ const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy
 /* ─── Meta info ──────────────────────────────────────────────────── */
 const audiences = programme.audiences ?? [];
 const topicLabels = programme.topics?.map((t) => t.label) ?? [];
+const domains = programme.domains ?? [];
+const domainLabels = domains.length > 0 ? domains.map((domain) => domain.label) : topicLabels;
+const platforms = programme.platforms ?? [];
 const duration = programme.duration ?? '';
 const primaryAudience = programme.audiences?.[0];
+const signUpUrl = programme.sign_up_url ?? null;
+const signUpLabel = programme.sign_up_label ?? 'Enquire now';
+const signUpIsExternal = typeof signUpUrl === 'string' && !signUpUrl.startsWith('/');
 const typeLabel =
 	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
 		? 'Corporate training'
@@ -52,6 +58,18 @@ const sections = (programme.sections ?? [])
 			<p class="prog-hero__eyebrow">Content</p>
 			<h1 class="prog-hero__title">{programme.title}</h1>
 			{duration && <p class="prog-hero__duration">{duration}</p>}
+			{signUpUrl && (
+				<div class="prog-hero__actions">
+					<a
+						class="prog-hero__cta"
+						href={signUpUrl}
+						target={signUpIsExternal ? '_blank' : undefined}
+						rel={signUpIsExternal ? 'noopener noreferrer' : undefined}
+					>
+						{signUpLabel}
+					</a>
+				</div>
+			)}
 		</div>
 	</section>
 
@@ -89,6 +107,43 @@ const sections = (programme.sections ?? [])
 			)}
 		</div>
 	</section>
+
+	{(domainLabels.length > 0 || platforms.length > 0) && (
+		<section class="prog-facts">
+			<div class="shell prog-facts__inner">
+				{domainLabels.length > 0 && (
+					<div class="prog-facts__group">
+						<h2 class="prog-facts__heading">Domains</h2>
+						<div class="prog-facts__chips">
+							{domainLabels.map((label) => (
+								<span class="prog-facts__chip">{label}</span>
+							))}
+						</div>
+					</div>
+				)}
+				{platforms.length > 0 && (
+					<div class="prog-facts__group">
+						<h2 class="prog-facts__heading">Platforms</h2>
+						<div class="prog-facts__chips">
+							{platforms.map((platform) => (
+								<span class="prog-facts__chip prog-facts__chip--platform">
+									{platform.icon && (
+										<img
+											class="prog-facts__icon"
+											src={platform.icon}
+											alt=""
+											loading="lazy"
+										/>
+									)}
+									<span>{platform.label}</span>
+								</span>
+							))}
+						</div>
+					</div>
+				)}
+			</div>
+		</section>
+	)}
 
 	{/* ════════ Content sections with headings ═══════════════════════ */}
 	<article class="prog-body shell prose">
@@ -170,6 +225,28 @@ const sections = (programme.sections ?? [])
 		color: rgba(255, 255, 255, 0.88);
 	}
 
+	.prog-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	.prog-hero__cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.75rem 1.1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		font-weight: 500;
+		box-shadow: 0 12px 28px rgba(240, 93, 87, 0.28);
+	}
+
 	/* ─── Meta bar (live: pill audiences, inline meta) ─────── */
 	.prog-meta {
 		padding: 0;
@@ -229,6 +306,60 @@ const sections = (programme.sections ?? [])
 		font-size: 13px;
 		font-weight: 500;
 		color: rgb(51, 51, 51);
+	}
+
+	.prog-facts {
+		padding: 1.5rem 0 0.5rem;
+	}
+
+	.prog-facts__inner {
+		display: grid;
+		gap: 1.25rem;
+	}
+
+	.prog-facts__group {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.prog-facts__heading {
+		margin: 0;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.05rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+	}
+
+	.prog-facts__chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.65rem;
+	}
+
+	.prog-facts__chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.55rem;
+		padding: 0.55rem 0.85rem;
+		border-radius: 999px;
+		background: rgb(247, 247, 247);
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.2;
+		color: rgb(61, 61, 61);
+	}
+
+	.prog-facts__chip--platform {
+		background: rgba(0, 153, 255, 0.06);
+	}
+
+	.prog-facts__icon {
+		width: 18px;
+		height: 18px;
+		object-fit: contain;
+		flex-shrink: 0;
 	}
 
 	/* ─── Content body ─────────────────────────────────────── */

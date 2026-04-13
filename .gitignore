@@ -5,3 +5,6 @@ scripts/_artifacts
 .codex
 .DS_Store
 output
+.env
+.env.*
+!.env.example

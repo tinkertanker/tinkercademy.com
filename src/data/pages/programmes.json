@@ -3,7 +3,7 @@
     "id": "imda-phaser-2025",
     "slug": "imda-phaser-2025",
     "title": "AI-Driven Game Development on Phaser",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with Phaser.",
     "duration": "24 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438",
@@ -92,13 +92,34 @@
         "text": "Zenitant is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Students will be guided through the process of signing up for their free GitHub Edu pack, offering GitHub Copilot licenses for AI-assisted coding (usually US$10/month). Training is provided under Zenitant Pte Ltd., with curriculum designed by Tinkercademy — email us to find out more.RequirementsHardware: Windows, Mac, or ChromebookSoftware:VS Code (via vscodeedu.com)A modern browser (Chrome, Firefox, Edge, or Safari)PadletPhaser (via phaser.io/download)",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design…",
+    "featured": true,
+    "weight": 75,
+    "icon": "https://framerusercontent.com/images/3kg5CT7qKsmehew05r2MIUeuSI.png",
+    "icon_alt": "Game Development",
+    "platform_ids": [
+      "html-css",
+      "javascript",
+      "git-github",
+      "microsoft-copilot"
+    ],
+    "domain_ids": [
+      "gamedev"
+    ],
+    "sign_up_label": null,
+    "sign_up_url": null,
+    "intro_html": "<p>Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design fundamentals, including sprite animation, physics, user input, and level creation. They will apply structured development workflows—planning, prototyping, and testing—to build engaging browser-based games from scratch.</p><p>This course is designed for beginners with no prior programming or game development experience but are eager to learn how to craft fun, playable games. By the end, students will have the skills to bring their game ideas to life and share them with others.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Familiarize with HTML, JavaScript, VSCode</p></li><li data-preset-tag=\"p\"><p>Design and build 2D games using Phaser.js</p></li><li data-preset-tag=\"p\"><p>Implement game mechanics like character movement, scoring systems, and level transitions.</p></li><li data-preset-tag=\"p\"><p>Work with assets (images, animations, sound) and optimize them for web-based games.</p></li><li data-preset-tag=\"p\"><p>Debug and test games to ensure smooth gameplay and fix common issues.</p></li></ul>",
+    "details_html": "<p><a href=\"https://zenitanteducation.com/\">Zenitant</a> is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual <a href=\"https://3dtronics.asia/\">3d-tronics Micro-controller Challenge</a> from 2018 to 2022. Students will be guided through the process of signing up for their free <a href=\"https://github.com/edu\">GitHub Edu pack</a>, offering GitHub Copilot licenses for AI-assisted coding (usually US$10/month). Training is provided under Zenitant Pte Ltd., with curriculum designed by Tinkercademy — <a href=\"mailto:yjsoon@tk.sg\">email us</a> to find out more.</p><h5><strong>Requirements</strong></h5><p><strong>Hardware:</strong> Windows, Mac, or Chromebook<br><strong>Software:</strong></p><ul><li data-preset-tag=\"p\"><p>VS Code (via <a href=\"https://vscodeedu.com/\" target=\"_blank\">vscodeedu.com</a>)</p></li><li data-preset-tag=\"p\"><p>A modern browser (Chrome, Firefox, Edge, or Safari)</p></li><li data-preset-tag=\"p\"><p>Padlet</p></li><li data-preset-tag=\"p\"><p>Phaser (via <a href=\"https://phaser.io/download\" target=\"_blank\">phaser.io/download</a>)</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "ToTL0iro5"
   },
   {
     "id": "imda-apple-2025-b",
     "slug": "imda-apple-2025-b",
     "title": "App Development Basics with Swift Playgrounds",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
@@ -110,6 +131,7 @@
       "appdev"
     ],
     "cta_ids": [
+      "enquire-now-mailto-yjsoon-tk-sg-subject-infocomm-learn-roadmap",
       "swift-explorers-challenge-https-swiftexplorers-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -183,13 +205,31 @@
         "text": "ProjectStudents will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge.RequirementsHardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.Software: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using…",
+    "featured": true,
+    "weight": 65,
+    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon_alt": "Swift",
+    "platform_ids": [
+      "swift"
+    ],
+    "domain_ids": [
+      "appdev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap",
+    "intro_html": "<p>In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro. </p><p>Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand and implement basic programming concepts in the Swift language</p></li><li data-preset-tag=\"p\"><p>Use the Swift Playgrounds development environment to create and run apps</p></li><li data-preset-tag=\"p\"><p>Create mobile user interfaces with SwiftUI controls and views</p></li><li data-preset-tag=\"p\"><p>Utilise the SwiftUI framework to design and build a series of interactive apps.</p></li></ul>",
+    "details_html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\">Swift Explorers Challenge</a>.</p><p><strong>Requirements</strong></p><ul><li data-preset-tag=\"p\"><p><strong>Hardware: </strong> iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, <em>or </em>Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.</p></li><li data-preset-tag=\"p\"><p><strong>Software</strong>: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "DwUp6aOPY"
   },
   {
     "id": "imda-apple-2025-c",
     "slug": "imda-apple-2025-c",
     "title": "App Development Explorations with Swift Playgrounds",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
@@ -201,6 +241,7 @@
       "appdev"
     ],
     "cta_ids": [
+      "enquire-now-mailto-yjsoon-tk-sg-subject-infocomm-learn-roadmap",
       "swift-explorers-challenge-https-swiftexplorers-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -274,13 +315,31 @@
         "text": "ProjectStudents will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge.RequirementsHardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.Software: Swift Playgrounds 4.5 or newer. Free from Apple App Store.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented…",
+    "featured": true,
+    "weight": 65,
+    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon_alt": "Swift",
+    "platform_ids": [
+      "swift"
+    ],
+    "domain_ids": [
+      "appdev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap",
+    "intro_html": "<p>This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented Reality, Machine Learning, and more. </p><p>Students will have a chance to go deep into toolkits and features that power the latest apps on iPhone, iPad, and even the Apple Vision Pro. This track is recommended for students who have completed any app development courses in the IMDA Swift LEARN Roadmaps in 2023/2024.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Read and apply documentation and tutorials on further concepts in Swift and SwiftUI</p></li><li data-preset-tag=\"p\"><p>Understand how to extend apps using online data available from application programming interfaces (APIs)</p></li><li data-preset-tag=\"p\"><p>Utilise intermediate-to-advanced level libraries and tools such as Vision, CoreML, Reality Composer, and ARKit to create mobile apps with machine learning and augmented reality built-in.</p></li></ul>",
+    "details_html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\">Swift Explorers Challenge</a>.</p><p><strong>Requirements</strong></p><ul><li data-preset-tag=\"p\"><p><strong>Hardware: </strong> iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, <em>or </em>Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.</p></li><li data-preset-tag=\"p\"><p><strong>Software</strong>: Swift Playgrounds 4.5 or newer. Free from Apple App Store.</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "mSXKvh1re"
   },
   {
     "id": "imda-apple-2025-a",
     "slug": "imda-apple-2025-a",
     "title": "App Prototyping with Keynote and Swift Playgrounds",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
@@ -293,6 +352,7 @@
       "cs"
     ],
     "cta_ids": [
+      "enquire-now-mailto-yjsoon-tk-sg-subject-infocomm-learn-roadmap",
       "swift-explorers-challenge-https-swiftexplorers-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -366,13 +426,33 @@
         "text": "ProjectStudents will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge.RequirementsHardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.Software: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines. This programme is suitable for students who are…",
+    "featured": true,
+    "weight": 60,
+    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon_alt": "Swift",
+    "platform_ids": [
+      "swift",
+      "keynote"
+    ],
+    "domain_ids": [
+      "uiux",
+      "cs"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap",
+    "intro_html": "<p>Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines. </p><p>This programme is suitable for students who are new to coding, and are interested in designing and prototyping mobile apps using Keynote. </p><p>Beyond no-code prototyping, students can learn some syntax-based programming in Apple’s Swift language by solving fun, interactive coding puzzles and creating simple apps in SwiftUI.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Know and implement app design concepts from Apple’s Human Interface Guidelines</p></li><li data-preset-tag=\"p\"><p>Understand the design thinking process in relation to app development</p></li><li data-preset-tag=\"p\"><p>Create low-fidelity and high-fidelity app prototype designs</p></li><li data-preset-tag=\"p\"><p>Create interactive app prototypes to showcase ideas</p></li><li data-preset-tag=\"p\"><p>Read and write basic Swift code to solve coding puzzles and create simple apps.</p></li></ul>",
+    "details_html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\">Swift Explorers Challenge</a>.</p><p><strong>Requirements</strong></p><ul><li data-preset-tag=\"p\"><p><strong>Hardware: </strong> iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, <em>or </em>Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.</p></li><li data-preset-tag=\"p\"><p><strong>Software</strong>: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "HBpbgkmqH"
   },
   {
     "id": "build-for-mobile-with-react-native",
     "slug": "build-for-mobile-with-react-native",
     "title": "Build for Mobile: App Development with React Native",
-    "subtitle": null,
+    "subtitle": "Corporate training, 21 & 22 August 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335",
@@ -385,6 +465,7 @@
       "appdev"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -457,13 +538,33 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more informationAll quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Jump into mobile app development and build real apps that work on both iOS and Android!Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences…",
+    "featured": true,
+    "weight": 93,
+    "icon": "https://framerusercontent.com/images/bZhkNwEa64Xr6qWOth5GdGolk4.png",
+    "icon_alt": "React Native",
+    "platform_ids": [
+      "javascript",
+      "react-native"
+    ],
+    "domain_ids": [
+      "software-engineering",
+      "appdev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Jump into mobile app development and build real apps that work on both iOS and Android!</p><p>Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences that run seamlessly across platforms? The secret is React Native: Meta's powerful framework that lets you write code once, and deploy everywhere.</p><p>This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality.</p><p>Perfect for web developers looking to expand into mobile, or anyone wanting to prototype app ideas quickly. By the end, you'll have three working apps in your portfolio and the confidence to build your own mobile projects. No prior mobile development experience required; just bring your curiosity and a laptop.</p>",
+    "learning_objectives_html": "<p>This comprehensive React Native program will teach you modern mobile app development using JavaScript and industry-standard tools.</p><p>You'll gain practical experience building three progressively complex applications, learning essential mobile development patterns and best practices along the way. The course emphasises hands-on coding with immediate feedback through live device testing.</p><p><strong>By the end of the program, you will:</strong></p><ul><li data-preset-tag=\"p\"><p><strong>Try React Native fundamentals</strong> including components, JSX syntax, and styling with React Native's CSS-like StyleSheet system</p></li><li data-preset-tag=\"p\"><p><strong>Build interactive mobile UIs</strong> using state management with React hooks, event handling, and conditional rendering</p></li><li data-preset-tag=\"p\"><p><strong>Navigate between screens</strong> using React Navigation with stack and tab navigators for professional app flows</p></li><li data-preset-tag=\"p\"><p><strong>Work with real data</strong> by importing JSON data, mapping arrays to UI components, and building dynamic lists</p></li><li data-preset-tag=\"p\"><p><strong>Create reusable components</strong> following React patterns for maintainable, scalable mobile applications</p></li><li data-preset-tag=\"p\"><p><strong>Deploy and test apps</strong> on physical devices using Expo, plus set up local development environments</p></li><li data-preset-tag=\"p\"><p><strong>Integrate third-party libraries</strong> like React Native Paper for polished UI components and vector icons</p></li><li data-preset-tag=\"p\"><p><strong>Use modern JavaScript features</strong> including ES6+ syntax, destructuring, template literals, and arrow functions</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)</p><p><strong>Fees</strong> (figures in parantheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "RaBbJBqeV"
   },
   {
     "id": "building-agents-with-openclaw",
     "slug": "building-agents-with-openclaw",
     "title": "Building Agents with OpenClaw",
-    "subtitle": null,
+    "subtitle": "Corporate training",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316",
@@ -475,6 +576,7 @@
       "ai"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -547,13 +649,34 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course. Fees (excl. GST) per participant:16 participants and above: $65012-15 participants: $750 8-11 participants: $870For 7 or fewer participants, we charge a flat fee of S$6,800 total. All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Stop building chatbots. Start deploying autonomous systems. The future of AI isn't a text box, it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier…",
+    "featured": false,
+    "weight": 99,
+    "icon": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
+    "icon_alt": "Lovable",
+    "platform_ids": [
+      "html-css",
+      "javascript",
+      "chatgpt",
+      "figma"
+    ],
+    "domain_ids": [
+      "ai"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p dir=\"auto\">Stop building chatbots. Start deploying autonomous systems. The future of AI isn't a text box, it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier open-source framework for building agents that can plan, use tools, and self-correct in real-time.</p><p dir=\"auto\">While others are stuck in \"prompt-and-hope\" cycles, you will learn to build systems that possess agency: the ability to decompose complex goals, interact with external APIs, and execute long-horizon tasks without constant human intervention.</p>",
+    "learning_objectives_html": "<p dir=\"auto\">By the end of this course, you will:</p><ul dir=\"auto\"><li data-preset-tag=\"p\"><p><strong>The Agentic Loop:</strong> Mastering the <em>Plan → Act → Observe → Re-plan</em> cycle.</p></li><li data-preset-tag=\"p\"><p><strong>Tool-Augmented Generation (TAG):</strong> Building secure interfaces between OpenClaw and your private data/APIs.</p></li><li data-preset-tag=\"p\"><p><strong>Multi-Agent Orchestration:</strong> Learning when one agent isn't enough and how to manage a \"swarm\" of OpenClaw instances.</p></li><li data-preset-tag=\"p\"><p><strong>Local &amp; Cloud Deployment:</strong> Leveraging the open-source nature of OpenClaw to deploy on your own infrastructure for maximum data privacy.</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. </p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course. </p><p><strong>Fees</strong> (excl. GST) per participant:</p><ul><li data-preset-tag=\"p\"><p>16 participants and above: $650</p></li><li data-preset-tag=\"p\"><p>12-15 participants: $750 </p></li><li data-preset-tag=\"p\"><p>8-11 participants: $870</p></li></ul><p>For 7 or fewer participants, we charge a flat fee of S$6,800 total. </p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "oyv70WzEv"
   },
   {
     "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
     "slug": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
     "title": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making",
-    "subtitle": null,
+    "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "17 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360",
@@ -565,6 +688,7 @@
       "iot"
     ],
     "cta_ids": [
+      "enquire-now-https-academy-smu-edu-sg-programme-enquiry-course-certificate-20in-20technology-20foundations-20harnessing-20the-20power-20of-20internet-20of-20things-20and-20creative-20digital-20making-nid-80496",
       "here-https-academy-smu-edu-sg-courses-certificate-technology-foundations-harnessing-power-internet-things-and-creative-digital",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -638,13 +762,33 @@
         "text": "Topic/StructureLearn and apply introductory coding concepts, such as loops, variables, and functions, through block-based languages and PythonLearn to programme microcontrollers such as the micro:bit, Arduino, and Raspberry PiConnect a variety of input sensors and output devices to microcontrollers, and control them through codeAssessmentProject presentationsGroup assignments",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance…",
+    "featured": true,
+    "weight": 81,
+    "icon": "https://framerusercontent.com/images/5lUlMn2yi5S5KDkBEGDYH5wkN8I.png",
+    "icon_alt": null,
+    "platform_ids": [
+      "arduino",
+      "bbc-micro-bit",
+      "raspberry-pi"
+    ],
+    "domain_ids": [
+      "iot"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Harnessing%20the%20Power%20of%20Internet%20of%20Things%20and%20Creative%20Digital%20Making&nid=80496",
+    "intro_html": "<p>More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance our standards of living. Welcome to the world of digital making, where collision of ideas and technology can either make or break. Participants in this programme can find their stroke of genius as they learn the building blocks of digital making from coding concepts and microcontrollers (Micro:bit, Arduino, and Raspberry Pi) and create prototypes that respond to sound, touch and light. Click <a href=\"https://academy.smu.edu.sg/courses/certificate-technology-foundations-harnessing-power-internet-things-and-creative-digital\" target=\"_blank\">here</a> for more info.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand what “digital making” is, and how it applies to modern prototyping with electronics</p></li><li data-preset-tag=\"p\"><p>Appreciate the world of&nbsp;“Internet of Things” by sending sensor data online for practical applications</p></li></ul>",
+    "details_html": "<p><strong>Topic/Structure</strong></p><ul><li data-preset-tag=\"p\"><p>Learn and apply introductory coding concepts, such as loops, variables, and functions, through block-based languages and PythonLearn to programme microcontrollers such as the micro:bit, Arduino, and Raspberry Pi</p></li><li data-preset-tag=\"p\"><p>Connect a variety of input sensors and output devices to microcontrollers, and control them through code</p></li></ul><p><strong>Assessment</strong></p><ul><li data-preset-tag=\"p\"><p>Project presentations</p></li></ul><ul><li data-preset-tag=\"p\"><p>Group assignments</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "QkzAAkd5H"
   },
   {
     "id": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
     "slug": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
     "title": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology",
-    "subtitle": null,
+    "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "17 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360",
@@ -656,6 +800,7 @@
       "cryptography"
     ],
     "cta_ids": [
+      "enquire-now-https-academy-smu-edu-sg-programme-enquiry-course-certificate-20in-20technology-20foundations-20unleash-20the-20potential-20of-20blockchain-20technology-nid-80491",
       "here-https-academy-smu-edu-sg-courses-certificate-technology-foundations-unleash-potential-blockchain-technology",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -729,13 +874,31 @@
         "text": "Topic/StructureAppreciate mathematical underpinnings of the blockchainCreate a simple decentralised app on the Blockchain with StellarDiscuss meaningfully applications of blockchain in various industriesAssessmentProject presentationsGroup assignments",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and…",
+    "featured": true,
+    "weight": 80,
+    "icon": "https://framerusercontent.com/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png",
+    "icon_alt": null,
+    "platform_ids": [
+      "stellar"
+    ],
+    "domain_ids": [
+      "cryptography"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Unleash%20the%20Potential%20of%20Blockchain%20Technology&nid=80491",
+    "intro_html": "<p>Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and what makes it so intriguing. This programme discusses real-world examples and contrasts between specific blockchain implementations, such as Bitcoin, Ethereum and Stellar, for a better understanding to the concept of blockchain technology. Click <a href=\"https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology\" target=\"_blank\">here</a> to find out more.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand what is a blockchain, how&nbsp;and why it works</p></li><li data-preset-tag=\"p\"><p>Explain relevant concepts such as cryptography and signatures that make blockchain relevant</p></li></ul>",
+    "details_html": "<p><strong>Topic/Structure</strong></p><ul><li data-preset-tag=\"p\"><p>Appreciate mathematical underpinnings of the blockchain</p></li><li data-preset-tag=\"p\"><p>Create a simple decentralised app on the Blockchain with Stellar</p></li><li data-preset-tag=\"p\"><p>Discuss meaningfully applications of blockchain in various industries</p></li></ul><p><strong>Assessment</strong></p><ul><li data-preset-tag=\"p\"><p>Project presentations</p></li><li data-preset-tag=\"p\"><p>Group assignments</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "HUB05nx0j"
   },
   {
     "id": "code-for-fun-ai-workshop",
     "slug": "code-for-fun-ai-workshop",
     "title": "Code For Fun AI Workshop",
-    "subtitle": null,
+    "subtitle": "A CODE@SG initiative by IMDA and MOE.",
     "duration": "10 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
@@ -748,6 +911,7 @@
       "cs"
     ],
     "cta_ids": [
+      "enquire-now-mailto-imda-codesg-imda-gov-sg",
       "imda-codesg-imda-gov-sg-mailto-imda-codesg-imda-gov-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -821,13 +985,35 @@
         "text": "How to apply?All Ministry of Education (MOE) government and government-aided secondary schools are eligible to apply for the AI for Fun module. Students are required to complete the Code for Fun programme or a comparable programme before they are eligible to participate in the AI for Fun module. If schools are on Code for Fun, AI for Fun may be taken up by the same cohort (e.g. Secondary 1 cohort to do both CFF and AIFF) or a later cohort (e.g. Secondary 1 cohort to do CFF, Secondary 2 cohort to do AIFF). Application instructions will be sent to all MOE government and government-aided secondary schools between September to October annually. Schools keen to apply for the programme should submit their application within the application window stated. For enquires regarding AI for Fun for secondary schools, please contact us at imda_codesg@imda.gov.sg.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "card_blurb": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…",
+    "featured": false,
+    "weight": 100,
+    "icon": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
+    "icon_alt": null,
+    "platform_ids": [
+      "scratch",
+      "python",
+      "bbc-micro-bit",
+      "makecode-arcade"
+    ],
+    "domain_ids": [
+      "ai",
+      "cs"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "mailto:imda_codesg@imda.gov.sg",
+    "intro_html": "<p><strong>Our CFF 2025 Scheme of Work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>",
+    "learning_objectives_html": "<h2>AI for Fun for Primary Schools</h2><p>Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, two new 5-hour AI for Fun modules will be offered to primary schools. Students will get to learn more about Generative AI and AI with Smart Robots through these engaging AI courses. Under the two modules, students will have hands-on experience in learning the following:</p><ol><li data-preset-tag=\"p\"><p>Generative AI</p><ul><li data-preset-tag=\"p\"><p>Natural Language Processing</p></li><li data-preset-tag=\"p\"><p>Safe and responsible use of Generative AI</p></li><li data-preset-tag=\"p\"><p>Applying Generative AI for ideation and content creation<br><br></p></li></ul></li><li data-preset-tag=\"p\"><p>AI with Smart Robots</p><ul><li data-preset-tag=\"p\"><p>Computer vision</p></li><li data-preset-tag=\"p\"><p>How smart robots respond to inputs via sensors</p></li><li data-preset-tag=\"p\"><p>Integrating Computer vision with smart robots to solve problems</p></li></ul></li></ol><img alt=\"\" src=\"https://framerusercontent.com/images/lwtS0iVp9mgTsAeVutkPxcUPVAI.png\"><h2>AI for Fun for Secondary Schools</h2><p>Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, a new 10-hour AI for Fun module will be offered to secondary schools. </p><p>Under the AI for Fun module, students will have hands-on experience in learning the following:</p><ol><li data-preset-tag=\"p\"><p>How the quantity and quality of training data affects AI performance</p></li><li data-preset-tag=\"p\"><p>How biases are formed in AI-generated content</p></li><li data-preset-tag=\"p\"><p>The societal implications of AI</p></li><li data-preset-tag=\"p\"><p>Large Language Models</p></li><li data-preset-tag=\"p\"><p>Custom chatbots</p></li><li data-preset-tag=\"p\"><p>Writing effective prompts for Generative AI</p></li><li data-preset-tag=\"p\"><p>Applying Generative AI to solve problems related to a theme such as Sustainable Living</p></li></ol><img alt=\"\" src=\"https://framerusercontent.com/images/cyOC2RTds2BTmo90RXGKxppjWJw.png\">",
+    "details_html": "<h2>How to apply?</h2><p>All Ministry of Education (MOE) government and government-aided secondary schools are eligible to apply for the AI for Fun module. Students are required to complete the Code for Fun programme or a comparable programme before they are eligible to participate in the AI for Fun module. If schools are on Code for Fun, AI for Fun may be taken up by the same cohort (e.g. Secondary 1 cohort to do both CFF and AIFF) or a later cohort (e.g. Secondary 1 cohort to do CFF, Secondary 2 cohort to do AIFF). Application instructions will be sent to all MOE government and government-aided secondary schools between September to October annually. Schools keen to apply for the programme should submit their application within the application window stated. For enquires regarding AI for Fun for secondary schools, please contact us at <a href=\"mailto:imda_codesg@imda.gov.sg\">imda_codesg@imda.gov.sg</a>.</p>",
+    "source_collection": "Programmes",
+    "source_id": "AH7djn2Me"
   },
   {
     "id": "code-for-fun-baseline-workshop",
     "slug": "code-for-fun-baseline-workshop",
     "title": "Code For Fun Baseline Workshop",
-    "subtitle": null,
+    "subtitle": "A CODE@SG initiative by IMDA and MOE.",
     "duration": "10 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
@@ -840,6 +1026,7 @@
       "design-thinking"
     ],
     "cta_ids": [
+      "enquire-now-mailto-imda-codesg-imda-gov-sg",
       "imda-codesg-imda-gov-sg-mailto-imda-codesg-imda-gov-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -913,13 +1100,35 @@
         "text": "How to apply?All MOE government and government-aided secondary schools are eligible to apply for the Code for Fun programme for secondary schools. Application instructions will be sent to all Ministry of Education (MOE) government and government-aided secondary schools between September to October annually. Schools applying for the programme should submit their application within the application period provided. For enquiries regarding Code for Fun for secondary schools, please contact us at imda_codesg@imda.gov.sg.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "card_blurb": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…",
+    "featured": false,
+    "weight": 100,
+    "icon": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
+    "icon_alt": null,
+    "platform_ids": [
+      "makecode-arcade",
+      "python",
+      "scratch",
+      "bbc-micro-bit"
+    ],
+    "domain_ids": [
+      "cs",
+      "design-thinking"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "mailto:imda_codesg@imda.gov.sg",
+    "intro_html": "<p><strong>Our CFF 2025 Scheme of Work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>",
+    "learning_objectives_html": "<h2>Code for Fun for Primary Schools</h2><p>The Code for Fun programme offers upper primary students 10 hours of lessons on computational thinking, coding, and introduction to emerging technologies such as Artificial Intelligence (AI).</p><p>Through the programme, students will:<br>- Learn about core computational thinking concepts and how it can be applied to daily life.<br>- Understand basic programming concepts such as debugging, events, loops, variables, functions, and conditionals.<br>- Develop logical thinking and problem-solving skills.<br>- Discover how emerging technologies such as AI are part of, and influence our daily lives.</p><img alt=\"\" src=\"https://framerusercontent.com/images/E8REPxfDIMr6Z1CeiqAn5ZMmTw.png\"><h2>Code for Fun for Secondary Schools</h2><p>For secondary school students, Code for Fun strengthens students’ inventive thinking, design thinking and digital making skills and complements Ministry of Education (MOE)’s EdTech Masterplan 2030 and other existing technology-related curriculum. </p><p>The programme offers 10 hours of lessons which:<br>- Focuses on digital making and design prototyping using microcontrollers.<br>- Reinforces students’ digital literacy and understanding through practical project work and real-world examples.<br>- Includes two programming tracks for schools to choose from – block-based programming and text-based programming.</p><p>The following enhancements to the Code for Fun programme were introduced from 2023:<br>1. Training hardware will be delivered by a vendor and funded by IMDA and MOE HQ. Schools can also choose between a vendor delivering student training or conducting it internally.<br>2. Better integration with schools’ Applied Learning Programmes (ALP) via student projects involving ALP themes such as sustainability and the future of transportation.<br>3. Inclusion of emerging tech through hands-on project work using hardware such as AI-enabled camera.</p><img alt=\"\" src=\"https://framerusercontent.com/images/hZsI1TefMdCpVJFxNYYNSjp9NI.png\">",
+    "details_html": "<h2>How to apply?</h2><p>All MOE government and government-aided secondary schools are eligible to apply for the Code for Fun programme for secondary schools. Application instructions will be sent to all Ministry of Education (MOE) government and government-aided secondary schools between September to October annually. Schools applying for the programme should submit their application within the application period provided. For enquiries regarding Code for Fun for secondary schools, please contact us at <a href=\"mailto:imda_codesg@imda.gov.sg\">imda_codesg@imda.gov.sg</a>.</p>",
+    "source_collection": "Programmes",
+    "source_id": "fJw14A0IZ"
   },
   {
     "id": "code-exp-2025",
     "slug": "code-exp-2025",
     "title": "CODE_EXP 2025",
-    "subtitle": null,
+    "subtitle": "11 May 2025",
     "duration": "4 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484",
@@ -1005,13 +1214,33 @@
         "text": "Phase 1: Levelling UpTraining Schedule:Welcome Brief and Intro to Prototyping • 11 May (Sun) • 9:30am-12:30pmReact Native 1 • 11 May (Sun) • 2pm - 5pmReact Native 2 • 12 May (Mon) • 9:30am-12:30pmReact Native 3 • 12 May (Mon) • 2pm - 5pmWorking with Generative AI • 13 May (Tue) • 9:30am-12:30pmEdge LLMs • 14 May (Wed) • 9:30am-12:30pmPhase 2: QualifiersDeadline: 1200hrs, 24 May 2025Submission: https://tk.sg/codeexp25_qualifiersSubmission requirements:Proposal (Value proposition slide deck, no more than 15 slides)Elevator Pitch (1-minute video)ArchitectureWireframePhase 3: FinalsMarina Bay Sands Expo & Convention Centre11 & 12 June 202440 teams will compete live for cash prizesPut in the final touches to your mobile appPitch and impress the Panel of Judges",
         "kind": "labelled"
       }
-    ]
+    ],
+    "card_blurb": "CODE_EXP is a mobile dev hackathon spread over three phases:Phase 1: Training sessionsPhase 2: QualifiersPhase 3: Finals",
+    "featured": true,
+    "weight": 30,
+    "icon": "https://framerusercontent.com/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png",
+    "icon_alt": null,
+    "platform_ids": [
+      "react-native",
+      "tensorflow"
+    ],
+    "domain_ids": [
+      "ai",
+      "appdev"
+    ],
+    "sign_up_label": null,
+    "sign_up_url": null,
+    "intro_html": "<p>CODE_EXP is a <strong>mobile dev hackathon </strong>spread over three phases:</p><ul><li data-preset-tag=\"p\"><p>Phase 1: <strong>Training sessions</strong></p></li><li data-preset-tag=\"p\"><p>Phase 2: <strong>Qualifiers</strong></p></li><li data-preset-tag=\"p\"><p>Phase 3: <strong>Finals</strong></p></li></ul>",
+    "learning_objectives_html": "<ol><li data-preset-tag=\"p\"><p><strong>Gain Hands-on Experience with React Native</strong></p><ul><li data-preset-tag=\"p\"><p>Understand the fundamentals of React Native for cross-platform mobile development.</p></li><li data-preset-tag=\"p\"><p>Build functional mobile UI components and integrate backend services.</p></li></ul></li><li data-preset-tag=\"p\"><p><strong>Master the End-to-End Prototyping Process</strong></p><ul><li data-preset-tag=\"p\"><p>Learn how to ideate, wireframe, and prototype a mobile app concept effectively.</p></li><li data-preset-tag=\"p\"><p>Translate user needs into intuitive app designs.</p></li></ul></li><li data-preset-tag=\"p\"><p><strong>Integrate Generative AI into Mobile Apps</strong></p><ul><li data-preset-tag=\"p\"><p>Explore how to leverage generative AI tools (e.g. LLMs) to enhance app functionality.</p></li><li data-preset-tag=\"p\"><p>Understand practical use cases and best practices for AI integration.</p></li></ul></li><li data-preset-tag=\"p\"><p><strong>Work with Edge LLMs</strong></p><ul><li data-preset-tag=\"p\"><p>Learn about deploying LLMs on-device or on the edge for faster, privacy-preserving AI features.</p></li><li data-preset-tag=\"p\"><p>Understand the trade-offs and constraints of edge computing in mobile environments.</p></li></ul></li><li data-preset-tag=\"p\"><p><strong>Develop Communication &amp; Pitching Skills</strong></p><ul><li data-preset-tag=\"p\"><p>Craft a compelling 1-minute elevator pitch video.</p></li><li data-preset-tag=\"p\"><p>Create a persuasive slide deck that clearly articulates the value proposition and architecture of your app.</p></li></ul></li><li data-preset-tag=\"p\"><p><strong>Learn Agile, Time-Conscious Product Development</strong></p><ul><li data-preset-tag=\"p\"><p>Practice working within tight deadlines to ideate, develop, and iterate on a mobile app concept.</p></li><li data-preset-tag=\"p\"><p>Experience what it's like to build MVPs in a fast-paced, real-world scenario.</p></li></ul></li><li data-preset-tag=\"p\"><p><strong>Compete and Collaborate Under Pressure</strong></p><ul><li data-preset-tag=\"p\"><p>Improve teamwork and decision-making in a live, competitive setting.</p></li><li data-preset-tag=\"p\"><p>Receive feedback from judges and peers to iterate on your project.</p></li></ul></li></ol><p><br></p>",
+    "details_html": "<h2>Phase 1: Levelling Up</h2><p>Training Schedule:</p><ul><li data-preset-tag=\"p\"><p>Welcome Brief and Intro to Prototyping • 11 May (Sun) • 9:30am-12:30pm</p></li><li data-preset-tag=\"p\"><p>React Native 1 • 11 May (Sun) • 2pm - 5pm</p></li><li data-preset-tag=\"p\"><p>React Native 2 • 12 May (Mon) • 9:30am-12:30pm</p></li><li data-preset-tag=\"p\"><p>React Native 3 • 12 May (Mon) • 2pm - 5pm</p></li><li data-preset-tag=\"p\"><p>Working with Generative AI • 13 May (Tue) • 9:30am-12:30pm</p></li><li data-preset-tag=\"p\"><p>Edge LLMs • 14 May (Wed) • 9:30am-12:30pm</p></li></ul><h2>Phase 2: Qualifiers</h2><p><strong>Deadline:</strong> 1200hrs, 24 May 2025</p><p><strong>Submission: </strong><a href=\"https://tk.sg/codeexp25_qualifiers\">https://tk.sg/codeexp25_qualifiers</a></p><p><strong>Submission requirements:</strong></p><ol><li data-preset-tag=\"p\"><p>Proposal (Value proposition slide deck, no more than 15 slides)</p></li><li data-preset-tag=\"p\"><p>Elevator Pitch (1-minute video)</p></li><li data-preset-tag=\"p\"><p>Architecture</p></li><li data-preset-tag=\"p\"><p>Wireframe</p></li></ol><h2>Phase 3: Finals</h2><p><strong>Marina Bay Sands Expo &amp; Convention Centre</strong></p><p><strong>11 &amp; 12 June 2024</strong></p><ul><li data-preset-tag=\"p\"><p>40 teams will compete live for cash prizes</p></li><li data-preset-tag=\"p\"><p>Put in the final touches to your mobile app</p></li><li data-preset-tag=\"p\"><p>Pitch and impress the Panel of Judges</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "jpcZBgk7C"
   },
   {
     "id": "iotmaker",
     "slug": "iotmaker",
     "title": "Digital Maker: Create with 3D Printing and IOT",
-    "subtitle": null,
+    "subtitle": "14 - 15 January 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006",
@@ -1024,6 +1253,7 @@
       "iot"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "here-https-iotmaker-tk-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -1097,13 +1327,33 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more informationAll quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Ever wondered how things are made, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are…",
+    "featured": false,
+    "weight": 30,
+    "icon": "https://framerusercontent.com/images/PN4JpLKZiMpUuKHxWvrW4KymVw.png",
+    "icon_alt": "3D Printing",
+    "platform_ids": [
+      "3d-printing",
+      "m5stack"
+    ],
+    "domain_ids": [
+      "making",
+      "iot"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Ever wondered how things are <em>made</em>, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are transforming our daily routines, making life more convenient and connected.</p><p>In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing. </p><p>This course is perfect whether you’re looking to start a new project, boost your tech skills, or just have some fun creating. It’s practical, engaging, and designed to help you bring your ideas to life. Come join us and experience the thrill of digital making! Find out more <a href=\"https://iotmaker.tk.sg/\" target=\"_blank\">here</a>.</p>",
+    "learning_objectives_html": "<p>In this introductory course to digital making, you'll dive into the core technologies that power smart devices like smart fridges, smart doorbells, Amazon Echo, and Google Home first using programmable microcontrollers. </p><p>For a complete learning journey, you'll also explore beginning techniques in 3D printing and digital fabrication, with an interactive experience designing, sourcing, and fabricating practical projects. This hands-on approach ensures you gain practical experience and a solid foundation in digital maker development.</p><p>By the end of the program, you will have learned to:</p><ul><li data-preset-tag=\"p\"><p>﻿﻿Understand what \"digital making\" is, and how it applies to modern prototyping and crafting</p></li><li data-preset-tag=\"p\"><p>﻿﻿Appreciate the world of \"Internet of Things\" (loT) by sending sensor data online for practical applications</p></li><li data-preset-tag=\"p\"><p>﻿﻿Learn and apply introductory coding concepts to program microcontrollers</p></li><li data-preset-tag=\"p\"><p>Understand the fundamentals of 3D modelling for practical applications</p></li><li data-preset-tag=\"p\"><p>﻿﻿Design and 3D print custom components</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)</p><p><strong>Fees</strong> (figures in parantheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "vOoULCsCT"
   },
   {
     "id": "imda-microbit-2025",
     "slug": "imda-microbit-2025",
     "title": "Digital Making with micro:bit",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with micro:bit.",
     "duration": "24 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245",
@@ -1116,6 +1366,7 @@
       "making"
     ],
     "cta_ids": [
+      "enquire-now-hello-tk-sg",
       "zenitant-https-zenitanteducation-com",
       "3d-tronics-micro-controller-challenge-https-3dtronics-asia",
       "hello-tinkerclass-tech-mailto-hello-tinkerclass-tech",
@@ -1192,13 +1443,33 @@
         "text": "Zenitant is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at hello@tinkerclass.tech to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — email us to find out more.CourseCourse CodeHoursDetailsDigital Making with micro:bitP-MICROSOFT-MAKE-BASIC / P-MICROSOFT-MAKE-INTM24 hoursSuitable for schools with PCs, Macs, iPads, and Chromebooks. micro:bit required.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to…",
+    "featured": true,
+    "weight": 86,
+    "icon": "https://framerusercontent.com/images/Ie760gVdIFj1Rc5gz4kaJ36mT4.jpg",
+    "icon_alt": "micro:bit",
+    "platform_ids": [
+      "makecode-arcade",
+      "bbc-micro-bit"
+    ],
+    "domain_ids": [
+      "iot",
+      "making"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "hello@tk.sg",
+    "intro_html": "<p>In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to learners of all ages. The micro:bit can be easily programmed through a block-based coding language called MakeCode. Students will explore computational thinking through the use of the micro:bit and various other external components designed to engage and enthrall students. With components that move (servo), light up (LED strip) and make noise (buzzer), students will wield the power to control the physical world in code.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Program microcontrollers</p></li><li data-preset-tag=\"p\"><p>Introduce coding, electronics, and hands-on digital making</p></li><li data-preset-tag=\"p\"><p>Learn MakeCode</p></li><li data-preset-tag=\"p\"><p>Reinforce design thinking, creativity, and maker principles</p></li></ul>",
+    "details_html": "<p><a href=\"https://zenitanteducation.com/\">Zenitant</a> is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual <a href=\"https://3dtronics.asia/\">3d-tronics Micro-controller Challenge</a> from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at <a href=\"mailto:hello@tinkerclass.tech\">hello@tinkerclass.tech</a> to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — <a href=\"mailto:yjsoon@tk.sg\">email us</a> to find out more.</p><figure><table><tbody><tr><th><p>Course</p></th><th><p>Course Code</p></th><th><p>Hours</p></th><th><p>Details</p></th></tr><tr><td><p>Digital Making with micro:bit</p></td><td><p>P-MICROSOFT-MAKE-BASIC / P-MICROSOFT-MAKE-INTM</p></td><td><p>24 hours</p></td><td><p>Suitable for schools with PCs, Macs, iPads, and Chromebooks. micro:bit required.</p></td></tr></tbody></table></figure>",
+    "source_collection": "Programmes",
+    "source_id": "DQxBAqTnE"
   },
   {
     "id": "digital-making-with-micro-bit-iot",
     "slug": "digital-making-with-micro-bit-iot",
     "title": "Digital Making with micro:bit & IoT",
-    "subtitle": null,
+    "subtitle": "An introductory course on digital making with Micro:bit & IoT.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500",
@@ -1211,6 +1482,7 @@
       "cs"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -1283,13 +1555,32 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. Location: TBC Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) Fees (figures in parantheses include GST) Individual sign-up: $1,600 ($1,744) Groups of up to 7: $11,200 ($12,208) Groups of 8-15: $12,400 ($13,516) Groups of 16 and above: Please email for more information All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the…",
+    "featured": false,
+    "weight": 0,
+    "icon": "https://framerusercontent.com/images/qDxwnf110DDqLSIYw78MZ2QSZE.png",
+    "icon_alt": "IoT",
+    "platform_ids": [
+      "bbc-micro-bit"
+    ],
+    "domain_ids": [
+      "iot",
+      "cs"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the digital and physical world. With micro:bit's user-friendly interface and IoT's vast connectivity, learners can build smart devices, automate tasks, and explore endless possibilities.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand the fundamentals of micro:bit programming: Students will learn basic programming concepts and how to use the micro:bit's built-in features to create simple interactive projects. </p></li><li data-preset-tag=\"p\"><p>Explore the basics of IoT and its applications: Students will gain knowledge about the Internet of Things, its components, and real-world examples of IoT devices. </p></li><li data-preset-tag=\"p\"><p>Design and implement a small-scale IoT project: Students will apply their understanding of micro:bit programming and IoT concepts to create a functional IoT project, such as a remote-controlled device or a sensor-based automation system.</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times:</strong> 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. </p><p><strong>Location:</strong> TBC </p><p><strong>Requirements:</strong> Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) </p><p><strong>Fees</strong> (figures in parantheses include GST)</p><ul><li data-preset-tag=\"p\"><p> Individual sign-up: $1,600 ($1,744) </p></li><li data-preset-tag=\"p\"><p>Groups of up to 7: $11,200 ($12,208)</p></li><li data-preset-tag=\"p\"><p> Groups of 8-15: $12,400 ($13,516)</p></li><li data-preset-tag=\"p\"><p> Groups of 16 and above: Please email for more information All quoted prices are in SGD. Invoicing terms available.</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "Xmcb4eskF"
   },
   {
     "id": "unityarvr",
     "slug": "unityarvr",
     "title": "Enter the Metaverse: Get started with Unity for AR/VR",
-    "subtitle": null,
+    "subtitle": "11 - 12 February 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912",
@@ -1301,6 +1592,7 @@
       "gamedev"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "here-https-unityarvr-tk-sg",
       "unity-hardware-requirements-at-unity3d-com-https-docs-unity3d-com-manual-system-requirements-html",
       "our-courses-https-tinkercademy-com-courses-all",
@@ -1375,13 +1667,32 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. (iPads and Chromebooks are not supported.) Read more about the Unity hardware requirements at unity3d.com.Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more informationAll quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working…",
+    "featured": false,
+    "weight": 30,
+    "icon": "https://framerusercontent.com/images/iqewfsrP4f68PRBpb9CQTIejU.png",
+    "icon_alt": "Unity",
+    "platform_ids": [
+      "unity",
+      "ar-vr"
+    ],
+    "domain_ids": [
+      "gamedev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working on detailed digital twins, Unity is the tool you need to turn your big ideas into reality.</p><p>In this course, we'll guide you through Unity's core features and functionalities. On Day 1, you'll get familiar with the Unity interface, learn some C# scripting, and start creating interactive 3D environments. Then on Day 2, we'll dive into advanced AR/VR techniques and show you how to build amazing experiences for the metaverse.</p><p>This hands-on, intuitive course is perfect for aspiring developers, tech enthusiasts, and innovators. By the end, you'll have the skills to make the most of Unity, whether you're aiming to develop the next hit game, an innovative AR app, or a captivating virtual world.</p><p>Join us and transform your ideas into reality with Unity! Find out more <a href=\"https://unityarvr.tk.sg/\" target=\"_blank\">here</a>.</p>",
+    "learning_objectives_html": "<p>In this broad introduction to Unity development, you'll dive into the core technologies that power interactive 3D experiences and get hands-on experience building your own versatile projects using Unity.</p><p>For a complete learning journey, you'll also explore advanced techniques in AR/VR development through practical projects, gaining exposure to Unity's powerful capabilities for creating immersive experiences. This hands-on approach ensures you gain practical experience and a solid foundation in Unity development.</p><p>By the end of the programme, you will learn to:</p><ul><li data-preset-tag=\"p\"><p>Understand the fundamentals of Unity development, including the Unity interface, C# scripting, and creating interactive 3D environments.</p></li><li data-preset-tag=\"p\"><p>Create a basic AR/VR application using Unity's advanced features (Day 2).</p></li><li data-preset-tag=\"p\" style=\"--framer-text-color: rgb(255, 255, 255); --framer-font-size: 17.3333px; --framer-text-transform: none; --framer-text-stroke-width: 0px;\"><p>Learn how to integrate physics, animations, and user interactions to create compelling and immersive experiences (Day 2).</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. (iPads and Chromebooks are <em>not </em>supported.) Read more about the <a href=\"https://docs.unity3d.com/Manual/system-requirements.html\" target=\"_blank\">Unity hardware requirements at unity3d.com</a>.</p><p><strong>Fees</strong> (figures in parantheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "Et3IfkY3Q"
   },
   {
     "id": "imda-unity-2025",
     "slug": "imda-unity-2025",
     "title": "Game Development Bootcamp with Unity",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap bootcamp with Unity.",
     "duration": "32 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720",
@@ -1393,6 +1704,7 @@
       "gamedev"
     ],
     "cta_ids": [
+      "enquire-now-hello-tinkercademy-com",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -1465,13 +1777,31 @@
         "text": "Tinkercademy has been one of the first infocomm vendors to offer Unity training to schools since the early 2010s, introducing game development in Unity to over 1,000 students from Infocomm Clubs all over Singapore.CourseHoursDetails2022 for Infocomm Club training24 hoursWe ran this programme for 15 secondary schools and JCs in 2022.2023 bootcamp edition32 hours over 5 daysOur first run is happening June 5 to 9 at St. Patrick's School! Stay tuned for more details.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates.Unity is a powerful and versatile game engine,…",
+    "featured": true,
+    "weight": 78,
+    "icon": "https://framerusercontent.com/images/0OOu86wVjbq3jXKiC0xVgRJWZg.png",
+    "icon_alt": "Unity",
+    "platform_ids": [
+      "unity"
+    ],
+    "domain_ids": [
+      "gamedev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "hello@tinkercademy.com",
+    "intro_html": "<p>In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates.</p><p>Unity is a powerful and versatile game engine, with cross-platform features that appeal to both small developers and large game studios. 40% of the top 1000 mobile games and 50% of all new mobile games are built with Unity. By learning Unity, students will be better poised to enter and contribute to these industries.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p><strong>Understand Unity’s interface</strong> and workflow (scenes, GameObjects, components).</p></li><li data-preset-tag=\"p\"><p><strong>Design 2D/3D game levels</strong> using Unity’s tools (Tilemap, ProBuilder, or basic primitives).</p></li><li data-preset-tag=\"p\"><p><strong>Implement game mechanics</strong> (player movement, collisions, physics, scoring systems).</p></li><li data-preset-tag=\"p\"><p><strong>Script in C#</strong> to create interactivity (variables, loops, conditionals, functions).</p></li><li data-preset-tag=\"p\"><p><strong>Work with assets</strong> (import sprites, 3D models, audio) and optimize them for games.</p></li><li data-preset-tag=\"p\"><p><strong>Debug and test</strong> games using Unity’s Console and Play Mode.</p></li><li data-preset-tag=\"p\"><p><strong>Publish a standalone game</strong> (build for WebGL, PC, or mobile).</p></li><li data-preset-tag=\"p\"><p><strong>Apply iterative design</strong> through prototyping, playtesting, and feedback.</p></li></ul>",
+    "details_html": "<p>Tinkercademy has been one of the first infocomm vendors to offer Unity training to schools since the early 2010s, introducing game development in Unity to over 1,000 students from Infocomm Clubs all over Singapore.</p><figure><table><tbody><tr><th><p>Course</p></th><th><p>Hours</p></th><th><p>Details</p></th></tr><tr><td><p>2022 for Infocomm Club training</p></td><td><p>24 hours</p></td><td><p>We ran this programme for 15 secondary schools and JCs in 2022.</p></td></tr><tr><td><p>2023 bootcamp edition</p></td><td><p>32 hours over 5 days</p></td><td><p>Our first run is happening June 5 to 9 at St. Patrick's School! Stay tuned for more details.</p></td></tr></tbody></table></figure>",
+    "source_collection": "Programmes",
+    "source_id": "EmIYhJREJ"
   },
   {
     "id": "imda-minecraft-2025",
     "slug": "imda-minecraft-2025",
     "title": "Game Development in MakeCode Arcade & MineCraft",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.",
     "duration": "24 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450",
@@ -1483,6 +1813,7 @@
       "gamedev"
     ],
     "cta_ids": [
+      "enquire-now-hello-tk-sg",
       "zenitant-https-zenitanteducation-com",
       "3d-tronics-micro-controller-challenge-https-3dtronics-asia",
       "hello-tinkerclass-tech-mailto-hello-tinkerclass-tech",
@@ -1559,13 +1890,33 @@
         "text": "Zenitant is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at hello@tinkerclass.tech to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — email us to find out more.CourseCourse CodeHoursDetailsGame Development in MakeCode Arcade & MineCraftP-MICROSOFT-GAME-BASIC / P-MICROSOFT-GAME-INTM24 hoursSuitable for schools with PCs, Macs, iPads, and Chromebooks.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a…",
+    "featured": true,
+    "weight": 85,
+    "icon": "https://framerusercontent.com/images/DpOBnZ09CRXXgXc0fPYlHdh8GQI.png",
+    "icon_alt": "Minecraft",
+    "platform_ids": [
+      "makecode-arcade",
+      "minecraft"
+    ],
+    "domain_ids": [
+      "design-thinking",
+      "gamedev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "hello@tk.sg",
+    "intro_html": "<p>In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a beginner-friendly game development platform from Microsoft, students will be exposed to basic coding concepts and challenged to use code to solve logic programming problems in order to create their own retro-style games. Using Minecraft: Education's integrated coding editor, students will apply block-based coding to create exciting virtual 3D world environments. We believe that as students see their code take effect in a virtual 3D world environment, they will be excited to understand, explore and exploit the full capabilities of coding constructs such as variables, iterations and conditionals to create complex interactions. In 2025, schools will be able to sign up for beginner- and intermediate-level courses, for a total of 2 × 24-hour programmes.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Equip computational thinking skills</p></li><li data-preset-tag=\"p\"><p>Learn the MakeCode Arcade platform and explore basic doing concepts</p></li><li data-preset-tag=\"p\"><p>Use Minecraft: Education's coding editor to apply block-based coding to create virtual 3D world environments</p></li><li data-preset-tag=\"p\"><p>Explore variables, iterations, and conditionals to create complex interactions</p></li></ul>",
+    "details_html": "<p><a href=\"https://zenitanteducation.com/\">Zenitant</a> is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual <a href=\"https://3dtronics.asia/\">3d-tronics Micro-controller Challenge</a> from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at <a href=\"mailto:hello@tinkerclass.tech\">hello@tinkerclass.tech</a> to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — <a href=\"mailto:yjsoon@tk.sg\">email us</a> to find out more.</p><figure><table><tbody><tr><th><p>Course</p></th><th><p>Course Code</p></th><th><p>Hours</p></th><th><p>Details</p></th></tr><tr><td><p>Game Development in MakeCode Arcade &amp; MineCraft</p></td><td><p>P-MICROSOFT-GAME-BASIC / P-MICROSOFT-GAME-INTM</p></td><td><p>24 hours</p></td><td><p>Suitable for schools with PCs, Macs, iPads, and Chromebooks.</p></td></tr></tbody></table></figure>",
+    "source_collection": "Programmes",
+    "source_id": "vj_aSeIAu"
   },
   {
     "id": "knowledge-powered-ai-with-chatgpt",
     "slug": "knowledge-powered-ai-with-chatgpt",
     "title": "Knowledge-Powered AI with ChatGPT",
-    "subtitle": null,
+    "subtitle": "Corporate training",
     "duration": "½, 1, 2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125",
@@ -1577,6 +1928,7 @@
       "ai"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -1649,13 +2001,31 @@
         "text": "Dates and Times: ½, 1, or 2 days; can be configured over multiple sessions. Please write in to enquire. Location: CT HUB 2, 114 Lavender Street, or your preferred venue. Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants should have a ChatGPT account (free tier sufficient; Plus or Business tier recommended) — or we can provide access during the workshop.Fees (with GST in parantheses):Participants2 day1 day½ day1 to 9 (flat fee)$6,600 ($7,194)$3,630 ($3,956.70)$1,980 ($2,158.20)10 to 19 (per pax)*$690 ($752.10)$380 ($414.20)$210 ($228.90)20+ (per pax)$600 ($654)$330 ($359.70)$160 ($174.40)*Price capped at cost of 20 pax.We can provide ChatGPT Business Plan access to participants for the duration of the workshop for an additional fee of $50 ($54.50 with GST) per participant. Please note that participants' chats will not be retained once access expires — this is due to the nature of the ChatGPT Business Plan. All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Generative AI isn't just transforming how we create content. It's revolutionising how organisations access and leverage their knowledge. Whether you're looking to enhance customer…",
+    "featured": true,
+    "weight": 98,
+    "icon": "https://framerusercontent.com/images/FId8k56H3S4bGtYZjSSXC24LVI.png",
+    "icon_alt": "ChatGPT",
+    "platform_ids": [
+      "chatgpt"
+    ],
+    "domain_ids": [
+      "ai"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Generative AI isn't just transforming how we create content. It's revolutionising how organisations <em>access</em> and <em>leverage</em> their knowledge. Whether you're looking to enhance customer service, automate content creation, or develop intelligent knowledge systems, this workshop will equip you with the tools to harness AI's full potential within your organization.</p><p>In this course, available as half-, one, or two-day versions, we'll guide you through the cutting edge of generative AI technology. You'll start by understanding the digital landscape and exploring how large language models like ChatGPT function, before diving into practical applications of ChatGPT and other AI tools:</p><ul><li data-preset-tag=\"p\"><p>Understanding Large Language Models (LLMs), generative AI possibilities and limitations</p></li><li data-preset-tag=\"p\"><p>Prompt engineering</p></li><li data-preset-tag=\"p\"><p>Image generation with GPT-4o</p></li><li data-preset-tag=\"p\"><p>Canvas for collaborative writing and coding with AI</p></li><li data-preset-tag=\"p\"><p>Data analysis tools</p></li><li data-preset-tag=\"p\"><p>Projects</p></li><li data-preset-tag=\"p\"><p>Deep Research</p></li><li data-preset-tag=\"p\"><p>Retrieval-Augmented Generation</p></li></ul><p>This hands-on, executive-focused workshop is perfect for senior leaders, innovation teams, and decision-makers. By the end, you'll have created a prototype web app powered by generative AI, and developed a concrete understanding of how these technologies can transform your operations.</p><p>Join us and discover how to unlock the true potential of AI by combining it with your organisation's unique knowledge assets!</p>",
+    "learning_objectives_html": "<p>Through this programme, you will:</p><ul><li data-preset-tag=\"p\"><p>Understand the fundamentals of generative AI, including how large language models work, their capabilities, limitations, and ethical consideration</p></li><li data-preset-tag=\"p\"><p>Create product concepts, marketing materials, and business strategies using AI tools</p></li><li data-preset-tag=\"p\"><p>Explore digital presence creation with AI-assisted development tools</p></li><li data-preset-tag=\"p\"><p>Evaluate the potential of AI integration in your own organization's workflows and knowledge management systems</p></li><li data-preset-tag=\"p\"><p>Experience how RAG technology enhances AI responses by grounding them in specific knowledge bases and data sources</p></li></ul><p>For ½-day, 1-day, and 2-day course formats, we're happy to collaborate with you to tailor content and focus areas to your specific needs.</p>",
+    "details_html": "<p><strong>Dates and Times</strong>: ½, 1, or 2 days; can be configured over multiple sessions. Please write in to enquire. </p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street, or your preferred venue. </p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants should have a ChatGPT account (free tier sufficient; Plus or Business tier recommended) — or we can provide access during the workshop.</p><p><strong>Fees</strong> (with GST in parantheses):</p><figure><table><tbody><tr><th><p><strong>Participants</strong></p></th><th><p><strong>2 day</strong></p></th><th><p><strong>1 day</strong></p></th><th><p><strong>½ day</strong></p></th></tr><tr><th><p>1 to 9 (flat fee)</p></th><td><p>$6,600 ($7,194)</p></td><td><p>$3,630 ($3,956.70)</p></td><td><p>$1,980 ($2,158.20)</p></td></tr><tr><th><p>10 to 19 (per pax)*</p></th><td><p>$690 ($752.10)</p></td><td><p>$380 ($414.20)</p></td><td><p>$210 ($228.90)</p></td></tr><tr><th><p>20+ (per pax)</p></th><td><p>$600 ($654)</p></td><td><p>$330 ($359.70)</p></td><td><p>$160 ($174.40)</p></td></tr></tbody></table></figure><p>*Price capped at cost of 20 pax.</p><p>We can provide ChatGPT Business Plan access to participants for the duration of the workshop for an additional fee of $50 ($54.50 with GST) per participant. Please note that participants' chats will not be retained once access expires — this is due to the nature of the ChatGPT Business Plan. </p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "amXuYC1eX"
   },
   {
     "id": "vibe-coding-for-digital-builders-lovable-replit",
     "slug": "vibe-coding-for-digital-builders-lovable-replit",
     "title": "Level Up Your Vibe Coding (Lovable and Replit)",
-    "subtitle": null,
+    "subtitle": "Corporate training",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733",
@@ -1667,6 +2037,7 @@
       "ai"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -1739,13 +2110,34 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course. Fees (excl. GST) per participant:16 participants and above: $65012-15 participants: $750 8-11 participants: $870For 7 or fewer participants, we charge a flat fee of S$6,800 total. All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic…",
+    "featured": true,
+    "weight": 99,
+    "icon": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
+    "icon_alt": "Lovable",
+    "platform_ids": [
+      "html-css",
+      "javascript",
+      "chatgpt",
+      "figma"
+    ],
+    "domain_ids": [
+      "ai"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p dir=\"auto\">Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of <strong>agentic coding</strong>. We leverage the symbiotic power of <strong>Lovable</strong> for rapid UI generation and <strong>Replit’s</strong> professional cloud environment to build, secure, and deploy.</p><p dir=\"auto\">You won't just learn to prompt; you’ll learn to manage a fleet of AI agents to handle the heavy lifting of the development lifecycle, from initial scaffold to production release.<br><br>We focus on the <strong>agentic critical path</strong>: moving a project from a conceptual UI into a hardened, data-persistent application. You will learn to transition seamlessly from AI-driven design to professional backend logic, ensuring your \"AI-generated\" code meets enterprise standards for security and stability.</p><p dir=\"auto\"><br></p>",
+    "learning_objectives_html": "<p dir=\"auto\">By the end of this course, you will:</p><ul dir=\"auto\"><li data-preset-tag=\"p\"><p><strong>Agentic UI Orchestration:</strong> Rapidly iterating frontends with Lovable.</p></li><li data-preset-tag=\"p\"><p><strong>Backend Hardening:</strong> Using Replit Agents to bridge UI to secure databases.</p></li><li data-preset-tag=\"p\"><p><strong>Production Guardrails:</strong> Implementing environment security and data persistence.</p></li><li data-preset-tag=\"p\"><p><strong>The Handoff:</strong> Creating clean, modular codebases that are human-readable and easy to maintain.</p></li></ul><h3 dir=\"auto\"><br></h3>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. </p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course. </p><p><strong>Fees</strong> (excl. GST) per participant:</p><ul><li data-preset-tag=\"p\"><p>16 participants and above: $650</p></li><li data-preset-tag=\"p\"><p>12-15 participants: $750 </p></li><li data-preset-tag=\"p\"><p>8-11 participants: $870</p></li></ul><p>For 7 or fewer participants, we charge a flat fee of S$6,800 total. </p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "NGgOdvchq"
   },
   {
     "id": "mastering-the-web",
     "slug": "mastering-the-web",
     "title": "Mastering the Web: Understand Full-Stack Development",
-    "subtitle": null,
+    "subtitle": "Corporate training, 3 & 4 July 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034",
@@ -1758,6 +2150,7 @@
       "software-engineering"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "here-https-webmaster-tk-sg",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
@@ -1831,13 +2224,35 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)Fees (figures in parantheses include GST)• Individual sign-up: $1,600 ($1,744)• Groups of up to 7: $11,200 ($12,208)• Groups of 8-15: $12,400 ($13,516)• Groups of 16 and above: Please email for more informationAll quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Discover the inner workings of web applications in just 1-2 days!Web apps are part of everyday life, from banking, to email, to shopping, and productivity. What actually happens,…",
+    "featured": true,
+    "weight": 93,
+    "icon": "https://framerusercontent.com/images/m2e5vLFU2BGj1eEVY3FTucPeA.png",
+    "icon_alt": "Web Development",
+    "platform_ids": [
+      "html-css",
+      "javascript",
+      "sql",
+      "flask"
+    ],
+    "domain_ids": [
+      "webdev",
+      "software-engineering"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Discover the inner workings of web applications in just 1-2 days!</p><p>Web apps are part of everyday life, from banking, to email, to shopping, and productivity. What actually happens, though, between the moment you click on a URL, and when a fully-fledged web app shows up in your favourite browser?</p><p>This programme takes you from the basics of HTML, CSS, and JavaScript on the frontend (day 1), to servers and databases on the backend (day 2). Get a taste of web development, and gain the skills to communicate effectively with tech teams and understand the web's potential.</p><p>Perfect for fuelling your startup idea or web app prototype, this hands-on, intuitive course will have you interfacing confidently with developers in no time. Join us and unlock the power of web technologies! Find out more <a href=\"https://webmaster.tk.sg/\" target=\"_blank\">here</a>.</p>",
+    "learning_objectives_html": "<p>In this broad web development programme, you will learn to appreciate core technologies that power the internet, and get hands-on building your own versatile websites with core front-end web technologies: HTML, CSS, and JavaScript.</p><p>Gain exposure too to server-side web development through hands-on projects involving Python and Flask, a flexible web development framework. Through this process, you will gain practical experience and a solid foundation in web development.</p><p>By the end of the programme, you will learn:</p><ul><li data-preset-tag=\"p\"><p>Understand the fundamentals of front-end web development with the HTML, CSS, and JavaScript languages</p></li><li data-preset-tag=\"p\"><p>Create a basic back-end web application using Flask and Python programming (day 2)</p></li><li data-preset-tag=\"p\"><p>What application programming interfaces (APIs) are, and how they let you access complex capabilities from providers such as Google and OpenAI (day 2)</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)</p><p><strong>Fees</strong> (figures in parantheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "b7O9QShp_"
   },
   {
     "id": "microsoft-copilot",
     "slug": "microsoft-copilot",
     "title": "Microsoft Copilot ",
-    "subtitle": null,
+    "subtitle": "An introductory course on leveraging Microsoft Copilot to enhance productivity.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080",
@@ -1850,6 +2265,7 @@
       "professional-productivity-with-technology"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -1922,13 +2338,31 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. Location: TBC Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) Fees (figures in parantheses include GST) Individual sign-up: $1,600 ($1,744) Groups of up to 7: $11,200 ($12,208) Groups of 8-15: $12,400 ($13,516) Groups of 16 and above: Please email for more informationAll quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of…",
+    "featured": false,
+    "weight": 0,
+    "icon": "https://framerusercontent.com/images/QXIiHIkWlAeSeR06kl09KTnnLIc.png",
+    "icon_alt": "Microsoft Copilot",
+    "platform_ids": [
+      "microsoft-copilot"
+    ],
+    "domain_ids": [
+      "tech-productivity"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of artificial intelligence to revolutionize the way you work. By automating routine tasks, providing intelligent suggestions, and enhancing creativity, Copilot empowers you to focus on strategic initiatives and achieve greater productivity.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand the basics of AI and its applications: Learn about the fundamentals of artificial intelligence, its capabilities, and how it can be used to enhance productivity and decision-making. </p></li><li data-preset-tag=\"p\"><p>Explore the features and benefits of Microsoft Copilot: Discover the various features of Microsoft Copilot, including its ability to generate text, summarize information, and provide intelligent suggestions. </p></li><li data-preset-tag=\"p\"><p>Apply Copilot to real-world tasks: Learn how to effectively use Copilot to automate routine tasks, improve efficiency, and enhance creativity in your daily work.</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times:</strong> 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. </p><p><strong>Location:</strong> TBC </p><p><strong>Requirements:</strong> Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) </p><p><strong>Fees</strong> (figures in parantheses include GST)</p><ul><li data-preset-tag=\"p\"><p> Individual sign-up: $1,600 ($1,744) </p></li><li data-preset-tag=\"p\"><p>Groups of up to 7: $11,200 ($12,208) </p></li><li data-preset-tag=\"p\"><p>Groups of 8-15: $12,400 ($13,516) </p></li><li data-preset-tag=\"p\"><p>Groups of 16 and above: Please email for more information</p></li></ul><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "u3FI6YJaX"
   },
   {
     "id": "no-code-machine-learning",
     "slug": "no-code-machine-learning",
     "title": "No-Code Machine Learning",
-    "subtitle": null,
+    "subtitle": "An introductory course on machine learning models using Orange.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456",
@@ -1940,6 +2374,7 @@
       "ai"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -2012,13 +2447,31 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. Location: TBC Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) Fees (figures in parantheses include GST) Individual sign-up: $1,600 ($1,744) Groups of up to 7: $11,200 ($12,208) Groups of 8-15: $12,400 ($13,516) Groups of 16 and above: Please email for more information All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and…",
+    "featured": false,
+    "weight": 0,
+    "icon": "https://framerusercontent.com/images/1QBHB8ypQ3erWXDDpHcQlYDU14.png",
+    "icon_alt": "Orange",
+    "platform_ids": [
+      "orange"
+    ],
+    "domain_ids": [
+      "ai"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and deploy sophisticated machine learning models. This course will guide you through the entire process, from data preparation to model deployment, enabling you to unlock the potential of AI and drive data-driven insights.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Master the fundamentals of machine learning: Understand core concepts such as supervised and unsupervised learning, classification, regression, and clustering. </p></li><li data-preset-tag=\"p\"><p>Gain proficiency in using Orange: Learn how to navigate the Orange interface, import and clean data, build and train machine learning models, and evaluate their performance. </p></li><li data-preset-tag=\"p\"><p>Apply machine learning to real-world problems: Use Orange to solve practical problems, such as predicting customer churn, identifying fraudulent transactions, or categorising text documents.</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times: </strong>1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. </p><p><strong>Location:</strong> TBC </p><p><strong>Requirements:</strong> Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)</p><ul><li data-preset-tag=\"p\"><p> <strong>Fees</strong> (figures in parantheses include GST) </p></li><li data-preset-tag=\"p\"><p>Individual sign-up: $1,600 ($1,744) </p></li><li data-preset-tag=\"p\"><p>Groups of up to 7: $11,200 ($12,208) </p></li><li data-preset-tag=\"p\"><p>Groups of 8-15: $12,400 ($13,516) </p></li><li data-preset-tag=\"p\"><p>Groups of 16 and above: Please email for more information </p></li></ul><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "h3mlRqSuJ"
   },
   {
     "id": "no-code-web-design-framer",
     "slug": "no-code-web-design-framer",
     "title": "No-code Web Design (Framer)",
-    "subtitle": null,
+    "subtitle": "An introductory course on building websites using Framer.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256",
@@ -2030,6 +2483,7 @@
       "uiux"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -2102,13 +2556,31 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. Location: TBC Requirements: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) Fees (figures in parantheses include GST)Individual sign-up: $1,600 ($1,744) Groups of up to 7: $11,200 ($12,208) Groups of 8-15: $12,400 ($13,516) Groups of 16 and above: Please email for more information All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and…",
+    "featured": false,
+    "weight": 0,
+    "icon": "https://framerusercontent.com/images/AcyKvCqXBblmvGC8X1c86dmnxa4.png",
+    "icon_alt": "Framer",
+    "platform_ids": [
+      "framer"
+    ],
+    "domain_ids": [
+      "uiux"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and drive conversions. This course empowers you to create stunning, user-friendly websites without writing a single line of code. Learn the principles of UI/UX design and leverage the power of no-code tools like Framer to bring your digital visions to life.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Master the fundamentals of UI/UX design: Students will learn the core principles of user interface and user experience design, including layout, typography, color theory, and information hierarchy. </p></li><li data-preset-tag=\"p\"><p>Gain proficiency in using no-code tools, specifically Framer: Students will develop practical skills in using Framer to create interactive prototypes and design web applications without coding. </p></li><li data-preset-tag=\"p\"><p>Design and prototype a functional website or web application: Students will apply their knowledge of UI/UX design and no-code tools to create a real-world project, showcasing their ability to design user-centered digital experiences.</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times:</strong> 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups. </p><p><strong>Location:</strong> TBC </p><p><strong>Requirements:</strong> Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.) </p><ul><li data-preset-tag=\"p\"><p><strong>Fees</strong> (figures in parantheses include GST)</p></li><li data-preset-tag=\"p\"><p>Individual sign-up: $1,600 ($1,744) </p></li><li data-preset-tag=\"p\"><p>Groups of up to 7: $11,200 ($12,208) </p></li><li data-preset-tag=\"p\"><p>Groups of 8-15: $12,400 ($13,516) </p></li><li data-preset-tag=\"p\"><p>Groups of 16 and above: Please email for more information</p></li></ul><p> All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "Mr9FDzuWB"
   },
   {
     "id": "professional-certificate-in-mobile-application-development",
     "slug": "professional-certificate-in-mobile-application-development",
     "title": "Professional Certificate in Mobile Application Development",
-    "subtitle": null,
+    "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "2 days/module",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504",
@@ -2121,6 +2593,7 @@
       "uiux"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "module-1-designing-and-prototyping-app-user-interfaces-for-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-designing-and-prototyping",
       "module-2-introduction-to-mobile-app-development-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-introduction-mobile-app",
       "module-3-building-database-driven-mobile-apps-https-academy-smu-edu-sg-courses-professional-certificate-mobile-application-development-module-building-database-driven",
@@ -2203,13 +2676,34 @@
         "text": "Topic/Structure:Module 1: Designing and Prototyping App User Interfaces for Mobile App DevelopmentModule 2: Introduction to Mobile App DevelopmentModule 3: Building Database-Driven Mobile AppsModule 4: Interfacing Mobile Apps with Web Back-EndsModule 5: Building a Full-Stack Mobile ApplicationModule 6: Further Mobile App DevelopmentModule 7: Executing Projects in Mobile App DevelopmentThis course is also a part of the following programmes: Advanced Diploma in Web & Mobile Application DevelopmentAdvanced Diploma in Multiplatform Mobile App Development and Cloud ManagementAssessment: Individual assessment, project presentations.Certification: Upon completion of all 7 modules within a maximum duration of 3 years, participants will be awarded a digital Professional Certificate in Mobile Application Development.Dates and Times: Please write in to enquire. Location: Singapore Management University (SMU) Fees: As low as $1,422.40. For more information refer to: https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps…",
+    "featured": true,
+    "weight": 88,
+    "icon": "https://framerusercontent.com/images/dy8VLvD6CAJQ8DornnFQC6sbNQ.png",
+    "icon_alt": "Mobile Application Development",
+    "platform_ids": [
+      "android-studio",
+      "javascript",
+      "sql"
+    ],
+    "domain_ids": [
+      "appdev",
+      "uiux"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps for iOS and Android platforms. You'll learn essential programming languages, design principles, and development tools to bring your app ideas to life.</p><h3>Who Should Attend</h3><p>Aspiring app developers who want to build full-stack mobile applications that can be published online for download or saleAnyone with an interest in learning the fundamentals of mobile app design and developmentProfessionals with coding experience, but new to mobile app development.</p><p><strong>PREREQUISITES: </strong>Experience in other programming languages</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand and apply basic app design and prototyping concepts such as mock-ups, typography, iconography</p></li><li data-preset-tag=\"p\"><p>Install and run a basic app using Android Studio on PC or Mac, and (if available) Xcode on Mac</p></li><li data-preset-tag=\"p\"><p>Explain the difference between a relational (SQL) and document-based (No SQL) database, and be able to select one for a given project</p></li><li data-preset-tag=\"p\"><p>Understand what an Application Programming Interface (API) is, and how to read the documentation when working with common APIs</p></li><li data-preset-tag=\"p\"><p>Understand how apps and websites use APIs and Representational State Transfer (REST) web services to communicate</p></li><li data-preset-tag=\"p\"><p>Understand and use modern JavaScript language features from the ES6 specification, such as arrow functions, spread operators, and destructuring</p></li><li data-preset-tag=\"p\"><p>Demonstrate a solid foundation in back-end and front-end mobile app development</p></li><li data-preset-tag=\"p\"><p>Master Mobile App Development Fundamentals: Learn the core concepts of mobile app development, including programming languages like Swift (for iOS) and Kotlin/Java (for Android), as well as essential frameworks and tools. </p></li><li data-preset-tag=\"p\"><p>Design User-Centric Mobile Apps: Understand the principles of user interface and user experience design, and apply them to create intuitive and visually appealing mobile apps. </p></li><li data-preset-tag=\"p\"><p>Build and Deploy Mobile Apps: Learn how to build, test, and deploy mobile apps to the Apple App Store and Google Play Store</p></li></ul>",
+    "details_html": "<p><strong>Topic/Structure:</strong></p><p><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-designing-and-prototyping\">Module 1: Designing and Prototyping App User Interfaces for Mobile App Development</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-introduction-mobile-app\">Module 2: Introduction to Mobile App Development</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-building-database-driven\">Module 3: Building Database-Driven Mobile Apps</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-interfacing-mobile-apps-web\">Module 4: Interfacing Mobile Apps with Web Back-Ends</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-building-full-stack-mobile\">Module 5: Building a Full-Stack Mobile Application</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-further-mobile-app\">Module 6: Further Mobile App Development</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-executing-projects-mobile\">Module 7: Executing Projects in Mobile App Development</a><br><br>This course is also a part of the following programmes: <a href=\"https://academy.smu.edu.sg/advanced-diploma-mobile-web-application-development-4131\">Advanced Diploma in Web &amp; Mobile&nbsp;Application Development</a><br><a href=\"https://academy.smu.edu.sg/advanced-diploma-multiplatform-mobile-app-development-and-cloud-management-7886\">Advanced Diploma in Multiplatform Mobile App Development and Cloud Management</a></p><p><strong>Assessment: </strong>Individual assessment, project presentations.<br><br><strong>Certification: </strong>Upon completion of all 7 modules within a maximum duration of 3 years, participants will be awarded a digital Professional Certificate in Mobile Application Development.</p><p><strong>Dates and Times:</strong> Please write in to enquire. </p><p><strong>Location:</strong> Singapore Management University (SMU) </p><p><strong>Fees:</strong> As low as $1,422.40. For more information refer to: <a href=\"https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table\" target=\"_blank\">https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table</a></p>",
+    "source_collection": "Programmes",
+    "source_id": "ApiVaTglR"
   },
   {
     "id": "professional-certificate-in-web-application-development",
     "slug": "professional-certificate-in-web-application-development",
     "title": "Professional Certificate in Web Application Development",
-    "subtitle": null,
+    "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "2 days/module",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912",
@@ -2221,6 +2715,7 @@
       "uiux"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "module-1-prototyping-and-user-interface-design-for-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-prototyping-and-user-interface",
       "module-2-introduction-to-front-end-web-app-development-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-introduction-front-end-web-app",
       "module-3-building-database-driven-web-apps-https-academy-smu-edu-sg-courses-professional-certificate-web-application-development-module-building-database-driven-web",
@@ -2303,13 +2798,34 @@
         "text": "Topic/Structure:Module 1: Prototyping and User Interface Design for Web App DevelopmentModule 2: Introduction to Front End Web App DevelopmentModule 3: Building Database-Driven Web AppsModule 4: Back-End Web App Development with DatabasesModule 5: Building a Full-Stack Web ApplicationModule 6: Frameworks for Full-Stack Web App DevelopmentModule 7: Practical Tools for Web App Development ProjectThis course is also a part of the following programmes: Advanced Diploma in Web & Mobile Application DevelopmentAdvanced Diploma in Full Stack Web App Development and Cloud ManagementAssessment: Individual assessments, project presentations. Dates and Times: Weeknights (7pm - 10:30pm), Saturday (9am - 12.30pm). Please write in to enquire.Location: Singapore Management University (SMU). This programme is conducted online.Fees: SGD12,208* (as low as SGD1,422.40 after maximum funding). Learn more here.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to…",
+    "featured": true,
+    "weight": 82,
+    "icon": "https://framerusercontent.com/images/m2e5vLFU2BGj1eEVY3FTucPeA.png",
+    "icon_alt": "Web Development",
+    "platform_ids": [
+      "bubble",
+      "framer",
+      "html-css",
+      "javascript"
+    ],
+    "domain_ids": [
+      "uiux"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to create stunning and functional user interfaces using powerful no-code tools like Framer and Bubble. By mastering prototyping techniques and UI/UX design principles, you'll be able to build exceptional web applications that captivate your users and drive business results.</p><p><strong>PREREQUISITES</strong></p><ul style=\"--framer-text-color: rgb(0, 0, 0); --framer-font-size: 16px; --framer-text-transform: none; --framer-text-stroke-width: 0px; --framer-text-alignment: start;\"><li data-preset-tag=\"p\"><p>Must have at least a Polytechnic Diploma</p></li><li data-preset-tag=\"p\"><p>Must have basic HTML/ CSS knowledge</p></li><li data-preset-tag=\"p\"><p>Must be computer literate</p></li></ul><p><strong>SYSTEM REQUIREMENTS</strong></p><p>Functional Laptop: (1) CPU must be of at least intel core I3, (2) GPU must have an integrated graphics card and (3) RAM must be of at least 4GB&nbsp;</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Introduction to CSS Syntax, and how to select HTML with classes and IDs</p></li><li data-preset-tag=\"p\"><p>Design fundamentals and resources for icons and typography</p></li><li data-preset-tag=\"p\"><p>Getting started with Bubble to build simple web app prototypes</p></li><li data-preset-tag=\"p\"><p>A brief introduction to JavaScript and jQuery for simple manipulation</p></li><li data-preset-tag=\"p\"><p>Understand the need for software source control, and how it applies to usage in teams</p></li><li data-preset-tag=\"p\"><p>Understand and implement roles in a software development team</p></li><li data-preset-tag=\"p\"><p>Master Prototyping Techniques: Learn how to create interactive prototypes using Framer to visualize and validate your web application ideas. </p></li><li data-preset-tag=\"p\"><p>Understand UI/UX Design Principles: Gain a solid understanding of user interface and user experience design principles, including layout, typography, color theory, and information architecture. </p></li><li data-preset-tag=\"p\"><p>Build Functional Web Applications with Bubble &amp; Framer: Learn how to use web tools to build fully functional web applications without writing code, focusing on user interface design and data management.</p></li></ul>",
+    "details_html": "<p><strong>Topic/Structure:</strong></p><p><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-prototyping-and-user-interface\">Module 1: Prototyping and User Interface Design for Web App Development</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-introduction-front-end-web-app\">Module 2: Introduction to Front End Web App Development</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-building-database-driven-web\">Module 3: Building Database-Driven Web Apps</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-back-end-web-app-development\">Module 4: Back-End Web App Development with Databases</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-building-full-stack-web\">Module 5: Building a Full-Stack Web Application</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-frameworks-full-stack-web-app\">Module 6: Frameworks for Full-Stack Web App Development</a><br><a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-practical-tools-web-app\">Module 7: Practical Tools for Web App Development Project</a></p><p>This course is also a part of the following programmes: <a href=\"https://academy.smu.edu.sg/courses/advanced-diploma-web-and-mobile-application-development\">Advanced Diploma in Web &amp; Mobile Application Development</a><br><a href=\"https://academy.smu.edu.sg/courses/advanced-diploma-full-stack-web-app-development-and-cloud-management\">Advanced Diploma in Full Stack Web App Development and Cloud Management</a></p><p><strong>Assessment:</strong> Individual assessments, project presentations. </p><p><strong>Dates and Times</strong>: Weeknights&nbsp;(7pm&nbsp;- 10:30pm), Saturday (9am - 12.30pm). Please write in to enquire.</p><p><strong>Location:</strong> Singapore Management University (SMU). This programme is conducted online.</p><p><strong>Fees:</strong> SGD12,208* (as low as SGD1,422.40 after maximum funding). Learn more <a href=\"https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-pcweb#fee-table\">here</a>.</p>",
+    "source_collection": "Programmes",
+    "source_id": "i24bEI_H5"
   },
   {
     "id": "ri-futurecreate-maker-programme-2025",
     "slug": "ri-futurecreate-maker-programme-2025",
     "title": "RI FutureCreate Maker Programme 2025",
-    "subtitle": null,
+    "subtitle": "A hands-on digital maker programme for RI students.",
     "duration": "4 years",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600",
@@ -2394,13 +2910,34 @@
         "text": "Location: Raffles Institution",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "The RI FutureCreate Maker Programme is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven…",
+    "featured": true,
+    "weight": 89,
+    "icon": "https://framerusercontent.com/images/WeIaLloGW571bF6elC5cFIYTEQ.png",
+    "icon_alt": "3D Printing",
+    "platform_ids": [
+      "3d-printing",
+      "arduino",
+      "scratch"
+    ],
+    "domain_ids": [
+      "making",
+      "design-thinking"
+    ],
+    "sign_up_label": null,
+    "sign_up_url": null,
+    "intro_html": "<p>The <strong>RI</strong> <strong>FutureCreate Maker Programme</strong> is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven interactive sessions, participants will dive into fabrication techniques, structural design, motion mechanics, and sensory experiences like sound and light. From crafting everyday solutions to building whimsical contraptions, students will experiment with materials, tools, and innovative processes to bring their visions to life. Whether shaping, assembling, coding, or storytelling through movement, this programme encourages a maker’s mindset—blending art, science, and problem-solving to inspire the next generation of inventors.</p>",
+    "learning_objectives_html": "<p><strong>Broad Overview of Curriculum<br><br>Year 1: Analog Fabrication Skills Development</strong></p><ul><li data-preset-tag=\"p\"><p>pick up a wide variety of maker skills</p></li><li data-preset-tag=\"p\"><p>get accustomed to getting hands dirty</p></li><li data-preset-tag=\"p\"><p>adopt a culture of try first, worry later</p></li><li data-preset-tag=\"p\"><p>cultivating ‘let’s make our own!, instead of just buy lah’ mindset</p></li><li data-preset-tag=\"p\"><p>inspire fulfilment in designing &amp; making for oneself</p></li></ul><p><strong>Year 2: Digital Fabrication Skills Development</strong></p><ul><li data-preset-tag=\"p\"><p>acquire basic electronics know-how</p></li><li data-preset-tag=\"p\"><p>bridging electronics, code &amp; physical making to create real-world objects</p></li><li data-preset-tag=\"p\"><p>making as a ‘superpower’, to customise the world around you; solving daily challenges or making beautiful/quirky things for amusement</p></li><li data-preset-tag=\"p\"><p>understanding how the real world works vs ‘passive consumption &amp; studying theoretical concepts’</p></li></ul><p><strong>Year 3: Craftsmanship, Self-Reflection, Making &amp; Tinkering as a Way of Life</strong></p><ul><li data-preset-tag=\"p\"><p>identify areas of interest and further develop skills in that area(analog + digital)</p></li><li data-preset-tag=\"p\"><p>small focused projects that develop new skills or improve competencies</p></li><li data-preset-tag=\"p\"><p>reflect what drives one’s desire to create; pleasure, purpose or profit?</p></li><li data-preset-tag=\"p\"><p>choose and explore 1-2 areas which is not part of core interest; trying something that is beyond comfort-zone, stimulate experimentation.</p></li><li data-preset-tag=\"p\"><p>self research + experimentation, instructor can help troubleshoot/provide additional resources on request/consult</p></li></ul><p><strong>Year 4: Self-Discovery Project; Exploration and Expression</strong></p><ul><li data-preset-tag=\"p\"><p>identifying one’s core interests; art, science, music etc.</p></li><li data-preset-tag=\"p\"><p>explore existing works for inspiration</p></li><li data-preset-tag=\"p\"><p>prototype small experiments to test ideas and techniques</p></li><li data-preset-tag=\"p\"><p>refine craftsmanship and acquire required new skills</p></li><li data-preset-tag=\"p\"><p>execution, refinement and polish</p></li><li data-preset-tag=\"p\"><p>show and tell</p></li></ul>",
+    "details_html": "<p><strong>Location:</strong> Raffles Institution </p>",
+    "source_collection": "Programmes",
+    "source_id": "HA03deExd"
   },
   {
     "id": "swift-accelerator",
     "slug": "swift-accelerator",
     "title": "Swift Accelerator",
-    "subtitle": null,
+    "subtitle": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants",
     "duration": "8 months",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200",
@@ -2412,6 +2949,7 @@
       "appdev"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -2484,13 +3022,31 @@
         "text": "Location: Apple Singapore Office Fees: This innovative program is fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications.…",
+    "featured": true,
+    "weight": 67,
+    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon_alt": "Swift",
+    "platform_ids": [
+      "swift"
+    ],
+    "domain_ids": [
+      "appdev"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications. Through hands-on projects and expert mentorship, participants will master the Swift programming language, adhere to Apple's Human Interface Guidelines, and leverage the latest development tools. The program culminates in the development and publishing of a fully functional iOS app on the App Store.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Master Swift Programming: Gain a deep understanding of the Swift programming language, including its syntax, data structures, control flow, and object-oriented programming principles. </p></li><li data-preset-tag=\"p\"><p>Apply Apple's Human Interface Guidelines: Learn how to design and develop user-friendly and visually appealing iOS and macOS apps that adhere to Apple's design standards and best practices. </p></li><li data-preset-tag=\"p\"><p>Build and Deploy iOS Apps: Develop and test iOS apps, integrate with Apple's frameworks and APIs, and successfully deploy them to the App Store.</p></li></ul>",
+    "details_html": "<p><strong>Location:</strong> Apple Singapore Office </p><p><strong>Fees:</strong> This innovative program is fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants.</p>",
+    "source_collection": "Programmes",
+    "source_id": "Fp6Pqwd_I"
   },
   {
     "id": "imda-figma-2025",
     "slug": "imda-figma-2025",
     "title": "UI/UX Design with Figma",
-    "subtitle": null,
+    "subtitle": "An IMDA Infocom LEARN Roadmap course with Figma.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260",
@@ -2502,6 +3058,7 @@
       "uiux"
     ],
     "cta_ids": [
+      "enquire-now-mailto-yjsoon-tk-sg-subject-infocomm-learn-roadmap",
       "swift-explorers-challenge-https-swiftexplorers-sg",
       "figurative-https-figurative-design",
       "our-courses-https-tinkercademy-com-courses-all",
@@ -2576,13 +3133,31 @@
         "text": "ProjectStudents will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge.RequirementsHardware: Windows, Mac, Chromebook, iPadSoftware: Chrome, Firefox, Safari, or Edge. Figma is a web-based application. For iPad, we recommend the free Figurative app.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX…",
+    "featured": true,
+    "weight": 78,
+    "icon": "https://framerusercontent.com/images/7SoVlCsTaQWSWuDRzCULLs20Ho8.png",
+    "icon_alt": "Figma",
+    "platform_ids": [
+      "figma"
+    ],
+    "domain_ids": [
+      "uiux"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap",
+    "intro_html": "<p>Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX tools utilised by professionals: FigJam for collaborative brainstorming, Figma for creating visually appealing interactive UI/UX designs, and Figma Slides to effectively communicate their design solutions. </p><p>This course is suitable for students with no programming or design experience, but are interested in developing instincts for building web and mobile applications for users.</p>",
+    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand the design thinking process</p></li><li data-preset-tag=\"p\"><p>Explore FigJam for brainstorming</p></li><li data-preset-tag=\"p\"><p>Utilise Figma for visual and interactive prototyping</p></li><li data-preset-tag=\"p\"><p>Explore and understand UI/UX concepts</p></li><li data-preset-tag=\"p\"><p>Create visually appealing and intuitive digital designs for web and mobile apps</p></li><li data-preset-tag=\"p\"><p>Communicate design solutions</p></li></ul>",
+    "details_html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\">Swift Explorers Challenge</a>.</p><p><strong>Requirements</strong></p><ul><li data-preset-tag=\"p\"><p><strong>Hardware: </strong> Windows, Mac, Chromebook, iPad</p></li><li data-preset-tag=\"p\"><p><strong>Software</strong>: Chrome, Firefox, Safari, or Edge. Figma is a web-based application. For iPad, we recommend the free <a href=\"https://figurative.design/\" target=\"_blank\">Figurative</a> app.</p></li></ul>",
+    "source_collection": "Programmes",
+    "source_id": "d9mv3_zwr"
   },
   {
     "id": "vibe-coding-for-digital-builders",
     "slug": "vibe-coding-for-digital-builders",
     "title": "Vibe Coding for Digital Builders",
-    "subtitle": null,
+    "subtitle": "Corporate training",
     "duration": "2 days",
     "description": "Lesson Outcomes",
     "hero_image": "https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832",
@@ -2594,6 +3169,7 @@
       "ai"
     ],
     "cta_ids": [
+      "enquire-now-https-form-jotform-com-232050520776450",
       "our-courses-https-tinkercademy-com-courses-all",
       "our-projects-https-tinkercademy-com-showcase",
       "tinkertanker-pte-ltd-http-tinkertanker-com",
@@ -2666,6 +3242,27 @@
         "text": "Dates and Times: 1-2 days; can be configured over multiple sessions. Please write in to enquire. Location: CT HUB 2, 114 Lavender Street.Requirements: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course. Fees (excl. GST) per participant:16 participants and above: $65012-15 participants: $750 8-11 participants: $870For 7 or fewer participants, we charge a flat fee of S$6,800 total. All quoted prices are in SGD. Invoicing terms available.",
         "kind": "richtext"
       }
-    ]
+    ],
+    "card_blurb": "Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in…",
+    "featured": true,
+    "weight": 99,
+    "icon": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
+    "icon_alt": "Lovable",
+    "platform_ids": [
+      "html-css",
+      "javascript",
+      "chatgpt",
+      "figma"
+    ],
+    "domain_ids": [
+      "ai"
+    ],
+    "sign_up_label": "Enquire now",
+    "sign_up_url": "https://form.jotform.com/232050520776450",
+    "intro_html": "<p>Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in leveraging AI-driven tools like ChatGPT, Figma, and Lovable to rapidly prototype, design, and deploy web applications.</p><p>In this practical two-day course, you'll explore how generative AI can be effectively integrated into your organisation's workflow. </p><ul><li data-preset-tag=\"p\"><p>Starting with problem discovery and analysis, you'll harness ChatGPT for deep research, solution proposals, user persona creation, and user acceptance testing (UAT) writing. </p></li><li data-preset-tag=\"p\"><p>You'll then transition into visual design with Figma, creating user-centric prototypes and UI definitions. </p></li><li data-preset-tag=\"p\"><p>Finally, you'll employ Lovable, a powerful vibe-coding platform, to build and debug a complete web app, backed by Supabase, using natural language prompts.</p></li></ul>",
+    "learning_objectives_html": "<p>By the end of this course, you will:</p><ul><li data-preset-tag=\"p\"><p>Understand the fundamentals and practical applications of generative AI tools like ChatGPT.</p></li><li data-preset-tag=\"p\"><p>Conduct in-depth problem analysis and generate comprehensive solution proposals.</p></li><li data-preset-tag=\"p\"><p>Develop responsive user interface designs and wireframes using Figma.</p></li><li data-preset-tag=\"p\"><p>Rapidly build and deploy web applications through vibe coding with Lovable and Supabase.</p></li><li data-preset-tag=\"p\"><p>Evaluate the impact and integration strategies of AI tools within your organisation’s digital transformation initiatives, and for your personal development.</p></li></ul>",
+    "details_html": "<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. </p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported. Participants will be provided with paid ChatGPT Business and Lovable plans for the duration of the course. </p><p><strong>Fees</strong> (excl. GST) per participant:</p><ul><li data-preset-tag=\"p\"><p>16 participants and above: $650</p></li><li data-preset-tag=\"p\"><p>12-15 participants: $750 </p></li><li data-preset-tag=\"p\"><p>8-11 participants: $870</p></li></ul><p>For 7 or fewer participants, we charge a flat fee of S$6,800 total. </p><p>All quoted prices are in SGD. Invoicing terms available.</p>",
+    "source_collection": "Programmes",
+    "source_id": "v6FvfTI0Z"
   }
 ]

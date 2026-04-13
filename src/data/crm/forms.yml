@@ -2,3 +2,7 @@
   provider: jotform
   endpoint: https://form.jotform.com/223001013827440
   method: link
+- id: https-form-jotform-com-232050520776450
+  provider: jotform
+  endpoint: https://form.jotform.com/232050520776450
+  method: link

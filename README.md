@@ -9,6 +9,7 @@ Astro rebuild of the live `tinkercademy.com` Framer site. The workflow is crawl-
 ## Commands
 
 - `npm run import:live` crawls the public site and regenerates the structured data files.
+- `npm run import:framer` enriches the generated data with direct Framer CMS data from `.env.local` or `.env`.
 - `npm run dev` starts the Astro dev server.
 - `npm run build` builds the site.
 - `npm run check` runs `astro check`.
@@ -21,6 +22,10 @@ CRM-like files live under `src/data/crm/`:
 - `tutorials.yml`
 - `audiences.yml`
 - `topics.yml`
+- `platforms.yml`
+- `domains.yml`
+- `articles.yml`
+- `external-logos.yml`
 - `contacts.yml`
 - `locations.yml`
 - `social-links.yml`
@@ -36,6 +41,8 @@ Static route payloads also retain extracted `blocks`, explicit `course_cards`, a
 ## Notes
 
 - `scripts/_artifacts/` is generated and ignored.
+- `npm run import:framer` is optional and uses `FRAMER_API_KEY` plus `FRAMER_PROJECT_URL` from `.env.local` or `.env`.
+- The Framer enrichment step writes a raw export snapshot to `scripts/_artifacts/framer-api/export.json` for inspection.
 - The current implementation keeps remote image URLs from Framer while the migration is still in progress.
 - `src/lib/site-media.js` maps the current live homepage brand, partner, badge, and compact course imagery used for the higher-fidelity front-page rebuild.
 - `/professionals`, `/schools`, and `/individuals` are dedicated Astro routes; they are intentionally excluded from the generic `[slug].astro` renderer.

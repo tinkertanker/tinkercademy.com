@@ -778,3 +778,31 @@
   label: Unity hardware requirements at unity3d.com
   url: https://docs.unity3d.com/Manual/system-requirements.html
   type: external
+- id: enquire-now-mailto-yjsoon-tk-sg-subject-infocomm-learn-roadmap
+  label: Enquire now
+  url: mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap
+  type: email
+- id: enquire-now-https-form-jotform-com-232050520776450
+  label: Enquire now
+  url: https://form.jotform.com/232050520776450
+  type: form
+- id: enquire-now-https-academy-smu-edu-sg-programme-enquiry-course-certificate-20in-20technology-20foundations-20harnessing-20the-20power-20of-20internet-20of-20things-20and-20creative-20digital-20making-nid-80496
+  label: Enquire now
+  url: https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Harnessing%20the%20Power%20of%20Internet%20of%20Things%20and%20Creative%20Digital%20Making&nid=80496
+  type: external
+- id: enquire-now-https-academy-smu-edu-sg-programme-enquiry-course-certificate-20in-20technology-20foundations-20unleash-20the-20potential-20of-20blockchain-20technology-nid-80491
+  label: Enquire now
+  url: https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Unleash%20the%20Potential%20of%20Blockchain%20Technology&nid=80491
+  type: external
+- id: enquire-now-mailto-imda-codesg-imda-gov-sg
+  label: Enquire now
+  url: mailto:imda_codesg@imda.gov.sg
+  type: email
+- id: enquire-now-hello-tk-sg
+  label: Enquire now
+  url: hello@tk.sg
+  type: external
+- id: enquire-now-hello-tinkercademy-com
+  label: Enquire now
+  url: hello@tinkercademy.com
+  type: external

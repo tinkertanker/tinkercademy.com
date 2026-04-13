@@ -2,9 +2,10 @@
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getNavPillsForPage, getProgrammesForPage, getStaticPage } from '../lib/data.js';
+import { getNavPillsForPage, getProgrammesForPage, getSiteData, getStaticPage } from '../lib/data.js';
 import { HOME_PARTNER_LOGOS, HOME_INSTITUTION_LOGOS } from '../lib/site-media.js';
 
+const site = getSiteData();
 const page = getStaticPage('/professionals');
 if (!page) return Astro.redirect('/404');
 
@@ -14,6 +15,9 @@ const navPills = getNavPillsForPage(page);
 const blocks = page.blocks ?? [];
 
 const heroLinks = (page.ctas ?? []).filter((cta) => ['Schools', 'Individuals', 'Browse Courses'].includes(cta.label));
+const dynamicLogos = (site.externalLogos ?? []).filter((logo) => logo.active && logo.logo);
+const partnerLogos = dynamicLogos.filter((logo) => logo.partner || logo.type === 'Partner');
+const clientLogos = dynamicLogos.filter((logo) => !(logo.partner || logo.type === 'Partner'));
 
 const valueStart = blocks.findIndex((block) => block.text === 'Our Value Proposition');
 const valueEnd = blocks.findIndex((block, index) => index > valueStart && block.text === 'Our Clients');
@@ -54,11 +58,17 @@ for (let index = 0; index < valueBlocks.length; index += 1) {
 		<div class="shell">
 			<h2>Our Partners</h2>
 			<div class="logo-band">
-				{HOME_PARTNER_LOGOS.map((logo) => (
-					<a href={logo.url} target="_blank" rel="noopener noreferrer">
-						<img src={logo.src} alt={logo.label} loading="lazy" />
-					</a>
-				))}
+				{partnerLogos.length > 0
+					? partnerLogos.map((logo) => (
+							<div class="logo-chip">
+								<img src={logo.logo} alt={logo.label} loading="lazy" />
+							</div>
+						))
+					: HOME_PARTNER_LOGOS.map((logo) => (
+							<a href={logo.url} target="_blank" rel="noopener noreferrer">
+								<img src={logo.src} alt={logo.label} loading="lazy" />
+							</a>
+						))}
 			</div>
 		</div>
 	</section>
@@ -81,11 +91,17 @@ for (let index = 0; index < valueBlocks.length; index += 1) {
 		<div class="shell">
 			<h2>Our Clients</h2>
 			<div class="logo-band logo-band--clients">
-				{HOME_INSTITUTION_LOGOS.map((logo) => (
-					<div class="logo-chip">
-						<img src={logo.src} alt={logo.label} loading="lazy" />
-					</div>
-				))}
+				{clientLogos.length > 0
+					? clientLogos.map((logo) => (
+							<div class="logo-chip">
+								<img src={logo.logo} alt={logo.label} loading="lazy" />
+							</div>
+						))
+					: HOME_INSTITUTION_LOGOS.map((logo) => (
+							<div class="logo-chip">
+								<img src={logo.src} alt={logo.label} loading="lazy" />
+							</div>
+						))}
 			</div>
 		</div>
 	</section>

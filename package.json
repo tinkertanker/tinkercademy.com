@@ -12,12 +12,14 @@
     "astro": "astro",
     "crawl:site": "node scripts/crawl-site.mjs",
     "build:crm": "node scripts/build-crm-data.mjs",
+    "import:framer": "node scripts/import-framer-data.mjs",
     "import:live": "npm run crawl:site && npm run build:crm",
     "check": "astro check"
   },
   "dependencies": {
     "astro": "^6.1.5",
     "cheerio": "^1.2.0",
+    "framer-api": "^0.1.4",
     "yaml": "^2.8.3"
   },
   "devDependencies": {
