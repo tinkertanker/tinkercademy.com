@@ -1,16 +1,6 @@
 ---
 /**
- * /about-us — fully rebuilt to match the live Framer site.
- *
- * Sections (in order):
- *  1. Hero — H1 + subtitle (white bg, no image)
- *  2. Intro — Tinkertanker logo + company blurb
- *  3. Certifications — dark gradient strip with 7 certification logos
- *  4. Partners — heading + blurb + logo images
- *  5. Our Clients — heading + blurb + logo strip images
- *  6. Stats — dark gradient, 3 white stat cards (50+, 160+, 3000+)
- *  7. Our Team — loaded from src/data/team.yaml
- *  8. CTA Banner
+ * /about-us — layout and copy aligned with live tinkercademy.com (Framer).
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -23,6 +13,39 @@ const page = getStaticPage('/about-us');
 if (!page) return Astro.redirect('/404');
 
 const canonical = new URL('/about-us', 'https://tinkercademy.com').toString();
+
+/** Map Framer CDN URLs to committed files under public/images/remote/. */
+function framerSrc(url: string | undefined): string {
+	if (!url) return '';
+	const m = url.match(/framerusercontent\.com\/images\/([^?]+)/);
+	if (m) return `/images/remote/${m[1]}`;
+	return url;
+}
+
+type Block = { tag?: string; text?: string };
+const blocks: Block[] = (page.blocks ?? []) as Block[];
+const blockText = (pred: (b: Block) => boolean) => blocks.find(pred)?.text ?? '';
+
+const heroTitle =
+	page.hero_title ??
+	blockText((b) => Boolean(b.tag === 'h1' && b.text?.includes('coders and tinkerers'))) ??
+	'';
+const heroSubtitle =
+	blockText((b) => Boolean(b.tag === 'h4')) ||
+	'We bring an unparalleled depth of experience in education and technology to our classes and curriculum.';
+const introBody =
+	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('Tinkertanker Pte Ltd'))) || '';
+const partnersBlurb =
+	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('industry leaders'))) ||
+	'We collaborate with with industry leaders and educational institutions to drive innovation in learning. Our partners make it possible for us to create impactful solutions that empower educators and students alike.';
+const clientsBlurb =
+	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('had the privilege'))) ||
+	'We’ve had the privilege of teaching, and working with, many preschools, primary schools, secondary schools, IP schools, junior colleges, tertiary institutions, and companies. Here’s a random sample of our clients:';
+const teamIntro =
+	blockText((b) => Boolean(b.tag === 'p' && b.text?.startsWith('Tinkercademy comprises'))) ||
+	'Tinkercademy comprises a team of dedicated education specialists from top universities worldwide. With our extensive training in technology, design, and educational pedagogy, combined with years of experience creating real-world apps and electronics, we bring an unparalleled breadth and depth of technology education to our classes and curriculum.';
+
+const heroBgSrc = framerSrc(page.hero_image);
 
 /* ── Load team data from YAML ── */
 interface TeamMember {
@@ -38,21 +61,25 @@ const teamYaml = readFileSync(
 );
 const team: TeamMember[] = parseYaml(teamYaml);
 
-/* ── Certification logos ── */
-const certLogos = [
+/* ── Certification logos (row 1: partners; row 2: Apple programme) ── */
+const certLogosRow1 = [
 	'/images/remote/BDt3R80YV6FiInYlrnHOw8DQ.svg',
 	'/images/remote/EeQgsZhGeo5B8SsOriPf6iEbpU.webp',
 	'/images/remote/ZYZcVNiPEg6tMjHGhU520Ord5uI.webp',
 	'/images/remote/nI5l61MSsRmuWTFJqVH4cpNjfqY.webp',
+];
+const certLogosRow2 = [
 	'/images/remote/icLJqUI2otyj00sfJ4Dvlfxbo.webp',
 	'/images/remote/m4aQlLtGTef2FbAG9CTD4ReFE.png',
 	'/images/remote/W5TrPI4TQ7ldyHjx1tFRClDkVI.png',
 ];
 
-/* ── Partner logo images ── */
+/* ── Partner marks (circular row on live) ── */
 const partnerLogos = [
-	'/images/remote/OHbHnfvpGLsxcntGKsueCChDt4.png',
-	'/images/remote/JKscUSf6W4RYRx9NZVXTg1xxeVs.png',
+	'/images/remote/HEWUMM0ts0EHYszokOs3GXdUE.png',
+	'/images/remote/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png',
+	'/images/remote/WswqYSt0BjIpB4AvjMlsljQ0JM.png',
+	'/images/remote/e9nhVfo3kswRF62Egzbbh8L8I8A.png',
 ];
 
 /* ── Client logo strip images ── */
@@ -64,12 +91,46 @@ const clientLogos = [
 	'/images/remote/xHwcdydT3oqZNLuEPhUYed1o.gif',
 ];
 
-/* ── Stats data ── */
 const stats = [
 	{ number: '50+', description: 'Primary and Secondary Schools We\'ve Taught at for IMDA Infocomm Club' },
 	{ number: '160+', description: 'Preschools We\'ve Developed Curriculum for in the Playmaker Programme' },
 	{ number: '3000+', description: 'Students We\'ve Reached Through the Code@SG Movement' },
 ];
+
+const tinkertankerIntroSrc = '/images/remote/ccAm2I4TKCuYyi1NVJdIrvzAw.png';
+
+const INTRO_FALLBACK_PLAIN =
+	'Tinkertanker Pte Ltd is a technology and education company of tinkerers and teachers. We run Tinkercademy, where we teach coding and digital making to students of all ages, in a wide variety of fields such as micro:bit, iOS, Python, Arduino, Node, cyber-security, Unity, and more. We also curate and sell educational technology toys at our Get Hacking online store, and build our own tech apps and products, e.g. GuestDay, an iPad-based guest registration service; an IC Photo app for Singaporeans to take useful selfies; and Spickify, now Helpling Singapore.';
+
+function buildIntroHtml(raw: string): string {
+	const base = raw || INTRO_FALLBACK_PLAIN;
+	return base
+		.replace(
+			/^Tinkertanker Pte Ltd/,
+			'<a href="http://tinkertanker.com/" target="_blank" rel="noopener">Tinkertanker Pte Ltd</a>'
+		)
+		.replace(
+			/Get Hacking/g,
+			'<a href="http://gethacking.com/" target="_blank" rel="noopener">Get Hacking</a>'
+		)
+		.replace(
+			/GuestDay/g,
+			'<a href="http://guestday.com/" target="_blank" rel="noopener">GuestDay</a>'
+		)
+		.replace(
+			/IC Photo/g,
+			'<a href="https://apps.apple.com/sg/app/ic-photo-singapore/id483078253" target="_blank" rel="noopener">IC Photo</a>'
+		)
+		.replace(
+			/Helpling Singapore/g,
+			'<a href="http://helpling.com.sg/" target="_blank" rel="noopener">Helpling Singapore</a>'
+		);
+}
+
+const heroTitleHtml = heroTitle.replace(
+	/\b(coders|tinkerers)\b/gi,
+	(_, word: string) => `<span class="about-hero__accent">${word}</span>`
+);
 ---
 
 <BaseLayout
@@ -78,11 +139,13 @@ const stats = [
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
 >
-	{/* ═══════ 1. Hero ══════════════════════════════════════════════════ */}
+	{/* ═══════ 1. Hero (full-bleed image + centred type) ═════════════════ */}
 	<section class="about-hero">
-		<div class="shell">
-			<h1 class="about-hero__title">We're coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore.</h1>
-			<p class="about-hero__subtitle">We bring an unparalleled depth of experience in education <em>and</em> technology to our classes and curriculum.</p>
+		<img class="about-hero__bg" src={heroBgSrc} alt="" loading="eager" fetchpriority="high" />
+		<div class="about-hero__scrim"></div>
+		<div class="about-hero__content shell">
+			<h1 class="about-hero__title" set:html={heroTitleHtml} />
+			<p class="about-hero__subtitle">{heroSubtitle}</p>
 		</div>
 	</section>
 
@@ -91,13 +154,12 @@ const stats = [
 		<div class="shell about-intro__inner">
 			<img
 				class="about-intro__logo"
-				src="/images/remote/hbuTZqmS4AOlBdh6Ydrkt9tN4o.png"
+				src={tinkertankerIntroSrc}
 				alt="Tinkertanker"
-				loading="lazy"
+				loading="eager"
 			/>
 			<div class="about-intro__text">
-				<p><a href="http://tinkertanker.com/" target="_blank" rel="noopener">Tinkertanker Pte Ltd</a> is a technology and education company of tinkerers and teachers. We run <strong>Tinkercademy</strong>, where we teach coding and digital making to students of all ages — as well as professionals and corporations who want to stay up-to-date on the latest technologies.</p>
-				<p>We also run the <a href="https://gethacking.com" target="_blank" rel="noopener">Get Hacking</a> store, where we sell educational technology kits and tools, and build products like <strong>GuestDay</strong>, <strong>IC Photo</strong>, and <strong>Spickify/Helpling</strong> to solve everyday problems.</p>
+				<p set:html={buildIntroHtml(introBody)} />
 			</div>
 		</div>
 	</section>
@@ -106,10 +168,17 @@ const stats = [
 	<section class="about-certs">
 		<div class="shell">
 			<h2 class="about-certs__heading">We are certified</h2>
-			<div class="about-certs__grid">
-				{certLogos.map((src) => (
-					<img class="about-certs__logo" src={src} alt="Certification" loading="lazy" />
-				))}
+			<div class="about-certs__rows">
+				<div class="about-certs__row about-certs__row--primary">
+					{certLogosRow1.map((src) => (
+						<img class="about-certs__logo about-certs__logo--lg" src={src} alt="" loading="lazy" />
+					))}
+				</div>
+				<div class="about-certs__row about-certs__row--secondary">
+					{certLogosRow2.map((src) => (
+						<img class="about-certs__logo about-certs__logo--sm" src={src} alt="" loading="lazy" />
+					))}
+				</div>
 			</div>
 		</div>
 	</section>
@@ -118,10 +187,12 @@ const stats = [
 	<section class="about-section">
 		<div class="shell">
 			<h2 class="about-section__heading">Partners</h2>
-			<p class="about-section__body">We collaborate with industry leaders and educational institutions to bring world-class learning experiences to Singapore and beyond.</p>
+			<p class="about-section__body">{partnersBlurb}</p>
 			<div class="about-partners__logos">
 				{partnerLogos.map((src) => (
-					<img class="about-partners__logo" src={src} alt="Partner" loading="lazy" />
+					<div class="about-partners__disc">
+						<img class="about-partners__logo" src={src} alt="" loading="lazy" />
+					</div>
 				))}
 			</div>
 		</div>
@@ -131,10 +202,10 @@ const stats = [
 	<section class="about-section">
 		<div class="shell">
 			<h2 class="about-section__heading">Our Clients</h2>
-			<p class="about-section__body">We've had the privilege of teaching, and working with, many preschools, primary schools, secondary schools, polytechnics, universities, government agencies, and corporations.</p>
+			<p class="about-section__body">{clientsBlurb}</p>
 			<div class="about-clients__logos">
 				{clientLogos.map((src) => (
-					<img class="about-clients__logo" src={src} alt="Client" loading="lazy" />
+					<img class="about-clients__logo" src={src} alt="" loading="lazy" />
 				))}
 			</div>
 		</div>
@@ -156,7 +227,7 @@ const stats = [
 	<section class="about-team">
 		<div class="shell">
 			<h2 class="about-section__heading">Our Team</h2>
-			<p class="about-section__body">Meet the people behind Tinkercademy.</p>
+			<p class="about-section__body">{teamIntro}</p>
 
 			<div class="about-team__grid">
 				{team.map((member) => (
@@ -188,37 +259,74 @@ const stats = [
 </BaseLayout>
 
 <style>
-	/* ─── Hero ──────────────────────────────────────────────── */
+	/* ─── Hero (full-bleed, matches live Framer hero) ─────────────────── */
 	.about-hero {
-		padding: 4rem 0 2rem;
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(440px, 58vh, 620px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.about-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 40%;
+	}
+
+	.about-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.45) 0%,
+			rgba(0, 0, 0, 0.35) 45%,
+			rgba(0, 0, 0, 0.55) 100%
+		);
+	}
+
+	.about-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-height: inherit;
+		padding: clamp(3rem, 8vw, 5rem) 0;
 	}
 
 	.about-hero__title {
 		font-family: 'Oswald', sans-serif;
-		font-size: clamp(1.6rem, 3vw, 2.4rem);
+		font-size: clamp(1.65rem, 3.2vw, 2.55rem);
 		font-weight: 500;
-		line-height: 1.35;
-		color: rgb(23, 23, 23);
+		line-height: 1.28;
+		color: #fff;
 		margin: 0 0 1.25rem;
-		max-width: 850px;
+		max-width: 920px;
+		text-wrap: balance;
+	}
+
+	.about-hero__accent {
+		color: rgb(240, 93, 87);
 	}
 
 	.about-hero__subtitle {
 		font-family: 'Rubik', sans-serif;
-		font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+		font-size: clamp(0.95rem, 1.45vw, 1.08rem);
 		line-height: 1.65;
-		color: rgb(61, 61, 61);
+		color: rgba(255, 255, 255, 0.88);
 		margin: 0;
-		max-width: 700px;
-	}
-
-	.about-hero__subtitle em {
-		font-style: italic;
+		max-width: 640px;
 	}
 
 	/* ─── Intro ────────────────────────────────────────────── */
 	.about-intro {
-		padding: 0 0 3rem;
+		padding: 3rem 0;
 	}
 
 	.about-intro__inner {
@@ -228,10 +336,11 @@ const stats = [
 	}
 
 	.about-intro__logo {
-		width: 100px;
-		height: auto;
+		width: 112px;
+		height: 112px;
 		flex-shrink: 0;
-		border-radius: 12px;
+		border-radius: 50%;
+		object-fit: cover;
 	}
 
 	.about-intro__text {
@@ -242,7 +351,7 @@ const stats = [
 	}
 
 	.about-intro__text p {
-		margin: 0 0 1rem;
+		margin: 0;
 	}
 
 	.about-intro__text a {
@@ -257,15 +366,18 @@ const stats = [
 	@media (max-width: 809px) {
 		.about-intro__inner {
 			flex-direction: column;
+			align-items: center;
+			text-align: center;
 			gap: 1.5rem;
 		}
 
 		.about-intro__logo {
-			width: 80px;
+			width: 96px;
+			height: 96px;
 		}
 	}
 
-	/* ─── Certifications (dark gradient) ───────────────────── */
+	/* ─── Certifications (dark) ─────────────────────────────── */
 	.about-certs {
 		padding: 3rem 0;
 		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(24, 24, 26) 100%);
@@ -276,33 +388,47 @@ const stats = [
 		font-size: 1.5rem;
 		font-weight: 500;
 		color: #fff;
-		margin: 0 0 1.5rem;
+		margin: 0 0 2rem;
 		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
 	}
 
-	.about-certs__grid {
+	.about-certs__rows {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
 	}
 
+	.about-certs__row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+	}
+
 	.about-certs__logo {
-		height: 60px;
 		width: auto;
 		object-fit: contain;
-		filter: brightness(0) invert(1);
-		opacity: 0.85;
+	}
+
+	.about-certs__logo--lg {
+		height: clamp(52px, 7vw, 72px);
+	}
+
+	.about-certs__logo--sm {
+		height: clamp(40px, 5.5vw, 56px);
 	}
 
 	@media (max-width: 809px) {
-		.about-certs__grid {
-			gap: 1.25rem;
+		.about-certs__logo--lg {
+			height: 44px;
 		}
 
-		.about-certs__logo {
-			height: 45px;
+		.about-certs__logo--sm {
+			height: 36px;
 		}
 	}
 
@@ -328,18 +454,34 @@ const stats = [
 		max-width: 800px;
 	}
 
-	/* ─── Partner logos ────────────────────────────────────── */
+	/* ─── Partner logos (discs) ────────────────────────────── */
 	.about-partners__logos {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		gap: 2rem;
+		justify-content: center;
+		gap: clamp(1.25rem, 3vw, 2.25rem);
+	}
+
+	.about-partners__disc {
+		width: 112px;
+		height: 112px;
+		border-radius: 50%;
+		background: rgb(245, 245, 245);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
 	}
 
 	.about-partners__logo {
-		height: 40px;
+		max-width: 100%;
+		max-height: 100%;
 		width: auto;
+		height: auto;
 		object-fit: contain;
+		opacity: 0.72;
+		filter: grayscale(1);
 	}
 
 	/* ─── Client logos ─────────────────────────────────────── */
@@ -353,6 +495,8 @@ const stats = [
 	.about-clients__logo {
 		max-width: 100%;
 		height: auto;
+		max-height: 56px;
+		width: auto;
 		object-fit: contain;
 	}
 
