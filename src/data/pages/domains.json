@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ai",
+    "label": "AI and Machine Learning with Data Science",
+    "source_id": "vpWDOwfOJ"
+  },
+  {
+    "id": "cs",
+    "label": "Computer Science Fundamentals",
+    "source_id": "uMQrqiRw1"
+  },
+  {
+    "id": "making",
+    "label": "Creativity, Craft, and Making",
+    "source_id": "e_A2k1nRU"
+  },
+  {
+    "id": "cryptography",
+    "label": "Cryptography",
+    "source_id": "V6cZ3Rf_S"
+  },
+  {
+    "id": "cybersecurity",
+    "label": "Cybersecurity",
+    "source_id": "lMFoTZJzc"
+  },
+  {
+    "id": "design-thinking",
+    "label": "Design Thinking",
+    "source_id": "Tykfon5ZF"
+  },
+  {
+    "id": "uiux",
+    "label": "Design, Prototyping, and UI/UX",
+    "source_id": "R7ku5ShhB"
+  },
+  {
+    "id": "gamedev",
+    "label": "Game Development",
+    "source_id": "JJfAJSl1s"
+  },
+  {
+    "id": "iot",
+    "label": "Microcontrollers & IoT",
+    "source_id": "y29slfr8O"
+  },
+  {
+    "id": "appdev",
+    "label": "Mobile App Development",
+    "source_id": "sBqWC3exH"
+  },
+  {
+    "id": "tech-productivity",
+    "label": "Professional Productivity with Technology",
+    "source_id": "K2owTpq3X"
+  },
+  {
+    "id": "software-engineering",
+    "label": "Software Engineering",
+    "source_id": "IgMVqCDv3"
+  },
+  {
+    "id": "webdev",
+    "label": "Web Development",
+    "source_id": "I6HoEEJFg"
+  }
+]

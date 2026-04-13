@@ -3,11 +3,13 @@
     "id": "access-denied-a-door-entry-tutorial",
     "slug": "access-denied-a-door-entry-tutorial",
     "title": "Access Denied! A Door Entry Tutorial",
-    "subtitle": null,
+    "subtitle": "micro:bit",
     "description": "Step 1 – Setting Up!",
     "hero_image": "https://framerusercontent.com/images/bD2Vq60gsIBWmTLGkqM6gnfat4.jpg?width=1080&height=1440",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Access Denied! A Door Entry Tutorial - My Framer Site",
       "description": "Enhancing door security with micro:bit. This tutorial was written by Sean Lew, from the Singapore University of Technology and Design, during his summer internship with us in 2018.",
@@ -111,7 +113,9 @@
         "text": "Step 3 – Almost there!Download this set of codes for the second micro:bit (receiver).Now give test out the crash sensor to see if the receiving micro:bit is working correctly!Now that you have set up your very first wireless door security, you can try it with more than just 1 door!Feel free to also add add other form of alerts on the receiving micro:bit to enhance your own security.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "Xs0TefAzS"
   },
   {
     "id": "ang-bao-collector",
@@ -121,7 +125,9 @@
     "description": "Build an Ang Bao collector that keeps count of the number of Ang Baos you have!",
     "hero_image": "https://framerusercontent.com/images/Qf7E9zlctuoxJQhtW2ETkP9eSYI.jpg?width=2880&height=2626",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Ang Bao Collector - My Framer Site",
       "description": "Collect your Ang Baos with Micro:bit, Neopixel and a Buzzer",
@@ -351,7 +357,9 @@
         "text": "Step 7 - Programming the Micro:bitAt the start we initialize the variables we willl be using as well as the Neopixel LED strip.Create a “Music” function to play “Gong Xi Gong Xi” If the HC-SR04 sensor detects an object, it will turn on the lights and simultaneously play “Gong Xi Gong Xi” in the background The programme also keep a count of the number of Ang Baos received and show the tally on both the Micro:bit LED and the Neopixel LED Strip.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "O69XYz7ka"
   },
   {
     "id": "build-your-own-micro-bit-security-door",
@@ -361,7 +369,9 @@
     "description": "Step 1 – Interfacing the Keypad",
     "hero_image": "https://framerusercontent.com/images/TEdcK4xzIfno2gsJPBuYfVxGj8w.jpg?width=1024&height=576",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Build your own Micro:bit Security Door! - My Framer Site",
       "description": "Protect your house or valuables with a micro:bit, a servo motor, and a 4x4 keypad!\nCreated by Mohd Shafiq from NUS.",
@@ -543,7 +553,9 @@
         "text": "Step 5 – Demo Time!Each time you press a key,the corresponding character will appear on the OLEDTo unlock the door key in 3,Button A,6,Button A,9,Button A,#Then press button BTo reset press A+BIf you try to enter the wrong password three times the OLED will display a lockdown timer.You will only be able to enter the password after 60 seconds have passed.Congratulations! You have made your own micro:bit door.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "onY_E9Ycg"
   },
   {
     "id": "coin-sorter",
@@ -553,7 +565,9 @@
     "description": "Hardware",
     "hero_image": "https://framerusercontent.com/images/DYffUNTKvjHf2wF1BsJXIS60VsY.jpg?width=2880&height=2550",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Coin Sorter with Micro:bit - My Framer Site",
       "description": "Ever just accumulate a bunch of coins in a jar and now want to sort out the giant mess your past self should have foreseen? No? Just me? Ok well let’s build a coin sorter for fun then, adding on an ultrasound to count the amount you have sorted. Written by Hannah from Raffles Institution during a job attachment.",
@@ -873,7 +887,9 @@
         "text": "Good job!!!Hopefully, you had fun building the coin sorting machine. Now, think of ways to further develop the project… maybe add a function to see if the machine is full? Either way, enjoy 🙂",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "K7wHePVoX"
   },
   {
     "id": "create-an-electric-spirit-level",
@@ -883,7 +899,9 @@
     "description": "Pre Coding: Connect your Micro:Bit",
     "hero_image": "https://framerusercontent.com/images/vJC2mRsNiQvuIEx7bkS4zxlAtI.png?width=802&height=813",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Create an Electric Spirit Level - My Framer Site",
       "description": "Use this spirit level to quickly and easily display the tilt of any object attached!\n\nCreated by Kaitlyn from Raffles Institution.",
@@ -1185,7 +1203,9 @@
         "text": "Step 10: AssemblyFlash the completed code to your micro:bit (instructions here).Attach your micro:bit and the battery pack securely to any object and it is ready for use!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "WttTnG6y2"
   },
   {
     "id": "create-an-electro-theremin",
@@ -1195,7 +1215,9 @@
     "description": "Step 1",
     "hero_image": "https://framerusercontent.com/images/6NH5uFn1Vvqva0lzwRAhxXW8g.jpg?width=1024&height=731",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Create an Electro-Theremin - My Framer Site",
       "description": "Get down to the funky sounds of electric ‘analog’ music",
@@ -1347,7 +1369,9 @@
         "text": "Cool stuff!Now you’ve learned how to play around with the potentiometer, you can try using it to control LEDs, servos, and other components! And if you get your hands on another analog sensor, you’ll know just how to use it!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "qzu1Ukm3P"
   },
   {
     "id": "finger-dexerity-micro-bit-game",
@@ -1357,7 +1381,9 @@
     "description": "Congratulations!",
     "hero_image": "https://framerusercontent.com/images/cxBy1hH7GTEkd3QO6tMrA1dgs.jpg?width=2880&height=3840",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Finger Dexerity Micro:bit Game - My Framer Site",
       "description": "Are your psychomotor skills as bad as mine?",
@@ -1575,7 +1601,9 @@
         "text": "Congratulations!This tutorial was possibly a level higher than the rest and if you got here you are definitely rocking it. If you didn’t, take solace in the fact that it took me weeks to get my head around concepts like recursions too. Good luck!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "pJPVIzDRc"
   },
   {
     "id": "flippy-pancakes-micro-bit-game",
@@ -1585,7 +1613,9 @@
     "description": "Step 1",
     "hero_image": "https://framerusercontent.com/images/TGE0wbZ9rn5h1Bgyx3zqqAdM.gif?width=596&height=548",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Flippy Pancakes Micro:bit Game - My Framer Site",
       "description": "Do you have what it takes to flip the perfect pancake?",
@@ -1809,7 +1839,9 @@
         "text": "Extra: ScoringWhat’s a game without healthy competition! Add a scoring system to compete against your friends!Simply add the variable ‘score’ within the ‘on start’ functionThen ‘change score by 1’ whenever you get a PERFECT pancakeHave fun cooking up new ideas!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "oWB7kab_d"
   },
   {
     "id": "making-a-waving-fortune-cat",
@@ -1819,7 +1851,9 @@
     "description": "Step 1 – Choose a cat",
     "hero_image": "https://framerusercontent.com/images/pmsl1tHBnpSl79LDhU4ILYgiuVQ.gif?width=480&height=270",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Making a Waving Fortune Cat - My Framer Site",
       "description": "\nUse a micro:bit and mini servo to make your very own Maneki-Neko, or Fortune Cat, who waves its hand when you press a button!\n\nDesigned and written by Tim Ho from the National University of Singapore",
@@ -1953,7 +1987,9 @@
         "text": "Cool stuff!Now you’ve brought your cat to life. Think of a variety of movements for your cat. Enjoy and add them on to the cat!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "JXPPke8Gb"
   },
   {
     "id": "maze-runner-micro-bit-game",
@@ -1963,7 +1999,9 @@
     "description": "Step 1",
     "hero_image": "https://framerusercontent.com/images/LLVkRe2f1FqxdOWR718Pb7GM3Vg.gif?width=596&height=548",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Maze Runner Micro:bit Game - My Framer Site",
       "description": "Can you make it through all the levels?",
@@ -2199,7 +2237,9 @@
         "text": "Cool stuff!Now that you’ve learned how to use the ADKeypad, you can try using it to control LEDs, servos, and other components! You also learned about if statements which are useful in many micro:bit projects! Try customising your maze runner game by adding more levels!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "Z6_KJm7Tf"
   },
   {
     "id": "micro-bit-flappy-bird-game",
@@ -2209,7 +2249,9 @@
     "description": "Step 3 - Leaving The Nest",
     "hero_image": "https://framerusercontent.com/images/rGRnnPJ7wMBplG84QcB4R7uVR8.png?width=316&height=316",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "micro:bit Flappy Bird Game - My Framer Site",
       "description": "Take flight and achieve your pipe dreams with your own version of the notoriously challenging Flappy Bird game, using nothing but a micro:bit (no extras needed) and some Python code.\n\nMade by Cheryl from Raffles Institution. Warning: heavy dosage of bird puns included.",
@@ -2409,17 +2451,21 @@
         "text": "Step 8 - Collision CoursePhew, you made it to the last step! Ready to wing it? Now, we just need to add a collision reaction. This uses a get_pixel function that returns the LED brightness value at that position. ‘!=‘, the NOT function is also used. Let’s explain how it’s used below.Add this collision checking code to the while loop, between the bird-drawing and wall-shifting. This means it checks for collision before new walls are created so there’s no extra scores by error.As shown in line 66, we use an if loop. ‘i.get_pixel(1, led_y) != 0 checks if there is a pipe in the position of column 1 (where the bird is), specifically at led_y, the displayed position of the bird. If there is a pipe pixel in the same position as the bird’s coordinates, the i.get_pixel(1, led_y) returns 4, the brightness of the wall. This is NOT 0 so the function beneath, the collision checker, runsLine 67-68 display the in-built sad face image for 0.5s. You can change how long this lingers, and to whatever other image you like. Python has a lot of images you can input. You can find the entire list here.Line 69 displays the score as a string, behind “Score: “Line 70 ends the while loop so the game ends. This means that it’s ‘game over’.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "Uz8nd44IT"
   },
   {
     "id": "micro-bit-snake-game",
     "slug": "micro-bit-snake-game",
     "title": "micro:bit Snake Game",
-    "subtitle": null,
+    "subtitle": "micro:bit",
     "description": "Why Python?",
     "hero_image": "https://framerusercontent.com/images/GrXoLE9wGBAv2T1TlJi8I7E6CLs.gif?width=339&height=240",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "micro:bit Snake Game - My Framer Site",
       "description": "Anyone remembers the Snake game that used to come with old Nokia phones? This micro:bit version in glorious 5×5 resolution is easy to make and fun to play!",
@@ -2661,7 +2707,9 @@
         "text": "Congratulations!Enjoy your fully functional snake game.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "CqS2qlPr9"
   },
   {
     "id": "micro-bit-wire-transmission",
@@ -2671,7 +2719,9 @@
     "description": "Why Python?",
     "hero_image": "https://framerusercontent.com/images/DDl0KNXbAnRrmhYEZ1XM5mJvy40.gif?width=450&height=277",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "micro:bit Wire Transmission - My Framer Site",
       "description": "Communicate between two micro:bits using Morse code, fishing line, a servo and a sensor! Why use micro:bit’s radio when this is so much cooler?",
@@ -2895,7 +2945,9 @@
         "text": "ExtensionsAlthough this method of data transmission isn’t used for …obvious reasons, many concepts in data transfer are relevant. Try to experiment with the length of string to see how long distance can be reliably transferred, and at what point the “signal” becomes too weak to be detected.To boost the “signal”, a third micro:bit can be used as an amplifier that converts sensor signals into new tugs, similar to how signal amplifiers are installed every 20km in underwater fibre-optic cables.Morse code certainly isn’t the most efficient way to transmit data, nor is it the most reliable way. Experiment with different types of encodings (binary + ASCII, Hamming codes, etc.), as well as explore some error-correcting codes to detect and fix any losses/errors in transmission.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "Pc6c44H18"
   },
   {
     "id": "micropython",
@@ -2905,7 +2957,9 @@
     "description": "Project 01: Music Machine",
     "hero_image": "https://framerusercontent.com/images/HHX6pAYSwZXM7bwsH86S00nwU.png?width=1552&height=1157",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "MicroPython - My Framer Site",
       "description": "Micro:bit",
@@ -3075,7 +3129,55 @@
         "text": "Get Creative!Mix and match the component in the Tinker Kit to create your own projects.For a more comprehensive explanation of MicroPython, visit the official documentation here!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "SMJBhqU2p"
+  },
+  {
+    "id": "umYwk7gZD",
+    "slug": "micropythoncomponents",
+    "title": "MicroPython",
+    "subtitle": "micro:bit",
+    "description": "Micro:bit Tinker Kit Components",
+    "hero_image": null,
+    "audience_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
+    "seo": {
+      "title": "MicroPython - Tinkercademy: Coding and Making for Schools and Professionals",
+      "description": "Micro:bit Tinker Kit Components",
+      "canonical": "https://tinkercademy.com/tutorials/micropythoncomponents",
+      "openGraph": {
+        "title": "MicroPython - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "Micro:bit Tinker Kit Components",
+        "image": null
+      },
+      "twitter": {
+        "title": "MicroPython - Tinkercademy: Coding and Making for Schools and Professionals",
+        "description": "Micro:bit Tinker Kit Components",
+        "image": null
+      },
+      "robots": "max-image-preview:large"
+    },
+    "content": [
+      {
+        "type": "richtext",
+        "label": "Getting Started",
+        "html": "<h1><strong>Getting Started</strong></h1><h4>Pre-coding:</h4><ul><li data-preset-tag=\"p\"><p>Get hold of a Micro:bit Tinker Kit</p></li><li data-preset-tag=\"p\"><p>Download the Mu editor</p><ul><li data-preset-tag=\"p\"><p><a href=\"https://codewith.mu/\" target=\"_blank\">https://codewith.mu/&nbsp;</a></p></li></ul></li><li data-preset-tag=\"p\"><p>Before each project, write “from microbit import * ”</p></li></ul><p><br></p><h1><strong>LED</strong>&nbsp;</h1><p>Let the LED be connected to pin0CommandUsagepin0.read_digital()Check if LED is lighted or not<br>pin0.read_digital() = 0 # means LED is not lighted<br>pin0.read_digital() = 1 # means LED is lightedpin0.write_digital(value)Turn LED on or off<br>pin0.write_digital(1) # lights LED<br>pin0.write_digital(0) # turns LED off</p><h3><strong>Example: Blink</strong></h3><h5><strong>Pin Layout</strong></h5><h5>LED: Pin0</h5>",
+        "text": "Getting StartedPre-coding:Get hold of a Micro:bit Tinker KitDownload the Mu editorhttps://codewith.mu/ Before each project, write “from microbit import * ”LED Let the LED be connected to pin0CommandUsagepin0.read_digital()Check if LED is lighted or notpin0.read_digital() = 0 # means LED is not lightedpin0.read_digital() = 1 # means LED is lightedpin0.write_digital(value)Turn LED on or offpin0.write_digital(1) # lights LEDpin0.write_digital(0) # turns LED offExample: BlinkPin LayoutLED: Pin0"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Getting Started",
+        "html": "<h1><strong>Getting Started</strong></h1><h4>Pre-coding:</h4><ul><li data-preset-tag=\"p\"><p>Get hold of a Micro:bit Tinker Kit</p></li><li data-preset-tag=\"p\"><p>Download the Mu editor</p><ul><li data-preset-tag=\"p\"><p><a href=\"https://codewith.mu/\" target=\"_blank\">https://codewith.mu/&nbsp;</a></p></li></ul></li><li data-preset-tag=\"p\"><p>Before each project, write “from microbit import * ”</p></li></ul><p><br></p><h1><strong>LED</strong>&nbsp;</h1><p>Let the LED be connected to pin0CommandUsagepin0.read_digital()Check if LED is lighted or not<br>pin0.read_digital() = 0 # means LED is not lighted<br>pin0.read_digital() = 1 # means LED is lightedpin0.write_digital(value)Turn LED on or off<br>pin0.write_digital(1) # lights LED<br>pin0.write_digital(0) # turns LED off</p><h3><strong>Example: Blink</strong></h3><h5><strong>Pin Layout</strong></h5><h5>LED: Pin0</h5>",
+        "text": "Getting StartedPre-coding:Get hold of a Micro:bit Tinker KitDownload the Mu editorhttps://codewith.mu/ Before each project, write “from microbit import * ”LED Let the LED be connected to pin0CommandUsagepin0.read_digital()Check if LED is lighted or notpin0.read_digital() = 0 # means LED is not lightedpin0.read_digital() = 1 # means LED is lightedpin0.write_digital(value)Turn LED on or offpin0.write_digital(1) # lights LEDpin0.write_digital(0) # turns LED offExample: BlinkPin LayoutLED: Pin0",
+        "kind": "labelled"
+      }
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "umYwk7gZD"
   },
   {
     "id": "morse-code-transmitter",
@@ -3085,7 +3187,9 @@
     "description": "Step 0 – Preview",
     "hero_image": "https://framerusercontent.com/images/Im9m2uepC9Q9eON1uPJUCEWzBWM.png?width=1024&height=576",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Morse Code Transmitter - My Framer Site",
       "description": "Make a simple morse code transmitter using MakeCode, micro:bits, and some crocodile clips!\n\nThis tutorial was written by Anahita from the University of California at Berkeley, during her summer internship in Singapore.",
@@ -3249,7 +3353,9 @@
         "text": "Done!Make sure to flash the code to the respective micro:bits and test it out! It should display the same signal on both screen when you press a button.For an added challenge, try to translate the morse code on the second micro:bit.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "XuRQ3vCme"
   },
   {
     "id": "pitch-perfect",
@@ -3259,7 +3365,9 @@
     "description": "Step 1:",
     "hero_image": "https://framerusercontent.com/images/aSfebjilUTmQ0hDSh1HNeYrJs4.jpg?width=2880&height=1620",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Pitch Perfect - My Framer Site",
       "description": "Do you think your ears are pitch perfect, then try my game. Or even better, create one!",
@@ -3441,7 +3549,9 @@
         "text": "Step 7:Once you are contempted with your tests, you can end the game by showing the latest scores. You can display in the OLED screen “Your score is:” with the variable score shown. Put a smiley for fun sake.And you are done! Enjoy the game.Click here to download code",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "Q658git9S"
   },
   {
     "id": "put-together-the-game-bit",
@@ -3451,7 +3561,9 @@
     "description": "Step 1 – Buttons!",
     "hero_image": "https://framerusercontent.com/images/fMylL1SpY5t6JOFlPQEG6aCGZY.jpg?width=1555&height=1036",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Put together the Game:bit! - My Framer Site",
       "description": "Let’s figure out where all those screws are supposed to go.",
@@ -3657,7 +3769,9 @@
         "text": "Cool stuff!Now you’ve gotten your game:bit fixed together – get your game on and start coding! Follow along with our tutorials and make cool games like Avoid the Asteroids, Maze Runnerand Flappy Bird.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "jynSD0UvL"
   },
   {
     "id": "put-together-the-krazy-kar-v2",
@@ -3667,7 +3781,9 @@
     "description": "Step 1 – Shell it!",
     "hero_image": "https://framerusercontent.com/images/bDXq6Ap8j8OhUNkbZXwvrKiw18w.png?width=1024&height=576",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Put together the Krazy Kar v2 - My Framer Site",
       "description": "Got our Krazy Kar Kit and ready to get started? Follow along to put it together here.\nDon’t like instructions? Use your creativity and make a krazy octopus instead.",
@@ -3819,7 +3935,9 @@
         "text": "Step 3 – On to the Outside!Using the 5 screws, fit the micro+basic:bit cyborg into the 5 holes on the top of the krazy kar.Decorate decadently. And code it to get moving! If you’ve used a continuous servo with your micro:bit before – try coding this kar yourself!Otherwise, get some help from our tutorial here!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "NS0KkDgV2"
   },
   {
     "id": "quick-maths",
@@ -3829,7 +3947,9 @@
     "description": "Pre Build Overview",
     "hero_image": "https://framerusercontent.com/images/atohjWm2eEqupKusOgokkVstViM.jpg?width=1819&height=3013",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "QUICK MATHS - My Framer Site",
       "description": "QUICK MATHS a game where its all about testing your mental calculations. Too slow and you lose, too fast you may make mistakes.\n\n",
@@ -4065,7 +4185,9 @@
         "text": "That’s it! You’ve officially completed this tutorial.Click here for the full project",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "wsF0fxENy"
   },
   {
     "id": "reaction-time-tester",
@@ -4075,7 +4197,9 @@
     "description": "Step 1 – Input/Output",
     "hero_image": "https://framerusercontent.com/images/ezqHf467E8H5lw75OZV4QKr5b6w.jpg?width=1080&height=1913",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Reaction Time Tester - My Framer Site",
       "description": "Test yourself with this Python-based mini-game for the micro:bit and OLED! Written by Jensen from Raffles Institution.",
@@ -4245,7 +4369,9 @@
         "text": "Bonus loading effects:This one utilizes the light sensor and the LED to start the game.It detects light and once the light is covered, the game will start.This next animation is simple: display the characters “3”, “2” , and “1”, as a countdown before starting the game. The code is pretty self explanatory.",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "X0_BtkfFn"
   },
   {
     "id": "reclusebot",
@@ -4255,7 +4381,9 @@
     "description": "Step 1 – Connect the Micro:bit parts",
     "hero_image": "https://framerusercontent.com/images/kPgWcfj9SCxrtxyh00JBGQbgOiA.jpeg?width=510&height=382",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Reclusebot - My Framer Site",
       "description": "Make a reclusive robot that squeals when toggled, touched, or when it detects motion\nUse the micro:bit to make a robot that squeals when it detects motion, is touched on any of its sensors or when lifted up. Written by Shaun Toh, from the Singapore University of Technology & Design, on his summer internship.",
@@ -4389,7 +4517,9 @@
         "text": "You’re Done!You have finished building all components needed to make a reclusive robot that makes a sound whenever someone surprises it! Place it into any box you large enough to contain the components while leaving some of them sticking out, and you have your very own recluse bot! Feel free to dress it up, but take care or it’ll start squealing in surprise!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "ASIPoM2AQ"
   },
   {
     "id": "shoot-em-up-kit",
@@ -4399,7 +4529,9 @@
     "description": "Step 1 – Put your town in order!",
     "hero_image": "https://framerusercontent.com/images/19CYlknp9407PkeDhDOh020G6M.jpg?width=1024&height=768",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "Shoot Em Up Kit - My Framer Site",
       "description": "You’ve got a town to save and a dragon to shoot! \nThis here is the formula to get your own tabletop shooter arcade working in good form!",
@@ -4635,7 +4767,9 @@
         "text": "Cool stuff!You’ve killed the dragon. Now what? Add extra mountains, make it more challenging. Or write your own story, and see what you can do with your magical micro:bit!Let us know @tinkercademy on twitter, instagram or facebook what other cool stuff you come up with!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "xdVUesGtK"
   },
   {
     "id": "µ-remorse",
@@ -4645,7 +4779,9 @@
     "description": "Step 1 – Development Environment",
     "hero_image": "https://framerusercontent.com/images/2LYDGOlVS6xqRCSxPz9Go91zbE.jpg?width=1939&height=1804",
     "audience_ids": [],
-    "topic_ids": [],
+    "topic_ids": [
+      "iot"
+    ],
     "seo": {
       "title": "µ reMorse - My Framer Site",
       "description": "Make a  Morse Code “Keyboard”/Editor the hard way.",
@@ -4893,6 +5029,8 @@
         "text": "Cool stuff!Now that you’ve learned how to use the ADKeypad, you can try using it to control LEDs, servos, and other components! You also learned about if statements which are useful in many micro:bit projects! Try customising your maze runner game by adding more levels!",
         "kind": "labelled"
       }
-    ]
+    ],
+    "source_collection": "Tutorials",
+    "source_id": "kEUggUuQe"
   }
 ]

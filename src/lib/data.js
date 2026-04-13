@@ -1,9 +1,13 @@
+import articles from '../data/pages/articles.json';
 import assets from '../data/pages/assets.json';
 import audiences from '../data/pages/audiences.json';
 import contacts from '../data/pages/contacts.json';
 import ctaDestinations from '../data/pages/cta-destinations.json';
+import domains from '../data/pages/domains.json';
+import externalLogos from '../data/pages/external-logos.json';
 import forms from '../data/pages/forms.json';
 import locations from '../data/pages/locations.json';
+import platforms from '../data/pages/platforms.json';
 import programmes from '../data/pages/programmes.json';
 import siteSettings from '../data/pages/site-settings.json';
 import socialLinks from '../data/pages/social-links.json';
@@ -19,13 +23,22 @@ export function getSiteData() {
 	const audienceById = indexBy(audiences);
 	const topicById = indexBy(topics);
 	const ctaById = indexBy(ctaDestinations);
+	const domainById = indexBy(domains);
+	const platformById = indexBy(platforms);
 
 	return {
 		siteSettings,
+		articles,
 		audiences,
+		domains,
 		topics,
 		contacts,
+		externalLogos,
 		locations,
+		platforms: platforms.map((platform) => ({
+			...platform,
+			domains: (platform.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
+		})),
 		socialLinks,
 		ctaDestinations,
 		forms,
@@ -34,6 +47,8 @@ export function getSiteData() {
 		programmes: programmes.map((programme) => ({
 			...programme,
 			audiences: (programme.audience_ids ?? []).map((id) => audienceById.get(id)).filter(Boolean),
+			domains: (programme.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
+			platforms: (programme.platform_ids ?? []).map((id) => platformById.get(id)).filter(Boolean),
 			topics: (programme.topic_ids ?? []).map((id) => topicById.get(id)).filter(Boolean),
 			ctas: (programme.cta_ids ?? []).map((id) => ctaById.get(id)).filter(Boolean),
 		})),
