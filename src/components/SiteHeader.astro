@@ -361,8 +361,8 @@ const coursesDropdown = [
 		width: auto;
 	}
 
-	/* ── Desktop nav ── */
-	.nav-desktop ul {
+	/* ── Desktop nav ── (direct child only — nested .dropdown must not inherit row flex) */
+	.nav-desktop > ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
