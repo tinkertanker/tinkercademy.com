@@ -168,7 +168,7 @@ export function getProgrammesForPage(page) {
 
 /**
  * Minimal programme fields for site-wide search (header overlay).
- * Keeps payloads small for inline JSON in the document.
+ * Consumed by the prerendered `/programme-search-index.json` route (and cached client-side).
  * Pass an existing `site` from `getSiteData()` to avoid rebuilding site data twice.
  */
 export function getSearchableProgrammes(site = getSiteData()) {
