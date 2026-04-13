@@ -14,9 +14,14 @@ const { programme } = Astro.props;
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
 
 /* ─── Meta info ──────────────────────────────────────────────────── */
-const audienceLabels = programme.audiences?.map((a) => a.label) ?? [];
+const audiences = programme.audiences ?? [];
 const topicLabels = programme.topics?.map((t) => t.label) ?? [];
 const duration = programme.duration ?? '';
+const primaryAudience = programme.audiences?.[0];
+const typeLabel =
+	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
+		? 'Corporate training'
+		: topicLabels[0] ?? primaryAudience?.label ?? '';
 
 const sections = (programme.sections ?? [])
 	.map((section, index) => ({
@@ -46,18 +51,26 @@ const sections = (programme.sections ?? [])
 		<div class="prog-hero__text shell">
 			<p class="prog-hero__eyebrow">Content</p>
 			<h1 class="prog-hero__title">{programme.title}</h1>
+			{duration && <p class="prog-hero__duration">{duration}</p>}
 		</div>
 	</section>
 
 	{/* ════════ Meta bar ═════════════════════════════════════════════ */}
 	<section class="prog-meta">
 		<div class="shell prog-meta__inner">
-			{audienceLabels.length > 0 && (
+			{audiences.length > 0 && (
 				<div class="prog-meta__group">
 					<h4 class="prog-meta__label">Audiences:</h4>
 					<div class="prog-meta__tags">
-						{audienceLabels.map((label) => (
-							<span class="prog-meta__tag">{label}</span>
+						{audiences.map((aud) => (
+							<span
+								class:list={[
+									'prog-meta__tag',
+									(aud.id === 'businesses' || aud.id === 'public') && 'prog-meta__tag--blue',
+								]}
+							>
+								{aud.label}
+							</span>
 						))}
 					</div>
 				</div>
@@ -68,10 +81,10 @@ const sections = (programme.sections ?? [])
 					<span class="prog-meta__value">{duration}</span>
 				</div>
 			)}
-			{topicLabels.length > 0 && (
+			{typeLabel && (
 				<div class="prog-meta__group">
 					<h4 class="prog-meta__label">Type:</h4>
-					<span class="prog-meta__value">{topicLabels[0]}</span>
+					<span class="prog-meta__value">{typeLabel}</span>
 				</div>
 			)}
 		</div>
@@ -95,7 +108,7 @@ const sections = (programme.sections ?? [])
 	.prog-hero {
 		position: relative;
 		width: 100%;
-		min-height: 340px;
+		min-height: 380px;
 		display: flex;
 		align-items: flex-end;
 		overflow: hidden;
@@ -113,15 +126,19 @@ const sections = (programme.sections ?? [])
 	.prog-hero__overlay {
 		position: absolute;
 		inset: 0;
-		background: rgba(0, 0, 0, 0.45);
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.35) 0%,
+			rgba(0, 0, 0, 0.55) 100%
+		);
 		z-index: 1;
 	}
 
 	.prog-hero__text {
 		position: relative;
 		z-index: 2;
-		padding-top: 80px;
-		padding-bottom: 40px;
+		padding-top: 100px;
+		padding-bottom: 48px;
 	}
 
 	.prog-hero__eyebrow {
@@ -135,39 +152,51 @@ const sections = (programme.sections ?? [])
 	}
 
 	.prog-hero__title {
-		font-family: 'Rubik', sans-serif;
-		font-size: clamp(28px, 4vw, 50px);
-		font-weight: 700;
-		line-height: 1.15;
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 4.5vw, 3.25rem);
+		font-weight: 500;
+		line-height: 1.05;
+		text-transform: uppercase;
 		color: #fff;
 		margin: 0;
-		max-width: 700px;
+		max-width: 18ch;
 	}
 
-	/* ─── Meta bar ─────────────────────────────────────────── */
+	.prog-hero__duration {
+		margin: 0.75rem 0 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		color: rgba(255, 255, 255, 0.88);
+	}
+
+	/* ─── Meta bar (live: pill audiences, inline meta) ─────── */
 	.prog-meta {
-		padding: 24px 0;
+		padding: 0;
 		border-bottom: 1px solid #e3e3e3;
+		background: #fff;
 	}
 
 	.prog-meta__inner {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 24px 40px;
-		align-items: baseline;
+		gap: 1rem 2.5rem;
+		align-items: center;
+		padding: 1.1rem 0;
 	}
 
 	.prog-meta__group {
 		display: flex;
-		align-items: baseline;
-		gap: 8px;
+		align-items: center;
+		gap: 0.5rem;
+		flex-wrap: wrap;
 	}
 
 	.prog-meta__label {
 		font-family: 'Rubik', sans-serif;
-		font-size: 12px;
+		font-size: 13px;
 		font-weight: 400;
-		color: #4a4a4a;
+		color: rgb(90, 90, 90);
 		margin: 0;
 		white-space: nowrap;
 	}
@@ -178,12 +207,28 @@ const sections = (programme.sections ?? [])
 		flex-wrap: wrap;
 	}
 
-	.prog-meta__tag,
-	.prog-meta__value {
+	.prog-meta__tag {
+		display: inline-flex;
+		align-items: center;
+		padding: 5px 10px;
+		border-radius: 6px;
 		font-family: 'Rubik', sans-serif;
 		font-size: 12px;
-		font-weight: 600;
-		color: rgb(240, 93, 87);
+		font-weight: 500;
+		color: #fff;
+		line-height: 1;
+		background: rgb(240, 93, 87);
+	}
+
+	.prog-meta__tag--blue {
+		background: #0099ff;
+	}
+
+	.prog-meta__value {
+		font-family: 'Rubik', sans-serif;
+		font-size: 13px;
+		font-weight: 500;
+		color: rgb(51, 51, 51);
 	}
 
 	/* ─── Content body ─────────────────────────────────────── */
@@ -197,9 +242,11 @@ const sections = (programme.sections ?? [])
 	}
 
 	.prog-section__heading {
-		font-family: 'Rubik', sans-serif;
-		font-size: 1.4rem;
-		font-weight: 600;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.35rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
 		color: rgb(51, 51, 51);
 		margin: 0 0 0.75rem;
 	}

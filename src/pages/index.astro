@@ -14,6 +14,17 @@ import {
 
 const site = getSiteData();
 const page = getStaticPage('/');
+const heroBgSrc = page?.hero_image ?? '/images/hero-bg.jpg';
+const partnerStatement =
+	page?.partner_statement ??
+	'Official training partner for tech companies, universities, and the Singapore government.';
+const focusAreas: string[] = page?.focus_areas?.length ? page.focus_areas : HOME_COURSE_DOMAINS;
+const defaultProofPoints = [
+	'Led by experts with qualifications and experience from world-class institutions.',
+	'Curriculum designed and delivered by officially certified instructors.',
+] as const;
+const proofPoints: string[] =
+	page?.proof_points && page.proof_points.length >= 2 ? page.proof_points : [...defaultProofPoints];
 const featuredProgrammeOrder = new Map(
 	(page?.featured_programme_slugs ?? []).map((slug, index) => [slug, index]),
 );
@@ -77,7 +88,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 >
 	<!-- ━━ 1. Hero ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 	<section class="home-hero">
-		<img class="home-hero__bg" src="/images/hero-bg.jpg" alt="" />
+		<img class="home-hero__bg" src={heroBgSrc} alt="" />
 		<div class="home-hero__gradient"></div>
 		<div class="home-hero__content shell">
 			<h1>
@@ -99,10 +110,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	<!-- ━━ 2. Partners ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 	<section class="section-marquee">
 		<div class="shell">
-			<p class="marquee-label">
-				Official training partner for tech companies, universities, and the Singapore
-				government.
-			</p>
+			<p class="marquee-label">{partnerStatement}</p>
 		</div>
 		<div class="marquee-track-wrap" aria-label="Training partners">
 			<div class="marquee-track marquee-track--partners">
@@ -133,7 +141,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 				Courses available in a wide variety of modern, practical domains.
 			</p>
 			<div class="domain-bubbles">
-				{HOME_COURSE_DOMAINS.map((domain) => (
+				{focusAreas.map((domain) => (
 					<span class="domain-bubble">{domain}</span>
 				))}
 			</div>
@@ -143,9 +151,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	<!-- ━━ 4. Expertise / Institutions ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 	<section class="section-marquee">
 		<div class="shell">
-			<p class="marquee-label">
-				Led by experts with qualifications and experience from world-class institutions.
-			</p>
+			<p class="marquee-label">{proofPoints[0]}</p>
 		</div>
 		<div class="marquee-track-wrap" aria-label="Institutions">
 			<div class="marquee-track marquee-track--institutions">
@@ -165,9 +171,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	<!-- ━━ 5. Certifications ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 	<section class="section-marquee">
 		<div class="shell">
-			<p class="marquee-label">
-				Curriculum designed and delivered by officially certified instructors.
-			</p>
+			<p class="marquee-label">{proofPoints[1]}</p>
 		</div>
 		<div class="marquee-track-wrap" aria-label="Certifications">
 			<div class="marquee-track marquee-track--certs">

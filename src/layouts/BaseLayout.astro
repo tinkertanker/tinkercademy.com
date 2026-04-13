@@ -1,9 +1,10 @@
 ---
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import { getSiteData } from '../lib/data.js';
+import { getSiteData, getSearchableProgrammes } from '../lib/data.js';
 
 const site = getSiteData();
+const programmeSearchIndex = getSearchableProgrammes();
 const {
 	title = site.siteSettings?.default_seo?.title ?? 'Tinkercademy',
 	description = site.siteSettings?.default_seo?.description ?? '',
@@ -32,7 +33,10 @@ const {
 		/>
 	</head>
 	<body>
-		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />
+		<SiteHeader
+			navigation={site.siteSettings?.navigation ?? []}
+			programmeSearchIndex={programmeSearchIndex}
+		/>
 		<main>
 			<slot />
 		</main>

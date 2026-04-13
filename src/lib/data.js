@@ -171,6 +171,34 @@ export function getProgrammesForPage(page) {
  * These are internal links that don't point to /programmes/ and aren't
  * footer/utility links (external, form, email, phone).
  */
+/**
+ * Minimal programme fields for site-wide search (header overlay).
+ * Keeps payloads small for inline JSON in the document.
+ */
+export function getSearchableProgrammes() {
+	const site = getSiteData();
+	return site.programmes.map((p) => {
+		const primary = p.audiences?.[0];
+		const topicLabel = p.topics?.[0]?.label ?? '';
+		return {
+			slug: p.slug,
+			title: p.title,
+			audienceLabel: primary?.label ?? 'Programme',
+			audienceId: primary?.id ?? '',
+			topicLabel,
+			duration: p.duration ?? '',
+			searchText: buildSearchText([
+				p.title,
+				primary?.label,
+				p.duration,
+				topicLabel,
+				...(p.topics?.map((t) => t.label) ?? []),
+				...(p.audiences?.map((a) => a.label) ?? []),
+			]),
+		};
+	});
+}
+
 export function getNavPillsForPage(page) {
 	if (!page?.ctas) return [];
 
