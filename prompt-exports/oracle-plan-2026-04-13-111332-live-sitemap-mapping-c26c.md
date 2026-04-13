@@ -2,7 +2,7 @@
 <taskname="Live sitemap mapping"/>
 <task>Verify the live sitemap route inventory at https://tinkercademy.com/sitemap.xml, then produce a concise URL → deterministic mobile screenshot filename inventory for files that should live under docs/screenshots/live/mobile/. Also report slug-normalisation cautions (especially encoded/non-ASCII slugs). Do not modify repo files.
 
-Discovery already found the deterministic naming implementation in `docs/screenshots/live/mobile/capture-mobile-screenshots.spec.js` and no committed screenshot PNGs under `docs/screenshots/live/mobile/`.
+Discovery already found the deterministic naming implementation in `docs/screenshots/live/mobile/capture-mobile-screenshots.spec.js`.
 
 Use this as the current data-derived baseline to cross-check the live sitemap (baseline may be stale, so treat as provisional):
 - Static paths (13):

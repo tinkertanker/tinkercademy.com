@@ -37,7 +37,7 @@ const introBody =
 	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('Tinkertanker Pte Ltd'))) || '';
 const partnersBlurb =
 	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('industry leaders'))) ||
-	'We collaborate with with industry leaders and educational institutions to drive innovation in learning. Our partners make it possible for us to create impactful solutions that empower educators and students alike.';
+	'We collaborate with industry leaders and educational institutions to drive innovation in learning. Our partners make it possible for us to create impactful solutions that empower educators and students alike.';
 const clientsBlurb =
 	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('had the privilege'))) ||
 	'We’ve had the privilege of teaching, and working with, many preschools, primary schools, secondary schools, IP schools, junior colleges, tertiary institutions, and companies. Here’s a random sample of our clients:';
@@ -68,9 +68,9 @@ const certLogosRow1 = [
 	'/images/remote/gNg7rhp5eIX1new2SYkG6XIwg9Q.png',
 ];
 const certLogosRow2 = [
-	'https://framerusercontent.com/images/YmCHyVKMOmlcKuOEanrBWtOFp00.png',
-	'https://framerusercontent.com/images/HR5MXeyvhzWLMXmEUiYKqaqO7SQ.png',
-	'https://framerusercontent.com/images/LydlXepPt0aCpKoojvKQE0StlU.png',
+	framerSrc('https://framerusercontent.com/images/YmCHyVKMOmlcKuOEanrBWtOFp00.png'),
+	framerSrc('https://framerusercontent.com/images/HR5MXeyvhzWLMXmEUiYKqaqO7SQ.png'),
+	framerSrc('https://framerusercontent.com/images/LydlXepPt0aCpKoojvKQE0StlU.png'),
 ];
 
 /* ── Partner marks (circular row on live) ── */
@@ -652,6 +652,13 @@ const heroTitleHtml = heroTitle.replace(
 		}
 		to {
 			transform: translateX(-50%);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.about-logo-track--partners,
+		.about-logo-track--clients {
+			animation: none;
 		}
 	}
 </style>
