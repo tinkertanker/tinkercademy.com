@@ -169,7 +169,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	</section>
 
 	<!-- ━━ 5. Certifications ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-	<section class="section-marquee">
+	<section class="section-marquee section-marquee--certifications">
 		<div class="shell">
 			<p class="marquee-label">{proofPoints[1]}</p>
 		</div>
@@ -363,6 +363,30 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	   ═══════════════════════════════════════════════════════════════════ */
 	.section-marquee {
 		padding: 2rem 0;
+	}
+
+	.section-marquee--certifications {
+		background:
+			radial-gradient(120% 120% at 50% 0%, rgba(240, 93, 87, 0.2) 0%, rgba(240, 93, 87, 0) 55%),
+			linear-gradient(180deg, rgb(26, 26, 26) 0%, rgb(10, 10, 10) 100%);
+	}
+
+	.section-marquee--certifications .marquee-label {
+		color: rgba(255, 255, 255, 0.86);
+	}
+
+	.section-marquee--certifications .marquee-track-wrap {
+		mask-image: linear-gradient(
+			90deg,
+			transparent 0%,
+			rgba(0, 0, 0, 0.95) 10%,
+			rgba(0, 0, 0, 0.95) 90%,
+			transparent 100%
+		);
+	}
+
+	.section-marquee--certifications .marquee-logo--cert {
+		opacity: 0.92;
 	}
 
 	.marquee-label {
