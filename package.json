@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "crawl:site": "node scripts/crawl-site.mjs",
+    "mirror:site": "node scripts/mirror-site.mjs",
     "build:crm": "node scripts/build-crm-data.mjs",
     "import:live": "npm run crawl:site && npm run build:crm",
     "check": "astro check"

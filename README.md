@@ -9,6 +9,7 @@ Astro rebuild of the live `tinkercademy.com` Framer site. The workflow is crawl-
 ## Commands
 
 - `npm run import:live` crawls the public site and regenerates the structured data files.
+- `npm run mirror:site -- --origin https://example.com --output output/mirrors/example.com` downloads a host into a local mirror folder, following internal pages plus referenced HTML, CSS, and JS assets.
 - `npm run dev` starts the Astro dev server.
 - `npm run build` builds the site.
 - `npm run check` runs `astro check`.
@@ -36,6 +37,7 @@ Static route payloads also retain extracted `blocks`, explicit `course_cards`, a
 ## Notes
 
 - `scripts/_artifacts/` is generated and ignored.
+- `output/mirrors/` is generated and ignored; the mirror script writes a `manifest.json` there listing every fetched page and asset.
 - The current implementation keeps remote image URLs from Framer while the migration is still in progress.
 - `src/lib/site-media.js` maps the current live homepage brand, partner, badge, and compact course imagery used for the higher-fidelity front-page rebuild.
 - `/professionals`, `/schools`, and `/individuals` are dedicated Astro routes; they are intentionally excluded from the generic `[slug].astro` renderer.
