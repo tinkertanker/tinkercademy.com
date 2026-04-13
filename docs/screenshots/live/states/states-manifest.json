@@ -1,0 +1,81 @@
+[
+  {
+    "name": "contact-email-hover-desktop",
+    "route": "/contact-us",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/contact-email-hover-desktop.png"
+  },
+  {
+    "name": "contact-us-mobile-viewport",
+    "route": "/contact-us",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/contact-us-mobile-viewport.png"
+  },
+  {
+    "name": "courses-all-business-card-hover-desktop",
+    "route": "/courses-all",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/courses-all-business-card-hover-desktop.png"
+  },
+  {
+    "name": "courses-all-first-card-hover-desktop",
+    "route": "/courses-all",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/courses-all-first-card-hover-desktop.png"
+  },
+  {
+    "name": "courses-all-mobile-viewport",
+    "route": "/courses-all",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/courses-all-mobile-viewport.png"
+  },
+  {
+    "name": "home-course-card-hover-desktop",
+    "route": "/",
+    "ok": false,
+    "error": "locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"https://tinkercademy.com/programmes/knowledge-powered-ai-with-chatgpt\"]').first()\u001b[22m\n",
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/home-course-card-hover-desktop.png"
+  },
+  {
+    "name": "home-mobile-viewport",
+    "route": "/",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/home-mobile-viewport.png"
+  },
+  {
+    "name": "home-programme-link-hover-desktop",
+    "route": "/",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/home-programme-link-hover-desktop.png"
+  },
+  {
+    "name": "home-search-open-desktop",
+    "route": "/",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/home-search-open-desktop.png"
+  },
+  {
+    "name": "programme-sign-up-hover-desktop",
+    "route": "/programmes/knowledge-powered-ai-with-chatgpt",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/programme-sign-up-hover-desktop.png"
+  },
+  {
+    "name": "showcase-project-card-hover-desktop",
+    "route": "/showcase",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/showcase-project-card-hover-desktop.png"
+  },
+  {
+    "name": "tutorial-back-link-hover-desktop",
+    "route": "/tutorials/quick-maths",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/tutorial-back-link-hover-desktop.png"
+  },
+  {
+    "name": "tutorial-store-link-hover-desktop",
+    "route": "/tutorials/quick-maths",
+    "ok": true,
+    "file": "/Users/yingjie/Developer/tt-projects/tinkercademy.com.v3/docs/screenshots/live/states/tutorial-store-link-hover-desktop.png"
+  }
+]
