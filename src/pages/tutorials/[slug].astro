@@ -1,4 +1,5 @@
 ---
+import CtaBanner from '../../components/CtaBanner.astro';
 import HeroMedia from '../../components/HeroMedia.astro';
 import TutorialStory from '../../components/TutorialStory.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -35,6 +36,7 @@ const contentItems =
 	</section>
 	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} compact />
 	<TutorialStory items={contentItems} />
+	<CtaBanner />
 </BaseLayout>
 
 <style>

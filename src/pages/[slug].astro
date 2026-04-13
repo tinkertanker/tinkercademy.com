@@ -1,16 +1,24 @@
 ---
 import ContentBlocks from '../components/ContentBlocks.astro';
+import CourseGrid from '../components/CourseGrid.astro';
+import CtaBanner from '../components/CtaBanner.astro';
 import HeroMedia from '../components/HeroMedia.astro';
 import PageHero from '../components/PageHero.astro';
+import RichContent from '../components/RichContent.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getSiteData } from '../lib/data.js';
+import { getSiteData, getProgrammesForPage, getNavPillsForPage } from '../lib/data.js';
 
 export function getStaticPaths() {
+	/* Pages with dedicated .astro files — exclude from the dynamic catch-all */
+	const dedicatedPages = new Set([
+		'about-us', 'contact-us', 'showcase', 'microbit', 'tinker-x', 'infocomm-club',
+	]);
 	const site = getSiteData();
 	return site.staticPages
 		.filter((page) => page.path !== '/')
 		.filter((page) => !page.path.startsWith('/programmes/') && !page.path.startsWith('/tutorials/'))
 		.filter((page) => page.path.split('/').filter(Boolean).length === 1)
+		.filter((page) => !dedicatedPages.has(page.slug))
 		.map((page) => ({
 			params: { slug: page.slug },
 			props: { page },
@@ -19,15 +27,103 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const canonical = new URL(page.path, 'https://tinkercademy.com').toString();
+
+/* ─── Classify page type ────────────────────────────────────────────── */
+const COURSE_LISTING_SLUGS = ['courses-all', 'courses-professionals', 'courses-schools'];
+const AUDIENCE_LANDING_SLUGS = ['professionals', 'schools', 'individuals'];
+
+const isCourseListing = COURSE_LISTING_SLUGS.includes(page.slug);
+const isAudienceLanding = AUDIENCE_LANDING_SLUGS.includes(page.slug);
+
+/* ─── Data for course listing / audience pages ──────────────────────── */
+const programmes = (isCourseListing || isAudienceLanding)
+	? getProgrammesForPage(page)
+	: [];
+const navPills = (isCourseListing || isAudienceLanding)
+	? getNavPillsForPage(page)
+	: [];
+
+/* ─── Course listing page titles (the title field is a slug in the data) */
+const COURSE_PAGE_TITLES: Record<string, string> = {
+	'courses-all': 'All Courses',
+	'courses-professionals': 'Professional Courses',
+	'courses-schools': 'School Courses',
+};
+const AUDIENCE_PAGE_TITLES: Record<string, string> = {
+	professionals: 'Professionals',
+	schools: 'Schools',
+	individuals: 'Individuals',
+};
+
+const displayTitle = isCourseListing
+	? COURSE_PAGE_TITLES[page.slug] ?? page.title
+	: isAudienceLanding
+		? AUDIENCE_PAGE_TITLES[page.slug] ?? page.title
+		: page.title;
+
+/* ─── Determine if content has rich types (image / richtext) ────────── */
+const contentBlocks = page.content ?? [];
+const hasRichContent = contentBlocks.some(
+	(block) => block.type === 'image' || block.type === 'richtext',
+);
 ---
 
 <BaseLayout
-	title={page.seo?.title ?? page.title}
+	title={page.seo?.title ?? displayTitle}
 	description={page.seo?.description ?? page.description ?? ''}
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
 >
-	<PageHero title={page.title} lead={page.description} />
-	<HeroMedia src={page.hero_image} alt={page.title} compact={true} />
-	<ContentBlocks blocks={page.content} />
+	{isCourseListing ? (
+		/* ════════════════════════════════════════════════════════════════
+		   COURSE LISTING PAGES  (courses-all, courses-professionals, courses-schools)
+		   Live site shows only the card grid + bottom nav pills — no hero,
+		   no banner image, no CTA gradient banner.
+		   ═══════════════════════════════════════════════════════════════ */
+		<CourseGrid
+			programmes={programmes}
+			pageTitle={displayTitle}
+			navPills={navPills}
+		/>
+	) : isAudienceLanding ? (
+		/* ════════════════════════════════════════════════════════════════
+		   AUDIENCE LANDING PAGES  (professionals, schools, individuals)
+		   ═══════════════════════════════════════════════════════════════ */
+		<>
+			<PageHero title={displayTitle} lead={page.description} />
+			{page.hero_image && (
+				<HeroMedia src={page.hero_image} alt={displayTitle} compact={true} />
+			)}
+			{contentBlocks.length > 0 && (
+				hasRichContent
+					? <RichContent items={contentBlocks} />
+					: <ContentBlocks blocks={contentBlocks} />
+			)}
+			{programmes.length > 0 && (
+				<CourseGrid
+					programmes={programmes}
+					pageTitle={`${displayTitle} Courses`}
+					navPills={navPills}
+				/>
+			)}
+			<CtaBanner />
+		</>
+	) : (
+		/* ════════════════════════════════════════════════════════════════
+		   RICH CONTENT / DEFAULT PAGES
+		   (about-us, contact-us, showcase, microbit, tinker-x, infocomm-club)
+		   ═══════════════════════════════════════════════════════════════ */
+		<>
+			<PageHero title={displayTitle} lead={page.description} />
+			{page.hero_image && (
+				<HeroMedia src={page.hero_image} alt={displayTitle} compact={true} />
+			)}
+			{contentBlocks.length > 0 && (
+				hasRichContent
+					? <RichContent items={contentBlocks} />
+					: <ContentBlocks blocks={contentBlocks} />
+			)}
+			<CtaBanner />
+		</>
+	)}
 </BaseLayout>

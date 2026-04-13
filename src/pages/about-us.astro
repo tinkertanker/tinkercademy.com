@@ -1,0 +1,473 @@
+---
+/**
+ * /about-us — fully rebuilt to match the live Framer site.
+ *
+ * Sections (in order):
+ *  1. Hero — H1 + subtitle (white bg, no image)
+ *  2. Intro — Tinkertanker logo + company blurb
+ *  3. Certifications — dark gradient strip with 7 certification logos
+ *  4. Partners — heading + blurb + logo images
+ *  5. Our Clients — heading + blurb + logo strip images
+ *  6. Stats — dark gradient, 3 white stat cards (50+, 160+, 3000+)
+ *  7. Our Team — loaded from src/data/team.yaml
+ *  8. CTA Banner
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getStaticPage } from '../lib/data.js';
+import { parse as parseYaml } from 'yaml';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+const page = getStaticPage('/about-us');
+if (!page) return Astro.redirect('/404');
+
+const canonical = new URL('/about-us', 'https://tinkercademy.com').toString();
+
+/* ── Load team data from YAML ── */
+interface TeamMember {
+	name: string;
+	role: string;
+	bio: string;
+	photo: string;
+	linkedin?: string;
+}
+const teamYaml = readFileSync(
+	resolve(process.cwd(), 'src/data/team.yaml'),
+	'utf-8'
+);
+const team: TeamMember[] = parseYaml(teamYaml);
+
+/* ── Certification logos ── */
+const certLogos = [
+	'/images/remote/BDt3R80YV6FiInYlrnHOw8DQ.svg',
+	'/images/remote/EeQgsZhGeo5B8SsOriPf6iEbpU.webp',
+	'/images/remote/ZYZcVNiPEg6tMjHGhU520Ord5uI.webp',
+	'/images/remote/nI5l61MSsRmuWTFJqVH4cpNjfqY.webp',
+	'/images/remote/icLJqUI2otyj00sfJ4Dvlfxbo.webp',
+	'/images/remote/m4aQlLtGTef2FbAG9CTD4ReFE.png',
+	'/images/remote/W5TrPI4TQ7ldyHjx1tFRClDkVI.png',
+];
+
+/* ── Partner logo images ── */
+const partnerLogos = [
+	'/images/remote/OHbHnfvpGLsxcntGKsueCChDt4.png',
+	'/images/remote/JKscUSf6W4RYRx9NZVXTg1xxeVs.png',
+];
+
+/* ── Client logo strip images ── */
+const clientLogos = [
+	'/images/remote/HR5MXeyvhzWLMXmEUiYKqaqO7SQ.png',
+	'/images/remote/Rl2dNu7CjKUj50GoHP4FX8cpA.png',
+	'/images/remote/LydlXepPt0aCpKoojvKQE0StlU.png',
+	'/images/remote/YmCHyVKMOmlcKuOEanrBWtOFp00.png',
+	'/images/remote/xHwcdydT3oqZNLuEPhUYed1o.gif',
+];
+
+/* ── Stats data ── */
+const stats = [
+	{ number: '50+', description: 'Primary and Secondary Schools We\'ve Taught at for IMDA Infocomm Club' },
+	{ number: '160+', description: 'Preschools We\'ve Developed Curriculum for in the Playmaker Programme' },
+	{ number: '3000+', description: 'Students We\'ve Reached Through the Code@SG Movement' },
+];
+---
+
+<BaseLayout
+	title={page.seo?.title ?? 'About Us — Tinkercademy'}
+	description={page.seo?.description ?? page.description ?? ''}
+	canonical={canonical}
+	image={page.hero_image ?? undefined}
+>
+	{/* ═══════ 1. Hero ══════════════════════════════════════════════════ */}
+	<section class="about-hero">
+		<div class="shell">
+			<h1 class="about-hero__title">We're coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore.</h1>
+			<p class="about-hero__subtitle">We bring an unparalleled depth of experience in education <em>and</em> technology to our classes and curriculum.</p>
+		</div>
+	</section>
+
+	{/* ═══════ 2. Intro ═════════════════════════════════════════════════ */}
+	<section class="about-intro">
+		<div class="shell about-intro__inner">
+			<img
+				class="about-intro__logo"
+				src="/images/remote/hbuTZqmS4AOlBdh6Ydrkt9tN4o.png"
+				alt="Tinkertanker"
+				loading="lazy"
+			/>
+			<div class="about-intro__text">
+				<p><a href="http://tinkertanker.com/" target="_blank" rel="noopener">Tinkertanker Pte Ltd</a> is a technology and education company of tinkerers and teachers. We run <strong>Tinkercademy</strong>, where we teach coding and digital making to students of all ages — as well as professionals and corporations who want to stay up-to-date on the latest technologies.</p>
+				<p>We also run the <a href="https://gethacking.com" target="_blank" rel="noopener">Get Hacking</a> store, where we sell educational technology kits and tools, and build products like <strong>GuestDay</strong>, <strong>IC Photo</strong>, and <strong>Spickify/Helpling</strong> to solve everyday problems.</p>
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════ 3. Certifications ════════════════════════════════════════ */}
+	<section class="about-certs">
+		<div class="shell">
+			<h2 class="about-certs__heading">We are certified</h2>
+			<div class="about-certs__grid">
+				{certLogos.map((src) => (
+					<img class="about-certs__logo" src={src} alt="Certification" loading="lazy" />
+				))}
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════ 4. Partners ══════════════════════════════════════════════ */}
+	<section class="about-section">
+		<div class="shell">
+			<h2 class="about-section__heading">Partners</h2>
+			<p class="about-section__body">We collaborate with industry leaders and educational institutions to bring world-class learning experiences to Singapore and beyond.</p>
+			<div class="about-partners__logos">
+				{partnerLogos.map((src) => (
+					<img class="about-partners__logo" src={src} alt="Partner" loading="lazy" />
+				))}
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════ 5. Our Clients ═══════════════════════════════════════════ */}
+	<section class="about-section">
+		<div class="shell">
+			<h2 class="about-section__heading">Our Clients</h2>
+			<p class="about-section__body">We've had the privilege of teaching, and working with, many preschools, primary schools, secondary schools, polytechnics, universities, government agencies, and corporations.</p>
+			<div class="about-clients__logos">
+				{clientLogos.map((src) => (
+					<img class="about-clients__logo" src={src} alt="Client" loading="lazy" />
+				))}
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════ 6. Stats (dark gradient) ═════════════════════════════════ */}
+	<section class="about-stats">
+		<div class="shell about-stats__grid">
+			{stats.map((stat) => (
+				<div class="about-stat">
+					<span class="about-stat__number">{stat.number}</span>
+					<p class="about-stat__label">{stat.description}</p>
+				</div>
+			))}
+		</div>
+	</section>
+
+	{/* ═══════ 7. Our Team ══════════════════════════════════════════════ */}
+	<section class="about-team">
+		<div class="shell">
+			<h2 class="about-section__heading">Our Team</h2>
+			<p class="about-section__body">Meet the people behind Tinkercademy.</p>
+
+			<div class="about-team__grid">
+				{team.map((member) => (
+					<div class="team-card">
+						<img
+							class="team-card__photo"
+							src={member.photo}
+							alt={member.name}
+							loading="lazy"
+						/>
+						<div class="team-card__body">
+							<h3 class="team-card__name">
+								{member.linkedin ? (
+									<a href={member.linkedin} target="_blank" rel="noopener">{member.name}</a>
+								) : (
+									member.name
+								)}
+							</h3>
+							<p class="team-card__role">{member.role}</p>
+							<p class="team-card__bio">{member.bio}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<CtaBanner />
+</BaseLayout>
+
+<style>
+	/* ─── Hero ──────────────────────────────────────────────── */
+	.about-hero {
+		padding: 4rem 0 2rem;
+	}
+
+	.about-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.6rem, 3vw, 2.4rem);
+		font-weight: 500;
+		line-height: 1.35;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.25rem;
+		max-width: 850px;
+	}
+
+	.about-hero__subtitle {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+		line-height: 1.65;
+		color: rgb(61, 61, 61);
+		margin: 0;
+		max-width: 700px;
+	}
+
+	.about-hero__subtitle em {
+		font-style: italic;
+	}
+
+	/* ─── Intro ────────────────────────────────────────────── */
+	.about-intro {
+		padding: 0 0 3rem;
+	}
+
+	.about-intro__inner {
+		display: flex;
+		align-items: flex-start;
+		gap: 2.5rem;
+	}
+
+	.about-intro__logo {
+		width: 100px;
+		height: auto;
+		flex-shrink: 0;
+		border-radius: 12px;
+	}
+
+	.about-intro__text {
+		font-family: 'Rubik', sans-serif;
+		font-size: 15px;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+	}
+
+	.about-intro__text p {
+		margin: 0 0 1rem;
+	}
+
+	.about-intro__text a {
+		color: rgb(240, 93, 87);
+		text-decoration: none;
+	}
+
+	.about-intro__text a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 809px) {
+		.about-intro__inner {
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+
+		.about-intro__logo {
+			width: 80px;
+		}
+	}
+
+	/* ─── Certifications (dark gradient) ───────────────────── */
+	.about-certs {
+		padding: 3rem 0;
+		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(24, 24, 26) 100%);
+	}
+
+	.about-certs__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: #fff;
+		margin: 0 0 1.5rem;
+		text-align: center;
+	}
+
+	.about-certs__grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.about-certs__logo {
+		height: 60px;
+		width: auto;
+		object-fit: contain;
+		filter: brightness(0) invert(1);
+		opacity: 0.85;
+	}
+
+	@media (max-width: 809px) {
+		.about-certs__grid {
+			gap: 1.25rem;
+		}
+
+		.about-certs__logo {
+			height: 45px;
+		}
+	}
+
+	/* ─── Generic section ──────────────────────────────────── */
+	.about-section {
+		padding: 3rem 0;
+	}
+
+	.about-section__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+	}
+
+	.about-section__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 15px;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+		margin: 0 0 1.5rem;
+		max-width: 800px;
+	}
+
+	/* ─── Partner logos ────────────────────────────────────── */
+	.about-partners__logos {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	.about-partners__logo {
+		height: 40px;
+		width: auto;
+		object-fit: contain;
+	}
+
+	/* ─── Client logos ─────────────────────────────────────── */
+	.about-clients__logos {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.about-clients__logo {
+		max-width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	/* ─── Stats (dark gradient) ────────────────────────────── */
+	.about-stats {
+		padding: 4rem 0;
+		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(0, 0, 0) 100%);
+	}
+
+	.about-stats__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		text-align: center;
+	}
+
+	.about-stat__number {
+		display: block;
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 600;
+		color: rgb(240, 93, 87);
+		line-height: 1;
+		margin-bottom: 0.75rem;
+	}
+
+	.about-stat__label {
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.75);
+		margin: 0;
+	}
+
+	@media (max-width: 809px) {
+		.about-stats__grid {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+	}
+
+	/* ─── Team ─────────────────────────────────────────────── */
+	.about-team {
+		padding: 3rem 0;
+	}
+
+	.about-team__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.team-card {
+		background: #fafafa;
+		border: 1px solid #e3e3e3;
+		border-radius: 10px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.team-card__photo {
+		width: 100%;
+		aspect-ratio: 1;
+		object-fit: cover;
+		display: block;
+	}
+
+	.team-card__body {
+		padding: 1.25rem 1rem;
+	}
+
+	.team-card__name {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.25rem;
+	}
+
+	.team-card__name a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.team-card__name a:hover {
+		color: rgb(240, 93, 87);
+	}
+
+	.team-card__role {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: rgb(240, 93, 87);
+		margin: 0 0 0.75rem;
+	}
+
+	.team-card__bio {
+		font-family: 'Rubik', sans-serif;
+		font-size: 13px;
+		line-height: 1.65;
+		color: rgb(110, 110, 110);
+		margin: 0;
+	}
+
+	@media (max-width: 1199px) {
+		.about-team__grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 809px) {
+		.about-team__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

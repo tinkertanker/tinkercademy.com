@@ -1,0 +1,236 @@
+---
+/**
+ * /contact-us — rebuilt to match the live Framer site.
+ *
+ * Layout: Two-column — JotForm embed (left) + Find Us (right).
+ * Find Us contains: Address + Google Maps, Directions with images, Parking with image.
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getStaticPage } from '../lib/data.js';
+
+const page = getStaticPage('/contact-us');
+if (!page) return Astro.redirect('/404');
+
+const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
+---
+
+<BaseLayout
+	title={page.seo?.title ?? 'Contact Us — Tinkercademy'}
+	description={page.seo?.description ?? page.description ?? ''}
+	canonical={canonical}
+	image={page.hero_image ?? undefined}
+>
+	<section class="contact">
+		<div class="shell contact__inner">
+			{/* ── Left: JotForm embed ── */}
+			<div class="contact__form">
+				<h1 class="contact__title">Get in touch</h1>
+				<iframe
+					class="contact__jotform"
+					src="https://form.jotform.com/223001013827440"
+					title="Contact Form"
+					loading="lazy"
+					allow="geolocation; microphone; camera"
+					allowfullscreen
+				></iframe>
+			</div>
+
+			{/* ── Right: Find Us ── */}
+			<div class="contact__find">
+				<h2 class="contact__find-title">Find Us</h2>
+
+				{/* Address */}
+				<div class="contact-card">
+					<h3 class="contact-card__heading">Address</h3>
+					<p class="contact-card__text">59 Jalan Pemimpin #04-01, L&Y Building, Singapore 577218</p>
+					<p class="contact-card__text"><strong>Weekdays:</strong> 10 am – 5.30 pm</p>
+					<p class="contact-card__text"><strong>Weekends:</strong> 10 am – 1 pm</p>
+					<p class="contact-card__text">
+						<a href="mailto:hello@tk.sg">hello@tk.sg</a> ·
+						<a href="tel:+6569176920">6917 6920</a>
+					</p>
+				</div>
+
+				{/* Google Maps */}
+				<div class="contact-map">
+					<iframe
+						class="contact-map__iframe"
+						src="https://maps.google.com/maps?q=Tinkercademy&z=15&output=embed"
+						title="Tinkercademy on Google Maps"
+						loading="lazy"
+						allowfullscreen
+					></iframe>
+				</div>
+
+				{/* Directions */}
+				<div class="contact-card contact-card--round">
+					<h3 class="contact-card__heading">Directions</h3>
+					<p class="contact-card__text"><strong>Nearest MRT:</strong> Marymount</p>
+					<p class="contact-card__text"><strong>By Bus:</strong> From Bishan MRT and Bus Stop 53239 (Bus 13, 50, 52, 54, 55, 55B, 58, 71, 88, 156). From Bus Stop 53131 (Bus 54, 74, 851, 852).</p>
+					<p class="contact-card__text">Once you reach the L&Y Building, go around the building to find the entrance. Take the lift to the 4th floor and turn right. You made it!</p>
+					<div class="contact-card__images">
+						<img src="/images/remote/ruSDPHaMjLP5DCdMnqVrqSp0Fs.png" alt="Entrance directions" loading="lazy" />
+						<img src="/images/remote/b0uc8kk9c3m8176vXRgsJwEWk.png" alt="Building entrance" loading="lazy" />
+					</div>
+				</div>
+
+				{/* Parking */}
+				<div class="contact-card contact-card--round">
+					<h3 class="contact-card__heading">Parking</h3>
+					<p class="contact-card__text">The car park is accessible from the front entrance, beside Jackie's yellow and blue building.</p>
+					<div class="contact-card__rates">
+						<p class="contact-card__text"><strong>Mon – Sat</strong></p>
+						<p class="contact-card__text">8 am – 6 pm: $1.20 per hour or part thereof</p>
+						<p class="contact-card__text">6 pm – 8 am: $2.00 per entry</p>
+						<p class="contact-card__text"><strong>Sunday &amp; Public Holidays</strong></p>
+						<p class="contact-card__text">$2.00 per entry</p>
+					</div>
+					<div class="contact-card__images">
+						<img src="/images/remote/GcgNecJtTyHUa4L23kutskeQQ.png" alt="Parking area" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<CtaBanner />
+</BaseLayout>
+
+<style>
+	.contact {
+		padding: 3rem 0;
+	}
+
+	.contact__inner {
+		display: flex;
+		gap: 2.5rem;
+		align-items: flex-start;
+	}
+
+	.contact__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	/* ── Left column: Form ─────────────────────────────────── */
+	.contact__form {
+		flex: 0 0 auto;
+		width: 50%;
+		max-width: 764px;
+	}
+
+	.contact__jotform {
+		width: 100%;
+		height: 1170px;
+		border: none;
+		border-radius: 8px;
+	}
+
+	/* ── Right column: Find Us ─────────────────────────────── */
+	.contact__find {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.contact__find-title {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	/* ── Cards ─────────────────────────────────────────────── */
+	.contact-card {
+		background: #fafafa;
+		border: 1px solid #e3e3e3;
+		border-radius: 8px;
+		padding: 1.5rem;
+	}
+
+	.contact-card--round {
+		border-radius: 20px;
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+	}
+
+	.contact-card__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: rgb(240, 93, 87);
+		margin: 0 0 0.75rem;
+	}
+
+	.contact-card__text {
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+		margin: 0 0 0.4rem;
+	}
+
+	.contact-card__text a {
+		color: rgb(240, 93, 87);
+		text-decoration: none;
+	}
+
+	.contact-card__text a:hover {
+		text-decoration: underline;
+	}
+
+	.contact-card__images {
+		margin-top: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.contact-card__images img {
+		width: 100%;
+		border-radius: 12px;
+		height: auto;
+	}
+
+	.contact-card__rates {
+		margin-top: 0.75rem;
+	}
+
+	/* ── Google Maps ───────────────────────────────────────── */
+	.contact-map {
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.contact-map__iframe {
+		width: 100%;
+		height: 300px;
+		border: none;
+	}
+
+	/* ── Responsive ────────────────────────────────────────── */
+	@media (max-width: 1199px) {
+		.contact__inner {
+			flex-direction: column;
+		}
+
+		.contact__form {
+			width: 100%;
+		}
+
+		.contact__jotform {
+			height: 1000px;
+		}
+	}
+
+	@media (max-width: 809px) {
+		.contact__jotform {
+			height: 900px;
+		}
+	}
+</style>

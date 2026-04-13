@@ -122,26 +122,26 @@ export function getProgrammesForPage(page) {
 		if (match) ctaLabelBySlug.set(match[1], cta.label);
 	}
 
-	return ctaSlugs
-		.map((slug) => {
-			const prog = programmeBySlug.get(slug);
-			if (!prog) return null;
+	return ctaSlugs.reduce((items, slug) => {
+		const prog = programmeBySlug.get(slug);
+		if (!prog) return items;
 
-			const primaryAudience = prog.audiences?.[0];
-			const ctaLabel = ctaLabelBySlug.get(slug) ?? '';
-			const shortDesc = extractShortDescription(ctaLabel, prog.title, prog.duration);
+		const primaryAudience = prog.audiences?.[0];
+		const ctaLabel = ctaLabelBySlug.get(slug) ?? '';
+		const shortDesc = extractShortDescription(ctaLabel, prog.title, prog.duration);
 
-			return {
-				slug: prog.slug,
-				title: prog.title,
-				heroImage: prog.hero_image ?? null,
-				audienceLabel: primaryAudience?.label ?? 'Programme',
-				audienceId: primaryAudience?.id ?? '',
-				duration: prog.duration ?? '',
-				shortDescription: shortDesc,
-			};
-		})
-		.filter(Boolean);
+		items.push({
+			slug: prog.slug,
+			title: prog.title,
+			heroImage: prog.hero_image ?? null,
+			audienceLabel: primaryAudience?.label ?? 'Programme',
+			audienceId: primaryAudience?.id ?? '',
+			duration: prog.duration ?? '',
+			shortDescription: shortDesc,
+		});
+
+		return items;
+	}, []);
 }
 
 /**

@@ -1,7 +1,5 @@
 ---
-import HeroMedia from '../../components/HeroMedia.astro';
-import PageHero from '../../components/PageHero.astro';
-import RichContent from '../../components/RichContent.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSiteData } from '../../lib/data.js';
 
@@ -14,15 +12,31 @@ export function getStaticPaths() {
 
 const { programme } = Astro.props;
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
-const contentItems =
-	programme.content?.[0]?.type === 'image' && programme.content[0]?.src === programme.hero_image
-		? programme.content.slice(1)
-		: programme.content;
-const badges = [
-	...(programme.duration ? [programme.duration] : []),
-	...programme.audiences.map((audience) => audience.label),
-	...programme.topics.map((topic) => topic.label),
-];
+
+/* ─── Content blocks ─────────────────────────────────────────────────
+   Every programme has exactly 4 blocks:
+     [0] image  (hero — used as background)
+     [1] richtext  → "Course Overview"
+     [2] richtext  → "Lesson Outcomes"
+     [3] richtext  → "Details"
+   ──────────────────────────────────────────────────────────────────── */
+const content = programme.content ?? [];
+const overviewHtml = content[1]?.html ?? '';
+const outcomesHtml = content[2]?.html ?? '';
+const detailsHtml = content[3]?.html ?? '';
+
+/* ─── Meta info ──────────────────────────────────────────────────── */
+const audienceLabels = programme.audiences?.map((a) => a.label) ?? [];
+const topicLabels = programme.topics?.map((t) => t.label) ?? [];
+const duration = programme.duration ?? '';
+
+/* Section headings for the 3 richtext blocks */
+const SECTION_HEADINGS = ['Course Overview', 'Lesson Outcomes', 'Details'];
+const sections = [
+	{ heading: SECTION_HEADINGS[0], html: overviewHtml },
+	{ heading: SECTION_HEADINGS[1], html: outcomesHtml },
+	{ heading: SECTION_HEADINGS[2], html: detailsHtml },
+].filter((s) => s.html);
 ---
 
 <BaseLayout
@@ -31,12 +45,217 @@ const badges = [
 	canonical={canonical}
 	image={programme.hero_image ?? undefined}
 >
-	<PageHero
-		eyebrow="Programme"
-		title={programme.title}
-		lead={programme.description}
-		badges={badges}
-	/>
-	<HeroMedia src={programme.hero_image} alt={programme.title} />
-	<RichContent items={contentItems} />
+	{/* ════════ Hero: full-bleed image with dark overlay + text ════════ */}
+	<section class="prog-hero">
+		{programme.hero_image && (
+			<img
+				class="prog-hero__bg"
+				src={programme.hero_image}
+				alt={programme.title}
+				loading="eager"
+			/>
+		)}
+		<div class="prog-hero__overlay" />
+		<div class="prog-hero__text shell">
+			<p class="prog-hero__eyebrow">Content</p>
+			<h1 class="prog-hero__title">{programme.title}</h1>
+		</div>
+	</section>
+
+	{/* ════════ Meta bar ═════════════════════════════════════════════ */}
+	<section class="prog-meta">
+		<div class="shell prog-meta__inner">
+			{audienceLabels.length > 0 && (
+				<div class="prog-meta__group">
+					<h4 class="prog-meta__label">Audiences:</h4>
+					<div class="prog-meta__tags">
+						{audienceLabels.map((label) => (
+							<span class="prog-meta__tag">{label}</span>
+						))}
+					</div>
+				</div>
+			)}
+			{duration && (
+				<div class="prog-meta__group">
+					<h4 class="prog-meta__label">Duration:</h4>
+					<span class="prog-meta__value">{duration}</span>
+				</div>
+			)}
+			{topicLabels.length > 0 && (
+				<div class="prog-meta__group">
+					<h4 class="prog-meta__label">Type:</h4>
+					<span class="prog-meta__value">{topicLabels[0]}</span>
+				</div>
+			)}
+		</div>
+	</section>
+
+	{/* ════════ Content sections with headings ═══════════════════════ */}
+	<article class="prog-body shell prose">
+		{sections.map((section) => (
+			<div class="prog-section">
+				<h2 class="prog-section__heading">{section.heading}</h2>
+				<div set:html={section.html} />
+			</div>
+		))}
+	</article>
+
+	<CtaBanner />
 </BaseLayout>
+
+<style>
+	/* ─── Hero ──────────────────────────────────────────────── */
+	.prog-hero {
+		position: relative;
+		width: 100%;
+		min-height: 340px;
+		display: flex;
+		align-items: flex-end;
+		overflow: hidden;
+	}
+
+	.prog-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+
+	.prog-hero__overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.45);
+		z-index: 1;
+	}
+
+	.prog-hero__text {
+		position: relative;
+		z-index: 2;
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
+
+	.prog-hero__eyebrow {
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0 0 12px;
+	}
+
+	.prog-hero__title {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(28px, 4vw, 50px);
+		font-weight: 700;
+		line-height: 1.15;
+		color: #fff;
+		margin: 0;
+		max-width: 700px;
+	}
+
+	/* ─── Meta bar ─────────────────────────────────────────── */
+	.prog-meta {
+		padding: 24px 0;
+		border-bottom: 1px solid #e3e3e3;
+	}
+
+	.prog-meta__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px 40px;
+		align-items: baseline;
+	}
+
+	.prog-meta__group {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	.prog-meta__label {
+		font-family: 'Rubik', sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		color: #4a4a4a;
+		margin: 0;
+		white-space: nowrap;
+	}
+
+	.prog-meta__tags {
+		display: flex;
+		gap: 6px;
+		flex-wrap: wrap;
+	}
+
+	.prog-meta__tag,
+	.prog-meta__value {
+		font-family: 'Rubik', sans-serif;
+		font-size: 12px;
+		font-weight: 600;
+		color: rgb(240, 93, 87);
+	}
+
+	/* ─── Content body ─────────────────────────────────────── */
+	.prog-body {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	.prog-section {
+		margin-bottom: 2rem;
+	}
+
+	.prog-section__heading {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: rgb(51, 51, 51);
+		margin: 0 0 0.75rem;
+	}
+
+	.prog-section :global(p) {
+		font-family: 'Rubik', sans-serif;
+		font-size: 15px;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+		margin: 0 0 0.75rem;
+	}
+
+	.prog-section :global(ul) {
+		padding-left: 1.25rem;
+		margin: 0 0 0.75rem;
+	}
+
+	.prog-section :global(li) {
+		font-family: 'Rubik', sans-serif;
+		font-size: 15px;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+		margin-bottom: 0.35rem;
+	}
+
+	.prog-section :global(strong) {
+		font-weight: 600;
+	}
+
+	/* ─── Responsive ───────────────────────────────────────── */
+	@media (max-width: 809px) {
+		.prog-hero {
+			min-height: 240px;
+		}
+
+		.prog-hero__text {
+			padding-top: 60px;
+			padding-bottom: 28px;
+		}
+
+		.prog-meta__inner {
+			flex-direction: column;
+			gap: 12px;
+		}
+	}
+</style>
