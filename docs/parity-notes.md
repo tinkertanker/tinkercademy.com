@@ -21,9 +21,9 @@ Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
    - Hero background uses `hero_image` from `static-pages.json` (Framer URL) instead of the static `/images/hero-bg.jpg` placeholder.  
    - Partner marquee label, domain bubbles, and institution/certification captions read from `partner_statement`, `focus_areas`, and `proof_points` when present (fallbacks preserve previous behaviour).
 
-2. **Header / search (`src/components/SiteHeader.astro`, `src/layouts/BaseLayout.astro`, `src/lib/data.js`)**  
+2. **Header / search (`src/components/SiteHeader.astro`, `src/pages/programme-search-index.json.ts`, `src/lib/data.js`)**  
    - Search control opens a full-viewport overlay with dimmed backdrop, pill search field, close control, and a results list — aligned with `home-search-open-desktop.png`.  
-   - Programme matches are built from `getSearchableProgrammes()` (structured data only); results show audience-coloured badges like the live course cards.  
+   - Programme matches use `getSearchableProgrammes()` at build time to emit `/programme-search-index.json`; the client loads that JSON on first open so HTML payloads stay smaller. Results show audience-coloured badges like the live course cards.  
    - Search icon is a button (no longer a plain link to `/courses-all`).
 
 3. **Programme detail (`src/pages/programmes/[slug].astro`)**  

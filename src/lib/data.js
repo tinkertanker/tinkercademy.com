@@ -167,17 +167,13 @@ export function getProgrammesForPage(page) {
 }
 
 /**
- * Extract non-programme navigation CTA pills from a page's CTAs.
- * These are internal links that don't point to /programmes/ and aren't
- * footer/utility links (external, form, email, phone).
- */
-/**
  * Minimal programme fields for site-wide search (header overlay).
  * Keeps payloads small for inline JSON in the document.
+ * Pass an existing `site` from `getSiteData()` to avoid rebuilding site data twice.
  */
-export function getSearchableProgrammes() {
-	const site = getSiteData();
-	return site.programmes.map((p) => {
+export function getSearchableProgrammes(site = getSiteData()) {
+	const programmes = site?.programmes ?? [];
+	return programmes.map((p) => {
 		const primary = p.audiences?.[0];
 		const topicLabel = p.topics?.[0]?.label ?? '';
 		return {
@@ -199,6 +195,11 @@ export function getSearchableProgrammes() {
 	});
 }
 
+/**
+ * Extract non-programme navigation CTA pills from a page's CTAs.
+ * These are internal links that don't point to /programmes/ and aren't
+ * footer/utility links (external, form, email, phone).
+ */
 export function getNavPillsForPage(page) {
 	if (!page?.ctas) return [];
 

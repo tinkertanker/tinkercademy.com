@@ -4,22 +4,8 @@ import { LOGO_BLACK } from '../lib/site-media.js';
 
 type NavLink = { label: string; href: string; hasDropdown?: boolean };
 
-type ProgrammeSearchEntry = {
-	slug: string;
-	title: string;
-	audienceLabel: string;
-	audienceId: string;
-	topicLabel: string;
-	duration: string;
-	searchText: string;
-};
-
-const props = Astro.props as {
-	navigation?: NavLink[];
-	programmeSearchIndex?: ProgrammeSearchEntry[];
-};
+const props = Astro.props as { navigation?: NavLink[] };
 const rawNav = props.navigation ?? [];
-const programmeSearchIndex = props.programmeSearchIndex ?? [];
 
 /* Inject "COURSES" as first nav item with a dropdown chevron if not already present */
 const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all', hasDropdown: true };
@@ -33,9 +19,6 @@ const coursesDropdown = [
 	{ label: 'For Schools', href: '/courses-schools' },
 	{ label: 'For Professionals', href: '/courses-professionals' },
 ];
-
-/* Escape for safe embedding in HTML (JSON may contain < in strings) */
-const searchDataJson = JSON.stringify(programmeSearchIndex).replace(/</g, '\\u003c');
 ---
 
 <header class="site-header">
@@ -107,8 +90,6 @@ const searchDataJson = JSON.stringify(programmeSearchIndex).replace(/</g, '\\u00
 		</ul>
 	</nav>
 
-	<script is:inline type="application/json" id="programme-search-data" set:html={searchDataJson} />
-
 	<div
 		class="search-overlay"
 		id="site-search-overlay"
@@ -155,6 +136,8 @@ const searchDataJson = JSON.stringify(programmeSearchIndex).replace(/</g, '\\u00
 		searchText: string;
 	};
 
+	const SEARCH_INDEX_URL = '/programme-search-index.json';
+
 	const AUDIENCE_COLOURS: Record<string, string> = {
 		students: 'rgb(240, 93, 87)',
 		teachers: 'rgb(240, 93, 87)',
@@ -162,42 +145,125 @@ const searchDataJson = JSON.stringify(programmeSearchIndex).replace(/</g, '\\u00
 		public: '#0099FF',
 	};
 
-	function readProgrammes(): ProgrammeSearchEntry[] {
-		const el = document.getElementById('programme-search-data');
-		if (!el?.textContent?.trim()) return [];
-		try {
-			return JSON.parse(el.textContent) as ProgrammeSearchEntry[];
-		} catch {
-			return [];
+	let programmesCache: ProgrammeSearchEntry[] | null = null;
+	let programmesLoad: Promise<ProgrammeSearchEntry[]> | null = null;
+
+	function loadProgrammes(): Promise<ProgrammeSearchEntry[]> {
+		if (programmesCache !== null) return Promise.resolve(programmesCache);
+		if (!programmesLoad) {
+			programmesLoad = fetch(SEARCH_INDEX_URL)
+				.then((r) => (r.ok ? r.json() : []))
+				.then((data) => {
+					const list = Array.isArray(data) ? (data as ProgrammeSearchEntry[]) : [];
+					programmesCache = list;
+					return list;
+				})
+				.catch(() => {
+					programmesCache = [];
+					return programmesCache;
+				});
 		}
+		return programmesLoad;
 	}
 
 	function badgeColour(audienceId: string) {
 		return AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 	}
-
-	const programmes = readProgrammes();
 	const overlay = document.getElementById('site-search-overlay');
 	const openBtn = document.querySelector('.nav-search');
 	const input = document.querySelector('[data-site-search-input]') as HTMLInputElement | null;
 	const resultsEl = document.querySelector('[data-site-search-results]') as HTMLUListElement | null;
 	const emptyEl = document.querySelector('[data-site-search-empty]') as HTMLElement | null;
 
-	function setOpen(open: boolean) {
-		if (!overlay || !openBtn || !(openBtn instanceof HTMLButtonElement)) return;
-		overlay.hidden = !open;
-		openBtn.setAttribute('aria-expanded', String(open));
-		document.body.style.overflow = open ? 'hidden' : '';
-		if (open) {
-			requestAnimationFrame(() => input?.focus());
-			renderResults(input?.value ?? '');
-		} else if (input) {
-			input.value = '';
+	let previouslyFocusedElement: HTMLElement | null = null;
+
+	function getFocusableElements(container: HTMLElement): HTMLElement[] {
+		const sel =
+			'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+		return Array.from(container.querySelectorAll<HTMLElement>(sel)).filter((el) => {
+			if (el.hasAttribute('hidden')) return false;
+			if (el.getAttribute('aria-hidden') === 'true') return false;
+			if (el.closest('[hidden]')) return false;
+			return true;
+		});
+	}
+
+	function handleSearchOverlayKeydown(event: KeyboardEvent) {
+		if (!overlay || overlay.hidden) return;
+
+		if (event.key === 'Escape') {
+			event.preventDefault();
+			setOpen(false);
+			return;
+		}
+
+		if (event.key !== 'Tab') return;
+
+		const focusableElements = getFocusableElements(overlay);
+		if (focusableElements.length === 0) {
+			event.preventDefault();
+			input?.focus();
+			return;
+		}
+
+		const first = focusableElements[0];
+		const last = focusableElements[focusableElements.length - 1];
+		const activeElement = document.activeElement;
+
+		if (!overlay.contains(activeElement)) {
+			event.preventDefault();
+			first.focus();
+			return;
+		}
+
+		if (event.shiftKey) {
+			if (activeElement === first) {
+				event.preventDefault();
+				last.focus();
+			}
+			return;
+		}
+
+		if (activeElement === last) {
+			event.preventDefault();
+			first.focus();
 		}
 	}
 
-	function renderResults(query: string) {
+	function setOpen(open: boolean) {
+		if (!overlay || !openBtn || !(openBtn instanceof HTMLButtonElement)) return;
+
+		if (open) {
+			previouslyFocusedElement =
+				document.activeElement instanceof HTMLElement ? document.activeElement : openBtn;
+		}
+
+		overlay.hidden = !open;
+		openBtn.setAttribute('aria-expanded', String(open));
+		document.body.style.overflow = open ? 'hidden' : '';
+
+		if (open) {
+			requestAnimationFrame(() => {
+				const focusTarget = input ?? getFocusableElements(overlay)[0] ?? overlay;
+				focusTarget.focus();
+			});
+			void renderResults(input?.value ?? '');
+		} else {
+			if (input) {
+				input.value = '';
+			}
+			const focusTarget =
+				previouslyFocusedElement && document.contains(previouslyFocusedElement)
+					? previouslyFocusedElement
+					: openBtn;
+			previouslyFocusedElement = null;
+			requestAnimationFrame(() => focusTarget.focus());
+		}
+	}
+
+	async function renderResults(query: string) {
 		if (!resultsEl || !emptyEl) return;
+		const programmes = await loadProgrammes();
 		const q = query.trim().toLowerCase();
 		const max = 12;
 		let list = programmes;
@@ -230,23 +296,23 @@ const searchDataJson = JSON.stringify(programmeSearchIndex).replace(/</g, '\\u00
 		emptyEl.hidden = slice.length > 0 || programmes.length === 0;
 	}
 
-	openBtn?.addEventListener('click', () => {
+	openBtn?.addEventListener('click', async () => {
 		const isOpen = overlay && !overlay.hidden;
-		setOpen(!isOpen);
+		if (isOpen) {
+			setOpen(false);
+			return;
+		}
+		await loadProgrammes();
+		setOpen(true);
 	});
 
 	document.querySelectorAll('[data-search-close]').forEach((btn) => {
 		btn.addEventListener('click', () => setOpen(false));
 	});
 
-	input?.addEventListener('input', () => renderResults(input.value));
+	input?.addEventListener('input', () => void renderResults(input.value));
 
-	document.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape' && overlay && !overlay.hidden) {
-			e.preventDefault();
-			setOpen(false);
-		}
-	});
+	document.addEventListener('keydown', handleSearchOverlayKeydown);
 
 	/* Hamburger toggle */
 	const toggle = document.querySelector('.nav-toggle');
