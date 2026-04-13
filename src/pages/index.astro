@@ -169,7 +169,7 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	</section>
 
 	<!-- ━━ 5. Certifications ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-	<section class="section-marquee">
+	<section class="section-marquee section-marquee--certifications">
 		<div class="shell">
 			<p class="marquee-label">{proofPoints[1]}</p>
 		</div>
@@ -363,6 +363,30 @@ const popularCourseThumbs = featuredProgrammes.map((programme) => {
 	   ═══════════════════════════════════════════════════════════════════ */
 	.section-marquee {
 		padding: 2rem 0;
+	}
+
+	.section-marquee--certifications {
+		background-color: #222;
+		background-image: linear-gradient(#545454 0%, #000 100%);
+		padding: 3.125rem 0;
+	}
+
+	.section-marquee--certifications .marquee-label {
+		color: #fff;
+	}
+
+	.section-marquee--certifications .marquee-track-wrap {
+		mask-image: linear-gradient(
+			90deg,
+			transparent 0%,
+			rgba(0, 0, 0, 0.95) 10%,
+			rgba(0, 0, 0, 0.95) 90%,
+			transparent 100%
+		);
+	}
+
+	.section-marquee--certifications .marquee-logo--cert {
+		opacity: 1;
 	}
 
 	.marquee-label {
