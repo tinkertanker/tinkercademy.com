@@ -3,6 +3,21 @@ import CtaBanner from '../../components/CtaBanner.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSiteData } from '../../lib/data.js';
 
+const SITE_ORIGIN = 'https://tinkercademy.com';
+
+function shouldOpenInNewTab(href: string | null | undefined) {
+	if (typeof href !== 'string' || !href.trim()) return false;
+
+	const trimmedHref = href.trim();
+	if (/^(mailto:|tel:)/i.test(trimmedHref)) return false;
+
+	try {
+		return new URL(trimmedHref, SITE_ORIGIN).origin !== SITE_ORIGIN;
+	} catch {
+		return false;
+	}
+}
+
 export function getStaticPaths() {
 	return getSiteData().programmes.map((programme) => ({
 		params: { slug: programme.slug },
@@ -23,7 +38,7 @@ const duration = programme.duration ?? '';
 const primaryAudience = programme.audiences?.[0];
 const signUpUrl = programme.sign_up_url ?? null;
 const signUpLabel = programme.sign_up_label ?? 'Enquire now';
-const signUpIsExternal = typeof signUpUrl === 'string' && !signUpUrl.startsWith('/');
+const signUpIsExternal = shouldOpenInNewTab(signUpUrl);
 const typeLabel =
 	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
 		? 'Corporate training'

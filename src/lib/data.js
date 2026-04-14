@@ -24,7 +24,11 @@ export function getSiteData() {
 	const topicById = indexBy(topics);
 	const ctaById = indexBy(ctaDestinations);
 	const domainById = indexBy(domains);
-	const platformById = indexBy(platforms);
+	const enrichedPlatforms = platforms.map((platform) => ({
+		...platform,
+		domains: (platform.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
+	}));
+	const platformById = indexBy(enrichedPlatforms);
 
 	return {
 		siteSettings,
@@ -35,10 +39,7 @@ export function getSiteData() {
 		contacts,
 		externalLogos,
 		locations,
-		platforms: platforms.map((platform) => ({
-			...platform,
-			domains: (platform.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
-		})),
+		platforms: enrichedPlatforms,
 		socialLinks,
 		ctaDestinations,
 		forms,
@@ -60,8 +61,8 @@ export function getSiteData() {
 	};
 }
 
-export function getStaticPage(pagePath) {
-	return getSiteData().staticPages.find((page) => page.path === pagePath) ?? null;
+export function getStaticPage(pagePath, site = getSiteData()) {
+	return site.staticPages.find((page) => page.path === pagePath) ?? null;
 }
 
 /**
