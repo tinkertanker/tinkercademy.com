@@ -1,4 +1,5 @@
 ---
+import RehostedDocumentLayout from '../layouts/RehostedDocumentLayout.astro';
 import ContentBlocks from '../components/ContentBlocks.astro';
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
@@ -7,6 +8,7 @@ import PageHero from '../components/PageHero.astro';
 import RichContent from '../components/RichContent.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getSiteData, getProgrammesForPage, getNavPillsForPage } from '../lib/data.js';
+import { getRehostedDocument } from '../lib/rehosted-pages.js';
 
 export function getStaticPaths() {
 	/* Pages with dedicated .astro files — exclude from the dynamic catch-all */
@@ -15,17 +17,17 @@ export function getStaticPaths() {
 	]);
 	const site = getSiteData();
 	return site.staticPages
-		.filter((page) => page.path !== '/')
-		.filter((page) => !page.path.startsWith('/programmes/') && !page.path.startsWith('/tutorials/'))
-		.filter((page) => page.path.split('/').filter(Boolean).length === 1)
-		.filter((page) => !dedicatedPages.has(page.slug))
-		.map((page) => ({
+		.filter((page: any) => page.path !== '/')
+		.filter((page: any) => !page.path.startsWith('/programmes/') && !page.path.startsWith('/tutorials/'))
+		.filter((page: any) => page.path.split('/').filter(Boolean).length === 1)
+		.filter((page: any) => !dedicatedPages.has(page.slug))
+		.map((page: any) => ({
 			params: { slug: page.slug },
 			props: { page },
 		}));
 }
 
-const { page } = Astro.props;
+const { page } = Astro.props as { page: any };
 const canonical = new URL(page.path, 'https://tinkercademy.com').toString();
 
 /* ─── Classify page type ────────────────────────────────────────────── */
@@ -49,47 +51,52 @@ const COURSE_PAGE_TITLES: Record<string, string> = {
 const displayTitle = isCourseListing
 	? COURSE_PAGE_TITLES[page.slug] ?? page.title
 	: page.title;
+const rehostedDocument = getRehostedDocument(page.path);
 
 /* ─── Determine if content has rich types (image / richtext) ────────── */
 const contentBlocks = page.content ?? [];
 const hasRichContent = contentBlocks.some(
-	(block) => block.type === 'image' || block.type === 'richtext',
+	(block: any) => block.type === 'image' || block.type === 'richtext',
 );
 ---
 
-<BaseLayout
+{rehostedDocument ? (
+	<RehostedDocumentLayout document={rehostedDocument} />
+) : (
+	<BaseLayout
 		title={page.seo?.title ?? displayTitle}
 		description={page.seo?.description ?? page.description ?? ''}
 		canonical={canonical}
 		image={page.hero_image ?? undefined}
 	>
-	{isCourseListing ? (
-		/* ════════════════════════════════════════════════════════════════
-		   COURSE LISTING PAGES  (courses-all, courses-professionals, courses-schools)
-		   Live site shows only the card grid + bottom nav pills — no hero,
-		   no banner image, no CTA gradient banner.
-		   ═══════════════════════════════════════════════════════════════ */
-		<CourseGrid
-			programmes={programmes}
-			pageTitle={displayTitle}
-			navPills={navPills}
-		/>
-	) : (
-		/* ════════════════════════════════════════════════════════════════
-		   RICH CONTENT / DEFAULT PAGES
-		   (about-us, contact-us, showcase, microbit, tinker-x, infocomm-club)
-		   ═══════════════════════════════════════════════════════════════ */
-		<>
-			<PageHero title={displayTitle} lead={page.description} />
-			{page.hero_image && (
-				<HeroMedia src={page.hero_image} alt={displayTitle} compact={true} />
-			)}
-			{contentBlocks.length > 0 && (
-				hasRichContent
-					? <RichContent items={contentBlocks} />
-					: <ContentBlocks blocks={contentBlocks} />
-			)}
-			<CtaBanner />
-		</>
-	)}
-</BaseLayout>
+		{isCourseListing ? (
+			/* ════════════════════════════════════════════════════════════════
+			   COURSE LISTING PAGES  (courses-all, courses-professionals, courses-schools)
+			   Live site shows only the card grid + bottom nav pills — no hero,
+			   no banner image, no CTA gradient banner.
+			   ═══════════════════════════════════════════════════════════════ */
+			<CourseGrid
+				programmes={programmes}
+				pageTitle={displayTitle}
+				navPills={navPills}
+			/>
+		) : (
+			/* ════════════════════════════════════════════════════════════════
+			   RICH CONTENT / DEFAULT PAGES
+			   (about-us, contact-us, showcase, microbit, tinker-x, infocomm-club)
+			   ═══════════════════════════════════════════════════════════════ */
+			<>
+				<PageHero title={displayTitle} lead={page.description} />
+				{page.hero_image && (
+					<HeroMedia src={page.hero_image} alt={displayTitle} compact={true} />
+				)}
+				{contentBlocks.length > 0 && (
+					hasRichContent
+						? <RichContent items={contentBlocks} />
+						: <ContentBlocks blocks={contentBlocks} />
+				)}
+				<CtaBanner />
+			</>
+		)}
+	</BaseLayout>
+)}

@@ -126,7 +126,7 @@ function buildIntroHtml(raw: string): string {
 
 const heroTitleHtml = heroTitle.replace(
 	/\b(coders|tinkerers)\b/gi,
-	(_, word: string) => `<span class="about-hero__accent">${word}</span>`
+	(_wordMatch: string, word: string) => `<span class="about-hero__accent">${word}</span>`
 );
 ---
 

@@ -24,12 +24,6 @@ const {
 		<meta property="og:description" content={description} />
 		{image && <meta property="og:image" content={image} />}
 		<link rel="icon" type="image/png" href="/images/logos/favicon.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@400;500;600;700&family=Karla:wght@400;700&family=Oswald:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
-			rel="stylesheet"
-		/>
 	</head>
 	<body>
 		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />
@@ -45,6 +39,158 @@ const {
 </html>
 
 <style is:global>
+	@font-face {
+		font-family: 'Karla';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/framerusercontent.com/third-party-assets/fontshare/wf/WYQR63HYLSFXANVDXEVDIUCR5ZA4BMBT/BHK7NVIOUFBRSAWSZITEB3JNGWKZPMNF/GQPINB4H2DFPHIUPYCAOCNG2YFF6OWN5.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Karla';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/framerusercontent.com/third-party-assets/fontshare/wf/6MOEMOPFWU4AQQNFYM2JTAQ5OE5CO7B6/JYWT7H2OZGXL2AV26YXBDIFRRKMGZCZU/DLEJBHKWR5LWHNNHXWFCN6IAQUO5LLH6.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Karla';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/framerusercontent.com/third-party-assets/fontshare/wf/HP3Q3DMPSSAWKCMUNQEU756AST7WMOBI/APROKPT76FFBPLZDYGFTPTOR7MFVRF2C/CQM2FQLMCGDGQUOUKBFNHXOME4UHHUZ2.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Karla';
+		font-style: italic;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/framerusercontent.com/third-party-assets/fontshare/wf/4HZTRF4J7YQZYGOXHWG4SMCOQROFT246/BQG2GYEWF4ERWXSJBI25GNCFBFJERJRS/JOC23Y25WESBV3E57H33JLL3MTW6O6K3.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 300;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: normal;
+		font-weight: 300;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1VU80V4bVkA.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-B4i1VU80V4bVkA.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-NYiFV0U1.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-2Y-1VU80V4bVkA.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-1VU80V4bVkA.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: italic;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWEBXyIfDnIV7nEnX661A.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: italic;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWEBXyIfDnIV7nEnX661A.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Rubik';
+		font-style: italic;
+		font-weight: 600;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/rubik/v31/iJWEBXyIfDnIV7nEnX661A.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Fragment Mono';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnN4FNh4UI_1U.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Fragment Mono';
+		font-style: italic;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts.gstatic.com/s/fragmentmono/v6/4iC16K5wfMRRjxp0DA6-2CLnB4ZHhqcN71URtQ.woff2') format('woff2');
+	}
+
 	:root {
 		--accent: #f05d57;
 		--accent-dark: #ca433d;

@@ -4,15 +4,17 @@ import HeroMedia from '../../components/HeroMedia.astro';
 import TutorialStory from '../../components/TutorialStory.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSiteData } from '../../lib/data.js';
+import RehostedDocumentLayout from '../../layouts/RehostedDocumentLayout.astro';
+import { getRehostedDocument } from '../../lib/rehosted-pages.js';
 
 export function getStaticPaths() {
-	return getSiteData().tutorials.map((tutorial) => ({
+	return getSiteData().tutorials.map((tutorial: any) => ({
 		params: { slug: tutorial.slug },
 		props: { tutorial },
 	}));
 }
 
-const { tutorial } = Astro.props;
+const { tutorial } = Astro.props as { tutorial: any };
 const canonical = new URL(`/tutorials/${tutorial.slug}`, 'https://tinkercademy.com').toString();
 const firstContentItem = tutorial.content?.[0];
 const contentItems =
@@ -21,8 +23,12 @@ const contentItems =
 	firstContentItem.src === tutorial.hero_image
 		? tutorial.content.slice(1)
 		: tutorial.content;
+const rehostedDocument = getRehostedDocument(`/tutorials/${tutorial.slug}`);
 ---
 
+{rehostedDocument ? (
+	<RehostedDocumentLayout document={rehostedDocument} />
+) : (
 <>
 <BaseLayout
 	title={tutorial.seo?.title ?? tutorial.title}
@@ -91,3 +97,4 @@ const contentItems =
 	}
 </style>
 </>
+)}

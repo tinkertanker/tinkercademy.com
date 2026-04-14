@@ -2,41 +2,47 @@
 import CtaBanner from '../../components/CtaBanner.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getSiteData } from '../../lib/data.js';
+import RehostedDocumentLayout from '../../layouts/RehostedDocumentLayout.astro';
+import { getRehostedDocument } from '../../lib/rehosted-pages.js';
 
 export function getStaticPaths() {
-	return getSiteData().programmes.map((programme) => ({
+	return getSiteData().programmes.map((programme: any) => ({
 		params: { slug: programme.slug },
 		props: { programme },
 	}));
 }
 
-const { programme } = Astro.props;
+const { programme } = Astro.props as { programme: any };
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
 
 /* ─── Meta info ──────────────────────────────────────────────────── */
 const audiences = programme.audiences ?? [];
-const topicLabels = programme.topics?.map((t) => t.label) ?? [];
+const topicLabels = programme.topics?.map((t: any) => t.label) ?? [];
 const domains = programme.domains ?? [];
-const domainLabels = domains.length > 0 ? domains.map((domain) => domain.label) : topicLabels;
+const domainLabels = domains.length > 0 ? domains.map((domain: any) => domain.label) : topicLabels;
 const platforms = programme.platforms ?? [];
 const duration = programme.duration ?? '';
 const primaryAudience = programme.audiences?.[0];
 const signUpUrl = programme.sign_up_url ?? null;
 const signUpLabel = programme.sign_up_label ?? 'Enquire now';
 const signUpIsExternal = typeof signUpUrl === 'string' && !signUpUrl.startsWith('/');
+const rehostedDocument = getRehostedDocument(`/programmes/${programme.slug}`);
 const typeLabel =
 	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
 		? 'Corporate training'
 		: topicLabels[0] ?? primaryAudience?.label ?? '';
 
 const sections = (programme.sections ?? [])
-	.map((section, index) => ({
+	.map((section: any, index: number) => ({
 		heading: section.heading ?? ['Course Overview', 'Lesson Outcomes', 'Details'][index] ?? `Section ${index + 1}`,
 		html: section.html,
 	}))
-	.filter((section) => section.html);
+	.filter((section: any) => section.html);
 ---
 
+{rehostedDocument ? (
+	<RehostedDocumentLayout document={rehostedDocument} />
+) : (
 <>
 <BaseLayout
 	title={programme.seo?.title ?? programme.title}
@@ -81,7 +87,7 @@ const sections = (programme.sections ?? [])
 				<div class="prog-meta__group">
 					<h4 class="prog-meta__label">Audiences:</h4>
 					<div class="prog-meta__tags">
-						{audiences.map((aud) => (
+						{audiences.map((aud: any) => (
 							<span
 								class:list={[
 									'prog-meta__tag',
@@ -116,7 +122,7 @@ const sections = (programme.sections ?? [])
 					<div class="prog-facts__group">
 						<h2 class="prog-facts__heading">Domains</h2>
 						<div class="prog-facts__chips">
-							{domainLabels.map((label) => (
+							{domainLabels.map((label: string) => (
 								<span class="prog-facts__chip">{label}</span>
 							))}
 						</div>
@@ -126,7 +132,7 @@ const sections = (programme.sections ?? [])
 					<div class="prog-facts__group">
 						<h2 class="prog-facts__heading">Platforms</h2>
 						<div class="prog-facts__chips">
-							{platforms.map((platform) => (
+							{platforms.map((platform: any) => (
 								<span class="prog-facts__chip prog-facts__chip--platform">
 									{platform.icon && (
 										<img
@@ -148,7 +154,7 @@ const sections = (programme.sections ?? [])
 
 	{/* ════════ Content sections with headings ═══════════════════════ */}
 	<article class="prog-body shell prose">
-		{sections.map((section) => (
+		{sections.map((section: any) => (
 			<div class="prog-section">
 				<h2 class="prog-section__heading">{section.heading}</h2>
 				<div set:html={section.html} />
@@ -426,3 +432,4 @@ const sections = (programme.sections ?? [])
 	}
 </style>
 </>
+)}

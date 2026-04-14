@@ -4,13 +4,12 @@ Astro rebuild of the live `tinkercademy.com` Framer site. The workflow is crawl-
 
 1. Crawl the public site and save raw artefacts under `scripts/_artifacts/`.
 2. Normalise the crawl into CRM-like YAML/JSON under `src/data/`.
-3. Render Astro routes from those structured files instead of mirroring Framer DOM.
+3. Render Astro routes from those structured files, plus checked-in rehosted HTML/CSS/JS payloads for the pages that still need Framer-level visual parity.
 
 ## Commands
 
 - `npm run import:live` crawls the public site and regenerates the structured data files.
 - `npm run import:framer` enriches the generated data with direct Framer CMS data from `.env.local` or `.env`.
-- `npm run mirror:site -- --origin https://example.com --output output/mirrors/example.com` downloads a host into a local mirror folder, following internal pages plus referenced HTML, CSS, and JS assets.
 - `npm run dev` starts the Astro dev server.
 - `npm run build` builds the site.
 - `npm run check` runs `astro check`.
@@ -44,11 +43,10 @@ Static route payloads also retain extracted `blocks`, explicit `course_cards`, a
 - `scripts/_artifacts/` is generated and ignored.
 - `npm run import:framer` is optional and uses `FRAMER_API_KEY` plus `FRAMER_PROJECT_URL` from `.env.local` or `.env`.
 - The Framer enrichment step writes a raw export snapshot to `scripts/_artifacts/framer-api/export.json` for inspection.
-- `output/mirrors/` is generated and ignored; the mirror script writes a `manifest.json` there listing every fetched page and asset.
-- The current implementation keeps remote image URLs from Framer while the migration is still in progress.
-- Page rendering is now fully Astro-native; the local Framer mirror is no longer part of the runtime or build path.
-- Some structured data still references remote `framerusercontent.com` image URLs, but those are consumed directly by Astro components rather than through a mirrored DOM/runtime layer.
+- Page rendering is Astro-native; `downloads/rehosted_site/` and `src/mirror-html/` are not part of the runtime or build path.
+- The high-fidelity routes now import checked-in rehosted HTML/CSS/JS payloads from `src/generated/rehosted-documents.js` and local runtime assets under `public/`.
+- Framer-hosted media used by the rehosted payloads is rewritten to local assets so the rendered site does not depend on `framerusercontent.com` at runtime.
 - `src/lib/site-media.js` maps the current live homepage brand, partner, badge, and compact course imagery used for the higher-fidelity front-page rebuild.
 - `/professionals`, `/schools`, and `/individuals` are dedicated Astro routes; they are intentionally excluded from the generic `[slug].astro` renderer.
-- Tutorial pages are rendered as grouped story sections from the imported Framer handover sequence rather than a flat HTML dump.
+- Tutorial/programme/static routes that exist in the rehosted source use the imported HTML/CSS/JS payloads; missing routes still fall back to the structured Astro implementations.
 - Visual parity checks should be run against both the live site and the local Astro build after each substantial import/render pass.

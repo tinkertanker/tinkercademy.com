@@ -1,0 +1,13 @@
+---
+import RehostedDocumentLayout from '../layouts/RehostedDocumentLayout.astro';
+import { getRehostedDocument } from '../lib/rehosted-pages.js';
+
+const { routePath } = Astro.props;
+const document = getRehostedDocument(routePath);
+
+if (!document) {
+	throw new Error(`Missing rehosted document for route: ${routePath}`);
+}
+---
+
+<RehostedDocumentLayout document={document} />
