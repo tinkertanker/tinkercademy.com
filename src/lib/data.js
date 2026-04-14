@@ -14,37 +14,87 @@ import socialLinks from '../data/pages/social-links.json';
 import staticPages from '../data/pages/static-pages.json';
 import topics from '../data/pages/topics.json';
 import tutorials from '../data/pages/tutorials.json';
+import { normaliseFramerMedia } from './media.js';
+
+const FRAMER_TITLE_SUFFIX_RE = /\s*-\s*My Framer Site$/;
+const normalisedArticles = normaliseFramerMedia(articles);
+const normalisedAssets = normaliseFramerMedia(assets);
+const normalisedAudiences = normaliseFramerMedia(audiences);
+const normalisedContacts = normaliseFramerMedia(contacts);
+const normalisedCtaDestinations = normaliseFramerMedia(ctaDestinations);
+const normalisedDomains = normaliseFramerMedia(domains);
+const normalisedExternalLogos = normaliseFramerMedia(externalLogos);
+const normalisedForms = normaliseFramerMedia(forms);
+const normalisedLocations = normaliseFramerMedia(locations);
+const normalisedPlatforms = normaliseFramerMedia(platforms);
+const normalisedProgrammes = normaliseFramerMedia(programmes);
+const normalisedSiteSettings = normaliseFramerMedia(siteSettings);
+const normalisedSocialLinks = normaliseFramerMedia(socialLinks);
+const normalisedStaticPages = normaliseFramerMedia(staticPages);
+const normalisedTopics = normaliseFramerMedia(topics);
+const normalisedTutorials = normaliseFramerMedia(tutorials);
 
 function indexBy(items) {
 	return new Map((items ?? []).map((item) => [item.id, item]));
 }
 
-export function getSiteData() {
-	const audienceById = indexBy(audiences);
-	const topicById = indexBy(topics);
-	const ctaById = indexBy(ctaDestinations);
-	const domainById = indexBy(domains);
-	const platformById = indexBy(platforms);
+function stripFramerTitleSuffix(value) {
+	return typeof value === 'string' ? value.replace(FRAMER_TITLE_SUFFIX_RE, '').trim() : value;
+}
+
+function normaliseTutorial(tutorial) {
+	if (!tutorial) return tutorial;
 
 	return {
-		siteSettings,
-		articles,
-		audiences,
-		domains,
-		topics,
-		contacts,
-		externalLogos,
-		locations,
-		platforms: platforms.map((platform) => ({
+		...tutorial,
+		title: stripFramerTitleSuffix(tutorial.title),
+		seo: tutorial.seo
+			? {
+					...tutorial.seo,
+					title: stripFramerTitleSuffix(tutorial.seo.title),
+					openGraph: tutorial.seo.openGraph
+						? {
+								...tutorial.seo.openGraph,
+								title: stripFramerTitleSuffix(tutorial.seo.openGraph.title),
+							}
+						: tutorial.seo.openGraph,
+					twitter: tutorial.seo.twitter
+						? {
+								...tutorial.seo.twitter,
+								title: stripFramerTitleSuffix(tutorial.seo.twitter.title),
+							}
+						: tutorial.seo.twitter,
+				}
+			: tutorial.seo,
+	};
+}
+
+export function getSiteData() {
+	const audienceById = indexBy(normalisedAudiences);
+	const topicById = indexBy(normalisedTopics);
+	const ctaById = indexBy(normalisedCtaDestinations);
+	const domainById = indexBy(normalisedDomains);
+	const platformById = indexBy(normalisedPlatforms);
+
+	return {
+		siteSettings: normalisedSiteSettings,
+		articles: normalisedArticles,
+		audiences: normalisedAudiences,
+		domains: normalisedDomains,
+		topics: normalisedTopics,
+		contacts: normalisedContacts,
+		externalLogos: normalisedExternalLogos,
+		locations: normalisedLocations,
+		platforms: normalisedPlatforms.map((platform) => ({
 			...platform,
 			domains: (platform.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
 		})),
-		socialLinks,
-		ctaDestinations,
-		forms,
-		staticPages,
-		assets,
-		programmes: programmes.map((programme) => ({
+		socialLinks: normalisedSocialLinks,
+		ctaDestinations: normalisedCtaDestinations,
+		forms: normalisedForms,
+		staticPages: normalisedStaticPages,
+		assets: normalisedAssets,
+		programmes: normalisedProgrammes.map((programme) => ({
 			...programme,
 			audiences: (programme.audience_ids ?? []).map((id) => audienceById.get(id)).filter(Boolean),
 			domains: (programme.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
@@ -52,11 +102,19 @@ export function getSiteData() {
 			topics: (programme.topic_ids ?? []).map((id) => topicById.get(id)).filter(Boolean),
 			ctas: (programme.cta_ids ?? []).map((id) => ctaById.get(id)).filter(Boolean),
 		})),
-		tutorials: tutorials.map((tutorial) => ({
-			...tutorial,
-			audiences: (tutorial.audience_ids ?? []).map((id) => audienceById.get(id)).filter(Boolean),
-			topics: (tutorial.topic_ids ?? []).map((id) => topicById.get(id)).filter(Boolean),
-		})),
+		tutorials: normalisedTutorials.map((tutorial) => {
+			const normalisedTutorial = normaliseTutorial(tutorial);
+
+			return {
+				...normalisedTutorial,
+				audiences: (normalisedTutorial.audience_ids ?? [])
+					.map((id) => audienceById.get(id))
+					.filter(Boolean),
+				topics: (normalisedTutorial.topic_ids ?? [])
+					.map((id) => topicById.get(id))
+					.filter(Boolean),
+			};
+		}),
 	};
 }
 
