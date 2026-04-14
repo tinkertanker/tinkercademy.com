@@ -3,8 +3,6 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": [
     "dist",
-    "public/app.framerstatic.com",
-    "public/fonts.gstatic.com",
-    "public/framerusercontent.com"
+    "public/sites"
   ]
 }

@@ -1,0 +1,176 @@
+---
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { getSiteData } from '../lib/data.js';
+
+const { document } = Astro.props;
+const site = getSiteData();
+const navigation = site.siteSettings?.navigation ?? [];
+---
+
+<!DOCTYPE html>
+<html lang={document.lang ?? 'en'} data-redirect-timezone={document.dataRedirectTimezone}>
+	<head>
+		<Fragment set:html={document.headHtml} />
+	</head>
+	<body class="document-layout">
+		<SiteHeader navigation={navigation} />
+		<Fragment set:html={document.bodyHtml} />
+		<SiteFooter
+			contacts={site.contacts}
+			locations={site.locations}
+			socialLinks={site.socialLinks ?? []}
+		/>
+		<script is:inline>
+			(() => {
+				const SIGN_UP_MARKER = 'Sign up for our mailing list!';
+				const FOOTER_CONTEXT_MARKERS = [
+					'Tinkercademy is the education brand of',
+					'Looking for educational toys and kits?',
+					'Get in touch!',
+				];
+				const PROTECTED_DOCUMENT_SELECTORS = [
+					'#main',
+					'[data-framer-root]',
+					'[data-framer-generated-page]',
+				].join(', ');
+
+				const normaliseText = (value = '') => value.replace(/\s+/g, ' ').trim();
+				const isProtectedDocumentContainer = (node) => {
+					if (!(node instanceof HTMLElement)) return false;
+					if (node.matches(PROTECTED_DOCUMENT_SELECTORS)) return true;
+					return Boolean(node.querySelector(PROTECTED_DOCUMENT_SELECTORS));
+				};
+
+				const hideEmbeddedFooter = () => {
+					const existing = document.querySelector('[data-astro-hidden-footer]');
+					if (existing instanceof HTMLElement) {
+						existing.style.display = 'none';
+					}
+
+					const signUpNodes = Array.from(
+						document.querySelectorAll('[data-framer-generated-page] *')
+					).filter((element) =>
+						normaliseText(element.textContent ?? '').includes(SIGN_UP_MARKER)
+					);
+
+					signUpNodes.sort((left, right) => {
+						const leftRect = left.getBoundingClientRect();
+						const rightRect = right.getBoundingClientRect();
+						return leftRect.width * leftRect.height - rightRect.width * rightRect.height;
+					});
+
+					for (const candidate of signUpNodes) {
+						let node = candidate;
+
+						while (node instanceof HTMLElement && node !== document.body) {
+							if (isProtectedDocumentContainer(node)) {
+								node = node.parentElement;
+								continue;
+							}
+
+							const text = normaliseText(node.textContent ?? '');
+							const rect = node.getBoundingClientRect();
+							const markerMatches = FOOTER_CONTEXT_MARKERS.filter((marker) =>
+								text.includes(marker)
+							).length;
+
+							if (
+								rect.width >= window.innerWidth * 0.98 &&
+								rect.height >= 180 &&
+								rect.height <= window.innerHeight * 1.5 &&
+								rect.top >= window.innerHeight * 0.5 &&
+								markerMatches >= 2
+							) {
+								node.setAttribute('data-astro-hidden-footer', '');
+								node.style.display = 'none';
+								return;
+							}
+
+							node = node.parentElement;
+						}
+					}
+				};
+
+				hideEmbeddedFooter();
+				requestAnimationFrame(() => requestAnimationFrame(hideEmbeddedFooter));
+				window.addEventListener('load', hideEmbeddedFooter, { once: true });
+
+				const footerObserver = new MutationObserver(() => {
+					hideEmbeddedFooter();
+				});
+
+				footerObserver.observe(document.body, {
+					childList: true,
+					subtree: true,
+					attributes: true,
+					attributeFilter: ['class', 'style'],
+				});
+
+				window.setTimeout(() => footerObserver.disconnect(), 5000);
+
+				const shouldForceDocumentNavigation = (anchor) => {
+					const rawHref = anchor.getAttribute('href');
+					if (!rawHref || rawHref.startsWith('#')) return false;
+					if (anchor.target && anchor.target !== '_self') return false;
+					if (anchor.hasAttribute('download')) return false;
+
+					const url = new URL(anchor.href, window.location.href);
+					if (url.origin !== window.location.origin) return false;
+					if (
+						url.pathname.startsWith('/assets/') ||
+						url.pathname.startsWith('/fonts/') ||
+						url.pathname.startsWith('/images/')
+						|| url.pathname.startsWith('/sites/')
+						|| url.pathname.startsWith('/third-party-assets/')
+					) {
+						return false;
+					}
+
+					return true;
+				};
+
+				const toDocumentHref = (url) => {
+					if (url.pathname === '/') return `${url.pathname}${url.search}${url.hash}`;
+					if (/\.[a-z0-9]+$/i.test(url.pathname)) return `${url.pathname}${url.search}${url.hash}`;
+					const pathname = url.pathname.endsWith('/') ? url.pathname : `${url.pathname}/`;
+					return `${pathname}${url.search}${url.hash}`;
+				};
+
+				document.addEventListener(
+					'click',
+					(event) => {
+						if (event.defaultPrevented) return;
+						if (event.button !== 0) return;
+						if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+						const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
+						if (!(anchor instanceof HTMLAnchorElement)) return;
+						if (!shouldForceDocumentNavigation(anchor)) return;
+
+						event.preventDefault();
+						window.location.assign(toDocumentHref(new URL(anchor.href, window.location.href)));
+					},
+					true
+				);
+			})();
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	.document-layout .shell {
+		width: min(1160px, calc(100vw - 1.5rem));
+		margin: 0 auto;
+	}
+
+	.document-layout nav.framer-dZVFW[data-framer-name='Desktop'],
+	.document-layout nav.framer-dZVFW[data-framer-name='Tablet'],
+	.document-layout nav.framer-dZVFW[data-framer-name='Mobile Closed'] {
+		display: none !important;
+	}
+
+	.document-layout [data-astro-hidden-footer] {
+		display: none !important;
+	}
+</style>

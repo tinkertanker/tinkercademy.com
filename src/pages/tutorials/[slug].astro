@@ -2,10 +2,10 @@
 import CtaBanner from '../../components/CtaBanner.astro';
 import HeroMedia from '../../components/HeroMedia.astro';
 import TutorialStory from '../../components/TutorialStory.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
-import RehostedDocumentLayout from '../../layouts/RehostedDocumentLayout.astro';
-import { getRehostedDocument } from '../../lib/rehosted-pages.js';
+import DocumentLayout from '../../layouts/DocumentLayout.astro';
+import { getRouteDocument } from '../../lib/route-documents.js';
 
 export function getStaticPaths() {
 	return getSiteData().tutorials.map((tutorial: any) => ({
@@ -23,14 +23,14 @@ const contentItems =
 	firstContentItem.src === tutorial.hero_image
 		? tutorial.content.slice(1)
 		: tutorial.content;
-const rehostedDocument = getRehostedDocument(`/tutorials/${tutorial.slug}`);
+const routeDocument = getRouteDocument(`/tutorials/${tutorial.slug}`);
 ---
 
-{rehostedDocument ? (
-	<RehostedDocumentLayout document={rehostedDocument} />
+{routeDocument ? (
+	<DocumentLayout document={routeDocument} />
 ) : (
 <>
-<BaseLayout
+<ContentLayout
 	title={tutorial.seo?.title ?? tutorial.title}
 	description={tutorial.seo?.description ?? tutorial.description ?? ''}
 	canonical={canonical}
@@ -47,7 +47,7 @@ const rehostedDocument = getRehostedDocument(`/tutorials/${tutorial.slug}`);
 	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} compact />
 	<TutorialStory items={contentItems} />
 	<CtaBanner />
-</BaseLayout>
+</ContentLayout>
 
 <style>
 	.tutorial-banner {

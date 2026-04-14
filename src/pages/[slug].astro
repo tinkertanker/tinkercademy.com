@@ -1,14 +1,14 @@
 ---
-import RehostedDocumentLayout from '../layouts/RehostedDocumentLayout.astro';
+import DocumentLayout from '../layouts/DocumentLayout.astro';
 import ContentBlocks from '../components/ContentBlocks.astro';
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import HeroMedia from '../components/HeroMedia.astro';
 import PageHero from '../components/PageHero.astro';
 import RichContent from '../components/RichContent.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
 import { getSiteData, getProgrammesForPage, getNavPillsForPage } from '../lib/data.js';
-import { getRehostedDocument } from '../lib/rehosted-pages.js';
+import { getRouteDocument } from '../lib/route-documents.js';
 
 export function getStaticPaths() {
 	/* Pages with dedicated .astro files — exclude from the dynamic catch-all */
@@ -51,7 +51,7 @@ const COURSE_PAGE_TITLES: Record<string, string> = {
 const displayTitle = isCourseListing
 	? COURSE_PAGE_TITLES[page.slug] ?? page.title
 	: page.title;
-const rehostedDocument = getRehostedDocument(page.path);
+const routeDocument = getRouteDocument(page.path);
 
 /* ─── Determine if content has rich types (image / richtext) ────────── */
 const contentBlocks = page.content ?? [];
@@ -60,10 +60,10 @@ const hasRichContent = contentBlocks.some(
 );
 ---
 
-{rehostedDocument ? (
-	<RehostedDocumentLayout document={rehostedDocument} />
+{routeDocument ? (
+	<DocumentLayout document={routeDocument} />
 ) : (
-	<BaseLayout
+	<ContentLayout
 		title={page.seo?.title ?? displayTitle}
 		description={page.seo?.description ?? page.description ?? ''}
 		canonical={canonical}
@@ -98,5 +98,5 @@ const hasRichContent = contentBlocks.some(
 				<CtaBanner />
 			</>
 		)}
-	</BaseLayout>
+	</ContentLayout>
 )}

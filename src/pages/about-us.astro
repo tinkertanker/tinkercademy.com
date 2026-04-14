@@ -3,7 +3,7 @@
  * /about-us — layout and copy aligned with live tinkercademy.com (Framer).
  */
 import CtaBanner from '../components/CtaBanner.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
 import { parse as parseYaml } from 'yaml';
@@ -131,7 +131,7 @@ const heroTitleHtml = heroTitle.replace(
 ---
 
 <>
-<BaseLayout
+<ContentLayout
 	title={page.seo?.title ?? 'About Us — Tinkercademy'}
 	description={page.seo?.description ?? page.description ?? ''}
 	canonical={canonical}
@@ -258,7 +258,7 @@ const heroTitleHtml = heroTitle.replace(
 	</section>
 
 	<CtaBanner />
-</BaseLayout>
+</ContentLayout>
 
 <style>
 	/* ─── Hero (full-bleed, matches live Framer hero) ─────────────────── */
