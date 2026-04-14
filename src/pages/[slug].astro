@@ -58,11 +58,11 @@ const hasRichContent = contentBlocks.some(
 ---
 
 <BaseLayout
-	title={page.seo?.title ?? displayTitle}
-	description={page.seo?.description ?? page.description ?? ''}
-	canonical={canonical}
-	image={page.hero_image ?? undefined}
->
+		title={page.seo?.title ?? displayTitle}
+		description={page.seo?.description ?? page.description ?? ''}
+		canonical={canonical}
+		image={page.hero_image ?? undefined}
+	>
 	{isCourseListing ? (
 		/* ════════════════════════════════════════════════════════════════
 		   COURSE LISTING PAGES  (courses-all, courses-professionals, courses-schools)

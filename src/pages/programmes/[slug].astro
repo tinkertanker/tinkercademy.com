@@ -37,6 +37,7 @@ const sections = (programme.sections ?? [])
 	.filter((section) => section.html);
 ---
 
+<>
 <BaseLayout
 	title={programme.seo?.title ?? programme.title}
 	description={programme.seo?.description ?? programme.description ?? ''}
@@ -424,3 +425,4 @@ const sections = (programme.sections ?? [])
 		}
 	}
 </style>
+</>

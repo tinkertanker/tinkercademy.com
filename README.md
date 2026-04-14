@@ -46,6 +46,8 @@ Static route payloads also retain extracted `blocks`, explicit `course_cards`, a
 - The Framer enrichment step writes a raw export snapshot to `scripts/_artifacts/framer-api/export.json` for inspection.
 - `output/mirrors/` is generated and ignored; the mirror script writes a `manifest.json` there listing every fetched page and asset.
 - The current implementation keeps remote image URLs from Framer while the migration is still in progress.
+- Page rendering is now fully Astro-native; the local Framer mirror is no longer part of the runtime or build path.
+- Some structured data still references remote `framerusercontent.com` image URLs, but those are consumed directly by Astro components rather than through a mirrored DOM/runtime layer.
 - `src/lib/site-media.js` maps the current live homepage brand, partner, badge, and compact course imagery used for the higher-fidelity front-page rebuild.
 - `/professionals`, `/schools`, and `/individuals` are dedicated Astro routes; they are intentionally excluded from the generic `[slug].astro` renderer.
 - Tutorial pages are rendered as grouped story sections from the imported Framer handover sequence rather than a flat HTML dump.

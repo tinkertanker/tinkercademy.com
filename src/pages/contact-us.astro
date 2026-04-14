@@ -9,6 +9,7 @@ if (!page) return Astro.redirect('/404');
 const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 ---
 
+<>
 <BaseLayout
 	title={page.seo?.title ?? 'Contact Us — Tinkercademy'}
 	description={page.seo?.description ?? page.description ?? ''}
@@ -228,3 +229,4 @@ const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 		}
 	}
 </style>
+</>

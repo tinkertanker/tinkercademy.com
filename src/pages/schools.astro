@@ -15,6 +15,7 @@ const codeForFunLink = page.ctas?.find((cta) => cta.label === 'Code for Fun prog
 const roadmapLink = page.ctas?.find((cta) => cta.label === 'Infocomm Learning Roadmap');
 ---
 
+<>
 <BaseLayout
 	title={page.seo?.title ?? page.title}
 	description={page.seo?.description ?? page.description ?? ''}
@@ -175,3 +176,4 @@ const roadmapLink = page.ctas?.find((cta) => cta.label === 'Infocomm Learning Ro
 		}
 	}
 </style>
+</>
