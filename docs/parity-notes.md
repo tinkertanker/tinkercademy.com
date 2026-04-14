@@ -45,7 +45,7 @@ Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
 | Agent focus | Scope | Primary files |
 |-------------|--------|----------------|
 | A | Homepage sections after hero (marquee tuning, flagship spacing) | `index.astro`, `site-media.js` |
-| B | Header/footer/nav only | `SiteHeader.astro`, `SiteFooter.astro`, `BaseLayout.astro` |
+| B | Header/footer/nav only | `SiteHeader.astro`, `SiteFooter.astro`, `ContentLayout.astro` |
 | C | Course listings + audience pages | `[slug].astro` (listing branch), `CourseGrid.astro`, `ProgrammeCard.astro` |
 | D | Programme template body + tables + CTA strip | `[slug].astro`, `CtaBanner.astro` |
 | E | Tutorial story layout + banner | `tutorials/[slug].astro`, `TutorialStory.astro`, `HeroMedia.astro` |

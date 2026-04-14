@@ -4,7 +4,7 @@ Astro rebuild of the live `tinkercademy.com` Framer site. The workflow is crawl-
 
 1. Crawl the public site and save raw artefacts under `scripts/_artifacts/`.
 2. Normalise the crawl into CRM-like YAML/JSON under `src/data/`.
-3. Render Astro routes from those structured files, plus checked-in rehosted HTML/CSS/JS payloads for the pages that still need Framer-level visual parity.
+3. Render Astro routes from those structured files, plus checked-in document HTML/CSS/JS payloads for the pages that still need Framer-level visual parity.
 
 ## Commands
 
@@ -44,9 +44,9 @@ Static route payloads also retain extracted `blocks`, explicit `course_cards`, a
 - `npm run import:framer` is optional and uses `FRAMER_API_KEY` plus `FRAMER_PROJECT_URL` from `.env.local` or `.env`.
 - The Framer enrichment step writes a raw export snapshot to `scripts/_artifacts/framer-api/export.json` for inspection.
 - Page rendering is Astro-native; `downloads/rehosted_site/` and `src/mirror-html/` are not part of the runtime or build path.
-- The high-fidelity routes now import checked-in rehosted HTML/CSS/JS payloads from `src/generated/rehosted-documents.js` and local runtime assets under `public/`.
-- Framer-hosted media used by the rehosted payloads is rewritten to local assets so the rendered site does not depend on `framerusercontent.com` at runtime.
+- The high-fidelity document routes now import checked-in HTML/CSS/JS payloads from `src/generated/route-documents.js` and local runtime assets under `public/assets/`, `public/fonts/`, `public/images/`, `public/sites/`, and `public/third-party-assets/`.
+- Framer-hosted media used by those document payloads is rewritten to local assets so the rendered site does not depend on `framerusercontent.com` at runtime.
 - `src/lib/site-media.js` maps the current live homepage brand, partner, badge, and compact course imagery used for the higher-fidelity front-page rebuild.
 - `/professionals`, `/schools`, and `/individuals` are dedicated Astro routes; they are intentionally excluded from the generic `[slug].astro` renderer.
-- Tutorial/programme/static routes that exist in the rehosted source use the imported HTML/CSS/JS payloads; missing routes still fall back to the structured Astro implementations.
+- Tutorial/programme/static routes that exist in the extracted document source use the imported HTML/CSS/JS payloads; missing routes still fall back to the structured Astro implementations.
 - Visual parity checks should be run against both the live site and the local Astro build after each substantial import/render pass.
