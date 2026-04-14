@@ -6,7 +6,7 @@ import { getNavPillsForPage, getProgrammesForPage, getSiteData, getStaticPage } 
 import { HOME_PARTNER_LOGOS, HOME_INSTITUTION_LOGOS } from '../lib/site-media.js';
 
 const site = getSiteData();
-const page = getStaticPage('/professionals');
+const page = getStaticPage('/professionals', site);
 if (!page) return Astro.redirect('/404');
 
 const canonical = new URL('/professionals', 'https://tinkercademy.com').toString();

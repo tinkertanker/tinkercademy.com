@@ -12,7 +12,7 @@ import {
 } from '../lib/site-media.js';
 
 const site = getSiteData();
-const page = getStaticPage('/');
+const page = getStaticPage('/', site);
 const heroBgSrc = page?.hero_image ?? '/images/hero-bg.jpg';
 const partnerStatement =
 	page?.partner_statement ??

@@ -3180,7 +3180,7 @@
     - iot
     - making
   sign_up_label: Enquire now
-  sign_up_url: hello@tk.sg
+  sign_up_url: mailto:hello@tk.sg
   intro_html: <p>In this programme, students will get started with the micro:bit,
     a programmable microcontroller that serves to introduce coding, electronics,
     and hands-on digital making to learners of all ages. The micro:bit can be
@@ -3894,7 +3894,7 @@
   domain_ids:
     - gamedev
   sign_up_label: Enquire now
-  sign_up_url: hello@tinkercademy.com
+  sign_up_url: mailto:hello@tinkercademy.com
   intro_html: <p>In 2023 and 2024, we ran a 5-day holiday bootcamp for students,
     teaching game development with Unity! Please stay tuned for
     updates.</p><p>Unity is a powerful and versatile game engine, with
@@ -4149,7 +4149,7 @@
     - design-thinking
     - gamedev
   sign_up_label: Enquire now
-  sign_up_url: hello@tk.sg
+  sign_up_url: mailto:hello@tk.sg
   intro_html: "<p>In this programme, students will learn computational thinking
     skills and develop their own games on two widely popular platforms. Using
     the MakeCode Arcade platform, a beginner-friendly game development platform
