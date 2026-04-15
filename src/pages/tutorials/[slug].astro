@@ -2,17 +2,19 @@
 import CtaBanner from '../../components/CtaBanner.astro';
 import HeroMedia from '../../components/HeroMedia.astro';
 import TutorialStory from '../../components/TutorialStory.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
+import DocumentLayout from '../../layouts/DocumentLayout.astro';
+import { getRouteDocument } from '../../lib/route-documents.js';
 
 export function getStaticPaths() {
-	return getSiteData().tutorials.map((tutorial) => ({
+	return getSiteData().tutorials.map((tutorial: any) => ({
 		params: { slug: tutorial.slug },
 		props: { tutorial },
 	}));
 }
 
-const { tutorial } = Astro.props;
+const { tutorial } = Astro.props as { tutorial: any };
 const canonical = new URL(`/tutorials/${tutorial.slug}`, 'https://tinkercademy.com').toString();
 const firstContentItem = tutorial.content?.[0];
 const contentItems =
@@ -21,9 +23,14 @@ const contentItems =
 	firstContentItem.src === tutorial.hero_image
 		? tutorial.content.slice(1)
 		: tutorial.content;
+const routeDocument = getRouteDocument(`/tutorials/${tutorial.slug}`);
 ---
 
-<BaseLayout
+{routeDocument ? (
+	<DocumentLayout document={routeDocument} />
+) : (
+<>
+<ContentLayout
 	title={tutorial.seo?.title ?? tutorial.title}
 	description={tutorial.seo?.description ?? tutorial.description ?? ''}
 	canonical={canonical}
@@ -40,7 +47,7 @@ const contentItems =
 	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} compact />
 	<TutorialStory items={contentItems} />
 	<CtaBanner />
-</BaseLayout>
+</ContentLayout>
 
 <style>
 	.tutorial-banner {
@@ -89,3 +96,5 @@ const contentItems =
 		color: rgba(255, 253, 248, 0.92);
 	}
 </style>
+</>
+)}

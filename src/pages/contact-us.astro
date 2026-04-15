@@ -1,6 +1,6 @@
 ---
 import CtaBanner from '../components/CtaBanner.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
 import { getStaticPage } from '../lib/data.js';
 
 const page = getStaticPage('/contact-us');
@@ -9,7 +9,8 @@ if (!page) return Astro.redirect('/404');
 const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 ---
 
-<BaseLayout
+<>
+<ContentLayout
 	title={page.seo?.title ?? 'Contact Us — Tinkercademy'}
 	description={page.seo?.description ?? page.description ?? ''}
 	canonical={canonical}
@@ -101,7 +102,7 @@ const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 	</section>
 
 	<CtaBanner />
-</BaseLayout>
+</ContentLayout>
 
 <style>
 	.contact-hero {
@@ -228,3 +229,4 @@ const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 		}
 	}
 </style>
+</>
