@@ -1,0 +1,200 @@
+---
+import CtaBanner from '../../components/CtaBanner.astro';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getSiteData } from '../../lib/data.js';
+
+export function getStaticPaths() {
+	return getSiteData().articles.map((article: any) => ({
+		params: { slug: article.slug },
+		props: { article },
+	}));
+}
+
+const { article } = Astro.props as { article: any };
+const canonical = new URL(`/articles/${article.slug}`, 'https://tinkercademy.com').toString();
+const date = article.date ? new Date(article.date) : null;
+const formattedDate = date
+	? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+	: null;
+---
+
+<ContentLayout
+	title={article.title}
+	description={article.content_text?.slice(0, 160) ?? ''}
+	canonical={canonical}
+	image={article.image ?? undefined}
+>
+	<section class="article-hero">
+		{article.image && (
+			<img
+				class="article-hero__bg"
+				src={article.image}
+				alt={article.title}
+				loading="eager"
+			/>
+		)}
+		<div class="article-hero__overlay" />
+		<div class="article-hero__text shell">
+			<p class="article-hero__eyebrow">Article</p>
+			<h1 class="article-hero__title">{article.title}</h1>
+			{formattedDate && <p class="article-hero__date">{formattedDate}</p>}
+		</div>
+	</section>
+
+	<article class="article-body shell prose">
+		<div set:html={article.content_html} />
+	</article>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	/* ─── Hero ──────────────────────────────────────────────── */
+	.article-hero {
+		position: relative;
+		width: 100%;
+		min-height: 340px;
+		display: flex;
+		align-items: flex-end;
+		overflow: hidden;
+	}
+
+	.article-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+
+	.article-hero__overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.35) 0%,
+			rgba(0, 0, 0, 0.6) 100%
+		);
+		z-index: 1;
+	}
+
+	.article-hero__text {
+		position: relative;
+		z-index: 2;
+		padding-top: 100px;
+		padding-bottom: 48px;
+	}
+
+	.article-hero__eyebrow {
+		font-family: 'Rubik', sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0 0 12px;
+	}
+
+	.article-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.8rem, 4vw, 3rem);
+		font-weight: 500;
+		line-height: 1.1;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		max-width: 22ch;
+	}
+
+	.article-hero__date {
+		margin: 0.75rem 0 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 400;
+		color: rgba(255, 255, 255, 0.82);
+	}
+
+	/* ─── Content body ─────────────────────────────────────── */
+	.article-body {
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+		max-width: 720px;
+	}
+
+	.article-body :global(h1) {
+		display: none; /* already shown in hero */
+	}
+
+	.article-body :global(h2),
+	.article-body :global(h3),
+	.article-body :global(h4) {
+		font-family: 'Oswald', sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: rgb(51, 51, 51);
+		margin: 1.75rem 0 0.5rem;
+	}
+
+	.article-body :global(h2) {
+		font-size: 1.35rem;
+	}
+
+	.article-body :global(h3) {
+		font-size: 1.15rem;
+	}
+
+	.article-body :global(h4) {
+		font-size: 1rem;
+	}
+
+	.article-body :global(p) {
+		font-family: 'Rubik', sans-serif;
+		font-size: 15px;
+		line-height: 1.75;
+		color: rgb(51, 51, 51);
+		margin: 0 0 1rem;
+	}
+
+	.article-body :global(ul),
+	.article-body :global(ol) {
+		padding-left: 1.25rem;
+		margin: 0 0 1rem;
+	}
+
+	.article-body :global(li) {
+		font-family: 'Rubik', sans-serif;
+		font-size: 15px;
+		line-height: 1.75;
+		color: rgb(51, 51, 51);
+		margin-bottom: 0.35rem;
+	}
+
+	.article-body :global(strong) {
+		font-weight: 600;
+	}
+
+	.article-body :global(a) {
+		color: rgb(240, 93, 87);
+		text-decoration: underline;
+	}
+
+	.article-body :global(img) {
+		width: 100%;
+		border-radius: 12px;
+		margin: 1.25rem 0;
+	}
+
+	/* ─── Responsive ───────────────────────────────────────── */
+	@media (max-width: 809px) {
+		.article-hero {
+			min-height: 220px;
+		}
+
+		.article-hero__text {
+			padding-top: 60px;
+			padding-bottom: 28px;
+		}
+	}
+</style>
