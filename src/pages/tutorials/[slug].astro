@@ -4,8 +4,6 @@ import HeroMedia from '../../components/HeroMedia.astro';
 import TutorialStory from '../../components/TutorialStory.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
-import DocumentLayout from '../../layouts/DocumentLayout.astro';
-import { getRouteDocument } from '../../lib/route-documents.js';
 
 export function getStaticPaths() {
 	return getSiteData().tutorials.map((tutorial: any) => ({
@@ -23,13 +21,8 @@ const contentItems =
 	firstContentItem.src === tutorial.hero_image
 		? tutorial.content.slice(1)
 		: tutorial.content;
-const routeDocument = getRouteDocument(`/tutorials/${tutorial.slug}`);
 ---
 
-{routeDocument ? (
-	<DocumentLayout document={routeDocument} />
-) : (
-<>
 <ContentLayout
 	title={tutorial.seo?.title ?? tutorial.title}
 	description={tutorial.seo?.description ?? tutorial.description ?? ''}
@@ -96,5 +89,3 @@ const routeDocument = getRouteDocument(`/tutorials/${tutorial.slug}`);
 		color: rgba(255, 253, 248, 0.92);
 	}
 </style>
-</>
-)}

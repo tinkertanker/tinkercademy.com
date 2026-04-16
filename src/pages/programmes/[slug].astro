@@ -2,8 +2,6 @@
 import CtaBanner from '../../components/CtaBanner.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
-import DocumentLayout from '../../layouts/DocumentLayout.astro';
-import { getRouteDocument } from '../../lib/route-documents.js';
 
 const SITE_ORIGIN = 'https://tinkercademy.com';
 
@@ -41,7 +39,6 @@ const primaryAudience = programme.audiences?.[0];
 const signUpUrl = programme.sign_up_url ?? null;
 const signUpLabel = programme.sign_up_label ?? 'Enquire now';
 const signUpIsExternal = shouldOpenInNewTab(signUpUrl);
-const routeDocument = getRouteDocument(`/programmes/${programme.slug}`);
 const typeLabel =
 	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
 		? 'Corporate training'
@@ -55,10 +52,6 @@ const sections = (programme.sections ?? [])
 	.filter((section: any) => section.html);
 ---
 
-{routeDocument ? (
-	<DocumentLayout document={routeDocument} />
-) : (
-<>
 <ContentLayout
 	title={programme.seo?.title ?? programme.title}
 	description={programme.seo?.description ?? programme.description ?? ''}
@@ -446,5 +439,3 @@ const sections = (programme.sections ?? [])
 		}
 	}
 </style>
-</>
-)}
