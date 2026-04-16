@@ -34,6 +34,10 @@ function cleanText(value) {
 		.trim();
 }
 
+function looksLikeEmailAddress(value) {
+	return /^[^\s@/]+@[^\s@/]+\.[^\s@/]+(?:\?.*)?$/u.test(value);
+}
+
 function slugify(value) {
 	return cleanText(value)
 		.toLowerCase()
@@ -71,12 +75,28 @@ function truncateText(value, maxLength = 220) {
 }
 
 function classifyCtaType(url) {
-	if (!url) return 'external';
-	if (url.startsWith('mailto:')) return 'email';
-	if (url.startsWith('tel:')) return 'phone';
-	if (/jotform|typeform|hubspot|airtable|formstack/i.test(url)) return 'form';
-	if (url.startsWith(SITE_ORIGIN)) return 'internal';
+	const normalisedUrl = normaliseCtaUrl(url);
+	if (!normalisedUrl) return 'external';
+	if (normalisedUrl.startsWith('mailto:')) return 'email';
+	if (normalisedUrl.startsWith('tel:')) return 'phone';
+	if (/jotform|typeform|hubspot|airtable|formstack/i.test(normalisedUrl)) return 'form';
+
+	try {
+		if (new URL(normalisedUrl, SITE_ORIGIN).origin === SITE_ORIGIN) return 'internal';
+	} catch {
+		return 'external';
+	}
+
 	return 'external';
+}
+
+function normaliseCtaUrl(url) {
+	const value = cleanText(url);
+	if (!value) return null;
+	if (/^mailto:/i.test(value)) return `mailto:${value.slice('mailto:'.length).trim()}`;
+	if (/^tel:/i.test(value)) return `tel:${value.slice('tel:'.length).trim()}`;
+	if (!/^[a-z][a-z\d+.-]*:/i.test(value) && looksLikeEmailAddress(value)) return `mailto:${value}`;
+	return value;
 }
 
 function asString(field) {
@@ -324,12 +344,13 @@ function buildExternalLogoRecords(collection) {
 }
 
 function buildSignUpCta(fields) {
-	const url = asLink(fields['Sign up URL']);
+	const rawUrl = asLink(fields['Sign up URL']);
+	const url = normaliseCtaUrl(rawUrl);
 	if (!url) return null;
 
 	const label = asString(fields['Sign up button text']) ?? 'Sign up';
 	return {
-		id: slugify(`${label}-${url}`),
+		id: slugify(`${label}-${rawUrl ?? url}`),
 		label,
 		url,
 		type: classifyCtaType(url),

@@ -74,7 +74,11 @@ export function getSiteData() {
 	const topicById = indexBy(normalisedTopics);
 	const ctaById = indexBy(normalisedCtaDestinations);
 	const domainById = indexBy(normalisedDomains);
-	const platformById = indexBy(normalisedPlatforms);
+	const enrichedPlatforms = normalisedPlatforms.map((platform) => ({
+		...platform,
+		domains: (platform.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
+	}));
+	const platformById = indexBy(enrichedPlatforms);
 
 	return {
 		siteSettings: normalisedSiteSettings,
@@ -85,10 +89,7 @@ export function getSiteData() {
 		contacts: normalisedContacts,
 		externalLogos: normalisedExternalLogos,
 		locations: normalisedLocations,
-		platforms: normalisedPlatforms.map((platform) => ({
-			...platform,
-			domains: (platform.domain_ids ?? []).map((id) => domainById.get(id)).filter(Boolean),
-		})),
+		platforms: enrichedPlatforms,
 		socialLinks: normalisedSocialLinks,
 		ctaDestinations: normalisedCtaDestinations,
 		forms: normalisedForms,
@@ -118,8 +119,8 @@ export function getSiteData() {
 	};
 }
 
-export function getStaticPage(pagePath) {
-	return getSiteData().staticPages.find((page) => page.path === pagePath) ?? null;
+export function getStaticPage(pagePath, site = getSiteData()) {
+	return site.staticPages.find((page) => page.path === pagePath) ?? null;
 }
 
 /**

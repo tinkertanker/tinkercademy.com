@@ -800,9 +800,9 @@
   type: email
 - id: enquire-now-hello-tk-sg
   label: Enquire now
-  url: hello@tk.sg
-  type: external
+  url: mailto:hello@tk.sg
+  type: email
 - id: enquire-now-hello-tinkercademy-com
   label: Enquire now
-  url: hello@tinkercademy.com
-  type: external
+  url: mailto:hello@tinkercademy.com
+  type: email
