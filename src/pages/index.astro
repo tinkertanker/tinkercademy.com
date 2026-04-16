@@ -1,5 +1,621 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * / — homepage, Astro-native rebuild of the live tinkercademy.com homepage.
+ *
+ * Sections (top → bottom):
+ *   1. Hero (full-bleed image + title + lead + audience pills)
+ *   2. Partner statement strip
+ *   3. Qualified educators section (domain chips + proof points + institution logos)
+ *   4. Flagship programmes (3-up cards with external CTA)
+ *   5. Popular Courses — ProgrammeCard grid from featured_programme_slugs
+ *   6. Closing CTA banner
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ProgrammeCard from '../components/ProgrammeCard.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getSiteData, getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+import {
+	HOME_FLAGSHIP_IMAGES,
+	HOME_INSTITUTION_LOGOS,
+	HOME_PARTNER_LOGOS,
+} from '../lib/site-media.js';
+
+const page = getStaticPage('/');
+if (!page) return Astro.redirect('/404');
+
+const site = getSiteData();
+const canonical = 'https://tinkercademy.com/';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle = page.hero_title ?? 'Illuminate your journey into tech.';
+const heroLead =
+	page.hero_lead ?? 'Learn coding and digital making from expert coders and makers.';
+
+const partnerStatement =
+	page.partner_statement ??
+	'Official training partner for tech companies, universities, and the Singapore government.';
+
+const focusAreas: string[] = page.focus_areas ?? [];
+const proofPoints: string[] = page.proof_points ?? [];
+
+const flagshipItems: Array<{ title: string; description: string; image?: string }> =
+	page.flagship_items ?? [];
+
+/* Map flagship titles → external "Read More" CTA */
+const flagshipCtaByTitle: Record<string, { label: string; url: string }> = {
+	'Swift Accelerator': { label: 'Read More', url: 'https://swiftinsg.org/' },
+	'IMDA LEARN Roadmap': {
+		label: 'LEARN Roadmap',
+		url: 'https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps',
+	},
+	'Code For Fun': { label: 'Read More', url: 'https://codeforfun.sg/' },
+};
+
+const closingStatement =
+	page.closing_statement ??
+	'Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond.';
+const closingCtas = (page.closing_ctas ?? []).map((cta: any) => {
+	let url = cta.url ?? '/';
+	try {
+		const parsed = new URL(url, 'https://tinkercademy.com');
+		if (parsed.origin === 'https://tinkercademy.com') {
+			url = parsed.pathname || '/';
+		}
+	} catch {
+		/* keep as-is */
+	}
+	return { label: cta.label, url };
+});
+
+/* ─── Popular Courses (featured programmes) ─────────────────────────── */
+const programmeBySlug = new Map(site.programmes.map((p: any) => [p.slug, p]));
+const featuredSlugs: string[] = page.featured_programme_slugs ?? [];
+const popularCourses = featuredSlugs
+	.map((slug) => programmeBySlug.get(slug))
+	.filter(Boolean)
+	.map((prog: any) => {
+		const primaryAudience = prog.audiences?.[0];
+		return {
+			slug: prog.slug,
+			title: prog.title,
+			heroImage: prog.hero_image ?? null,
+			audienceLabel: primaryAudience?.label ?? 'Programme',
+			audienceId: primaryAudience?.id ?? '',
+			duration: prog.duration ?? '',
+			shortDescription:
+				prog.card_blurb ||
+				(primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
+					? 'Corporate training'
+					: ''),
+		};
+	});
 ---
 
-<DocumentPage routePath="/" />
+<ContentLayout
+	title={page.seo?.title ?? 'Tinkercademy: Coding and Making for Schools and Professionals'}
+	description={page.seo?.description ?? heroLead}
+	canonical={canonical}
+	image={heroImage}
+>
+	{/* ═══════════ 1. Hero ═══════════════════════════════════════════════ */}
+	<section class="home-hero">
+		{heroImage && (
+			<img
+				class="home-hero__bg"
+				src={heroImage}
+				alt=""
+				loading="eager"
+				fetchpriority="high"
+			/>
+		)}
+		<div class="home-hero__scrim"></div>
+		<div class="home-hero__content shell">
+			<h1 class="home-hero__title">{heroTitle}</h1>
+			<p class="home-hero__lead">{heroLead}</p>
+			<div class="home-hero__actions">
+				<a class="home-hero__pill home-hero__pill--primary" href="#programmes">Programmes</a>
+				<a class="home-hero__pill" href="/professionals">Professionals</a>
+				<a class="home-hero__pill" href="/schools">Schools</a>
+				<a class="home-hero__pill" href="/individuals">Individuals</a>
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════════ 2. Partner statement strip ════════════════════════════ */}
+	<section class="home-partners">
+		<div class="shell home-partners__inner">
+			<p class="home-partners__statement">{partnerStatement}</p>
+			<div class="home-partners__logos">
+				{HOME_PARTNER_LOGOS.map((logo) => (
+					<a
+						class="home-partners__logo-link"
+						href={logo.url}
+						target="_blank"
+						rel="noopener"
+						aria-label={logo.label}
+					>
+						<img
+							class="home-partners__logo"
+							src={logo.src}
+							alt={logo.label}
+							loading="lazy"
+						/>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════════ 3. Educators + focus areas ════════════════════════════ */}
+	<section class="home-educators">
+		<div class="shell">
+			<h2 class="home-educators__heading">
+				Learn from qualified educators and engineers.
+			</h2>
+			<p class="home-educators__sub">
+				Courses available in a wide variety of modern, practical domains.
+			</p>
+
+			{focusAreas.length > 0 && (
+				<ul class="home-educators__chips">
+					{focusAreas.map((label) => (
+						<li class="home-educators__chip">{label}</li>
+					))}
+				</ul>
+			)}
+
+			{proofPoints.length > 0 && (
+				<ul class="home-educators__proof">
+					{proofPoints.map((text) => (
+						<li class="home-educators__proof-item">{text}</li>
+					))}
+				</ul>
+			)}
+
+			<div class="home-educators__logos">
+				{HOME_INSTITUTION_LOGOS.map((logo) => (
+					<img
+						class="home-educators__inst-logo"
+						src={logo.src}
+						alt={logo.label}
+						loading="lazy"
+					/>
+				))}
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════════ 4. Flagship programmes ════════════════════════════════ */}
+	<section class="home-flagship" id="flagship">
+		<div class="shell">
+			<h2 class="home-flagship__heading">Our Flagship Programmes</h2>
+			<div class="home-flagship__grid">
+				{flagshipItems.map((item) => {
+					const cta = flagshipCtaByTitle[item.title];
+					const image = HOME_FLAGSHIP_IMAGES[item.title] ?? localiseFramerImage(item.image ?? '');
+					return (
+						<article class="flagship-card">
+							{image && (
+								<div class="flagship-card__image">
+									<img src={image} alt={item.title} loading="lazy" />
+								</div>
+							)}
+							<div class="flagship-card__body">
+								<h3 class="flagship-card__title">{item.title}</h3>
+								<p class="flagship-card__text">{item.description}</p>
+								{cta && (
+									<a
+										class="flagship-card__cta"
+										href={cta.url}
+										target="_blank"
+										rel="noopener"
+									>
+										{cta.label}
+									</a>
+								)}
+							</div>
+						</article>
+					);
+				})}
+			</div>
+		</div>
+	</section>
+
+	{/* ═══════════ 5. Popular Courses ════════════════════════════════════ */}
+	{popularCourses.length > 0 && (
+		<section class="home-popular" id="programmes">
+			<div class="shell">
+				<h2 class="home-popular__heading">Popular Courses</h2>
+				<div class="home-popular__grid">
+					{popularCourses.map((prog) => (
+						<ProgrammeCard
+							slug={prog.slug}
+							title={prog.title}
+							heroImage={prog.heroImage}
+							audienceLabel={prog.audienceLabel}
+							audienceId={prog.audienceId}
+							duration={prog.duration}
+							shortDescription={prog.shortDescription}
+						/>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	{/* ═══════════ 6. Closing CTA banner ═════════════════════════════════ */}
+	<CtaBanner text={closingStatement} ctas={closingCtas} />
+</ContentLayout>
+
+<style>
+	/* ─── Hero ─────────────────────────────────────────────────────────── */
+	.home-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(520px, 72vh, 720px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.home-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 40%;
+	}
+
+	.home-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.7) 100%);
+	}
+
+	.home-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+		gap: 1.1rem;
+	}
+
+	.home-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2.4rem, 6vw, 4.5rem);
+		font-weight: 500;
+		line-height: 1;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		max-width: 16ch;
+		text-wrap: balance;
+	}
+
+	.home-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(1rem, 1.5vw, 1.1rem);
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.92);
+		margin: 0;
+		max-width: 48ch;
+	}
+
+	.home-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.7rem;
+		margin-top: 0.75rem;
+	}
+
+	.home-hero__pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 42px;
+		padding: 0 1.15rem;
+		border-radius: 999px;
+		background: rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.55);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		font-weight: 500;
+		transition: background 0.15s ease, border-color 0.15s ease;
+	}
+
+	.home-hero__pill--primary {
+		background: rgb(240, 93, 87);
+		border-color: rgb(240, 93, 87);
+		box-shadow: 0 8px 24px rgba(240, 93, 87, 0.28);
+	}
+
+	.home-hero__pill:hover {
+		background: rgba(255, 255, 255, 0.15);
+		border-color: rgba(255, 255, 255, 0.85);
+	}
+
+	.home-hero__pill--primary:hover {
+		background: rgb(220, 74, 68);
+		border-color: rgb(220, 74, 68);
+	}
+
+	/* ─── Partner strip ──────────────────────────────────────────────── */
+	.home-partners {
+		padding: 2.5rem 0;
+		background: #fff;
+		border-bottom: 1px solid rgb(238, 238, 238);
+	}
+
+	.home-partners__inner {
+		display: grid;
+		gap: 1.5rem;
+		justify-items: center;
+		text-align: center;
+	}
+
+	.home-partners__statement {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+		margin: 0;
+		max-width: 50rem;
+		letter-spacing: 0.01em;
+		line-height: 1.35;
+	}
+
+	.home-partners__logos {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+		width: 100%;
+	}
+
+	.home-partners__logo-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.8;
+		transition: opacity 0.15s;
+	}
+
+	.home-partners__logo-link:hover {
+		opacity: 1;
+	}
+
+	.home-partners__logo {
+		max-height: 44px;
+		max-width: 140px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+	}
+
+	/* ─── Educators section ───────────────────────────────────────────── */
+	.home-educators {
+		padding: 3.5rem 0;
+	}
+
+	.home-educators__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+		max-width: 22ch;
+		text-wrap: balance;
+	}
+
+	.home-educators__sub {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		color: rgb(110, 110, 110);
+		margin: 0 0 1.5rem;
+	}
+
+	.home-educators__chips {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 0.7rem;
+	}
+
+	.home-educators__chip {
+		padding: 0.5rem 0.9rem;
+		border-radius: 999px;
+		background: rgba(240, 93, 87, 0.09);
+		color: rgb(202, 67, 61);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	.home-educators__proof {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 2rem;
+		display: grid;
+		gap: 0.5rem;
+		max-width: 60rem;
+	}
+
+	.home-educators__proof-item {
+		position: relative;
+		padding-left: 1.5rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: rgb(51, 51, 51);
+	}
+
+	.home-educators__proof-item::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.65rem;
+		width: 0.55rem;
+		height: 0.55rem;
+		border-radius: 50%;
+		background: rgb(240, 93, 87);
+	}
+
+	.home-educators__logos {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: clamp(1rem, 2.5vw, 2rem);
+		padding-top: 1rem;
+	}
+
+	.home-educators__inst-logo {
+		max-height: 48px;
+		max-width: 140px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		opacity: 0.75;
+		filter: grayscale(0.25);
+	}
+
+	/* ─── Flagship ───────────────────────────────────────────────────── */
+	.home-flagship {
+		padding: 3.5rem 0;
+		background: #fafafa;
+	}
+
+	.home-flagship__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.6rem, 3vw, 2.1rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	.home-flagship__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.flagship-card {
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		overflow: hidden;
+	}
+
+	.flagship-card__image {
+		width: 100%;
+		aspect-ratio: 5 / 4;
+		overflow: hidden;
+		background: rgb(245, 245, 245);
+	}
+
+	.flagship-card__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.flagship-card__body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 1.2rem 1.25rem 1.4rem;
+		flex: 1;
+	}
+
+	.flagship-card__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.25rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.flagship-card__text {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		line-height: 1.6;
+		color: rgb(90, 90, 90);
+		margin: 0;
+		flex: 1;
+	}
+
+	.flagship-card__cta {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 38px;
+		padding: 0 1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.flagship-card__cta:hover {
+		background: rgb(220, 74, 68);
+	}
+
+	@media (max-width: 899px) {
+		.home-flagship__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* ─── Popular ────────────────────────────────────────────────────── */
+	.home-popular {
+		padding: 3.5rem 0;
+		scroll-margin-top: 80px;
+	}
+
+	.home-popular__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.6rem, 3vw, 2.1rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	.home-popular__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 20px;
+	}
+
+	@media (max-width: 1199px) {
+		.home-popular__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 809px) {
+		.home-popular__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

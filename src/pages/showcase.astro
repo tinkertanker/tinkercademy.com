@@ -1,5 +1,381 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * /showcase — Astro-native rebuild: student + intern spotlights.
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+
+const page = getStaticPage('/showcase');
+if (!page) return Astro.redirect('/404');
+
+const canonical = 'https://tinkercademy.com/showcase';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle =
+	page.hero_title ?? 'Showcase of Our Coders, Tinkerers, Makers, and their Journeys';
+const heroLead =
+	'Meet the bright minds who\'ve learned, built, and grown with us, from classroom projects to professional success.';
+
+const internTestimonials = [
+	{
+		name: 'Raynold',
+		role: 'Software Development Intern, 2017',
+		quote:
+			'This internship was so much more than just a programming task. As the project owner, I went through all stages of product development — from idea generation and discussions with end users, to development, live demonstrations, troubleshooting and maintenance.',
+	},
+	{
+		name: 'Colin',
+		role: 'Machine Learning & Data Science Intern, 2017',
+		quote:
+			'Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide guidance when I needed it.',
+	},
+	{
+		name: 'Joelle',
+		role: 'Computer Engineering Intern, 2017',
+		quote:
+			'I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind-boggling but I\'m glad everything turned out okay.',
+	},
+	{
+		name: 'Mark',
+		role: 'Teaching & Curriculum Design Intern, 2023',
+		quote:
+			'Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It\'s a great place to learn and to teach.',
+	},
+	{
+		name: 'Enric',
+		role: 'Computer Science Intern, 2023',
+		quote:
+			'Interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages I had never touched before.',
+	},
+	{
+		name: 'Yun Xuan',
+		role: 'Software Development Intern, 2024',
+		quote:
+			'All these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey.',
+	},
+];
+
+const jiaChenQuote =
+	'Meet Jia Chen, a young visionary from Singapore whose journey into the world of technology began with childhood exploration and the transformative power of mobile apps. Inspired by the seamless fusion of science and technology, Jia Chen embarked on a swift learning curve, mastering the Swift programming language and unveiling his debut iOS app on the App Store at a remarkably young age. An Information Technology diploma graduate from Ngee Ann Polytechnic, Jia Chen\'s creative process is seamlessly integrated into the Apple ecosystem, from sketching app designs on iPad to bringing them to life with Xcode on Mac. With six apps already gracing the App Store and two Swift Student Challenge triumphs under his belt, Jia Chen epitomises the next generation of creators and innovators.';
 ---
 
-<DocumentPage routePath="/showcase" />
+<ContentLayout
+	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
+	description={page.seo?.description ?? heroLead}
+	canonical={canonical}
+	image={heroImage}
+>
+	<section class="sc-hero">
+		{heroImage && (
+			<img class="sc-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+		)}
+		<div class="sc-hero__scrim"></div>
+		<div class="sc-hero__content shell">
+			<h1 class="sc-hero__title">{heroTitle}</h1>
+			<p class="sc-hero__lead">{heroLead}</p>
+		</div>
+	</section>
+
+	<section class="sc-section">
+		<div class="shell">
+			<h2 class="sc-section__heading">Our Students</h2>
+			<p class="sc-section__lead">
+				Our students have built some pretty cool things, ranging from apps to games to remote
+				controlled devices and beyond!
+			</p>
+		</div>
+	</section>
+
+	<section class="sc-spotlight">
+		<div class="shell sc-spotlight__inner">
+			<p class="sc-spotlight__eyebrow">Swift Accelerator Programme Trainer at Tinkertanker</p>
+			<h2 class="sc-spotlight__title">Meet Jia Chen</h2>
+			<p class="sc-spotlight__body">{jiaChenQuote}</p>
+			<p class="sc-spotlight__source">
+				As featured on Apple:
+				<a
+					href="https://www.apple.com/education/college-students/success-stories/yee/"
+					target="_blank"
+					rel="noopener"
+				>apple.com</a>
+			</p>
+		</div>
+	</section>
+
+	<section class="sc-section sc-section--muted">
+		<div class="shell">
+			<h2 class="sc-section__heading">Our Interns</h2>
+			<p class="sc-section__lead">
+				Through hands-on experience and mentorship, our interns work on real projects that shape
+				the future of education and technology. Here's what they have to say about their
+				experiences.
+			</p>
+
+			<div class="sc-interns">
+				{internTestimonials.map((intern) => (
+					<article class="sc-intern-card">
+						<blockquote class="sc-intern-card__quote">
+							<p>“{intern.quote}”</p>
+						</blockquote>
+						<footer class="sc-intern-card__meta">
+							<span class="sc-intern-card__name">{intern.name}</span>
+							<span class="sc-intern-card__role">{intern.role}</span>
+						</footer>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="sc-buildlog">
+		<div class="shell sc-buildlog__inner">
+			<h2 class="sc-buildlog__heading">Learn more about what our alumni have done!</h2>
+			<p class="sc-buildlog__body">
+				We're building software, electronics, curriculum — and the next generation of coders,
+				makers, and creators. Come check out our build log and contribute to it one day!
+			</p>
+			<a class="sc-buildlog__cta" href="https://ghost.tk.sg/" target="_blank" rel="noopener">
+				Build Log
+			</a>
+		</div>
+	</section>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	.sc-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(380px, 52vh, 540px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.sc-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.sc-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.6) 100%);
+	}
+
+	.sc-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+		gap: 0.75rem;
+	}
+
+	.sc-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 4.2vw, 3.1rem);
+		font-weight: 500;
+		line-height: 1.05;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		max-width: 24ch;
+		text-wrap: balance;
+	}
+
+	.sc-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(1rem, 1.4vw, 1.1rem);
+		color: rgba(255, 255, 255, 0.9);
+		margin: 0;
+		max-width: 55ch;
+		line-height: 1.6;
+	}
+
+	.sc-section {
+		padding: 3rem 0;
+	}
+
+	.sc-section--muted {
+		background: #fafafa;
+	}
+
+	.sc-section__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+	}
+
+	.sc-section__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.65;
+		color: rgb(110, 110, 110);
+		margin: 0 0 2rem;
+		max-width: 60rem;
+	}
+
+	.sc-spotlight {
+		padding: 3rem 0;
+		background: linear-gradient(135deg, #342c68 0%, #453881 55%, #1a1640 100%);
+		color: #fffdf8;
+	}
+
+	.sc-spotlight__inner {
+		max-width: 62rem;
+	}
+
+	.sc-spotlight__eyebrow {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.78rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgba(255, 253, 248, 0.75);
+		margin: 0 0 0.75rem;
+	}
+
+	.sc-spotlight__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0 0 1rem;
+	}
+
+	.sc-spotlight__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.75;
+		margin: 0 0 1.25rem;
+		color: rgba(255, 253, 248, 0.9);
+	}
+
+	.sc-spotlight__source {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		color: rgba(255, 253, 248, 0.72);
+		margin: 0;
+	}
+
+	.sc-spotlight__source a {
+		color: rgb(240, 93, 87);
+	}
+
+	.sc-interns {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	@media (max-width: 1199px) {
+		.sc-interns {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 699px) {
+		.sc-interns {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.sc-intern-card {
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.sc-intern-card__quote {
+		margin: 0;
+	}
+
+	.sc-intern-card__quote p {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+		margin: 0;
+	}
+
+	.sc-intern-card__meta {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+
+	.sc-intern-card__name {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.05rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+	}
+
+	.sc-intern-card__role {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.72rem;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		color: rgb(240, 93, 87);
+	}
+
+	.sc-buildlog {
+		padding: 3rem 0;
+	}
+
+	.sc-buildlog__inner {
+		max-width: 62rem;
+	}
+
+	.sc-buildlog__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+	}
+
+	.sc-buildlog__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+		margin: 0 0 1.25rem;
+	}
+
+	.sc-buildlog__cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 42px;
+		padding: 0 1.2rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.sc-buildlog__cta:hover {
+		opacity: 0.88;
+	}
+</style>

@@ -1,5 +1,317 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * /individuals — Astro-native rebuild.
+ *
+ * Sections:
+ *   1. Hero
+ *   2. Programme Types (micro:bit, Tinker X cards)
+ *   3. Courses for Individuals (all programmes marked for public audience)
+ *   4. Closing CTA banner
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ProgrammeCard from '../components/ProgrammeCard.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getSiteData, getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+
+const page = getStaticPage('/individuals');
+if (!page) return Astro.redirect('/404');
+
+const site = getSiteData();
+const canonical = 'https://tinkercademy.com/individuals';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle = page.hero_title ?? 'Self-directed Learning Opportunities';
+const heroLead =
+	page.hero_lead ??
+	'Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses.';
+
+const programmeTypes = [
+	{
+		title: 'micro:bit',
+		body: 'Work through our micro:bit Tinker Kit and Breakout Board tutorials, plus our foundational getting-started material. Perfect for learners who want to start tinkering with hardware.',
+		url: '/microbit',
+	},
+	{
+		title: 'Tinker X',
+		body: 'A flexible, self-paced membership for anyone interested in coding and making. Work through materials, use our maker library, and join a community of like-minded tinkerers.',
+		url: '/tinker-x',
+	},
+];
+
+/* Public-audience programmes for the "Courses for Individuals" grid. */
+const publicProgrammes = site.programmes
+	.filter((p: any) => (p.audiences ?? []).some((a: any) => a.id === 'public'))
+	.map((p: any) => {
+		const primary = p.audiences?.[0];
+		return {
+			slug: p.slug,
+			title: p.title,
+			heroImage: p.hero_image ?? null,
+			audienceLabel: primary?.label ?? 'Public',
+			audienceId: primary?.id ?? 'public',
+			duration: p.duration ?? '',
+			shortDescription: p.card_blurb ?? '',
+		};
+	});
 ---
 
-<DocumentPage routePath="/individuals" />
+<ContentLayout
+	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
+	description={page.seo?.description ?? heroLead}
+	canonical={canonical}
+	image={heroImage}
+>
+	<section class="aud-hero">
+		{heroImage && (
+			<img class="aud-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+		)}
+		<div class="aud-hero__scrim"></div>
+		<div class="aud-hero__content shell">
+			<h1 class="aud-hero__title">{heroTitle}</h1>
+			<p class="aud-hero__lead">{heroLead}</p>
+		</div>
+	</section>
+
+	<section class="ind-types">
+		<div class="shell">
+			<h2 class="ind-types__heading">Programme Types</h2>
+			<div class="ind-types__grid">
+				{programmeTypes.map((t) => (
+					<a class="ind-type" href={t.url}>
+						<h3 class="ind-type__title">{t.title}</h3>
+						<p class="ind-type__body">{t.body}</p>
+						<span class="ind-type__cta">Learn more →</span>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	{publicProgrammes.length > 0 && (
+		<section class="aud-courses">
+			<div class="shell">
+				<h2 class="aud-courses__heading">Courses for Individuals</h2>
+				<div class="aud-courses__grid">
+					{publicProgrammes.map((card: any) => (
+						<ProgrammeCard
+							slug={card.slug}
+							title={card.title}
+							heroImage={card.heroImage}
+							audienceLabel={card.audienceLabel}
+							audienceId={card.audienceId}
+							duration={card.duration}
+							shortDescription={card.shortDescription}
+						/>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	<section class="aud-pivot">
+		<div class="shell">
+			<h2 class="aud-pivot__heading">Let's Work Together!</h2>
+			<div class="aud-pivot__pills">
+				<a class="aud-pivot__pill" href="/professionals">Professionals</a>
+				<a class="aud-pivot__pill" href="/schools">Schools</a>
+			</div>
+		</div>
+	</section>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	.aud-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(380px, 52vh, 560px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.aud-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.aud-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%);
+	}
+
+	.aud-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+		gap: 0.75rem;
+	}
+
+	.aud-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 4.5vw, 3.2rem);
+		font-weight: 500;
+		line-height: 1.05;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		max-width: 22ch;
+	}
+
+	.aud-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(1rem, 1.4vw, 1.1rem);
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.92);
+		margin: 0;
+		max-width: 48ch;
+	}
+
+	.ind-types {
+		padding: 3rem 0;
+	}
+
+	.ind-types__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.25rem;
+	}
+
+	.ind-types__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.ind-type {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		padding: 1.75rem;
+		background: #fafafa;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	}
+
+	.ind-type:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
+		border-color: rgba(240, 93, 87, 0.3);
+	}
+
+	.ind-type__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.35rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.ind-type__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+		margin: 0;
+		flex: 1;
+	}
+
+	.ind-type__cta {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: rgb(240, 93, 87);
+	}
+
+	@media (max-width: 809px) {
+		.ind-types__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.aud-courses {
+		padding: 1rem 0 3rem;
+	}
+
+	.aud-courses__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+		margin: 0 0 1.5rem;
+	}
+
+	.aud-courses__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 20px;
+	}
+
+	@media (max-width: 1199px) {
+		.aud-courses__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 809px) {
+		.aud-courses__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.aud-pivot {
+		padding: 3rem 0;
+	}
+
+	.aud-pivot__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+		text-align: center;
+		margin: 0 0 1.25rem;
+	}
+
+	.aud-pivot__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.aud-pivot__pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		padding: 10px 20px;
+		border-radius: 30px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		text-decoration: none;
+	}
+
+	.aud-pivot__pill:hover {
+		opacity: 0.85;
+	}
+</style>

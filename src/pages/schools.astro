@@ -1,5 +1,349 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * /schools — Astro-native rebuild.
+ *
+ * Sections:
+ *   1. Hero
+ *   2. Programmes for Schools (intro)
+ *   3. Code for Fun (feature)
+ *   4. Infocomm Learning Roadmap (feature)
+ *   5. Let's Work Together! pivot pills
+ *   6. School Courses (programme cards)
+ *   7. Closing CTA banner
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ProgrammeCard from '../components/ProgrammeCard.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getSiteData, getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+
+const page = getStaticPage('/schools');
+if (!page) return Astro.redirect('/404');
+
+const site = getSiteData();
+const canonical = 'https://tinkercademy.com/schools';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle = page.hero_title ?? 'Code, Tinker, and Make with Us.';
+const heroLead = page.hero_lead ?? 'Real skills for real impact.';
+
+const features = [
+	{
+		title: 'Code for Fun',
+		body: 'Established as one of the earliest Code for Fun initiators under the Code@SG scheme, we\'ve been providing an array of courses covering micro:bit, Scratch, AI, and more to primary, secondary, and junior college students — with fully subsidised training for up to 2 cohorts per school.',
+		url: 'https://codeforfun.sg/',
+		label: 'Read More',
+	},
+	{
+		title: 'Infocomm Learning Roadmap',
+		body: 'In collaboration with IMDA, our industry associates, and educational partners, we provide technology learning programs that meet the IMDA Infocomm Clubs LEARN Roadmap across MOE schools.',
+		url: 'https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps',
+		label: 'LEARN Roadmap',
+	},
+];
+
+const programmeBySlug = new Map<string, any>(site.programmes.map((p: any) => [p.slug, p]));
+const cards = (page.course_cards ?? []).map((card: any) => {
+	const prog = programmeBySlug.get(card.slug);
+	const primaryAudience = prog?.audiences?.[0];
+	const cleanBlurb = (card.blurb ?? '').replace(/Our Courses Our Projects$/, '').trim();
+	return {
+		slug: card.slug,
+		title: prog?.title ?? card.title,
+		heroImage: prog?.hero_image ?? null,
+		audienceLabel: card.audience_label ?? primaryAudience?.label ?? 'Programme',
+		audienceId: primaryAudience?.id ?? (card.audience_label ?? '').toLowerCase(),
+		duration: card.duration ?? prog?.duration ?? '',
+		shortDescription: cleanBlurb,
+	};
+});
 ---
 
-<DocumentPage routePath="/schools" />
+<ContentLayout
+	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
+	description={page.seo?.description ?? heroLead}
+	canonical={canonical}
+	image={heroImage}
+>
+	<section class="aud-hero">
+		{heroImage && (
+			<img class="aud-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+		)}
+		<div class="aud-hero__scrim"></div>
+		<div class="aud-hero__content shell">
+			<h1 class="aud-hero__title">{heroTitle}</h1>
+			<p class="aud-hero__lead">{heroLead}</p>
+		</div>
+	</section>
+
+	<section class="sch-intro">
+		<div class="shell">
+			<h2 class="sch-intro__heading">Programmes for Schools</h2>
+			<p class="sch-intro__body">
+				We offer a variety of courses for schools. As one of the first vendors for the
+				Code for Fun programme, and the Infocomm Clubs LEARN Roadmap, we have delivered
+				hands-on lessons and multi-year tracks across primary, secondary, and junior college levels.
+			</p>
+		</div>
+	</section>
+
+	<section class="sch-features">
+		<div class="shell sch-features__grid">
+			{features.map((feat) => (
+				<article class="sch-feature">
+					<h3 class="sch-feature__title">{feat.title}</h3>
+					<p class="sch-feature__body">{feat.body}</p>
+					<a class="sch-feature__cta" href={feat.url} target="_blank" rel="noopener">
+						{feat.label}
+					</a>
+				</article>
+			))}
+		</div>
+	</section>
+
+	<section class="aud-pivot">
+		<div class="shell">
+			<h2 class="aud-pivot__heading">Let's Work Together!</h2>
+			<div class="aud-pivot__pills">
+				<a class="aud-pivot__pill" href="/professionals">Professionals</a>
+				<a class="aud-pivot__pill" href="/individuals">Individuals</a>
+				<a class="aud-pivot__pill" href="/courses-schools">Browse Courses</a>
+			</div>
+		</div>
+	</section>
+
+	{cards.length > 0 && (
+		<section class="aud-courses">
+			<div class="shell">
+				<h2 class="aud-courses__heading">School Courses</h2>
+				<div class="aud-courses__grid">
+					{cards.map((card: any) => (
+						<ProgrammeCard
+							slug={card.slug}
+							title={card.title}
+							heroImage={card.heroImage}
+							audienceLabel={card.audienceLabel}
+							audienceId={card.audienceId}
+							duration={card.duration}
+							shortDescription={card.shortDescription}
+						/>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	.aud-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(380px, 52vh, 560px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.aud-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.aud-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%);
+	}
+
+	.aud-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+		gap: 0.75rem;
+	}
+
+	.aud-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 4.5vw, 3.2rem);
+		font-weight: 500;
+		line-height: 1.05;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		max-width: 22ch;
+	}
+
+	.aud-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(1rem, 1.4vw, 1.1rem);
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.92);
+		margin: 0;
+		max-width: 48ch;
+	}
+
+	.sch-intro {
+		padding: 3rem 0 1rem;
+	}
+
+	.sch-intro__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+	}
+
+	.sch-intro__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.7;
+		color: rgb(51, 51, 51);
+		margin: 0;
+		max-width: 60rem;
+	}
+
+	.sch-features {
+		padding: 2rem 0 3rem;
+	}
+
+	.sch-features__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.sch-feature {
+		background: #fafafa;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.sch-feature__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.35rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.sch-feature__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+		margin: 0;
+		flex: 1;
+	}
+
+	.sch-feature__cta {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 38px;
+		padding: 0 1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		font-weight: 500;
+	}
+
+	.sch-feature__cta:hover {
+		background: rgb(220, 74, 68);
+	}
+
+	@media (max-width: 809px) {
+		.sch-features__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.aud-pivot {
+		padding: 3rem 0;
+	}
+
+	.aud-pivot__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+		text-align: center;
+		margin: 0 0 1.25rem;
+	}
+
+	.aud-pivot__pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.aud-pivot__pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		padding: 10px 20px;
+		border-radius: 30px;
+		background: rgb(240, 93, 87);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		color: #fff;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		text-decoration: none;
+	}
+
+	.aud-pivot__pill:hover {
+		opacity: 0.85;
+	}
+
+	.aud-courses {
+		padding: 1rem 0 3rem;
+	}
+
+	.aud-courses__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+		margin: 0 0 1.5rem;
+	}
+
+	.aud-courses__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 20px;
+	}
+
+	@media (max-width: 1199px) {
+		.aud-courses__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 809px) {
+		.aud-courses__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

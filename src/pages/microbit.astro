@@ -1,5 +1,474 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * /microbit — Astro-native rebuild of the micro:bit tutorials landing page.
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getSiteData, getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+
+const page = getStaticPage('/microbit');
+if (!page) return Astro.redirect('/404');
+
+const site = getSiteData();
+const canonical = 'https://tinkercademy.com/microbit';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle = page.hero_title ?? 'micro:bit Tutorials';
+const heroLead =
+	page.hero_lead ??
+	'Get started with our BBC Micro:bit Kit and the Breakout Board here!';
+
+const FEATURED_SLUGS = new Set([
+	'access-denied-a-door-entry-tutorial',
+	'ang-bao-collector',
+	'build-your-own-micro-bit-security-door',
+	'coin-sorter',
+]);
+
+const featuredTutorials = (site.tutorials ?? [])
+	.filter((t: any) => FEATURED_SLUGS.has(t.slug))
+	.map((t: any) => ({
+		slug: t.slug,
+		title: t.title,
+		heroImage: t.hero_image ? localiseFramerImage(t.hero_image) : null,
+		description: t.description ?? t.subtitle ?? '',
+	}));
+
+const otherTutorials = (site.tutorials ?? [])
+	.filter((t: any) => !FEATURED_SLUGS.has(t.slug))
+	.map((t: any) => ({
+		slug: t.slug,
+		title: t.title,
+		heroImage: t.hero_image ? localiseFramerImage(t.hero_image) : null,
+		description: t.description ?? t.subtitle ?? '',
+	}));
 ---
 
-<DocumentPage routePath="/microbit" />
+<ContentLayout
+	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
+	description={page.seo?.description ?? heroLead}
+	canonical={canonical}
+	image={heroImage}
+>
+	<section class="mb-hero">
+		{heroImage && (
+			<img class="mb-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+		)}
+		<div class="mb-hero__scrim"></div>
+		<div class="mb-hero__content shell">
+			<h1 class="mb-hero__title">{heroTitle}</h1>
+			<p class="mb-hero__lead">{heroLead}</p>
+			<div class="mb-hero__actions">
+				<a class="mb-hero__pill mb-hero__pill--primary" href="#tutorials">Tutorials</a>
+				<a class="mb-hero__pill" href="/individuals">Individuals</a>
+				<a class="mb-hero__pill" href="/professionals">Professionals</a>
+				<a class="mb-hero__pill" href="/schools">Schools</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="mb-intro">
+		<div class="shell mb-intro__grid">
+			<div>
+				<h2 class="mb-intro__heading">Getting started with the micro:bit Tinker Kit</h2>
+				<p>
+					Tinkercademy is proud to present our very own Micro:bit Tinker Kit. Made in Singapore!
+					The kit is designed to get you tinkering with the BBC micro:bit straight out of the box,
+					and each one comes with a set of components ready for every tutorial on this page.
+				</p>
+				<p>
+					Follow the graphical guide to get started on using the Breakout Board, and try out
+					the tutorials below.
+				</p>
+				<p>
+					We're proud to be a launch partner of the Infocomm Media Development Authority for the
+					launch of the
+					<a href="https://microbit.org/impact/foundation-reports/singapore/digital-maker-programme/" target="_blank" rel="noopener">Digital Maker Programme</a>
+					in Singapore.
+				</p>
+				<div class="mb-intro__actions">
+					<a class="mb-cta" href="https://gethacking.com/collections/microbit" target="_blank" rel="noopener">
+						Buy the micro:bit and kit
+					</a>
+					<a class="mb-cta mb-cta--secondary" href="/programmes/imda-microbit-2025">
+						Digital Making course
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mb-resources">
+		<div class="shell">
+			<h2 class="mb-resources__heading">Have a new micro:bit? Here's where you can get started:</h2>
+			<ul class="mb-resources__list">
+				<li><a href="http://microbit.org/" target="_blank" rel="noopener">microbit.org</a> — the home of the micro:bit, with guides and downloads.</li>
+				<li><a href="http://microbit.org/code" target="_blank" rel="noopener">microbit.org/code</a> — jump straight into the official editors.</li>
+				<li>Code with <a href="http://pxt.microbit.org/" target="_blank" rel="noopener">Microsoft MakeCode</a> — drag-and-drop blocks that translate to JavaScript.</li>
+				<li>Prefer JavaScript right away? <a href="http://microbit.org/en/2017-03-07-javascript-block-resources/" target="_blank" rel="noopener">check here</a> for resources.</li>
+				<li>Browse community projects on <a href="http://www.instructables.com/member/Digital%20Maker%20SG" target="_blank" rel="noopener">Instructables</a>.</li>
+				<li>Read more about the Digital Maker Programme <a href="https://microbit.org/impact/foundation-reports/singapore/digital-maker-programme/" target="_blank" rel="noopener">here</a>.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="mb-breakout">
+		<div class="shell">
+			<h3 class="mb-breakout__eyebrow">Introducing the micro:bit Breakout Board</h3>
+			<a class="mb-cta" href="https://gethacking.com/collections/microbit/breakout-board#filter-by" target="_blank" rel="noopener">
+				Buy the micro:bit Breakout Board
+			</a>
+		</div>
+	</section>
+
+	<section class="mb-tutorials" id="tutorials">
+		<div class="shell">
+			<h2 class="mb-tutorials__heading">Ready to tinker with your new micro:bit? Look through our micro:bit tutorials!</h2>
+
+			{featuredTutorials.length > 0 && (
+				<div class="mb-tutorials__grid">
+					{featuredTutorials.map((tut: any) => (
+						<a class="mb-tutorial-card" href={`/tutorials/${tut.slug}`}>
+							<div class="mb-tutorial-card__image">
+								{tut.heroImage ? (
+									<img src={tut.heroImage} alt={tut.title} loading="lazy" />
+								) : (
+									<div class="mb-tutorial-card__placeholder"></div>
+								)}
+							</div>
+							<div class="mb-tutorial-card__body">
+								<h3 class="mb-tutorial-card__title">{tut.title}</h3>
+								{tut.description && <p class="mb-tutorial-card__desc">{tut.description}</p>}
+							</div>
+						</a>
+					))}
+				</div>
+			)}
+
+			{otherTutorials.length > 0 && (
+				<>
+					<h3 class="mb-tutorials__subheading">More tutorials</h3>
+					<div class="mb-tutorials__grid">
+						{otherTutorials.map((tut: any) => (
+							<a class="mb-tutorial-card" href={`/tutorials/${tut.slug}`}>
+								<div class="mb-tutorial-card__image">
+									{tut.heroImage ? (
+										<img src={tut.heroImage} alt={tut.title} loading="lazy" />
+									) : (
+										<div class="mb-tutorial-card__placeholder"></div>
+									)}
+								</div>
+								<div class="mb-tutorial-card__body">
+									<h3 class="mb-tutorial-card__title">{tut.title}</h3>
+								</div>
+							</a>
+						))}
+					</div>
+				</>
+			)}
+		</div>
+	</section>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	.mb-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(380px, 52vh, 540px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.mb-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.mb-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.55) 100%);
+	}
+
+	.mb-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+		gap: 1rem;
+	}
+
+	.mb-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-weight: 500;
+		line-height: 1;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+	}
+
+	.mb-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1.05rem;
+		color: rgba(255, 255, 255, 0.92);
+		margin: 0;
+		max-width: 50ch;
+		line-height: 1.6;
+	}
+
+	.mb-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+	}
+
+	.mb-hero__pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		padding: 0 1.1rem;
+		border-radius: 999px;
+		background: rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.55);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+	}
+
+	.mb-hero__pill--primary {
+		background: rgb(240, 93, 87);
+		border-color: rgb(240, 93, 87);
+	}
+
+	.mb-intro {
+		padding: 3rem 0;
+	}
+
+	.mb-intro__grid {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.mb-intro__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1rem;
+	}
+
+	.mb-intro p {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.75;
+		color: rgb(51, 51, 51);
+		max-width: 68ch;
+		margin: 0 0 0.9rem;
+	}
+
+	.mb-intro a {
+		color: rgb(240, 93, 87);
+	}
+
+	.mb-intro__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	.mb-cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		padding: 0 1.1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff !important;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.mb-cta--secondary {
+		background: transparent;
+		border: 1px solid rgb(240, 93, 87);
+		color: rgb(240, 93, 87) !important;
+	}
+
+	.mb-cta:hover {
+		opacity: 0.88;
+	}
+
+	.mb-resources {
+		padding: 3rem 0;
+		background: #fafafa;
+	}
+
+	.mb-resources__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.4rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1rem;
+	}
+
+	.mb-resources__list {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.8;
+		color: rgb(51, 51, 51);
+		max-width: 70ch;
+		padding-left: 1.25rem;
+		margin: 0;
+	}
+
+	.mb-resources__list a {
+		color: rgb(240, 93, 87);
+	}
+
+	.mb-breakout {
+		padding: 2.5rem 0;
+	}
+
+	.mb-breakout__eyebrow {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.25rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 0 0 1rem;
+	}
+
+	.mb-tutorials {
+		padding: 3rem 0;
+		scroll-margin-top: 80px;
+	}
+
+	.mb-tutorials__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	.mb-tutorials__subheading {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.1rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(51, 51, 51);
+		margin: 2.5rem 0 1rem;
+		letter-spacing: 0.04em;
+	}
+
+	.mb-tutorials__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 18px;
+	}
+
+	@media (max-width: 1199px) {
+		.mb-tutorials__grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 899px) {
+		.mb-tutorials__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 499px) {
+		.mb-tutorials__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.mb-tutorial-card {
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 16px;
+		overflow: hidden;
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	}
+
+	.mb-tutorial-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
+		border-color: rgba(240, 93, 87, 0.3);
+	}
+
+	.mb-tutorial-card__image {
+		width: 100%;
+		aspect-ratio: 5 / 4;
+		overflow: hidden;
+		background: rgb(245, 245, 245);
+	}
+
+	.mb-tutorial-card__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.mb-tutorial-card__placeholder {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(240, 93, 87, 0.1), rgba(0, 153, 255, 0.07));
+	}
+
+	.mb-tutorial-card__body {
+		padding: 0.9rem 1rem 1.1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+
+	.mb-tutorial-card__title {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.98rem;
+		font-weight: 600;
+		line-height: 1.35;
+		color: rgb(30, 30, 30);
+		margin: 0;
+	}
+
+	.mb-tutorial-card:hover .mb-tutorial-card__title {
+		color: rgb(240, 93, 87);
+	}
+
+	.mb-tutorial-card__desc {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		line-height: 1.5;
+		color: rgb(117, 117, 117);
+		margin: 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>

@@ -1,5 +1,340 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * /infocomm-club — Astro-native rebuild of the Infocomm Club Courses page.
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+
+const page = getStaticPage('/infocomm-club');
+if (!page) return Astro.redirect('/404');
+
+const canonical = 'https://tinkercademy.com/infocomm-club';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle = page.hero_title ?? 'Infocomm Club Courses';
+
+const appleCourses = [
+	{
+		title: 'App Development — Prototype',
+		body: 'Apply Apple\'s design principles and create beautiful prototypes using Keynote.',
+		href: '/programmes/imda-apple-2025-a',
+	},
+	{
+		title: 'App Development — Basic',
+		body: 'Learn Swift & SwiftUI on iPad and build real apps, explore UI design, navigation, and more!',
+		href: '/programmes/imda-apple-2025-b',
+	},
+	{
+		title: 'App Development — Exploration',
+		body: 'Dive deep into AR, ML, and cutting-edge tech to build next-gen apps!',
+		href: '/programmes/imda-apple-2025-c',
+	},
+];
+
+const figmaCourses = [
+	{
+		title: 'UI/UX Design',
+		body: 'Learn design thinking and UI/UX tools. Create interactive prototypes! No coding experience needed!',
+		href: '/programmes/imda-figma-2025',
+	},
+];
+
+const signupLinks = [
+	{
+		label: 'Registration for MOE Primary Schools',
+		href: 'https://form.gov.sg/6704f86a5c3070b1b3c9c1b2',
+	},
+	{
+		label: 'Registration for MOE Secondary Schools / Junior College',
+		href: 'https://form.gov.sg/6704f97536fa07f9b3e3a283',
+	},
+];
 ---
 
-<DocumentPage routePath="/infocomm-club" />
+<ContentLayout
+	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
+	description={page.seo?.description ?? 'Infocomm Club training courses for MOE schools, fully funded by IMDA.'}
+	canonical={canonical}
+	image={heroImage}
+>
+	<section class="ic-hero">
+		{heroImage && (
+			<img class="ic-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+		)}
+		<div class="ic-hero__scrim"></div>
+		<div class="ic-hero__content shell">
+			<h1 class="ic-hero__title">{heroTitle}</h1>
+		</div>
+	</section>
+
+	<section class="ic-intro">
+		<div class="shell">
+			<p>
+				We've created training courses designed specifically for Infocomm Club students. These
+				courses are held during CCA hours at MOE schools. They help build fundamental skills
+				in topics across tech and media domains such as App Design, Development, and UI/UX.
+				Each MOE school receives support for up to two classes annually, where
+				<a
+					href="https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
+					target="_blank"
+					rel="noopener"
+				>
+					the training cost is fully funded by IMDA.
+				</a>
+			</p>
+			<p>
+				To find out more, speak to us at
+				<a href="mailto:hello@tinkercademy.com">hello@tinkercademy.com</a>. 🙋🏻‍♀️
+			</p>
+		</div>
+	</section>
+
+	<section class="ic-track ic-track--apple">
+		<div class="shell">
+			<h2 class="ic-track__heading">Apple: App Development</h2>
+			<div class="ic-track__grid">
+				{appleCourses.map((course) => (
+					<a class="ic-course-card" href={course.href}>
+						<h3 class="ic-course-card__title">{course.title}</h3>
+						<p class="ic-course-card__body">{course.body}</p>
+						<span class="ic-course-card__cta">Read more →</span>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="ic-track ic-track--figma">
+		<div class="shell">
+			<h2 class="ic-track__heading">Figma: UI/UX Design</h2>
+			<div class="ic-track__grid ic-track__grid--single">
+				{figmaCourses.map((course) => (
+					<a class="ic-course-card" href={course.href}>
+						<h3 class="ic-course-card__title">{course.title}</h3>
+						<p class="ic-course-card__body">{course.body}</p>
+						<span class="ic-course-card__cta">Read more →</span>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="ic-signup">
+		<div class="shell">
+			<h2 class="ic-signup__heading">Sign up today!</h2>
+			<div class="ic-signup__grid">
+				{signupLinks.map((link) => (
+					<a
+						class="ic-signup__card"
+						href={link.href}
+						target="_blank"
+						rel="noopener"
+					>
+						<span class="ic-signup__label">{link.label}</span>
+						<span class="ic-signup__arrow">→</span>
+					</a>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	.ic-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(320px, 40vh, 440px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.ic-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.ic-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+	}
+
+	.ic-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+	}
+
+	.ic-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 5vw, 3.4rem);
+		font-weight: 500;
+		line-height: 1;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+	}
+
+	.ic-intro {
+		padding: 3rem 0;
+	}
+
+	.ic-intro p {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.75;
+		color: rgb(51, 51, 51);
+		margin: 0 0 0.9rem;
+		max-width: 70ch;
+	}
+
+	.ic-intro a {
+		color: rgb(240, 93, 87);
+	}
+
+	.ic-track {
+		padding: 3rem 0;
+	}
+
+	.ic-track--apple {
+		background: #fafafa;
+	}
+
+	.ic-track__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	.ic-track__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.ic-track__grid--single {
+		grid-template-columns: minmax(0, 1fr);
+		max-width: 38rem;
+	}
+
+	@media (max-width: 899px) {
+		.ic-track__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.ic-course-card {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 1.5rem;
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 16px;
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	}
+
+	.ic-course-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+		border-color: rgba(240, 93, 87, 0.3);
+	}
+
+	.ic-course-card__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.2rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.ic-course-card__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+		margin: 0;
+		flex: 1;
+	}
+
+	.ic-course-card__cta {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: rgb(240, 93, 87);
+	}
+
+	.ic-signup {
+		padding: 3rem 0;
+		background: linear-gradient(135deg, #342c68 0%, #453881 100%);
+		color: #fff;
+	}
+
+	.ic-signup__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0 0 1.5rem;
+	}
+
+	.ic-signup__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	@media (max-width: 899px) {
+		.ic-signup__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.ic-signup__card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 1.25rem 1.5rem;
+		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.25);
+		border-radius: 14px;
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		transition: background 0.15s, border-color 0.15s;
+	}
+
+	.ic-signup__card:hover {
+		background: rgba(255, 255, 255, 0.12);
+		border-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.ic-signup__label {
+		font-size: 0.95rem;
+		font-weight: 500;
+	}
+
+	.ic-signup__arrow {
+		font-size: 1.2rem;
+		color: rgb(240, 93, 87);
+	}
+</style>

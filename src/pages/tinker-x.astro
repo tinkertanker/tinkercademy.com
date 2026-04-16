@@ -1,5 +1,609 @@
 ---
-import DocumentPage from '../components/DocumentPage.astro';
+/**
+ * /tinker-x — Astro-native rebuild of the Tinker X programme page.
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+import { getStaticPage } from '../lib/data.js';
+import { localiseFramerImage } from '../lib/media.js';
+
+const page = getStaticPage('/tinker-x');
+if (!page) return Astro.redirect('/404');
+
+const canonical = 'https://tinkercademy.com/tinker-x';
+
+const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroTitle = page.hero_title ?? 'Tinker X';
+const heroLead =
+	page.hero_lead ?? 'A flexible program for hands-on learning in coding and making.';
+
+const intro = [
+	'Welcome to Tinker X, an open-ended program for anyone interested in coding and engineering. Unlike a traditional classroom, we offer a flexible mix of hands-on instruction and independent work. We give you the resources and support to learn at your own pace, whether you\'re following a structured curriculum or bringing your own project to life.',
+	'AI is already disrupting traditional education, moving it away from a rigid, one-size-fits-all model toward a more personalized and efficient system. We\'ve embraced this change. Our program uses a flipped classroom approach where you actively engage with materials on your own, applying a "just-in-time" learning approach. This means you focus on learning the skills you need to complete a project you\'re excited about.',
+	'This process is designed to be challenging and, at times, frustrating—and that\'s by design. By learning to push through obstacles and solve problems on your own, you\'ll develop grit, critical thinking, and initiative — skills that are essential for a future where technology is constantly changing.',
+];
+
+const pillars = [
+	{
+		title: 'Extensive Materials',
+		body:
+			'We offer a wide range of course materials for all skill levels and interests, from introductory coding to data science and AI. Our curriculum has been used with thousands of students, and we also curate high-quality online content to fit your needs.',
+	},
+	{
+		title: 'Maker Library',
+		body:
+			'Don\'t have the space (or you\'re just too sensible) to put a laser cutter at home? No problem. We have the equipment you need to make and tinker: electronics modules, laser cutter, 3D printer, soldering station, miter saw, and much more — plus a kit and robot library.',
+	},
+	{
+		title: 'Community',
+		body:
+			'Learning on your own can get lonely. Joining a community of like-minded tinkerers is inspirational and motivational — people who just want to see what happens when you connect this to that and spend hours tinkering with code and electronics.',
+	},
+];
+
+const faqs = [
+	{
+		question: 'Is there a curriculum?',
+		answer:
+			'Yes. We have a wide library of self-paced course materials, and we\'ll guide you through what to take on based on your interests and skill level.',
+	},
+	{
+		question: 'What can I choose to learn?',
+		answer:
+			'Anything from introductory coding and web development, to data science, AI, game development, robotics, and physical computing with micro:bits, Arduinos, and more.',
+	},
+	{
+		question: 'Is this suitable for my child?',
+		answer:
+			'Tinker X works best for motivated learners who enjoy exploring. Younger learners who can work independently for an hour or so at a time tend to get the most out of it.',
+	},
+	{
+		question: 'Am I too old for your program?',
+		answer:
+			'No. We have members of all ages — adults, professionals, hobbyists, and retirees who just want to tinker with technology.',
+	},
+	{
+		question: 'Why should I go for this over a traditional enrichment centre?',
+		answer:
+			'Traditional enrichment teaches to a fixed syllabus. Tinker X teaches you to learn — giving you the resources, mentors, and space to build what you care about.',
+	},
+];
+
+const pricingTiers = [
+	{
+		name: 'Trial Session',
+		cadence: 'New to us',
+		price: '$0',
+		currency: 'SGD',
+		perks: ['New here? Try us out!', 'Write in to us for details'],
+		ctaLabel: 'Get Started',
+		ctaUrl: '/contact-us',
+		highlight: false,
+	},
+	{
+		name: 'Single Session',
+		cadence: 'Weekly',
+		price: '$50',
+		currency: 'SGD',
+		perks: ['Full access for one day', 'Great for small projects'],
+		ctaLabel: 'Get Started',
+		ctaUrl:
+			'https://app.acuityscheduling.com/schedule/b7469ae8/category/Tinker%2520X%2520Single%2520Sessions/appointment/9896622/calendar/2925143',
+		highlight: false,
+	},
+	{
+		name: '4 Sessions',
+		cadence: 'Monthly',
+		price: '$180',
+		currency: 'SGD',
+		perks: ['Save $20!', '120-day validity'],
+		ctaLabel: 'Get Started',
+		ctaUrl: 'https://app.acuityscheduling.com/catalog/b7469ae8?categories=Packages',
+		highlight: true,
+	},
+	{
+		name: '12 Sessions',
+		cadence: 'Quarterly',
+		price: '$480',
+		currency: 'SGD',
+		perks: ['Save $120!!', '180-day validity'],
+		ctaLabel: 'Get Started',
+		ctaUrl: 'https://app.acuityscheduling.com/catalog/b7469ae8?categories=Packages',
+		highlight: false,
+	},
+];
 ---
 
-<DocumentPage routePath="/tinker-x" />
+<ContentLayout
+	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
+	description={page.seo?.description ?? heroLead}
+	canonical={canonical}
+	image={heroImage}
+>
+	<section class="tx-hero">
+		{heroImage && (
+			<img class="tx-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+		)}
+		<div class="tx-hero__scrim"></div>
+		<div class="tx-hero__content shell">
+			<p class="tx-hero__eyebrow">An open-ended tinkering programme</p>
+			<h1 class="tx-hero__title">{heroTitle}</h1>
+			<p class="tx-hero__lead">{heroLead}</p>
+		</div>
+	</section>
+
+	<section class="tx-intro">
+		<div class="shell">
+			{intro.map((para) => <p>{para}</p>)}
+		</div>
+	</section>
+
+	<section class="tx-pillars">
+		<div class="shell">
+			<div class="tx-pillars__grid">
+				{pillars.map((p) => (
+					<article class="tx-pillar">
+						<h3 class="tx-pillar__title">{p.title}</h3>
+						<p class="tx-pillar__body">{p.body}</p>
+					</article>
+				))}
+			</div>
+			<p class="tx-pillars__blog">
+				Read more project updates on our
+				<a href="https://ghost.tk.sg/" target="_blank" rel="noopener">blog</a>.
+			</p>
+		</div>
+	</section>
+
+	<section class="tx-faq">
+		<div class="shell">
+			<h2 class="tx-faq__heading">Frequently Asked Questions</h2>
+			<div class="tx-faq__list">
+				{faqs.map((faq) => (
+					<details class="tx-faq__item">
+						<summary class="tx-faq__question">{faq.question}</summary>
+						<p class="tx-faq__answer">{faq.answer}</p>
+					</details>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="tx-pricing">
+		<div class="shell">
+			<h2 class="tx-pricing__heading">
+				Try a free trial session, then pick the package that fits.
+			</h2>
+			<p class="tx-pricing__sub">
+				Try a free trial session and see what we're all about! After that, you can continue with
+				individual sessions, or sign up for a package for additional savings.
+			</p>
+			<div class="tx-pricing__grid">
+				{pricingTiers.map((tier) => (
+					<article class:list={['tx-tier', tier.highlight && 'tx-tier--highlight']}>
+						<h3 class="tx-tier__name">{tier.name}</h3>
+						<p class="tx-tier__cadence">{tier.cadence}</p>
+						<p class="tx-tier__price">
+							<span class="tx-tier__amount">{tier.price}</span>
+							<span class="tx-tier__currency">{tier.currency}</span>
+						</p>
+						<ul class="tx-tier__perks">
+							{tier.perks.map((perk) => (
+								<li>{perk}</li>
+							))}
+						</ul>
+						<a
+							class="tx-tier__cta"
+							href={tier.ctaUrl}
+							target={tier.ctaUrl.startsWith('http') ? '_blank' : undefined}
+							rel={tier.ctaUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+						>
+							{tier.ctaLabel}
+						</a>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="tx-scholars">
+		<div class="shell tx-scholars__inner">
+			<h2 class="tx-scholars__title">Tinker X Scholars</h2>
+			<p class="tx-scholars__lead">
+				A scholarship opportunity for students who demonstrate a passion for technology.
+			</p>
+			<p>
+				Technology education is often treated as an enrichment activity, which can create
+				inequality in who has access to it. To help make technology education more equitable
+				and accessible, we are offering Tinker X scholarships for students.
+			</p>
+			<p>
+				These scholarships provide highly subsidized membership to students who are passionate
+				about technology but lack access to expert mentors, guidance, or tools.
+			</p>
+			<p>
+				To be considered, students should submit a portfolio of their previous tech-related
+				work. We're not looking for perfect results, but rather a clear demonstration of effort
+				and passion. Applicants must also show a need for financial assistance.
+			</p>
+			<p>
+				In return, Tinker X scholars will be expected to give back to the community, helping to
+				inspire the next generation of learners.
+			</p>
+			<p>
+				If you or someone you know might be a good fit, please contact us at
+				<a href="mailto:hello@tinkercademy.com">hello@tinkercademy.com</a>
+				to learn more or to apply. We are accepting applications now.
+			</p>
+		</div>
+	</section>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	.tx-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(420px, 56vh, 580px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.tx-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.tx-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.65) 100%);
+	}
+
+	.tx-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+		gap: 0.75rem;
+	}
+
+	.tx-hero__eyebrow {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.82rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0;
+	}
+
+	.tx-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2.4rem, 6vw, 4.5rem);
+		font-weight: 500;
+		line-height: 1;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+	}
+
+	.tx-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(1rem, 1.4vw, 1.15rem);
+		color: rgba(255, 255, 255, 0.92);
+		margin: 0;
+		max-width: 56ch;
+		line-height: 1.6;
+	}
+
+	.tx-intro {
+		padding: 3rem 0;
+	}
+
+	.tx-intro p {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.75;
+		color: rgb(51, 51, 51);
+		margin: 0 0 1rem;
+		max-width: 70ch;
+	}
+
+	.tx-pillars {
+		padding: 3rem 0;
+		background: #fafafa;
+	}
+
+	.tx-pillars__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.tx-pillar {
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		padding: 1.75rem;
+	}
+
+	.tx-pillar__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.25rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+	}
+
+	.tx-pillar__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+		margin: 0;
+	}
+
+	.tx-pillars__blog {
+		margin: 2rem 0 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		color: rgb(110, 110, 110);
+	}
+
+	.tx-pillars__blog a {
+		color: rgb(240, 93, 87);
+	}
+
+	@media (max-width: 899px) {
+		.tx-pillars__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.tx-faq {
+		padding: 3rem 0;
+	}
+
+	.tx-faq__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	.tx-faq__list {
+		display: grid;
+		gap: 0.75rem;
+		max-width: 70rem;
+	}
+
+	.tx-faq__item {
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 12px;
+		background: #fff;
+		overflow: hidden;
+	}
+
+	.tx-faq__question {
+		list-style: none;
+		padding: 1.1rem 1.25rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		cursor: pointer;
+		position: relative;
+	}
+
+	.tx-faq__question::marker,
+	.tx-faq__question::-webkit-details-marker {
+		display: none;
+	}
+
+	.tx-faq__question::after {
+		content: '+';
+		position: absolute;
+		right: 1.25rem;
+		top: 50%;
+		transform: translateY(-50%);
+		color: rgb(240, 93, 87);
+		font-size: 1.2rem;
+	}
+
+	.tx-faq__item[open] .tx-faq__question::after {
+		content: '–';
+	}
+
+	.tx-faq__answer {
+		margin: 0;
+		padding: 0 1.25rem 1.1rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.65;
+		color: rgb(51, 51, 51);
+	}
+
+	.tx-pricing {
+		padding: 3rem 0;
+		background: #fafafa;
+	}
+
+	.tx-pricing__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.75rem;
+	}
+
+	.tx-pricing__sub {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		color: rgb(110, 110, 110);
+		margin: 0 0 1.75rem;
+		max-width: 62ch;
+	}
+
+	.tx-pricing__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	@media (max-width: 1199px) {
+		.tx-pricing__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 599px) {
+		.tx-pricing__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.tx-tier {
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		padding: 1.5rem 1.35rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+
+	.tx-tier--highlight {
+		border-color: rgb(240, 93, 87);
+		box-shadow: 0 18px 36px rgba(240, 93, 87, 0.12);
+	}
+
+	.tx-tier__name {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.25rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.tx-tier__cadence {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.72rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: rgb(117, 117, 117);
+		margin: 0;
+	}
+
+	.tx-tier__price {
+		display: flex;
+		align-items: baseline;
+		gap: 0.35rem;
+		margin: 0.5rem 0 0;
+	}
+
+	.tx-tier__amount {
+		font-family: 'Oswald', sans-serif;
+		font-size: 2.2rem;
+		font-weight: 600;
+		color: rgb(240, 93, 87);
+	}
+
+	.tx-tier__currency {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		color: rgb(117, 117, 117);
+	}
+
+	.tx-tier__perks {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.35rem;
+	}
+
+	.tx-tier__perks li {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		color: rgb(51, 51, 51);
+		padding-left: 1.1rem;
+		position: relative;
+	}
+
+	.tx-tier__perks li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: rgb(240, 93, 87);
+	}
+
+	.tx-tier__cta {
+		margin-top: auto;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		padding: 0 1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		font-weight: 500;
+	}
+
+	.tx-tier__cta:hover {
+		opacity: 0.88;
+	}
+
+	.tx-scholars {
+		padding: 3rem 0;
+	}
+
+	.tx-scholars__inner {
+		max-width: 62rem;
+	}
+
+	.tx-scholars__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 0.5rem;
+	}
+
+	.tx-scholars__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1.05rem;
+		line-height: 1.55;
+		color: rgb(110, 110, 110);
+		margin: 0 0 1.5rem;
+	}
+
+	.tx-scholars p {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.75;
+		color: rgb(51, 51, 51);
+		margin: 0 0 0.9rem;
+	}
+
+	.tx-scholars a {
+		color: rgb(240, 93, 87);
+	}
+</style>
