@@ -68,10 +68,11 @@ const certLogosRow2 = [
 
 /* ── Partner marks (circular row on live) ── */
 const partnerLogos = [
-	'/images/remote/HEWUMM0ts0EHYszokOs3GXdUE.png',
-	'/images/remote/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png',
-	'/images/remote/WswqYSt0BjIpB4AvjMlsljQ0JM.png',
+	'/images/remote/ccAm2I4TKCuYyi1NVJdIrvzAw.png',
+	'/images/remote/Rl2dNu7CjKUj50GoHP4FX8cpA.png',
+	'/images/remote/icLJqUI2otyj00sfJ4Dvlfxbo.webp',
 	'/images/remote/e9nhVfo3kswRF62Egzbbh8L8I8A.png',
+	'/images/remote/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png',
 ];
 const partnerLogosMarquee = [...partnerLogos, ...partnerLogos];
 
@@ -166,17 +167,10 @@ const heroTitleHtml = heroTitle.replace(
 	<section class="about-certs">
 		<div class="shell">
 			<h2 class="about-certs__heading">We are certified</h2>
-			<div class="about-certs__rows">
-				<div class="about-certs__row about-certs__row--primary">
-					{certLogosRow1.map((src) => (
-						<img class="about-certs__logo about-certs__logo--lg" src={src} alt="" loading="lazy" />
-					))}
-				</div>
-				<div class="about-certs__row about-certs__row--secondary">
-					{certLogosRow2.map((src) => (
-						<img class="about-certs__logo about-certs__logo--sm about-certs__logo--apple" src={src} alt="" loading="lazy" />
-					))}
-				</div>
+			<div class="about-certs__row">
+				{[...certLogosRow1, ...certLogosRow2].map((src) => (
+					<img class="about-certs__logo" src={src} alt="" loading="lazy" />
+				))}
 			</div>
 		</div>
 	</section>
@@ -190,7 +184,7 @@ const heroTitleHtml = heroTitle.replace(
 				<div class="about-logo-track about-logo-track--partners">
 					{partnerLogosMarquee.map((src, idx) => (
 						<div class="about-partners__disc">
-							<img class="about-partners__logo" src={src} alt={idx < partnerLogos.length ? 'Partner logo' : ''} aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} loading="lazy" />
+							<img class="about-partners__logo" src={src} alt={idx < partnerLogos.length ? 'Partner logo' : ''} aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} />
 						</div>
 					))}
 				</div>
@@ -206,7 +200,7 @@ const heroTitleHtml = heroTitle.replace(
 			<div class="about-logo-marquee about-logo-marquee--clients">
 				<div class="about-logo-track about-logo-track--clients">
 					{clientLogosMarquee.map((src, idx) => (
-						<img class="about-clients__logo" src={src} alt={idx < clientLogos.length ? 'Client logo' : ''} aria-hidden={idx >= clientLogos.length ? 'true' : undefined} loading="lazy" />
+						<img class="about-clients__logo" src={src} alt={idx < clientLogos.length ? 'Client logo' : ''} aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
 					))}
 				</div>
 			</div>
@@ -396,47 +390,24 @@ const heroTitleHtml = heroTitle.replace(
 		letter-spacing: 0.04em;
 	}
 
-	.about-certs__rows {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
-
 	.about-certs__row {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: clamp(1.25rem, 3vw, 2.5rem);
+		gap: clamp(1rem, 2.5vw, 2rem);
 	}
 
 	.about-certs__logo {
-		width: auto;
+		width: clamp(96px, 11vw, 150px);
+		height: clamp(64px, 7vw, 96px);
 		object-fit: contain;
 	}
 
-	.about-certs__logo--lg {
-		height: clamp(96px, 10vw, 148px);
-	}
-
-	.about-certs__logo--sm {
-		height: clamp(24px, 2.4vw, 31px);
-	}
-
-	.about-certs__logo--apple {
-		/* Match live rendering for the current framer assets. */
-		mix-blend-mode: screen;
-		opacity: 0.95;
-	}
-
 	@media (max-width: 809px) {
-		.about-certs__logo--lg {
-			height: 44px;
-		}
-
-		.about-certs__logo--sm {
-			height: 36px;
+		.about-certs__logo {
+			width: 96px;
+			height: 56px;
 		}
 	}
 

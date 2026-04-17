@@ -26,20 +26,40 @@ const intro = [
 const pillars = [
 	{
 		title: 'Extensive Materials',
+		icon: '/images/remote/FpohkStZvk0gR2Nq3kguZF36w4.png',
 		body:
 			'We offer a wide range of course materials for all skill levels and interests, from introductory coding to data science and AI. Our curriculum has been used with thousands of students, and we also curate high-quality online content to fit your needs.',
 	},
 	{
 		title: 'Maker Library',
+		icon: '/images/remote/aEj0OcmEq9r7bC2Tt5G9mAwFQ.png',
 		body:
 			'Don\'t have the space (or you\'re just too sensible) to put a laser cutter at home? No problem. We have the equipment you need to make and tinker: electronics modules, laser cutter, 3D printer, soldering station, miter saw, and much more — plus a kit and robot library.',
 	},
 	{
 		title: 'Community',
+		icon: '/images/remote/hmHMpidMcuxsdcTJFmNEZb8CY.png',
 		body:
 			'Learning on your own can get lonely. Joining a community of like-minded tinkerers is inspirational and motivational — people who just want to see what happens when you connect this to that and spend hours tinkering with code and electronics.',
 	},
 ];
+
+const studentWorks = [
+	'/images/remote/aDMlAfr1wDRgD0kYOnqRfrsYPWA.jpg',
+	'/images/remote/9NO4kHaPZA5ZVeKMmeHbbqHY.jpg',
+	'/images/remote/rvcP8r6eJeXlJJospq0hlIC8kb4.jpg',
+	'/images/remote/7cRxG8FAtvLFi4k7hPB4h4sNtQ.jpg',
+	'/images/remote/SJRBZb9o5rRON6eqDxyAND8PME.jpg',
+	'/images/remote/hzbnpzSMsraQyambZtZiJlTgT4.jpg',
+	'/images/remote/Oaxksci0HVWffjcZeHoMeLqQm5o.jpg',
+	'/images/remote/5MEzqXIGdWHTEKNjM6MMNimMU8.jpg',
+	'/images/remote/JYaZeJHT5IIylCsQBHRPvZ62E3Q.jpg',
+	'/images/remote/3giBkE2iEVEPlhpuuIvcBqFDw.jpg',
+	'/images/remote/kdn7iQjSIDerFNsu6vJ1UWSV8.jpg',
+	'/images/remote/FMIpMq9ppOwe5S3iYTbjC5fhfs.jpg',
+];
+
+const scholarsImage = '/images/remote/Lr9F4nS0jKHbnDjx2xFbejNdIts.png';
 
 const faqs = [
 	{
@@ -143,6 +163,7 @@ const pricingTiers = [
 			<div class="tx-pillars__grid">
 				{pillars.map((p) => (
 					<article class="tx-pillar">
+						<img class="tx-pillar__icon" src={p.icon} alt="" loading="lazy" />
 						<h3 class="tx-pillar__title">{p.title}</h3>
 						<p class="tx-pillar__body">{p.body}</p>
 					</article>
@@ -152,6 +173,18 @@ const pricingTiers = [
 				Read more project updates on our
 				<a href="https://ghost.tk.sg/" target="_blank" rel="noopener">blog</a>.
 			</p>
+		</div>
+	</section>
+
+	<section class="tx-gallery">
+		<div class="shell">
+			<div class="tx-gallery__grid">
+				{studentWorks.map((src) => (
+					<div class="tx-gallery__tile">
+						<img src={src} alt="" loading="lazy" />
+					</div>
+				))}
+			</div>
 		</div>
 	</section>
 
@@ -208,6 +241,7 @@ const pricingTiers = [
 
 	<section class="tx-scholars">
 		<div class="shell tx-scholars__inner">
+			<img class="tx-scholars__image" src={scholarsImage} alt="Tinker X Scholars" loading="lazy" />
 			<h2 class="tx-scholars__title">Tinker X Scholars</h2>
 			<p class="tx-scholars__lead">
 				A scholarship opportunity for students who demonstrate a passion for technology.
@@ -333,6 +367,58 @@ const pricingTiers = [
 		border: 1px solid rgb(229, 229, 229);
 		border-radius: 18px;
 		padding: 1.75rem;
+	}
+
+	.tx-pillar__icon {
+		width: clamp(96px, 10vw, 160px);
+		height: clamp(96px, 10vw, 160px);
+		object-fit: contain;
+		margin: 0 0 1rem;
+		display: block;
+	}
+
+	.tx-gallery {
+		padding: 3rem 0;
+	}
+
+	.tx-gallery__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	@media (max-width: 1199px) {
+		.tx-gallery__grid {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 699px) {
+		.tx-gallery__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	.tx-gallery__tile {
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+		border-radius: 14px;
+		background: rgb(245, 245, 245);
+	}
+
+	.tx-gallery__tile img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.tx-scholars__image {
+		width: clamp(160px, 20vw, 260px);
+		height: auto;
+		border-radius: 18px;
+		margin: 0 0 1.5rem;
+		display: block;
 	}
 
 	.tx-pillar__title {

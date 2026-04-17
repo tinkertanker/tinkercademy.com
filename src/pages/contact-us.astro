@@ -39,6 +39,18 @@ const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 		</div>
 	</section>
 
+	<section class="contact-form">
+		<div class="shell">
+			<iframe
+				class="contact-form__iframe"
+				src="https://form.jotform.com/251391353870054"
+				title="Contact Tinkercademy"
+				loading="lazy"
+				allow="geolocation; microphone; camera; fullscreen"
+			></iframe>
+		</div>
+	</section>
+
 	<section class="contact-details">
 		<div class="shell contact-details__grid">
 			<article class="contact-panel">
@@ -49,7 +61,8 @@ const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 					The entrance is around the building. Take the lift to the 4th floor and turn
 					right once you arrive.
 				</p>
-				<div class="contact-panel__media">
+				<div class="contact-panel__media contact-panel__media--stacked">
+					<img src="/images/remote/Y5ckhN7Nwo504xYtcd1f4y6Wy78.png" alt="Entrance directions overview" loading="lazy" />
 					<img src="/images/remote/ruSDPHaMjLP5DCdMnqVrqSp0Fs.png" alt="Entrance directions" loading="lazy" />
 					<img src="/images/remote/b0uc8kk9c3m8176vXRgsJwEWk.png" alt="Building entrance" loading="lazy" />
 				</div>
@@ -201,6 +214,24 @@ const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 	.contact-panel__media--single {
 		grid-template-columns: minmax(0, 1fr);
 		max-width: 520px;
+	}
+
+	.contact-panel__media--stacked {
+		grid-template-columns: minmax(0, 1fr);
+		max-width: 620px;
+	}
+
+	.contact-form {
+		padding: 0 0 3rem;
+	}
+
+	.contact-form__iframe {
+		width: 100%;
+		min-height: 1200px;
+		border: 0;
+		border-radius: 20px;
+		background: #fff;
+		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.05);
 	}
 
 	.contact-panel__media img,

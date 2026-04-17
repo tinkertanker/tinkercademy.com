@@ -31,11 +31,13 @@ const programmeTypes = [
 		title: 'micro:bit',
 		body: 'Work through our micro:bit Tinker Kit and Breakout Board tutorials, plus our foundational getting-started material. Perfect for learners who want to start tinkering with hardware.',
 		url: '/microbit',
+		image: '/images/remote/umn5KF0HteARaEOItuxLHewrjRQ.jpg',
 	},
 	{
 		title: 'Tinker X',
 		body: 'A flexible, self-paced membership for anyone interested in coding and making. Work through materials, use our maker library, and join a community of like-minded tinkerers.',
 		url: '/tinker-x',
+		image: '/images/remote/e8qODzEAGqxKkJJiltvK1Wq2U.jpg',
 	},
 ];
 
@@ -79,6 +81,9 @@ const publicProgrammes = site.programmes
 			<div class="ind-types__grid">
 				{programmeTypes.map((t) => (
 					<a class="ind-type" href={t.url}>
+						<div class="ind-type__media">
+							<img src={t.image} alt={t.title} loading="lazy" />
+						</div>
 						<h3 class="ind-type__title">{t.title}</h3>
 						<p class="ind-type__body">{t.body}</p>
 						<span class="ind-type__cta">Learn more →</span>
@@ -212,6 +217,22 @@ const publicProgrammes = site.programmes
 		transform: translateY(-3px);
 		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
 		border-color: rgba(240, 93, 87, 0.3);
+	}
+
+	.ind-type__media {
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+		border-radius: 12px;
+		background: #fff;
+		margin: 0 0 0.5rem;
+	}
+
+	.ind-type__media img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
 	}
 
 	.ind-type__title {

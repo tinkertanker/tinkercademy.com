@@ -33,12 +33,14 @@ const features = [
 		body: 'Established as one of the earliest Code for Fun initiators under the Code@SG scheme, we\'ve been providing an array of courses covering micro:bit, Scratch, AI, and more to primary, secondary, and junior college students — with fully subsidised training for up to 2 cohorts per school.',
 		url: 'https://codeforfun.sg/',
 		label: 'Read More',
+		image: '/images/remote/1wk1e4xWVOzslZgdjkNsnHjM4U.gif',
 	},
 	{
 		title: 'Infocomm Learning Roadmap',
 		body: 'In collaboration with IMDA, our industry associates, and educational partners, we provide technology learning programs that meet the IMDA Infocomm Clubs LEARN Roadmap across MOE schools.',
 		url: 'https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps',
 		label: 'LEARN Roadmap',
+		image: '/images/remote/Hfw73sT4HNcG62eus6jF8SUxldM.gif',
 	},
 ];
 
@@ -91,6 +93,7 @@ const cards = (page.course_cards ?? []).map((card: any) => {
 		<div class="shell sch-features__grid">
 			{features.map((feat) => (
 				<article class="sch-feature">
+					<img class="sch-feature__image" src={feat.image} alt={feat.title} loading="lazy" />
 					<h3 class="sch-feature__title">{feat.title}</h3>
 					<p class="sch-feature__body">{feat.body}</p>
 					<a class="sch-feature__cta" href={feat.url} target="_blank" rel="noopener">
@@ -230,6 +233,15 @@ const cards = (page.course_cards ?? []).map((card: any) => {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+	}
+
+	.sch-feature__image {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		object-fit: cover;
+		border-radius: 12px;
+		background: #fff;
+		display: block;
 	}
 
 	.sch-feature__title {

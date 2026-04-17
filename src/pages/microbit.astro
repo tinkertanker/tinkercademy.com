@@ -116,6 +116,15 @@ const otherTutorials = (site.tutorials ?? [])
 	<section class="mb-breakout">
 		<div class="shell">
 			<h3 class="mb-breakout__eyebrow">Introducing the micro:bit Breakout Board</h3>
+			<div class="mb-breakout__video">
+				<iframe
+					src="https://www.youtube.com/embed/bzm4zepbGAc"
+					title="Introducing the micro:bit Breakout Board"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+					loading="lazy"
+				></iframe>
+			</div>
 			<a class="mb-cta" href="https://gethacking.com/collections/microbit/breakout-board#filter-by" target="_blank" rel="noopener">
 				Buy the micro:bit Breakout Board
 			</a>
@@ -353,6 +362,24 @@ const otherTutorials = (site.tutorials ?? [])
 		font-weight: 500;
 		text-transform: uppercase;
 		margin: 0 0 1rem;
+	}
+
+	.mb-breakout__video {
+		position: relative;
+		width: min(100%, 56rem);
+		aspect-ratio: 16 / 9;
+		margin: 0 0 1.5rem;
+		border-radius: 18px;
+		overflow: hidden;
+		background: #0a0a0a;
+	}
+
+	.mb-breakout__video iframe {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
 	}
 
 	.mb-tutorials {

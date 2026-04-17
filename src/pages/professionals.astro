@@ -30,15 +30,15 @@ const heroLead = page.hero_lead ?? 'Real skills for real impact.';
 const valueProps = [
 	{
 		title: 'Customised Tech Upskilling',
-		body: 'Your business goals are unique. So is our training. We design learning experiences that are tailored to your industry, your team, and your outcomes — from short sprints to multi-module certificates.',
+		body: 'Your business goals are unique. So is our training. We design learning experiences (GenAI, vibe coding, tech training) precisely for your team and your objectives in Singapore. They get the skills to make a real impact.',
 	},
 	{
-		title: 'Expert Trainers',
-		body: 'Your team will be guided by experts from Ivy-league universities and leading tech companies, with decades of combined classroom and industry experience.',
+		title: 'Expert Instructors',
+		body: 'Your team will be guided by experts from Ivy-league universities and leading tech companies. They bring powerful insights to inspire innovation within your office.',
 	},
 	{
 		title: 'Track Record',
-		body: 'Singapore companies trust us. Consistently rated 5 stars. Client partnerships over multiple years and hundreds of runs delivered across the region.',
+		body: 'Singapore companies trust us. Consistently rated 5 stars. Client partnerships over 8 years strong. We ensure learning turns into action, helping your team meet your business objectives.',
 	},
 ];
 
@@ -103,7 +103,6 @@ const cards = (page.course_cards ?? []).map((card: any) => {
 								src={logo.src}
 								alt={idx < partnersStrip.length ? logo.label : ''}
 								aria-hidden={idx >= partnersStrip.length ? 'true' : undefined}
-								loading="lazy"
 							/>
 						))}
 					</div>
@@ -138,7 +137,6 @@ const cards = (page.course_cards ?? []).map((card: any) => {
 								src={logo.src}
 								alt={idx < clientLogos.length ? logo.label : ''}
 								aria-hidden={idx >= clientLogos.length ? 'true' : undefined}
-								loading="lazy"
 							/>
 						))}
 					</div>

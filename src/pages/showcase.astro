@@ -18,42 +18,51 @@ const heroTitle =
 const heroLead =
 	'Meet the bright minds who\'ve learned, built, and grown with us, from classroom projects to professional success.';
 
+const studentPhotos = [
+	'/images/remote/VyH1UxmLf2vV96I5UpoW6fdCIX4.png',
+	'/images/remote/LjzcGlcbBy47m6VWBhXgwT53kG8.png',
+	'/images/remote/C6YM21KXpchozSKz1Z1KKRMGD0.png',
+	'/images/remote/iQDC66gJozrvjzr4rpnG0Epl1s.png',
+];
+
+const jiaChenImage = '/images/remote/yYM9MCFxtou9IT7a8ENaXgPmUY.png';
+
 const internTestimonials = [
 	{
 		name: 'Raynold',
 		role: 'Software Development Intern, 2017',
 		quote:
-			'This internship was so much more than just a programming task. As the project owner, I went through all stages of product development — from idea generation and discussions with end users, to development, live demonstrations, troubleshooting and maintenance.',
+			'This internship was so much than just a programming task. As the project owner, I went through all stages of product development. From the idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance.',
 	},
 	{
 		name: 'Colin',
 		role: 'Machine Learning & Data Science Intern, 2017',
 		quote:
-			'Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide guidance when I needed it.',
+			'Being at Tinkertanker gave me the drive and motivation to push through the courses on a very tight schedule, thanks to the mentors who were there to provide not just answers, but the right questions and resources to find out myself.',
 	},
 	{
 		name: 'Joelle',
 		role: 'Computer Engineering Intern, 2017',
 		quote:
-			'I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind-boggling but I\'m glad everything turned out okay.',
+			'I am really happy to have worked on several projects that were put to life. It was a little nerve-wrecking and mind boggling but I\'m glad everything turned out okay. Through this experience, I have learnt how to appreciate and enjoy the building process apart from looking at the end product.',
 	},
 	{
 		name: 'Mark',
 		role: 'Teaching & Curriculum Design Intern, 2023',
 		quote:
-			'Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It\'s a great place to learn and to teach.',
+			'Due to the nature of Tinkertanker as a tech education company, it has a wealth of resources you can make use of to expand your technical knowledge. It\'s a different experience from the traditional software engineering job, and I appreciate its role in broadening my horizons.',
 	},
 	{
 		name: 'Enric',
 		role: 'Computer Science Intern, 2023',
 		quote:
-			'Interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages I had never touched before.',
+			'All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate.',
 	},
 	{
 		name: 'Yun Xuan',
 		role: 'Software Development Intern, 2024',
 		quote:
-			'All these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey.',
+			'Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible.',
 	},
 ];
 
@@ -85,22 +94,13 @@ const jiaChenQuote =
 				Our students have built some pretty cool things, ranging from apps to games to remote
 				controlled devices and beyond!
 			</p>
-		</div>
-	</section>
-
-	<section class="sc-spotlight">
-		<div class="shell sc-spotlight__inner">
-			<p class="sc-spotlight__eyebrow">Swift Accelerator Programme Trainer at Tinkertanker</p>
-			<h2 class="sc-spotlight__title">Meet Jia Chen</h2>
-			<p class="sc-spotlight__body">{jiaChenQuote}</p>
-			<p class="sc-spotlight__source">
-				As featured on Apple:
-				<a
-					href="https://www.apple.com/education/college-students/success-stories/yee/"
-					target="_blank"
-					rel="noopener"
-				>apple.com</a>
-			</p>
+			<div class="sc-students">
+				{studentPhotos.map((src) => (
+					<div class="sc-student-photo">
+						<img src={src} alt="" loading="lazy" />
+					</div>
+				))}
+			</div>
 		</div>
 	</section>
 
@@ -109,8 +109,8 @@ const jiaChenQuote =
 			<h2 class="sc-section__heading">Our Interns</h2>
 			<p class="sc-section__lead">
 				Through hands-on experience and mentorship, our interns work on real projects that shape
-				the future of education and technology. Here's what they have to say about their
-				experiences.
+				the future of education and technology. Here are what they have to say about their
+				experiences!
 			</p>
 
 			<div class="sc-interns">
@@ -126,6 +126,26 @@ const jiaChenQuote =
 					</article>
 				))}
 			</div>
+		</div>
+	</section>
+
+	<section class="sc-spotlight">
+		<div class="shell sc-spotlight__inner">
+			<figure class="sc-spotlight__figure">
+				<img src={jiaChenImage} alt="Jia Chen" loading="lazy" />
+				<figcaption>Image from apple.com</figcaption>
+			</figure>
+			<p class="sc-spotlight__eyebrow">Swift Accelerator Programme Trainer at Tinkertanker</p>
+			<h2 class="sc-spotlight__title">Meet Jia Chen</h2>
+			<p class="sc-spotlight__body">{jiaChenQuote}</p>
+			<p class="sc-spotlight__source">
+				As featured on Apple:
+				<a
+					href="https://www.apple.com/education/college-students/success-stories/yee/"
+					target="_blank"
+					rel="noopener"
+				>apple.com</a>
+			</p>
 		</div>
 	</section>
 
@@ -224,6 +244,52 @@ const jiaChenQuote =
 		color: rgb(110, 110, 110);
 		margin: 0 0 2rem;
 		max-width: 60rem;
+	}
+
+	.sc-students {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	@media (max-width: 899px) {
+		.sc-students {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	.sc-student-photo {
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+		border-radius: 14px;
+		background: rgb(245, 245, 245);
+	}
+
+	.sc-student-photo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.sc-spotlight__figure {
+		margin: 0 0 1.5rem;
+		max-width: 32rem;
+	}
+
+	.sc-spotlight__figure img {
+		width: 100%;
+		height: auto;
+		border-radius: 14px;
+		display: block;
+	}
+
+	.sc-spotlight__figure figcaption {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		color: rgba(255, 253, 248, 0.65);
+		margin-top: 0.5rem;
+		text-align: center;
 	}
 
 	.sc-spotlight {
