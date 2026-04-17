@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const FRAMER_IMAGE_URL_RE =
-	/https:\/\/framerusercontent\.com\/images\/([A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|gif|svg))(?:\?[^"'\\s<)]*)?/g;
+	/https:\/\/framerusercontent\.com\/images\/([A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|gif|svg))(?:\?[^"'\s<)]*)?/g;
 
 const REMOTE_IMAGE_DIR = resolve(process.cwd(), 'public/images/remote');
 const localAssetCache = new Map();
