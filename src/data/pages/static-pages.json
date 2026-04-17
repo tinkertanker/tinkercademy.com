@@ -849,8 +849,7 @@
       "Web Development"
     ],
     "proof_points": [
-      "Led by experts with qualifications and experience from world-class institutions.",
-      "Curriculum designed and delivered by officially certified instructors."
+      "Led by experts with qualifications and experience from world-class institutions."
     ],
     "flagship_items": [
       {
@@ -886,6 +885,11 @@
       {
         "label": "Our Projects",
         "url": "https://tinkercademy.com/showcase",
+        "type": "internal"
+      },
+      {
+        "label": "Contact Us",
+        "url": "https://tinkercademy.com/contact-us",
         "type": "internal"
       }
     ]
@@ -1968,9 +1972,9 @@
     "path": "/tinker-x",
     "slug": "tinker-x",
     "title": "Tinker X",
-    "description": "Tinker X Scholars",
+    "description": "A flexible program for hands-on learning in coding and making.",
     "hero_title": "Tinker X",
-    "hero_lead": "Tinker X Scholars",
+    "hero_lead": "A flexible program for hands-on learning in coding and making.",
     "hero_image": "https://framerusercontent.com/images/3cybNehmDehCXeBSMBiUWGpbgI.jpg?width=1000&height=667",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
@@ -3340,9 +3344,9 @@
   {
     "path": "/schools",
     "slug": "schools",
-    "title": "Code, Tinker,and Make with Us.",
+    "title": "Code, Tinker, and Make with Us.",
     "description": "Real skills for real impact.",
-    "hero_title": "Code, Tinker,and Make with Us.",
+    "hero_title": "Code, Tinker, and Make with Us.",
     "hero_lead": "Real skills for real impact.",
     "hero_image": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
     "seo": {
@@ -3541,7 +3545,7 @@
     "blocks": [
       {
         "tag": "h1",
-        "text": "Code, Tinker,and Make with Us."
+        "text": "Code, Tinker, and Make with Us."
       },
       {
         "tag": "h1",
@@ -5995,9 +5999,9 @@
   {
     "path": "/individuals",
     "slug": "individuals",
-    "title": "Self-directedLearning Opportunities",
+    "title": "Self-directed Learning Opportunities",
     "description": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses",
-    "hero_title": "Self-directedLearning Opportunities",
+    "hero_title": "Self-directed Learning Opportunities",
     "hero_lead": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses",
     "hero_image": "https://framerusercontent.com/images/6gctHPSd4luM1PjI9WIcmXL25k.jpg?width=7360&height=4912",
     "seo": {
@@ -6111,7 +6115,7 @@
     "blocks": [
       {
         "tag": "h1",
-        "text": "Self-directedLearning Opportunities"
+        "text": "Self-directed Learning Opportunities"
       },
       {
         "tag": "h1",
@@ -6165,7 +6169,7 @@
     "content": [
       {
         "type": "h1",
-        "text": "Self-directedLearning Opportunities"
+        "text": "Self-directed Learning Opportunities"
       },
       {
         "type": "h1",
