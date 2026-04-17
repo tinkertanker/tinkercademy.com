@@ -43,24 +43,24 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 
 <style>
 	.cta-banner {
-		padding: 0 0 3rem;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
+		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(0, 0, 0) 100%);
 	}
 
 	.cta-banner__inner {
-		max-width: 1160px;
-		margin: 0 auto;
-		padding: 2.5rem clamp(1.5rem, 4vw, 3rem);
-		border-radius: 16px;
-		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(0, 0, 0) 100%);
-		display: grid;
-		gap: 1.25rem;
+		padding: 2.75rem clamp(1.5rem, 4vw, 3rem);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		flex-wrap: wrap;
 	}
 
 	.cta-banner__text {
 		margin: 0;
 		max-width: 50rem;
+		flex: 1 1 32rem;
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
 		line-height: 1.7;
@@ -71,6 +71,7 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.6rem;
+		flex-shrink: 0;
 	}
 
 	.cta-pill {
@@ -95,8 +96,7 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 
 	@media (max-width: 809px) {
 		.cta-banner__inner {
-			margin: 0 0.75rem;
-			border-radius: 12px;
+			padding: 2rem 1.25rem;
 		}
 	}
 </style>
