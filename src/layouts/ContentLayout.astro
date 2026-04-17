@@ -230,6 +230,11 @@ const {
 		margin: 0 auto;
 	}
 
+	/* Site-wide: don't shout. Override scoped page styles that set uppercase. */
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: none !important;
+	}
+
 	/* ── Prose (used by sub-pages) ── */
 	.prose h1,
 	.prose h2,
@@ -237,7 +242,6 @@ const {
 	.prose h4 {
 		font-family: 'Oswald', sans-serif;
 		letter-spacing: 0.02em;
-		text-transform: uppercase;
 	}
 
 	.hero {
