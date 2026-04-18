@@ -16,9 +16,13 @@ interface Programme {
 	heroImage?: string | null;
 	audienceLabel?: string;
 	audienceId?: string;
+	audienceIds?: string[];
+	domainIds?: string[];
+	platformIds?: string[];
 	duration?: string;
 	shortDescription?: string;
 	searchText?: string;
+	badgeHref?: string | null;
 }
 
 interface NavPill {
@@ -30,13 +34,30 @@ interface Props {
 	programmes: Programme[];
 	pageTitle?: string;
 	navPills?: NavPill[];
+	pagePath?: string;
+	filterLabels?: {
+		audience: Record<string, string>;
+		domain: Record<string, string>;
+		platform: Record<string, string>;
+	};
 }
 
-const { programmes, pageTitle = 'All Courses', navPills = [] } = Astro.props;
+const {
+	programmes,
+	pageTitle = 'All Courses',
+	navPills = [],
+	pagePath = '/courses-all',
+	filterLabels = { audience: {}, domain: {}, platform: {} },
+} = Astro.props;
 const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 ---
 
-<section class="course-listing">
+<section
+	class="course-listing"
+	data-course-listing
+	data-page-path={pagePath}
+	data-filter-labels={JSON.stringify(filterLabels)}
+>
 	<div class="shell">
 		{/* Heading + search bar */}
 		<div class="course-listing__header">
@@ -49,6 +70,11 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 			</label>
 		</div>
 
+		<div class="course-listing__filters" data-course-filters hidden>
+			<div class="course-listing__filter-list" data-course-filter-list></div>
+			<a class="course-listing__clear" href={pagePath} data-course-clear>Clear filters</a>
+		</div>
+
 		{/* Card grid */}
 		<div class="course-listing__grid" data-course-grid>
 			{programmes.map((prog) => (
@@ -58,9 +84,13 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 					heroImage={prog.heroImage}
 					audienceLabel={prog.audienceLabel}
 					audienceId={prog.audienceId}
+					audienceIds={prog.audienceIds}
+					domainIds={prog.domainIds}
+					platformIds={prog.platformIds}
 					duration={prog.duration}
 					shortDescription={prog.shortDescription}
 					searchText={prog.searchText}
+					badgeHref={prog.badgeHref}
 				/>
 			))}
 		</div>
@@ -133,6 +163,46 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		outline: none;
 	}
 
+	.course-listing__filters {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.course-listing__filter-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.course-listing__filter-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		padding: 0.45rem 0.8rem;
+		border-radius: 999px;
+		background: rgba(240, 93, 87, 0.1);
+		color: rgb(121, 49, 46);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		line-height: 1;
+	}
+
+	.course-listing__clear {
+		color: rgb(240, 93, 87);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.course-listing__clear:hover {
+		text-decoration: underline;
+	}
+
 	.course-listing__search input::placeholder {
 		color: rgb(117, 117, 117);
 	}
@@ -165,6 +235,10 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 	@media (max-width: 809px) {
 		.course-listing__grid {
 			grid-template-columns: repeat(1, minmax(200px, 1fr));
+		}
+
+		.course-listing__filters {
+			align-items: flex-start;
 		}
 	}
 
@@ -220,22 +294,99 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 </style>
 
 <script>
-	const grids = document.querySelectorAll('[data-course-grid]');
+	type FilterKey = 'audience' | 'domain' | 'platform';
+	type FilterLabels = Record<FilterKey, Record<string, string>>;
+	type ActiveFilters = Record<FilterKey, string | null>;
 
-	grids.forEach((grid) => {
-		const section = grid.closest('.course-listing');
+	const FILTER_KEYS: FilterKey[] = ['audience', 'domain', 'platform'];
+	const FILTER_TITLES = {
+		audience: 'Audience',
+		domain: 'Domain',
+		platform: 'Platform',
+	} satisfies Record<FilterKey, string>;
+
+	function getCardValues(card: Element, key: string) {
+		return (card.getAttribute(key) ?? '')
+			.split(' ')
+			.map((value: string) => value.trim())
+			.filter(Boolean);
+	}
+
+	function getValidFilters(search: string, labels: FilterLabels): ActiveFilters {
+		const params = new URLSearchParams(search);
+		const filter: ActiveFilters = {
+			audience: null,
+			domain: null,
+			platform: null,
+		};
+
+		for (const key of FILTER_KEYS) {
+			const value = params.get(key);
+			filter[key] = value && labels?.[key]?.[value] ? value : null;
+		}
+
+		return filter;
+	}
+
+	function matchesActiveFilters(card: Element, filters: ActiveFilters) {
+		if (filters.audience && !getCardValues(card, 'data-audiences').includes(filters.audience)) return false;
+		if (filters.domain && !getCardValues(card, 'data-domains').includes(filters.domain)) return false;
+		if (filters.platform && !getCardValues(card, 'data-platforms').includes(filters.platform)) return false;
+		return true;
+	}
+
+	const listings = document.querySelectorAll('[data-course-listing]');
+
+	listings.forEach((section) => {
+		const grid = section.querySelector('[data-course-grid]');
 		const input = section?.querySelector('[data-course-search]');
 		const emptyState = section?.querySelector('[data-course-empty]');
-		if (!(input instanceof HTMLInputElement) || !(emptyState instanceof HTMLElement)) return;
+		const filtersWrap = section?.querySelector('[data-course-filters]');
+		const filterList = section?.querySelector('[data-course-filter-list]');
+		const clearLink = section?.querySelector('[data-course-clear]');
+		if (
+			!(grid instanceof HTMLElement) ||
+			!(input instanceof HTMLInputElement) ||
+			!(emptyState instanceof HTMLElement) ||
+			!(filtersWrap instanceof HTMLElement) ||
+			!(filterList instanceof HTMLElement) ||
+			!(clearLink instanceof HTMLAnchorElement)
+		) {
+			section?.setAttribute('data-course-state', 'ready');
+			return;
+		}
 
 		const cards = [...grid.querySelectorAll('[data-programme-card]')];
+		const filterLabels = JSON.parse(
+			section.getAttribute('data-filter-labels') ?? '{}',
+		) as FilterLabels;
+		const activeFilters = getValidFilters(window.location.search, filterLabels);
+		const pagePath = section.getAttribute('data-page-path') ?? window.location.pathname;
+
+		clearLink.href = pagePath;
+
+		const filterEntries = FILTER_KEYS.flatMap((key) =>
+			activeFilters[key] ? ([[key, activeFilters[key]]] as const) : [],
+		);
+		if (filterEntries.length > 0) {
+			filterList.replaceChildren();
+			filterEntries.forEach(([key, value]) => {
+				const chip = document.createElement('span');
+				chip.className = 'course-listing__filter-chip';
+				chip.textContent = `${FILTER_TITLES[key]}: ${filterLabels[key][value]}`;
+				filterList.append(chip);
+			});
+			filtersWrap.hidden = false;
+		}
+
 		const render = () => {
 			const query = input.value.trim().toLowerCase();
 			let visibleCount = 0;
 
 			cards.forEach((card) => {
 				const haystack = (card.getAttribute('data-search') ?? '').toLowerCase();
-				const isVisible = query === '' || haystack.includes(query);
+				const matchesFilters = matchesActiveFilters(card, activeFilters);
+				const isVisible = matchesFilters && (query === '' || haystack.includes(query));
 				(card as HTMLElement).hidden = !isVisible;
 				if (isVisible) visibleCount += 1;
 			});

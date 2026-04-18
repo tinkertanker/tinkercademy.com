@@ -1,3 +1,10 @@
+/**
+ * Legacy crawl-to-data migration utility.
+ *
+ * Programme authoring now lives in `src/content/programmes/`. Keep this script
+ * for non-programme structured data and historical migration snapshots rather
+ * than as the canonical source for programme content.
+ */
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';

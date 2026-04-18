@@ -14,13 +14,17 @@
 import CtaBanner from '../components/CtaBanner.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getSiteData, getStaticPage } from '../lib/data.js';
+import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
+import {
+	buildProgrammeCardOverrides,
+	getProgrammesBySlugs,
+	toProgrammeCardData,
+} from '../lib/programmes.ts';
 
 const page = getStaticPage('/schools');
 if (!page) return Astro.redirect('/404');
 
-const site = getSiteData();
 const canonical = 'https://tinkercademy.com/schools';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
@@ -44,21 +48,11 @@ const features = [
 	},
 ];
 
-const programmeBySlug = new Map<string, any>(site.programmes.map((p: any) => [p.slug, p]));
-const cards = (page.course_cards ?? []).map((card: any) => {
-	const prog = programmeBySlug.get(card.slug);
-	const primaryAudience = prog?.audiences?.[0];
-	const cleanBlurb = (card.blurb ?? '').replace(/Our Courses Our Projects$/, '').trim();
-	return {
-		slug: card.slug,
-		title: prog?.title ?? card.title,
-		heroImage: prog?.hero_image ?? null,
-		audienceLabel: card.audience_label ?? primaryAudience?.label ?? 'Programme',
-		audienceId: primaryAudience?.id ?? (card.audience_label ?? '').toLowerCase(),
-		duration: card.duration ?? prog?.duration ?? '',
-		shortDescription: cleanBlurb,
-	};
-});
+const cardOverrides = buildProgrammeCardOverrides(page.course_cards ?? []);
+const cardSlugs = (page.course_cards ?? []).map((card: any) => card.slug);
+const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
+	toProgrammeCardData(programme, cardOverrides.get(programme.slug)),
+);
 ---
 
 <ContentLayout
@@ -127,8 +121,13 @@ const cards = (page.course_cards ?? []).map((card: any) => {
 							heroImage={card.heroImage}
 							audienceLabel={card.audienceLabel}
 							audienceId={card.audienceId}
+							audienceIds={card.audienceIds}
+							domainIds={card.domainIds}
+							platformIds={card.platformIds}
 							duration={card.duration}
 							shortDescription={card.shortDescription}
+							searchText={card.searchText}
+							badgeHref={card.badgeHref}
 						/>
 					))}
 				</div>

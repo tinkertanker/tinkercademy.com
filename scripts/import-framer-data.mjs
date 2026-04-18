@@ -1,3 +1,11 @@
+/**
+ * Legacy migration utility.
+ *
+ * Programme authoring is now Astro-first under `src/content/programmes/`.
+ * Keep this script for Framer-backed collections, audit snapshots, and
+ * historical migration work; do not extend it as the ongoing source of truth
+ * for programme content unless the user explicitly asks for migration work.
+ */
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
