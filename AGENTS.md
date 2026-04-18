@@ -25,9 +25,8 @@ This is a static Astro site (no backend, no database, no Docker). See `README.md
 - `npm run import:live` still hits the live `tinkercademy.com` site and regenerates legacy structured data for non-programme content.
 - Page rendering is now Astro-native; `downloads/rehosted_site/` is no longer a build input.
 - High-fidelity document payloads are checked in under `src/generated/route-documents.js`; route files import those payloads directly instead of reading a mirror folder at runtime.
-- Runtime assets required by those document payloads live under `public/assets/`, `public/fonts/`, `public/images/remote/`, `public/sites/`, and `public/third-party-assets/`.
-- The Framer import is complete for programmes. Keep `src/content/programmes/` as the source of truth and treat the import scripts as legacy scaffolding.
-- The Framer import still refreshes `tutorials`, `articles`, `platforms`, `domains`, and `external-logos` under `src/data/pages/` and `src/data/crm/`.
+- Runtime assets required by those document payloads live under `public/assets/`, `public/fonts/`, `public/images/`, `public/sites/`, and `public/third-party-assets/`.
+- The Framer enrichment step currently backfills richer programme/tutorial metadata and writes additional collections under `src/data/pages/` and `src/data/crm/`, including `platforms`, `domains`, `articles`, and `external-logos`.
 - `npm run import:framer` also writes a raw inspection snapshot to `scripts/_artifacts/framer-api/export.json`.
 - Current page integrations that still depend on imported Framer data:
   homepage uses live domains and platform data;
