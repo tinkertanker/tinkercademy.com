@@ -24,7 +24,7 @@ This is a static Astro site (no backend, no database, no Docker). See `README.md
 - The repo remains crawl-first: `npm run import:live` regenerates the baseline `src/data` payloads from the published site, and `npm run import:framer` optionally enriches those generated files with direct Framer CMS data.
 - Page rendering is now Astro-native; `downloads/rehosted_site/` is no longer a build input.
 - High-fidelity document payloads are checked in under `src/generated/route-documents.js`; route files import those payloads directly instead of reading a mirror folder at runtime.
-- Runtime assets required by those document payloads live under `public/assets/`, `public/fonts/`, `public/images/remote/`, `public/sites/`, and `public/third-party-assets/`.
+- Runtime assets required by those document payloads live under `public/assets/`, `public/fonts/`, `public/images/`, `public/sites/`, and `public/third-party-assets/`.
 - The Framer enrichment step currently backfills richer programme/tutorial metadata and writes additional collections under `src/data/pages/` and `src/data/crm/`, including `platforms`, `domains`, `articles`, and `external-logos`.
 - `npm run import:framer` also writes a raw inspection snapshot to `scripts/_artifacts/framer-api/export.json`.
 - Current page integrations that depend on the Framer enrichment:

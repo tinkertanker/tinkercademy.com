@@ -4,13 +4,13 @@ import { resolve } from 'node:path';
 const FRAMER_IMAGE_URL_RE =
 	/https:\/\/framerusercontent\.com\/images\/([A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|gif|svg))(?:\?[^"'\s<)]*)?/g;
 
-const REMOTE_IMAGE_DIR = resolve(process.cwd(), 'public/images/remote');
+const LOCAL_IMAGE_DIR = resolve(process.cwd(), 'public/images');
 const localAssetCache = new Map();
 
 function hasLocalFramerAsset(filename) {
 	if (!filename) return false;
 	if (!localAssetCache.has(filename)) {
-		localAssetCache.set(filename, existsSync(resolve(REMOTE_IMAGE_DIR, filename)));
+		localAssetCache.set(filename, existsSync(resolve(LOCAL_IMAGE_DIR, filename)));
 	}
 	return localAssetCache.get(filename);
 }
@@ -21,7 +21,7 @@ export function localiseFramerImage(value) {
 	}
 
 	return value.replace(FRAMER_IMAGE_URL_RE, (match, filename) =>
-		hasLocalFramerAsset(filename) ? `/images/remote/${filename}` : match
+		hasLocalFramerAsset(filename) ? `/images/${filename}` : match
 	);
 }
 

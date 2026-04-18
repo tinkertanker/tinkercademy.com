@@ -1,5 +1,5 @@
 // ── Brand ──────────────────────────────────────────────────────────
-export const LOGO_BLACK = '/images/remote/OHbHnfvpGLsxcntGKsueCChDt4__q_P3NjYWxlLWRvd24tdG89MjA0.png';
+export const LOGO_BLACK = '/images/OHbHnfvpGLsxcntGKsueCChDt4__q_P3NjYWxlLWRvd24tdG89MjA0.png';
 export const LOGO_WHITE = '/images/logos/tinkercademy-white.png';
 
 // ── Partner logos (official training partners) ────────────────────
