@@ -13,8 +13,9 @@
 import CtaBanner from '../components/CtaBanner.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getSiteData, getStaticPage } from '../lib/data.js';
+import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
+import { getHomeFeaturedProgrammes, toProgrammeCardData } from '../lib/programmes.ts';
 import {
 	HOME_CERTIFICATION_BADGES,
 	HOME_FLAGSHIP_IMAGES,
@@ -25,7 +26,6 @@ import {
 const page = getStaticPage('/');
 if (!page) return Astro.redirect('/404');
 
-const site = getSiteData();
 const canonical = 'https://tinkercademy.com/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
@@ -70,27 +70,9 @@ const closingCtas = (page.closing_ctas ?? []).map((cta: any) => {
 });
 
 /* ─── Popular Courses (featured programmes) ─────────────────────────── */
-const programmeBySlug = new Map(site.programmes.map((p: any) => [p.slug, p]));
-const featuredSlugs: string[] = page.featured_programme_slugs ?? [];
-const popularCourses = featuredSlugs
-	.map((slug) => programmeBySlug.get(slug))
-	.filter(Boolean)
-	.map((prog: any) => {
-		const primaryAudience = prog.audiences?.[0];
-		return {
-			slug: prog.slug,
-			title: prog.title,
-			heroImage: prog.hero_image ?? null,
-			audienceLabel: primaryAudience?.label ?? 'Programme',
-			audienceId: primaryAudience?.id ?? '',
-			duration: prog.duration ?? '',
-			shortDescription:
-				prog.card_blurb ||
-				(primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
-					? 'Corporate training'
-					: ''),
-		};
-	});
+const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
+	toProgrammeCardData(programme),
+);
 ---
 
 <ContentLayout
@@ -260,8 +242,13 @@ const popularCourses = featuredSlugs
 							heroImage={prog.heroImage}
 							audienceLabel={prog.audienceLabel}
 							audienceId={prog.audienceId}
+							audienceIds={prog.audienceIds}
+							domainIds={prog.domainIds}
+							platformIds={prog.platformIds}
 							duration={prog.duration}
 							shortDescription={prog.shortDescription}
+							searchText={prog.searchText}
+							badgeHref={prog.badgeHref}
 						/>
 					))}
 				</div>

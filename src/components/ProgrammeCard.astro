@@ -12,9 +12,13 @@ interface Props {
 	heroImage?: string | null;
 	audienceLabel?: string;
 	audienceId?: string;
+	audienceIds?: string[];
+	domainIds?: string[];
+	platformIds?: string[];
 	duration?: string;
 	shortDescription?: string;
 	searchText?: string;
+	badgeHref?: string | null;
 }
 
 const {
@@ -23,9 +27,13 @@ const {
 	heroImage,
 	audienceLabel = 'Programme',
 	audienceId = '',
+	audienceIds = [],
+	domainIds = [],
+	platformIds = [],
 	duration = '',
 	shortDescription = '',
 	searchText = '',
+	badgeHref = null,
 } = Astro.props;
 
 const href = `/programmes/${slug}`;
@@ -40,63 +48,73 @@ const AUDIENCE_COLOURS: Record<string, string> = {
 const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 ---
 
-<a
+<article
 	class="prog-card"
-	href={href}
 	data-programme-card
 	data-search={searchText.toLowerCase()}
+	data-audiences={audienceIds.join(' ')}
+	data-domains={domainIds.join(' ')}
+	data-platforms={platformIds.join(' ')}
 >
 	<div class="prog-card__inner">
 		{/* Audience badge */}
-		<span class="prog-card__badge" style={`background-color: ${badgeColour}`}>
-			{audienceLabel}
-		</span>
+		{badgeHref ? (
+			<a class="prog-card__badge" href={badgeHref} style={`background-color: ${badgeColour}`}>
+				{audienceLabel}
+			</a>
+		) : (
+			<span class="prog-card__badge" style={`background-color: ${badgeColour}`}>
+				{audienceLabel}
+			</span>
+		)}
 
-		{/* Hero image */}
-		<div class="prog-card__image">
-			{heroImage ? (
-				<img src={heroImage} alt={title} loading="lazy" />
-			) : (
-				<div class="prog-card__image-placeholder" />
-			)}
-		</div>
-
-		{/* Text content */}
-		<div class="prog-card__body">
-			<h2 class="prog-card__title">{title}</h2>
-			<div class="prog-card__divider" />
-			<div class="prog-card__meta">
-				{/* Audience row */}
-				<div class="prog-card__meta-row">
-					<svg class="prog-card__icon" viewBox="0 0 256 256" width="16" height="16" fill="currentColor">
-						<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8C55.71,192.94,78.38,176,128,176s72.29,16.94,89.07,44a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z" />
-					</svg>
-					<span>{audienceLabel}</span>
-				</div>
-
-				{/* Duration row */}
-				{duration && (
-					<div class="prog-card__meta-row">
-						<svg class="prog-card__icon" viewBox="0 0 256 256" width="16" height="16" fill="currentColor">
-							<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z" />
-						</svg>
-						<span>{duration}</span>
-					</div>
-				)}
-
-				{/* Description row */}
-				{shortDescription && (
-					<div class="prog-card__meta-row">
-						<svg class="prog-card__icon" viewBox="0 0 256 256" width="16" height="16" fill="currentColor">
-							<path d="M200,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24Zm0,192H56V40H200ZM176,88a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,88Zm0,40a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,128Zm0,40a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,168Z" />
-						</svg>
-						<span>{shortDescription}</span>
-					</div>
+		<a class="prog-card__link" href={href}>
+			{/* Hero image */}
+			<div class="prog-card__image">
+				{heroImage ? (
+					<img src={heroImage} alt={title} loading="lazy" />
+				) : (
+					<div class="prog-card__image-placeholder" />
 				)}
 			</div>
-		</div>
+
+			{/* Text content */}
+			<div class="prog-card__body">
+				<h2 class="prog-card__title">{title}</h2>
+				<div class="prog-card__divider" />
+				<div class="prog-card__meta">
+					{/* Audience row */}
+					<div class="prog-card__meta-row">
+						<svg class="prog-card__icon" viewBox="0 0 256 256" width="16" height="16" fill="currentColor">
+							<path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8C55.71,192.94,78.38,176,128,176s72.29,16.94,89.07,44a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z" />
+						</svg>
+						<span>{audienceLabel}</span>
+					</div>
+
+					{/* Duration row */}
+					{duration && (
+						<div class="prog-card__meta-row">
+							<svg class="prog-card__icon" viewBox="0 0 256 256" width="16" height="16" fill="currentColor">
+								<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z" />
+							</svg>
+							<span>{duration}</span>
+						</div>
+					)}
+
+					{/* Description row */}
+					{shortDescription && (
+						<div class="prog-card__meta-row">
+							<svg class="prog-card__icon" viewBox="0 0 256 256" width="16" height="16" fill="currentColor">
+								<path d="M200,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V40A16,16,0,0,0,200,24Zm0,192H56V40H200ZM176,88a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,88Zm0,40a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,128Zm0,40a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,168Z" />
+							</svg>
+							<span>{shortDescription}</span>
+						</div>
+					)}
+				</div>
+			</div>
+		</a>
 	</div>
-</a>
+</article>
 
 <style>
 	.prog-card {
@@ -111,6 +129,15 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 			transform 0.2s ease,
 			box-shadow 0.2s ease,
 			border-color 0.2s ease;
+	}
+
+	.prog-card__link {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		min-height: 100%;
+		text-decoration: none;
+		color: inherit;
 	}
 
 	.prog-card__inner {
@@ -136,6 +163,7 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		font-weight: 400;
 		color: #fff;
 		line-height: 1;
+		text-decoration: none;
 	}
 
 	.prog-card__image {

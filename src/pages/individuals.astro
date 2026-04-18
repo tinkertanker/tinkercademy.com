@@ -11,13 +11,13 @@
 import CtaBanner from '../components/CtaBanner.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getSiteData, getStaticPage } from '../lib/data.js';
+import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
+import { getProgrammesForSurface, toProgrammeCardData } from '../lib/programmes.ts';
 
 const page = getStaticPage('/individuals');
 if (!page) return Astro.redirect('/404');
 
-const site = getSiteData();
 const canonical = 'https://tinkercademy.com/individuals';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
@@ -42,20 +42,9 @@ const programmeTypes = [
 ];
 
 /* Public-audience programmes for the "Courses for Individuals" grid. */
-const publicProgrammes = site.programmes
-	.filter((p: any) => (p.audiences ?? []).some((a: any) => a.id === 'public'))
-	.map((p: any) => {
-		const primary = p.audiences?.[0];
-		return {
-			slug: p.slug,
-			title: p.title,
-			heroImage: p.hero_image ?? null,
-			audienceLabel: primary?.label ?? 'Public',
-			audienceId: primary?.id ?? 'public',
-			duration: p.duration ?? '',
-			shortDescription: p.card_blurb ?? '',
-		};
-	});
+const publicProgrammes = (await getProgrammesForSurface('individuals')).map((programme) =>
+	toProgrammeCardData(programme),
+);
 ---
 
 <ContentLayout
@@ -105,8 +94,13 @@ const publicProgrammes = site.programmes
 							heroImage={card.heroImage}
 							audienceLabel={card.audienceLabel}
 							audienceId={card.audienceId}
+							audienceIds={card.audienceIds}
+							domainIds={card.domainIds}
+							platformIds={card.platformIds}
 							duration={card.duration}
 							shortDescription={card.shortDescription}
+							searchText={card.searchText}
+							badgeHref={card.badgeHref}
 						/>
 					))}
 				</div>

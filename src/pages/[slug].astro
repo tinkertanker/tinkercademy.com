@@ -6,7 +6,13 @@ import HeroMedia from '../components/HeroMedia.astro';
 import PageHero from '../components/PageHero.astro';
 import RichContent from '../components/RichContent.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getSiteData, getProgrammesForPage, getNavPillsForPage } from '../lib/data.js';
+import { getSiteData, getNavPillsForPage } from '../lib/data.js';
+import {
+	buildProgrammeCardOverrides,
+	getProgrammeFilterLabels,
+	getProgrammesForSurface,
+	toProgrammeCardData,
+} from '../lib/programmes.ts';
 
 export function getStaticPaths() {
 	/* Pages with dedicated .astro files — exclude from the dynamic catch-all */
@@ -33,12 +39,26 @@ const COURSE_LISTING_SLUGS = ['courses-all', 'courses-professionals', 'courses-s
 const isCourseListing = COURSE_LISTING_SLUGS.includes(page.slug);
 
 /* ─── Data for course listing / audience pages ──────────────────────── */
+const listingSurfaceBySlug = {
+	'courses-all': 'all',
+	'courses-professionals': 'professionals',
+	'courses-schools': 'schools',
+} as const;
+const listingSurface = isCourseListing
+	? listingSurfaceBySlug[page.slug as keyof typeof listingSurfaceBySlug]
+	: 'all';
+const cardOverrides = isCourseListing ? buildProgrammeCardOverrides(page.course_cards ?? []) : null;
 const programmes = isCourseListing
-	? getProgrammesForPage(page)
+	? (await getProgrammesForSurface(listingSurface)).map((programme) =>
+			toProgrammeCardData(programme, cardOverrides?.get(programme.slug), {
+				badgeBasePath: page.path,
+			}),
+		)
 	: [];
 const navPills = isCourseListing
 	? getNavPillsForPage(page)
 	: [];
+const filterLabels = isCourseListing ? getProgrammeFilterLabels() : null;
 
 /* ─── Course listing page titles (the title field is a slug in the data) */
 const COURSE_PAGE_TITLES: Record<string, string> = {
@@ -68,6 +88,8 @@ const hasRichContent = contentBlocks.some(
 			programmes={programmes}
 			pageTitle={displayTitle}
 			navPills={navPills}
+			pagePath={page.path}
+			filterLabels={filterLabels ?? undefined}
 		/>
 	) : (
 		<>
