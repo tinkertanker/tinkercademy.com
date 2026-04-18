@@ -10,6 +10,16 @@ const {
 	canonical = null,
 	image = site.siteSettings?.default_seo?.openGraph?.image ?? null,
 } = Astro.props;
+
+/* og:image must be an absolute URL for social previews. Resolve relative
+   paths against the canonical URL when available, else the site setting. */
+const ogImageBase = canonical ?? Astro.site?.href ?? site.siteSettings?.base_url;
+let ogImage: string | null = null;
+if (image) {
+	ogImage = /^https?:\/\//i.test(image) || !ogImageBase
+		? image
+		: new URL(image, ogImageBase).toString();
+}
 ---
 
 <!doctype html>
@@ -22,7 +32,7 @@ const {
 		{canonical && <link rel="canonical" href={canonical} />}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		{image && <meta property="og:image" content={image} />}
+		{ogImage && <meta property="og:image" content={ogImage} />}
 		<link rel="icon" type="image/png" href="/images/logos/favicon.png" />
 	</head>
 	<body>
