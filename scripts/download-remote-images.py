@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download all framerusercontent.com images referenced in data files to public/images/remote/."""
+"""Download all framerusercontent.com images referenced in data files to public/images/."""
 
 import os
 import sys
@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "src" / "data"
-OUTPUT_DIR = PROJECT_ROOT / "public" / "images" / "remote"
+OUTPUT_DIR = PROJECT_ROOT / "public" / "images"
 MAX_CONCURRENT = 20
 TIMEOUT = 30
 

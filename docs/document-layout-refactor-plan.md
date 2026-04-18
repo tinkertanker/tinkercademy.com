@@ -149,7 +149,7 @@ For every migrated page, verify:
 - no duplicate nav/footer remains in the DOM
 - no page body is hidden by heuristic shell stripping
 - same-origin navigation uses correct absolute paths
-- local assets resolve from `/assets`, `/fonts`, `/images/remote`, `/sites`, and `/third-party-assets`
+- local assets resolve from `/assets`, `/fonts`, `/images`, `/sites`, and `/third-party-assets`
 
 Critical route set for every regression pass:
 - `/`
