@@ -2,7 +2,7 @@
 title: "App Development Basics with Swift Playgrounds"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
 duration: "26 hours"
-heroImage: "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png"
+heroImage: "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]

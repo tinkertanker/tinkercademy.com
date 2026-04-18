@@ -2,7 +2,7 @@
 title: "Vibe Coding for Digital Builders"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/remote/ZquQacjrBD49fcKSa0LrIs5hQU.jpg"
+heroImage: "/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]

@@ -2,7 +2,7 @@
 title: "Professional Certificate in Web Application Development"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "2 days/module"
-heroImage: "/images/remote/fWouEVvBE4OgXcNYbaPWP57gdM.png"
+heroImage: "/images/fWouEVvBE4OgXcNYbaPWP57gdM.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["uiux"]
 platformIds: ["bubble", "framer", "html-css", "javascript"]

@@ -2,7 +2,7 @@
 title: "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "17 days"
-heroImage: "/images/remote/WPfvSE5w5gyB6ippvoGs2pZN8.jpg"
+heroImage: "/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg"
 audienceIds: ["businesses", "public"]
 domainIds: ["cryptography"]
 platformIds: ["stellar"]

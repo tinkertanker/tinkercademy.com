@@ -2,7 +2,7 @@
 title: "Enter the Metaverse: Get started with Unity for AR/VR"
 subtitle: "11 - 12 February 2025"
 duration: "2 days"
-heroImage: "/images/remote/A5Dd868Qo1geG7lsgR36QkJm9c.png"
+heroImage: "/images/A5Dd868Qo1geG7lsgR36QkJm9c.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["gamedev"]
 platformIds: ["unity", "ar-vr"]

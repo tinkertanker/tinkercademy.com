@@ -2,7 +2,7 @@
 title: "Game Development in MakeCode Arcade & MineCraft"
 subtitle: "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
 duration: "24 hours"
-heroImage: "/images/remote/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg"
+heroImage: "/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg"
 audienceIds: ["students"]
 domainIds: ["design-thinking", "gamedev"]
 platformIds: ["makecode-arcade", "minecraft"]

@@ -2,7 +2,7 @@
 title: "Professional Certificate in Mobile Application Development"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "2 days/module"
-heroImage: "/images/remote/PuT46Rc7thhhYyLZrhYVo6wObE.png"
+heroImage: "/images/PuT46Rc7thhhYyLZrhYVo6wObE.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["appdev", "uiux"]
 platformIds: ["android-studio", "javascript", "sql"]

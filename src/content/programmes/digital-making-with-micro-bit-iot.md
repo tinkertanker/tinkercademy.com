@@ -2,7 +2,7 @@
 title: "Digital Making with micro:bit & IoT"
 subtitle: "An introductory course on digital making with Micro:bit & IoT."
 duration: "2 days"
-heroImage: "/images/remote/NwJDnH6HoIQPm3sf8sCAsXvidM.png"
+heroImage: "/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png"
 audienceIds: ["businesses", "public"]
 domainIds: ["iot", "cs"]
 platformIds: ["bbc-micro-bit"]

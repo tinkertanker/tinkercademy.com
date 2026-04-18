@@ -2,7 +2,7 @@
 title: "Knowledge-Powered AI with ChatGPT"
 subtitle: "Corporate training"
 duration: "½, 1, 2 days"
-heroImage: "/images/remote/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg"
+heroImage: "/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["chatgpt"]

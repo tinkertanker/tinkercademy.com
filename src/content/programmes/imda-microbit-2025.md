@@ -2,7 +2,7 @@
 title: "Digital Making with micro:bit"
 subtitle: "An IMDA Infocom LEARN Roadmap course with micro:bit."
 duration: "24 hours"
-heroImage: "/images/remote/URlCPC41VwVGXM7WtFXQcFo4yE.png"
+heroImage: "/images/URlCPC41VwVGXM7WtFXQcFo4yE.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["iot", "making"]
 platformIds: ["makecode-arcade", "bbc-micro-bit"]

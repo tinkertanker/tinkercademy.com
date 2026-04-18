@@ -2,7 +2,7 @@
 title: "Building Agents with OpenClaw"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/remote/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp"
+heroImage: "/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]

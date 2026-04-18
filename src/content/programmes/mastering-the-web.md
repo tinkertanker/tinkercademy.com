@@ -2,7 +2,7 @@
 title: "Mastering the Web: Understand Full-Stack Development"
 subtitle: "Corporate training, 3 & 4 July 2025"
 duration: "2 days"
-heroImage: "/images/remote/LvTrPWE98zoDD5wX1uoP1UGit4.png"
+heroImage: "/images/LvTrPWE98zoDD5wX1uoP1UGit4.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["webdev", "software-engineering"]
 platformIds: ["html-css", "javascript", "sql", "flask"]
