@@ -9,6 +9,7 @@ const {
 	description = site.siteSettings?.default_seo?.description ?? '',
 	canonical = null,
 	image = site.siteSettings?.default_seo?.openGraph?.image ?? null,
+	ogType = 'website',
 } = Astro.props;
 
 /* og:image must be an absolute URL for social previews. Resolve relative
@@ -20,6 +21,9 @@ if (image) {
 		? image
 		: new URL(image, ogImageBase).toString();
 }
+
+const siteName = site.siteSettings?.site_name ?? 'Tinkercademy';
+const twitterCard = ogImage ? 'summary_large_image' : 'summary';
 ---
 
 <!doctype html>
@@ -30,10 +34,22 @@ if (image) {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
+
+		<meta property="og:type" content={ogType} />
+		<meta property="og:site_name" content={siteName} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
+		{canonical && <meta property="og:url" content={canonical} />}
 		{ogImage && <meta property="og:image" content={ogImage} />}
-		<link rel="icon" type="image/png" href="/images/logos/favicon.png" />
+
+		<meta name="twitter:card" content={twitterCard} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		{ogImage && <meta name="twitter:image" content={ogImage} />}
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/images/logos/favicon.png" />
 	</head>
 	<body>
 		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />

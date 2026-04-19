@@ -4,6 +4,7 @@ import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
 
 const { articles } = getSiteData();
+const canonical = 'https://tinkercademy.com/articles';
 
 const sortedArticles = [...articles].sort((a, b) => {
 	const da = a.date ? new Date(a.date).getTime() : 0;
@@ -21,6 +22,7 @@ function formatDate(dateStr: string | null | undefined) {
 <ContentLayout
 	title="Articles"
 	description="Insights and perspectives from the Tinkercademy team on coding education, corporate training, and technology."
+	canonical={canonical}
 >
 	<section class="articles-hero">
 		<div class="shell">
