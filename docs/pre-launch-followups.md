@@ -31,6 +31,9 @@ are present locally. Extras vs. live that should be confirmed before launch:
   URL before emitting `og:image`. `robots.txt` emits `Disallow: /` on any
   non-production host (anything that isn't `tinkercademy.com` /
   `www.tinkercademy.com`).
+- **Broken Rubik 300 `@font-face` (`fd28d6f`).** Pointed at a woff2 that
+  wasn't shipped; nothing in the site actually requests Rubik 300. Removed
+  the face; build now has zero warnings.
 
 ## Cutover checklist (must do at go-live)
 
@@ -48,10 +51,6 @@ are present locally. Extras vs. live that should be confirmed before launch:
 
 Numbered to match the original report.
 
-- [ ] **#5 Broken Rubik 300 `@font-face`.** `ContentLayout.astro:114-120`
-      points at `iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1VU80V4bVkA.woff2` which
-      doesn't exist. Nothing in the site requests Rubik 300 — safe to drop
-      the face.
 - [ ] **#6 Missing social meta.** No `og:type`, no `og:url`, no
       `twitter:card` / `twitter:image`. Preview cards on X/Twitter will be
       plain links rather than rich cards.
@@ -72,10 +71,11 @@ Numbered to match the original report.
 
 ## Tooling notes
 
-- `astro build` prints a Vite warning
-  `/fonts/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1VU80V4bVkA.woff2 …
-  didn't resolve at build time`. Same root cause as #5; goes away when that
-  face is removed.
 - `docs/screenshots/live/mobile/*.png` is our last committed snapshot of
   the live sitemap. `capture-mobile-screenshots.spec.js` regenerates them
   from `tinkercademy.com/sitemap.xml` via Playwright.
+- `public/sites/nYHde9VjOGeoz41IditJr/…mjs` (rehosted Framer microsite
+  bundle) still references `/fonts/s/rubik/v30/…WYi1VU80V4bVkA.woff2` —
+  the file is present and this JS is not loaded by any Astro page, so
+  it's benign. Worth a cleanup pass if the rehosted microsites are fully
+  retired.
