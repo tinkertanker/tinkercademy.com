@@ -11,7 +11,6 @@ weight: 85
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Game Development in MakeCode Arcade & MineCraft - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

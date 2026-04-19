@@ -9,7 +9,6 @@ platformIds: ["react-native", "tensorflow"]
 cardBlurb: "CODE_EXP is a mobile dev hackathon spread over three phases:Phase 1: Training sessionsPhase 2: QualifiersPhase 3: Finals"
 weight: 30
 seoTitle: "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

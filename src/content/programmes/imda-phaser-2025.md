@@ -9,7 +9,6 @@ platformIds: ["html-css", "javascript", "git-github", "microsoft-copilot"]
 cardBlurb: "Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design…"
 weight: 75
 seoTitle: "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

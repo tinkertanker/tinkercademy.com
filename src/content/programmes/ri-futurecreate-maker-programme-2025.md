@@ -9,7 +9,6 @@ platformIds: ["3d-printing", "arduino", "scratch"]
 cardBlurb: "The RI FutureCreate Maker Programme is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven…"
 weight: 89
 seoTitle: "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

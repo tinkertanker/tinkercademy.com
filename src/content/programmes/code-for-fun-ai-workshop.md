@@ -11,7 +11,6 @@ weight: 100
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:imda_codesg@imda.gov.sg"
 seoTitle: "Code For Fun AI Workshop - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

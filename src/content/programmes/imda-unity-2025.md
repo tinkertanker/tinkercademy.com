@@ -11,7 +11,6 @@ weight: 78
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tinkercademy.com"
 seoTitle: "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

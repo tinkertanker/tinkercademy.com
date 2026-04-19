@@ -11,7 +11,6 @@ weight: 81
 signUpLabel: "Enquire now"
 signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Harnessing%20the%20Power%20of%20Internet%20of%20Things%20and%20Creative%20Digital%20Making&nid=80496"
 seoTitle: "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview
