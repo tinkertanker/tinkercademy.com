@@ -34,6 +34,19 @@ are present locally. Extras vs. live that should be confirmed before launch:
 - **Broken Rubik 300 `@font-face` (`fd28d6f`).** Pointed at a woff2 that
   wasn't shipped; nothing in the site actually requests Rubik 300. Removed
   the face; build now has zero warnings.
+- **Duplicate programme descriptions, #7 (`8358b57`).** All 29 programme
+  markdowns had an identical generic `seoDescription`. Stripped the dead
+  field; each programme now derives its meta description from its unique
+  `cardBlurb`. 28/29 programme pages now emit a unique description (see
+  known issue below).
+- **Social meta + favicons, #6 + #8 (`dcd6f51`).** Added `og:type`,
+  `og:site_name`, `og:url`, and `twitter:card/title/description/image`
+  to `ContentLayout`; editorial templates (`articles/[slug]`,
+  `tutorials/[slug]`) pass `ogType="article"`. Wired up `/favicon.svg` +
+  `/favicon.ico` alongside the existing PNG (kept as apple-touch-icon).
+  Set a default `openGraph.image` in `site-settings.json` so pages
+  without a per-page image still emit an `og:image`. Added a canonical
+  to `articles/index` so its `og:image` resolves to the production origin.
 
 ## Cutover checklist (must do at go-live)
 
@@ -41,33 +54,31 @@ are present locally. Extras vs. live that should be confirmed before launch:
       `https://webstaging.tinkercademy.com` to `https://tinkercademy.com`.
       This single change causes `sitemap-index.xml`, `sitemap-0.xml`, and
       `robots.txt` to switch to the production origin automatically
-      (robots.txt also flips from `Disallow: /` to `Allow: /`).
+      (robots.txt also flips from `Disallow: /` to `Allow: /`). It also
+      re-resolves the `og:image` on any pages that currently fall through
+      to `Astro.site` (right now only `articles/index` post-fix, but
+      worth re-checking the dist output after the flip).
 - [ ] Update `public/CNAME` from `webstaging.tinkercademy.com` to
       `tinkercademy.com` (or `www.tinkercademy.com`).
 - [ ] After DNS cutover, submit the new `https://tinkercademy.com/sitemap-index.xml`
       to Google Search Console and Bing Webmaster.
 
-## Remaining polish items (from audit)
+## Known content issues (not code)
 
-Numbered to match the original report.
-
-- [ ] **#6 Missing social meta.** No `og:type`, no `og:url`, no
-      `twitter:card` / `twitter:image`. Preview cards on X/Twitter will be
-      plain links rather than rich cards.
-- [ ] **#7 Duplicate descriptions.** Programme and tutorial pages whose
-      `seoDescription` / `cardBlurb` is missing fall through to the
-      site-level default description. Produces many pages with identical
-      meta descriptions. Worth a pass over the content to give each page a
-      unique description.
-- [ ] **#8 Unused favicons.** `public/favicon.svg` and `public/favicon.ico`
-      are shipped but never linked. Layout only references
-      `/images/logos/favicon.png`. Add the SVG + ICO links for broader
-      client support.
-- [ ] **Pages with no `og:image` at all.** `/articles/` index,
-      `/tutorials/micropythoncomponents`, and `/courses` (redirect, noindex)
-      emit no `og:image`. Could supply a site-level default from
-      `site-settings.json` → `default_seo.openGraph.image`, which is
-      currently `null`.
+- [ ] **Two programmes share an identical `cardBlurb`**:
+      `code-for-fun-ai-workshop.md` and `code-for-fun-baseline-workshop.md`
+      both open with "Our CFF 2025 Scheme of Work…". That collapses to the
+      same meta description on both pages (the only duplicate left after
+      #7). Needs an author pass to give one of them a distinct intro.
+- [ ] **Dangling tutorial**: `/tutorials/micropythoncomponents` has no
+      hero image, is not in the live sitemap, and isn't linked from any
+      index page we generate. Confirm whether it's intentional content or
+      a stray import artefact.
+- [ ] **Programme `seoTitle` carries the site tagline on every page**
+      (e.g. "Mastering the Web: Understand Full-Stack Development -
+      Tinkercademy: Coding and Making for Schools and Professionals"),
+      which is long and mostly boilerplate. Consider whether the
+      programme page `<title>` should be just the programme name.
 
 ## Tooling notes
 
