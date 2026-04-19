@@ -48,20 +48,12 @@ are present locally. Extras vs. live that should be confirmed before launch:
   without a per-page image still emit an `og:image`. Added a canonical
   to `articles/index` so its `og:image` resolves to the production origin.
 
-## Cutover checklist (must do at go-live)
+## Cutover checklist
 
-- [ ] Flip `astro.config.mjs` `site:` from
-      `https://webstaging.tinkercademy.com` to `https://tinkercademy.com`.
-      This single change causes `sitemap-index.xml`, `sitemap-0.xml`, and
-      `robots.txt` to switch to the production origin automatically
-      (robots.txt also flips from `Disallow: /` to `Allow: /`). It also
-      re-resolves the `og:image` on any pages that currently fall through
-      to `Astro.site` (right now only `articles/index` post-fix, but
-      worth re-checking the dist output after the flip).
-- [ ] Update `public/CNAME` from `webstaging.tinkercademy.com` to
-      `tinkercademy.com` (or `www.tinkercademy.com`).
-- [ ] After DNS cutover, submit the new `https://tinkercademy.com/sitemap-index.xml`
-      to Google Search Console and Bing Webmaster.
+Moved to [`docs/deployment.md`](./deployment.md) now that production goes
+to Cloudflare Pages while staging stays on GitHub Pages. No code changes
+needed at cutover — the only variable is the Cloudflare Pages
+`SITE_URL` env var, which is set once in the dashboard.
 
 ## Known content issues (not code)
 

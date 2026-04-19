@@ -14,7 +14,8 @@
     "build:crm": "node scripts/build-crm-data.mjs",
     "import:framer": "node scripts/import-framer-data.mjs",
     "import:live": "npm run crawl:site && npm run build:crm",
-    "check": "astro check"
+    "check": "astro check",
+    "smoke": "node scripts/smoke-check.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
