@@ -2,7 +2,7 @@
 title: "Digital Making with micro:bit & IoT"
 subtitle: "An introductory course on digital making with Micro:bit & IoT."
 duration: "2 days"
-heroImage: "/images/remote/NwJDnH6HoIQPm3sf8sCAsXvidM.png"
+heroImage: "/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png"
 audienceIds: ["businesses", "public"]
 domainIds: ["iot", "cs"]
 platformIds: ["bbc-micro-bit"]
@@ -11,7 +11,6 @@ weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

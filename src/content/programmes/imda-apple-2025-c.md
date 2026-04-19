@@ -2,7 +2,7 @@
 title: "App Development Explorations with Swift Playgrounds"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
 duration: "26 hours"
-heroImage: "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png"
+heroImage: "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]
@@ -11,7 +11,6 @@ weight: 65
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

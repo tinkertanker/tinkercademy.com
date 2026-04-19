@@ -2,7 +2,7 @@
 title: "Professional Certificate in Mobile Application Development"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "2 days/module"
-heroImage: "/images/remote/PuT46Rc7thhhYyLZrhYVo6wObE.png"
+heroImage: "/images/PuT46Rc7thhhYyLZrhYVo6wObE.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["appdev", "uiux"]
 platformIds: ["android-studio", "javascript", "sql"]
@@ -11,7 +11,6 @@ weight: 88
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

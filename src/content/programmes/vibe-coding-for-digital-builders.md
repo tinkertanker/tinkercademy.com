@@ -2,7 +2,7 @@
 title: "Vibe Coding for Digital Builders"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/remote/ZquQacjrBD49fcKSa0LrIs5hQU.jpg"
+heroImage: "/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
@@ -12,7 +12,6 @@ homeFeaturedRank: 3
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

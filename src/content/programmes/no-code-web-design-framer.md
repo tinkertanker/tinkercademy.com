@@ -2,7 +2,7 @@
 title: "No-code Web Design (Framer)"
 subtitle: "An introductory course on building websites using Framer."
 duration: "2 days"
-heroImage: "/images/remote/6AquPe6snR8cp5io7SOUGbf8eGU.png"
+heroImage: "/images/6AquPe6snR8cp5io7SOUGbf8eGU.png"
 audienceIds: ["businesses", "public"]
 domainIds: ["uiux"]
 platformIds: ["framer"]
@@ -11,7 +11,6 @@ weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

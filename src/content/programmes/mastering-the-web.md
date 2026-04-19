@@ -2,7 +2,7 @@
 title: "Mastering the Web: Understand Full-Stack Development"
 subtitle: "Corporate training, 3 & 4 July 2025"
 duration: "2 days"
-heroImage: "/images/remote/LvTrPWE98zoDD5wX1uoP1UGit4.png"
+heroImage: "/images/LvTrPWE98zoDD5wX1uoP1UGit4.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["webdev", "software-engineering"]
 platformIds: ["html-css", "javascript", "sql", "flask"]
@@ -11,7 +11,6 @@ weight: 93
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Mastering the Web: Understand Full-Stack Development - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

@@ -2,7 +2,7 @@
 title: "Knowledge-Powered AI with ChatGPT"
 subtitle: "Corporate training"
 duration: "½, 1, 2 days"
-heroImage: "/images/remote/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg"
+heroImage: "/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["chatgpt"]
@@ -12,7 +12,6 @@ homeFeaturedRank: 4
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

@@ -2,7 +2,7 @@
 title: "Digital Making with micro:bit"
 subtitle: "An IMDA Infocom LEARN Roadmap course with micro:bit."
 duration: "24 hours"
-heroImage: "/images/remote/URlCPC41VwVGXM7WtFXQcFo4yE.png"
+heroImage: "/images/URlCPC41VwVGXM7WtFXQcFo4yE.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["iot", "making"]
 platformIds: ["makecode-arcade", "bbc-micro-bit"]
@@ -11,7 +11,6 @@ weight: 86
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Digital Making with micro:bit - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

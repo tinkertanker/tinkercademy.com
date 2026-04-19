@@ -2,7 +2,7 @@
 title: "Level Up Your Vibe Coding (Lovable and Replit)"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/remote/oOitMFgLeulDejOAmyZwxgWuxg.jpg"
+heroImage: "/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
@@ -12,7 +12,6 @@ homeFeaturedRank: 2
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Level Up Your Vibe Coding (Lovable and Replit) - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

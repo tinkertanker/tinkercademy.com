@@ -2,7 +2,7 @@
 title: "App Prototyping with Keynote and Swift Playgrounds"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
 duration: "26 hours"
-heroImage: "/images/remote/MieXrGTvm2GnVsHnT6TfYWd9w.png"
+heroImage: "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["uiux", "cs"]
 platformIds: ["swift", "keynote"]
@@ -11,7 +11,6 @@ weight: 60
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "App Prototyping with Keynote and Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

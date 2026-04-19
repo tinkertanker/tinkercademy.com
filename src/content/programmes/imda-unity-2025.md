@@ -2,7 +2,7 @@
 title: "Game Development Bootcamp with Unity"
 subtitle: "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
 duration: "32 hours"
-heroImage: "/images/remote/kuS9B3BanadFYL050aWsShzhoM.webp"
+heroImage: "/images/kuS9B3BanadFYL050aWsShzhoM.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["gamedev"]
 platformIds: ["unity"]
@@ -11,7 +11,6 @@ weight: 78
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tinkercademy.com"
 seoTitle: "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

@@ -9,7 +9,21 @@ const {
 	description = site.siteSettings?.default_seo?.description ?? '',
 	canonical = null,
 	image = site.siteSettings?.default_seo?.openGraph?.image ?? null,
+	ogType = 'website',
 } = Astro.props;
+
+/* og:image must be an absolute URL for social previews. Resolve relative
+   paths against the canonical URL when available, else the site setting. */
+const ogImageBase = canonical ?? Astro.site?.href ?? site.siteSettings?.base_url;
+let ogImage: string | null = null;
+if (image) {
+	ogImage = /^https?:\/\//i.test(image) || !ogImageBase
+		? image
+		: new URL(image, ogImageBase).toString();
+}
+
+const siteName = site.siteSettings?.site_name ?? 'Tinkercademy';
+const twitterCard = ogImage ? 'summary_large_image' : 'summary';
 ---
 
 <!doctype html>
@@ -20,10 +34,22 @@ const {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
+
+		<meta property="og:type" content={ogType} />
+		<meta property="og:site_name" content={siteName} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		{image && <meta property="og:image" content={image} />}
-		<link rel="icon" type="image/png" href="/images/logos/favicon.png" />
+		{canonical && <meta property="og:url" content={canonical} />}
+		{ogImage && <meta property="og:image" content={ogImage} />}
+
+		<meta name="twitter:card" content={twitterCard} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		{ogImage && <meta name="twitter:image" content={ogImage} />}
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate icon" type="image/png" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/images/logos/favicon.png" />
 	</head>
 	<body>
 		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />
@@ -109,14 +135,6 @@ const {
 		font-weight: 700;
 		font-display: swap;
 		src: url('/fonts/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Rubik';
-		font-style: normal;
-		font-weight: 300;
-		font-display: swap;
-		src: url('/fonts/s/rubik/v31/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-WYi1VU80V4bVkA.woff2') format('woff2');
 	}
 
 	@font-face {

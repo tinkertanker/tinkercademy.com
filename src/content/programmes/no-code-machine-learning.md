@@ -2,7 +2,7 @@
 title: "No-Code Machine Learning"
 subtitle: "An introductory course on machine learning models using Orange."
 duration: "2 days"
-heroImage: "/images/remote/JxXpAu98LjIbh9p6qymMH0UUMRA.png"
+heroImage: "/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["ai"]
 platformIds: ["orange"]
@@ -11,7 +11,6 @@ weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "No-Code Machine Learning - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

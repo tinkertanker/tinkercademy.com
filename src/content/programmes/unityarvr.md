@@ -2,7 +2,7 @@
 title: "Enter the Metaverse: Get started with Unity for AR/VR"
 subtitle: "11 - 12 February 2025"
 duration: "2 days"
-heroImage: "/images/remote/A5Dd868Qo1geG7lsgR36QkJm9c.png"
+heroImage: "/images/A5Dd868Qo1geG7lsgR36QkJm9c.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["gamedev"]
 platformIds: ["unity", "ar-vr"]
@@ -11,7 +11,6 @@ weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Enter the Metaverse: Get started with Unity for AR/VR - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

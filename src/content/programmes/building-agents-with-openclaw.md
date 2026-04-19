@@ -2,7 +2,7 @@
 title: "Building Agents with OpenClaw"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/remote/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp"
+heroImage: "/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
@@ -12,7 +12,6 @@ homeFeaturedRank: 1
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Building Agents with OpenClaw - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

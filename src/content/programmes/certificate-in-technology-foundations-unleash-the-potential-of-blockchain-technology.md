@@ -2,7 +2,7 @@
 title: "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "17 days"
-heroImage: "/images/remote/WPfvSE5w5gyB6ippvoGs2pZN8.jpg"
+heroImage: "/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg"
 audienceIds: ["businesses", "public"]
 domainIds: ["cryptography"]
 platformIds: ["stellar"]
@@ -11,7 +11,6 @@ weight: 80
 signUpLabel: "Enquire now"
 signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Unleash%20the%20Potential%20of%20Blockchain%20Technology&nid=80491"
 seoTitle: "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

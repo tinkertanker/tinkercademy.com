@@ -2,7 +2,7 @@
 title: "Professional Certificate in Web Application Development"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "2 days/module"
-heroImage: "/images/remote/fWouEVvBE4OgXcNYbaPWP57gdM.png"
+heroImage: "/images/fWouEVvBE4OgXcNYbaPWP57gdM.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["uiux"]
 platformIds: ["bubble", "framer", "html-css", "javascript"]
@@ -11,7 +11,6 @@ weight: 82
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Professional Certificate in Web Application Development - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

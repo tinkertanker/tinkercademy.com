@@ -2,7 +2,7 @@
 title: "Digital Maker: Create with 3D Printing and IOT"
 subtitle: "14 - 15 January 2025"
 duration: "2 days"
-heroImage: "/images/remote/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png"
+heroImage: "/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png"
 audienceIds: ["public", "businesses"]
 domainIds: ["making", "iot"]
 platformIds: ["3d-printing", "m5stack"]
@@ -11,7 +11,6 @@ weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

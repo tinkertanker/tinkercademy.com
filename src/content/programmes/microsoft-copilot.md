@@ -2,7 +2,7 @@
 title: "Microsoft Copilot"
 subtitle: "An introductory course on leveraging Microsoft Copilot to enhance productivity."
 duration: "2 days"
-heroImage: "/images/remote/IRgW5yEXLnHZADRC2V0Chd9ogrc.png"
+heroImage: "/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png"
 audienceIds: ["tech-productivity", "businesses", "public"]
 domainIds: ["tech-productivity"]
 platformIds: ["microsoft-copilot"]
@@ -11,7 +11,6 @@ weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Microsoft Copilot - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview

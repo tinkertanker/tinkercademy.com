@@ -23,6 +23,7 @@ const formattedDate = date
 	description={article.content_text?.slice(0, 160) ?? ''}
 	canonical={canonical}
 	image={article.image ?? undefined}
+	ogType="article"
 >
 	<section class="article-hero">
 		{article.image && (

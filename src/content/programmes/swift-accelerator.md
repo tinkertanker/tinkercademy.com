@@ -2,7 +2,7 @@
 title: "Swift Accelerator"
 subtitle: "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
 duration: "8 months"
-heroImage: "/images/remote/pzZfgIklaSw80TJTGemWvQyrCLo.png"
+heroImage: "/images/pzZfgIklaSw80TJTGemWvQyrCLo.png"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]
@@ -11,7 +11,6 @@ weight: 67
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Swift Accelerator - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. "
 ---
 
 ## Course Overview
