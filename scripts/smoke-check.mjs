@@ -7,7 +7,7 @@
 
 const site = (process.env.SMOKE_SITE ?? process.argv[2] ?? '').trim();
 if (!site) {
-	console.error('smoke-check: base URL required. Pass as argv[1] or SMOKE_SITE env.');
+	console.error('smoke-check: base URL required. Pass as the first argument after the script name or set SMOKE_SITE env.');
 	process.exit(2);
 }
 
