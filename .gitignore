@@ -3,6 +3,7 @@ dist
 .astro
 scripts/_artifacts
 .codex
+.font-preview
 .DS_Store
 output
 .env
