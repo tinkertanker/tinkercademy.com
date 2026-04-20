@@ -15,8 +15,25 @@ function hasLocalFramerAsset(filename) {
 	return localAssetCache.get(filename);
 }
 
+function localiseRepoImagePath(value) {
+	if (typeof value !== 'string' || !value.startsWith('/images/remote/')) {
+		return value;
+	}
+
+	const filename = value.slice('/images/remote/'.length);
+	return hasLocalFramerAsset(filename) ? `/images/${filename}` : value;
+}
+
 export function localiseFramerImage(value) {
-	if (typeof value !== 'string' || !value.includes('framerusercontent.com/images/')) {
+	if (typeof value !== 'string') {
+		return value;
+	}
+
+	if (value.startsWith('/images/remote/')) {
+		return localiseRepoImagePath(value);
+	}
+
+	if (!value.includes('framerusercontent.com/images/')) {
 		return value;
 	}
 
