@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tinkercademy hero font trials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --accent: #f05d57;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #111;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+  }
+  .panel {
+    position: relative;
+    width: 1200px;
+    height: 360px;
+    overflow: clip;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+  .scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,.78) 100%);
+  }
+  .content {
+    position: relative;
+    height: 100%;
+    padding: 28px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .9rem;
+  }
+  .label {
+    position: absolute;
+    top: 14px; left: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(0,0,0,.55);
+    padding: 5px 9px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+  }
+  h1 { margin: 0; max-width: 17ch; line-height: 1; text-wrap: balance; }
+  p.lead { margin: 0; max-width: 48ch; color: rgba(255,255,255,.92); font-size: 16px; line-height: 1.55; }
+  .actions { display: flex; gap: .55rem; margin-top: .25rem; }
+  .pill {
+    display: inline-flex; align-items: center; height: 36px; padding: 0 .95rem;
+    border-radius: 999px; border: 1px solid rgba(255,255,255,.55);
+    background: rgba(0,0,0,.45); color: #fff; text-decoration: none;
+    font-family: 'Rubik', sans-serif; font-size: 13px; font-weight: 500;
+  }
+  .pill--primary { background: var(--accent); border-color: var(--accent); }
+
+  /* ─────────── Option-specific title styles ─────────── */
+
+  /* 1. Fraunces — bold roman + bold italic accent (one family) */
+  .opt-fraunces h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 64px;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+    letter-spacing: -0.015em;
+  }
+  .opt-fraunces .accent {
+    font-style: italic;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+
+  /* 2. Instrument Serif — light roman + iconic italic accent */
+  .opt-instrument h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 78px;
+    letter-spacing: -0.01em;
+  }
+  .opt-instrument .accent {
+    font-style: italic;
+  }
+
+  /* 3. Playfair Display — high-contrast classic */
+  .opt-playfair h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 60px;
+    letter-spacing: -0.012em;
+  }
+  .opt-playfair .accent {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  /* 4. Newsreader — friendly literary serif */
+  .opt-newsreader h1 {
+    font-family: 'Newsreader', serif;
+    font-weight: 700;
+    font-size: 64px;
+    font-variation-settings: "opsz" 72;
+    letter-spacing: -0.012em;
+  }
+  .opt-newsreader .accent {
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* 5. Bricolage Grotesque (bold sans) + Fraunces italic accent — mix */
+  .opt-mix h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    font-variation-settings: "opsz" 96;
+    letter-spacing: -0.025em;
+  }
+  .opt-mix .accent {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.005em;
+  }
+
+  /* 6. DM Serif Display — display-weight contrast */
+  .opt-dmserif h1 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 70px;
+    letter-spacing: -0.015em;
+  }
+  .opt-dmserif .accent {
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="panel opt-fraunces">
+  <img class="bg" src="https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=2034&height=1000" alt="">
+  <div class="scrim"></div>
+  <span class="label">1 · Fraunces (bold + italic, one family)</span>
+  <div class="content">
+    <h1>Illuminate your journey <span class="accent">into tech.</span></h1>
+    <p class="lead">Learn coding and digital making from expert coders and makers.</p>
+    <div class="actions">
+      <a class="pill pill--primary" href="#">Programmes</a>
+      <a class="pill" href="#">Schools</a>
+      <a class="pill" href="#">Professionals</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="panel opt-instrument">
+  <img class="bg" src="https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=2034&height=1000" alt="">
+  <div class="scrim"></div>
+  <span class="label">2 · Instrument Serif (editorial, lighter weight)</span>
+  <div class="content">
+    <h1>Illuminate your journey <span class="accent">into tech.</span></h1>
+    <p class="lead">Learn coding and digital making from expert coders and makers.</p>
+    <div class="actions">
+      <a class="pill pill--primary" href="#">Programmes</a>
+      <a class="pill" href="#">Schools</a>
+      <a class="pill" href="#">Professionals</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="panel opt-playfair">
+  <img class="bg" src="https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=2034&height=1000" alt="">
+  <div class="scrim"></div>
+  <span class="label">3 · Playfair Display (classic high-contrast)</span>
+  <div class="content">
+    <h1>Illuminate your journey <span class="accent">into tech.</span></h1>
+    <p class="lead">Learn coding and digital making from expert coders and makers.</p>
+    <div class="actions">
+      <a class="pill pill--primary" href="#">Programmes</a>
+      <a class="pill" href="#">Schools</a>
+      <a class="pill" href="#">Professionals</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="panel opt-newsreader">
+  <img class="bg" src="https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=2034&height=1000" alt="">
+  <div class="scrim"></div>
+  <span class="label">4 · Newsreader (warm literary serif)</span>
+  <div class="content">
+    <h1>Illuminate your journey <span class="accent">into tech.</span></h1>
+    <p class="lead">Learn coding and digital making from expert coders and makers.</p>
+    <div class="actions">
+      <a class="pill pill--primary" href="#">Programmes</a>
+      <a class="pill" href="#">Schools</a>
+      <a class="pill" href="#">Professionals</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="panel opt-mix">
+  <img class="bg" src="https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=2034&height=1000" alt="">
+  <div class="scrim"></div>
+  <span class="label">5 · Bricolage Grotesque + Fraunces italic (sans / serif mix)</span>
+  <div class="content">
+    <h1>Illuminate your journey <span class="accent">into tech.</span></h1>
+    <p class="lead">Learn coding and digital making from expert coders and makers.</p>
+    <div class="actions">
+      <a class="pill pill--primary" href="#">Programmes</a>
+      <a class="pill" href="#">Schools</a>
+      <a class="pill" href="#">Professionals</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="panel opt-dmserif">
+  <img class="bg" src="https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=2034&height=1000" alt="">
+  <div class="scrim"></div>
+  <span class="label">6 · DM Serif Display (max contrast, dramatic)</span>
+  <div class="content">
+    <h1>Illuminate your journey <span class="accent">into tech.</span></h1>
+    <p class="lead">Learn coding and digital making from expert coders and makers.</p>
+    <div class="actions">
+      <a class="pill pill--primary" href="#">Programmes</a>
+      <a class="pill" href="#">Schools</a>
+      <a class="pill" href="#">Professionals</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
