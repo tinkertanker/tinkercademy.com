@@ -35,6 +35,10 @@ function normalisePath(href: string) {
 	return toSiteHref(href).replace(/\/$/, '') || '/';
 }
 
+function isExternalLink(href: string) {
+	return toSiteHref(href) === href && /^https?:\/\//.test(href);
+}
+
 function isActiveLink(href: string) {
 	const path = normalisePath(href);
 	if (path === '/courses-all') {
@@ -56,6 +60,8 @@ function isActiveLink(href: string) {
 					<li class={link.hasDropdown ? 'has-dropdown' : ''}>
 						<a
 							href={toSiteHref(link.href)}
+							target={isExternalLink(link.href) ? '_blank' : undefined}
+							rel={isExternalLink(link.href) ? 'noopener' : undefined}
 							class:list={{ 'is-active': isActiveLink(link.href) }}
 							aria-current={isActiveLink(link.href) ? 'page' : undefined}
 						>
@@ -105,6 +111,8 @@ function isActiveLink(href: string) {
 					) : (
 						<a
 							href={toSiteHref(link.href)}
+							target={isExternalLink(link.href) ? '_blank' : undefined}
+							rel={isExternalLink(link.href) ? 'noopener' : undefined}
 							class:list={{ 'is-active': isActiveLink(link.href) }}
 							aria-current={isActiveLink(link.href) ? 'page' : undefined}
 						>
@@ -392,11 +400,10 @@ function isActiveLink(href: string) {
 		align-items: center;
 		justify-content: flex-start;
 		gap: 1.5rem;
-		width: 100%;
-		max-width: none;
-		margin: 0;
+		width: min(1160px, calc(100vw - 1.5rem));
+		margin: 0 auto;
 		min-height: 64px;
-		padding: 0 50px;
+		padding: 0;
 	}
 
 	.brand__logo {
@@ -772,9 +779,6 @@ function isActiveLink(href: string) {
 	}
 
 	@media (max-width: 809px) {
-		.header-inner {
-			padding: 0 1rem 0 1.25rem;
-		}
 		.nav-desktop {
 			display: none;
 		}

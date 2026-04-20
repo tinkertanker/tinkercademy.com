@@ -37,9 +37,8 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 ---
 
 <footer class="site-footer">
-	<div class="site-footer__inner site-footer__columns">
-		<!-- Column 1: Brand -->
-		<div class="site-footer__col site-footer__col--brand">
+	<div class="site-footer__inner">
+		<div class="site-footer__brand">
 			<a href="/" class="site-footer__logo-link">
 				<img src={LOGO_WHITE} alt="Tinkercademy" class="site-footer__logo" />
 			</a>
@@ -50,53 +49,51 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 			</p>
 		</div>
 
-		<!-- Column 2: Mailing List -->
-		<div class="site-footer__col">
-			<h3 class="site-footer__heading">Sign up for our mailing list!</h3>
-			<p class="site-footer__body">
-				Teachers will receive a monthly (or so we hope) email with news & thoughts on
-				tech education; free workshops, resources, and competitions for students; and other
-				newsworthy messages.
-			</p>
-			<p class="site-footer__body">
-				For students and professionals, we'll send information about free learning
-				resources we publish, and occasionally ask you to check out our new courses and
-				offerings.
-			</p>
-			<a class="site-footer__cta" href="https://form.jotform.com/223001013827440">Sign Up</a>
-		</div>
+		<div class="site-footer__columns">
+			<div class="site-footer__col">
+				<h3 class="site-footer__heading">Sign up for our mailing list!</h3>
+				<p class="site-footer__body">
+					Teachers will receive a monthly (or so we hope) email with news & thoughts on
+					tech education; free workshops, resources, and competitions for students; and other
+					newsworthy messages.
+				</p>
+				<p class="site-footer__body">
+					For students and professionals, we'll send information about free learning
+					resources we publish, and occasionally ask you to check out our new courses and
+					offerings.
+				</p>
+				<a class="site-footer__cta" href="https://form.jotform.com/223001013827440">Sign Up</a>
+			</div>
 
-		<!-- Column 3: Our Brands -->
-		<div class="site-footer__col">
-			<h3 class="site-footer__heading">Our Brands</h3>
-			<p class="site-footer__body">
-				Looking for educational toys and kits? That's our
-				<a href="https://gethacking.com/" class="site-footer__link">Get Hacking Store</a>,
-				run by our subsidiary
-				<a href="https://tinkerclass.tech" class="site-footer__link">Tinker Class Pte Ltd</a>.
-			</p>
-			<p class="site-footer__body">
-				We're a proud investor in, and collaborator with,
-				<a href="https://tinkermind.sg" class="site-footer__link">Tinkermind</a>,
-				a maker-centric tech education company, because we like their name.
-			</p>
-		</div>
+			<div class="site-footer__col">
+				<h3 class="site-footer__heading">Our Brands</h3>
+				<p class="site-footer__body">
+					Looking for educational toys and kits? That's our
+					<a href="https://gethacking.com/" class="site-footer__link">Get Hacking Store</a>,
+					run by our subsidiary
+					<a href="https://tinkerclass.tech" class="site-footer__link">Tinker Class Pte Ltd</a>.
+				</p>
+				<p class="site-footer__body">
+					We're a proud investor in, and collaborator with,
+					<a href="https://tinkermind.sg" class="site-footer__link">Tinkermind</a>,
+					a maker-centric tech education company, because we like their name.
+				</p>
+			</div>
 
-		<!-- Column 4: Contact -->
-		<div class="site-footer__col">
-			<h3 class="site-footer__heading">Get in touch!</h3>
-			<p class="site-footer__body site-footer__address">{address}</p>
-			<p class="site-footer__body">
-				<a href={`mailto:${email}`} class="site-footer__link">{email}</a>
-			</p>
-			<p class="site-footer__body">
-				<a href={`tel:${phone}`} class="site-footer__link">{phoneDisplay}</a>
-			</p>
-			<a class="site-footer__cta" href="/contact-us">Contact Us</a>
+			<div class="site-footer__col site-footer__col--contact">
+				<h3 class="site-footer__heading">Get in touch!</h3>
+				<p class="site-footer__body site-footer__address">{address}</p>
+				<p class="site-footer__body">
+					<a href={`mailto:${email}`} class="site-footer__link">{email}</a>
+				</p>
+				<p class="site-footer__body">
+					<a href={`tel:${phone}`} class="site-footer__link">{phoneDisplay}</a>
+				</p>
+				<a class="site-footer__cta" href="/contact-us">Contact Us</a>
+			</div>
 		</div>
 	</div>
 
-	<!-- Bottom bar -->
 	<div class="site-footer__inner site-footer__bottom">
 		<div class="site-footer__bottom-left">
 			<span>&copy; 2026 Tinkertanker Pte Ltd.</span>
@@ -119,7 +116,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 	.site-footer {
 		background: rgb(51, 51, 51);
 		color: #ffffff;
-		padding: 3rem 0 2rem;
+		padding: 2.75rem 0 2.5rem;
 	}
 
 	.site-footer__inner {
@@ -127,88 +124,94 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 		margin: 0 auto;
 	}
 
+	.site-footer__brand {
+		max-width: 44rem;
+		margin-bottom: 4.5rem;
+	}
+
 	.site-footer__columns {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 2rem;
+		grid-template-columns: minmax(0, 1.55fr) minmax(0, 1.1fr) minmax(15rem, 0.7fr);
+		column-gap: clamp(3rem, 5vw, 8rem);
+		align-items: start;
+		justify-content: space-between;
 	}
 
 	.site-footer__logo {
-		height: 22px;
+		height: 40px;
 		width: auto;
-		opacity: 0.9;
+		opacity: 1;
 	}
 
 	.site-footer__logo-link {
 		display: inline-block;
-		margin-bottom: 0.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.site-footer__heading {
-		margin: 0 0 0.75rem;
+		margin: 0 0 1.75rem;
 		font-family: 'Rubik', sans-serif;
-		font-size: 0.95rem;
+		font-size: 1.05rem;
 		font-weight: 500;
 		color: #ffffff;
 	}
 
 	.site-footer__body {
-		margin: 0 0 0.75rem;
+		margin: 0 0 1.2rem;
 		font-family: 'Rubik', sans-serif;
-		font-size: 0.82rem;
-		line-height: 1.7;
-		color: rgba(255, 255, 255, 0.7);
+		font-size: 1rem;
+		line-height: 1.45;
+		color: rgba(255, 255, 255, 0.92);
 	}
 
 	.site-footer__link {
-		color: rgb(0, 153, 255);
-		text-decoration: none;
-	}
-
-	.site-footer__link:hover {
+		color: inherit;
 		text-decoration: underline;
+		text-underline-offset: 0.12em;
+		text-decoration-thickness: 0.08em;
 	}
 
 	.site-footer__cta {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0.55rem 1.1rem;
-		border-radius: 30px;
+		padding: 1rem 1.9rem;
+		border-radius: 999px;
 		background: rgb(240, 93, 87);
 		color: #ffffff;
 		text-decoration: none;
 		font-family: 'Rubik', sans-serif;
-		font-size: 0.82rem;
+		font-size: 0.88rem;
 		font-weight: 500;
-		margin-top: 0.25rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin-top: 0.5rem;
 	}
 
 	.site-footer__bottom {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: 2.5rem;
-		padding-top: 1.5rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.12);
+		margin-top: 5.5rem;
 	}
 
 	.site-footer__bottom-left {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem 1.5rem;
+		flex-direction: column;
+		gap: 0.2rem;
 		font-family: 'Rubik', sans-serif;
-		font-size: 0.78rem;
-		color: rgba(255, 255, 255, 0.5);
+		font-size: 0.95rem;
+		color: rgba(255, 255, 255, 0.92);
 	}
 
 	.site-footer__tagline {
-		font-style: italic;
+		font-style: normal;
 	}
 
 	.site-footer__social {
 		display: flex;
-		gap: 0.75rem;
+		flex-wrap: wrap;
+		gap: 1rem;
 		align-items: center;
 	}
 
@@ -216,17 +219,27 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		color: rgba(255, 255, 255, 0.5);
+		color: rgb(240, 93, 87);
 		transition: color 0.15s;
 	}
 
+	.site-footer__social-icon :global(svg) {
+		width: 2rem;
+		height: 2rem;
+	}
+
 	.site-footer__social-icon:hover {
-		color: rgb(240, 93, 87);
+		color: #ff8b82;
 	}
 
 	@media (max-width: 1199px) {
+		.site-footer__brand {
+			margin-bottom: 3rem;
+		}
+
 		.site-footer__columns {
 			grid-template-columns: repeat(2, 1fr);
+			gap: 2.5rem;
 		}
 	}
 

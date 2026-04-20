@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import audiencesData from '../data/pages/audiences.json';
 import domainsData from '../data/pages/domains.json';
 import platformsData from '../data/pages/platforms.json';
-import { normaliseFramerMedia } from './media.js';
+import { localiseFramerImage, normaliseFramerMedia } from './media.js';
 import { createProgrammeFilterHref } from './programme-filters.ts';
 
 type AudienceRecord = {
@@ -173,7 +173,7 @@ function resolveProgramme(entry: ProgrammeEntry): ResolvedProgramme {
 		title: entry.data.title,
 		subtitle: entry.data.subtitle,
 		duration: entry.data.duration,
-		heroImage: entry.data.heroImage,
+		heroImage: localiseFramerImage(entry.data.heroImage),
 		cardBlurb: entry.data.cardBlurb,
 		weight: entry.data.weight,
 		homeFeaturedRank: entry.data.homeFeaturedRank ?? null,

@@ -17,6 +17,7 @@ const heroTitle =
 	page.hero_title ?? 'Showcase of Our Coders, Tinkerers, Makers, and their Journeys';
 const heroLead =
 	'Meet the bright minds who\'ve learned, built, and grown with us, from classroom projects to professional success.';
+const buildLogUrl = 'https://ghost.tk.sg/';
 
 const studentPhotos = [
 	'/images/VyH1UxmLf2vV96I5UpoW6fdCIX4.png',
@@ -84,6 +85,9 @@ const jiaChenQuote =
 		<div class="sc-hero__content shell">
 			<h1 class="sc-hero__title">{heroTitle}</h1>
 			<p class="sc-hero__lead">{heroLead}</p>
+			<div class="sc-hero__actions">
+				<a class="sc-hero__cta" href={buildLogUrl} target="_blank" rel="noopener">Build Log</a>
+			</div>
 		</div>
 	</section>
 
@@ -156,7 +160,7 @@ const jiaChenQuote =
 				We're building software, electronics, curriculum — and the next generation of coders,
 				makers, and creators. Come check out our build log and contribute to it one day!
 			</p>
-			<a class="sc-buildlog__cta" href="https://ghost.tk.sg/" target="_blank" rel="noopener">
+			<a class="sc-buildlog__cta" href={buildLogUrl} target="_blank" rel="noopener">
 				Build Log
 			</a>
 		</div>
@@ -218,6 +222,42 @@ const jiaChenQuote =
 		margin: 0;
 		max-width: 55ch;
 		line-height: 1.6;
+	}
+
+	.sc-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+	}
+
+	.sc-hero__cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 42px;
+		padding: 0.65rem 1.15rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.sc-hero__cta,
+	.sc-hero__cta:visited,
+	.sc-hero__cta:hover,
+	.sc-hero__cta:active {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.sc-hero__cta:hover {
+		background: rgb(220, 74, 68);
+		transform: translateY(-1px);
 	}
 
 	.sc-section {

@@ -37,7 +37,7 @@
   ],
   "navigation": [
     {
-      "label": "ABOUT US",
+      "label": "ABOUT",
       "href": "https://tinkercademy.com/about-us"
     },
     {
@@ -49,7 +49,7 @@
       "href": "https://gethacking.com/"
     },
     {
-      "label": "CONTACT US",
+      "label": "CONTACT",
       "href": "https://tinkercademy.com/contact-us"
     }
   ],
