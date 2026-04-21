@@ -75,7 +75,7 @@ const organisationSchema = {
 			gtag('js', new Date());
 			gtag('config', gaMeasurementId);
 		</script>
-		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)}></script>
 	</head>
 	<body>
 		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />

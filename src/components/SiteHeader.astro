@@ -561,11 +561,12 @@ function isActiveLink(href: string) {
 	}
 
 	/* ── Search overlay ──
-	   The search overlay is rendered via JS (document.createElement), so
-	   its inner elements don't get Astro's scoped data-astro-cid-* attr.
-	   We therefore style them as :global() from here — that keeps these
-	   rules in this component's bundle without requiring a scoped attr
-	   on runtime-generated nodes. */
+	   The overlay markup is rendered by this Astro component, but some
+	   inner elements (runtime-generated result rows) don't get Astro's
+	   scoped data-astro-cid-* attr.
+	   We therefore style those nodes as :global() from here — that keeps
+	   these rules in this component's bundle without requiring a scoped
+	   attr on runtime-generated nodes. */
 	.search-overlay {
 		position: fixed;
 		inset: 0;
