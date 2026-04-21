@@ -4,6 +4,7 @@ import CtaBanner from '../../components/CtaBanner.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
+import { clipDescription } from '../../lib/seo.ts';
 
 const SITE_ORIGIN = 'https://tinkercademy.com';
 
@@ -51,17 +52,8 @@ const pageTitle = `${titleBase}${TITLE_SUFFIX}`;
    Authored `seoDescription` wins; otherwise we derive a short summary
    from `cardBlurb`, clipped on the nearest sentence/word boundary below
    160 chars so Google's SERP doesn't truncate mid-word. */
-function clipDescription(raw: string | null | undefined, max = 160): string {
-	const text = (raw ?? '').replace(/\s+/g, ' ').trim();
-	if (text.length <= max) return text;
-	const slice = text.slice(0, max + 1);
-	const lastSentence = slice.lastIndexOf('. ');
-	const lastSpace = slice.lastIndexOf(' ');
-	const cut = lastSentence > max - 60 ? lastSentence + 1 : lastSpace;
-	return (cut > 0 ? text.slice(0, cut) : text.slice(0, max)).replace(/[,;:\-–—\s]+$/, '') + '…';
-}
 const metaDescription =
-	programme.seoDescription ?? clipDescription(programme.cardBlurb ?? '');
+	programme.seoDescription ?? clipDescription(programme.cardBlurb);
 
 /* ─── Meta info ──────────────────────────────────────────────────── */
 const audiences = programme.audiences ?? [];
