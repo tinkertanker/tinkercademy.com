@@ -12,6 +12,10 @@ const {
 	ogType = 'website',
 } = Astro.props;
 
+const siteUrl = site.siteSettings?.base_url ?? Astro.site?.href ?? 'https://tinkercademy.com';
+const gaMeasurementId = 'G-8PXL6RTPR4';
+const socialLinks = (site.socialLinks ?? []) as Array<{ url?: unknown }>;
+
 /* og:image must be an absolute URL for social previews. Resolve relative
    paths against the canonical URL when available, else the site setting. */
 const ogImageBase = canonical ?? Astro.site?.href ?? site.siteSettings?.base_url;
@@ -24,6 +28,16 @@ if (image) {
 
 const siteName = site.siteSettings?.site_name ?? 'Tinkercademy';
 const twitterCard = ogImage ? 'summary_large_image' : 'summary';
+const organisationSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: siteName,
+	url: siteUrl,
+	logo: new URL('/favicon.png', siteUrl).toString(),
+	sameAs: socialLinks
+		.map((link) => link?.url)
+		.filter((url): url is string => typeof url === 'string' && /^https?:\/\//i.test(url)),
+};
 ---
 
 <!doctype html>
@@ -48,8 +62,20 @@ const twitterCard = ogImage ? 'summary_large_image' : 'summary';
 		{ogImage && <meta name="twitter:image" content={ogImage} />}
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="alternate icon" type="image/png" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/images/logos/favicon.png" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'G-8PXL6RTPR4');
+		</script>
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)} />
 	</head>
 	<body>
 		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />
