@@ -714,7 +714,7 @@ function isActiveLink(href: string) {
 	/* ── Result row (rendered at runtime, hence :global) ── */
 	.search-overlay__results :global(.search-result) {
 		display: grid;
-		grid-template-columns: 6.25rem minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1fr) auto;
 		grid-template-rows: auto auto;
 		column-gap: 0.9rem;
 		row-gap: 0.15rem;
@@ -739,8 +739,8 @@ function isActiveLink(href: string) {
 
 	.search-overlay__results :global(.search-result__badge) {
 		grid-row: 1 / span 2;
-		grid-column: 1;
-		justify-self: start;
+		grid-column: 2;
+		justify-self: end;
 		align-self: center;
 		display: inline-flex;
 		align-items: center;
@@ -759,7 +759,7 @@ function isActiveLink(href: string) {
 	}
 
 	.search-overlay__results :global(.search-result__title) {
-		grid-column: 2;
+		grid-column: 1;
 		grid-row: 1;
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.96rem;
@@ -777,7 +777,7 @@ function isActiveLink(href: string) {
 	}
 
 	.search-overlay__results :global(.search-result__meta) {
-		grid-column: 2;
+		grid-column: 1;
 		grid-row: 2;
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.8rem;
