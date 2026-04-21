@@ -1,0 +1,107 @@
+---
+/**
+ * 404 — served by Cloudflare Pages when no matching file is found.
+ *
+ * Output path: /404.html (Astro emits dist/404.html for the `404.astro`
+ * special filename in a static build).
+ */
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+const canonical = 'https://tinkercademy.com/404';
+---
+
+<ContentLayout
+	title="Page not found — Tinkercademy"
+	description="Sorry, we couldn't find that page. Let's get you back on track."
+	canonical={canonical}
+>
+	<section class="nf-hero">
+		<div class="shell nf-hero__inner">
+			<p class="nf-hero__eyebrow">Error 404</p>
+			<h1 class="nf-hero__title">This page wandered off.</h1>
+			<p class="nf-hero__lead">
+				The link may be out of date, or the page may have moved. Here are some
+				good places to pick things up:
+			</p>
+			<div class="nf-hero__actions">
+				<a class="nf-pill nf-pill--primary" href="/">Home</a>
+				<a class="nf-pill" href="/courses-all">All Courses</a>
+				<a class="nf-pill" href="/about-us">About Us</a>
+				<a class="nf-pill" href="/contact-us">Contact</a>
+			</div>
+		</div>
+	</section>
+</ContentLayout>
+
+<style>
+	.nf-hero {
+		padding: 6rem 0 5rem;
+		background: linear-gradient(135deg, #342c68 0%, #453881 42%, #251e51 100%);
+		color: #fffdf8;
+	}
+
+	.nf-hero__inner {
+		display: grid;
+		gap: 1rem;
+		max-width: 680px;
+	}
+
+	.nf-hero__eyebrow {
+		margin: 0;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.8rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgba(255, 253, 248, 0.72);
+	}
+
+	.nf-hero__title {
+		margin: 0;
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2.4rem, 6vw, 4rem);
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.nf-hero__lead {
+		margin: 0;
+		max-width: 52ch;
+		font-family: 'Rubik', sans-serif;
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: rgba(255, 253, 248, 0.9);
+	}
+
+	.nf-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+	}
+
+	.nf-pill {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.05rem;
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.22);
+		color: #fffdf8;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+	}
+
+	.nf-pill:hover {
+		background: rgba(255, 255, 255, 0.16);
+	}
+
+	.nf-pill--primary {
+		background: rgb(240, 93, 87);
+		border-color: rgb(240, 93, 87);
+	}
+
+	.nf-pill--primary:hover {
+		background: rgb(220, 72, 66);
+	}
+</style>
