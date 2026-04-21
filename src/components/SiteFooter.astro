@@ -160,16 +160,15 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 	.site-footer__body {
 		margin: 0 0 1.05rem;
 		font-family: 'Rubik', sans-serif;
-		font-size: var(--body-font-size);
-		line-height: var(--body-line-height);
+		font-size: 14px;
+		line-height: 1.4;
 		color: rgba(255, 255, 255, 0.92);
 	}
 
-	/* The contact stack (address/email/phone) reads better a touch tighter
-	   than paragraph copy in other footer columns. */
+	/* Contact stack keeps the same scale as footer body copy, but uses
+	   slightly smaller vertical gaps so address/email/phone read as one unit. */
 	.site-footer__col--contact .site-footer__body {
-		line-height: var(--body-line-height-tight);
-		margin-bottom: 0.65rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.site-footer__link {
