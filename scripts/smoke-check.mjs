@@ -28,6 +28,8 @@ const checks = [
 	{ path: '/sitemap-0.xml', contains: ['<urlset', '<loc>'] },
 	{ path: '/favicon.svg' },
 	{ path: '/favicon.ico' },
+	{ path: '/favicon.png' },
+	{ path: '/apple-touch-icon.png' },
 	{ path: '/', contains: LAYOUT_MARKERS },
 	{ path: '/about-us', contains: LAYOUT_MARKERS },
 	{ path: '/courses-all', contains: LAYOUT_MARKERS },
