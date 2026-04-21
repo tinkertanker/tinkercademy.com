@@ -457,19 +457,34 @@ function isActiveLink(href: string) {
 		transition: transform 0.2s;
 	}
 
-	/* ── Desktop dropdown ── */
+	/* ── Desktop dropdown ──
+	   The dropdown sits inside the trigger's <li>, so the <li>'s hover
+	   state keeps it open. We extend the trigger's hittable area down
+	   to meet the panel (via the header-inner min-height and a gap that
+	   belongs to the panel as padding, not margin) so the cursor never
+	   crosses "dead space" between trigger and panel. */
 	.has-dropdown {
 		position: relative;
 	}
 
 	.dropdown {
-		display: none;
+		/* Keep the element in the DOM so the pointer can enter it from
+		   the trigger without crossing dead space; toggle visibility and
+		   opacity rather than display to avoid a hover/repaint race. */
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-4px);
+		transition: opacity 0.12s ease, transform 0.12s ease, visibility 0s linear 0.12s;
 		position: absolute;
 		top: 100%;
 		left: -16px;
 		list-style: none;
-		margin: 0.75rem 0 0;
-		padding: 0.7rem 0;
+		margin: 0;
+		/* Top padding creates a "bridge" from the trigger into the menu
+		   — the cursor stays inside the dropdown's hit area the whole
+		   way down, so hover never drops between trigger and items. */
+		padding: 1rem 0 0.7rem;
 		background: #fff;
 		border: 1px solid rgb(229, 229, 229);
 		border-radius: 14px;
@@ -495,11 +510,17 @@ function isActiveLink(href: string) {
 		color: rgb(255, 89, 89);
 	}
 
-	.has-dropdown:hover .dropdown {
-		display: block;
+	.has-dropdown:hover .dropdown,
+	.has-dropdown:focus-within .dropdown {
+		visibility: visible;
+		opacity: 1;
+		pointer-events: auto;
+		transform: translateY(0);
+		transition: opacity 0.12s ease, transform 0.12s ease, visibility 0s linear 0s;
 	}
 
-	.has-dropdown:hover .nav-chevron {
+	.has-dropdown:hover .nav-chevron,
+	.has-dropdown:focus-within .nav-chevron {
 		transform: rotate(180deg);
 	}
 
