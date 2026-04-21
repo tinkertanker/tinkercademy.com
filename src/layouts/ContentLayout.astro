@@ -241,6 +241,19 @@ const organisationSchema = {
 		--heading: 'Oswald', sans-serif;
 		--meta: 'Rubik', sans-serif;
 		--text: rgb(51, 51, 51);
+
+		/* Body typography tokens.
+		   Any body copy, paragraph, or lead/subtitle should prefer these
+		   over hardcoded sizes/line-heights so the shared shell (header,
+		   footer, CTA banner, prose) and every page render at the same
+		   rhythm. */
+		--body-font-size: 1rem;
+		--body-line-height: 1.7;
+		--body-line-height-tight: 1.55;
+		--body-weight: 400;
+		--body-weight-medium: 500;
+		--lead-font-size: clamp(1rem, 1.4vw, 1.1rem);
+		--lead-line-height: 1.6;
 	}
 
 	* {
@@ -258,6 +271,9 @@ const organisationSchema = {
 		margin: 0;
 		min-height: 100vh;
 		background: #ffffff;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
+		font-weight: var(--body-weight);
 	}
 
 	a {
