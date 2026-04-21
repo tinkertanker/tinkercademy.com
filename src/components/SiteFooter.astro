@@ -165,6 +165,13 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 		color: rgba(255, 255, 255, 0.92);
 	}
 
+	/* The contact stack (address/email/phone) reads better a touch tighter
+	   than paragraph copy in other footer columns. */
+	.site-footer__col--contact .site-footer__body {
+		line-height: var(--body-line-height-tight);
+		margin-bottom: 0.65rem;
+	}
+
 	.site-footer__link {
 		color: inherit;
 		text-decoration: underline;
