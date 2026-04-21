@@ -477,13 +477,17 @@ function isActiveLink(href: string) {
 		transform: translateY(-4px);
 		transition: opacity 0.12s ease, transform 0.12s ease, visibility 0s linear 0.12s;
 		position: absolute;
-		top: 100%;
+		/* Visually drop the panel 2pt below the trigger's baseline; the
+		   ::before rule below extends the hit area back up over the gap
+		   so hover doesn't drop on the way down. */
+		top: calc(100% + 2pt);
 		left: -16px;
 		list-style: none;
 		margin: 0;
-		/* Top padding creates a "bridge" from the trigger into the menu
-		   — the cursor stays inside the dropdown's hit area the whole
-		   way down, so hover never drops between trigger and items. */
+		/* Top padding acts as a "bridge" from the trigger into the menu
+		   body — the cursor stays inside the dropdown's hit area the
+		   whole way down, so hover never drops between trigger and
+		   items. */
 		padding: 1rem 0 0.7rem;
 		background: #fff;
 		border: 1px solid rgb(229, 229, 229);
@@ -491,6 +495,18 @@ function isActiveLink(href: string) {
 		box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 		min-width: 232px;
 		z-index: 30;
+	}
+
+	.dropdown::before {
+		/* Invisible bridge covering the 2pt visual gap above the panel.
+		   Keeps the cursor inside a hoverable region the entire journey
+		   from trigger to first menu item. */
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -2pt;
+		height: 2pt;
 	}
 
 	.dropdown li {
