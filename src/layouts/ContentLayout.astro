@@ -62,18 +62,18 @@ const organisationSchema = {
 		{ogImage && <meta name="twitter:image" content={ogImage} />}
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="118x118" />
 		<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 		<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}></script>
-		<script is:inline>
+		<script is:inline define:vars={{ gaMeasurementId }}>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
 			}
 			gtag('js', new Date());
-			gtag('config', 'G-8PXL6RTPR4');
+			gtag('config', gaMeasurementId);
 		</script>
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)} />
 	</head>
