@@ -34,6 +34,35 @@ if (!programme) return Astro.redirect('/404');
 const { Content } = await render(programme.entry);
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
 
+/* ─── Page title ────────────────────────────────────────────────────
+   Programme markdown files ship a long `seoTitle` of the form:
+     "<Programme name> - Tinkercademy: Coding and Making for …"
+   which is longer than Google's SERP cutoff. Normalise to our convention
+   (<Programme> — Tinkercademy) and clip long programme names so the full
+   string stays under Google's ~60-char title cutoff. */
+const TITLE_SUFFIX = ' — Tinkercademy';
+const TITLE_MAX_BASE = 60 - TITLE_SUFFIX.length;
+const titleBase = programme.title.length > TITLE_MAX_BASE
+	? `${programme.title.slice(0, TITLE_MAX_BASE - 1).trimEnd()}…`
+	: programme.title;
+const pageTitle = `${titleBase}${TITLE_SUFFIX}`;
+
+/* ─── Meta description ──────────────────────────────────────────────
+   Authored `seoDescription` wins; otherwise we derive a short summary
+   from `cardBlurb`, clipped on the nearest sentence/word boundary below
+   160 chars so Google's SERP doesn't truncate mid-word. */
+function clipDescription(raw: string | null | undefined, max = 160): string {
+	const text = (raw ?? '').replace(/\s+/g, ' ').trim();
+	if (text.length <= max) return text;
+	const slice = text.slice(0, max + 1);
+	const lastSentence = slice.lastIndexOf('. ');
+	const lastSpace = slice.lastIndexOf(' ');
+	const cut = lastSentence > max - 60 ? lastSentence + 1 : lastSpace;
+	return (cut > 0 ? text.slice(0, cut) : text.slice(0, max)).replace(/[,;:\-–—\s]+$/, '') + '…';
+}
+const metaDescription =
+	programme.seoDescription ?? clipDescription(programme.cardBlurb ?? '');
+
 /* ─── Meta info ──────────────────────────────────────────────────── */
 const audiences = programme.audiences ?? [];
 const domains = programme.domains ?? [];
@@ -51,8 +80,8 @@ const typeLabel =
 ---
 
 <ContentLayout
-	title={programme.seoTitle ?? programme.title}
-	description={programme.seoDescription ?? programme.cardBlurb ?? ''}
+	title={pageTitle}
+	description={metaDescription}
 	canonical={canonical}
 	image={programme.heroImage ?? undefined}
 >

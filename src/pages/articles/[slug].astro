@@ -12,6 +12,22 @@ export function getStaticPaths() {
 
 const { article } = Astro.props as { article: any };
 const canonical = new URL(`/articles/${article.slug}`, 'https://tinkercademy.com').toString();
+
+const TITLE_SUFFIX = ' — Tinkercademy';
+const TITLE_MAX_BASE = 60 - TITLE_SUFFIX.length;
+const titleBase = article.title.length > TITLE_MAX_BASE
+	? `${article.title.slice(0, TITLE_MAX_BASE - 1).trimEnd()}…`
+	: article.title;
+const pageTitle = `${titleBase}${TITLE_SUFFIX}`;
+
+function clipDescription(raw: string, max = 155): string {
+	const text = raw.replace(/\s+/g, ' ').trim();
+	if (text.length <= max) return text;
+	const slice = text.slice(0, max + 1);
+	const lastSpace = slice.lastIndexOf(' ');
+	return text.slice(0, lastSpace > 0 ? lastSpace : max).replace(/[,;:\-–—\s]+$/, '') + '…';
+}
+const metaDescription = clipDescription(article.content_text ?? '');
 const date = article.date ? new Date(article.date) : null;
 const formattedDate = date
 	? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -19,8 +35,8 @@ const formattedDate = date
 ---
 
 <ContentLayout
-	title={article.title}
-	description={article.content_text?.slice(0, 160) ?? ''}
+	title={pageTitle}
+	description={metaDescription}
 	canonical={canonical}
 	image={article.image ?? undefined}
 	ogType="article"

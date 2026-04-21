@@ -14,6 +14,35 @@ export function getStaticPaths() {
 
 const { tutorial } = Astro.props as { tutorial: any };
 const canonical = new URL(`/tutorials/${tutorial.slug}`, 'https://tinkercademy.com').toString();
+
+/* Page title: "<tutorial name> — Tinkercademy tutorials", clipped to a
+   SERP-safe length. Disambiguate tutorials that share a `title` (e.g.
+   two "MicroPython" entries) by folding in the tutorial's description. */
+const SUFFIX = ' — Tinkercademy tutorials';
+const sharedTutorialTitles = new Set(['MicroPython']);
+const titleBase = sharedTutorialTitles.has(tutorial.title)
+	? `${tutorial.title} · ${tutorial.description ?? tutorial.subtitle ?? tutorial.slug}`
+	: tutorial.title;
+const maxBaseLen = 60 - SUFFIX.length;
+const clippedBase =
+	titleBase.length > maxBaseLen ? `${titleBase.slice(0, maxBaseLen - 1).trimEnd()}…` : titleBase;
+const pageTitle = `${clippedBase}${SUFFIX}`;
+
+/* Meta description: prefer authored SEO description, else subtitle +
+   description, clipped just under the SERP cutoff. */
+function clipDescription(raw: string, max = 155): string {
+	const text = raw.replace(/\s+/g, ' ').trim();
+	if (text.length <= max) return text;
+	const slice = text.slice(0, max + 1);
+	const lastSpace = slice.lastIndexOf(' ');
+	return text.slice(0, lastSpace > 0 ? lastSpace : max).replace(/[,;:\-–—\s]+$/, '') + '…';
+}
+const rawDescription: string =
+	tutorial.seo?.description ??
+	[tutorial.subtitle, tutorial.description]
+		.filter((s: unknown) => typeof s === 'string' && (s as string).trim().length > 0)
+		.join(' — ');
+const metaDescription = clipDescription(rawDescription ?? '');
 const firstContentItem = tutorial.content?.[0];
 const contentItems =
 	firstContentItem?.type === 'image' &&
@@ -24,8 +53,8 @@ const contentItems =
 ---
 
 <ContentLayout
-	title={tutorial.seo?.title ?? tutorial.title}
-	description={tutorial.seo?.description ?? tutorial.description ?? ''}
+	title={pageTitle}
+	description={metaDescription}
 	canonical={canonical}
 	image={tutorial.hero_image ?? undefined}
 	ogType="article"

@@ -70,6 +70,33 @@ const displayTitle = isCourseListing
 	? COURSE_PAGE_TITLES[page.slug] ?? page.title
 	: page.title;
 
+/* ─── Per-route SEO overrides ───────────────────────────────────────────
+   Intentionally not sourced from `page.seo` — the imported Framer data
+   uses the same default title and description on most routes, which is
+   exactly the SEO mistake we're fixing here. Keyed by slug; extend as new
+   catch-all pages are added. */
+const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+	'courses-all': {
+		title: 'All courses — Tinkercademy',
+		description:
+			'Browse every Tinkercademy programme in one place. Coding, AI, web and mobile development, digital making, and more — for schools, professionals, and individuals.',
+	},
+	'courses-professionals': {
+		title: 'Professional courses — Tinkercademy',
+		description:
+			'Browse our professional training catalogue — AI, full-stack web, mobile, Unity, and digital making — delivered by expert instructors in Singapore.',
+	},
+	'courses-schools': {
+		title: 'School courses — Tinkercademy',
+		description:
+			'Coding, AI, and digital making programmes for MOE primary, secondary, and junior college schools, including Code for Fun and the LEARN Roadmap.',
+	},
+};
+const seoOverride = SEO_OVERRIDES[page.slug as string];
+const seoTitle = seoOverride?.title ?? page.seo?.title ?? displayTitle;
+const seoDescription =
+	seoOverride?.description ?? page.seo?.description ?? page.description ?? '';
+
 /* ─── Determine if content has rich types (image / richtext) ────────── */
 const contentBlocks = page.content ?? [];
 const hasRichContent = contentBlocks.some(
@@ -78,8 +105,8 @@ const hasRichContent = contentBlocks.some(
 ---
 
 <ContentLayout
-	title={page.seo?.title ?? displayTitle}
-	description={page.seo?.description ?? page.description ?? ''}
+	title={seoTitle}
+	description={seoDescription}
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
 >
