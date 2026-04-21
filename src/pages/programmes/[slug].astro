@@ -4,6 +4,7 @@ import CtaBanner from '../../components/CtaBanner.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
+import { clipDescription } from '../../lib/seo.ts';
 
 const SITE_ORIGIN = 'https://tinkercademy.com';
 
@@ -34,6 +35,26 @@ if (!programme) return Astro.redirect('/404');
 const { Content } = await render(programme.entry);
 const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
 
+/* ─── Page title ────────────────────────────────────────────────────
+   Programme markdown files ship a long `seoTitle` of the form:
+     "<Programme name> - Tinkercademy: Coding and Making for …"
+   which is longer than Google's SERP cutoff. Normalise to our convention
+   (<Programme> — Tinkercademy) and clip long programme names so the full
+   string stays under Google's ~60-char title cutoff. */
+const TITLE_SUFFIX = ' — Tinkercademy';
+const TITLE_MAX_BASE = 60 - TITLE_SUFFIX.length;
+const titleBase = programme.title.length > TITLE_MAX_BASE
+	? `${programme.title.slice(0, TITLE_MAX_BASE - 1).trimEnd()}…`
+	: programme.title;
+const pageTitle = `${titleBase}${TITLE_SUFFIX}`;
+
+/* ─── Meta description ──────────────────────────────────────────────
+   Authored `seoDescription` wins; otherwise we derive a short summary
+   from `cardBlurb`, clipped on the nearest sentence/word boundary below
+   160 chars so Google's SERP doesn't truncate mid-word. */
+const metaDescription =
+	programme.seoDescription ?? clipDescription(programme.cardBlurb);
+
 /* ─── Meta info ──────────────────────────────────────────────────── */
 const audiences = programme.audiences ?? [];
 const domains = programme.domains ?? [];
@@ -51,8 +72,8 @@ const typeLabel =
 ---
 
 <ContentLayout
-	title={programme.seoTitle ?? programme.title}
-	description={programme.seoDescription ?? programme.cardBlurb ?? ''}
+	title={pageTitle}
+	description={metaDescription}
 	canonical={canonical}
 	image={programme.heroImage ?? undefined}
 >
@@ -412,8 +433,8 @@ const typeLabel =
 
 	.prog-body :global(p) {
 		font-family: 'Rubik', sans-serif;
-		font-size: 15px;
-		line-height: 1.65;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin: 0 0 0.75rem;
 	}
@@ -426,8 +447,8 @@ const typeLabel =
 
 	.prog-body :global(li) {
 		font-family: 'Rubik', sans-serif;
-		font-size: 15px;
-		line-height: 1.65;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin-bottom: 0.35rem;
 	}

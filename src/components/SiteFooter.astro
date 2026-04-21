@@ -149,19 +149,26 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 	}
 
 	.site-footer__heading {
-		margin: 0 0 1.75rem;
+		margin: 0 0 1.25rem;
 		font-family: 'Rubik', sans-serif;
 		font-size: 1.05rem;
-		font-weight: 500;
+		font-weight: var(--body-weight-medium);
+		line-height: 1.35;
 		color: #ffffff;
 	}
 
 	.site-footer__body {
-		margin: 0 0 1.2rem;
+		margin: 0 0 1.05rem;
 		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
-		line-height: 1.45;
+		font-size: 14px;
+		line-height: 1.4;
 		color: rgba(255, 255, 255, 0.92);
+	}
+
+	/* Contact stack keeps the same scale as footer body copy, but uses
+	   slightly smaller vertical gaps so address/email/phone read as one unit. */
+	.site-footer__col--contact .site-footer__body {
+		margin-bottom: 0.5rem;
 	}
 
 	.site-footer__link {
@@ -201,6 +208,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 		gap: 0.2rem;
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
+		line-height: var(--body-line-height-tight);
 		color: rgba(255, 255, 255, 0.92);
 	}
 

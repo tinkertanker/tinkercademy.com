@@ -56,8 +56,8 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 ---
 
 <ContentLayout
-	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
-	description={page.seo?.description ?? heroLead}
+	title="Courses for schools — Tinkercademy"
+	description="Coding, making, and AI programmes for MOE primary, secondary, and junior college schools — Code for Fun, the LEARN Roadmap, and bespoke curricula."
 	canonical={canonical}
 	image={heroImage}
 >
@@ -185,8 +185,8 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 
 	.aud-hero__lead {
 		font-family: 'Rubik', sans-serif;
-		font-size: clamp(1rem, 1.4vw, 1.1rem);
-		line-height: 1.6;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
 		color: rgba(255, 255, 255, 0.92);
 		margin: 0;
 		max-width: 48ch;
@@ -207,8 +207,8 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 
 	.sch-intro__body {
 		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
-		line-height: 1.7;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin: 0;
 		max-width: 60rem;

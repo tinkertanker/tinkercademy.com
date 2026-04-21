@@ -1,6 +1,8 @@
 ---
 /**
- * /courses — redirects to /courses-all
+ * /courses — redirects to /courses-all.
+ * `_redirects` handles this at the edge on Cloudflare Pages; the emitted
+ * HTML is a fallback for hosts that don't respect that file.
  */
 return Astro.redirect('/courses-all', 301);
 ---

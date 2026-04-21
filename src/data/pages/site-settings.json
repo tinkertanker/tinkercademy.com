@@ -2,17 +2,17 @@
   "site_name": "Tinkercademy",
   "base_url": "https://tinkercademy.com",
   "default_seo": {
-    "title": "Tinkercademy: Coding and Making for Schools and Professionals",
-    "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+    "title": "Tinkercademy — Coding and digital making for schools and professionals",
+    "description": "Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals.",
     "canonical": "https://tinkercademy.com/",
     "openGraph": {
-      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
-      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "title": "Tinkercademy — Coding and digital making for schools and professionals",
+      "description": "Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals.",
       "image": "/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg"
     },
     "twitter": {
-      "title": "Tinkercademy: Coding and Making for Schools and Professionals",
-      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
+      "title": "Tinkercademy — Coding and digital making for schools and professionals",
+      "description": "Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals.",
       "image": null
     },
     "robots": "max-image-preview:large"

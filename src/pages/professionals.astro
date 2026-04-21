@@ -71,8 +71,8 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 ---
 
 <ContentLayout
-	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
-	description={page.seo?.description ?? heroLead}
+	title="Courses for professionals — Tinkercademy"
+	description="Expert-led technical training for working professionals in Singapore. Upskill in AI, web and mobile development, data, and digital making."
 	canonical={canonical}
 	image={heroImage}
 >
@@ -230,8 +230,8 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 
 	.aud-hero__lead {
 		font-family: 'Rubik', sans-serif;
-		font-size: clamp(1rem, 1.4vw, 1.1rem);
-		line-height: 1.6;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
 		color: rgba(255, 255, 255, 0.92);
 		margin: 0;
 		max-width: 48ch;

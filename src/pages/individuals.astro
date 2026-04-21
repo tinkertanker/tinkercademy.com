@@ -48,8 +48,8 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 ---
 
 <ContentLayout
-	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
-	description={page.seo?.description ?? heroLead}
+	title="Courses for individuals — Tinkercademy"
+	description="Self-directed coding, making, and AI courses for curious learners. Work through micro:bit tutorials, join Tinker X, or pick from our public programmes."
 	canonical={canonical}
 	image={heroImage}
 >
@@ -168,8 +168,8 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 
 	.aud-hero__lead {
 		font-family: 'Rubik', sans-serif;
-		font-size: clamp(1rem, 1.4vw, 1.1rem);
-		line-height: 1.6;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
 		color: rgba(255, 255, 255, 0.92);
 		margin: 0;
 		max-width: 48ch;

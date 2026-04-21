@@ -72,8 +72,8 @@ const jiaChenQuote =
 ---
 
 <ContentLayout
-	title={page.seo?.title ?? `${heroTitle} — Tinkercademy`}
-	description={page.seo?.description ?? heroLead}
+	title="Showcase — Tinkercademy"
+	description="Meet the coders, tinkerers, and makers who've learned, built, and grown with Tinkercademy — from classroom projects to professional success."
 	canonical={canonical}
 	image={heroImage}
 >
@@ -217,7 +217,8 @@ const jiaChenQuote =
 
 	.sc-hero__lead {
 		font-family: 'Rubik', sans-serif;
-		font-size: clamp(1rem, 1.4vw, 1.1rem);
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
 		color: rgba(255, 255, 255, 0.9);
 		margin: 0;
 		max-width: 55ch;
@@ -279,8 +280,8 @@ const jiaChenQuote =
 
 	.sc-section__lead {
 		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
-		line-height: 1.65;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(110, 110, 110);
 		margin: 0 0 2rem;
 		max-width: 60rem;
@@ -362,8 +363,8 @@ const jiaChenQuote =
 
 	.sc-spotlight__body {
 		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
-		line-height: 1.75;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		margin: 0 0 1.25rem;
 		color: rgba(255, 253, 248, 0.9);
 	}
@@ -460,8 +461,8 @@ const jiaChenQuote =
 
 	.sc-buildlog__body {
 		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
-		line-height: 1.7;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin: 0 0 1.25rem;
 	}

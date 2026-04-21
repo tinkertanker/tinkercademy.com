@@ -2,6 +2,7 @@
 import CtaBanner from '../../components/CtaBanner.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
+import { clipDescription } from '../../lib/seo.ts';
 
 export function getStaticPaths() {
 	return getSiteData().articles.map((article: any) => ({
@@ -12,6 +13,15 @@ export function getStaticPaths() {
 
 const { article } = Astro.props as { article: any };
 const canonical = new URL(`/articles/${article.slug}`, 'https://tinkercademy.com').toString();
+
+const TITLE_SUFFIX = ' — Tinkercademy';
+const TITLE_MAX_BASE = 60 - TITLE_SUFFIX.length;
+const titleBase = article.title.length > TITLE_MAX_BASE
+	? `${article.title.slice(0, TITLE_MAX_BASE - 1).trimEnd()}…`
+	: article.title;
+const pageTitle = `${titleBase}${TITLE_SUFFIX}`;
+
+const metaDescription = clipDescription(article.content_text, 155);
 const date = article.date ? new Date(article.date) : null;
 const formattedDate = date
 	? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -19,8 +29,8 @@ const formattedDate = date
 ---
 
 <ContentLayout
-	title={article.title}
-	description={article.content_text?.slice(0, 160) ?? ''}
+	title={pageTitle}
+	description={metaDescription}
 	canonical={canonical}
 	image={article.image ?? undefined}
 	ogType="article"
@@ -152,8 +162,8 @@ const formattedDate = date
 
 	.article-body :global(p) {
 		font-family: 'Rubik', sans-serif;
-		font-size: 15px;
-		line-height: 1.75;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin: 0 0 1rem;
 	}
@@ -166,8 +176,8 @@ const formattedDate = date
 
 	.article-body :global(li) {
 		font-family: 'Rubik', sans-serif;
-		font-size: 15px;
-		line-height: 1.75;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin-bottom: 0.35rem;
 	}

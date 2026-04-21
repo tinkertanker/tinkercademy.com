@@ -76,8 +76,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 ---
 
 <ContentLayout
-	title={page.seo?.title ?? 'Tinkercademy: Coding and Making for Schools and Professionals'}
-	description={page.seo?.description ?? heroLead}
+	title="Tinkercademy — Coding and making for schools and professionals"
+	description="Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals. Courses in micro:bit, Swift, Python, and AI."
 	canonical={canonical}
 	image={heroImage}
 >
@@ -317,8 +317,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-hero__lead {
 		font-family: 'Rubik', sans-serif;
-		font-size: clamp(1rem, 1.5vw, 1.1rem);
-		line-height: 1.6;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
 		color: rgba(255, 255, 255, 0.92);
 		margin: 0;
 		max-width: 48ch;
