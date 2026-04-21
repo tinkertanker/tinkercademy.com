@@ -29,11 +29,17 @@ const checks = [
 	{ path: '/favicon.svg' },
 	{ path: '/favicon.ico' },
 	{ path: '/', contains: LAYOUT_MARKERS },
-	{ path: '/about-us/', contains: LAYOUT_MARKERS },
-	{ path: '/courses-all/', contains: LAYOUT_MARKERS },
-	{ path: '/programmes/mastering-the-web/', contains: [...LAYOUT_MARKERS, 'Mastering the Web'] },
-	{ path: '/tutorials/micropython/', contains: LAYOUT_MARKERS },
-	{ path: '/articles/', contains: LAYOUT_MARKERS },
+	{ path: '/about-us', contains: LAYOUT_MARKERS },
+	{ path: '/courses-all', contains: LAYOUT_MARKERS },
+	{ path: '/programmes/mastering-the-web', contains: [...LAYOUT_MARKERS, 'Mastering the Web'] },
+	{ path: '/tutorials/micropython', contains: LAYOUT_MARKERS },
+	{ path: '/articles', contains: LAYOUT_MARKERS },
+	/* Every page must carry the GA4 tag; catches the "GA dropped from the
+	   global layout" class of regression. */
+	{ path: '/about-us', contains: ['id=G-8PXL6RTPR4'] },
+	/* 404.html must exist so Cloudflare Pages doesn't fall back to SPA-style
+	   behaviour and serve the homepage for every unmatched path. */
+	{ path: '/404.html', contains: LAYOUT_MARKERS },
 ];
 
 async function check({ path, contains, mustMatch }) {
