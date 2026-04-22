@@ -1,4 +1,2 @@
-https://www.tinkercademy.com/* https://tinkercademy.com/:splat 301!
-
-/courses /courses-all 301!
-/courses/ /courses-all 301!
+/courses /courses-all 301
+/courses/ /courses-all 301
