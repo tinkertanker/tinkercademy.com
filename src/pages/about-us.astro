@@ -223,7 +223,7 @@ const heroTitleHtml = heroTitle.replace(
 	<section class="about-team">
 		<div class="shell">
 			<h2 class="about-section__heading">Our Team</h2>
-			<p class="about-section__body about-section__body--full">{teamIntro}</p>
+			<p class="about-section__body">{teamIntro}</p>
 
 			<div class="about-team__grid">
 				{team.map((member) => (
@@ -342,7 +342,7 @@ const heroTitleHtml = heroTitle.replace(
 	.about-intro__text {
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
-		line-height: var(--body-line-height);
+		line-height: var(--body-line-height-tight);
 		color: rgb(51, 51, 51);
 	}
 
@@ -422,19 +422,17 @@ const heroTitleHtml = heroTitle.replace(
 		font-weight: 500;
 		color: rgb(23, 23, 23);
 		margin: 0 0 0.75rem;
+		text-align: center;
 	}
 
 	.about-section__body {
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
-		line-height: var(--body-line-height);
+		line-height: var(--body-line-height-tight);
 		color: rgb(51, 51, 51);
-		margin: 0 0 1.5rem;
+		margin: 0 auto 1.5rem;
 		max-width: 800px;
-	}
-
-	.about-section__body--full {
-		max-width: none;
+		text-align: center;
 	}
 
 	/* ─── Partner logos (discs) ────────────────────────────── */
@@ -595,12 +593,6 @@ const heroTitleHtml = heroTitle.replace(
 		line-height: 1.5;
 		color: rgb(110, 110, 110);
 		margin: 0;
-	}
-
-	@media (max-width: 1199px) {
-		.about-team__grid {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
 	}
 
 	@media (max-width: 900px) {
