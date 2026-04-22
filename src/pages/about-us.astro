@@ -255,7 +255,7 @@ const heroTitleHtml = heroTitle.replace(
 </ContentLayout>
 
 <style>
-	/* ─── Hero (full-bleed, matches live Framer hero) ─────────────────── */
+	/* ─── Hero (full-bleed, matches site hero pattern) ─────────────────── */
 	.about-hero {
 		position: relative;
 		width: 100vw;
@@ -279,9 +279,9 @@ const heroTitleHtml = heroTitle.replace(
 		inset: 0;
 		background: linear-gradient(
 			180deg,
-			rgba(0, 0, 0, 0.45) 0%,
-			rgba(0, 0, 0, 0.35) 45%,
-			rgba(0, 0, 0, 0.55) 100%
+			rgba(0, 0, 0, 0.35) 0%,
+			rgba(0, 0, 0, 0.15) 40%,
+			rgba(0, 0, 0, 0.7) 100%
 		);
 	}
 
@@ -289,21 +289,19 @@ const heroTitleHtml = heroTitle.replace(
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
+		justify-content: flex-end;
 		min-height: inherit;
-		padding: clamp(3rem, 8vw, 5rem) 0;
+		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+		gap: 1.1rem;
 	}
 
 	.about-hero__title {
 		font-family: 'Oswald', sans-serif;
-		font-size: clamp(1.65rem, 3.2vw, 2.55rem);
+		font-size: clamp(2.4rem, 6vw, 4.5rem);
 		font-weight: 500;
-		line-height: 1.28;
+		line-height: 1;
 		color: #fff;
-		margin: 0 0 1.25rem;
-		max-width: 920px;
+		margin: 0;
 		text-wrap: balance;
 	}
 
@@ -315,9 +313,9 @@ const heroTitleHtml = heroTitle.replace(
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--lead-font-size);
 		line-height: var(--lead-line-height);
-		color: rgba(255, 255, 255, 0.88);
+		color: rgba(255, 255, 255, 0.92);
 		margin: 0;
-		max-width: 640px;
+		max-width: 48ch;
 	}
 
 	/* ─── Intro ────────────────────────────────────────────── */
