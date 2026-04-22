@@ -8,6 +8,7 @@ domainIds: ["appdev", "uiux"]
 platformIds: ["android-studio", "javascript", "sql"]
 cardBlurb: "In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps…"
 weight: 88
+homeFeaturedRank: 7
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals"

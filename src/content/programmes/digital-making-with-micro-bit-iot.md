@@ -8,6 +8,7 @@ domainIds: ["iot", "cs"]
 platformIds: ["bbc-micro-bit"]
 cardBlurb: "Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the…"
 weight: 0
+homeFeaturedRank: 6
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals"
