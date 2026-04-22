@@ -98,8 +98,8 @@ deployed to staging URL" class of bug.
 Run locally:
 
 ```
-npm run smoke https://webstaging.tinkercademy.com
-npm run smoke https://tinkercademy.com
+pnpm run smoke https://webstaging.tinkercademy.com
+pnpm run smoke https://tinkercademy.com
 ```
 
 ### Wiring smoke-check into GitHub Pages CI (manual one-time edit)
