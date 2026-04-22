@@ -1,64 +1,68 @@
 # Team member data for /about-us
 # Each entry: name, role, bio, photo (local path), linkedin (optional)
-
-- name: YJ
-  role: Master Trainer
-  bio: >-
-    Stanford CS graduate, YJ, trusted by tech giants like Apple and Microsoft,
-    spearheads our corporate training programs with unparalleled expertise.
-  photo: /images/AqPpSJgQGTw0QlTgYktxZ2909EY.jpg
-  linkedin: https://www.linkedin.com/in/yjsoon/
-
-- name: Mike
-  role: Master Trainer
-  bio: >-
-    Wharton MBA turned Master Trainer. Mike distills complex topics into clear
-    actionable takeaways for diverse audiences.
-  photo: /images/DxeGLZ3Spx3PET8teOKVbLvrg.jpg
-  linkedin: https://www.linkedin.com/in/mikejgonsalves/
-
 - name: Akmal
-  role: Master Trainer
+  role: Co-founder / Master Trainer
   bio: >-
-    Your friendly tech guru! Cornell grad (CS & EE) with government consulting
-    experience.
+    Cornell grad (CS & EE, Magna Cum Laude) and former MOE Physics and Maths teacher.
+    Leads curriculum, operations, and teacher training for schools. Enjoys 3D printing
+    and laser cutting random things all day on the office devices.
   photo: /images/Pu1dBwUoLq1avwW9evSZnAQ.jpg
   linkedin: https://www.linkedin.com/in/akmalabdulrahman/
-
-- name: Yixue
-  role: Associate Trainer
+- name: YJ
+  role: Co-founder / Master Trainer
   bio: >-
-    Lucasfilm alum with 15+ years in media brings real-world expertise to your
-    tinkering journey.
-  photo: /images/fwt97yqa7UmP7Bnf9lKxyyjs04.jpg
-
-- name: Win
-  role: Associate Trainer
-  bio: >-
-    MBA in Automation & Control (NUS). Makes learning tech fun and
-    collaborative.
-  photo: /images/KwvTjh335J5P5Xa3PT4fE1gt49w.jpg
-
-- name: Tracey
-  role: Lead Trainer
-  bio: >-
-    Santa Clara University graduate with over 15 years of experience in coding
-    and education. Enlists engaging coding instruction to bring robots to life.
-  photo: /images/qt0RAp6385PEY4yTE91U9Wfgsc.jpg
-  linkedin: https://www.linkedin.com/in/tracey-the-tinkerer/
-
+    Stanford EE grad, former CS106 section leader, former RI Computing teacher.
+    Leads training partnerships with government and tech companies. Specialises in
+    web, mobile, and agentic development. Subscribes to every AI coding plan he comes across.
+  photo: /images/AqPpSJgQGTw0QlTgYktxZ2909EY.jpg
+  linkedin: https://www.linkedin.com/in/yjsoon/
 - name: Steven
-  role: Lead Trainer
+  role: Co-founder / CTO
   bio: >-
-    MIT alum and tech guru, Steven sets you on a transformative tech path with
-    his profound knowledge and innovative insights.
+    MIT grad in EECS, former PayPal senior engineer, IOI medallist from a lifetime ago. 
+    Leads special projects and product development for Tinkertanker, the parent company,
+    building new ways to teach and learn coding and electronics.
   photo: /images/Fjwf5hoaQJqS78UgKSyygmVp8.jpg
   linkedin: https://www.linkedin.com/in/stevencjchan/
-
-- name: Grace
-  role: Education Marketing
+- name: Mike
+  role: Bizdev / Lead Trainer
   bio: >-
-    NTU alum and ex-Apple employee, Grace leads impactful campaigns to empower
-    learning through technology.
+    Wharton grad (BS Economics, Cum Laude) with a background in actuarial
+    analysis and web consulting. Oversees corporate training partnerships. 
+    Teaches AI, data science, and Python to
+    executives and students.
+  photo: /images/DxeGLZ3Spx3PET8teOKVbLvrg.jpg
+  linkedin: https://www.linkedin.com/in/mikejgonsalves/
+- name: Tracey
+  role: Curriculum / Lead Trainer
+  bio: >-
+    Santa Clara grad and former MOE teacher. Develops
+    curriculum for Scratch, Python, and micro:bit, oversees primary school engagements. 
+    Manages our trainer network.
+    Was featured in Tech
+    in Asia for his mid-career switch to coding instruction!
+  photo: /images/qt0RAp6385PEY4yTE91U9Wfgsc.jpg
+  linkedin: https://www.linkedin.com/in/tracey-the-tinkerer/
+- name: Yixue
+  role: Maker & Tinkerer
+  bio: >-
+    NTU Interactive Media grad (First Class Honours) with a background in
+    animation and motion graphics. Works across video, carpentry, electronics,
+    and digital making to build installations, custom kits, and hands-on
+    learning experiences. Can (and will) build things for the office for no reason.
+  photo: /images/fwt97yqa7UmP7Bnf9lKxyyjs04.jpg
+- name: Win
+  role: Makerspace I/C
+  bio: >-
+    MSc in Automation & Control (NUS), with 10
+    years in computer R&D and firmware. Comfortable across Arduino,
+    Raspberry Pi, and ESP32, and previously mentored Myanmar's FIRST Global
+    robotics team. Grudgingly fixes devices that students broke. 
+  photo: /images/KwvTjh335J5P5Xa3PT4fE1gt49w.jpg
+- name: Grace
+  role: Bizdev / Marketing
+  bio: >-
+    NTU alum, former MOE teacher, and ex-Apple marketing.
+    Works with local and international partners across government, education, and corporate sectors. 
   photo: /images/P4veGj7O6NQ2u3nnFR7VqAHYdO0.png
-  linkedin: https://www.linkedin.com/in/graceyan808/
+  linkedin: https://www.linkedin.com/in/graceyan808/# Team member data for /about-us
