@@ -29,9 +29,9 @@ if (!page) return Astro.redirect('/404');
 const canonical = 'https://tinkercademy.com/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
-const heroTitle = page.hero_title ?? 'Illuminate your journey into tech.';
+const heroTitle = page.hero_title ?? 'Illuminate your journey into tech & AI';
 const heroLead =
-	page.hero_lead ?? 'Learn coding and digital making from expert coders and makers.';
+	page.hero_lead ?? 'Learn coding, digital making, and agentic engineering from expert teachers and builders.';
 
 const partnerStatement =
 	page.partner_statement ??
@@ -94,8 +94,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		)}
 		<div class="home-hero__scrim"></div>
 		<div class="home-hero__content shell">
-			<h1 class="home-hero__title">{heroTitle}</h1>
-			<p class="home-hero__lead">{heroLead}</p>
+			<h1 class="home-hero__title">
+				<span class="home-hero__highlight">Illuminate</span> your journey into tech & AI
+			</h1>
+			<p class="home-hero__lead">Learn coding, digital making, and agentic engineering from expert teachers and builders.</p>
 			<div class="home-hero__actions">
 				<a class="home-hero__pill home-hero__pill--primary" href="#programmes">Programmes</a>
 				<a class="home-hero__pill" href="/professionals">Professionals</a>
@@ -313,6 +315,21 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		margin: 0;
 		max-width: 16ch;
 		text-wrap: balance;
+	}
+
+	.home-hero__highlight {
+		color: #fff;
+		text-shadow: 0 0 20px rgba(240, 93, 87, 0.4), 0 0 40px rgba(240, 93, 87, 0.2);
+		animation: highlight-pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes highlight-pulse {
+		0%, 100% {
+			text-shadow: 0 0 16px rgba(240, 93, 87, 0.35), 0 0 32px rgba(240, 93, 87, 0.15);
+		}
+		50% {
+			text-shadow: 0 0 28px rgba(240, 93, 87, 0.55), 0 0 48px rgba(240, 93, 87, 0.3);
+		}
 	}
 
 	.home-hero__lead {
