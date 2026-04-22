@@ -66,6 +66,11 @@ function isActiveLink(href: string) {
 							aria-current={isActiveLink(link.href) ? 'page' : undefined}
 						>
 							{link.label}
+							{isExternalLink(link.href) && (
+								<svg class="nav-external" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M7 17L17 7M17 7H7M17 7V17"/>
+								</svg>
+							)}
 							{link.hasDropdown && (
 								<svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
 									<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -117,6 +122,11 @@ function isActiveLink(href: string) {
 							aria-current={isActiveLink(link.href) ? 'page' : undefined}
 						>
 							{link.label}
+							{isExternalLink(link.href) && (
+								<svg class="nav-external" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M7 17L17 7M17 7H7M17 7V17"/>
+								</svg>
+							)}
 						</a>
 					)}
 					{link.hasDropdown && (
@@ -445,12 +455,21 @@ function isActiveLink(href: string) {
 		transition: color 0.15s ease;
 	}
 
-	.nav-desktop a:hover,
-	.nav-desktop a.is-active {
-		color: rgb(255, 89, 89);
-	}
+	.nav-desktop a[target="_blank"] {
+			gap: 0.2rem;
+		}
 
-	.nav-chevron {
+		.nav-desktop a:hover,
+		.nav-desktop a.is-active {
+			color: rgb(255, 89, 89);
+		}
+
+		.nav-external {
+			flex-shrink: 0;
+			opacity: 0.6;
+		}
+
+		.nav-chevron {
 		flex-shrink: 0;
 		margin-top: 0;
 		color: rgb(170, 170, 170);
@@ -888,6 +907,7 @@ function isActiveLink(href: string) {
 	.nav-mobile a.is-active {
 		color: rgb(255, 89, 89);
 	}
+
 
 	/* Mobile dropdown toggle button */
 	.mobile-dropdown-toggle {

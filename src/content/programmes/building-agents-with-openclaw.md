@@ -6,9 +6,9 @@ heroImage: "/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
-cardBlurb: "Stop building chatbots. Start deploying autonomous systems. The future of AI isn't a text box, it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier…"
+cardBlurb: "Stop building chatbots. Start deploying autonomous systems. The future of AI isn’t a text box, it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier…"
 weight: 99
-homeFeaturedRank: 1
+draft: true
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Building Agents with OpenClaw - Tinkercademy: Coding and Making for Schools and Professionals"

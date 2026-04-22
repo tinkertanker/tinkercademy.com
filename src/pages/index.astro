@@ -48,7 +48,7 @@ const flagshipCtaByTitle: Record<string, { label: string; url: string }> = {
 	'Swift Accelerator': { label: 'Read More', url: 'https://swiftinsg.org/' },
 	'IMDA LEARN Roadmap': {
 		label: 'Read More',
-		url: 'https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps',
+		url: 'https://infocomm.club',
 	},
 	'Code For Fun': { label: 'Read More', url: 'https://codeforfun.sg/' },
 };
@@ -213,7 +213,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 										</div>
 									)}
 									<div class="flagship-card__body">
-										<h3 class="flagship-card__title">{item.title}</h3>
+										<h3 class="flagship-card__title">
+											{item.title}
+											<svg class="flagship-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+												<path d="M7 17L17 7M17 7H7M17 7V17"/>
+											</svg>
+										</h3>
 										<p class="flagship-card__text">{item.description}</p>
 									</div>
 								</a>
@@ -668,6 +673,18 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		color: rgb(23, 23, 23);
 		margin: 0;
 	}
+
+	.flagship-card__title {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.35rem;
+		}
+
+		.flagship-card__arrow {
+			flex-shrink: 0;
+			opacity: 0.6;
+			transform: translateY(15%);
+		}
 
 	.flagship-card__text {
 		font-family: 'Rubik', sans-serif;
