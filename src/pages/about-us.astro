@@ -223,7 +223,7 @@ const heroTitleHtml = heroTitle.replace(
 	<section class="about-team">
 		<div class="shell">
 			<h2 class="about-section__heading">Our Team</h2>
-			<p class="about-section__body">{teamIntro}</p>
+			<p class="about-section__body about-section__body--full">{teamIntro}</p>
 
 			<div class="about-team__grid">
 				{team.map((member) => (
@@ -431,6 +431,10 @@ const heroTitleHtml = heroTitle.replace(
 		color: rgb(51, 51, 51);
 		margin: 0 0 1.5rem;
 		max-width: 800px;
+	}
+
+	.about-section__body--full {
+		max-width: none;
 	}
 
 	/* ─── Partner logos (discs) ────────────────────────────── */
