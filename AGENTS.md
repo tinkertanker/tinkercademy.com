@@ -46,3 +46,12 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 - For shared shell work such as headers, footers, or nav bars, do not rely on generic utility wrappers like `.shell` inside the shared component if those wrappers are also defined by page layouts. Use component-scoped wrappers so document-driven and structured Astro pages render identically.
 - Header and nav links must use absolute site paths such as `/contact-us`, not relative `contact-us` or `./contact-us`, to avoid route-dependent navigation bugs.
 - For parity fixes, verify both `pnpm run dev` and built output in a real browser on representative routes before declaring success. Check computed styles and layout metrics, not just screenshots.
+
+### Proposal drafting
+
+- For proposal or quotation drafting, use [docs/writing-style-guide.md](./docs/writing-style-guide.md) as the tone reference, but keep proposals slightly more formal than the website.
+- Lead with substance: say what the programme is, who it is for, what participants will do, and why the format fits the audience.
+- Prefer concrete outcomes, tools, constraints, and delivery details over broad claims about innovation or transformation.
+- Keep reusable company boilerplate consistent, but tailor the overview, outcomes, curriculum shape, and rationale to the client context rather than pasting a generic block.
+- Use proof points sparingly and specifically: relevant partners, prior programmes, comparable audiences, or delivery experience. Do not dump the full track record when a shorter tailored proof section will do.
+- When reusing proposal copy on the website, strip procurement, admin, and quotation language; keep only the sharp, practical, evidence-backed parts.
