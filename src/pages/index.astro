@@ -198,7 +198,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	{/* ═══════════ 4. Flagship programmes ════════════════════════════════ */}
 	<section class="home-flagship" id="flagship">
 		<div class="shell">
-			<h2 class="home-flagship__heading">Our Flagship Programmes</h2>
+			<div class="home-flagship__header">
+				<h2 class="home-flagship__heading">Flagship Programmes</h2>
+				<p class="home-flagship__sub">
+					Long-running, IMDA-supported initiatives that bring coding to Infocomm Clubs and students across Singapore schools.
+				</p>
+			</div>
 			<div class="home-flagship__grid">
 				{flagshipItems.map((item) => {
 					const cta = flagshipCtaByTitle[item.title];
@@ -246,7 +251,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	{popularCourses.length > 0 && (
 		<section class="home-popular" id="programmes">
 			<div class="shell">
-				<h2 class="home-popular__heading">Popular Courses</h2>
+				<div class="home-popular__header">
+					<h2 class="home-popular__heading">Popular Courses</h2>
+					<p class="home-popular__sub">
+						Courses we run for schools, companies, and teams, from AI and app development to web and digital making.
+					</p>
+				</div>
 				<div class="home-popular__grid">
 					{popularCourses.map((prog) => (
 						<ProgrammeCard
@@ -593,13 +603,26 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		background: #fafafa;
 	}
 
+	.home-flagship__header {
+		text-align: center;
+		margin: 0 0 2rem;
+	}
+
 	.home-flagship__heading {
 		font-family: 'Oswald', sans-serif;
 		font-size: clamp(1.6rem, 3vw, 2.1rem);
 		font-weight: 500;
 		text-transform: uppercase;
 		color: rgb(23, 23, 23);
-		margin: 0 0 1.5rem;
+		margin: 0 0 0.75rem;
+	}
+
+	.home-flagship__sub {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: rgb(110, 110, 110);
+		margin: 0;
 	}
 
 	.home-flagship__grid {
@@ -715,13 +738,28 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		scroll-margin-top: 80px;
 	}
 
+	.home-popular__header {
+		text-align: center;
+		margin: 0 0 2rem;
+	}
+
 	.home-popular__heading {
 		font-family: 'Oswald', sans-serif;
 		font-size: clamp(1.6rem, 3vw, 2.1rem);
 		font-weight: 500;
 		text-transform: uppercase;
 		color: rgb(23, 23, 23);
-		margin: 0 0 1.5rem;
+		margin: 0 0 0.75rem;
+	}
+
+	.home-popular__sub {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: rgb(110, 110, 110);
+		margin: 0 auto;
+		max-width: 52rem;
+		text-wrap: balance;
 	}
 
 	.home-popular__grid {
