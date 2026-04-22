@@ -7,14 +7,6 @@ if (!page) return Astro.redirect('/404');
 
 const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
 
-const sectionIcons = {
-	address:
-		'M12 3.25 18.5 5.6v13.3l-5.35-1.93-2.3.83-5.35-1.93V2.1l5.35 1.93Zm.2 2.2v10.42l3.1 1.12V6.57Zm-4.95.12v10.4l2.95 1.06V6.63Z',
-	directions:
-		'M11.9 2.8 18.7 9.6l-4.2 4.23-1.8-1.8 1.15-1.17H9.2v3.76H6.65v-6.3h7.17l-1.12-1.13-1.8-1.8Z',
-	parking:
-		'M7.1 6.2h9.8c.86 0 1.63.54 1.9 1.35l1.25 3.74h.71v2.36h-1.1v2.2H17.1v-2.2H6.9v2.2H4.35v-2.2h-1.1v-2.36h.71L5.2 7.55A2 2 0 0 1 7.1 6.2Zm.28 1.95-.9 2.84h10.98l-.9-2.84ZM7.55 14.4a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2Zm8.9 0a1.1 1.1 0 1 0 0-2.2 1.1 1.1 0 0 0 0 2.2Z',
-};
 ---
 
 <>
@@ -24,12 +16,25 @@ const sectionIcons = {
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
 >
+	<section class="contact-hero">
+		<img
+			class="contact-hero__bg"
+			src="/images/contact-hero.jpg"
+			alt=""
+			loading="eager"
+			fetchpriority="high"
+		/>
+		<div class="contact-hero__scrim"></div>
+		<div class="contact-hero__content shell">
+			<h1 class="contact-hero__title">{page.hero_title ?? 'Get in touch'}</h1>
+			<p class="contact-hero__subtitle">
+				We go to your school or company. Or drop by our little Bishan makerspace to 3D print, laser cut, and build something.
+			</p>
+		</div>
+	</section>
+
 	<section class="contact-page">
 		<div class="shell contact-page__inner">
-			<div class="contact-page__hero">
-				<h1>{page.hero_title ?? 'Get in touch'}</h1>
-			</div>
-
 			<div class="contact-form-shell">
 				<div class="contact-form-card">
 					<div class="contact-form-card__header">
@@ -100,15 +105,16 @@ const sectionIcons = {
 			</div>
 
 			<div class="visit-card">
-				<h2 class="visit-card__title">Getting here</h2>
-
 				<section class="visit-block visit-block--address">
-					<div class="visit-block__icon" aria-hidden="true">
-						<svg viewBox="0 0 24 24" focusable="false">
-							<path d={sectionIcons.address}></path>
-						</svg>
+					<div class="visit-block__heading">
+						<span class="visit-block__icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+								<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+								<circle cx="12" cy="10" r="3"></circle>
+							</svg>
+						</span>
+						<h3>Address</h3>
 					</div>
-					<h3>Address</h3>
 					<p class="visit-block__lead">
 						59 Jalan Pemimpin #04-01, L&amp;Y Building, Singapore 577218
 					</p>
@@ -125,12 +131,14 @@ const sectionIcons = {
 				</section>
 
 				<section class="visit-block visit-block--directions">
-					<div class="visit-block__icon" aria-hidden="true">
-						<svg viewBox="0 0 24 24" focusable="false">
-							<path d={sectionIcons.directions}></path>
-						</svg>
+					<div class="visit-block__heading">
+						<span class="visit-block__icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+								<polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+							</svg>
+						</span>
+						<h3>Directions</h3>
 					</div>
-					<h3>Directions</h3>
 					<p class="visit-block__lead">Nearest MRT: Marymount</p>
 					<p>
 						By Bus: From Bishan MRT and Bus Stop 53239 (Bus 13, 50, 52, 54, 55, 55B, 58,
@@ -141,32 +149,60 @@ const sectionIcons = {
 						Once you reach the L&amp;Y Building, go around the building to find the entrance.<br />
 						Take the lift to the 4th floor and turn right. You made it!
 					</p>
-					<div class="visit-gallery visit-gallery--stack">
-						<img
-							src="/images/Y5ckhN7Nwo504xYtcd1f4y6Wy78.png"
-							alt="Approaching the L&amp;Y Building entrance"
-							loading="lazy"
-						/>
-						<img
-							src="/images/b0uc8kk9c3m8176vXRgsJwEWk.png"
-							alt="Walking path towards the entrance"
-							loading="lazy"
-						/>
-						<img
-							src="/images/ruSDPHaMjLP5DCdMnqVrqSp0Fs.png"
-							alt="Entrance doors at the L&amp;Y Building"
-							loading="lazy"
-						/>
+					<div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Walking directions to L&amp;Y Building">
+						<ul class="carousel__track">
+							<li class="carousel__slide">
+								<img
+									src="/images/Y5ckhN7Nwo504xYtcd1f4y6Wy78.png"
+									alt="Approaching the L&amp;Y Building entrance"
+									loading="lazy"
+								/>
+							</li>
+							<li class="carousel__slide">
+								<img
+									src="/images/b0uc8kk9c3m8176vXRgsJwEWk.png"
+									alt="Walking path towards the entrance"
+									loading="lazy"
+								/>
+							</li>
+							<li class="carousel__slide">
+								<img
+									src="/images/ruSDPHaMjLP5DCdMnqVrqSp0Fs.png"
+									alt="Entrance doors at the L&amp;Y Building"
+									loading="lazy"
+								/>
+							</li>
+						</ul>
+						<button type="button" class="carousel__btn carousel__btn--prev" aria-label="Previous image">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<polyline points="15 18 9 12 15 6"></polyline>
+							</svg>
+						</button>
+						<button type="button" class="carousel__btn carousel__btn--next" aria-label="Next image">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+								<polyline points="9 18 15 12 9 6"></polyline>
+							</svg>
+						</button>
+						<div class="carousel__pager" aria-label="Image pager">
+							<button type="button" class="carousel__dot" aria-label="Go to image 1"></button>
+							<button type="button" class="carousel__dot" aria-label="Go to image 2"></button>
+							<button type="button" class="carousel__dot" aria-label="Go to image 3"></button>
+						</div>
 					</div>
 				</section>
 
 				<section class="visit-block visit-block--parking">
-					<div class="visit-block__icon" aria-hidden="true">
-						<svg viewBox="0 0 24 24" focusable="false">
-							<path d={sectionIcons.parking}></path>
-						</svg>
+					<div class="visit-block__heading">
+						<span class="visit-block__icon" aria-hidden="true">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+								<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+								<circle cx="7" cy="17" r="2"></circle>
+								<path d="M9 17h6"></path>
+								<circle cx="17" cy="17" r="2"></circle>
+							</svg>
+						</span>
+						<h3>Parking</h3>
 					</div>
-					<h3>Parking</h3>
 					<p class="visit-block__lead">
 						The car park is accessible from the front entrance, beside Jackie&apos;s yellow
 						and blue building.
@@ -195,8 +231,67 @@ const sectionIcons = {
 </ContentLayout>
 
 <style>
+	.contact-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(440px, 58vh, 620px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.contact-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	.contact-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.35) 0%,
+			rgba(0, 0, 0, 0.15) 40%,
+			rgba(0, 0, 0, 0.7) 100%
+		);
+	}
+
+	.contact-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+		gap: 1.1rem;
+	}
+
+	.contact-hero__title {
+		margin: 0;
+		font-family: var(--heading);
+		font-size: clamp(2.4rem, 6vw, 4.5rem);
+		font-weight: 500;
+		line-height: 1;
+		color: #fff;
+		text-wrap: balance;
+	}
+
+	.contact-hero__subtitle {
+		margin: 0;
+		font-family: var(--meta);
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
+		color: rgba(255, 255, 255, 0.92);
+		max-width: 48ch;
+		text-wrap: pretty;
+	}
+
 	.contact-page {
-		padding: 3rem 0 0;
+		padding: 3rem 0 4rem;
 	}
 
 	.contact-page__inner {
@@ -204,93 +299,69 @@ const sectionIcons = {
 		gap: 2.5rem;
 	}
 
-	.contact-page__hero {
-		text-align: center;
-	}
-
-	.contact-page__hero h1,
-	.visit-card__title,
-	.visit-block h3 {
-		margin: 0;
-		font-family: var(--heading);
-		font-weight: 600;
-		line-height: 0.95;
-		text-transform: none;
-		color: #f5635b;
-	}
-
-	.contact-page__hero h1,
-	.visit-card__title {
-		font-size: clamp(3rem, 5vw, 4.6rem);
-	}
-
-	.visit-block h3 {
-		font-size: clamp(2.3rem, 4vw, 3.3rem);
-	}
-
-	.contact-form-shell {
-		max-width: 72rem;
+	.contact-form-shell,
+	.visit-card {
+		max-width: 60rem;
 		margin: 0 auto;
-		padding: 0.7rem;
-		border-radius: 0;
-		background: #f2f2ff;
+		width: 100%;
 	}
 
 	.contact-form-card,
 	.visit-card {
 		background: #fff;
-		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+		border-radius: 1.25rem;
 	}
 
 	.contact-form-card {
-		border: 1px solid rgba(0, 0, 0, 0.08);
+		overflow: hidden;
 	}
 
 	.contact-form-card__header {
-		padding: 3rem 3rem 2rem;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+		padding: 2rem 2.25rem 1.5rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
 	.contact-form-card__header h2 {
 		margin: 0;
 		font-family: var(--heading);
-		font-size: clamp(2.4rem, 4vw, 3.8rem);
+		font-size: clamp(1.8rem, 3.2vw, 2.55rem);
 		font-weight: 600;
-		line-height: 1.02;
-		color: #2f3b54;
-	}
-
-	.contact-form-card__header p,
-	.visit-block p,
-	.contact-field span,
-	.contact-field small {
-		font-family: var(--meta);
-		color: #2f3b54;
-		line-height: 1.5;
+		line-height: 1.15;
+		color: var(--text);
 	}
 
 	.contact-form-card__header p {
-		margin: 0.75rem 0 0;
-		font-size: 1.15rem;
+		margin: 0.65rem 0 0;
+		font-family: var(--meta);
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height-tight);
+		color: var(--text);
 	}
 
 	.contact-form-card__header a {
-		color: inherit;
+		color: var(--accent-dark);
+		text-decoration-color: rgba(202, 67, 61, 0.4);
+		text-underline-offset: 3px;
+	}
+
+	.contact-form-card__header a:hover {
+		text-decoration-color: currentColor;
 	}
 
 	.contact-form {
-		padding: 3rem;
+		padding: 2rem 2.25rem 2.25rem;
 	}
 
 	.contact-form__grid {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 2rem 2.5rem;
+		gap: 1.5rem 1.75rem;
 	}
 
 	.contact-field {
 		display: grid;
-		gap: 0.55rem;
+		gap: 0.4rem;
 	}
 
 	.contact-field--full {
@@ -298,63 +369,82 @@ const sectionIcons = {
 	}
 
 	.contact-field span {
-		font-size: 1rem;
+		font-family: var(--meta);
+		font-size: 0.95rem;
 		font-weight: 500;
+		color: var(--text);
 	}
 
 	.contact-field strong {
-		color: #f5635b;
+		color: var(--accent);
+		font-weight: inherit;
 	}
 
 	.contact-field input,
 	.contact-field textarea {
 		width: 100%;
-		padding: 1rem 1.05rem;
-		border: 1px solid #b8c2d6;
-		border-radius: 0.45rem;
+		padding: 0.8rem 0.9rem;
+		border: 1px solid rgba(0, 0, 0, 0.18);
+		border-radius: 0.5rem;
 		background: #fff;
 		font-family: var(--meta);
-		font-size: 1rem;
-		color: #2f3b54;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height-tight);
+		color: var(--text);
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
 	}
 
 	.contact-field textarea {
-		min-height: 15rem;
+		min-height: 11rem;
 		resize: vertical;
 	}
 
-	.contact-field input::placeholder {
-		color: #92a0bd;
+	.contact-field input::placeholder,
+	.contact-field textarea::placeholder {
+		color: rgba(51, 51, 51, 0.45);
 	}
 
 	.contact-field input:focus,
 	.contact-field textarea:focus {
-		outline: 2px solid rgba(55, 122, 255, 0.16);
-		outline-offset: 2px;
-		border-color: #97a6c8;
+		outline: none;
+		border-color: var(--accent);
+		box-shadow: 0 0 0 3px rgba(240, 93, 87, 0.18);
 	}
 
 	.contact-field small {
-		font-size: 0.92rem;
+		font-family: var(--meta);
+		font-size: 0.85rem;
+		line-height: var(--body-line-height-tight);
+		color: rgba(51, 51, 51, 0.7);
 	}
 
 	.contact-form__actions {
 		display: flex;
-		justify-content: center;
-		padding-top: 2.25rem;
+		justify-content: flex-start;
+		padding-top: 1.75rem;
 	}
 
 	.contact-form__actions button {
-		min-width: 17rem;
-		padding: 1rem 1.4rem;
+		min-width: 12rem;
+		padding: 0.85rem 1.6rem;
 		border: 0;
-		border-radius: 0.45rem;
-		background: #1fc158;
+		border-radius: 999px;
+		background: var(--accent);
 		color: #fff;
 		font-family: var(--meta);
-		font-size: 1rem;
+		font-size: var(--body-font-size);
 		font-weight: 600;
+		letter-spacing: 0.01em;
 		cursor: pointer;
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.contact-form__actions button:hover {
+		background: var(--accent-dark);
+	}
+
+	.contact-form__actions button:active {
+		transform: translateY(1px);
 	}
 
 	.contact-form__honeypot {
@@ -363,81 +453,78 @@ const sectionIcons = {
 	}
 
 	.visit-card {
-		max-width: 72rem;
-		margin: 0 auto;
-		padding: 3rem 2.2rem 3.4rem;
-		border-radius: 0 0 1.75rem 1.75rem;
-	}
-
-	.visit-card__title {
-		text-align: center;
-		margin-bottom: 2rem;
+		padding: 2.25rem 2.25rem 2.5rem;
 	}
 
 	.visit-block {
-		display: grid;
-		justify-items: center;
-		text-align: center;
+		display: block;
 	}
 
 	.visit-block + .visit-block {
-		margin-top: 2.6rem;
+		margin-top: 2.25rem;
+		padding-top: 2.25rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	.visit-block__heading {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.visit-block h3 {
+		margin: 0;
+		font-family: var(--heading);
+		font-size: clamp(1.25rem, 2vw, 1.6rem);
+		font-weight: 600;
+		line-height: 1.2;
+		color: var(--text);
 	}
 
 	.visit-block__icon {
-		width: 4.5rem;
-		height: 4.5rem;
-		color: #f5635b;
+		display: inline-flex;
+		width: 1.6rem;
+		height: 1.6rem;
+		color: var(--accent);
+		flex-shrink: 0;
 	}
 
 	.visit-block__icon svg {
 		width: 100%;
 		height: 100%;
-		fill: currentColor;
 	}
 
 	.visit-block__lead {
-		margin-top: 0.9rem;
+		font-weight: 500;
 	}
 
 	.visit-block p {
-		margin: 0.35rem 0 0;
-		max-width: 54rem;
-		font-size: 1.02rem;
-		color: #222;
+		margin: 0.3rem 0 0;
+		font-family: var(--meta);
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height-tight);
+		color: var(--text);
+	}
+
+	.visit-block__lead:first-of-type {
+		margin-top: 0;
 	}
 
 	.visit-block__map,
 	.visit-gallery {
 		width: 100%;
-		max-width: 66rem;
 		margin-top: 1.25rem;
-		border-radius: 1.6rem;
+		border-radius: 1rem;
 		overflow: hidden;
-		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 	}
 
 	.visit-block__map iframe {
 		display: block;
 		width: 100%;
-		min-height: 37rem;
+		min-height: 24rem;
 		border: 0;
-	}
-
-	.visit-gallery--stack {
-		display: grid;
-		gap: 1rem;
-		background: transparent;
-		box-shadow: none;
-		border-radius: 0;
-		overflow: visible;
-	}
-
-	.visit-gallery--stack img {
-		display: block;
-		width: 100%;
-		border-radius: 1.6rem;
-		box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 	}
 
 	.visit-gallery--single img {
@@ -445,17 +532,147 @@ const sectionIcons = {
 		width: 100%;
 	}
 
+	.carousel {
+		position: relative;
+		width: 100%;
+		margin-top: 1.25rem;
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+		background: rgba(0, 0, 0, 0.04);
+	}
+
+	.carousel__track {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.carousel__track::-webkit-scrollbar {
+		display: none;
+	}
+
+	.carousel__slide {
+		flex: 0 0 100%;
+		scroll-snap-align: center;
+		scroll-snap-stop: always;
+	}
+
+	.carousel__slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+	}
+
+	.carousel__btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		border: 0;
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.92);
+		color: var(--text);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.carousel__btn:hover {
+		background: #fff;
+	}
+
+	.carousel__btn:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 2px;
+	}
+
+	.carousel__btn:disabled {
+		opacity: 0.35;
+		cursor: not-allowed;
+	}
+
+	.carousel__btn svg {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	.carousel__btn--prev {
+		left: 0.6rem;
+	}
+
+	.carousel__btn--next {
+		right: 0.6rem;
+	}
+
+	.carousel__pager {
+		position: absolute;
+		bottom: 0.75rem;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		padding: 0.4rem 0.65rem;
+		border-radius: 999px;
+		background: rgba(0, 0, 0, 0.45);
+		backdrop-filter: blur(4px);
+	}
+
+	.carousel__dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.55);
+		cursor: pointer;
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.carousel__dot:hover {
+		background: rgba(255, 255, 255, 0.85);
+	}
+
+	.carousel__dot[aria-current="true"] {
+		background: #fff;
+		transform: scale(1.2);
+	}
+
+	.carousel__dot:focus-visible {
+		outline: 2px solid #fff;
+		outline-offset: 2px;
+	}
+
 	.parking-rates {
 		margin-top: 1rem;
-		text-align: center;
 		font-family: var(--meta);
-		font-size: 1.04rem;
-		line-height: 1.45;
-		color: #222;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height-tight);
+		color: var(--text);
 	}
 
 	.parking-rates p {
 		margin: 0.1rem 0;
+	}
+
+	.parking-rates p:first-child {
+		font-weight: 500;
 	}
 
 	@media (max-width: 900px) {
@@ -472,17 +689,21 @@ const sectionIcons = {
 
 		.contact-form__grid {
 			grid-template-columns: minmax(0, 1fr);
-			gap: 1.4rem;
+			gap: 1.2rem;
 		}
 
 		.contact-form-card__header {
-			padding-top: 2rem;
-			padding-bottom: 1.5rem;
+			padding-top: 1.75rem;
+			padding-bottom: 1.25rem;
 		}
 
 		.contact-form {
-			padding-top: 2rem;
-			padding-bottom: 2rem;
+			padding-top: 1.5rem;
+			padding-bottom: 1.75rem;
+		}
+
+		.contact-form__actions {
+			justify-content: stretch;
 		}
 
 		.contact-form__actions button {
@@ -491,9 +712,37 @@ const sectionIcons = {
 		}
 
 		.visit-card {
-			padding-top: 2rem;
-			padding-bottom: 2.4rem;
-			border-radius: 0 0 1.25rem 1.25rem;
+			padding-top: 1.75rem;
+			padding-bottom: 2rem;
+		}
+
+		.visit-block__map iframe {
+			min-height: 20rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.contact-page__inner {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			column-gap: 2.5rem;
+			align-items: start;
+		}
+
+		.visit-card {
+			order: 1;
+			max-width: none;
+			margin: 0;
+		}
+
+		.contact-form-shell {
+			order: 2;
+			max-width: none;
+			margin: 0;
+		}
+
+		.contact-form__grid {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 1.2rem;
 		}
 
 		.visit-block__map iframe {
@@ -501,4 +750,62 @@ const sectionIcons = {
 		}
 	}
 </style>
+
+<script>
+	const carousels = document.querySelectorAll<HTMLElement>('[data-carousel]');
+	carousels.forEach((carousel) => {
+		const track = carousel.querySelector<HTMLElement>('.carousel__track');
+		const slides = [...carousel.querySelectorAll<HTMLElement>('.carousel__slide')];
+		const dots = [...carousel.querySelectorAll<HTMLButtonElement>('.carousel__dot')];
+		const prev = carousel.querySelector<HTMLButtonElement>('.carousel__btn--prev');
+		const next = carousel.querySelector<HTMLButtonElement>('.carousel__btn--next');
+		if (!track || slides.length === 0) return;
+
+		const setActive = (idx: number) => {
+			dots.forEach((d, i) => {
+				if (i === idx) d.setAttribute('aria-current', 'true');
+				else d.removeAttribute('aria-current');
+			});
+			if (prev) prev.disabled = idx <= 0;
+			if (next) next.disabled = idx >= slides.length - 1;
+		};
+
+		const currentIndex = () =>
+			Math.round(track.scrollLeft / track.clientWidth);
+
+		const scrollToIndex = (idx: number) => {
+			const slide = slides[idx];
+			if (!slide) return;
+			track.scrollTo({ left: slide.offsetLeft, behavior: 'smooth' });
+		};
+
+		let ticking = false;
+		track.addEventListener('scroll', () => {
+			if (ticking) return;
+			ticking = true;
+			requestAnimationFrame(() => {
+				setActive(currentIndex());
+				ticking = false;
+			});
+		});
+
+		prev?.addEventListener('click', () => scrollToIndex(Math.max(0, currentIndex() - 1)));
+		next?.addEventListener('click', () =>
+			scrollToIndex(Math.min(slides.length - 1, currentIndex() + 1)),
+		);
+		dots.forEach((dot, i) => dot.addEventListener('click', () => scrollToIndex(i)));
+
+		carousel.addEventListener('keydown', (event) => {
+			if (event.key === 'ArrowLeft') {
+				event.preventDefault();
+				scrollToIndex(Math.max(0, currentIndex() - 1));
+			} else if (event.key === 'ArrowRight') {
+				event.preventDefault();
+				scrollToIndex(Math.min(slides.length - 1, currentIndex() + 1));
+			}
+		});
+
+		setActive(0);
+	});
+</script>
 </>
