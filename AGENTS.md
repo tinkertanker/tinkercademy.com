@@ -1,33 +1,33 @@
 ## Cursor Cloud specific instructions
 
-This is a static Astro site (no backend, no database, no Docker). See `README.md` for the full command reference.
+This is a static Astro site (no backend, no database, no Docker). Production deploys to a Cloudflare Worker (static assets) via `wrangler.jsonc`; see `docs/deployment.md`. See `README.md` for the full command reference.
 
 ### Key commands
 
 | Task | Command |
 |---|---|
-| Install deps | `npm install` |
-| Dev server | `npm run dev` (port 4321) |
-| Build | `npm run build` |
-| Type check | `npm run check` (runs `astro check`) |
-| Re-crawl live data | `npm run import:live` (requires internet; data already committed) |
-| Enrich from Framer CMS | `npm run import:framer` (requires local Framer credentials) |
+| Install deps | `pnpm install` |
+| Dev server | `pnpm run dev` (port 4321) |
+| Build | `pnpm run build` |
+| Type check | `pnpm run check` (runs `astro check`) |
+| Re-crawl live data | `pnpm run import:live` (requires internet; data already committed) |
+| Enrich from Framer CMS | `pnpm run import:framer` (requires local Framer credentials) |
 
 ### Non-obvious notes
 
-- Node.js >= 22.12.0 is required (`engines` field in `package.json`).
+- Node.js >= 22.12.0 and pnpm (pinned via `packageManager` in `package.json`) are required.
 - Programmes now live in the Astro content collection under `src/content/programmes/`, so the old `[content] Content config not loaded` warning note is obsolete.
-- `npm run check` reports only hints (CommonJS warnings on Playwright helper scripts in `docs/`, a deprecated `frameborder` attribute); there are zero errors.
+- `pnpm run check` reports only hints (CommonJS warnings on Playwright helper scripts in `docs/`, a deprecated `frameborder` attribute); there are zero errors.
 - Normal dev/build work does not need any environment variables.
-- `npm run import:framer` loads `FRAMER_API_KEY` and `FRAMER_PROJECT_URL` from `.env.local` or `.env` in the active worktree. These files are git-ignored; `.env.example` documents the required keys.
-- Normal dev/build work does not require `npm run import:live` or `npm run import:framer`; treat both as legacy migration utilities unless you are deliberately refreshing imported data.
+- `pnpm run import:framer` loads `FRAMER_API_KEY` and `FRAMER_PROJECT_URL` from `.env.local` or `.env` in the active worktree. These files are git-ignored; `.env.example` documents the required keys.
+- Normal dev/build work does not require `pnpm run import:live` or `pnpm run import:framer`; treat both as legacy migration utilities unless you are deliberately refreshing imported data.
 - Programme authoring is Astro-first. Do not extend the Framer programme pipeline unless the user explicitly asks for migration work.
-- `npm run import:live` still hits the live `tinkercademy.com` site and regenerates legacy structured data for non-programme content.
+- `pnpm run import:live` still hits the live `tinkercademy.com` site and regenerates legacy structured data for non-programme content.
 - Page rendering is now Astro-native; `downloads/rehosted_site/` is no longer a build input.
 - High-fidelity document payloads are checked in under `src/generated/route-documents.js`; route files import those payloads directly instead of reading a mirror folder at runtime.
 - Runtime assets required by those document payloads live under `public/assets/`, `public/fonts/`, `public/images/`, `public/sites/`, and `public/third-party-assets/`.
 - The Framer enrichment step currently backfills richer programme/tutorial metadata and writes additional collections under `src/data/pages/` and `src/data/crm/`, including `platforms`, `domains`, `articles`, and `external-logos`.
-- `npm run import:framer` also writes a raw inspection snapshot to `scripts/_artifacts/framer-api/export.json`.
+- `pnpm run import:framer` also writes a raw inspection snapshot to `scripts/_artifacts/framer-api/export.json`.
 - Current page integrations that still depend on imported Framer data:
   homepage uses live domains and platform data;
   `/professionals` uses imported external logos for partner/client bands;
@@ -45,4 +45,4 @@ This is a static Astro site (no backend, no database, no Docker). See `README.md
 - When the user says to apply page A's design onto page B, treat page A as the canonical visual source. Do not "standardise" by changing page A to match page B unless the user explicitly asks for that reversal.
 - For shared shell work such as headers, footers, or nav bars, do not rely on generic utility wrappers like `.shell` inside the shared component if those wrappers are also defined by page layouts. Use component-scoped wrappers so document-driven and structured Astro pages render identically.
 - Header and nav links must use absolute site paths such as `/contact-us`, not relative `contact-us` or `./contact-us`, to avoid route-dependent navigation bugs.
-- For parity fixes, verify both `npm run dev` and built output in a real browser on representative routes before declaring success. Check computed styles and layout metrics, not just screenshots.
+- For parity fixes, verify both `pnpm run dev` and built output in a real browser on representative routes before declaring success. Check computed styles and layout metrics, not just screenshots.

@@ -12,12 +12,16 @@ The crawl and Framer import scripts remain in the repo as legacy migration infra
 
 ## Commands
 
-- `npm install` installs dependencies.
-- `npm run dev` starts the Astro dev server.
-- `npm run build` builds the site.
-- `npm run check` runs `astro check`.
-- `npm run import:live` re-crawls the public site and regenerates legacy structured data files.
-- `npm run import:framer` refreshes legacy Framer-backed structured data from `.env.local` or `.env`.
+- `pnpm install` installs dependencies.
+- `pnpm run dev` starts the Astro dev server.
+- `pnpm run build` builds the site.
+- `pnpm run check` runs `astro check`.
+- `pnpm run import:live` re-crawls the public site and regenerates legacy structured data files.
+- `pnpm run import:framer` refreshes legacy Framer-backed structured data from `.env.local` or `.env`.
+
+## Deployment
+
+Production deploys to a Cloudflare Worker (static assets) on pushes to `main`. The repo ships a `wrangler.jsonc` at the root; see [docs/deployment.md](./docs/deployment.md) for the dashboard-side setup and the per-environment `SITE_URL` behaviour.
 
 ## Data model
 
@@ -99,14 +103,14 @@ seoDescription: Short search description.
 ...
 ```
 
-4. Run `npm run check` and `npm run build`.
+4. Run `pnpm run check` and `pnpm run build`.
 
 Programme taxonomy pills and badges link into the listing filters using `/courses-all?audience=<id>&domain=<id>&platform=<id>`. Those query params are also honoured on `/courses-schools` and `/courses-professionals`.
 
 ## Notes
 
 - `scripts/_artifacts/` is generated and ignored.
-- `npm run import:framer` is optional and uses `FRAMER_API_KEY` plus `FRAMER_PROJECT_URL` from `.env.local` or `.env`.
+- `pnpm run import:framer` is optional and uses `FRAMER_API_KEY` plus `FRAMER_PROJECT_URL` from `.env.local` or `.env`.
 - The Framer export step writes a raw snapshot to `scripts/_artifacts/framer-api/export.json` for inspection.
 - Page rendering is Astro-native; `downloads/rehosted_site/` and `src/mirror-html/` are not part of the runtime or build path.
 - The high-fidelity document routes now import checked-in HTML/CSS/JS payloads from `src/generated/route-documents.js` and local runtime assets under `public/assets/`, `public/fonts/`, `public/images/`, `public/sites/`, and `public/third-party-assets/`.
