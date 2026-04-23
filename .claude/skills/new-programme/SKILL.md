@@ -1,0 +1,191 @@
+---
+name: new-programme
+description: Create a new tinkercademy.com programme page end-to-end — frontmatter, body copy, hero image via mmx, and any missing platform entries. Use when the user says "new programme", "new course page", "add a course", "draft a programme", or similar. The skill quizzes the user for every required input before writing any files.
+---
+
+# New Programme Skill
+
+Tinkercademy programme pages live at `src/content/programmes/<slug>.md`. The filename is the URL slug (`/programmes/<slug>/`). The frontmatter is validated by a Zod schema in `src/content.config.ts:12` — missing or unknown enum values will fail the build.
+
+This skill walks the user through every field we've actually needed to author a page, generates a hero image with `mmx`, adds any missing platform entries to `src/data/pages/platforms.json`, and writes the file. It deliberately quizzes the user up front rather than inferring — so you always come back with a plan the user has signed off on before any files change.
+
+## When to invoke
+
+- "new programme", "new course page", "add a programme"
+- "draft a course", "put up a new corporate training page"
+- "make a programme for X"
+
+Do **not** invoke for:
+- Editing an existing programme — use plain edits.
+- A one-off copy tweak on an already-drafted page.
+
+## Preflight (before quizzing)
+
+Run these checks in parallel and surface any failures before starting the quiz:
+
+1. **Working directory is this repo.** `git rev-parse --show-toplevel` ends in `tinkercademy.com`.
+2. **`mmx` is installed and authenticated.** `mmx auth status` should show a valid key. If `mmx` is not on PATH, tell the user:
+   > `mmx` isn't installed. Install with `npm install -g mmx-cli`, then run `mmx auth login` (or set an API key). The `mmx-cli` skill has more detail.
+3. **Branch is clean-ish.** `git status --porcelain` — if there are unrelated WIP changes, flag them so the user knows this programme's commits will be isolated.
+
+Do not start the quiz if preflight fails; fix or get user acknowledgment first.
+
+## The Quiz
+
+Ask these questions **in order**, in small batches (≈3 at a time), letting the user respond before the next batch. Every field maps to a concrete decision made previously when authoring the "Agentic AI for Digital Builders" programme — don't skip any unless the user explicitly says "use the default".
+
+### Batch 1 — Identity and slug
+
+1. **Title.** What's the programme called? Mention that parallel structure with an existing course signals a series (e.g. "Agentic AI for Digital Builders" parallels "Vibe Coding for Digital Builders" — both "<Topic> for <Audience>").
+2. **Slug / filename.** Derive a kebab-case slug from the title and confirm. This becomes the URL (`/programmes/<slug>/`) and filename (`src/content/programmes/<slug>.md`).
+3. **Subtitle.** For corporate/professional courses the default is `"Corporate training"`. For school programmes it's usually the domain/audience (e.g. `"For secondary schools"`). Confirm or override.
+
+### Batch 2 — Format and logistics
+
+4. **Duration** (shown as the `duration` frontmatter field and on the programme card). Typical values: `"1 day"`, `"2 days"`, `"1-2 days"`, `"6 sessions"`.
+5. **Course date(s) / delivery.** Is there a fixed date (e.g. "4 May 2026"), a range, or "on request"? If there's also a flexible alternative format (e.g. "1-day session but 2-day extended available"), capture both — they go in the Details body.
+6. **Location.** Typical: `"CT Hub, or on request."`, `"CT HUB 2, 114 Lavender Street."`, or `"Participant's premises (Singapore)."`.
+
+### Batch 3 — Taxonomy (enum-backed)
+
+Before asking, read the three JSON files so you can quote valid IDs verbatim:
+
+```bash
+cat src/data/pages/audiences.json  | python3 -c "import json,sys; [print(p['id'], '—', p['label']) for p in json.load(sys.stdin)]"
+cat src/data/pages/domains.json    | python3 -c "import json,sys; [print(p['id'], '—', p['label']) for p in json.load(sys.stdin)]"
+cat src/data/pages/platforms.json  | python3 -c "import json,sys; [print(p['id'], '—', p['label']) for p in json.load(sys.stdin)]"
+```
+
+7. **`audienceIds`.** From `src/data/pages/audiences.json`. Typical combos: `["public", "businesses"]` for professional courses; `["students", "teachers"]` for schools. Minimum one.
+8. **`domainIds`.** From `src/data/pages/domains.json`. Usually one (e.g. `["ai"]`, `["webdev"]`). Minimum one.
+9. **`platformIds`.** From `src/data/pages/platforms.json`. Minimum one. **If the user names a platform that isn't in the JSON, offer to add it** — see "Adding a missing platform" below. Single-platform courses (e.g. `["claude"]`) are fine.
+
+### Batch 4 — Copy angle
+
+10. **Course overview angle.** One or two paragraphs. Ask what the hook is — the "stop doing X, start doing Y" framing, or the problem the course solves. If it's a sequel to another Tinkercademy course, mention it in the opening line.
+11. **Lesson outcomes.** 3–5 bullet points. Ask for:
+    - The concrete deliverable each bullet represents (a built artefact, a deployed thing, a produced report).
+    - Whether the outcomes should be **generic** (recommended — use phrases like "your company", "a finance system", "public statistical sources") or **customer-specific** (only if the page is explicitly for one organisation's internal use).
+    - If generic: ask if Tinkercademy will supply the sample data / templates during the session (if yes, tag each bullet with "_(We'll supply …)_" so participants know the artefacts are provided).
+12. **Prerequisites** (optional). E.g. "Participants should have completed _Vibe Coding for Digital Builders_ or have equivalent hands-on experience with generative AI tools." If this course stands alone, skip.
+13. **Requirements** (bundled tools/accounts). The pattern is: "Participants will be provided with **[tool]** for the duration of the course." Ask what's bundled (e.g. "Claude Cowork (1 month)", "paid ChatGPT Business and Lovable plans", "Figma Professional"). Laptop boilerplate is standard.
+
+### Batch 5 — Fees
+
+14. **Fees.** Offer three options:
+    - **(a) Direct input.** User gives each tier + flat fee directly.
+    - **(b) Derive from another course.** Ask which course to base off, and the transform — e.g. "Vibe Coding ÷ 2 then minus $50" or "half of the 2-day price plus $50/pax for Claude".
+    - **(c) Standard Tinkercademy professional tiers.** The current reference tiers (2026, 1-day, Claude-bundled):
+      - 16+: \$430
+      - 12–15: \$485
+      - 8–11: \$550
+      - 7 or fewer (flat): \$4,250
+    Whatever the user picks, **compute the full table and sanity-check two things**:
+    - **Tier cliffs** — at each boundary (8, 12, 16), does moving up a tier mean a lower _total_ than the previous tier's max? (Yes is the normal topology — same as every other programme.)
+    - **7→8 transition** — `7_or_fewer_flat` should be **slightly below** `8 × tier_8_11`. If not, warn the user: a group of 8 would pay _less_ than a group of 7, which is the opposite of how the flat fee is usually meant to work. Suggest a flat fee ≈ `(8 × tier_8_11) − ~$100` to restore the conventional relationship.
+    Always quote prices in SGD, exclusive of GST. The fee block also ends with "Invoicing terms available."
+
+### Batch 6 — Hero image
+
+15. **Hero image direction.** Ask for a short creative brief — mood, subject matter, any colour direction. Suggest 2–3 angles based on the course content if the user is unsure. Note that mmx images sometimes include garbled fake-text on signs/documents; editorial/abstract prompts work better than literal scenes with text.
+16. Generate with:
+    ```bash
+    mmx image generate \
+      --prompt "<brief>" \
+      --aspect-ratio 3:2 \
+      --n 2 \
+      --out-dir public/images \
+      --out-prefix <slug>-hero
+    ```
+    Read both candidates with the Read tool, show the user which you'd pick and why (usually: the one with less fake-text and clearer concept). Let them override. Trash the rejected candidate with `trash` (not `rm`).
+
+### Batch 7 — Positioning (optional)
+
+17. **`weight`** (default `99` — alongside everything else). To guarantee this programme sorts **first** in any listing, use **200** (current max across all programme files is 100). Tell the user this is the knob for "make this stand out in the full programme list".
+18. **`homeFeaturedRank`** (optional, 1+). Adding this makes the card appear in the Popular Courses rail on the homepage. Lower number = earlier; the current range in use is 3–7 for the normal rail, so 1–2 are "jump the queue" slots. Skip if the user doesn't want home-page placement.
+19. **SEO overrides.** By convention `seoTitle` follows `"<Programme> - Tinkercademy: Coding and Making for Schools and Professionals"`. `seoDescription` is optional — if omitted, the programme page derives from `cardBlurb`.
+
+### Batch 8 — CTA
+
+20. **Sign-up CTA.** Defaults are `signUpLabel: "Enquire now"` and `signUpUrl: "https://form.jotform.com/232050520776450"` (the generic enquiry Jotform). Override only if there's a dedicated form for this course.
+
+## Adding a missing platform
+
+If a platform the user named isn't in `src/data/pages/platforms.json`, append an entry (keep alphabetical order by `id`):
+
+```json
+{
+  "id": "<kebab-id>",
+  "label": "<Display Name>",
+  "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+  "domain_ids": ["ai"],
+  "content_html": null,
+  "content_text": ""
+}
+```
+
+Notes:
+- `icon` — reuse the generic `SCbZqPZak9L4pDz7y9XT1mDI.svg` placeholder if we don't have a proper logo asset yet. Flag that a real logo should be sourced later.
+- `domain_ids` — at least one, from `src/data/pages/domains.json`.
+- Do not add a `source_id` (that's a Framer-export field for legacy entries only).
+- The Zod enum in `src/content.config.ts:10` is derived from this JSON at build time, so the platform is immediately usable in `platformIds`.
+
+Commit the platform addition as its **own** commit — it's a data change that's reusable by other future programmes. Don't bundle it into the programme commit.
+
+## Writing the programme file
+
+Body-copy conventions (match existing programmes — this is a Framer-migrated codebase):
+
+- Paragraphs use `<p dir="auto">…</p>`.
+- Lists use `<ul dir="auto">` with each item as `<li data-preset-tag="p"><p>…</p></li>`. Keep the `data-preset-tag="p"` attribute.
+- Three H2 sections, in order: **Course Overview**, **Lesson Outcomes**, **Details**.
+- The Details block is a single `<p>` chain, not sub-headers — each line is `<strong>Dates and Times</strong>: …`, `<strong>Location</strong>: …`, etc.
+- British spelling everywhere (`organisation`, `recognise`, `visualisation`).
+- Currency: always `$` with SGD numbers; include the line `"All quoted prices are in SGD. Invoicing terms available."` after the fee block.
+- Keep `cardBlurb` truncated with a trailing `…` — it's displayed in list cards with a max length around 140 chars.
+
+Frontmatter field order (match convention):
+
+```yaml
+---
+title: "…"
+subtitle: "…"
+duration: "…"
+heroImage: "/images/…"
+audienceIds: […]
+domainIds: […]
+platformIds: […]
+cardBlurb: "…"
+weight: 99
+homeFeaturedRank: 1           # optional
+signUpLabel: "Enquire now"
+signUpUrl: "https://form.jotform.com/232050520776450"
+seoTitle: "…"                 # optional
+seoDescription: "…"           # optional
+---
+```
+
+**Do not add a `draft` field.** It's not in the Zod schema and not filtered on — it has no effect. If the user wants to hide a programme, use a different mechanism (ask first).
+
+## After writing
+
+1. **Preview locally.** If the dev server is already running on `:4321`, verify:
+   ```bash
+   curl -sI http://localhost:4321/programmes/<slug>/ | head -1
+   ```
+   Should be `200`. If it's `404`, double-check the filename (slug) and the trailing slash (`astro.config.mjs` has `trailingSlash: 'always'`).
+2. **Commit atomically**, per the repo's commit policy. A normal new programme is two commits:
+   - `feat(platforms): add <Platform>` (only if you added a new platform entry)
+   - `feat(programmes): add <Programme Title>` — includes both the `.md` file and the hero image
+   Use `-- <path>…` to scope commits to only the touched files.
+3. Don't push or deploy unless the user asks. "New programme" requests usually end with the user wanting to review locally first.
+
+## Things NOT to do
+
+- **Don't invent audience/domain/platform IDs.** Only use values from the three JSON files. Unknown enum values fail the build.
+- **Don't reuse another programme's hero image** unless the user explicitly asks. Generate a fresh one.
+- **Don't forget the trailing slash** when quoting a preview URL. Astro dev server 404s without it.
+- **Don't auto-deploy.** The `deploy` skill is a separate, user-triggered step.
+- **Don't commit the generated `_001.jpg` / `_002.jpg` candidate you rejected.** Trash it first.
+- **Don't put customer-specific names** (e.g. "IMDA", "SingStat", "SharePoint", specific filenames) in the lesson outcomes unless the user explicitly wants a customer-specific page. Default to generic framing ("your company", "a finance system", "public statistical sources") and have Tinkercademy supply the sample data.
+- **Don't touch `src/data/crm/*` or `src/data/pages/assets.json`.** Those are Framer-export snapshots and are not the source of truth for programme rendering.

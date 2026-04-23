@@ -23,6 +23,16 @@ The crawl and Framer import scripts remain in the repo as legacy migration infra
 
 Production deploys to a Cloudflare Worker (static assets) on pushes to `main`. The repo ships a `wrangler.jsonc` at the root; see [docs/deployment.md](./docs/deployment.md) for the dashboard-side setup and the per-environment `SITE_URL` behaviour.
 
+## Claude Code skills
+
+A few Claude Code skills ship with this repo under `.claude/skills/`. Invoke them in Claude Code the way you invoke any other skill (the model will pick them up from the listing):
+
+- **`deploy`** — Promote the latest uploaded Cloudflare Worker version to 100% traffic. Triggers: "deploy", "ship it", "promote", "rollback".
+- **`new-programme`** — End-to-end authoring of a new `src/content/programmes/<slug>.md` page: quizzes you for every field, handles taxonomy enum lookups, adds missing platforms to `src/data/pages/platforms.json`, and generates a hero image via [mmx](https://www.npmjs.com/package/mmx-cli). Triggers: "new programme", "add a course", "draft a programme".
+- **`writing-style-review`** — Audit copy against the Tinkercademy house voice, or evolve the style guide. Triggers: "does this sound like Tinkercademy?", "review the copy".
+
+The `new-programme` skill depends on the [`mmx`](https://www.npmjs.com/package/mmx-cli) CLI for hero-image generation (`npm install -g mmx-cli`). The MiniMax API key is in our 1Password vault — search for "MiniMax / mmx API key" and drop it in with `mmx auth` on first use.
+
 ## Data model
 
 Legacy CRM-like mirror files live under `src/data/crm/`:
@@ -61,6 +71,8 @@ Short version:
 - Team members for `/about-us` are still repo-managed in `src/data/team.yaml`.
 
 ### Adding or editing a programme
+
+For a guided end-to-end walkthrough (fields, taxonomy checks, hero image, commit scoping) use the **`new-programme`** Claude Code skill described above. The manual recipe below is the underlying shape for anyone editing by hand.
 
 1. Create or update a Markdown file at `src/content/programmes/<slug>.md`.
 2. Use this frontmatter shape:
