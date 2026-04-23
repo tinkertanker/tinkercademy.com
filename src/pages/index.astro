@@ -627,8 +627,26 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-flagship__grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 		gap: 1.25rem;
+	}
+
+	.home-flagship__grid > .flagship-card {
+		grid-column: span 2;
+	}
+
+	/* Centre a single dangling item on the last row. */
+	.home-flagship__grid > .flagship-card:last-child:nth-child(3n + 1) {
+		grid-column: 3 / span 2;
+	}
+
+	/* Centre two dangling items on the last row. */
+	.home-flagship__grid > .flagship-card:nth-last-child(2):nth-child(3n + 1) {
+		grid-column: 2 / span 2;
+	}
+
+	.home-flagship__grid > .flagship-card:last-child:nth-child(3n + 2) {
+		grid-column: 4 / span 2;
 	}
 
 	.flagship-card {
@@ -730,6 +748,13 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		.home-flagship__grid {
 			grid-template-columns: 1fr;
 		}
+
+		.home-flagship__grid > .flagship-card,
+		.home-flagship__grid > .flagship-card:last-child:nth-child(3n + 1),
+		.home-flagship__grid > .flagship-card:last-child:nth-child(3n + 2),
+		.home-flagship__grid > .flagship-card:nth-last-child(2):nth-child(3n + 1) {
+			grid-column: auto;
+		}
 	}
 
 	/* ─── Popular ────────────────────────────────────────────────────── */
@@ -764,13 +789,36 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-popular__grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 		gap: 20px;
+	}
+
+	.home-popular__grid > :global(.prog-card) {
+		grid-column: span 2;
+	}
+
+	.home-popular__grid > :global(.prog-card:last-child:nth-child(3n + 1)) {
+		grid-column: 3 / span 2;
+	}
+
+	.home-popular__grid > :global(.prog-card:nth-last-child(2):nth-child(3n + 1)) {
+		grid-column: 2 / span 2;
+	}
+
+	.home-popular__grid > :global(.prog-card:last-child:nth-child(3n + 2)) {
+		grid-column: 4 / span 2;
 	}
 
 	@media (max-width: 560px) {
 		.home-popular__grid {
 			grid-template-columns: 1fr;
+		}
+
+		.home-popular__grid > :global(.prog-card),
+		.home-popular__grid > :global(.prog-card:last-child:nth-child(3n + 1)),
+		.home-popular__grid > :global(.prog-card:last-child:nth-child(3n + 2)),
+		.home-popular__grid > :global(.prog-card:nth-last-child(2):nth-child(3n + 1)) {
+			grid-column: auto;
 		}
 	}
 </style>
