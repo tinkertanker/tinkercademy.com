@@ -40,6 +40,14 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 - Programme taxonomy pills and badges link into listing filters via `/courses-all?audience=<id>&domain=<id>&platform=<id>`. The same query format works on `/courses-schools` and `/courses-professionals`.
 - Homepage featuring comes from `homeFeaturedRank`; generic list ordering comes from `weight desc, title asc`.
 
+### Deploy
+
+- Production runs on a Cloudflare Worker (static assets). **Every push to `main` builds and uploads a new Worker version but does NOT serve it.** Production stays on the previously-promoted version until someone explicitly promotes the new one.
+- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback", or similar, follow `.claude/skills/deploy/SKILL.md`. The short version: run `pnpm run deploy` (interactive) or `npx wrangler versions deploy <id>@100 --yes` (scripted), then `pnpm run smoke https://tinkercademy.com` to verify.
+- "Build" is automatic on push. The user typing "build this" probably means `pnpm run build` locally or a `git push` — not a deploy.
+- Rollback is the same mechanism: `pnpm run deploy`, pick an older version ID.
+- Full setup details: `docs/deployment.md`.
+
 ### Shared shell parity
 
 - When the user says to apply page A's design onto page B, treat page A as the canonical visual source. Do not "standardise" by changing page A to match page B unless the user explicitly asks for that reversal.

@@ -15,7 +15,9 @@
     "import:framer": "node scripts/import-framer-data.mjs",
     "import:live": "npm run crawl:site && npm run build:crm",
     "check": "astro check",
-    "smoke": "node scripts/smoke-check.mjs"
+    "smoke": "node scripts/smoke-check.mjs",
+    "deploy": "npx wrangler versions deploy",
+    "deploy:list": "npx wrangler versions list"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
