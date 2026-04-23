@@ -65,8 +65,14 @@ that value — mismatches will either create a second Worker or fail.
 3. **Add the custom domain**
    - Settings → Domains & Routes → Add → Custom domain →
      `tinkercademy.com`.
-   - Cloudflare creates the DNS record (CNAME-flattened to the Worker)
-     in the zone automatically if the zone is on Cloudflare.
+   - Cloudflare creates the DNS record (a special Workers custom-domain
+     record type, not a conventional A/AAAA) in the zone automatically.
+   - If the apex already has conflicting A/AAAA/CNAME records (e.g. left
+     over from a previous host), the attach fails with "A DNS record for
+     tinkercademy.com could not be added. Please try again later." —
+     delete those apex records in DNS → Records first, then retry. The
+     Workers Domains API has no override flag; the dashboard is just as
+     strict. Expect a brief (few seconds) apex outage during the swap.
 
 4. **DNS (apex, no www)**
    - If the zone is on Cloudflare, step 3 handles it.
@@ -81,6 +87,26 @@ that value — mismatches will either create a second Worker or fail.
      cert provisioning, no grey-cloud dance.
    - If the zone has other settings: SSL/TLS mode should be **Full** or
      **Full (strict)**. Never **Flexible**.
+   - SSL/TLS → Edge Certificates → toggle **Always Use HTTPS** to On.
+     Without this, plain-HTTP requests to the apex return 200 instead of
+     301-ing to HTTPS (HSTS only protects repeat visitors, not the first
+     HTTP hit).
+
+6. **www → apex redirect**
+   - Workers static-assets `_redirects` does not support domain-level
+     redirects (source must be a path, not a full URL), so `www` is
+     handled at the zone level via a Single Redirect Rule.
+   - DNS → Records → add (or repoint) a CNAME `www` → `tinkercademy.com`,
+     proxied (orange cloud). The target doesn't really matter because
+     Cloudflare intercepts before the origin is touched — but CNAMEing
+     to the apex is tidy and makes the "redirect rule misfires" fallback
+     land on the live site rather than a stale third party.
+   - Rules → Overview → Create rule → Redirect Rule:
+     - When incoming requests match: Wildcard pattern,
+       Request URL = `http*://www.tinkercademy.com/*`
+     - Then: Type = Static, URL = `https://tinkercademy.com/${1}`,
+       Status = 301, Preserve query string = On.
+     - Deploy.
 
 ## GitHub Pages (staging) — already wired
 
@@ -138,8 +164,11 @@ When you're ready to go live:
 - [ ] Run `pnpm run smoke https://<worker>.<account>.workers.dev` against
       the preview URL. (The hostname won't match prod regex, so the robots
       assertion will fail by design — ignore that line and review the rest.)
-- [ ] Attach `tinkercademy.com` as a custom domain.
+- [ ] Attach `tinkercademy.com` as a custom domain (delete any conflicting
+      apex A/AAAA/CNAME records first — see step 3 above).
 - [ ] Flip DNS (if not already on Cloudflare).
+- [ ] Toggle SSL/TLS → Edge Certificates → Always Use HTTPS to On.
+- [ ] Set up the `www` → apex Redirect Rule (step 6 above).
 - [ ] Once cert is live: `pnpm run smoke https://tinkercademy.com` —
       should be all ✔.
 - [ ] Submit the new sitemap in Google Search Console.
