@@ -12,7 +12,7 @@ export function getStaticPaths() {
 }
 
 const { article } = Astro.props as { article: any };
-const canonical = new URL(`/articles/${article.slug}`, 'https://tinkercademy.com').toString();
+const canonical = new URL(`/articles/${article.slug}/`, 'https://tinkercademy.com').toString();
 
 const TITLE_SUFFIX = ' — Tinkercademy';
 const TITLE_MAX_BASE = 60 - TITLE_SUFFIX.length;

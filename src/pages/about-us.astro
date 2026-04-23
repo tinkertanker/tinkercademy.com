@@ -13,7 +13,7 @@ import { resolve } from 'node:path';
 const page = getStaticPage('/about-us');
 if (!page) return Astro.redirect('/404');
 
-const canonical = new URL('/about-us', 'https://tinkercademy.com').toString();
+const canonical = new URL('/about-us/', 'https://tinkercademy.com').toString();
 
 type Block = { tag?: string; text?: string };
 const blocks: Block[] = (page.blocks ?? []) as Block[];

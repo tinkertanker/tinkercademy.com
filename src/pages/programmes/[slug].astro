@@ -19,7 +19,7 @@ const programme = await getProgrammeBySlug(Astro.params.slug ?? '');
 if (!programme) return Astro.redirect('/404');
 
 const { Content } = await render(programme.entry);
-const canonical = new URL(`/programmes/${programme.slug}`, 'https://tinkercademy.com').toString();
+const canonical = new URL(`/programmes/${programme.slug}/`, 'https://tinkercademy.com').toString();
 
 /* ─── Page title ────────────────────────────────────────────────────
    Programme markdown files ship a long `seoTitle` of the form:

@@ -25,7 +25,7 @@ import {
 const page = getStaticPage('/schools');
 if (!page) return Astro.redirect('/404');
 
-const canonical = 'https://tinkercademy.com/schools';
+const canonical = 'https://tinkercademy.com/schools/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle = page.hero_title ?? 'Code, Tinker, and Make with Us.';

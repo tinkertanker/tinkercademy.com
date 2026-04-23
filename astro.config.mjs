@@ -11,7 +11,7 @@ const SITE_URL = process.env.SITE_URL?.trim() || 'https://webstaging.tinkercadem
 // https://astro.build/config
 export default defineConfig({
 	site: SITE_URL,
-	trailingSlash: 'never',
+	trailingSlash: 'always',
 	integrations: [
 		sitemap({
 			filter: (page) => !/\/courses\/?$/.test(new URL(page).pathname),

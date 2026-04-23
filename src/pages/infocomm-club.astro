@@ -10,7 +10,7 @@ import { localiseFramerImage } from '../lib/media.js';
 const page = getStaticPage('/infocomm-club');
 if (!page) return Astro.redirect('/404');
 
-const canonical = 'https://tinkercademy.com/infocomm-club';
+const canonical = 'https://tinkercademy.com/infocomm-club/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle = page.hero_title ?? 'Infocomm Club Courses';

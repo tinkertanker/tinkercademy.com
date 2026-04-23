@@ -32,7 +32,8 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props as { page: any };
-const canonical = new URL(page.path, 'https://tinkercademy.com').toString();
+const canonicalPath = page.path.endsWith('/') ? page.path : `${page.path}/`;
+const canonical = new URL(canonicalPath, 'https://tinkercademy.com').toString();
 
 /* ─── Classify page type ────────────────────────────────────────────── */
 const COURSE_LISTING_SLUGS = ['courses-all', 'courses-professionals', 'courses-schools'];

@@ -4,7 +4,7 @@ import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
 
 const { articles } = getSiteData();
-const canonical = 'https://tinkercademy.com/articles';
+const canonical = 'https://tinkercademy.com/articles/';
 
 const sortedArticles = [...articles].sort((a, b) => {
 	const da = a.date ? new Date(a.date).getTime() : 0;

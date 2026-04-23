@@ -6,7 +6,7 @@ import { getStaticPage } from '../lib/data.js';
 const page = getStaticPage('/contact-us');
 if (!page) return Astro.redirect('/404');
 
-const canonical = new URL('/contact-us', 'https://tinkercademy.com').toString();
+const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString();
 
 ---
 

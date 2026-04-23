@@ -10,7 +10,7 @@ import { localiseFramerImage } from '../lib/media.js';
 const page = getStaticPage('/tinker-x');
 if (!page) return Astro.redirect('/404');
 
-const canonical = 'https://tinkercademy.com/tinker-x';
+const canonical = 'https://tinkercademy.com/tinker-x/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle = page.hero_title ?? 'Tinker X';

@@ -14,7 +14,7 @@ export function getStaticPaths() {
 }
 
 const { tutorial } = Astro.props as { tutorial: any };
-const canonical = new URL(`/tutorials/${tutorial.slug}`, 'https://tinkercademy.com').toString();
+const canonical = new URL(`/tutorials/${tutorial.slug}/`, 'https://tinkercademy.com').toString();
 
 /* Page title: "<tutorial name> — Tinkercademy tutorials", clipped to a
    SERP-safe length. Disambiguate tutorials that share a `title` (e.g.

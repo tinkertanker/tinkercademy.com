@@ -11,7 +11,7 @@ const page = getStaticPage('/microbit');
 if (!page) return Astro.redirect('/404');
 
 const site = getSiteData();
-const canonical = 'https://tinkercademy.com/microbit';
+const canonical = 'https://tinkercademy.com/microbit/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle = page.hero_title ?? 'micro:bit Tutorials';

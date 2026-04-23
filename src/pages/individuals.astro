@@ -18,7 +18,7 @@ import { getProgrammesForSurface, toProgrammeCardData } from '../lib/programmes.
 const page = getStaticPage('/individuals');
 if (!page) return Astro.redirect('/404');
 
-const canonical = 'https://tinkercademy.com/individuals';
+const canonical = 'https://tinkercademy.com/individuals/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle = page.hero_title ?? 'Self-directed Learning Opportunities';
