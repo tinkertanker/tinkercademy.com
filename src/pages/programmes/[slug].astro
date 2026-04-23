@@ -1,25 +1,11 @@
 ---
 import { render } from 'astro:content';
+import ContactForm from '../../components/ContactForm.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
 import { clipDescription } from '../../lib/seo.ts';
-
-const SITE_ORIGIN = 'https://tinkercademy.com';
-
-function shouldOpenInNewTab(href: string | null | undefined) {
-	if (typeof href !== 'string' || !href.trim()) return false;
-
-	const trimmedHref = href.trim();
-	if (/^(mailto:|tel:)/i.test(trimmedHref)) return false;
-
-	try {
-		return new URL(trimmedHref, SITE_ORIGIN).origin !== SITE_ORIGIN;
-	} catch {
-		return false;
-	}
-}
 
 export async function getStaticPaths() {
 	const programmes = await getAllProgrammes();
@@ -62,9 +48,7 @@ const domainLabels = domains.map((domain) => domain.label);
 const platforms = programme.platforms ?? [];
 const duration = programme.duration ?? '';
 const primaryAudience = programme.primaryAudience;
-const signUpUrl = programme.signUpUrl ?? null;
-const signUpLabel = programme.signUpLabel ?? 'Enquire now';
-const signUpIsExternal = shouldOpenInNewTab(signUpUrl);
+const enquiryLabel = programme.signUpLabel ?? 'Enquire now';
 const typeLabel =
 	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
 		? 'Corporate training'
@@ -92,18 +76,15 @@ const typeLabel =
 			<p class="prog-hero__eyebrow">Content</p>
 			<h1 class="prog-hero__title">{programme.title}</h1>
 			{duration && <p class="prog-hero__duration">{duration}</p>}
-			{signUpUrl && (
-				<div class="prog-hero__actions">
-					<a
-						class="prog-hero__cta"
-						href={signUpUrl}
-						target={signUpIsExternal ? '_blank' : undefined}
-						rel={signUpIsExternal ? 'noopener noreferrer' : undefined}
-					>
-						{signUpLabel}
-					</a>
-				</div>
-			)}
+			<div class="prog-hero__actions">
+				<a class="prog-hero__cta" href="#enquire">{enquiryLabel}</a>
+				<a
+					class="prog-hero__cta prog-hero__cta--secondary"
+					href="mailto:hello@tk.sg"
+				>
+					Email us
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -143,55 +124,67 @@ const typeLabel =
 		</div>
 	</section>
 
-	{(domainLabels.length > 0 || platforms.length > 0) && (
-		<section class="prog-facts">
-			<div class="shell prog-facts__inner">
-				{domainLabels.length > 0 && (
-					<div class="prog-facts__group">
-						<h2 class="prog-facts__heading">Domains</h2>
-						<div class="prog-facts__chips">
-							{domains.map((domain) => (
-								<a
-									class="prog-facts__chip"
-									href={createProgrammeFilterHref({ domain: domain.id })}
-								>
-									{domain.label}
-								</a>
-							))}
-						</div>
+	{/* ════════ Facts + content + enquiry form sidebar ═══════════════ */}
+	<div class="prog-main shell">
+		<div class="prog-main__body">
+			{(domainLabels.length > 0 || platforms.length > 0) && (
+				<section class="prog-facts">
+					<div class="prog-facts__inner">
+						{domainLabels.length > 0 && (
+							<div class="prog-facts__group">
+								<h2 class="prog-facts__heading">Domains</h2>
+								<div class="prog-facts__chips">
+									{domains.map((domain) => (
+										<a
+											class="prog-facts__chip"
+											href={createProgrammeFilterHref({ domain: domain.id })}
+										>
+											{domain.label}
+										</a>
+									))}
+								</div>
+							</div>
+						)}
+						{platforms.length > 0 && (
+							<div class="prog-facts__group">
+								<h2 class="prog-facts__heading">Platforms</h2>
+								<div class="prog-facts__chips">
+									{platforms.map((platform) => (
+										<a
+											class="prog-facts__chip prog-facts__chip--platform"
+											href={createProgrammeFilterHref({ platform: platform.id })}
+										>
+											{platform.icon && (
+												<img
+													class="prog-facts__icon"
+													src={platform.icon}
+													alt=""
+													loading="lazy"
+												/>
+											)}
+											<span>{platform.label}</span>
+										</a>
+									))}
+								</div>
+							</div>
+						)}
 					</div>
-				)}
-				{platforms.length > 0 && (
-					<div class="prog-facts__group">
-						<h2 class="prog-facts__heading">Platforms</h2>
-						<div class="prog-facts__chips">
-							{platforms.map((platform) => (
-								<a
-									class="prog-facts__chip prog-facts__chip--platform"
-									href={createProgrammeFilterHref({ platform: platform.id })}
-								>
-									{platform.icon && (
-										<img
-											class="prog-facts__icon"
-											src={platform.icon}
-											alt=""
-											loading="lazy"
-										/>
-									)}
-									<span>{platform.label}</span>
-								</a>
-							))}
-						</div>
-					</div>
-				)}
-			</div>
-		</section>
-	)}
+				</section>
+			)}
 
-	{/* ════════ Content sections with headings ═══════════════════════ */}
-	<article class="prog-body shell prose">
-		<Content />
-	</article>
+			<article class="prog-body prose">
+				<Content />
+			</article>
+		</div>
+
+		<aside class="prog-aside">
+			<ContactForm
+				id="enquire"
+				heading="Submit Enquiry"
+				prefillCourse={programme.title}
+			/>
+		</aside>
+	</div>
 
 	<CtaBanner />
 </ContentLayout>
@@ -286,6 +279,16 @@ const typeLabel =
 		box-shadow: 0 12px 28px rgba(240, 93, 87, 0.28);
 	}
 
+	.prog-hero__cta--secondary {
+		background: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.7);
+		box-shadow: none;
+	}
+
+	.prog-hero__cta--secondary:hover {
+		background: rgba(255, 255, 255, 0.12);
+	}
+
 	/* ─── Meta bar (live: pill audiences, inline meta) ─────── */
 	.prog-meta {
 		padding: 0;
@@ -353,7 +356,8 @@ const typeLabel =
 	}
 
 	.prog-facts {
-		padding: 1.5rem 0 0.5rem;
+		padding: 0;
+		margin-bottom: 1.5rem;
 	}
 
 	.prog-facts__inner {
@@ -412,10 +416,33 @@ const typeLabel =
 		flex-shrink: 0;
 	}
 
+	/* ─── Main layout: facts + content + enquiry aside ─────── */
+	.prog-main {
+		padding: 1.5rem 0 2.5rem;
+		display: grid;
+		gap: 2rem;
+	}
+
+	.prog-main__body {
+		min-width: 0;
+	}
+
+	@media (min-width: 960px) {
+		.prog-main {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+			gap: 2.5rem;
+			align-items: start;
+		}
+
+		.prog-aside {
+			position: sticky;
+			top: 1.5rem;
+		}
+	}
+
 	/* ─── Content body ─────────────────────────────────────── */
 	.prog-body {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		min-width: 0;
 	}
 
 	.prog-body :global(h2),
