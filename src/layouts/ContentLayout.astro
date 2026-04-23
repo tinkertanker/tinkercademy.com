@@ -248,8 +248,8 @@ const organisationSchema = {
 		   footer, CTA banner, prose) and every page render at the same
 		   rhythm. */
 		--body-font-size: 1rem;
-		--body-line-height: 1.7;
-		--body-line-height-tight: 1.55;
+		--body-line-height: 1.5;
+		--body-line-height-tight: 1.35;
 		--body-weight: 400;
 		--body-weight-medium: 500;
 		--lead-font-size: clamp(1rem, 1.4vw, 1.1rem);
@@ -334,7 +334,7 @@ const organisationSchema = {
 	.lead {
 		max-width: 68ch;
 		font-size: 1.15rem;
-		line-height: 1.7;
+		line-height: var(--body-line-height);
 		color: rgb(110, 110, 110);
 	}
 
@@ -369,7 +369,7 @@ const organisationSchema = {
 	.prose p,
 	.prose li {
 		max-width: 70ch;
-		line-height: 1.75;
+		line-height: var(--body-line-height);
 	}
 
 	.prose ul {
@@ -411,7 +411,7 @@ const organisationSchema = {
 	.card p {
 		margin: 0;
 		color: rgb(110, 110, 110);
-		line-height: 1.6;
+		line-height: var(--body-line-height);
 	}
 
 	.section {
