@@ -89,6 +89,16 @@
     "source_id": "O9xbZ_YwL"
   },
   {
+    "id": "claude",
+    "label": "Claude",
+    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "domain_ids": [
+      "ai"
+    ],
+    "content_html": null,
+    "content_text": ""
+  },
+  {
     "id": "express",
     "label": "Express",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
