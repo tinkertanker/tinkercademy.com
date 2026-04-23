@@ -1,0 +1,262 @@
+---
+interface Props {
+	id?: string;
+	heading?: string;
+	subheading?: string;
+	prefillCourse?: string;
+}
+
+const {
+	id,
+	heading = 'Tinkercademy Course Enquiry Form',
+	subheading,
+	prefillCourse,
+} = Astro.props;
+---
+
+<div class="contact-form-card" id={id}>
+	<div class="contact-form-card__header">
+		<h2>{heading}</h2>
+		{subheading ? (
+			<p set:html={subheading} />
+		) : (
+			<p>
+				Please fill in this form, or email us at
+				<a href="mailto:hello@tk.sg">hello@tk.sg</a>, and we&apos;ll get back to you
+				ASAP!
+			</p>
+		)}
+	</div>
+
+	<form
+		class="contact-form"
+		action="https://submit.jotform.com/submit/251391353870054"
+		method="post"
+		accept-charset="utf-8"
+		autocomplete="on"
+	>
+		<input type="hidden" name="formID" value="251391353870054" />
+		<input type="hidden" name="simple_spc" value="251391353870054-251391353870054" />
+		<input type="hidden" name="submitSource" value="direct" />
+
+		<div class="contact-form__grid">
+			<label class="contact-field">
+				<span>Name <strong>*</strong></span>
+				<input type="text" name="q34_name" required />
+			</label>
+
+			<label class="contact-field">
+				<span>School/Organisation</span>
+				<input type="text" name="q31_org" />
+			</label>
+
+			<label class="contact-field">
+				<span>Email <strong>*</strong></span>
+				<input type="email" name="q4_email" placeholder="example@example.com" required />
+			</label>
+
+			<label class="contact-field">
+				<span>Phone Number</span>
+				<input type="tel" name="q42_phoneNumber[full]" inputmode="numeric" placeholder="00000000" />
+				<small>Optional, if you prefer to be contacted via phone.</small>
+			</label>
+
+			<label class="contact-field contact-field--full">
+				<span>Course Name or Topic</span>
+				<input type="text" name="q40_course" value={prefillCourse ?? ''} />
+			</label>
+
+			<label class="contact-field contact-field--full">
+				<span>Comments/Questions</span>
+				<textarea name="q41_comments" rows="7"></textarea>
+			</label>
+		</div>
+
+		<div class="contact-form__actions">
+			<button type="submit">Submit</button>
+		</div>
+
+		<div class="contact-form__honeypot" aria-hidden="true">
+			<label>
+				Should be empty
+				<input type="text" name="website" tabindex="-1" autocomplete="off" />
+			</label>
+		</div>
+	</form>
+</div>
+
+<style>
+	.contact-form-card {
+		background: #fff;
+		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
+		border-radius: 1.25rem;
+		overflow: hidden;
+		container-type: inline-size;
+	}
+
+	.contact-form-card__header {
+		padding: 2rem 2.25rem 1.5rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	.contact-form-card__header h2 {
+		margin: 0;
+		font-family: var(--heading);
+		font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+		font-weight: 600;
+		line-height: 1.2;
+		color: var(--text);
+	}
+
+	.contact-form-card__header p {
+		margin: 0.65rem 0 0;
+		font-family: var(--meta);
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height-tight);
+		color: var(--text);
+	}
+
+	.contact-form-card__header a {
+		color: var(--accent-dark);
+		text-decoration-color: rgba(202, 67, 61, 0.4);
+		text-underline-offset: 3px;
+	}
+
+	.contact-form-card__header a:hover {
+		text-decoration-color: currentColor;
+	}
+
+	.contact-form {
+		padding: 2rem 2.25rem 2.25rem;
+	}
+
+	.contact-form__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem 1.75rem;
+	}
+
+	.contact-field {
+		display: grid;
+		gap: 0.4rem;
+	}
+
+	.contact-field--full {
+		grid-column: 1 / -1;
+	}
+
+	.contact-field span {
+		font-family: var(--meta);
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: var(--text);
+	}
+
+	.contact-field strong {
+		color: var(--accent);
+		font-weight: inherit;
+	}
+
+	.contact-field input,
+	.contact-field textarea {
+		width: 100%;
+		padding: 0.8rem 0.9rem;
+		border: 1px solid rgba(0, 0, 0, 0.18);
+		border-radius: 0.5rem;
+		background: #fff;
+		font-family: var(--meta);
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height-tight);
+		color: var(--text);
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
+	}
+
+	.contact-field textarea {
+		min-height: 11rem;
+		resize: vertical;
+	}
+
+	.contact-field input::placeholder,
+	.contact-field textarea::placeholder {
+		color: rgba(51, 51, 51, 0.45);
+	}
+
+	.contact-field input:focus,
+	.contact-field textarea:focus {
+		outline: none;
+		border-color: var(--accent);
+		box-shadow: 0 0 0 3px rgba(240, 93, 87, 0.18);
+	}
+
+	.contact-field small {
+		font-family: var(--meta);
+		font-size: 0.85rem;
+		line-height: var(--body-line-height-tight);
+		color: rgba(51, 51, 51, 0.7);
+	}
+
+	.contact-form__actions {
+		display: flex;
+		justify-content: flex-start;
+		padding-top: 1.75rem;
+	}
+
+	.contact-form__actions button {
+		min-width: 12rem;
+		padding: 0.85rem 1.6rem;
+		border: 0;
+		border-radius: 999px;
+		background: var(--accent);
+		color: #fff;
+		font-family: var(--meta);
+		font-size: var(--body-font-size);
+		font-weight: 600;
+		letter-spacing: 0.01em;
+		cursor: pointer;
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.contact-form__actions button:hover {
+		background: var(--accent-dark);
+	}
+
+	.contact-form__actions button:active {
+		transform: translateY(1px);
+	}
+
+	.contact-form__honeypot {
+		position: absolute;
+		left: -9999px;
+	}
+
+	/* Collapse to single column once the form card is narrow (sidebar or
+	   mobile). Container query so the layout adapts to the form's own
+	   width, not the viewport. */
+	@container (max-width: 640px) {
+		.contact-form-card__header {
+			padding: 1.75rem 1.5rem 1.25rem;
+		}
+
+		.contact-form {
+			padding: 1.5rem 1.5rem 1.75rem;
+		}
+
+		.contact-form__grid {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 1.2rem;
+		}
+
+		.contact-field textarea {
+			min-height: 8.5rem;
+		}
+
+		.contact-form__actions {
+			justify-content: stretch;
+		}
+
+		.contact-form__actions button {
+			width: 100%;
+			min-width: 0;
+		}
+	}
+</style>
