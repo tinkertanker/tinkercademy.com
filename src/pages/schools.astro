@@ -6,7 +6,7 @@
  *   1. Hero
  *   2. Programmes for Schools (intro)
  *   3. Code for Fun (feature)
- *   4. Infocomm Learning Roadmap (feature)
+ *   4. Infocomm LEARN Roadmap (feature)
  *   5. Let's Work Together! pivot pills
  *   6. School Courses (programme cards)
  *   7. Closing CTA banner
@@ -15,36 +15,34 @@ import CtaBanner from '../components/CtaBanner.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getStaticPage } from '../lib/data.js';
-import { localiseFramerImage } from '../lib/media.js';
 import {
 	buildProgrammeCardOverrides,
 	getProgrammesBySlugs,
 	toProgrammeCardData,
 } from '../lib/programmes.ts';
+import { HOME_FLAGSHIP_IMAGES } from '../lib/site-media.js';
 
 const page = getStaticPage('/schools');
 if (!page) return Astro.redirect('/404');
 
 const canonical = 'https://tinkercademy.com/schools/';
 
-const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroImage = '/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg';
 const heroTitle = page.hero_title ?? 'Code, Tinker, and Make with Us.';
-const heroLead = page.hero_lead ?? 'Real skills for real impact.';
+const heroLead = 'Hands-on coding, AI, and digital making programmes for MOE schools.';
 
 const features = [
 	{
-		title: 'Code for Fun',
-		body: 'Established as one of the earliest Code for Fun initiators under the Code@SG scheme, we\'ve been providing an array of courses covering micro:bit, Scratch, AI, and more to primary, secondary, and junior college students — with fully subsidised training for up to 2 cohorts per school.',
+		title: 'Code For Fun',
+		body: 'As one of the earliest Code For Fun initiators under Code@SG, we help primary and secondary students learn computational thinking, microcontroller-based digital making, and AI through fully subsidised hands-on programmes for eligible schools.',
 		url: 'https://codeforfun.sg/',
-		label: 'Read More',
-		image: '/images/1wk1e4xWVOzslZgdjkNsnHjM4U.gif',
+		image: HOME_FLAGSHIP_IMAGES['Code For Fun'],
 	},
 	{
-		title: 'Infocomm Learning Roadmap',
-		body: 'In collaboration with IMDA, our industry associates, and educational partners, we provide technology learning programs that meet the IMDA Infocomm Clubs LEARN Roadmap across MOE schools.',
-		url: 'https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps',
-		label: 'LEARN Roadmap',
-		image: '/images/Hfw73sT4HNcG62eus6jF8SUxldM.gif',
+		title: 'Infocomm LEARN Roadmap',
+		body: 'Working with IMDA, industry partners, and training partners, we offer fully-funded Infocomm Club training for primary, secondary, and junior college students across app development, UI/UX, game development, AI, and digital making.',
+		url: 'https://infocommclub.sg',
+		image: HOME_FLAGSHIP_IMAGES['IMDA LEARN Roadmap'],
 	},
 ];
 
@@ -57,7 +55,7 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 
 <ContentLayout
 	title="Courses for schools — Tinkercademy"
-	description="Coding, making, and AI programmes for MOE primary, secondary, and junior college schools — Code for Fun, the LEARN Roadmap, and bespoke curricula."
+	description="Coding, AI, and digital making programmes for MOE primary, secondary, and junior college schools — Code For Fun, the Infocomm LEARN Roadmap, and bespoke curricula."
 	canonical={canonical}
 	image={heroImage}
 >
@@ -77,8 +75,11 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 			<h2 class="sch-intro__heading">Programmes for Schools</h2>
 			<p class="sch-intro__body">
 				We offer a variety of courses for schools. As one of the first vendors for the
-				Code for Fun programme, and the Infocomm Clubs LEARN Roadmap, we have delivered
-				hands-on lessons and multi-year tracks across primary, secondary, and junior college levels.
+				<a href="https://codeforfun.sg/" target="_blank" rel="noopener">Code For Fun programme</a>,
+				and an active training partner for the
+				<a href="https://infocommclub.sg" target="_blank" rel="noopener">Infocomm LEARN Roadmap</a>,
+				we have delivered hands-on lessons and multi-year tracks across primary,
+				secondary, and junior college levels.
 			</p>
 		</div>
 	</section>
@@ -87,11 +88,17 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		<div class="shell sch-features__grid">
 			{features.map((feat) => (
 				<article class="sch-feature">
-					<img class="sch-feature__image" src={feat.image} alt={feat.title} loading="lazy" />
-					<h3 class="sch-feature__title">{feat.title}</h3>
-					<p class="sch-feature__body">{feat.body}</p>
-					<a class="sch-feature__cta" href={feat.url} target="_blank" rel="noopener">
-						{feat.label}
+					<a class="sch-feature__link" href={feat.url} target="_blank" rel="noopener">
+						<img class="sch-feature__image" src={feat.image} alt={feat.title} loading="lazy" />
+						<div class="sch-feature__body-wrap">
+							<h3 class="sch-feature__title">
+								{feat.title}
+								<svg class="sch-feature__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M7 17L17 7M17 7H7M17 7V17"/>
+								</svg>
+							</h3>
+							<p class="sch-feature__body">{feat.body}</p>
+						</div>
 					</a>
 				</article>
 			))}
@@ -102,9 +109,9 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		<div class="shell">
 			<h2 class="aud-pivot__heading">Let's Work Together!</h2>
 			<div class="aud-pivot__pills">
-				<a class="aud-pivot__pill" href="/professionals">Professionals</a>
-				<a class="aud-pivot__pill" href="/individuals">Individuals</a>
-				<a class="aud-pivot__pill" href="/courses-schools">Browse Courses</a>
+				<a class="aud-pivot__pill" href="/professionals/">Professionals</a>
+				<a class="aud-pivot__pill" href="/individuals/">Individuals</a>
+				<a class="aud-pivot__pill" href="/courses-schools/">Browse Courses</a>
 			</div>
 		</div>
 	</section>
@@ -214,6 +221,12 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		max-width: 60rem;
 	}
 
+	.sch-intro__body a {
+		color: rgb(240, 93, 87);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.18em;
+	}
+
 	.sch-features {
 		padding: 2rem 0 3rem;
 	}
@@ -227,20 +240,47 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 	.sch-feature {
 		background: #fafafa;
 		border: 1px solid rgb(229, 229, 229);
-		border-radius: 18px;
-		padding: 1.75rem;
+		border-radius: 8px;
+		overflow: hidden;
+		transition:
+			transform 0.16s ease,
+			box-shadow 0.16s ease;
+	}
+
+	.sch-feature:has(.sch-feature__link:hover) {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+	}
+
+	.sch-feature__link {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.sch-feature__link,
+	.sch-feature__link:hover,
+	.sch-feature__link:focus,
+	.sch-feature__link * {
+		text-decoration: none;
 	}
 
 	.sch-feature__image {
 		width: 100%;
-		aspect-ratio: 1 / 1;
+		aspect-ratio: 16 / 10;
 		object-fit: cover;
-		border-radius: 12px;
 		background: #fff;
 		display: block;
+	}
+
+	.sch-feature__body-wrap {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 0.85rem;
+		padding: 1.5rem;
 	}
 
 	.sch-feature__title {
@@ -250,6 +290,15 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		text-transform: uppercase;
 		color: rgb(23, 23, 23);
 		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+
+	.sch-feature__arrow {
+		flex: 0 0 auto;
+		color: rgb(240, 93, 87);
 	}
 
 	.sch-feature__body {
@@ -259,26 +308,6 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		color: rgb(51, 51, 51);
 		margin: 0;
 		flex: 1;
-	}
-
-	.sch-feature__cta {
-		align-self: flex-start;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		height: 38px;
-		padding: 0 1rem;
-		border-radius: 999px;
-		background: rgb(240, 93, 87);
-		color: #fff;
-		text-decoration: none;
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.85rem;
-		font-weight: 500;
-	}
-
-	.sch-feature__cta:hover {
-		background: rgb(220, 74, 68);
 	}
 
 	@media (max-width: 809px) {
