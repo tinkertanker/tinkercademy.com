@@ -9,20 +9,20 @@ const rawNav = props.navigation ?? [];
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 /* Inject "COURSES" as first nav item with a dropdown chevron if not already present */
-const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all', hasDropdown: true };
+const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all/', hasDropdown: true };
 const navigation: NavLink[] = rawNav.some((n) => n.label.toUpperCase() === 'COURSES')
 	? rawNav
 	: [coursesItem, ...rawNav];
 
 /* Dropdown sub-links for COURSES */
 const coursesDropdown = [
-	{ label: 'All Courses', href: '/courses-all' },
-	{ label: 'Professionals', href: '/professionals' },
-	{ label: 'Schools', href: '/schools' },
-	{ label: 'Individuals', href: '/individuals' },
-	{ label: 'Micro:Bit', href: '/microbit' },
-	{ label: 'Tinker X', href: '/tinker-x' },
-	{ label: 'Infocomm Club', href: '/infocomm-club' },
+	{ label: 'All Courses', href: '/courses-all/' },
+	{ label: 'Professionals', href: '/professionals/' },
+	{ label: 'Schools', href: '/schools/' },
+	{ label: 'Individuals', href: '/individuals/' },
+	{ label: 'Micro:Bit', href: '/microbit/' },
+	{ label: 'Tinker X', href: '/tinker-x/' },
+	{ label: 'Infocomm Club', href: '/infocomm-club/' },
 ];
 
 const coursePaths = new Set(coursesDropdown.map((item) => normalisePath(item.href)).concat([
@@ -46,6 +46,20 @@ function isActiveLink(href: string) {
 	}
 	return currentPath === path;
 }
+
+function toNavHref(href: string) {
+	const siteHref = toSiteHref(href);
+	if (
+		siteHref === '/' ||
+		siteHref.startsWith('#') ||
+		!siteHref.startsWith('/') ||
+		/[?#]/.test(siteHref) ||
+		/\.[^/]+$/.test(siteHref)
+	) {
+		return siteHref;
+	}
+	return siteHref.endsWith('/') ? siteHref : `${siteHref}/`;
+}
 ---
 
 <header class="site-header">
@@ -59,7 +73,7 @@ function isActiveLink(href: string) {
 				{navigation.map((link) => (
 					<li class={link.hasDropdown ? 'has-dropdown' : ''}>
 						<a
-							href={toSiteHref(link.href)}
+							href={toNavHref(link.href)}
 							target={isExternalLink(link.href) ? '_blank' : undefined}
 							rel={isExternalLink(link.href) ? 'noopener' : undefined}
 							class:list={{ 'is-active': isActiveLink(link.href) }}
@@ -80,7 +94,7 @@ function isActiveLink(href: string) {
 						{link.hasDropdown && (
 							<ul class="dropdown">
 								{coursesDropdown.map((sub) => (
-									<li><a href={toSiteHref(sub.href)}>{sub.label}</a></li>
+									<li><a href={toNavHref(sub.href)}>{sub.label}</a></li>
 								))}
 							</ul>
 						)}
@@ -115,7 +129,7 @@ function isActiveLink(href: string) {
 						</button>
 					) : (
 						<a
-							href={toSiteHref(link.href)}
+							href={toNavHref(link.href)}
 							target={isExternalLink(link.href) ? '_blank' : undefined}
 							rel={isExternalLink(link.href) ? 'noopener' : undefined}
 							class:list={{ 'is-active': isActiveLink(link.href) }}
@@ -132,7 +146,7 @@ function isActiveLink(href: string) {
 					{link.hasDropdown && (
 						<ul class="mobile-dropdown" hidden>
 							{coursesDropdown.map((sub) => (
-								<li><a href={toSiteHref(sub.href)}>{sub.label}</a></li>
+								<li><a href={toNavHref(sub.href)}>{sub.label}</a></li>
 							))}
 						</ul>
 					)}

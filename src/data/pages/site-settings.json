@@ -38,11 +38,11 @@
   "navigation": [
     {
       "label": "ABOUT",
-      "href": "https://tinkercademy.com/about-us"
+      "href": "/about-us/"
     },
     {
       "label": "SHOWCASE",
-      "href": "https://tinkercademy.com/showcase"
+      "href": "/showcase/"
     },
     {
       "label": "STORE",
@@ -50,7 +50,7 @@
     },
     {
       "label": "CONTACT",
-      "href": "https://tinkercademy.com/contact-us"
+      "href": "/contact-us/"
     }
   ],
   "contact_ids": [

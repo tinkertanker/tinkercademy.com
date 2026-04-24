@@ -27,13 +27,13 @@ breakpoints:
     mediaQuery: "(max-width: 809.98px)"
 navigation:
   - label: ABOUT US
-    href: https://tinkercademy.com/about-us
+    href: /about-us/
   - label: SHOWCASE
-    href: https://tinkercademy.com/showcase
+    href: /showcase/
   - label: STORE
     href: https://gethacking.com/
   - label: CONTACT US
-    href: https://tinkercademy.com/contact-us
+    href: /contact-us/
 contact_ids:
   - email-hello-tk-sg
   - phone-69176920
