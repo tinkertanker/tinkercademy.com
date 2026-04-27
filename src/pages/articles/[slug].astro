@@ -26,6 +26,10 @@ const date = article.date ? new Date(article.date) : null;
 const formattedDate = date
 	? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 	: null;
+const contentHtml = (article.content_html ?? '').replace(
+	/href="(\/(?!\/)[^"#?/.][^"#?]*?)(?<!\/)"/g,
+	'href="$1/"',
+);
 ---
 
 <ContentLayout
@@ -53,7 +57,7 @@ const formattedDate = date
 	</section>
 
 	<article class="article-body shell prose">
-		<div set:html={article.content_html} />
+		<div set:html={contentHtml} />
 	</article>
 
 	<CtaBanner />

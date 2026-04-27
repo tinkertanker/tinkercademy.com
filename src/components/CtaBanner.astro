@@ -19,9 +19,9 @@ const DEFAULT_TEXT =
 	'Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond.';
 
 const DEFAULT_CTAS: Cta[] = [
-	{ label: 'Our Courses', url: '/courses-all' },
-	{ label: 'Our Projects', url: '/showcase' },
-	{ label: 'Contact Us', url: '/contact-us' },
+	{ label: 'Our Courses', url: '/courses-all/' },
+	{ label: 'Our Projects', url: '/showcase/' },
+	{ label: 'Contact Us', url: '/contact-us/' },
 ];
 
 const text = Astro.props.text ?? DEFAULT_TEXT;
@@ -33,7 +33,7 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 		<p class="cta-banner__text">{text}</p>
 		<div class="cta-banner__actions">
 			{ctas.map((cta) => (
-				<a class="cta-pill" href={cta.url.startsWith('/') ? cta.url : toSiteHref(cta.url)}>
+				<a class="cta-pill" href={toSiteHref(cta.url)}>
 					{cta.label}
 				</a>
 			))}

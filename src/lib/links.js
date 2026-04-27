@@ -1,5 +1,17 @@
 const SITE_ORIGIN = 'https://tinkercademy.com';
 
+function withCanonicalTrailingSlash(path) {
+	if (
+		path === '/' ||
+		path.endsWith('/') ||
+		path.startsWith('#') ||
+		/[?#]|\.[^/]+$/.test(path)
+	) {
+		return path;
+	}
+	return `${path}/`;
+}
+
 export function toSiteHref(href) {
 	if (!href) return '/';
 	if (href.startsWith('#')) return href;
@@ -8,9 +20,9 @@ export function toSiteHref(href) {
 		const url = new URL(href, SITE_ORIGIN);
 		if (url.origin !== SITE_ORIGIN) return href;
 
-		const path = `${url.pathname}${url.search}${url.hash}`;
-		return path || '/';
+		const path = withCanonicalTrailingSlash(url.pathname || '/');
+		return `${path}${url.search}${url.hash}`;
 	} catch {
-		return href;
+		return withCanonicalTrailingSlash(href);
 	}
 }

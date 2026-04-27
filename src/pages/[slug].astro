@@ -52,7 +52,7 @@ const cardOverrides = isCourseListing ? buildProgrammeCardOverrides(page.course_
 const programmes = isCourseListing
 	? (await getProgrammesForSurface(listingSurface)).map((programme) =>
 			toProgrammeCardData(programme, cardOverrides?.get(programme.slug), {
-				badgeBasePath: page.path,
+				badgeBasePath: canonicalPath,
 			}),
 		)
 	: [];
@@ -116,7 +116,7 @@ const hasRichContent = contentBlocks.some(
 			programmes={programmes}
 			pageTitle={displayTitle}
 			navPills={navPills}
-			pagePath={page.path}
+			pagePath={canonicalPath}
 			filterLabels={filterLabels ?? undefined}
 		/>
 	) : (

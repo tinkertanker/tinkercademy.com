@@ -134,7 +134,11 @@ export function getNavPillsForPage(page) {
 			try {
 				const parsed = new URL(url, 'https://tinkercademy.com');
 				if (parsed.origin === 'https://tinkercademy.com') {
-					url = parsed.pathname || '/';
+					const path = parsed.pathname || '/';
+					url =
+						path === '/' || path.endsWith('/') || /\.[^/]+$/.test(path)
+							? path
+							: `${path}/`;
 				}
 			} catch {
 				// keep as-is

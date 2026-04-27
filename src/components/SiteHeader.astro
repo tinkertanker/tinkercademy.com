@@ -340,7 +340,7 @@ function toNavHref(href: string) {
 		for (const p of slice) {
 			const li = document.createElement('li');
 			const a = document.createElement('a');
-			a.href = `/programmes/${p.slug}`;
+			a.href = `/programmes/${p.slug}/`;
 			a.className = 'search-result';
 			const badge = document.createElement('span');
 			badge.className = 'search-result__badge';

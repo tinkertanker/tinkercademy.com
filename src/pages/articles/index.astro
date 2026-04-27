@@ -36,7 +36,7 @@ function formatDate(dateStr: string | null | undefined) {
 
 	<section class="articles-grid shell">
 		{sortedArticles.map((article) => (
-			<a class="article-card" href={`/articles/${article.slug}`}>
+			<a class="article-card" href={`/articles/${article.slug}/`}>
 				{article.image && (
 					<div class="article-card__image">
 						<img src={article.image} alt={article.title} loading="lazy" />

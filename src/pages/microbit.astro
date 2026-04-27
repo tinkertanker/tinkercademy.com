@@ -61,9 +61,9 @@ const otherTutorials = (site.tutorials ?? [])
 			<p class="mb-hero__lead">{heroLead}</p>
 			<div class="mb-hero__actions">
 				<a class="mb-hero__pill mb-hero__pill--primary" href="#tutorials">Tutorials</a>
-				<a class="mb-hero__pill" href="/individuals">Individuals</a>
-				<a class="mb-hero__pill" href="/professionals">Professionals</a>
-				<a class="mb-hero__pill" href="/schools">Schools</a>
+				<a class="mb-hero__pill" href="/individuals/">Individuals</a>
+				<a class="mb-hero__pill" href="/professionals/">Professionals</a>
+				<a class="mb-hero__pill" href="/schools/">Schools</a>
 			</div>
 		</div>
 	</section>
@@ -91,7 +91,7 @@ const otherTutorials = (site.tutorials ?? [])
 					<a class="mb-cta" href="https://gethacking.com/collections/microbit" target="_blank" rel="noopener">
 						Buy the micro:bit and kit
 					</a>
-					<a class="mb-cta mb-cta--secondary" href="/programmes/imda-microbit-2025">
+					<a class="mb-cta mb-cta--secondary" href="/programmes/imda-microbit-2025/">
 						Digital Making course
 					</a>
 				</div>
@@ -138,7 +138,7 @@ const otherTutorials = (site.tutorials ?? [])
 			{featuredTutorials.length > 0 && (
 				<div class="mb-tutorials__grid">
 					{featuredTutorials.map((tut: any) => (
-						<a class="mb-tutorial-card" href={`/tutorials/${tut.slug}`}>
+						<a class="mb-tutorial-card" href={`/tutorials/${tut.slug}/`}>
 							<div class="mb-tutorial-card__image">
 								{tut.heroImage ? (
 									<img src={tut.heroImage} alt={tut.title} loading="lazy" />
@@ -160,7 +160,7 @@ const otherTutorials = (site.tutorials ?? [])
 					<h3 class="mb-tutorials__subheading">More tutorials</h3>
 					<div class="mb-tutorials__grid">
 						{otherTutorials.map((tut: any) => (
-							<a class="mb-tutorial-card" href={`/tutorials/${tut.slug}`}>
+							<a class="mb-tutorial-card" href={`/tutorials/${tut.slug}/`}>
 								<div class="mb-tutorial-card__image">
 									{tut.heroImage ? (
 										<img src={tut.heroImage} alt={tut.title} loading="lazy" />
