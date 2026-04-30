@@ -5,16 +5,20 @@
  * Sections:
  *   1. Hero
  *   2. Programmes for Schools (intro)
- *   3. Code for Fun (feature)
- *   4. Infocomm LEARN Roadmap (feature)
- *   5. Let's Work Together! pivot pills
- *   6. School Courses (programme cards)
- *   7. Closing CTA banner
+ *   3. School delivery proof points
+ *   4. Our School Clients (logo strip)
+ *   5. Code for Fun (feature)
+ *   6. Infocomm LEARN Roadmap (feature)
+ *   7. Let's Work Together! pivot pills
+ *   8. School Courses (programme cards)
+ *   9. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getStaticPage } from '../lib/data.js';
+import { getSiteData, getStaticPage } from '../lib/data.js';
+import { getSchoolClientLogoItems } from '../lib/logos';
 import {
 	buildProgrammeCardOverrides,
 	getProgrammesBySlugs,
@@ -25,6 +29,7 @@ import { HOME_FLAGSHIP_IMAGES } from '../lib/site-media.js';
 const page = getStaticPage('/schools');
 if (!page) return Astro.redirect('/404');
 
+const site = getSiteData();
 const canonical = 'https://tinkercademy.com/schools/';
 
 const heroImage = '/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg';
@@ -43,6 +48,22 @@ const features = [
 		body: 'Working with IMDA, industry partners, and training partners, we offer fully-funded Infocomm Club training for primary, secondary, and junior college students across app development, UI/UX, game development, AI, and digital making.',
 		url: 'https://infocommclub.sg',
 		image: HOME_FLAGSHIP_IMAGES['IMDA LEARN Roadmap'],
+	},
+];
+
+const schoolClientLogos = getSchoolClientLogoItems(site.externalLogos);
+const schoolProofPoints = [
+	{
+		value: '800+',
+		label: 'teachers trained in micro:bit and digital making',
+	},
+	{
+		value: '200+',
+		label: 'schools reached through Digital Maker teacher training',
+	},
+	{
+		value: '60,800',
+		label: 'micro:bits placed in schools through the Digital Maker Programme',
 	},
 ];
 
@@ -83,6 +104,25 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 			</p>
 		</div>
 	</section>
+
+	<section class="sch-proof">
+		<div class="shell sch-proof__grid">
+			{schoolProofPoints.map((point) => (
+				<div class="sch-proof__item">
+					<strong class="sch-proof__value">{point.value}</strong>
+					<span class="sch-proof__label">{point.label}</span>
+				</div>
+			))}
+		</div>
+	</section>
+
+	<LogoCarouselSection
+		title="Our School Clients"
+		logos={schoolClientLogos}
+		muted={true}
+		minItems={30}
+		secondsPerLogo={4}
+	/>
 
 	<section class="sch-features">
 		<div class="shell sch-features__grid">
@@ -227,6 +267,39 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		text-underline-offset: 0.18em;
 	}
 
+	.sch-proof {
+		padding: 1rem 0 2rem;
+	}
+
+	.sch-proof__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.sch-proof__item {
+		border-left: 3px solid rgb(240, 93, 87);
+		padding: 0.15rem 1rem;
+	}
+
+	.sch-proof__value {
+		display: block;
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 500;
+		line-height: 1;
+		color: rgb(23, 23, 23);
+	}
+
+	.sch-proof__label {
+		display: block;
+		margin-top: 0.45rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: var(--body-line-height);
+		color: rgb(71, 71, 71);
+	}
+
 	.sch-features {
 		padding: 2rem 0 3rem;
 	}
@@ -311,6 +384,10 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 	}
 
 	@media (max-width: 809px) {
+		.sch-proof__grid {
+			grid-template-columns: 1fr;
+		}
+
 		.sch-features__grid {
 			grid-template-columns: 1fr;
 		}

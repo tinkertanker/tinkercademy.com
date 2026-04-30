@@ -4,17 +4,18 @@
  *
  * Sections:
  *   1. Hero
- *   2. Our Partners (logo strip)
- *   3. Our Value Proposition (3-up cards)
- *   4. Our Clients (logo strip)
- *   5. Let's Work Together! (pivot pills)
- *   6. Professional Courses (programme cards)
- *   7. Closing CTA banner
+ *   2. Our Value Proposition (3-up cards)
+ *   3. Our Corporate Clients (logo strip)
+ *   4. Let's Work Together! (pivot pills)
+ *   5. Professional Courses (programme cards)
+ *   6. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getSiteData, getStaticPage } from '../lib/data.js';
+import { getCorporateClientLogoItems } from '../lib/logos';
 import { localiseFramerImage } from '../lib/media.js';
 import {
 	buildProgrammeCardOverrides,
@@ -39,7 +40,7 @@ const valueProps = [
 	},
 	{
 		title: 'Expert Instructors',
-		body: 'Your team will be guided by experts from Ivy-league universities and leading tech companies. They bring powerful insights to inspire innovation within your office.',
+		body: "Your team will be guided by experts from the world's top universities and leading tech companies. They bring powerful insights to inspire innovation within your office.",
 	},
 	{
 		title: 'Track Record',
@@ -47,47 +48,7 @@ const valueProps = [
 	},
 ];
 
-const MIN_MARQUEE_ITEMS = 24;
-
-function isRenderableLogo(logo: any) {
-	return logo?.active !== false && Boolean(logo?.logo);
-}
-
-function isPartnerLogo(logo: any) {
-	return isRenderableLogo(logo) && (logo.partner === true || logo.type === 'Partner');
-}
-
-function toLogoItem(logo: any) {
-	return { label: logo.label, src: logo.logo };
-}
-
-function buildMarquee(logos: Array<{ label: string; src: string }>, minItems = MIN_MARQUEE_ITEMS) {
-	const repeatCount = logos.length <= 1 ? 1 : Math.max(2, Math.ceil(minItems / logos.length));
-	const items = Array.from({ length: repeatCount }, (_, setIndex) =>
-		logos.map((logo) => ({ ...logo, setIndex })),
-	).flat();
-
-	return {
-		items,
-		distance: repeatCount > 1 ? `-${100 / repeatCount}%` : '0%',
-		isAnimated: repeatCount > 1,
-	};
-}
-
-const partnerLogos = site.externalLogos
-	.filter((logo: any) => isPartnerLogo(logo))
-	.map(toLogoItem);
-
-const clientLogos = site.externalLogos
-	.filter((logo: any) => isRenderableLogo(logo) && !isPartnerLogo(logo))
-	.map(toLogoItem);
-
-const partnerMarquee = buildMarquee(partnerLogos);
-const clientMarquee = buildMarquee(clientLogos, 30);
-const logoSecondsPerItem = 6;
-const clientLogoSecondsPerItem = logoSecondsPerItem / 1.5;
-const partnerDurationSeconds = Math.max(34, partnerLogos.length * logoSecondsPerItem);
-const clientDurationSeconds = Math.max(34, clientLogos.length * clientLogoSecondsPerItem);
+const corporateClientLogos = getCorporateClientLogoItems(site.externalLogos);
 
 const cardOverrides = buildProgrammeCardOverrides(page.course_cards ?? []);
 const cardSlugs = (page.course_cards ?? []).map((card: any) => card.slug);
@@ -113,29 +74,6 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		</div>
 	</section>
 
-	{partnerLogos.length > 0 && (
-		<section class="aud-section">
-			<div class="shell">
-				<h2 class="aud-section__heading">Our Partners</h2>
-				<div class="aud-logo-marquee">
-					<div
-						class:list={['aud-logo-track', 'aud-logo-track--partners', { 'is-static': !partnerMarquee.isAnimated }]}
-						style={`--marquee-duration: ${partnerDurationSeconds}s; --marquee-distance: ${partnerMarquee.distance};`}
-					>
-						{partnerMarquee.items.map((logo) => (
-							<img
-								class="aud-logo aud-logo--partner"
-								src={logo.src}
-								alt={logo.setIndex === 0 ? logo.label : ''}
-								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
-		</section>
-	)}
-
 	<section class="aud-section aud-section--muted">
 		<div class="shell">
 			<h2 class="aud-section__heading">Our Value Proposition</h2>
@@ -150,28 +88,12 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		</div>
 	</section>
 
-	{clientLogos.length > 0 && (
-		<section class="aud-section">
-			<div class="shell">
-				<h2 class="aud-section__heading">Our Clients</h2>
-				<div class="aud-logo-marquee">
-					<div
-						class:list={['aud-logo-track', 'aud-logo-track--clients', { 'is-static': !clientMarquee.isAnimated }]}
-						style={`--marquee-duration: ${clientDurationSeconds}s; --marquee-distance: ${clientMarquee.distance};`}
-					>
-						{clientMarquee.items.map((logo) => (
-							<img
-								class="aud-logo"
-								src={logo.src}
-								alt={logo.setIndex === 0 ? logo.label : ''}
-								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
-		</section>
-	)}
+	<LogoCarouselSection
+		title="Our Corporate Clients"
+		logos={corporateClientLogos}
+		minItems={30}
+		secondsPerLogo={4}
+	/>
 
 	<section class="aud-pivot">
 		<div class="shell">
@@ -319,57 +241,6 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 	@media (max-width: 899px) {
 		.aud-value-grid {
 			grid-template-columns: 1fr;
-		}
-	}
-
-	.aud-logo-marquee {
-		width: 100%;
-		overflow: hidden;
-		mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-	}
-
-	.aud-logo-track {
-		display: flex;
-		width: max-content;
-		align-items: center;
-		gap: clamp(2.25rem, 5vw, 4.5rem);
-		animation: aud-logo-marquee var(--marquee-duration, 80s) linear infinite;
-		will-change: transform;
-	}
-
-	.aud-logo-track.is-static {
-		animation: none;
-		justify-content: center;
-		width: 100%;
-	}
-
-	.aud-logo {
-		max-height: 74px;
-		max-width: 140px;
-		width: auto;
-		height: auto;
-		object-fit: contain;
-		flex: 0 0 auto;
-	}
-
-	.aud-logo--partner {
-		max-height: 60px;
-	}
-
-	@keyframes aud-logo-marquee {
-		from {
-			transform: translate3d(0, 0, 0);
-		}
-		to {
-			transform: translate3d(var(--marquee-distance, -50%), 0, 0);
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.aud-logo-track {
-			animation: none;
-			transform: none;
 		}
 	}
 

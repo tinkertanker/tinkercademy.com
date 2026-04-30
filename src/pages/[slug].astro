@@ -3,10 +3,12 @@ import ContentBlocks from '../components/ContentBlocks.astro';
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import HeroMedia from '../components/HeroMedia.astro';
+import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import PageHero from '../components/PageHero.astro';
 import RichContent from '../components/RichContent.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getSiteData, getNavPillsForPage } from '../lib/data.js';
+import { getClientLogoItems, getPartnerLogoItems } from '../lib/logos';
 import {
 	buildProgrammeCardOverrides,
 	getProgrammeFilterLabels,
@@ -32,6 +34,7 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props as { page: any };
+const site = getSiteData();
 const canonicalPath = page.path.endsWith('/') ? page.path : `${page.path}/`;
 const canonical = new URL(canonicalPath, 'https://tinkercademy.com').toString();
 
@@ -60,6 +63,25 @@ const navPills = isCourseListing
 	? getNavPillsForPage(page)
 	: [];
 const filterLabels = isCourseListing ? getProgrammeFilterLabels() : null;
+const partnerLogos = page.slug === 'courses-all' ? getPartnerLogoItems(site.externalLogos) : [];
+const clientLogos = page.slug === 'courses-all' ? getClientLogoItems(site.externalLogos) : [];
+const courseAllHeroImage = '/images/generated/hero-review/showcase/cdx_001.webp';
+const courseAllLead =
+	'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.';
+const courseAllHighlights = [
+	{
+		title: 'For Classrooms and Teams',
+		body: 'Run a structured school programme, upskill a professional team, or bring hands-on technology learning to a public or community audience.',
+	},
+	{
+		title: 'Across Modern Tech',
+		body: 'Explore AI, data, app development, web, robotics, digital making, micro:bit, Arduino, Raspberry Pi, and other practical platforms.',
+	},
+	{
+		title: 'Taught by Builders',
+		body: 'Learn from coders, makers, and curriculum designers who build real projects and translate that practice into clear, usable lessons.',
+	},
+];
 
 /* ─── Course listing page titles (the title field is a slug in the data) */
 const COURSE_PAGE_TITLES: Record<string, string> = {
@@ -112,13 +134,65 @@ const hasRichContent = contentBlocks.some(
 	image={page.hero_image ?? undefined}
 >
 	{isCourseListing ? (
-		<CourseGrid
-			programmes={programmes}
-			pageTitle={displayTitle}
-			navPills={navPills}
-			pagePath={canonicalPath}
-			filterLabels={filterLabels ?? undefined}
-		/>
+		<>
+			{page.slug === 'courses-all' && (
+				<>
+					<section class="course-hero">
+						<img
+							class="course-hero__bg"
+							src={courseAllHeroImage}
+							alt=""
+							loading="eager"
+							fetchpriority="high"
+						/>
+						<div class="course-hero__scrim"></div>
+						<div class="course-hero__content shell">
+							<h1 class="course-hero__title">{displayTitle}</h1>
+							<p class="course-hero__lead">{courseAllLead}</p>
+						</div>
+					</section>
+					<LogoCarouselSection
+						title="Our Partners"
+						logos={partnerLogos}
+						minItems={24}
+						secondsPerLogo={6}
+					/>
+					<section class="course-proof">
+						<div class="shell">
+							<div class="course-proof__intro">
+								<h2>Courses That Meet Learners Where They Are</h2>
+								<p>
+									Our catalogue brings together the formats we deliver most often, from MOE
+									classrooms to corporate workshops and public learning programmes.
+								</p>
+							</div>
+							<div class="course-proof__grid">
+								{courseAllHighlights.map((item) => (
+									<article class="course-proof__item">
+										<h3>{item.title}</h3>
+										<p>{item.body}</p>
+									</article>
+								))}
+							</div>
+						</div>
+					</section>
+					<LogoCarouselSection
+						title="Our Clients"
+						logos={clientLogos}
+						muted={true}
+						minItems={30}
+						secondsPerLogo={4}
+					/>
+				</>
+			)}
+			<CourseGrid
+				programmes={programmes}
+				pageTitle={displayTitle}
+				navPills={navPills}
+				pagePath={canonicalPath}
+				filterLabels={filterLabels ?? undefined}
+			/>
+		</>
 	) : (
 		<>
 			<PageHero title={displayTitle} lead={page.description} />
@@ -134,3 +208,137 @@ const hasRichContent = contentBlocks.some(
 		</>
 	)}
 </ContentLayout>
+
+<style>
+	.course-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		min-height: clamp(420px, 60vh, 620px);
+		overflow: clip;
+		background: #0a0a0a;
+	}
+
+	.course-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.course-hero__scrim {
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.38) 46%, rgba(0, 0, 0, 0.08) 100%),
+			linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.48) 100%);
+	}
+
+	.course-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: inherit;
+		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.75rem, 5vw, 4rem);
+		gap: 0.9rem;
+	}
+
+	.course-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2.4rem, 6vw, 4.8rem);
+		font-weight: 500;
+		line-height: 0.95;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+		max-width: 10ch;
+		text-wrap: balance;
+	}
+
+	.course-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
+		color: rgba(255, 255, 255, 0.94);
+		margin: 0;
+		max-width: 52ch;
+	}
+
+	.course-proof {
+		padding: 0.5rem 0 3.25rem;
+	}
+
+	.course-proof__intro {
+		display: grid;
+		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+		gap: clamp(1.25rem, 4vw, 3rem);
+		align-items: start;
+		margin-bottom: 1.5rem;
+	}
+
+	.course-proof__intro h2 {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.course-proof__intro p {
+		margin: 0;
+		max-width: 60rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
+		color: rgb(51, 51, 51);
+	}
+
+	.course-proof__grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.course-proof__item {
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 8px;
+		background: #fff;
+		padding: 1.25rem;
+	}
+
+	.course-proof__item h3 {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.78rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: rgb(240, 93, 87);
+		margin: 0 0 0.75rem;
+	}
+
+	.course-proof__item p {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: var(--body-line-height);
+		color: rgb(51, 51, 51);
+	}
+
+	@media (max-width: 809px) {
+		.course-hero {
+			min-height: 520px;
+		}
+
+		.course-hero__content {
+			padding-block-end: 2.5rem;
+		}
+
+		.course-proof__intro,
+		.course-proof__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

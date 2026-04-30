@@ -1,0 +1,130 @@
+---
+import type { LogoItem } from '../lib/logos';
+
+interface Props {
+	title: string;
+	logos: LogoItem[];
+	muted?: boolean;
+	minItems?: number;
+	secondsPerLogo?: number;
+}
+
+const {
+	title,
+	logos,
+	muted = false,
+	minItems = 24,
+	secondsPerLogo = 4,
+} = Astro.props as Props;
+
+function buildMarquee(items: LogoItem[]) {
+	const repeatCount = items.length <= 1 ? 1 : Math.max(2, Math.ceil(minItems / items.length));
+	const repeated = Array.from({ length: repeatCount }, (_, setIndex) =>
+		items.map((logo) => ({ ...logo, setIndex })),
+	).flat();
+
+	return {
+		items: repeated,
+		distance: repeatCount > 1 ? `-${100 / repeatCount}%` : '0%',
+		isAnimated: repeatCount > 1,
+	};
+}
+
+const marquee = buildMarquee(logos);
+const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
+---
+
+{logos.length > 0 && (
+	<section class:list={['logo-section', { 'logo-section--muted': muted }]}>
+		<div class="shell">
+			<h2 class="logo-section__heading">{title}</h2>
+			<div class="logo-marquee">
+				<div
+					class:list={['logo-track', { 'is-static': !marquee.isAnimated }]}
+					style={`--marquee-duration: ${durationSeconds}s; --marquee-distance: ${marquee.distance};`}
+				>
+					{marquee.items.map((logo) => (
+						<img
+							class="logo-mark"
+							data-logo-id={logo.id}
+							src={logo.src}
+							alt={logo.setIndex === 0 ? logo.label : ''}
+							aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
+						/>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+)}
+
+<style>
+	.logo-section {
+		padding: 3rem 0;
+	}
+
+	.logo-section--muted {
+		background: #fafafa;
+	}
+
+	.logo-section__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgb(23, 23, 23);
+		margin: 0 0 1.5rem;
+	}
+
+	.logo-marquee {
+		width: 100%;
+		overflow: hidden;
+		mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+	}
+
+	.logo-track {
+		display: flex;
+		width: max-content;
+		align-items: center;
+		gap: clamp(2.25rem, 5vw, 4.5rem);
+		animation: logo-marquee var(--marquee-duration, 80s) linear infinite;
+		will-change: transform;
+	}
+
+	.logo-track.is-static {
+		animation: none;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.logo-mark {
+		max-height: 74px;
+		max-width: 170px;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		flex: 0 0 auto;
+	}
+
+	.logo-mark[data-logo-id='chij-secondary'] {
+		max-height: 86px;
+		max-width: 96px;
+	}
+
+	@keyframes logo-marquee {
+		from {
+			transform: translate3d(0, 0, 0);
+		}
+		to {
+			transform: translate3d(var(--marquee-distance, -50%), 0, 0);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.logo-track {
+			animation: none;
+			transform: none;
+		}
+	}
+</style>
