@@ -1,0 +1,181 @@
+[
+  {
+    "id": "home",
+    "keep": true,
+    "alternates": [
+      "/images/generated/hero-review/home/cdx_001.webp",
+      "/images/generated/hero-review/home/cdx_002.webp",
+      "/images/generated/hero-review/home/cdx-icon_001.webp"
+    ]
+  },
+  {
+    "id": "about-us",
+    "image": "/images/generated/hero-review/about-us/cdx-icon_001.webp"
+  },
+  {
+    "id": "showcase",
+    "image": "/images/generated/hero-review/showcase/cdx-icon_001.webp",
+    "alternates": [
+      "/images/generated/hero-review/showcase/cdx_001.webp"
+    ]
+  },
+  {
+    "id": "contact-us",
+    "keep": true
+  },
+  {
+    "id": "professionals",
+    "image": "/images/generated/hero-review/professionals/cdx_001.webp"
+  },
+  {
+    "id": "individuals",
+    "image": "/images/generated/hero-review/individuals/cdx-icon_001.webp",
+    "alternates": [
+      "/images/generated/hero-review/individuals/cdx_001.webp"
+    ]
+  },
+  {
+    "id": "schools",
+    "image": "/images/generated/hero-review/schools/cdx_001.webp"
+  },
+  {
+    "id": "infocomm-club",
+    "image": "/images/generated/hero-review/infocomm-club/cdx_001.webp"
+  },
+  {
+    "id": "courses-professionals",
+    "image": "/images/generated/hero-review/courses-professionals/cdx_001.webp"
+  },
+  {
+    "id": "courses-schools",
+    "image": "/images/generated/hero-review/courses-schools/cdx-icon_001.webp"
+  },
+  {
+    "id": "courses-all",
+    "image": "/images/generated/hero-review/courses-all/cdx-icon_001.webp"
+  },
+  {
+    "id": "code-for-fun-flagship",
+    "image": "/images/generated/hero-review/code-for-fun-flagship/cdx_001.webp"
+  },
+  {
+    "id": "imda-learn-flagship",
+    "image": "/images/generated/hero-review/imda-learn-flagship/cdx_001.webp"
+  },
+  {
+    "id": "swift-accelerator-flagship",
+    "keep": true
+  },
+  {
+    "id": "agentic-ai-for-digital-builders",
+    "image": "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp"
+  },
+  {
+    "id": "vibe-coding-for-digital-builders",
+    "image": "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp"
+  },
+  {
+    "id": "vibe-coding-for-digital-builders-lovable-replit",
+    "image": "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp"
+  },
+  {
+    "id": "knowledge-powered-ai-with-chatgpt",
+    "image": "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp"
+  },
+  {
+    "id": "microsoft-copilot",
+    "image": "/images/generated/hero-review/microsoft-copilot/cdx_001.webp"
+  },
+  {
+    "id": "build-for-mobile-with-react-native",
+    "image": "/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp"
+  },
+  {
+    "id": "mastering-the-web",
+    "image": "/images/generated/hero-review/mastering-the-web/cdx_001.webp"
+  },
+  {
+    "id": "professional-certificate-in-mobile-application-development",
+    "image": "/images/generated/hero-review/professional-certificate-in-mobile-application-development/cdx_001.webp"
+  },
+  {
+    "id": "professional-certificate-in-web-application-development",
+    "image": "/images/generated/hero-review/professional-certificate-in-web-application-development/cdx_001.webp"
+  },
+  {
+    "id": "no-code-web-design-framer",
+    "image": "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp"
+  },
+  {
+    "id": "digital-making-with-micro-bit-iot",
+    "image": "/images/generated/hero-review/digital-making-with-micro-bit-iot/cdx_001.webp"
+  },
+  {
+    "id": "iotmaker",
+    "image": "/images/generated/hero-review/iotmaker/cdx_001.webp"
+  },
+  {
+    "id": "certificate-iot-creative-digital-making",
+    "image": "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp"
+  },
+  {
+    "id": "certificate-blockchain-technology",
+    "image": "/images/generated/hero-review/certificate-blockchain-technology/cdx_001.webp"
+  },
+  {
+    "id": "unityarvr",
+    "image": "/images/generated/hero-review/unityarvr/cdx_001.webp"
+  },
+  {
+    "id": "code-for-fun-ai-workshop",
+    "image": "/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp"
+  },
+  {
+    "id": "code-for-fun-baseline-workshop",
+    "keep": true
+  },
+  {
+    "id": "imda-apple-2025-a",
+    "image": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp"
+  },
+  {
+    "id": "imda-apple-2025-b",
+    "image": "/images/generated/hero-review/imda-apple-2025-b/cdx_001.webp"
+  },
+  {
+    "id": "imda-apple-2025-c",
+    "image": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp"
+  },
+  {
+    "id": "imda-figma-2025",
+    "image": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp"
+  },
+  {
+    "id": "imda-microbit-2025",
+    "image": "/images/generated/hero-review/imda-microbit-2025/cdx_001.webp"
+  },
+  {
+    "id": "imda-minecraft-2025",
+    "image": "/images/generated/hero-review/imda-minecraft-2025/cdx_001.webp"
+  },
+  {
+    "id": "imda-phaser-2025",
+    "image": "/images/generated/hero-review/imda-phaser-2025/cdx_001.webp"
+  },
+  {
+    "id": "imda-unity-2025",
+    "image": "/images/generated/hero-review/imda-unity-2025/cdx_001.webp"
+  },
+  {
+    "id": "swift-accelerator",
+    "keep": true
+  },
+  {
+    "id": "code-exp-2025",
+    "image": "/images/generated/hero-review/code-exp-2025/cdx_001.webp"
+  },
+  {
+    "id": "no-code-machine-learning",
+    "image": "/images/generated/hero-review/no-code-machine-learning/cdx_001.webp"
+  }
+]
