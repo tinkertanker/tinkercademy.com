@@ -14,7 +14,7 @@ const canonical = 'https://tinkercademy.com/showcase/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle =
-	page.hero_title ?? 'Apps, games, bots\nand the makers behind them.';
+	page.hero_title ?? 'Apps, bots, circuits\nand the makers behind them.';
 
 type Block = { tag?: string; text?: string };
 const blocks: Block[] = (page.blocks ?? []) as Block[];
@@ -30,13 +30,6 @@ const heroTitleHtml = heroTitle
 	.replace(/\n/g, '<br />');
 
 const buildLogUrl = 'https://ghost.tk.sg/';
-
-const studentPhotos = [
-	'/images/VyH1UxmLf2vV96I5UpoW6fdCIX4.png',
-	'/images/LjzcGlcbBy47m6VWBhXgwT53kG8.png',
-	'/images/C6YM21KXpchozSKz1Z1KKRMGD0.png',
-	'/images/iQDC66gJozrvjzr4rpnG0Epl1s.png',
-];
 
 const jiaChenImage = '/images/yYM9MCFxtou9IT7a8ENaXgPmUY.png';
 
@@ -81,6 +74,69 @@ const internTestimonials = [
 
 const jiaChenQuote =
 	'Meet Jia Chen, a young visionary from Singapore whose journey into the world of technology began with childhood exploration and the transformative power of mobile apps. Inspired by the seamless fusion of science and technology, Jia Chen embarked on a swift learning curve, mastering the Swift programming language and unveiling his debut iOS app on the App Store at a remarkably young age. An Information Technology diploma graduate from Ngee Ann Polytechnic, Jia Chen\'s creative process is seamlessly integrated into the Apple ecosystem, from sketching app designs on iPad to bringing them to life with Xcode on Mac. With six apps already gracing the App Store and two Swift Student Challenge triumphs under his belt, Jia Chen epitomises the next generation of creators and innovators.';
+
+const blogArticles = [
+	{
+		title: 'Reframing my thoughts on website builders',
+		link: 'https://blog.tinkercademy.com/reframing-my-thoughts-on-website-builders-ae71c2d219f9',
+		author: 'nyx',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/0*qd606i1y4J6v3R9D',
+	},
+	{
+		title: 'Now That AI Can Generate Code, Should the Everyday Student Stop Learning How to Code?',
+		link: 'https://blog.tinkercademy.com/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282',
+		author: 'Tinkercademy',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/0*5BMvVkb1hJOSizXw',
+	},
+	{
+		title: 'Orange v/s PyCaret v/s Scikit: A Comparison of Beginner Machine Learning Libraries',
+		link: 'https://blog.tinkercademy.com/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f',
+		author: 'ng mh',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*pMYyu_JLQQnpVI_Q6gIUkw.jpeg',
+	},
+	{
+		title: 'What is it like to build games on Unity?',
+		link: 'https://blog.tinkercademy.com/what-is-it-like-to-build-games-on-unity-13f41ea742ca',
+		author: 'Tinkercademy',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*Wl6wISZQxZdf8xiCbt-kMQ.gif',
+	},
+	{
+		title: 'What We Learnt from our Latest Sew & Code Camp',
+		link: 'https://blog.tinkercademy.com/what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4',
+		author: 'Tinkercademy',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/0*_2u39aRT3kmpu5kR',
+	},
+	{
+		title: 'Having fun with Automata and LittleBits!',
+		link: 'https://blog.tinkercademy.com/having-fun-with-automata-and-littlebits-511b955fcf81',
+		author: 'Toh yixue',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*z7f7tj5e-7iIDtJYCS_oVw.jpeg',
+	},
+	{
+		title: 'Using Python and Pandas to generate useful reports out of CSV files, part 2',
+		link: 'https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433',
+		author: 'Ong Yi Shen',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*u1uv_VXeIXWsOSgJWCtjvg.png',
+	},
+	{
+		title: 'Using Python and Pandas to generate useful reports out of CSV files, part 1',
+		link: 'https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382',
+		author: 'Ong Yi Shen',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*u1uv_VXeIXWsOSgJWCtjvg.png',
+	},
+	{
+		title: 'Tinkertanker Internship: Bowling at Tinkertanker',
+		link: 'https://blog.tinkercademy.com/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403',
+		author: 'Mark',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*1qdioAOezsUKilmBjtguYA.png',
+	},
+	{
+		title: 'Internship Reflection: A dive into many new things',
+		link: 'https://blog.tinkercademy.com/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c',
+		author: 'Enric Tan',
+		featureImage: 'https://cdn-images-1.medium.com/max/1200/1*c7SM8Fz91vO4JAIvj-oIYg.png',
+	},
+];
 ---
 
 <ContentLayout
@@ -110,13 +166,47 @@ const jiaChenQuote =
 				We've built some pretty amazing things, together with our learners. Read more at
 				<a href="https://blog.tinkercademy.com" target="_blank" rel="noopener">our blog</a>.
 			</p>
-			<div class="sc-students">
-				{studentPhotos.map((src) => (
-					<div class="sc-student-photo">
-						<img src={src} alt="" loading="lazy" />
-					</div>
+			<div class="sc-carousel__track-wrapper">
+			<div class="sc-carousel__track">
+				{blogArticles.map((article) => (
+					<a
+						href={article.link}
+						target="_blank"
+						rel="noopener"
+						class="sc-carousel__card"
+					>
+						<img
+							class="sc-carousel__img"
+							src={article.featureImage}
+							alt=""
+							loading="lazy"
+						/>
+						<div class="sc-carousel__scrim"></div>
+						<span class="sc-carousel__author">{article.author}</span>
+						<span class="sc-carousel__title">{article.title}</span>
+					</a>
+				))}
+				{blogArticles.map((article) => (
+					<a
+						href={article.link}
+						target="_blank"
+						rel="noopener"
+						class="sc-carousel__card"
+						aria-hidden="true"
+					>
+						<img
+							class="sc-carousel__img"
+							src={article.featureImage}
+							alt=""
+							loading="lazy"
+						/>
+						<div class="sc-carousel__scrim"></div>
+						<span class="sc-carousel__author">{article.author}</span>
+						<span class="sc-carousel__title">{article.title}</span>
+					</a>
 				))}
 			</div>
+		</div>
 		</div>
 	</section>
 
@@ -305,32 +395,6 @@ const jiaChenQuote =
 		max-width: 60rem;
 	}
 
-	.sc-students {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 1rem;
-	}
-
-	@media (max-width: 899px) {
-		.sc-students {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
-	}
-
-	.sc-student-photo {
-		aspect-ratio: 4 / 5;
-		overflow: hidden;
-		border-radius: 14px;
-		background: rgb(245, 245, 245);
-	}
-
-	.sc-student-photo img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		display: block;
-	}
-
 	.sc-spotlight__figure {
 		margin: 0 0 1.5rem;
 		max-width: 32rem;
@@ -502,5 +566,149 @@ const jiaChenQuote =
 
 	.sc-buildlog__cta:hover {
 		opacity: 0.88;
+	}
+
+	/* ── Blog Carousel ── */
+	.sc-carousel__track-wrapper {
+		overflow: hidden;
+		mask-image: linear-gradient(
+			to right,
+			transparent 0%,
+			#000 3%,
+			#000 97%,
+			transparent 100%
+		);
+		-webkit-mask-image: linear-gradient(
+			to right,
+			transparent 0%,
+			#000 3%,
+			#000 97%,
+			transparent 100%
+		);
+	}
+
+	.sc-carousel__track {
+		display: flex;
+		gap: 1rem;
+		width: max-content;
+		animation: sc-carousel-scroll 75s linear infinite;
+		padding: 0 calc(3% + 1rem);
+	}
+
+	.sc-carousel__track-wrapper:hover .sc-carousel__track {
+		animation-play-state: paused;
+	}
+
+	@keyframes sc-carousel-scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	.sc-carousel__card {
+		flex-shrink: 0;
+		width: 340px;
+		aspect-ratio: 4 / 3;
+		border-radius: 14px;
+		overflow: hidden;
+		position: relative;
+		text-decoration: none;
+		background: rgb(245, 245, 245);
+		transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+	}
+
+	.sc-carousel__card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+	}
+
+	.sc-carousel__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.sc-carousel__card:hover .sc-carousel__img {
+		transform: scale(1.06);
+	}
+
+	.sc-carousel__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.05) 0%,
+			rgba(0, 0, 0, 0) 45%,
+			rgba(0, 0, 0, 0.55) 100%
+		);
+		pointer-events: none;
+	}
+
+	.sc-carousel__author {
+		position: absolute;
+		top: 0.75rem;
+		left: 0.85rem;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.68rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.9);
+		background: rgba(0, 0, 0, 0.45);
+		padding: 0.25rem 0.6rem;
+		border-radius: 6px;
+		opacity: 0;
+		transform: translateY(-6px);
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		pointer-events: none;
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+	}
+
+	.sc-carousel__card:hover .sc-carousel__author {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.sc-carousel__title {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		max-width: 78%;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		font-weight: 500;
+		line-height: 1.35;
+		color: rgba(255, 255, 255, 0.95);
+		background: linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0.65) 0%,
+			rgba(0, 0, 0, 0.5) 100%
+		);
+		padding: 0.45rem 0.75rem;
+		border-radius: 10px 0 0 0;
+		text-align: right;
+		pointer-events: none;
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+	}
+
+	@media (max-width: 699px) {
+		.sc-carousel__card {
+			width: 260px;
+		}
+
+		.sc-carousel__title {
+			font-size: 0.74rem;
+			max-width: 88%;
+		}
+
+		.sc-carousel__track {
+			animation-duration: 53s;
+		}
 	}
 </style>

@@ -2545,7 +2545,7 @@
     "slug": "showcase",
     "title": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys",
     "description": "Swift Accelerator Programme Trainer at Tinkertanker",
-    "hero_title": "Apps, games, bots\nand the makers behind them.",
+    "hero_title": "Apps, bots, circuits\nand the makers behind them.",
     "hero_lead": "Swift Accelerator Programme Trainer at Tinkertanker",
     "hero_image": "/images/generated/hero-review/showcase/cdx-icon_001.webp",
     "seo": {
@@ -2624,7 +2624,7 @@
     "blocks": [
       {
         "tag": "h1",
-        "text": "Apps, games, bots\nand the makers behind them."
+        "text": "Apps, bots, circuits\nand the makers behind them."
       },
       {
         "tag": "h4",
