@@ -2,7 +2,7 @@
 title: "Microsoft Copilot"
 subtitle: "An introductory course on leveraging Microsoft Copilot to enhance productivity."
 duration: "2 days"
-heroImage: "/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png"
+heroImage: "/images/generated/hero-review/microsoft-copilot/cdx_001.webp"
 audienceIds: ["tech-productivity", "businesses", "public"]
 domainIds: ["tech-productivity"]
 platformIds: ["microsoft-copilot"]

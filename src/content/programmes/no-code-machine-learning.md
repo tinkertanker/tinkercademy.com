@@ -2,7 +2,7 @@
 title: "No-Code Machine Learning"
 subtitle: "An introductory course on machine learning models using Orange."
 duration: "2 days"
-heroImage: "/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png"
+heroImage: "/images/generated/hero-review/no-code-machine-learning/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ai"]
 platformIds: ["orange"]

@@ -79,8 +79,8 @@ export const HOME_COURSE_DOMAINS = [
 // ── Flagship programme images ─────────────────────────────────────
 export const HOME_FLAGSHIP_IMAGES = /** @type {Record<string, string>} */ ({
 	'Swift Accelerator': '/images/flagship/swift-accelerator.webp',
-	'IMDA LEARN Roadmap': '/images/flagship/imda-learn.png',
-	'Code For Fun': '/images/flagship/code-for-fun.webp',
+	'IMDA LEARN Roadmap': '/images/generated/hero-review/imda-learn-flagship/cdx_001.webp',
+	'Code For Fun': '/images/generated/hero-review/code-for-fun-flagship/cdx_001.webp',
 });
 
 // ── Popular course card images ────────────────────────────────────

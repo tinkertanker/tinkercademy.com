@@ -14,9 +14,21 @@ const canonical = 'https://tinkercademy.com/showcase/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroTitle =
-	page.hero_title ?? 'Showcase of Our Coders, Tinkerers, Makers, and their Journeys';
+	page.hero_title ?? 'Apps, games, bots\nand the makers behind them.';
+
+type Block = { tag?: string; text?: string };
+const blocks: Block[] = (page.blocks ?? []) as Block[];
 const heroLead =
-	'Meet the bright minds who\'ve learned, built, and grown with us, from classroom projects to professional success.';
+	blocks.find((b) => b.tag === 'h4' && (b.text ?? '').includes('bright minds'))?.text ??
+	"Meet the bright minds who've learned, built, and grown with us, from classroom projects to professional success.";
+
+const heroTitleHtml = heroTitle
+	.replace(
+		/\b(makers)\b/gi,
+		(_match: string, word: string) => `<span class="sc-hero__accent">${word}</span>`,
+	)
+	.replace(/\n/g, '<br />');
+
 const buildLogUrl = 'https://ghost.tk.sg/';
 
 const studentPhotos = [
@@ -83,7 +95,7 @@ const jiaChenQuote =
 		)}
 		<div class="sc-hero__scrim"></div>
 		<div class="sc-hero__content shell">
-			<h1 class="sc-hero__title">{heroTitle}</h1>
+			<h1 class="sc-hero__title" set:html={heroTitleHtml} />
 			<p class="sc-hero__lead">{heroLead}</p>
 			<div class="sc-hero__actions">
 				<a class="sc-hero__cta" href={buildLogUrl} target="_blank" rel="noopener">Build Log</a>
@@ -93,10 +105,10 @@ const jiaChenQuote =
 
 	<section class="sc-section">
 		<div class="shell">
-			<h2 class="sc-section__heading">Our Students</h2>
+			<h2 class="sc-section__heading">Our Projects</h2>
 			<p class="sc-section__lead">
-				Our students have built some pretty cool things, ranging from apps to games to remote
-				controlled devices and beyond!
+				We've built some pretty amazing things, together with our learners. Read more at
+				<a href="https://blog.tinkercademy.com" target="_blank" rel="noopener">our blog</a>.
 			</p>
 			<div class="sc-students">
 				{studentPhotos.map((src) => (
@@ -216,6 +228,10 @@ const jiaChenQuote =
 		color: #fff;
 		margin: 0;
 		text-wrap: balance;
+	}
+
+	.sc-hero__accent {
+		color: rgb(240, 93, 87);
 	}
 
 	.sc-hero__lead {

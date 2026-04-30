@@ -2,7 +2,7 @@
 title: "Level Up Your Vibe Coding (Lovable and Replit)"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg"
+heroImage: "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]

@@ -2,7 +2,7 @@
 title: "Game Development Bootcamp with Unity"
 subtitle: "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
 duration: "32 hours"
-heroImage: "/images/kuS9B3BanadFYL050aWsShzhoM.webp"
+heroImage: "/images/generated/hero-review/imda-unity-2025/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["gamedev"]
 platformIds: ["unity"]

@@ -2,7 +2,7 @@
 title: "CODE_EXP 2025"
 subtitle: "11 May 2025"
 duration: "4 days"
-heroImage: "/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png"
+heroImage: "/images/generated/hero-review/code-exp-2025/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ai", "appdev"]
 platformIds: ["react-native", "tensorflow"]

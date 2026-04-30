@@ -2,7 +2,7 @@
 title: "AI-Driven Game Development on Phaser"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Phaser."
 duration: "24 hours"
-heroImage: "/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp"
+heroImage: "/images/generated/hero-review/imda-phaser-2025/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["gamedev"]
 platformIds: ["html-css", "javascript", "git-github", "microsoft-copilot"]

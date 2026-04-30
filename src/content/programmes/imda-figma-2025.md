@@ -2,7 +2,7 @@
 title: "UI/UX Design with Figma"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Figma."
 duration: "26 hours"
-heroImage: "/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png"
+heroImage: "/images/generated/hero-review/imda-figma-2025/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["uiux"]
 platformIds: ["figma"]

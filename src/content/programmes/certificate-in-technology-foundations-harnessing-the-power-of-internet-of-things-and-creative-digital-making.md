@@ -2,7 +2,7 @@
 title: "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
 subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
 duration: "17 days"
-heroImage: "/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg"
+heroImage: "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["iot"]
 platformIds: ["arduino", "bbc-micro-bit", "raspberry-pi"]

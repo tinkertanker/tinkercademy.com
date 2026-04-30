@@ -2,7 +2,7 @@
 title: "Agentic AI for Digital Builders"
 subtitle: "Corporate training"
 duration: "1 day"
-heroImage: "/images/agentic-ai-hero_002.jpg"
+heroImage: "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai"]
 platformIds: ["claude"]

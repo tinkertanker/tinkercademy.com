@@ -901,7 +901,7 @@
     "description": "Real skills for real impact.",
     "hero_title": "Data, Coding, IoT Tinkering, and Tech Productivity Training",
     "hero_lead": "Real skills for real impact.",
-    "hero_image": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425",
+    "hero_image": "/images/generated/hero-review/professionals/cdx_001.webp",
     "seo": {
       "title": "Tinkercademy at Work: Expert-Led Tech Upskilling",
       "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
@@ -2545,9 +2545,9 @@
     "slug": "showcase",
     "title": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys",
     "description": "Swift Accelerator Programme Trainer at Tinkertanker",
-    "hero_title": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys",
+    "hero_title": "Apps, games, bots\nand the makers behind them.",
     "hero_lead": "Swift Accelerator Programme Trainer at Tinkertanker",
-    "hero_image": "https://framerusercontent.com/images/1mmWhHMr6MnhWIa0MEoHFHdS4I.jpg?scale-down-to=4096&width=7086&height=6532",
+    "hero_image": "/images/generated/hero-review/showcase/cdx-icon_001.webp",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -2624,11 +2624,11 @@
     "blocks": [
       {
         "tag": "h1",
-        "text": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys"
+        "text": "Apps, games, bots\nand the makers behind them."
       },
       {
         "tag": "h4",
-        "text": "Meet the bright minds who’ve learned, built, and grown with us, from classroom projects to professional success."
+        "text": "Meet the bright minds who've learned, built, and grown with us, from classroom projects to professional success."
       },
       {
         "tag": "h2",
@@ -2876,9 +2876,9 @@
     "slug": "about-us",
     "title": "We’re coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore.",
     "description": "50+",
-    "hero_title": "We’re coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore.",
+    "hero_title": "We're coders and builders\nwho teach coding and building.",
     "hero_lead": "50+",
-    "hero_image": "https://framerusercontent.com/images/a30diESkHyoGIgdzYg4dQoU5vHA.jpg?width=2160&height=2700",
+    "hero_image": "/images/generated/hero-review/about-us/cdx-icon_001.webp",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -2970,15 +2970,15 @@
     "blocks": [
       {
         "tag": "h1",
-        "text": "We’re coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore."
+        "text": "We're coders and builders\nwho teach coding and building."
       },
       {
         "tag": "h4",
-        "text": "We bring an unparalleled depth of experience in education and technology to our classes and curriculum."
+        "text": "A Singapore studio of practising builders — we ship apps, electronics, and AI workflows, and bring our breakthroughs back to the classroom for schools, companies, and the public."
       },
       {
         "tag": "p",
-        "text": "Tinkertanker Pte Ltd is a technology and education company of tinkerers and teachers. We run Tinkercademy, where we teach coding and digital making to students of all ages, in a wide variety of fields such as micro:bit, iOS, Python, Arduino, Node, cyber-security, Unity, and more. We also curate and sell educational technology toys at our Get Hacking online store, and build our own tech apps and products, e.g. GuestDay, an iPad-based guest registration service; an IC Photo app for Singaporeans to take useful selfies; and Spickify, now Helpling Singapore."
+        "text": "Tinkertanker Pte Ltd is the technology and education company behind Tinkercademy. We've spent years teaching coding and digital making to students of every age — from micro:bit and Arduino to iOS, Python, Node, cybersecurity, Unity, and AI — and that depth of practical experience shows up in every class and curriculum we design. We curate and sell educational technology toys at our Get Hacking online store, and we build our own products too: GuestDay, an iPad-based guest registration service; the IC Photo app for Singaporeans to take useful selfies; and Spickify, now Helpling Singapore."
       },
       {
         "tag": "h3",
@@ -3348,7 +3348,7 @@
     "description": "Real skills for real impact.",
     "hero_title": "Code, Tinker, and Make with Us.",
     "hero_lead": "Real skills for real impact.",
-    "hero_image": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+    "hero_image": "/images/generated/hero-review/schools/cdx_001.webp",
     "seo": {
       "title": "Tinkercademy in Schools: Expert-led instruction for students",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -4028,7 +4028,7 @@
     "description": "Corporate training, 21 & 22 August 2025",
     "hero_title": "Popular Courses",
     "hero_lead": "Corporate training, 21 & 22 August 2025",
-    "hero_image": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425",
+    "hero_image": "/images/generated/hero-review/courses-professionals/cdx_001.webp",
     "seo": {
       "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
       "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
@@ -4916,7 +4916,7 @@
     "description": "A CODE@SG initiative by IMDA and MOE.",
     "hero_title": "All Courses",
     "hero_lead": "A CODE@SG initiative by IMDA and MOE.",
-    "hero_image": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+    "hero_image": "/images/generated/hero-review/courses-all/cdx-icon_001.webp",
     "seo": {
       "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
       "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
@@ -6003,7 +6003,7 @@
     "description": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses",
     "hero_title": "Self-directed Learning Opportunities",
     "hero_lead": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses",
-    "hero_image": "https://framerusercontent.com/images/6gctHPSd4luM1PjI9WIcmXL25k.jpg?width=7360&height=4912",
+    "hero_image": "/images/generated/hero-review/individuals/cdx-icon_001.webp",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -6229,7 +6229,7 @@
     "description": "A hands-on digital maker programme for RI students.",
     "hero_title": "Popular Courses",
     "hero_lead": "A hands-on digital maker programme for RI students.",
-    "hero_image": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+    "hero_image": "/images/generated/hero-review/courses-schools/cdx-icon_001.webp",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -7290,7 +7290,7 @@
     "description": "Apply Apple’s design principles and create beautiful prototypes using Keynote.",
     "hero_title": "Infocomm Club Courses",
     "hero_lead": "Apply Apple’s design principles and create beautiful prototypes using Keynote.",
-    "hero_image": "https://framerusercontent.com/images/HcdNlviMb6etFvqiKcJkxSLAtHQ.jpeg?width=1200&height=500",
+    "hero_image": "/images/generated/hero-review/infocomm-club/cdx_001.webp",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",

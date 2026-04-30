@@ -2,7 +2,7 @@
 title: "Build for Mobile: App Development with React Native"
 subtitle: "Corporate training, 21 & 22 August 2025"
 duration: "2 days"
-heroImage: "/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg"
+heroImage: "/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["software-engineering", "appdev"]
 platformIds: ["javascript", "react-native"]
