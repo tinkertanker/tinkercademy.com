@@ -47,21 +47,47 @@ const valueProps = [
 	},
 ];
 
-const partnerLogos = site.externalLogos
-	.filter((l: any) => l.type === 'Partner' && l.logo)
-	.map((l: any) => ({ label: l.label, src: l.logo }));
+const MIN_MARQUEE_ITEMS = 24;
 
-const corporateLogos = site.externalLogos
-	.filter((l: any) => l.type === 'Corporate Client' && l.logo)
-	.map((l: any) => ({ label: l.label, src: l.logo }));
+function isRenderableLogo(logo: any) {
+	return logo?.active !== false && Boolean(logo?.logo);
+}
+
+function isPartnerLogo(logo: any) {
+	return isRenderableLogo(logo) && (logo.partner === true || logo.type === 'Partner');
+}
+
+function toLogoItem(logo: any) {
+	return { label: logo.label, src: logo.logo };
+}
+
+function buildMarquee(logos: Array<{ label: string; src: string }>, minItems = MIN_MARQUEE_ITEMS) {
+	const repeatCount = logos.length <= 1 ? 1 : Math.max(2, Math.ceil(minItems / logos.length));
+	const items = Array.from({ length: repeatCount }, (_, setIndex) =>
+		logos.map((logo) => ({ ...logo, setIndex })),
+	).flat();
+
+	return {
+		items,
+		distance: repeatCount > 1 ? `-${100 / repeatCount}%` : '0%',
+		isAnimated: repeatCount > 1,
+	};
+}
+
+const partnerLogos = site.externalLogos
+	.filter((logo: any) => isPartnerLogo(logo))
+	.map(toLogoItem);
 
 const clientLogos = site.externalLogos
-	.filter((l: any) => l.type !== 'Partner' && l.logo)
-	.map((l: any) => ({ label: l.label, src: l.logo }));
+	.filter((logo: any) => isRenderableLogo(logo) && !isPartnerLogo(logo))
+	.map(toLogoItem);
 
-const partnersStrip = partnerLogos.length > 0 ? partnerLogos : corporateLogos;
-const partnersDoubled = [...partnersStrip, ...partnersStrip];
-const clientsDoubled = [...clientLogos, ...clientLogos];
+const partnerMarquee = buildMarquee(partnerLogos);
+const clientMarquee = buildMarquee(clientLogos, 30);
+const logoSecondsPerItem = 6;
+const clientLogoSecondsPerItem = logoSecondsPerItem / 1.5;
+const partnerDurationSeconds = Math.max(34, partnerLogos.length * logoSecondsPerItem);
+const clientDurationSeconds = Math.max(34, clientLogos.length * clientLogoSecondsPerItem);
 
 const cardOverrides = buildProgrammeCardOverrides(page.course_cards ?? []);
 const cardSlugs = (page.course_cards ?? []).map((card: any) => card.slug);
@@ -87,18 +113,21 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		</div>
 	</section>
 
-	{partnersStrip.length > 0 && (
+	{partnerLogos.length > 0 && (
 		<section class="aud-section">
 			<div class="shell">
 				<h2 class="aud-section__heading">Our Partners</h2>
 				<div class="aud-logo-marquee">
-					<div class="aud-logo-track aud-logo-track--partners">
-						{partnersDoubled.map((logo, idx) => (
+					<div
+						class:list={['aud-logo-track', 'aud-logo-track--partners', { 'is-static': !partnerMarquee.isAnimated }]}
+						style={`--marquee-duration: ${partnerDurationSeconds}s; --marquee-distance: ${partnerMarquee.distance};`}
+					>
+						{partnerMarquee.items.map((logo) => (
 							<img
 								class="aud-logo aud-logo--partner"
 								src={logo.src}
-								alt={idx < partnersStrip.length ? logo.label : ''}
-								aria-hidden={idx >= partnersStrip.length ? 'true' : undefined}
+								alt={logo.setIndex === 0 ? logo.label : ''}
+								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
 							/>
 						))}
 					</div>
@@ -126,13 +155,16 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 			<div class="shell">
 				<h2 class="aud-section__heading">Our Clients</h2>
 				<div class="aud-logo-marquee">
-					<div class="aud-logo-track aud-logo-track--clients">
-						{clientsDoubled.map((logo, idx) => (
+					<div
+						class:list={['aud-logo-track', 'aud-logo-track--clients', { 'is-static': !clientMarquee.isAnimated }]}
+						style={`--marquee-duration: ${clientDurationSeconds}s; --marquee-distance: ${clientMarquee.distance};`}
+					>
+						{clientMarquee.items.map((logo) => (
 							<img
 								class="aud-logo"
 								src={logo.src}
-								alt={idx < clientLogos.length ? logo.label : ''}
-								aria-hidden={idx >= clientLogos.length ? 'true' : undefined}
+								alt={logo.setIndex === 0 ? logo.label : ''}
+								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
 							/>
 						))}
 					</div>
@@ -301,16 +333,15 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 		display: flex;
 		width: max-content;
 		align-items: center;
-		gap: clamp(1rem, 2.5vw, 2rem);
+		gap: clamp(2.25rem, 5vw, 4.5rem);
+		animation: aud-logo-marquee var(--marquee-duration, 80s) linear infinite;
 		will-change: transform;
 	}
 
-	.aud-logo-track--partners {
-		animation: aud-logo-marquee 30s linear infinite;
-	}
-
-	.aud-logo-track--clients {
-		animation: aud-logo-marquee 55s linear infinite;
+	.aud-logo-track.is-static {
+		animation: none;
+		justify-content: center;
+		width: 100%;
 	}
 
 	.aud-logo {
@@ -328,17 +359,17 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 
 	@keyframes aud-logo-marquee {
 		from {
-			transform: translateX(0);
+			transform: translate3d(0, 0, 0);
 		}
 		to {
-			transform: translateX(-50%);
+			transform: translate3d(var(--marquee-distance, -50%), 0, 0);
 		}
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.aud-logo-track--partners,
-		.aud-logo-track--clients {
+		.aud-logo-track {
 			animation: none;
+			transform: none;
 		}
 	}
 

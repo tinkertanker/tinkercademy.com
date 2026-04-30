@@ -1,8 +1,8 @@
 - id: apple-consultants-network
   label: Apple Consultants Network
   logo: https://framerusercontent.com/images/e9nhVfo3kswRF62Egzbbh8L8I8A.png
-  partner: false
-  type: School Client
+  partner: true
+  type: Partner
   featured: false
   active: true
   content_html: null
@@ -11,8 +11,8 @@
 - id: arclab
   label: ArcLab
   logo: https://framerusercontent.com/images/nI5l61MSsRmuWTFJqVH4cpNjfqY.webp
-  partner: false
-  type: Corporate Client
+  partner: true
+  type: Partner
   featured: false
   active: true
   content_html: null
@@ -112,7 +112,7 @@
   label: Infocomm Media Development Authority
   logo: https://framerusercontent.com/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png
   partner: true
-  type: School Client
+  type: Partner
   featured: false
   active: true
   content_html: null
@@ -254,7 +254,7 @@
   partner: false
   type: School Client
   featured: false
-  active: true
+  active: false
   content_html: null
   content_text: ""
   source_id: uLL1NxmEU
@@ -281,8 +281,8 @@
 - id: smu-academy
   label: SMU Academy
   logo: https://framerusercontent.com/images/icLJqUI2otyj00sfJ4Dvlfxbo.webp
-  partner: false
-  type: School Client
+  partner: true
+  type: Partner
   featured: false
   active: true
   content_html: null
@@ -301,8 +301,8 @@
 - id: tinkermind
   label: Tinkermind
   logo: https://framerusercontent.com/images/Rl2dNu7CjKUj50GoHP4FX8cpA.png
-  partner: false
-  type: School Client
+  partner: true
+  type: Partner
   featured: false
   active: true
   content_html: null
@@ -318,3 +318,83 @@
   content_html: null
   content_text: ""
   source_id: QuWTvaT6Y
+- id: chij-secondary
+  label: CHIJ Secondary
+  logo: /images/partners/chij.png
+  partner: false
+  type: School Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-chij-secondary
+- id: cyber-security-agency
+  label: Cyber Security Agency of Singapore
+  logo: /images/partners/cyber-security-agency.svg
+  partner: false
+  type: Corporate Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-cyber-security-agency
+- id: jump-trading
+  label: Jump Trading
+  logo: /images/partners/jump-trading.webp
+  partner: false
+  type: Corporate Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-jump-trading
+- id: pathlight-school
+  label: Pathlight School
+  logo: /images/partners/pathlight-school.png
+  partner: false
+  type: School Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-pathlight-school
+- id: presbyterian-high-school
+  label: Presbyterian High School
+  logo: /images/partners/presbyterian-high-school.jpg
+  partner: false
+  type: School Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-presbyterian-high-school
+- id: sandooq-al-watan
+  label: Sandooq Al Watan
+  logo: /images/partners/sandooq-al-watan.webp
+  partner: false
+  type: Corporate Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-sandooq-al-watan
+- id: yusof-ishak-secondary-school
+  label: Yusof Ishak Secondary School
+  logo: /images/partners/yusof-ishak-secondary-school.png
+  partner: false
+  type: School Client
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-yusof-ishak-secondary-school
+- id: metaskills
+  label: Metaskills Institute
+  logo: /images/partners/metaskills.png
+  partner: true
+  type: Partner
+  featured: false
+  active: true
+  content_html: null
+  content_text: ""
+  source_id: manual-metaskills
