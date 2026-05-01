@@ -3467,12 +3467,12 @@
         "type": "internal"
       },
       {
-        "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
-        "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+        "label": "StudentsSwift PlaygroundStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
         "type": "internal"
       },
       {
-        "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "label": "StudentsSwift PlaygroundStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
         "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
         "type": "internal"
       },
@@ -3482,7 +3482,7 @@
         "type": "internal"
       },
       {
-        "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+        "label": "StudentsBrainHack CODE_EXPStudents4 days11 May 2025",
         "url": "https://tinkercademy.com/programmes/code-exp-2025",
         "type": "internal"
       },
@@ -3805,7 +3805,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Basics with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -3825,7 +3825,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Explorations with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -3865,7 +3865,7 @@
       },
       {
         "tag": "h2",
-        "text": "CODE_EXP 2025"
+        "text": "BrainHack CODE_EXP"
       },
       {
         "tag": "p",
@@ -3985,15 +3985,8 @@
         "blurb": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
       },
       {
-        "slug": "imda-apple-2025-b",
-        "title": "App Development Basics with Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
         "slug": "imda-apple-2025-c",
-        "title": "App Development Explorations with Swift Playgrounds",
+        "title": "Swift Playground",
         "audience_label": "Students",
         "duration": "26 hours",
         "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
@@ -4007,7 +4000,7 @@
       },
       {
         "slug": "code-exp-2025",
-        "title": "CODE_EXP 2025",
+        "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
         "blurb": "11 May 2025"
@@ -4733,83 +4726,6 @@
         "blurb": ""
       },
       {
-        "slug": "building-agents-with-openclaw",
-        "title": "Building Agents with OpenClaw",
-        "audience_label": "Businesses",
-        "duration": "2 days",
-        "blurb": "Corporate training"
-      },
-      {
-        "slug": "vibe-coding-for-digital-builders-lovable-replit",
-        "title": "Level Up Your Vibe Coding (Lovable and Replit)",
-        "audience_label": "Businesses",
-        "duration": "2 days",
-        "blurb": "Corporate training"
-      },
-      {
-        "slug": "vibe-coding-for-digital-builders",
-        "title": "Vibe Coding for Digital Builders",
-        "audience_label": "Businesses",
-        "duration": "2 days",
-        "blurb": "Corporate training"
-      },
-      {
-        "slug": "knowledge-powered-ai-with-chatgpt",
-        "title": "Knowledge-Powered AI with ChatGPT",
-        "audience_label": "Businesses",
-        "duration": "½, 1, 2 days",
-        "blurb": "Corporate training"
-      },
-      {
-        "slug": "build-for-mobile-with-react-native",
-        "title": "Build for Mobile: App Development with React Native",
-        "audience_label": "Public",
-        "duration": "2 days",
-        "blurb": "Corporate training, 21 & 22 August 2025"
-      },
-      {
-        "slug": "mastering-the-web",
-        "title": "Mastering the Web: Understand Full-Stack Development",
-        "audience_label": "Public",
-        "duration": "2 days",
-        "blurb": "Corporate training, 3 & 4 July 2025"
-      },
-      {
-        "slug": "professional-certificate-in-mobile-application-development",
-        "title": "Professional Certificate in Mobile Application Development",
-        "audience_label": "Public",
-        "duration": "2 days/module",
-        "blurb": "A SkillsFuture-Supported Course Offered by SMU Academy"
-      },
-      {
-        "slug": "professional-certificate-in-web-application-development",
-        "title": "Professional Certificate in Web Application Development",
-        "audience_label": "Public",
-        "duration": "2 days/module",
-        "blurb": "A SkillsFuture-Supported Course Offered by SMU Academy"
-      },
-      {
-        "slug": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
-        "title": "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making",
-        "audience_label": "Businesses",
-        "duration": "17 days",
-        "blurb": "A SkillsFuture-Supported Course Offered by SMU Academy"
-      },
-      {
-        "slug": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
-        "title": "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology",
-        "audience_label": "Businesses",
-        "duration": "17 days",
-        "blurb": "A SkillsFuture-Supported Course Offered by SMU Academy"
-      },
-      {
-        "slug": "building-agents-with-openclaw",
-        "title": "Building Agents with OpenClaw",
-        "audience_label": "Businesses",
-        "duration": "2 days",
-        "blurb": "Corporate training"
-      },
-      {
         "slug": "vibe-coding-for-digital-builders-lovable-replit",
         "title": "Level Up Your Vibe Coding (Lovable and Replit)",
         "audience_label": "Businesses",
@@ -5030,12 +4946,12 @@
         "type": "internal"
       },
       {
-        "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
-        "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+        "label": "StudentsSwift PlaygroundStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
         "type": "internal"
       },
       {
-        "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "label": "StudentsSwift PlaygroundStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
         "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
         "type": "internal"
       },
@@ -5045,7 +4961,7 @@
         "type": "internal"
       },
       {
-        "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+        "label": "StudentsBrainHack CODE_EXPStudents4 days11 May 2025",
         "url": "https://tinkercademy.com/programmes/code-exp-2025",
         "type": "internal"
       },
@@ -5543,7 +5459,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Basics with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -5563,7 +5479,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Explorations with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -5603,7 +5519,7 @@
       },
       {
         "tag": "h2",
-        "text": "CODE_EXP 2025"
+        "text": "BrainHack CODE_EXP"
       },
       {
         "tag": "p",
@@ -5925,15 +5841,8 @@
         "blurb": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
       },
       {
-        "slug": "imda-apple-2025-b",
-        "title": "App Development Basics with Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
         "slug": "imda-apple-2025-c",
-        "title": "App Development Explorations with Swift Playgrounds",
+        "title": "Swift Playground",
         "audience_label": "Students",
         "duration": "26 hours",
         "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
@@ -5947,7 +5856,7 @@
       },
       {
         "slug": "code-exp-2025",
-        "title": "CODE_EXP 2025",
+        "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
         "blurb": "11 May 2025"
@@ -6283,12 +6192,12 @@
         "type": "internal"
       },
       {
-        "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
-        "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
+        "label": "StudentsSwift PlaygroundStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
         "type": "internal"
       },
       {
-        "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
+        "label": "StudentsSwift PlaygroundStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
         "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
         "type": "internal"
       },
@@ -6298,7 +6207,7 @@
         "type": "internal"
       },
       {
-        "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+        "label": "StudentsBrainHack CODE_EXPStudents4 days11 May 2025",
         "url": "https://tinkercademy.com/programmes/code-exp-2025",
         "type": "internal"
       },
@@ -6533,7 +6442,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Basics with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -6553,7 +6462,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Explorations with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -6593,7 +6502,7 @@
       },
       {
         "tag": "h2",
-        "text": "CODE_EXP 2025"
+        "text": "BrainHack CODE_EXP"
       },
       {
         "tag": "p",
@@ -6797,7 +6706,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Basics with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -6817,7 +6726,7 @@
       },
       {
         "tag": "h2",
-        "text": "App Development Explorations with Swift Playgrounds"
+        "text": "Swift Playground"
       },
       {
         "tag": "p",
@@ -6857,7 +6766,7 @@
       },
       {
         "tag": "h2",
-        "text": "CODE_EXP 2025"
+        "text": "BrainHack CODE_EXP"
       },
       {
         "tag": "p",
@@ -6929,13 +6838,6 @@
         "blurb": ""
       },
       {
-        "slug": "ri-futurecreate-maker-programme-2025",
-        "title": "RI FutureCreate Maker Programme 2025",
-        "audience_label": "Students",
-        "duration": "4 years",
-        "blurb": "A hands-on digital maker programme for RI students."
-      },
-      {
         "slug": "imda-microbit-2025",
         "title": "Digital Making with micro:bit",
         "audience_label": "Students",
@@ -6978,15 +6880,8 @@
         "blurb": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
       },
       {
-        "slug": "imda-apple-2025-b",
-        "title": "App Development Basics with Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
         "slug": "imda-apple-2025-c",
-        "title": "App Development Explorations with Swift Playgrounds",
+        "title": "Swift Playground",
         "audience_label": "Students",
         "duration": "26 hours",
         "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
@@ -7000,7 +6895,7 @@
       },
       {
         "slug": "code-exp-2025",
-        "title": "CODE_EXP 2025",
+        "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
         "blurb": "11 May 2025"
@@ -7018,83 +6913,6 @@
         "audience_label": "Students",
         "duration": "10 hours",
         "blurb": "A CODE@SG initiative by IMDA and MOE."
-      },
-      {
-        "slug": "ri-futurecreate-maker-programme-2025",
-        "title": "RI FutureCreate Maker Programme 2025",
-        "audience_label": "Students",
-        "duration": "4 years",
-        "blurb": "A hands-on digital maker programme for RI students."
-      },
-      {
-        "slug": "imda-microbit-2025",
-        "title": "Digital Making with micro:bit",
-        "audience_label": "Students",
-        "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with micro:bit."
-      },
-      {
-        "slug": "imda-minecraft-2025",
-        "title": "Game Development in MakeCode Arcade & MineCraft",
-        "audience_label": "Students",
-        "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
-      },
-      {
-        "slug": "imda-unity-2025",
-        "title": "Game Development Bootcamp with Unity",
-        "audience_label": "Students",
-        "duration": "32 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
-      },
-      {
-        "slug": "imda-figma-2025",
-        "title": "UI/UX Design with Figma",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Figma."
-      },
-      {
-        "slug": "imda-phaser-2025",
-        "title": "AI-Driven Game Development on Phaser",
-        "audience_label": "Students",
-        "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Phaser."
-      },
-      {
-        "slug": "swift-accelerator",
-        "title": "Swift Accelerator",
-        "audience_label": "Students",
-        "duration": "8 months",
-        "blurb": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
-      },
-      {
-        "slug": "imda-apple-2025-b",
-        "title": "App Development Basics with Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
-        "slug": "imda-apple-2025-c",
-        "title": "App Development Explorations with Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
-        "slug": "imda-apple-2025-a",
-        "title": "App Prototyping with Keynote and Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
-        "slug": "code-exp-2025",
-        "title": "CODE_EXP 2025",
-        "audience_label": "Students",
-        "duration": "4 days",
-        "blurb": "11 May 2025"
       },
       {
         "slug": "no-code-machine-learning",

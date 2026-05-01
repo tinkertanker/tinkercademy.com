@@ -116,119 +116,9 @@
     "source_id": "ToTL0iro5"
   },
   {
-    "id": "imda-apple-2025-b",
-    "slug": "imda-apple-2025-b",
-    "title": "App Development Basics with Swift Playgrounds",
-    "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
-    "duration": "26 hours",
-    "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
-    "audience_ids": [
-      "students",
-      "teachers"
-    ],
-    "topic_ids": [
-      "appdev"
-    ],
-    "cta_ids": [
-      "enquire-now-mailto-yjsoon-tk-sg-subject-infocomm-learn-roadmap",
-      "swift-explorers-challenge-https-swiftexplorers-sg",
-      "our-courses-https-tinkercademy-com-courses-all",
-      "our-projects-https-tinkercademy-com-showcase",
-      "tinkertanker-pte-ltd-http-tinkertanker-com",
-      "sign-up-https-form-jotform-com-223001013827440",
-      "get-hacking-store-https-gethacking-com",
-      "tinker-class-pte-ltd-https-tinkerclass-tech",
-      "tinkermind-https-tinkermind-sg",
-      "hello-tk-sg-mailto-hello-tk-sg",
-      "6917-6920-tel-69176920",
-      "69176920-tel-69176920"
-    ],
-    "seo": {
-      "title": "App Development Basics with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
-      "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
-      "canonical": "https://tinkercademy.com/programmes/imda-apple-2025-b",
-      "openGraph": {
-        "title": "App Development Basics with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
-        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
-        "image": null
-      },
-      "twitter": {
-        "title": "App Development Basics with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
-        "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
-        "image": null
-      },
-      "robots": "max-image-preview:large"
-    },
-    "content": [
-      {
-        "type": "image",
-        "src": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
-        "width": 386,
-        "height": 214
-      },
-      {
-        "type": "richtext",
-        "label": null,
-        "html": "<p>In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro. </p><p>Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases.</p>",
-        "text": "In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro. Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases."
-      },
-      {
-        "type": "richtext",
-        "label": null,
-        "html": "<ul><li><p>Understand and implement basic programming concepts in the Swift language</p></li><li><p>Use the Swift Playgrounds development environment to create and run apps</p></li><li><p>Create mobile user interfaces with SwiftUI controls and views</p></li><li><p>Utilise the SwiftUI framework to design and build a series of interactive apps.</p></li></ul>",
-        "text": "Understand and implement basic programming concepts in the Swift languageUse the Swift Playgrounds development environment to create and run appsCreate mobile user interfaces with SwiftUI controls and viewsUtilise the SwiftUI framework to design and build a series of interactive apps."
-      },
-      {
-        "type": "richtext",
-        "label": null,
-        "html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\" rel=\"noopener noreferrer\"><a>Swift Explorers Challenge</a></a>.</p><p><strong>Requirements</strong></p><ul><li><p><strong>Hardware: </strong> iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, <em>or </em>Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.</p></li><li><p><strong>Software</strong>: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.</p></li></ul>",
-        "text": "ProjectStudents will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge.RequirementsHardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.Software: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store."
-      }
-    ],
-    "sections": [
-      {
-        "heading": null,
-        "html": "<p>In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro. </p><p>Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases.</p>",
-        "text": "In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro. Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases.",
-        "kind": "richtext"
-      },
-      {
-        "heading": null,
-        "html": "<ul><li><p>Understand and implement basic programming concepts in the Swift language</p></li><li><p>Use the Swift Playgrounds development environment to create and run apps</p></li><li><p>Create mobile user interfaces with SwiftUI controls and views</p></li><li><p>Utilise the SwiftUI framework to design and build a series of interactive apps.</p></li></ul>",
-        "text": "Understand and implement basic programming concepts in the Swift languageUse the Swift Playgrounds development environment to create and run appsCreate mobile user interfaces with SwiftUI controls and viewsUtilise the SwiftUI framework to design and build a series of interactive apps.",
-        "kind": "richtext"
-      },
-      {
-        "heading": null,
-        "html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\" rel=\"noopener noreferrer\"><a>Swift Explorers Challenge</a></a>.</p><p><strong>Requirements</strong></p><ul><li><p><strong>Hardware: </strong> iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, <em>or </em>Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.</p></li><li><p><strong>Software</strong>: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.</p></li></ul>",
-        "text": "ProjectStudents will create an app prototype or experience, which can be submitted for the Swift Explorers Challenge.RequirementsHardware: iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, or Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.Software: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.",
-        "kind": "richtext"
-      }
-    ],
-    "card_blurb": "In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using…",
-    "featured": true,
-    "weight": 65,
-    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
-    "icon_alt": "Swift",
-    "platform_ids": [
-      "swift"
-    ],
-    "domain_ids": [
-      "appdev"
-    ],
-    "sign_up_label": "Enquire now",
-    "sign_up_url": "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap",
-    "intro_html": "<p>In this course, suitable for beginning coders and students who have learned coding and are interested in mobile app development, students will learn coding fundamentals using Swift and SwiftUI, the same language and framework used by professional mobile app developers worldwide to build apps for iPhone, iPad, and even the Apple Vision Pro. </p><p>Students will practise coding in the Swift programming language on Swift Playgrounds on iPad and use the SwiftUI framework to create and run their own mobile apps, exploring topics such as UI design, navigation, app state, interactivity, and databases.</p>",
-    "learning_objectives_html": "<ul><li data-preset-tag=\"p\"><p>Understand and implement basic programming concepts in the Swift language</p></li><li data-preset-tag=\"p\"><p>Use the Swift Playgrounds development environment to create and run apps</p></li><li data-preset-tag=\"p\"><p>Create mobile user interfaces with SwiftUI controls and views</p></li><li data-preset-tag=\"p\"><p>Utilise the SwiftUI framework to design and build a series of interactive apps.</p></li></ul>",
-    "details_html": "<p><strong>Project</strong></p><p>Students will create an app prototype or experience, which can be submitted for the <a href=\"https://swiftexplorers.sg\" target=\"_blank\">Swift Explorers Challenge</a>.</p><p><strong>Requirements</strong></p><ul><li data-preset-tag=\"p\"><p><strong>Hardware: </strong> iPad with iPadOS 17 or newer: minimum iPad 6th Gen, iPad Air 3rd Gen, iPad mini 5th Gen, iPad Pro 12” 2nd Gen, any iPad Pro 11”, <em>or </em>Mac devices with macOS Ventura or newer: MacBook Pro 2017 or later, MacBook Air 2018 or later, iMac 2017 or later, Mac mini 2018 or later.</p></li><li data-preset-tag=\"p\"><p><strong>Software</strong>: Keynote 14 or newer; Swift Playgrounds 4.5 or newer. Both free from Apple App Store.</p></li></ul>",
-    "source_collection": "Programmes",
-    "source_id": "DwUp6aOPY"
-  },
-  {
     "id": "imda-apple-2025-c",
     "slug": "imda-apple-2025-c",
-    "title": "App Development Explorations with Swift Playgrounds",
+    "title": "Swift Playground",
     "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
@@ -255,16 +145,16 @@
       "69176920-tel-69176920"
     ],
     "seo": {
-      "title": "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+      "title": "Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
       "canonical": "https://tinkercademy.com/programmes/imda-apple-2025-c",
       "openGraph": {
-        "title": "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "title": "Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals",
         "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
         "image": null
       },
       "twitter": {
-        "title": "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals",
+        "title": "Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals",
         "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
         "image": null
       },
@@ -1127,7 +1017,7 @@
   {
     "id": "code-exp-2025",
     "slug": "code-exp-2025",
-    "title": "CODE_EXP 2025",
+    "title": "BrainHack CODE_EXP",
     "subtitle": "11 May 2025",
     "duration": "4 days",
     "description": "Lesson Outcomes",
@@ -1154,16 +1044,16 @@
       "69176920-tel-69176920"
     ],
     "seo": {
-      "title": "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+      "title": "BrainHack CODE_EXP - Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
       "canonical": "https://tinkercademy.com/programmes/code-exp-2025",
       "openGraph": {
-        "title": "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+        "title": "BrainHack CODE_EXP - Tinkercademy: Coding and Making for Schools and Professionals",
         "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
         "image": null
       },
       "twitter": {
-        "title": "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals",
+        "title": "BrainHack CODE_EXP - Tinkercademy: Coding and Making for Schools and Professionals",
         "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
         "image": null
       },

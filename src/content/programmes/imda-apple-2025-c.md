@@ -1,25 +1,25 @@
 ---
-title: "App Development Explorations with Swift Playgrounds"
+title: "Swift Playground"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
 duration: "26 hours"
 heroImage: "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]
-cardBlurb: "This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented…"
+cardBlurb: "Build real iOS apps in Swift Playgrounds. Start with Swift and SwiftUI fundamentals — UI design, navigation, app state, interactivity, databases — then push into Augmented Reality, Machine Learning, and APIs to ship more ambitious apps on iPhone, iPad, and Apple Vision Pro."
 weight: 65
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
-seoTitle: "App Development Explorations with Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals"
+seoTitle: "Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
 ## Course Overview
 
-<p>This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented Reality, Machine Learning, and more. </p><p>Students will have a chance to go deep into toolkits and features that power the latest apps on iPhone, iPad, and even the Apple Vision Pro. This track is recommended for students who have completed any app development courses in the IMDA Swift LEARN Roadmaps in 2023/2024.</p>
+<p>Build real iOS apps in Swift Playgrounds, from coding fundamentals through to advanced toolkits used by professional developers.</p><p>Suitable for students new to coding as well as those with prior programming experience, this course teaches Swift and SwiftUI — the same language and framework used to build apps for iPhone, iPad, and the Apple Vision Pro. Beginners will practise core programming concepts and build interactive user interfaces; more experienced students will go further into Augmented Reality, Machine Learning, and consuming online data through APIs.</p>
 
 ## Lesson Outcomes
 
-<ul><li data-preset-tag="p"><p>Read and apply documentation and tutorials on further concepts in Swift and SwiftUI</p></li><li data-preset-tag="p"><p>Understand how to extend apps using online data available from application programming interfaces (APIs)</p></li><li data-preset-tag="p"><p>Utilise intermediate-to-advanced level libraries and tools such as Vision, CoreML, Reality Composer, and ARKit to create mobile apps with machine learning and augmented reality built-in.</p></li></ul>
+<ul><li data-preset-tag="p"><p>Understand and implement programming concepts in the Swift language</p></li><li data-preset-tag="p"><p>Use the Swift Playgrounds development environment to create and run apps</p></li><li data-preset-tag="p"><p>Create mobile user interfaces with SwiftUI controls and views — navigation, app state, interactivity, and databases</p></li><li data-preset-tag="p"><p>Read and apply documentation and tutorials on further concepts in Swift and SwiftUI</p></li><li data-preset-tag="p"><p>Extend apps using online data available from application programming interfaces (APIs)</p></li><li data-preset-tag="p"><p>Utilise intermediate-to-advanced libraries and tools such as Vision, CoreML, Reality Composer, and ARKit to create mobile apps with machine learning and augmented reality.</p></li></ul>
 
 ## Details
 

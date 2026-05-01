@@ -480,12 +480,6 @@
     "type": "internal"
   },
   {
-    "id": "studentsapp-development-basics-with-swift-playgroundsstudents26-hoursan-imda-infocom-learn-roadmap-course-with-apple-singapore-https-tinkercademy-com-programmes-imda-apple-2025-b",
-    "label": "StudentsApp Development Basics with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
-    "url": "https://tinkercademy.com/programmes/imda-apple-2025-b",
-    "type": "internal"
-  },
-  {
     "id": "studentsapp-development-explorations-with-swift-playgroundsstudents26-hoursan-imda-infocom-learn-roadmap-course-with-apple-singapore-https-tinkercademy-com-programmes-imda-apple-2025-c",
     "label": "StudentsApp Development Explorations with Swift PlaygroundsStudents26 hoursAn IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "url": "https://tinkercademy.com/programmes/imda-apple-2025-c",
@@ -499,7 +493,7 @@
   },
   {
     "id": "studentscode-exp-2025students4-days11-may-2025-https-tinkercademy-com-programmes-code-exp-2025",
-    "label": "StudentsCODE_EXP 2025Students4 days11 May 2025",
+    "label": "StudentsBrainHack CODE_EXPStudents4 days11 May 2025",
     "url": "https://tinkercademy.com/programmes/code-exp-2025",
     "type": "internal"
   },

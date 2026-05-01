@@ -1,19 +1,19 @@
 ---
-title: "CODE_EXP 2025"
-subtitle: "11 May 2025"
+title: "BrainHack CODE_EXP"
+subtitle: "May–June annually"
 duration: "4 days"
 heroImage: "/images/generated/hero-review/code-exp-2025/cdx_001.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ai", "appdev"]
 platformIds: ["react-native", "tensorflow"]
-cardBlurb: "CODE_EXP is a mobile dev hackathon spread over three phases:Phase 1: Training sessionsPhase 2: QualifiersPhase 3: Finals"
+cardBlurb: "BrainHack CODE_EXP is a mobile dev hackathon held annually in May–June, spread over three phases: Phase 1: Training sessions, Phase 2: Qualifiers, Phase 3: Finals."
 weight: 30
-seoTitle: "CODE_EXP 2025 - Tinkercademy: Coding and Making for Schools and Professionals"
+seoTitle: "BrainHack CODE_EXP - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
 ## Course Overview
 
-<p>CODE_EXP is a <strong>mobile dev hackathon </strong>spread over three phases:</p><ul><li data-preset-tag="p"><p>Phase 1: <strong>Training sessions</strong></p></li><li data-preset-tag="p"><p>Phase 2: <strong>Qualifiers</strong></p></li><li data-preset-tag="p"><p>Phase 3: <strong>Finals</strong></p></li></ul>
+<p>BrainHack CODE_EXP is a <strong>mobile dev hackathon </strong>held annually in May–June, spread over three phases:</p><ul><li data-preset-tag="p"><p>Phase 1: <strong>Training sessions</strong></p></li><li data-preset-tag="p"><p>Phase 2: <strong>Qualifiers</strong></p></li><li data-preset-tag="p"><p>Phase 3: <strong>Finals</strong></p></li></ul>
 
 ## Lesson Outcomes
 
