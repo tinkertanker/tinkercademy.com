@@ -49,7 +49,7 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 	}
 
 	.cta-banner__inner {
-		padding: 2.75rem clamp(1.5rem, 4vw, 3rem);
+		padding: 2.75rem 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -96,7 +96,7 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 
 	@media (max-width: 809px) {
 		.cta-banner__inner {
-			padding: 2rem 1.25rem;
+			padding: 2rem 0;
 		}
 	}
 </style>
