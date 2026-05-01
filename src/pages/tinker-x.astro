@@ -17,10 +17,19 @@ const heroTitle = page.hero_title ?? 'Tinker X';
 const heroLead =
 	page.hero_lead ?? 'A flexible program for hands-on learning in coding and making.';
 
-const intro = [
-	'Welcome to Tinker X, an open-ended program for anyone interested in coding and engineering. Unlike a traditional classroom, we offer a flexible mix of hands-on instruction and independent work. We give you the resources and support to learn at your own pace, whether you\'re following a structured curriculum or bringing your own project to life.',
-	'AI is already disrupting traditional education, moving it away from a rigid, one-size-fits-all model toward a more personalized and efficient system. We\'ve embraced this change. Our program uses a flipped classroom approach where you actively engage with materials on your own, applying a "just-in-time" learning approach. This means you focus on learning the skills you need to complete a project you\'re excited about.',
-	'This process is designed to be challenging and, at times, frustrating—and that\'s by design. By learning to push through obstacles and solve problems on your own, you\'ll develop grit, critical thinking, and initiative — skills that are essential for a future where technology is constantly changing.',
+const intro: string[][] = [
+	[
+		'Welcome to Tinker X, an open-ended program for anyone interested in coding and engineering. Unlike a traditional classroom, we offer a flexible mix of hands-on instruction and independent work.',
+		'We give you the resources and support to learn at your own pace, whether you\'re following a structured curriculum or bringing your own project to life.',
+	],
+	[
+		'AI is already disrupting traditional education, moving it away from a rigid, one-size-fits-all model toward a more personalized and efficient system. We\'ve embraced this change.',
+		'Our program uses a flipped classroom approach where you actively engage with materials on your own, applying a "just-in-time" learning approach. This means you focus on learning the skills you need to complete a project you\'re excited about.',
+	],
+	[
+		'This process is designed to be challenging and, at times, frustrating—and that\'s by design.',
+		'By learning to push through obstacles and solve problems on your own, you\'ll develop grit, critical thinking, and initiative — skills that are essential for a future where technology is constantly changing.',
+	],
 ];
 
 const pillars = [
@@ -152,9 +161,21 @@ const pricingTiers = [
 		</div>
 	</section>
 
-	<section class="tx-intro">
+	<section class="tx-story">
 		<div class="shell">
-			{intro.map((para) => <p>{para}</p>)}
+			{intro.map((paras, idx) => (
+				<div class:list={['tx-story__row', idx % 2 === 1 && 'tx-story__row--reverse']}>
+					<div class="tx-story__text">
+						{paras.map((para) => <p>{para}</p>)}
+					</div>
+					<div class="tx-story__photo">
+						<img src={studentWorks[idx * 2]} alt="" loading="lazy" />
+					</div>
+					<div class="tx-story__photo">
+						<img src={studentWorks[idx * 2 + 1]} alt="" loading="lazy" />
+					</div>
+				</div>
+			))}
 		</div>
 	</section>
 
@@ -176,15 +197,13 @@ const pricingTiers = [
 		</div>
 	</section>
 
-	<section class="tx-gallery">
-		<div class="shell">
-			<div class="tx-gallery__grid">
-				{studentWorks.map((src) => (
-					<div class="tx-gallery__tile">
-						<img src={src} alt="" loading="lazy" />
-					</div>
-				))}
-			</div>
+	<section class="tx-strip">
+		<div class="tx-strip__track">
+			{studentWorks.slice(6).map((src) => (
+				<div class="tx-strip__tile">
+					<img src={src} alt="" loading="lazy" />
+				</div>
+			))}
 		</div>
 	</section>
 
@@ -338,17 +357,116 @@ const pricingTiers = [
 		max-width: 56ch;
 	}
 
-	.tx-intro {
+	.tx-story {
 		padding: 3rem 0;
 	}
 
-	.tx-intro p {
+	.tx-story__row {
+		display: grid;
+		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+		gap: clamp(1rem, 2.5vw, 1.75rem);
+		align-items: start;
+		padding: 1.75rem 0;
+	}
+
+	.tx-story__row--reverse {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
+	}
+
+	.tx-story__row--reverse .tx-story__text {
+		grid-column: 3;
+		grid-row: 1;
+	}
+
+	.tx-story__row--reverse .tx-story__photo:nth-of-type(2) {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.tx-story__row--reverse .tx-story__photo:nth-of-type(3) {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	.tx-story__text p {
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
 		color: rgb(51, 51, 51);
 		margin: 0 0 1rem;
-		max-width: 70ch;
+	}
+
+	.tx-story__text p:last-child {
+		margin-bottom: 0;
+	}
+
+	.tx-story__photo {
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+		border-radius: 14px;
+		background: rgb(245, 245, 245);
+	}
+
+	.tx-story__photo img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	@media (max-width: 899px) {
+		.tx-story__row,
+		.tx-story__row--reverse {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.tx-story__text,
+		.tx-story__row--reverse .tx-story__text {
+			grid-column: 1 / -1;
+			grid-row: auto;
+		}
+
+		.tx-story__row--reverse .tx-story__photo:nth-of-type(2),
+		.tx-story__row--reverse .tx-story__photo:nth-of-type(3) {
+			grid-column: auto;
+			grid-row: auto;
+		}
+	}
+
+	.tx-strip {
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		padding: 1rem 0 2.5rem;
+		overflow: hidden;
+	}
+
+	.tx-strip__track {
+		display: flex;
+		gap: 0.75rem;
+		padding: 0 clamp(1rem, 4vw, 3rem);
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+	}
+
+	.tx-strip__track::-webkit-scrollbar {
+		display: none;
+	}
+
+	.tx-strip__tile {
+		flex: 0 0 clamp(220px, 26vw, 340px);
+		aspect-ratio: 4 / 3;
+		overflow: hidden;
+		border-radius: 12px;
+		background: rgb(245, 245, 245);
+		scroll-snap-align: start;
+	}
+
+	.tx-strip__tile img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
 	}
 
 	.tx-pillars {
@@ -374,42 +492,6 @@ const pricingTiers = [
 		height: clamp(96px, 10vw, 160px);
 		object-fit: contain;
 		margin: 0 0 1rem;
-		display: block;
-	}
-
-	.tx-gallery {
-		padding: 3rem 0;
-	}
-
-	.tx-gallery__grid {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 1rem;
-	}
-
-	@media (max-width: 1199px) {
-		.tx-gallery__grid {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
-	}
-
-	@media (max-width: 699px) {
-		.tx-gallery__grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
-	}
-
-	.tx-gallery__tile {
-		aspect-ratio: 4 / 3;
-		overflow: hidden;
-		border-radius: 14px;
-		background: rgb(245, 245, 245);
-	}
-
-	.tx-gallery__tile img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
 		display: block;
 	}
 
@@ -658,10 +740,6 @@ const pricingTiers = [
 
 	.tx-scholars {
 		padding: 3rem 0;
-	}
-
-	.tx-scholars__inner {
-		max-width: 62rem;
 	}
 
 	.tx-scholars__title {
