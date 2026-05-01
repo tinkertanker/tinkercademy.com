@@ -175,3 +175,23 @@ Page-screenshot previews on the review page:
 
 - `python3 scripts/screenshot-pages.py` — uses headless Chrome (`/Applications/Google Chrome.app/...`) against `http://localhost:4321` to capture each placement's route to `public/images/generated/hero-page-screenshots/<id>.png`. Runs `CONCURRENCY=3` Chromes in parallel by default; `TIMEOUT=120` seconds each (data-heavy pages like /schools and /courses-* need the long deadline). Idempotent — delete a `.png` to re-screenshot that placement.
 - The dev server must be running before invoking the script. The `/review/hero-proposals/` page reads screenshots from disk; missing ones surface a "No screenshot yet" placeholder.
+
+## Round 2.5 (2026-05-01) — single-placement re-spins
+
+When the user objects to specific cards on a live page and asks for one-off alternates (rather than a full sweep), use a per-placement prompt overlay alongside the standard envelope. Save outputs to `public/images/generated/hero-review/<slug>/alt_001.jpg` so they appear automatically on `/review/hero-proposals/`. Promote a pick by overwriting `cdx_001.webp` (`ffmpeg -y -i alt_001.jpg -c:v libwebp -quality 85 -compression_level 6 cdx_001.webp`) — the programme frontmatter already references that path.
+
+### Confirmed prompt-time pitfalls (and their fixes)
+
+These are failure modes the user has called out in production. They reproduce reliably in codex/imagegen unless the prompt actively works against them.
+
+- **Brand names in scene descriptors get rendered as scene text.** "CT Hub vibe" → literal "CT Hub" on a coffee mug. "Tinkercademy makerspace" → "Tinkercademy" silk-screened across a t-shirt. Don't name the brand in the prompt at all. Use generic SG descriptors ("Singapore office training room with glass partitions", "Singapore makerspace with pegboard wall"). Add an explicit ban in the negative-prompt list: `the words 'Tinkercademy' or 'CT Hub' anywhere`. Pair it with `all clothing must be plain, unbranded, solid-coloured — no text/logos on any garment`.
+
+- **Single negative on "back of laptop" is not enough.** "DO NOT show the back of the laptop" still produces over-the-shoulder framing where the visible monitor faces away from the viewer and the people stare at a screen we can't see. The fix is to specify the geometry positively, not negatively: e.g. "two laptops back-to-back on a shared meeting table, hinges touching, screens facing opposite directions; the closer screen faces the camera, the farther screen faces the seated people". Or: drop the laptop entirely and pivot to a hands-on hardware shot (works for maker / IoT placements). Keep the negative phrase in the deny list as a backstop, but do not rely on it.
+
+- **Default Malay-coded faces come with a tudung.** If you need a Malay person without a headscarf (e.g. the user has flagged a specific image), write it explicitly: `Malay woman with hair uncovered — NO tudung, NO headscarf, NO hijab`. Pair with a banlist entry: `headscarves, tudung, hijab`.
+
+- **"Subject right + clean left-third negative space" produces uniform compositions across placements.** Six adjacent professional cards using that envelope all read as the same photo from a distance. For variety, prescribe distinct geometry per card: top-down flat-lay; low-angle from below the desk; subject on the LEFT facing right; full-frame subjects with no large negative space; etc. Differentiate at the composition level, not just the subject level.
+
+- **Cups and stickers are a recurring text-leak surface.** Even when the prompt says "lived-in clutter (mug, sticky notes)", the model writes brand names on them. Always specify "plain unbranded solid-coloured ceramic mug; no text, no words, no logos on any mug, cup, sticker, or surface".
+
+When the user rejects a single image, before regenerating: check the failure mode against this list and tighten the relevant clause. Don't just re-roll the dice with the same prompt.

@@ -55,6 +55,11 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 - Header and nav links must use absolute site paths such as `/contact-us`, not relative `contact-us` or `./contact-us`, to avoid route-dependent navigation bugs.
 - For parity fixes, verify both `pnpm run dev` and built output in a real browser on representative routes before declaring success. Check computed styles and layout metrics, not just screenshots.
 
+### Hero / programme image generation
+
+- Any agent generating, regenerating, or replacing hero / flagship / programme images must read [docs/hero-image-brief.md](./docs/hero-image-brief.md) first. It is the canonical brief — art direction, the codex/imagegen invocation contract, the apply-picks workflow, and the running list of prompt-time pitfalls (brand-name leaks like "Tinkercademy" / "CT Hub", back-of-laptop framing, default tudung on Malay faces, composition-uniformity traps, etc.).
+- When the user rejects a single image, check the failure mode against the "Confirmed prompt-time pitfalls" section before re-rolling, and update that section if you discover a new failure mode.
+
 ### Proposal drafting
 
 - For proposal or quotation drafting, use [docs/writing-style-guide.md](./docs/writing-style-guide.md) as the tone reference, but keep proposals slightly more formal than the website.
