@@ -31,6 +31,8 @@ export const HOME_INSTITUTION_LOGOS = [
 	{ label: 'Stanford University', src: '/images/institutions/stanford.webp' },
 	{ label: 'MIT', src: '/images/institutions/mit.png' },
 	{ label: 'Wharton School', src: '/images/institutions/wharton.png' },
+	{ label: 'National University of Singapore', src: '/images/institutions/nus.png' },
+	{ label: 'Nanyang Technological University', src: '/images/institutions/ntu.png' },
 	{ label: 'National Institute of Education', src: '/images/institutions/nie.png' },
 	{ label: 'Ministry of Education Singapore', src: '/images/institutions/moe.png' },
 	{ label: 'Apple', src: '/images/institutions/apple.png' },
