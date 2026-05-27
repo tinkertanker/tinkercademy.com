@@ -6,6 +6,8 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": [
     "dist",
+    "output",
+    "reference",
     "public/sites"
   ]
 }

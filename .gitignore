@@ -11,5 +11,8 @@ output
 !.env.example
 
 # Internal hero-image review tooling — local-only, never ship to production
-src/pages/review/hero-proposals.astro
+src/pages/review/
+reference/internal-review-pages/
+src/data/hero-candidate-review.json
+src/data/photo-reference-review.json
 public/images/generated/hero-page-screenshots/
