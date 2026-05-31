@@ -11,10 +11,24 @@ const SITE_URL = process.env.SITE_URL?.trim() || 'https://webstaging.tinkercadem
 // https://astro.build/config
 export default defineConfig({
 	site: SITE_URL,
+	output: 'static',
 	trailingSlash: 'always',
+	compressHTML: true,
+	prefetch: {
+		prefetchAll: true,
+		defaultStrategy: 'viewport',
+	},
+	build: {
+		inlineStylesheets: 'auto',
+	},
 	integrations: [
 		sitemap({
-			filter: (page) => !/\/courses\/?$/.test(new URL(page).pathname),
+			filter: (page) => {
+				const path = new URL(page).pathname;
+				if (/\/courses\/?$/.test(path)) return false;
+				if (path.startsWith('/review/')) return false;
+				return true;
+			},
 		}),
 	],
 });

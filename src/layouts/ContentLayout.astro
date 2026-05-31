@@ -10,6 +10,7 @@ const {
 	canonical = null,
 	image = site.siteSettings?.default_seo?.openGraph?.image ?? null,
 	ogType = 'website',
+	noindex = false,
 } = Astro.props;
 
 const siteUrl = site.siteSettings?.base_url ?? Astro.site?.href ?? 'https://tinkercademy.com';
@@ -48,6 +49,10 @@ const organisationSchema = {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
+		{noindex && <meta name="robots" content="noindex,nofollow" />}
+
+		<link rel="preconnect" href="https://www.googletagmanager.com" />
+		<link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
 		<meta property="og:type" content={ogType} />
 		<meta property="og:site_name" content={siteName} />
@@ -78,8 +83,9 @@ const organisationSchema = {
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)}></script>
 	</head>
 	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />
-		<main>
+		<main id="main-content" tabindex="-1">
 			<slot />
 		</main>
 		<SiteFooter
@@ -123,42 +129,14 @@ const organisationSchema = {
 		src: url('/third-party-assets/fontshare/wf/4HZTRF4J7YQZYGOXHWG4SMCOQROFT246/BQG2GYEWF4ERWXSJBI25GNCFBFJERJRS/JOC23Y25WESBV3E57H33JLL3MTW6O6K3.woff2') format('woff2');
 	}
 
+	/* Single Oswald face spanning the weight range used in the design.
+	   The local woff2 is a single variable-axis subset, so declaring
+	   one face with a weight range avoids five redundant declarations
+	   loading the same file. */
 	@font-face {
 		font-family: 'Oswald';
 		font-style: normal;
-		font-weight: 300;
-		font-display: swap;
-		src: url('/fonts/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Oswald';
-		font-style: normal;
-		font-weight: 400;
-		font-display: swap;
-		src: url('/fonts/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Oswald';
-		font-style: normal;
-		font-weight: 500;
-		font-display: swap;
-		src: url('/fonts/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Oswald';
-		font-style: normal;
-		font-weight: 600;
-		font-display: swap;
-		src: url('/fonts/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Oswald';
-		font-style: normal;
-		font-weight: 700;
+		font-weight: 200 700;
 		font-display: swap;
 		src: url('/fonts/s/oswald/v57/TK3iWkUHHAIjg752GT8G.woff2') format('woff2');
 	}
@@ -198,23 +176,7 @@ const organisationSchema = {
 	@font-face {
 		font-family: 'Rubik';
 		font-style: italic;
-		font-weight: 400;
-		font-display: swap;
-		src: url('/fonts/s/rubik/v31/iJWEBXyIfDnIV7nEnX661A.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Rubik';
-		font-style: italic;
-		font-weight: 500;
-		font-display: swap;
-		src: url('/fonts/s/rubik/v31/iJWEBXyIfDnIV7nEnX661A.woff2') format('woff2');
-	}
-
-	@font-face {
-		font-family: 'Rubik';
-		font-style: italic;
-		font-weight: 600;
+		font-weight: 400 700;
 		font-display: swap;
 		src: url('/fonts/s/rubik/v31/iJWEBXyIfDnIV7nEnX661A.woff2') format('woff2');
 	}
@@ -264,7 +226,49 @@ const organisationSchema = {
 		font-family: 'Rubik', sans-serif;
 		background: #ffffff;
 		color: rgb(23, 23, 23);
-		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			scroll-behavior: smooth;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
+
+	.skip-link {
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 0.6rem 1rem;
+		background: rgb(23, 23, 23);
+		color: #fff;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 500;
+		text-decoration: none;
+		border-radius: 0 0 8px 0;
+		transform: translateY(-110%);
+		transition: transform 0.15s ease;
+		z-index: 1000;
+	}
+
+	.skip-link:focus {
+		transform: translateY(0);
+		outline: 2px solid #fff;
+		outline-offset: 2px;
+	}
+
+	main:focus {
+		outline: none;
 	}
 
 	body {

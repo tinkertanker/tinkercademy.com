@@ -53,6 +53,50 @@ const typeLabel =
 	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
 		? 'Corporate training'
 		: domainLabels[0] ?? primaryAudience?.label ?? '';
+
+/* Structured data: Course + Breadcrumb */
+const SITE_BASE = 'https://tinkercademy.com';
+const audienceTypeName =
+	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
+		? 'BusinessAudience'
+		: primaryAudience?.id === 'teachers' || primaryAudience?.id === 'students'
+			? 'EducationalAudience'
+			: undefined;
+const courseSchema: Record<string, unknown> = {
+	'@context': 'https://schema.org',
+	'@type': 'Course',
+	name: programme.title,
+	description: metaDescription,
+	url: canonical,
+	provider: {
+		'@type': 'Organization',
+		name: 'Tinkercademy',
+		sameAs: SITE_BASE,
+	},
+	inLanguage: 'en',
+};
+if (programme.heroImage) {
+	courseSchema.image = new URL(programme.heroImage, SITE_BASE).toString();
+}
+if (audienceTypeName && primaryAudience?.label) {
+	courseSchema.audience = {
+		'@type': audienceTypeName,
+		audienceType: primaryAudience.label,
+	};
+}
+if (domainLabels.length > 0) {
+	courseSchema.about = domainLabels;
+}
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_BASE}/` },
+		{ '@type': 'ListItem', position: 2, name: 'All courses', item: `${SITE_BASE}/courses-all/` },
+		{ '@type': 'ListItem', position: 3, name: programme.title, item: canonical },
+	],
+};
 ---
 
 <ContentLayout
@@ -67,8 +111,10 @@ const typeLabel =
 			<img
 				class="prog-hero__bg"
 				src={programme.heroImage}
-				alt={programme.title}
+				alt=""
 				loading="eager"
+				fetchpriority="high"
+				decoding="async"
 			/>
 		)}
 		<div class="prog-hero__overlay" />
@@ -186,6 +232,9 @@ const typeLabel =
 	</div>
 
 	<CtaBanner />
+
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 </ContentLayout>
 
 <style>
