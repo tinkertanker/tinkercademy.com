@@ -2,7 +2,7 @@
 title: "Advanced Agentic Coding with Claude Code or Codex"
 subtitle: "3-day corporate training"
 duration: "3 days"
-heroImage: "/images/generated/hero-review/advanced-agentic-vibe-coding/cdx_002.webp"
+heroImage: "/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_002.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["ai", "software-engineering"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js", "python"]
