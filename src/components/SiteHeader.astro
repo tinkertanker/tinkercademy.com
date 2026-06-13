@@ -442,6 +442,7 @@ function toNavHref(href: string) {
 		display: flex;
 		align-items: center;
 		line-height: 0;
+		flex-shrink: 0;
 	}
 
 	/* ── Desktop nav ── (direct child only — nested .dropdown must not inherit row flex) */
@@ -466,7 +467,21 @@ function toNavHref(href: string) {
 		align-items: center;
 		gap: 0.35rem;
 		line-height: 1.6;
+		white-space: nowrap;
 		transition: color 0.15s ease;
+	}
+
+	/* Narrow desktop band (just above the mobile breakpoint): the full-size
+	   nav + logo would otherwise overflow and wrap a long label like
+	   "OPEN SOURCE" onto two lines. Tighten the row slightly so it stays on
+	   one line without collapsing to the mobile menu. */
+	@media (min-width: 810px) and (max-width: 980px) {
+		.nav-desktop > ul {
+			gap: 1rem;
+		}
+		.nav-desktop a {
+			font-size: 0.9rem;
+		}
 	}
 
 	.nav-desktop a[target="_blank"] {
