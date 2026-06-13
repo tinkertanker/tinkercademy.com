@@ -1,5 +1,6 @@
 {
 	"name": "tinkercademy-dot-com",
+	"account_id": "b8b1032c61d9475cd00229c74db7ec72",
 	"compatibility_date": "2026-04-22",
 	"assets": {
 		"directory": "./dist",
