@@ -43,9 +43,10 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 ### Deploy
 
 - Production runs on a Cloudflare Worker (static assets). **Every push to `main` builds and uploads a new Worker version but does NOT serve it.** Production stays on the previously-promoted version until someone explicitly promotes the new one.
-- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback", or similar, follow `.claude/skills/deploy/SKILL.md`. The short version: run `pnpm run deploy` (interactive) or `npx wrangler versions deploy <id>@100 --yes` (scripted), then `pnpm run smoke https://tinkercademy.com` to verify.
+- `wrangler.jsonc` pins the production account ID (`b8b1032c61d9475cd00229c74db7ec72`, Tinkertanker). Before promoting, run `npx wrangler whoami` and confirm Wrangler is authenticated to the expected Cloudflare account. If you have access to multiple Cloudflare accounts, prefer an account-scoped API token via `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` or your own local wrapper rather than relying on whichever `wrangler login` OAuth context happens to be active.
+- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback", or similar, follow `.claude/skills/deploy/SKILL.md`. The short version: run `pnpm run deploy:list` to find the uploaded version, then `npx wrangler versions deploy <id>@100 --yes` to promote it, then `pnpm run smoke https://tinkercademy.com` to verify. Prefix those Wrangler commands with your local account-selection wrapper if your environment needs one.
 - "Build" is automatic on push. The user typing "build this" probably means `pnpm run build` locally or a `git push` — not a deploy.
-- Rollback is the same mechanism: `pnpm run deploy`, pick an older version ID.
+- Rollback is the same mechanism: run `pnpm run deploy:list`, pick an older version ID, then promote it with `npx wrangler versions deploy <id>@100 --yes`.
 - Full setup details: `docs/deployment.md`.
 
 ### Shared shell parity
