@@ -1,0 +1,626 @@
+---
+/**
+ * /open-source — Tinkercademy's free, open-source tools.
+ *
+ * The small tools we built for our own work (clients, classes, ourselves) and
+ * opened up for anyone to use or self-host. Standalone Astro page (no Framer/
+ * imported data); the tool list below is the single source of truth.
+ *
+ * Framing nods to Vaughn Tan's "boring tiny tools":
+ * https://vaughntan.org/boringtinytools
+ */
+import CtaBanner from '../components/CtaBanner.astro';
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+const canonical = 'https://tinkercademy.com/open-source/';
+
+const githubOrg = 'https://github.com/tinkertanker';
+
+type Tool = {
+	name: string;
+	tagline: string;
+	description: string;
+	handyFor: string;
+	/** Card thumbnail. Omit to render a terminal mock from `terminal` instead. */
+	image?: string;
+	/** Lines for the terminal mock when there's no screenshot. */
+	terminal?: string[];
+	/** Three parallel tags, same axes on every card:
+	 *   platform  — what kind of thing it is (featured/accent tag)
+	 *   builtWith — one headline language or framework
+	 *   access    — how you run it: Hosted | Download | Self-host */
+	platform: string;
+	builtWith: string;
+	access: 'Hosted' | 'Download' | 'Self-host' | 'Import';
+	repoUrl: string;
+	/** The big button. For self-host tools this is just the repo. */
+	primaryLabel: string;
+	primaryHref: string;
+};
+
+const tools: Tool[] = [
+	{
+		name: 'micro:bit MakeCode extensions',
+		tagline: 'A decade of open-source blocks for the BBC micro:bit.',
+		description:
+			"We've maintained MakeCode extensions for the micro:bit community since 2017. Our flagship, the Tinker Kit, is featured on microbit.org; pxt-oled-ssd1306 is one of the most-used OLED drivers around; and we co-maintain kits like the IoT Environment Kit with our partners at ElecFreaks. Twenty-odd extensions, all free to drop into any MakeCode project.",
+		handyFor: 'Teachers and makers building micro:bit hardware projects.',
+		image: '/images/open-source/pxt-microbit.png',
+		platform: 'MakeCode',
+		builtWith: 'TypeScript',
+		access: 'Import',
+		repoUrl: 'https://github.com/orgs/tinkertanker/repositories?q=pxt',
+		primaryLabel: 'Browse the extensions',
+		primaryHref: 'https://github.com/orgs/tinkertanker/repositories?q=pxt',
+	},
+	{
+		name: 'Classroom Widgets',
+		tagline: 'An interactive board of classroom widgets, with students joining live.',
+		description:
+			'Drag timers, polls, randomisers, Q&A, traffic lights and a dozen more widgets onto an infinite board. Students join from their own devices with a short code, so votes, submissions and live feedback update in real time. Dark mode, autosave and voice commands are built in.',
+		handyFor: 'Teachers and trainers running live, in-room lessons.',
+		image: '/images/open-source/classroom-widgets.jpg',
+		platform: 'Web',
+		builtWith: 'React',
+		access: 'Hosted',
+		repoUrl: 'https://github.com/tinkertanker/classroom-widgets',
+		primaryLabel: 'Open widgets.tk.sg',
+		primaryHref: 'https://widgets.tk.sg',
+	},
+	{
+		name: 'Vibbit',
+		tagline: 'Vibe-code your micro:bit: describe it in English, get working MakeCode.',
+		description:
+			'Bolts an AI assistant onto Microsoft MakeCode for the BBC micro:bit. Describe what you want and Vibbit generates blocks that actually compile, validated against real micro:bit APIs, with revert and error-aware fixes. Students bring their own API key, or a class points at one school-hosted backend.',
+		handyFor: 'CS and STEM teachers running micro:bit lessons, and their students.',
+		image: '/images/open-source/vibbit.jpg',
+		platform: 'MakeCode',
+		builtWith: 'JavaScript',
+		access: 'Download',
+		repoUrl: 'https://github.com/tinkertanker/vibbit',
+		primaryLabel: 'Get Vibbit',
+		primaryHref: 'https://vibbit.tk.sg',
+	},
+	{
+		name: 'Bamboobot',
+		tagline: 'Turn a spreadsheet and a background image into hundreds of certificates.',
+		description:
+			'Upload a certificate background, drag text fields exactly where you want them, paste in your recipient list, and generate one polished PDF per row. It handles long lists, rich formatting and font control, and can even email each certificate out via Resend or SES.',
+		handyFor: 'Event organisers, course and workshop runners, and schools.',
+		image: '/images/open-source/bamboobot.jpg',
+		platform: 'Web',
+		builtWith: 'Next.js',
+		access: 'Hosted',
+		repoUrl: 'https://github.com/tinkertanker/bamboobot-cert-generator',
+		primaryLabel: 'Open bamboobot.tk.sg',
+		primaryHref: 'https://bamboobot.tk.sg',
+	},
+	{
+		name: 'JustNow',
+		tagline: 'You just closed that window. Now get it back.',
+		description:
+			'A privacy-first macOS menu-bar app that keeps a short, local history of your screen. Hit a hotkey to scrub back to something you just saw, then drag over any frame to OCR-copy the text (a link, an error message, a 2FA code). Everything stays on your Mac: no cloud, no subscription.',
+		handyFor: 'Mac power users and developers who lose context fast.',
+		image: '/images/open-source/justnow.jpg',
+		platform: 'macOS',
+		builtWith: 'Swift',
+		access: 'Download',
+		repoUrl: 'https://github.com/yjsoon/justnow',
+		primaryLabel: 'Download for macOS',
+		primaryHref: 'https://justnow.tk.sg',
+	},
+	{
+		name: 'Points Accelerator',
+		tagline: 'A group-first points economy for class communities on Discord.',
+		description:
+			'Tracks shared group points and personal currency side by side, with a configurable per-role reward matrix, a custom shop, wallet transfers, and a submission workflow where approved student work automatically awards points. Ships with a Discord-login admin dashboard.',
+		handyFor: 'Instructors gamifying a Discord-based cohort.',
+		terminal: [
+			'$ cp .env.example .env',
+			'$ docker compose up --build',
+			'',
+			'  ▸ bot online as Points Accelerator#4242',
+			'  ▸ dashboard ready on :8080',
+		],
+		platform: 'Discord',
+		builtWith: 'TypeScript',
+		access: 'Self-host',
+		repoUrl: 'https://github.com/tinkertanker/points-accelerator',
+		primaryLabel: 'View on GitHub',
+		primaryHref: 'https://github.com/tinkertanker/points-accelerator',
+	},
+	{
+		name: 'short.io Hoster',
+		tagline: 'A password-protected front end for branded short links and QR codes.',
+		description:
+			'Wraps the short.io API behind one shared password so your whole team can mint branded short links without ever handing out the API key. Custom slugs, auto-generated QR codes (downloadable as PNG or PPTX), and a searchable history come built in.',
+		handyFor: 'Small teams and trainers sharing one short.io account.',
+		terminal: [
+			'$ npm install',
+			'$ netlify deploy --prod',
+			'',
+			'  set PASSWORD, SHORT_IO_API_KEY, SHORT_DOMAIN',
+			'  ✓ branded short links, live',
+		],
+		platform: 'Web',
+		builtWith: 'Node.js',
+		access: 'Self-host',
+		repoUrl: 'https://github.com/tinkertanker/short-io-hoster',
+		primaryLabel: 'View on GitHub',
+		primaryHref: 'https://github.com/tinkertanker/short-io-hoster',
+	},
+	{
+		name: 'Google Group Maker',
+		tagline: 'Create and manage Google Workspace groups without the Admin console.',
+		description:
+			'A small CLI and matching web app for creating, renaming, deleting and managing membership of Google Groups through the Admin SDK. Spin up a fresh mailing list per cohort in a single command, or hand the web UI to staff behind Google sign-in.',
+		handyFor: 'Workspace admins and ops teams who make a lot of groups.',
+		terminal: [
+			'$ ./groupmaker.py create cohort-2026 trainer@example.com',
+			'',
+			'  ✓ created cohort-2026@your-domain.com',
+			'  + trainer@example.com (owner)',
+		],
+		platform: 'CLI',
+		builtWith: 'Python',
+		access: 'Self-host',
+		repoUrl: 'https://github.com/tinkertanker/google-group-maker',
+		primaryLabel: 'View on GitHub',
+		primaryHref: 'https://github.com/tinkertanker/google-group-maker',
+	},
+];
+---
+
+<ContentLayout
+	title="Open source — free tools, built by us | Tinkercademy"
+	description="We're a small Singapore team that ships more software than our size suggests. Some of it becomes a tiny tool that does one job well, so we give it away: classroom widgets, a certificate generator, a screen-rewind Mac app, a micro:bit AI assistant, and more."
+	canonical={canonical}
+>
+	<section class="os-hero">
+		<div class="os-hero__glow" aria-hidden="true"></div>
+		<div class="os-hero__content shell">
+			<h1 class="os-hero__title">Built for our work.<br /><span class="os-hero__accent">Shared for yours.</span></h1>
+			<p class="os-hero__lead">
+				When we're not building curriculum, kits, and the next generation of builders, we love
+				building software.
+			</p>
+			<p class="os-hero__lead">
+				We build for ourselves, and for the community:
+				<a href="https://vaughntan.org/boringtinytools" target="_blank" rel="noopener">boring tiny tools</a>,
+				each of which does one job well. Free! Borrow them, fork them, or just nick the idea.
+			</p>
+			<div class="os-hero__actions">
+				<a class="os-hero__cta" href={githubOrg} target="_blank" rel="noopener">
+					Browse our GitHub
+				</a>
+				<a class="os-hero__cta os-hero__cta--ghost" href="#tools">See the tools ↓</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="os-tools" id="tools">
+		<div class="shell">
+			<div class="os-grid">
+				{tools.map((tool) => (
+					<article class="os-card">
+						<div class="os-card__media">
+							{tool.image ? (
+								<img src={tool.image} alt={`${tool.name} screenshot`} loading="lazy" />
+							) : (
+								<div class="os-term" role="img" aria-label={`${tool.name} command-line example`}>
+									<div class="os-term__bar">
+										<span></span><span></span><span></span>
+									</div>
+									<pre class="os-term__body">{tool.terminal?.join('\n')}</pre>
+								</div>
+							)}
+						</div>
+
+						<div class="os-card__body">
+							<h2 class="os-card__name">{tool.name}</h2>
+							<p class="os-card__tagline">{tool.tagline}</p>
+							<p class="os-card__desc">{tool.description}</p>
+							<p class="os-card__handy">
+								<span class="os-card__handy-label">For</span>
+								{tool.handyFor}
+							</p>
+
+							<ul class="os-card__tags">
+								<li class="os-card__tag os-card__tag--platform">{tool.platform}</li>
+								<li class="os-card__tag">{tool.builtWith}</li>
+								<li class="os-card__tag">{tool.access}</li>
+							</ul>
+						</div>
+
+						<footer class="os-card__footer">
+							<a
+								class="os-card__primary"
+								href={tool.primaryHref}
+								target="_blank"
+								rel="noopener"
+							>
+								{tool.primaryLabel}
+							</a>
+							{tool.primaryHref !== tool.repoUrl && (
+								<a class="os-card__source" href={tool.repoUrl} target="_blank" rel="noopener">
+									Source ↗
+								</a>
+							)}
+						</footer>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="os-outro">
+		<div class="shell os-outro__inner">
+			<h2 class="os-outro__heading">Built something with one of these?</h2>
+			<p class="os-outro__body">
+				It's all on GitHub. File an issue, send a pull request, or go build your own. We don't track
+				downloads, so a GitHub star is honestly how we find out anyone's using them.
+			</p>
+			<a class="os-outro__cta" href={githubOrg} target="_blank" rel="noopener">
+				github.com/tinkertanker ↗
+			</a>
+		</div>
+	</section>
+
+	<CtaBanner />
+</ContentLayout>
+
+<style>
+	/* ── Hero ── */
+	.os-hero {
+		position: relative;
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+		overflow: clip;
+		background: #0a0a0a;
+		color: #fff;
+	}
+
+	.os-hero__glow {
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(60% 80% at 18% 0%, rgba(240, 93, 87, 0.4) 0%, rgba(240, 93, 87, 0) 60%),
+			radial-gradient(50% 70% at 100% 100%, rgba(240, 93, 87, 0.18) 0%, rgba(240, 93, 87, 0) 55%);
+		opacity: 0.9;
+	}
+
+	.os-hero__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+	}
+
+	.os-hero__title {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(2.4rem, 6vw, 4.5rem);
+		font-weight: 500;
+		line-height: 1;
+		color: #fff;
+		margin: 0;
+		text-wrap: balance;
+	}
+
+	.os-hero__accent {
+		color: rgb(240, 93, 87);
+	}
+
+	.os-hero__lead {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
+		color: rgba(255, 255, 255, 0.92);
+		margin: 0;
+		max-width: 70%;
+	}
+
+	@media (max-width: 809px) {
+		.os-hero__lead {
+			max-width: 100%;
+		}
+	}
+
+	.os-hero__lead a {
+		color: rgba(255, 255, 255, 0.92);
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.os-hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+	}
+
+	.os-hero__cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 44px;
+		padding: 0.7rem 1.3rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		font-weight: 500;
+		transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+	}
+
+	.os-hero__cta:hover {
+		background: rgb(220, 74, 68);
+		transform: translateY(-1px);
+	}
+
+	.os-hero__cta--ghost {
+		background: transparent;
+		border: 1px solid rgba(255, 255, 255, 0.28);
+	}
+
+	.os-hero__cta--ghost:hover {
+		background: rgba(255, 255, 255, 0.08);
+		border-color: rgba(255, 255, 255, 0.5);
+	}
+
+	/* ── Tools grid ── */
+	.os-tools {
+		padding: clamp(2.5rem, 5vw, 4rem) 0 1rem;
+	}
+
+	.os-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	@media (max-width: 809px) {
+		.os-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.os-card {
+		display: flex;
+		flex-direction: column;
+		background: #fff;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 18px;
+		overflow: hidden;
+		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+	}
+
+	.os-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+	}
+
+	.os-card__media {
+		position: relative;
+		aspect-ratio: 16 / 10;
+		background: #f3f3f3;
+		overflow: hidden;
+		border-bottom: 1px solid rgb(235, 235, 235);
+	}
+
+	.os-card__media img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+		transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.os-card:hover .os-card__media img {
+		transform: scale(1.04);
+	}
+
+	/* Terminal mock for tools without a screenshot */
+	.os-term {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background: linear-gradient(160deg, #1c1b29 0%, #14131d 100%);
+	}
+
+	.os-term__bar {
+		display: flex;
+		gap: 0.4rem;
+		padding: 0.7rem 0.85rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	.os-term__bar span {
+		width: 11px;
+		height: 11px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.22);
+	}
+
+	.os-term__bar span:first-child {
+		background: rgb(240, 93, 87);
+	}
+
+	.os-term__body {
+		margin: 0;
+		padding: 1rem 1.1rem;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.82rem;
+		line-height: 1.55;
+		color: rgba(235, 235, 245, 0.92);
+		white-space: pre-wrap;
+		word-break: break-word;
+		overflow: hidden;
+	}
+
+	.os-card__body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		padding: 1.35rem 1.4rem 0.5rem;
+		flex: 1;
+	}
+
+	.os-card__name {
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.45rem;
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.os-card__tagline {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.98rem;
+		font-weight: 500;
+		line-height: 1.4;
+		color: var(--accent-dark);
+		margin: 0;
+	}
+
+	.os-card__desc {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		line-height: 1.55;
+		color: rgb(90, 90, 90);
+		margin: 0;
+	}
+
+	.os-card__handy {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		line-height: 1.45;
+		color: rgb(70, 70, 70);
+		margin: 0.15rem 0 0;
+	}
+
+	.os-card__handy-label {
+		display: inline-block;
+		margin-right: 0.45rem;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.66rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: rgb(150, 150, 150);
+	}
+
+	.os-card__tags {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin: 0.6rem 0 0;
+		padding: 0;
+	}
+
+	.os-card__tag {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.7rem;
+		letter-spacing: 0.02em;
+		color: rgb(95, 95, 95);
+		background: #f3f3f3;
+		border-radius: 6px;
+		padding: 0.3rem 0.6rem;
+	}
+
+	.os-card__tag--platform {
+		color: var(--accent-dark);
+		background: rgba(240, 93, 87, 0.1);
+	}
+
+	.os-card__footer {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.1rem 1.4rem 1.4rem;
+		margin-top: auto;
+	}
+
+	.os-card__primary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 40px;
+		padding: 0.55rem 1.1rem;
+		border-radius: 999px;
+		background: rgb(240, 93, 87);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		font-weight: 500;
+		transition: background 0.15s ease, transform 0.15s ease;
+	}
+
+	.os-card__primary:hover {
+		background: rgb(220, 74, 68);
+		transform: translateY(-1px);
+	}
+
+	.os-card__source {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: rgb(90, 90, 90);
+		text-decoration: none;
+	}
+
+	.os-card__source:hover {
+		color: var(--accent-dark);
+	}
+
+	/* ── Outro ── */
+	.os-outro {
+		padding: clamp(2.5rem, 5vw, 4rem) 0;
+	}
+
+	.os-outro__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.8rem;
+		padding: clamp(1.8rem, 4vw, 2.8rem);
+		border-radius: 20px;
+		background: #fafafa;
+		border: 1px solid rgb(235, 235, 235);
+	}
+
+	.os-outro__heading {
+		font-family: 'Oswald', sans-serif;
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 500;
+		color: rgb(23, 23, 23);
+		margin: 0;
+	}
+
+	.os-outro__body {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
+		color: rgb(90, 90, 90);
+		margin: 0;
+		max-width: 60ch;
+	}
+
+	.os-outro__cta {
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.9rem;
+		font-weight: 500;
+		color: var(--accent-dark);
+		text-decoration: none;
+		margin-top: 0.4rem;
+	}
+
+	.os-outro__cta:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+</style>
