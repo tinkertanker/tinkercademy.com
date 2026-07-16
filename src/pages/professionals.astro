@@ -19,7 +19,7 @@ import { getCorporateClientLogoItems } from '../lib/logos';
 import { localiseFramerImage } from '../lib/media.js';
 import {
 	buildProgrammeCardOverrides,
-	getProgrammesBySlugs,
+	getProgrammesForSurface,
 	toProgrammeCardData,
 } from '../lib/programmes.ts';
 
@@ -50,9 +50,9 @@ const valueProps = [
 
 const corporateClientLogos = getCorporateClientLogoItems(site.externalLogos);
 
+/* Show every business/public programme; imported cards only override legacy display copy. */
 const cardOverrides = buildProgrammeCardOverrides(page.course_cards ?? []);
-const cardSlugs = (page.course_cards ?? []).map((card: any) => card.slug);
-const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
+const cards = (await getProgrammesForSurface('professionals')).map((programme) =>
 	toProgrammeCardData(programme, cardOverrides.get(programme.slug)),
 );
 ---
