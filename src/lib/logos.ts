@@ -23,11 +23,20 @@ const CORPORATE_CLIENT_IDS = new Set([
 
 const CORPORATE_CLIENT_ORDER = [
 	'infocomm-media-development-authority',
-	'singapore-business-federation',
 	'cyber-security-agency',
+	'ministry-of-defence',
+	'defence-science-and-technology-agency',
+	'monetary-authority-of-singapore',
+	'central-provident-fund-board',
+	'national-institute-of-education',
+	'amcham-singapore',
+	'singapore-business-federation',
 	'dbs',
 	'institute-of-singapore-chartered-accountants',
 	'phillipcapital',
+	'sojitz-asia',
+	'jump-trading',
+	'sandooq-al-watan',
 ];
 
 function isRenderableLogo(logo: ExternalLogo) {
