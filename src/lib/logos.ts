@@ -21,24 +21,6 @@ const CORPORATE_CLIENT_IDS = new Set([
 	'phillipcapital',
 ]);
 
-const CORPORATE_CLIENT_ORDER = [
-	'infocomm-media-development-authority',
-	'cyber-security-agency',
-	'ministry-of-defence',
-	'defence-science-and-technology-agency',
-	'monetary-authority-of-singapore',
-	'central-provident-fund-board',
-	'national-institute-of-education',
-	'amcham-singapore',
-	'singapore-business-federation',
-	'dbs',
-	'institute-of-singapore-chartered-accountants',
-	'phillipcapital',
-	'sojitz-asia',
-	'jump-trading',
-	'sandooq-al-watan',
-];
-
 function isRenderableLogo(logo: ExternalLogo) {
 	return logo.active !== false && Boolean(logo.logo);
 }
@@ -72,14 +54,13 @@ export function getCorporateClientLogoItems(logos: ExternalLogo[]) {
 				(logo.type === 'Corporate Client' ||
 					(logo.id !== undefined && CORPORATE_CLIENT_IDS.has(logo.id))),
 		)
-		.sort((a, b) => {
-			const aIndex = a.id === undefined ? -1 : CORPORATE_CLIENT_ORDER.indexOf(a.id);
-			const bIndex = b.id === undefined ? -1 : CORPORATE_CLIENT_ORDER.indexOf(b.id);
-			if (aIndex === -1 && bIndex === -1) return 0;
-			if (aIndex === -1) return 1;
-			if (bIndex === -1) return -1;
-			return aIndex - bIndex;
-		})
+		.sort((a, b) =>
+			(a.label ?? '')
+				.replace(/^the\s+/i, '')
+				.localeCompare((b.label ?? '').replace(/^the\s+/i, ''), 'en-SG', {
+					sensitivity: 'base',
+				}),
+		)
 		.map(toLogoItem);
 }
 
