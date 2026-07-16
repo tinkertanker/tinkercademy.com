@@ -458,7 +458,7 @@
   {
     "id": "monetary-authority-of-singapore",
     "label": "Monetary Authority of Singapore",
-    "logo": "/images/partners/mas.svg",
+    "logo": "/images/partners/mas-logo.svg",
     "partner": false,
     "type": "Corporate Client",
     "featured": false,
@@ -470,7 +470,7 @@
   {
     "id": "national-institute-of-education",
     "label": "National Institute of Education",
-    "logo": "/images/partners/nie.png",
+    "logo": "/images/partners/nie-logo.png",
     "partner": false,
     "type": "Corporate Client",
     "featured": false,
@@ -482,7 +482,7 @@
   {
     "id": "central-provident-fund-board",
     "label": "Central Provident Fund Board",
-    "logo": "/images/partners/cpf.png",
+    "logo": "/images/partners/cpf-board.png",
     "partner": false,
     "type": "Corporate Client",
     "featured": false,
