@@ -424,22 +424,34 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		backdrop-filter: blur(4px);
 	}
 
+	/* 24px hit area (WCAG touch-target minimum) around an 8px visual dot */
 	.carousel__dot {
-		width: 0.5rem;
-		height: 0.5rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
 		padding: 0;
 		border: 0;
 		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.55);
+		background: transparent;
 		cursor: pointer;
+	}
+
+	.carousel__dot::before {
+		content: '';
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.55);
 		transition: background 0.15s ease, transform 0.15s ease;
 	}
 
-	.carousel__dot:hover {
+	.carousel__dot:hover::before {
 		background: rgba(255, 255, 255, 0.85);
 	}
 
-	.carousel__dot[aria-current="true"] {
+	.carousel__dot[aria-current="true"]::before {
 		background: #fff;
 		transform: scale(1.2);
 	}

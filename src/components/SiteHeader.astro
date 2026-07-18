@@ -1,6 +1,6 @@
 ---
 import { toSiteHref } from '../lib/links.js';
-import { LOGO_BLACK } from '../lib/site-media.js';
+import { LOGO_BLACK, LOGO_BLACK_SIZE } from '../lib/site-media.js';
 
 type NavLink = { label: string; href: string; hasDropdown?: boolean };
 
@@ -65,7 +65,13 @@ function toNavHref(href: string) {
 <header class="site-header">
 	<div class="header-inner">
 		<a class="brand" href="/">
-			<img src={LOGO_BLACK} alt="Tinkercademy" class="brand__logo" />
+			<img
+				src={LOGO_BLACK}
+				alt="Tinkercademy"
+				class="brand__logo"
+				width={LOGO_BLACK_SIZE.width}
+				height={LOGO_BLACK_SIZE.height}
+			/>
 		</a>
 
 		<nav class="nav-desktop" aria-label="Primary">
@@ -204,10 +210,10 @@ function toNavHref(href: string) {
 	const SEARCH_INDEX_URL = '/programme-search-index.json';
 
 	const AUDIENCE_COLOURS: Record<string, string> = {
-		students: 'rgb(240, 93, 87)',
-		teachers: 'rgb(240, 93, 87)',
-		businesses: '#0099FF',
-		public: '#0099FF',
+		students: 'var(--accent-dark)',
+		teachers: 'var(--accent-dark)',
+		businesses: '#0071c1',
+		public: '#0071c1',
 	};
 
 	let programmesCache: ProgrammeSearchEntry[] | null = null;
@@ -232,7 +238,7 @@ function toNavHref(href: string) {
 	}
 
 	function badgeColour(audienceId: string) {
-		return AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
+		return AUDIENCE_COLOURS[audienceId] ?? 'var(--accent-dark)';
 	}
 	const overlay = document.getElementById('site-search-overlay');
 	const openBtn = document.querySelector('.nav-search');

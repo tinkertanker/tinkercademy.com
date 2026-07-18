@@ -192,7 +192,8 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 	}
 
 	.course-listing__clear {
-		color: rgb(240, 93, 87);
+		/* accent-dark, not accent: text on white needs 4.5:1 (WCAG AA) */
+		color: var(--accent-dark);
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.9rem;
 		font-weight: 500;
@@ -270,7 +271,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		height: 40px;
 		padding: 10px 20px;
 		border-radius: 30px;
-		background-color: rgb(240, 93, 87);
+		background-color: var(--accent-dark);
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 		color: #fff;
 		font-family: 'Rubik', sans-serif;

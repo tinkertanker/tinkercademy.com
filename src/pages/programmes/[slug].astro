@@ -5,6 +5,7 @@ import CtaBanner from '../../components/CtaBanner.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
+import { getResponsiveImage } from '../../lib/responsive-images.js';
 import { clipDescription } from '../../lib/seo.ts';
 
 export async function getStaticPaths() {
@@ -88,6 +89,11 @@ if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
 
+const heroResponsive = getResponsiveImage(programme.heroImage);
+const heroPreload = heroResponsive
+	? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
+	: null;
+
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'BreadcrumbList',
@@ -104,13 +110,18 @@ const breadcrumbSchema = {
 	description={metaDescription}
 	canonical={canonical}
 	image={programme.heroImage ?? undefined}
+	preloadHero={heroPreload}
 >
 	{/* ════════ Hero: full-bleed image with dark overlay + text ════════ */}
 	<section class="prog-hero">
 		{programme.heroImage && (
 			<img
 				class="prog-hero__bg"
-				src={programme.heroImage}
+				src={heroResponsive?.src ?? programme.heroImage}
+				srcset={heroResponsive?.srcset}
+				sizes={heroResponsive?.srcset ? '100vw' : undefined}
+				width={heroResponsive?.width}
+				height={heroResponsive?.height}
 				alt=""
 				loading="eager"
 				fetchpriority="high"
@@ -138,7 +149,7 @@ const breadcrumbSchema = {
 		<div class="shell prog-meta__inner">
 			{audiences.length > 0 && (
 				<div class="prog-meta__group">
-					<h4 class="prog-meta__label">Audiences:</h4>
+					<span class="prog-meta__label">Audiences:</span>
 					<div class="prog-meta__tags">
 						{audiences.map((aud) => (
 							<a
@@ -156,13 +167,13 @@ const breadcrumbSchema = {
 			)}
 			{duration && (
 				<div class="prog-meta__group">
-					<h4 class="prog-meta__label">Duration:</h4>
+					<span class="prog-meta__label">Duration:</span>
 					<span class="prog-meta__value">{duration}</span>
 				</div>
 			)}
 			{typeLabel && (
 				<div class="prog-meta__group">
-					<h4 class="prog-meta__label">Type:</h4>
+					<span class="prog-meta__label">Type:</span>
 					<span class="prog-meta__value">{typeLabel}</span>
 				</div>
 			)}
@@ -308,7 +319,8 @@ const breadcrumbSchema = {
 		justify-content: center;
 		padding: 0.75rem 1.1rem;
 		border-radius: 999px;
-		background: rgb(240, 93, 87);
+		/* accent-dark, not accent: white 15px text needs 4.5:1 (WCAG AA) */
+		background: var(--accent-dark);
 		color: #fff;
 		text-decoration: none;
 		font-family: 'Rubik', sans-serif;
@@ -367,6 +379,7 @@ const breadcrumbSchema = {
 	.prog-meta__tag {
 		display: inline-flex;
 		align-items: center;
+		min-height: 24px; /* WCAG touch-target minimum */
 		padding: 5px 10px;
 		border-radius: 6px;
 		font-family: 'Rubik', sans-serif;
@@ -374,12 +387,12 @@ const breadcrumbSchema = {
 		font-weight: 500;
 		color: #fff;
 		line-height: 1;
-		background: rgb(240, 93, 87);
+		background: var(--accent-dark);
 		text-decoration: none;
 	}
 
 	.prog-meta__tag--blue {
-		background: #0099ff;
+		background: #0071c1;
 	}
 
 	.prog-meta__tag:hover {
@@ -519,7 +532,7 @@ const breadcrumbSchema = {
 	}
 
 	.prog-body :global(a) {
-		color: rgb(240, 93, 87);
+		color: var(--accent-dark);
 	}
 
 	.prog-body :global(strong) {

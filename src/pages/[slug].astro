@@ -9,6 +9,7 @@ import RichContent from '../components/RichContent.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getSiteData, getNavPillsForPage } from '../lib/data.js';
 import { getClientLogoItems, getPartnerLogoItems } from '../lib/logos';
+import { getResponsiveImage } from '../lib/responsive-images.js';
 import {
 	buildProgrammeCardOverrides,
 	getProgrammeFilterLabels,
@@ -66,6 +67,11 @@ const filterLabels = isCourseListing ? getProgrammeFilterLabels() : null;
 const partnerLogos = page.slug === 'courses-all' ? getPartnerLogoItems(site.externalLogos) : [];
 const clientLogos = page.slug === 'courses-all' ? getClientLogoItems(site.externalLogos) : [];
 const courseAllHeroImage = '/images/generated/hero-review/showcase/cdx_001.webp';
+const courseAllHero = getResponsiveImage(courseAllHeroImage);
+const courseHeroPreload =
+	page.slug === 'courses-all' && courseAllHero
+		? { src: courseAllHero.src, srcset: courseAllHero.srcset, sizes: '100vw' }
+		: null;
 const courseAllLead =
 	'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.';
 const courseAllHighlights = [
@@ -132,6 +138,7 @@ const hasRichContent = contentBlocks.some(
 	description={seoDescription}
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
+	preloadHero={courseHeroPreload}
 >
 	{isCourseListing ? (
 		<>
@@ -140,10 +147,15 @@ const hasRichContent = contentBlocks.some(
 					<section class="course-hero">
 						<img
 							class="course-hero__bg"
-							src={courseAllHeroImage}
+							src={courseAllHero?.src ?? courseAllHeroImage}
+							srcset={courseAllHero?.srcset}
+							sizes={courseAllHero?.srcset ? '100vw' : undefined}
+							width={courseAllHero?.width}
+							height={courseAllHero?.height}
 							alt=""
 							loading="eager"
 							fetchpriority="high"
+							decoding="async"
 						/>
 						<div class="course-hero__scrim"></div>
 						<div class="course-hero__content shell">
@@ -315,7 +327,8 @@ const hasRichContent = contentBlocks.some(
 		font-size: 0.78rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: rgb(240, 93, 87);
+		/* accent-dark, not accent: text on white needs 4.5:1 (WCAG AA) */
+		color: var(--accent-dark);
 		margin: 0 0 0.75rem;
 	}
 

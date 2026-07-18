@@ -21,6 +21,8 @@ interface Props {
 	badgeHref?: string | null;
 }
 
+import { getResponsiveImage } from '../lib/responsive-images.js';
+
 const {
 	slug,
 	title,
@@ -38,14 +40,19 @@ const {
 
 const href = `/programmes/${slug}/`;
 
+/* Cards render at ≤400 CSS px wide, so cap srcset at the 960w variant. */
+const cardImage = getResponsiveImage(heroImage, { maxWidth: 960 });
+const CARD_SIZES = '(max-width: 560px) calc(100vw - 26px), 400px';
+
 // Audience badge colour:  Students / Teachers → brand red,  Businesses / Public → blue
+// (darkened shades so the white badge text meets WCAG AA 4.5:1 contrast)
 const AUDIENCE_COLOURS: Record<string, string> = {
-	students: 'rgb(240, 93, 87)',
-	teachers: 'rgb(240, 93, 87)',
-	businesses: '#0099FF',
-	public: '#0099FF',
+	students: 'var(--accent-dark)',
+	teachers: 'var(--accent-dark)',
+	businesses: '#0071c1',
+	public: '#0071c1',
 };
-const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
+const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'var(--accent-dark)';
 ---
 
 <article
@@ -72,7 +79,16 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 			{/* Hero image */}
 			<div class="prog-card__image">
 				{heroImage ? (
-					<img src={heroImage} alt={title} loading="lazy" />
+					<img
+						src={cardImage?.src ?? heroImage}
+						srcset={cardImage?.srcset}
+						sizes={cardImage?.srcset ? CARD_SIZES : undefined}
+						width={cardImage?.width}
+						height={cardImage?.height}
+						alt={title}
+						loading="lazy"
+						decoding="async"
+					/>
 				) : (
 					<div class="prog-card__image-placeholder" />
 				)}
@@ -156,8 +172,11 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'rgb(240, 93, 87)';
 		top: 8px;
 		left: 8px;
 		z-index: 1;
+		display: inline-flex;
+		align-items: center;
+		min-height: 24px; /* WCAG touch-target minimum */
 		border-radius: 5px;
-		padding: 4px 6px;
+		padding: 4px 8px;
 		font-family: 'Rubik', sans-serif;
 		font-size: 12px;
 		font-weight: 400;
