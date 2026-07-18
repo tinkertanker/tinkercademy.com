@@ -18,9 +18,10 @@
 import { mkdir, readdir, readFile, rename, rm, stat, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PUBLIC = path.join(ROOT, 'public');
 
 /** Recompress a file in place, keeping its format; keeps the smaller file. */
@@ -50,7 +51,15 @@ const HERO_OUT_DIR = path.join(PUBLIC, 'images/hero');
 const HERO_WIDTHS = [640, 1024, 1600, 2400];
 
 await mkdir(HERO_OUT_DIR, { recursive: true });
+const heroSourceMeta = await sharp(HERO_SOURCE).metadata();
 for (const width of HERO_WIDTHS) {
+	/* Never upscale: if the source has been replaced with something
+	   narrower, keep the existing committed variant rather than
+	   regenerating a blurry enlargement. */
+	if (width > (heroSourceMeta.width ?? 0)) {
+		console.warn(`hero ${width}w skipped: source is only ${heroSourceMeta.width}px wide`);
+		continue;
+	}
 	const out = path.join(HERO_OUT_DIR, `home-hero-${width}.webp`);
 	await sharp(HERO_SOURCE).resize({ width }).webp({ quality: 64 }).toFile(out);
 	const { size } = await stat(out);
@@ -175,6 +184,9 @@ for (const dataFile of CONTENT_DATA_FILES) {
 for (const filename of [...contentImages].sort()) {
 	const local = path.join(PUBLIC, 'images', filename);
 	if (!existsSync(local)) continue;
+	/* The homepage hero source must stay full-resolution — it feeds the
+	   2400w responsive variant generated above. */
+	if (path.resolve(local) === path.resolve(HERO_SOURCE)) continue;
 	const meta = await sharp(local).metadata();
 	if ((meta.width ?? 0) <= 1400) continue;
 	await shrinkInPlace(
