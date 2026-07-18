@@ -468,10 +468,13 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-partners__logo {
-		max-height: 44px;
-		max-width: 140px;
+		/* Fixed height (not max-height): a lazy image with width/height
+		   auto has no box before load, and inside the mask-image'd marquee
+		   Chrome then never considers it in-viewport, so it never loads.
+		   object-fit keeps the rendered logo letterboxed to the old size. */
+		height: 44px;
 		width: auto;
-		height: auto;
+		max-width: 140px;
 		object-fit: contain;
 	}
 
@@ -610,10 +613,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-certs__badge {
-		max-height: 80px;
-		max-width: 160px;
+		/* Fixed height for the same lazy-load reason as .home-partners__logo */
+		height: 80px;
 		width: auto;
-		height: auto;
+		max-width: 160px;
 		object-fit: contain;
 		flex: 0 0 auto;
 	}
