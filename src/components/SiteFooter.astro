@@ -1,5 +1,5 @@
 ---
-import { LOGO_WHITE } from '../lib/site-media.js';
+import { LOGO_WHITE, LOGO_WHITE_SIZE } from '../lib/site-media.js';
 
 type Contact = { label: string; channel_type: string; value: string };
 type Location = { address: string };
@@ -40,7 +40,15 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 	<div class="site-footer__inner">
 		<div class="site-footer__brand">
 			<a href="/" class="site-footer__logo-link">
-				<img src={LOGO_WHITE} alt="Tinkercademy" class="site-footer__logo" />
+				<img
+					src={LOGO_WHITE}
+					alt="Tinkercademy"
+					class="site-footer__logo"
+					width={LOGO_WHITE_SIZE.width}
+					height={LOGO_WHITE_SIZE.height}
+					loading="lazy"
+					decoding="async"
+				/>
 			</a>
 			<p class="site-footer__body">
 				Tinkercademy is the education brand of
@@ -51,7 +59,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 
 		<div class="site-footer__columns">
 			<div class="site-footer__col">
-				<h3 class="site-footer__heading">Sign up for our mailing list!</h3>
+				<h2 class="site-footer__heading">Sign up for our mailing list!</h2>
 				<p class="site-footer__body">
 					Teachers will receive a monthly (or so we hope) email with news & thoughts on
 					tech education; free workshops, resources, and competitions for students; and other
@@ -66,7 +74,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 			</div>
 
 			<div class="site-footer__col">
-				<h3 class="site-footer__heading">Our Brands</h3>
+				<h2 class="site-footer__heading">Our Brands</h2>
 				<p class="site-footer__body">
 					Looking for educational toys and kits? That's our
 					<a href="https://gethacking.com/" class="site-footer__link">Get Hacking Store</a>,
@@ -81,7 +89,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 			</div>
 
 			<div class="site-footer__col site-footer__col--contact">
-				<h3 class="site-footer__heading">Get in touch!</h3>
+				<h2 class="site-footer__heading">Get in touch!</h2>
 				<p class="site-footer__body site-footer__address">{address}</p>
 				<p class="site-footer__body">
 					<a href={`mailto:${email}`} class="site-footer__link">{email}</a>
@@ -184,7 +192,8 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 		justify-content: center;
 		padding: 1rem 1.9rem;
 		border-radius: 999px;
-		background: rgb(240, 93, 87);
+		/* accent-dark, not accent: white 14px text needs 4.5:1 (WCAG AA) */
+		background: var(--accent-dark);
 		color: #ffffff;
 		text-decoration: none;
 		font-family: 'Rubik', sans-serif;

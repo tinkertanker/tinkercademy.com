@@ -19,6 +19,7 @@ import { getHomeFeaturedProgrammes, toProgrammeCardData } from '../lib/programme
 import {
 	HOME_CERTIFICATION_BADGES,
 	HOME_FLAGSHIP_IMAGES,
+	HOME_HERO_IMAGE,
 	HOME_INSTITUTION_LOGOS,
 	HOME_PARTNER_LOGOS,
 } from '../lib/site-media.js';
@@ -80,18 +81,22 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	description="Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals. Courses in micro:bit, Swift, Python, and AI."
 	canonical={canonical}
 	image={heroImage}
+	preloadHero={HOME_HERO_IMAGE}
 >
 	{/* ═══════════ 1. Hero ═══════════════════════════════════════════════ */}
 	<section class="home-hero">
-		{heroImage && (
-			<img
-				class="home-hero__bg"
-				src={heroImage}
-				alt=""
-				loading="eager"
-				fetchpriority="high"
-			/>
-		)}
+		<img
+			class="home-hero__bg"
+			src={HOME_HERO_IMAGE.src}
+			srcset={HOME_HERO_IMAGE.srcset}
+			sizes={HOME_HERO_IMAGE.sizes}
+			width={HOME_HERO_IMAGE.width}
+			height={HOME_HERO_IMAGE.height}
+			alt=""
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+		/>
 		<div class="home-hero__scrim"></div>
 		<div class="home-hero__content shell">
 			<h1 class="home-hero__title">
@@ -127,6 +132,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 								class="home-partners__logo"
 								src={logo.src}
 								alt={idx < HOME_PARTNER_LOGOS.length ? logo.label : ''}
+								width={logo.width}
+								height={logo.height}
+								loading="lazy"
+								decoding="async"
 							/>
 						</a>
 					))}
@@ -167,7 +176,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 						class="home-educators__inst-logo"
 						src={logo.src}
 						alt={logo.label}
+						width={logo.width}
+						height={logo.height}
 						loading="lazy"
+						decoding="async"
 					/>
 				))}
 			</div>
@@ -188,6 +200,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 							src={logo.src}
 							alt={idx < HOME_CERTIFICATION_BADGES.length ? logo.label : ''}
 							aria-hidden={idx >= HOME_CERTIFICATION_BADGES.length ? 'true' : undefined}
+							width={logo.width}
+							height={logo.height}
+							loading="lazy"
+							decoding="async"
 						/>
 					))}
 				</div>
@@ -381,8 +397,9 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-hero__pill--primary {
-		background: rgb(240, 93, 87);
-		border-color: rgb(240, 93, 87);
+		/* accent-dark, not accent: white 14px text needs 4.5:1 (WCAG AA) */
+		background: var(--accent-dark);
+		border-color: var(--accent-dark);
 		box-shadow: 0 8px 24px rgba(240, 93, 87, 0.28);
 	}
 
@@ -392,8 +409,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-hero__pill--primary:hover {
-		background: rgb(220, 74, 68);
-		border-color: rgb(220, 74, 68);
+		background: rgb(154, 44, 39);
+		border-color: rgb(154, 44, 39);
 	}
 
 	/* ─── Partner strip ──────────────────────────────────────────────── */
@@ -451,10 +468,13 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-partners__logo {
-		max-height: 44px;
-		max-width: 140px;
+		/* Fixed height (not max-height): a lazy image with width/height
+		   auto has no box before load, and inside the mask-image'd marquee
+		   Chrome then never considers it in-viewport, so it never loads.
+		   object-fit keeps the rendered logo letterboxed to the old size. */
+		height: 44px;
 		width: auto;
-		height: auto;
+		max-width: 140px;
 		object-fit: contain;
 	}
 
@@ -508,7 +528,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		padding: 0.5rem 0.9rem;
 		border-radius: 999px;
 		background: rgba(240, 93, 87, 0.09);
-		color: rgb(202, 67, 61);
+		color: var(--accent-dark);
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.88rem;
 		font-weight: 500;
@@ -593,10 +613,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-certs__badge {
-		max-height: 80px;
-		max-width: 160px;
+		/* Fixed height for the same lazy-load reason as .home-partners__logo */
+		height: 80px;
 		width: auto;
-		height: auto;
+		max-width: 160px;
 		object-fit: contain;
 		flex: 0 0 auto;
 	}

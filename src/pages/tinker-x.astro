@@ -185,7 +185,7 @@ const pricingTiers = [
 				{pillars.map((p) => (
 					<article class="tx-pillar">
 						<img class="tx-pillar__icon" src={p.icon} alt="" loading="lazy" />
-						<h3 class="tx-pillar__title">{p.title}</h3>
+						<h2 class="tx-pillar__title">{p.title}</h2>
 						<p class="tx-pillar__body">{p.body}</p>
 					</article>
 				))}
@@ -528,7 +528,7 @@ const pricingTiers = [
 	}
 
 	.tx-pillars__blog a {
-		color: rgb(240, 93, 87);
+		color: var(--accent-dark);
 	}
 
 	@media (max-width: 899px) {
@@ -726,7 +726,7 @@ const pricingTiers = [
 		height: 40px;
 		padding: 0 1rem;
 		border-radius: 999px;
-		background: rgb(240, 93, 87);
+		background: var(--accent-dark);
 		color: #fff;
 		text-decoration: none;
 		font-family: 'Rubik', sans-serif;
@@ -735,7 +735,7 @@ const pricingTiers = [
 	}
 
 	.tx-tier__cta:hover {
-		opacity: 0.88;
+		background: rgb(154, 44, 39);
 	}
 
 	.tx-scholars {
@@ -768,6 +768,6 @@ const pricingTiers = [
 	}
 
 	.tx-scholars a {
-		color: rgb(240, 93, 87);
+		color: var(--accent-dark);
 	}
 </style>

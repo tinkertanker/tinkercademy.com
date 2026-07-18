@@ -1,64 +1,81 @@
 // ── Brand ──────────────────────────────────────────────────────────
 export const LOGO_BLACK = '/images/OHbHnfvpGLsxcntGKsueCChDt4__q_P3NjYWxlLWRvd24tdG89MjA0.png';
+export const LOGO_BLACK_SIZE = { width: 512, height: 80 };
 export const LOGO_WHITE = '/images/logos/tinkercademy-white.png';
+export const LOGO_WHITE_SIZE = { width: 512, height: 80 };
+
+/* width/height are the files' intrinsic pixel dimensions — rendered as
+   <img width/height> so the browser reserves space before load (CLS). */
 
 // ── Partner logos (official training partners) ────────────────────
 export const HOME_PARTNER_LOGOS = [
-	{ label: 'Unity', src: '/images/partners/unity.png', url: 'https://unity.com/' },
+	{ label: 'Unity', src: '/images/partners/unity.png', url: 'https://unity.com/', width: 99, height: 120 },
 	{
 		label: 'Microsoft Global Training Partner',
 		src: '/images/partners/microsoft-gtp.png',
 		url: 'https://partner.microsoft.com/en-US/explore/education/gtp',
+		width: 120,
+		height: 120,
 	},
-	{ label: 'Figma', src: '/images/partners/figma.png', url: 'https://figma.com/education' },
+	{ label: 'Figma', src: '/images/partners/figma.png', url: 'https://figma.com/education', width: 400, height: 534 },
 	{
 		label: 'Apple Consultants Network',
 		src: '/images/partners/apple-consultant.svg',
 		url: 'https://consultants.apple.com/sg/profile/2408934',
+		width: 203,
+		height: 64,
 	},
-	{ label: 'IMDA', src: '/images/partners/imda.svg', url: 'https://www.imda.gov.sg/' },
+	{ label: 'IMDA', src: '/images/partners/imda.svg', url: 'https://www.imda.gov.sg/', width: 340, height: 85 },
 	{
 		label: 'SMU Academy',
 		src: '/images/partners/smu-academy.webp',
 		url: 'https://www.smu.edu.sg/',
+		width: 380,
+		height: 114,
 	},
-	{ label: 'ISCA', src: '/images/partners/isca.png', url: 'https://www.isca.org.sg/' },
+	{ label: 'ISCA', src: '/images/partners/isca.png', url: 'https://www.isca.org.sg/', width: 380, height: 83 },
 ];
 
 // ── Institution logos (expertise / qualifications) ────────────────
 export const HOME_INSTITUTION_LOGOS = [
-	{ label: 'Cornell University', src: '/images/institutions/cornell.png' },
-	{ label: 'Stanford University', src: '/images/institutions/stanford.webp' },
-	{ label: 'MIT', src: '/images/institutions/mit.png' },
-	{ label: 'Wharton School', src: '/images/institutions/wharton.png' },
-	{ label: 'National University of Singapore', src: '/images/institutions/nus.png' },
-	{ label: 'Nanyang Technological University', src: '/images/institutions/ntu.png' },
-	{ label: 'National Institute of Education', src: '/images/institutions/nie.png' },
-	{ label: 'Ministry of Education Singapore', src: '/images/institutions/moe.png' },
-	{ label: 'Apple', src: '/images/institutions/apple.png' },
-	{ label: 'PayPal', src: '/images/institutions/paypal.png' },
+	{ label: 'Cornell University', src: '/images/institutions/cornell.png', width: 160, height: 160 },
+	{ label: 'Stanford University', src: '/images/institutions/stanford.webp', width: 160, height: 160 },
+	{ label: 'MIT', src: '/images/institutions/mit.png', width: 309, height: 160 },
+	{ label: 'Wharton School', src: '/images/institutions/wharton.png', width: 240, height: 160 },
+	{ label: 'National University of Singapore', src: '/images/institutions/nus.png', width: 122, height: 160 },
+	{ label: 'Nanyang Technological University', src: '/images/institutions/ntu.png', width: 124, height: 160 },
+	{ label: 'National Institute of Education', src: '/images/institutions/nie.png', width: 204, height: 160 },
+	{ label: 'Ministry of Education Singapore', src: '/images/institutions/moe.png', width: 244, height: 223 },
+	{ label: 'Apple', src: '/images/institutions/apple.png', width: 135, height: 160 },
+	{ label: 'PayPal', src: '/images/institutions/paypal.png', width: 160, height: 160 },
 ];
 
 // ── Certification badges ──────────────────────────────────────────
 export const HOME_CERTIFICATION_BADGES = [
-	{ label: 'Apple Professional Learning Specialist', src: '/images/certifications/apls.png' },
+	{ label: 'Apple Professional Learning Specialist', src: '/images/certifications/apls.png', width: 1159, height: 283 },
 	{
 		label: 'Apple App Development with Swift Certified User',
 		src: '/images/certifications/adwscu.png',
+		width: 199,
+		height: 220,
 	},
 	{
 		label: 'App Development with Swift Associate',
 		src: '/images/certifications/adwsassoc.png',
+		width: 199,
+		height: 220,
 	},
-	{ label: 'Microsoft Azure AI Fundamentals', src: '/images/certifications/ai900.png' },
-	{ label: 'Microsoft Innovative Educator', src: '/images/certifications/mie.png' },
-	{ label: 'Microsoft Certified Trainer', src: '/images/certifications/mct1.png' },
-	{ label: 'Minecraft Education Trainer', src: '/images/certifications/mct2.png' },
+	{ label: 'Microsoft Azure AI Fundamentals', src: '/images/certifications/ai900.png', width: 600, height: 600 },
+	{ label: 'Microsoft Innovative Educator', src: '/images/certifications/mie.png', width: 182, height: 220 },
+	{ label: 'Microsoft Certified Trainer', src: '/images/certifications/mct1.png', width: 352, height: 352 },
+	{ label: 'Minecraft Education Trainer', src: '/images/certifications/mct2.png', width: 220, height: 220 },
 	{
 		label: 'Unity Certified Associate Game Developer',
 		src: '/images/certifications/ucu.png',
+		width: 600,
+		height: 600,
 	},
-	{ label: 'Certified Instructional Professional', src: '/images/certifications/cip.svg' },
+	{ label: 'Certified Instructional Professional', src: '/images/certifications/cip.svg', width: 1003, height: 1018 },
 ];
 
 // ── Course domain bubbles ─────────────────────────────────────────
@@ -77,6 +94,18 @@ export const HOME_COURSE_DOMAINS = [
 	'Software Engineering',
 	'Web Development',
 ];
+
+// ── Homepage hero (responsive variants generated by
+//    scripts/optimize-images.mjs from the original Framer JPEG) ─────
+export const HOME_HERO_IMAGE = {
+	src: '/images/hero/home-hero-1600.webp',
+	srcset: [640, 1024, 1600, 2400]
+		.map((w) => `/images/hero/home-hero-${w}.webp ${w}w`)
+		.join(', '),
+	sizes: '100vw',
+	width: 2400,
+	height: 1180,
+};
 
 // ── Flagship programme images ─────────────────────────────────────
 export const HOME_FLAGSHIP_IMAGES = /** @type {Record<string, string>} */ ({

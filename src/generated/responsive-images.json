@@ -1,0 +1,748 @@
+{
+	"images": {
+		"/images/flagship/swift-accelerator.webp": {
+			"width": 1200,
+			"height": 630,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/flagship-swift-accelerator-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/flagship-swift-accelerator-960.webp"
+				}
+			]
+		},
+		"/images/generated/hero-candidates/ri-futurecreate/ri-futurecreate-capstone-imagegen-pop.png": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-candidates-ri-futurecreate-ri-futurecreate-capstone-imagegen-pop-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-candidates-ri-futurecreate-ri-futurecreate-capstone-imagegen-pop-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-candidates-ri-futurecreate-ri-futurecreate-capstone-imagegen-pop-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_002.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-advanced-agentic-coding-with-claude-code-or-codex-cdx-002-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-advanced-agentic-coding-with-claude-code-or-codex-cdx-002-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-advanced-agentic-coding-with-claude-code-or-codex-cdx-002-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-agentic-ai-for-digital-builders-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-agentic-ai-for-digital-builders-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-agentic-ai-for-digital-builders-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-build-for-mobile-with-react-native-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-build-for-mobile-with-react-native-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-build-for-mobile-with-react-native-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/certificate-blockchain-technology/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-certificate-blockchain-technology-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-certificate-blockchain-technology-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-certificate-blockchain-technology-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-certificate-iot-creative-digital-making-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-certificate-iot-creative-digital-making-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-certificate-iot-creative-digital-making-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/code-exp-2025/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-code-exp-2025-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-code-exp-2025-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-code-exp-2025-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-code-for-fun-ai-workshop-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-code-for-fun-ai-workshop-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-code-for-fun-ai-workshop-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/code-for-fun-flagship/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-code-for-fun-flagship-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-code-for-fun-flagship-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-code-for-fun-flagship-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/digital-making-with-micro-bit-iot/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-digital-making-with-micro-bit-iot-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-digital-making-with-micro-bit-iot-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-digital-making-with-micro-bit-iot-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-apple-2025-a-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-apple-2025-a-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-apple-2025-a-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-apple-2025-c-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-apple-2025-c-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-apple-2025-c-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-figma-2025/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-figma-2025-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-figma-2025-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-figma-2025-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-learn-flagship/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-learn-flagship-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-learn-flagship-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-learn-flagship-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-microbit-2025/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-microbit-2025-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-microbit-2025-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-microbit-2025-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-minecraft-2025/cdx_001.webp": {
+			"width": 1254,
+			"height": 704,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-minecraft-2025-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-minecraft-2025-cdx-001-960.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-phaser-2025/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-phaser-2025-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-phaser-2025-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-phaser-2025-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/imda-unity-2025/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-imda-unity-2025-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-imda-unity-2025-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-imda-unity-2025-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/iotmaker/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-iotmaker-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-iotmaker-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-iotmaker-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-knowledge-powered-ai-with-chatgpt-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-knowledge-powered-ai-with-chatgpt-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-knowledge-powered-ai-with-chatgpt-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/mastering-the-web/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-mastering-the-web-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-mastering-the-web-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-mastering-the-web-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/microsoft-copilot/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-microsoft-copilot-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-microsoft-copilot-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-microsoft-copilot-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/no-code-machine-learning/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-no-code-machine-learning-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-no-code-machine-learning-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-no-code-machine-learning-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-no-code-web-design-framer-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-no-code-web-design-framer-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-no-code-web-design-framer-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/professional-certificate-in-mobile-application-development/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-professional-certificate-in-mobile-application-development-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-professional-certificate-in-mobile-application-development-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-professional-certificate-in-mobile-application-development-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/professional-certificate-in-web-application-development/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-professional-certificate-in-web-application-development-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-professional-certificate-in-web-application-development-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-professional-certificate-in-web-application-development-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/showcase/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-showcase-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-showcase-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-showcase-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/unityarvr/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-unityarvr-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-unityarvr-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-unityarvr-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-vibe-coding-for-digital-builders-lovable-replit-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-vibe-coding-for-digital-builders-lovable-replit-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-vibe-coding-for-digital-builders-lovable-replit-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp": {
+			"width": 1672,
+			"height": 941,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/generated-hero-review-vibe-coding-for-digital-builders-cdx-001-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/generated-hero-review-vibe-coding-for-digital-builders-cdx-001-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/generated-hero-review-vibe-coding-for-digital-builders-cdx-001-1600.webp"
+				}
+			]
+		},
+		"/images/pzZfgIklaSw80TJTGemWvQyrCLo.png": {
+			"width": 1200,
+			"height": 1200,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/pzZfgIklaSw80TJTGemWvQyrCLo-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/pzZfgIklaSw80TJTGemWvQyrCLo-960.webp"
+				}
+			]
+		},
+		"/images/uB9togx2WZjo52kW3eDPGODhN8.png": {
+			"width": 2127,
+			"height": 771,
+			"variants": [
+				{
+					"w": 480,
+					"src": "/images/responsive/uB9togx2WZjo52kW3eDPGODhN8-480.webp"
+				},
+				{
+					"w": 960,
+					"src": "/images/responsive/uB9togx2WZjo52kW3eDPGODhN8-960.webp"
+				},
+				{
+					"w": 1600,
+					"src": "/images/responsive/uB9togx2WZjo52kW3eDPGODhN8-1600.webp"
+				}
+			]
+		}
+	},
+	"logoDims": {
+		"/images/partners/apple-consultants-network.png": {
+			"width": 847,
+			"height": 268
+		},
+		"/images/nI5l61MSsRmuWTFJqVH4cpNjfqY.webp": {
+			"width": 400,
+			"height": 93
+		},
+		"/images/3403HTb7X83detosvH9J86FTE.png": {
+			"width": 299,
+			"height": 122
+		},
+		"/images/m4aQlLtGTef2FbAG9CTD4ReFE.png": {
+			"width": 345,
+			"height": 183
+		},
+		"/images/C5u80qH09z3yPeGLW5Ha9m0Ahyg.png": {
+			"width": 323,
+			"height": 110
+		},
+		"/images/vIleRziUfN50M1xopUzpL6N7E.webp": {
+			"width": 228,
+			"height": 220
+		},
+		"/images/vwIzyDKnGvimoriXB6IVZqsE6U.jpg": {
+			"width": 239,
+			"height": 220
+		},
+		"/images/BWsZ77XMQf1TA1kquWlIQvH278.webp": {
+			"width": 440,
+			"height": 181
+		},
+		"/images/RUt6n9CGHU2JYlananDb4C4QLI.webp": {
+			"width": 440,
+			"height": 123
+		},
+		"/images/HEWUMM0ts0EHYszokOs3GXdUE.png": {
+			"width": 195,
+			"height": 220
+		},
+		"/images/dM4W8pXFiSaisKiQ66aATgJ8ac.webp": {
+			"width": 371,
+			"height": 87
+		},
+		"/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png": {
+			"width": 712,
+			"height": 185
+		},
+		"/images/W5TrPI4TQ7ldyHjx1tFRClDkVI.png": {
+			"width": 512,
+			"height": 112
+		},
+		"/images/EeQgsZhGeo5B8SsOriPf6iEbpU.webp": {
+			"width": 212,
+			"height": 220
+		},
+		"/images/9vhoMPV4uJM9DFnT5eXGEy1ONM.webp": {
+			"width": 432,
+			"height": 216
+		},
+		"/images/t0GECZGPjGmJ5PvurGo9m1Oaq7M.webp": {
+			"width": 227,
+			"height": 220
+		},
+		"/images/Q26iqzgBEYDzlm8JjOdHP7xSE.webp": {
+			"width": 440,
+			"height": 158
+		},
+		"/images/xHwcdydT3oqZNLuEPhUYed1o.gif": {
+			"width": 300,
+			"height": 81
+		},
+		"/images/WgR1sP4O4uhgUKI9oibFEKUSQo.png": {
+			"width": 204,
+			"height": 112
+		},
+		"/images/khARVmoBLCZ3wl54aq5QXzPdq8.jpg": {
+			"width": 440,
+			"height": 194
+		},
+		"/images/ZYZcVNiPEg6tMjHGhU520Ord5uI.webp": {
+			"width": 440,
+			"height": 198
+		},
+		"/images/VSFWPAOUiTx7hAK2q6WSRDSe6Y.webp": {
+			"width": 300,
+			"height": 150
+		},
+		"/images/h9pxErhdfEV9OM4Djs2TMOxmjuc.png": {
+			"width": 220,
+			"height": 220
+		},
+		"/images/8vJUYlercFnZuD8WRKnmuwiqDA.png": {
+			"width": 424,
+			"height": 220
+		},
+		"/images/jG3pf9CmgdJIcbJC7XdXtcRL9iQ.webp": {
+			"width": 440,
+			"height": 120
+		},
+		"/images/pCtnAxJTkN7sehJge3uZZPhtIMw.png": {
+			"width": 512,
+			"height": 200
+		},
+		"/images/icLJqUI2otyj00sfJ4Dvlfxbo.webp": {
+			"width": 440,
+			"height": 132
+		},
+		"/images/ulfjKjqdhSNeeFUKfqy6m3G8X0Q.png": {
+			"width": 600,
+			"height": 168
+		},
+		"/images/Rl2dNu7CjKUj50GoHP4FX8cpA.png": {
+			"width": 440,
+			"height": 86
+		},
+		"/images/partners/chij.png": {
+			"width": 105,
+			"height": 120
+		},
+		"/images/partners/amcham-singapore.webp": {
+			"width": 288,
+			"height": 46
+		},
+		"/images/partners/mindef.png": {
+			"width": 210,
+			"height": 76
+		},
+		"/images/partners/nie-logo.png": {
+			"width": 144,
+			"height": 120
+		},
+		"/images/partners/cpf-board.png": {
+			"width": 112,
+			"height": 120
+		},
+		"/images/partners/jump-trading.webp": {
+			"width": 366,
+			"height": 160
+		},
+		"/images/partners/pathlight-school.png": {
+			"width": 156,
+			"height": 120
+		},
+		"/images/partners/presbyterian-high-school.jpg": {
+			"width": 90,
+			"height": 120
+		},
+		"/images/partners/sandooq-al-watan.png": {
+			"width": 277,
+			"height": 120
+		},
+		"/images/partners/yusof-ishak-secondary-school.png": {
+			"width": 320,
+			"height": 77
+		},
+		"/images/partners/metaskills.png": {
+			"width": 380,
+			"height": 63
+		}
+	}
+}

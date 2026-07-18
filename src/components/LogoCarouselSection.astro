@@ -1,5 +1,6 @@
 ---
 import type { LogoItem } from '../lib/logos';
+import { getLogoDimensions } from '../lib/responsive-images.js';
 
 interface Props {
 	title: string;
@@ -43,15 +44,22 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 					class:list={['logo-track', { 'is-static': !marquee.isAnimated }]}
 					style={`--marquee-duration: ${durationSeconds}s; --marquee-distance: ${marquee.distance};`}
 				>
-					{marquee.items.map((logo) => (
-						<img
-							class="logo-mark"
-							data-logo-id={logo.id}
-							src={logo.src}
-							alt={logo.setIndex === 0 ? logo.label : ''}
-							aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
-						/>
-					))}
+					{marquee.items.map((logo) => {
+						const dims = getLogoDimensions(logo.src);
+						return (
+							<img
+								class="logo-mark"
+								data-logo-id={logo.id}
+								src={logo.src}
+								alt={logo.setIndex === 0 ? logo.label : ''}
+								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
+								width={dims?.width}
+								height={dims?.height}
+								loading="lazy"
+								decoding="async"
+							/>
+						);
+					})}
 				</div>
 			</div>
 		</div>

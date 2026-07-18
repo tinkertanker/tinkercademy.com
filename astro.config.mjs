@@ -19,7 +19,9 @@ export default defineConfig({
 		defaultStrategy: 'viewport',
 	},
 	build: {
-		inlineStylesheets: 'auto',
+		/* Per-page CSS tops out around ~30 KiB, so inlining everything is
+		   cheaper than the render-blocking request Lighthouse flags. */
+		inlineStylesheets: 'always',
 	},
 	integrations: [
 		sitemap({

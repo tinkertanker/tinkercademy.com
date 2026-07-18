@@ -251,7 +251,7 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.9rem;
 		font-weight: 500;
-		color: rgb(240, 93, 87);
+		color: var(--accent-dark);
 	}
 
 	@media (max-width: 809px) {
@@ -319,7 +319,7 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 		height: 40px;
 		padding: 10px 20px;
 		border-radius: 30px;
-		background: rgb(240, 93, 87);
+		background: var(--accent-dark);
 		color: #fff;
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.85rem;
@@ -327,6 +327,6 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 	}
 
 	.aud-pivot__pill:hover {
-		opacity: 0.85;
+		background: rgb(154, 44, 39);
 	}
 </style>

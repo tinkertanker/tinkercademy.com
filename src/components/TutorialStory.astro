@@ -48,7 +48,8 @@ if (current?.copy || current?.images.length) sections.push(current);
 								<img
 									src={image.src}
 									alt={section.copy?.label ?? ''}
-									loading="eager"
+									loading="lazy"
+									decoding="async"
 									width={image.width ?? undefined}
 									height={image.height ?? undefined}
 								/>
