@@ -67,6 +67,12 @@ export const HOME_INSTITUTION_LOGOS = [
 
 // ── Certification badges ──────────────────────────────────────────
 export const HOME_CERTIFICATION_BADGES = [
+	{
+		label: 'Apple Certified Trainer',
+		src: '/images/certifications/apple-certified-trainer.png',
+		width: 1307,
+		height: 277,
+	},
 	{ label: 'Apple Professional Learning Specialist', src: '/images/certifications/apls.png', width: 1159, height: 283 },
 	{
 		label: 'Apple App Development with Swift Certified User',
