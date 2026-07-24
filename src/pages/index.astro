@@ -11,6 +11,7 @@
  *   6. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import HomeProjectInfo from '../components/HomeProjectInfo.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getStaticPage } from '../lib/data.js';
@@ -110,6 +111,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 				<a class="home-hero__pill" href="/individuals/">Individuals</a>
 			</div>
 		</div>
+		<HomeProjectInfo />
 	</section>
 
 	{/* ═══════════ 2. Partner statement strip ════════════════════════════ */}
@@ -302,6 +304,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 <style>
 	/* ─── Hero ─────────────────────────────────────────────────────────── */
 	.home-hero {
+		--home-hero-bottom-space: clamp(3rem, 5vw, 4rem);
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
@@ -332,7 +335,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		flex-direction: column;
 		justify-content: flex-end;
 		min-height: inherit;
-		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+		padding: clamp(4rem, 9vw, 7rem) 0 var(--home-hero-bottom-space);
 		gap: 1.1rem;
 	}
 
