@@ -34,6 +34,21 @@ export const HOME_PARTNER_LOGOS = [
 		height: 114,
 	},
 	{ label: 'ISCA', src: '/images/partners/isca.png', url: 'https://www.isca.org.sg/', width: 380, height: 83 },
+	{ label: 'DSTA', src: '/images/partners/dsta.svg', url: 'https://www.dsta.gov.sg/', width: 311, height: 158 },
+	{
+		label: "Raffles Institution",
+		src: '/images/partners/raffles-institution.svg',
+		url: 'https://www.ri.edu.sg/',
+		width: 225,
+		height: 337,
+	},
+	{
+		label: "Raffles Girls' School (Secondary)",
+		src: '/images/partners/raffles-girls-school-secondary.webp',
+		url: 'https://www.rgs.edu.sg/',
+		width: 440,
+		height: 198,
+	},
 ];
 
 // ── Institution logos (expertise / qualifications) ────────────────

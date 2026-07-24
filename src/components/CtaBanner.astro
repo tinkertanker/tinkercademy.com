@@ -45,11 +45,11 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 	.cta-banner {
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		background: linear-gradient(180deg, rgb(84, 84, 84) 0%, rgb(0, 0, 0) 100%);
+		background: linear-gradient(180deg, rgb(50, 50, 50) 0%, rgb(20, 20, 20) 100%);
 	}
 
 	.cta-banner__inner {
-		padding: 2.75rem 0;
+		padding: 4rem 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -61,7 +61,7 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 		margin: 0;
 		max-width: 50rem;
 		flex: 1 1 32rem;
-		font-family: 'Rubik', sans-serif;
+		font-family: 'IBM Plex Serif', Georgia, serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
 		color: #ffffff;
@@ -80,8 +80,8 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 		justify-content: center;
 		padding: 0.55rem 1rem;
 		border-radius: 30px;
-		border: 1px solid rgba(255, 255, 255, 0.6);
-		background: rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(240, 93, 87, 0.8);
+		background: rgb(240, 93, 87);
 		color: #ffffff;
 		text-decoration: none;
 		font-family: 'Rubik', sans-serif;
@@ -91,12 +91,13 @@ const ctas = Astro.props.ctas?.length ? Astro.props.ctas : DEFAULT_CTAS;
 	}
 
 	.cta-pill:hover {
-		background: rgba(255, 255, 255, 0.15);
+		background: rgb(154, 44, 39);
+		border-color: rgb(154, 44, 39);
 	}
 
 	@media (max-width: 809px) {
 		.cta-banner__inner {
-			padding: 2rem 0;
+			padding: 3rem 0;
 		}
 	}
 </style>

@@ -2,9 +2,9 @@
   {
     "path": "/",
     "slug": "home",
-    "title": "Illuminate your journey into tech & AI",
+    "title": "Illuminate your journey into tech & AI.",
     "description": "Learn coding, digital making, and agentic engineering from expert teachers and builders.",
-    "hero_title": "Illuminate your journey into tech & AI",
+    "hero_title": "Illuminate your journey into tech & AI.",
     "hero_lead": "Learn coding, digital making, and agentic engineering from expert teachers and builders.",
     "hero_image": "https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=4068&height=2000",
     "seo": {
@@ -167,11 +167,11 @@
       },
       {
         "tag": "p",
-        "text": "Official training partner for tech companies, universities, and the Singapore government."
+        "text": "Official training partner for tech companies, schools, and the Singapore government."
       },
       {
         "tag": "h3",
-        "text": "Official training partner for tech companies, universities, and the Singapore government."
+        "text": "Official training partner for tech companies, schools, and the Singapore government."
       },
       {
         "tag": "h2",
@@ -179,11 +179,15 @@
       },
       {
         "tag": "p",
-        "text": "Courses available in a wide variety of modern, practical domains."
+        "text": "From your first line of code to production AI systems; from app development to electronics and hardware hacking — our courses are crafted for the full spectrum of modern programming and digital making."
       },
       {
         "tag": "p",
-        "text": "AI and Machine Learning with Data Science"
+        "text": "AI Engineering"
+      },
+      {
+        "tag": "p",
+        "text": "Machine Learning and Data Science"
       },
       {
         "tag": "p",
@@ -255,7 +259,7 @@
       },
       {
         "tag": "h2",
-        "text": "Our Flagship Programmes"
+        "text": "Our flagship programmes."
       },
       {
         "tag": "h3",
@@ -299,7 +303,7 @@
       },
       {
         "tag": "h2",
-        "text": "Popular Courses"
+        "text": "Popular courses."
       },
       {
         "tag": "p",
@@ -501,11 +505,11 @@
       },
       {
         "type": "p",
-        "text": "Official training partner for tech companies, universities, and the Singapore government."
+        "text": "Official training partner for tech companies, schools, and the Singapore government."
       },
       {
         "type": "h3",
-        "text": "Official training partner for tech companies, universities, and the Singapore government."
+        "text": "Official training partner for tech companies, schools, and the Singapore government."
       },
       {
         "type": "h2",
@@ -513,11 +517,15 @@
       },
       {
         "type": "p",
-        "text": "Courses available in a wide variety of modern, practical domains."
+        "text": "From your first line of code to production AI systems; from app development to electronics and hardware hacking — our courses are crafted for the full spectrum of modern programming and digital making."
       },
       {
         "type": "p",
-        "text": "AI and Machine Learning with Data Science"
+        "text": "AI Engineering"
+      },
+      {
+        "type": "p",
+        "text": "Machine Learning and Data Science"
       },
       {
         "type": "p",
@@ -589,7 +597,7 @@
       },
       {
         "type": "h2",
-        "text": "Our Flagship Programmes"
+        "text": "Our flagship programmes."
       },
       {
         "type": "h3",
@@ -633,7 +641,7 @@
       },
       {
         "type": "h2",
-        "text": "Popular Courses"
+        "text": "Popular courses."
       },
       {
         "type": "p",
@@ -831,10 +839,11 @@
         "type": "internal"
       }
     ],
-    "partner_statement": "Official training partner for tech companies, universities, and the Singapore government.",
+    "partner_statement": "Official training partner for tech companies, schools, and the Singapore government.",
     "partner_strip_image": "https://framerusercontent.com/images/7JzS84mvFUEd3VM3WRXC2AaWn4k.svg?width=340&height=0",
     "focus_areas": [
-      "AI and Machine Learning with Data Science",
+      "AI Engineering",
+      "Machine Learning and Data Science",
       "Computer Science Fundamentals",
       "Creativity, Craft, and Making",
       "Cryptography",

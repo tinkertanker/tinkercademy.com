@@ -37,7 +37,7 @@ const heroLead =
 
 const partnerStatement =
 	page.partner_statement ??
-	'Official training partner for tech companies, universities, and the Singapore government.';
+	'Official training partner for tech companies, schools, and the Singapore government.';
 
 const focusAreas: string[] = page.focus_areas ?? [];
 const proofPoints: string[] = page.proof_points ?? [];
@@ -101,7 +101,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		<div class="home-hero__scrim"></div>
 		<div class="home-hero__content shell">
 			<h1 class="home-hero__title">
-				<span class="home-hero__highlight">Illuminate</span> your journey into tech & AI
+				<span class="home-hero__highlight">Illuminate</span> your journey into tech & AI.
 			</h1>
 			<p class="home-hero__lead">Learn coding, digital making, and agentic engineering from expert teachers and builders.</p>
 			<div class="home-hero__actions">
@@ -153,7 +153,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 				Learn from qualified educators and engineers.
 			</h2>
 			<p class="home-educators__sub">
-				Courses available in a wide variety of modern, practical domains.
+				From your first line of code to production AI systems; from app development to electronics and hardware hacking — our courses are crafted for the full spectrum of modern programming and digital making.
 			</p>
 
 			{focusAreas.length > 0 && (
@@ -217,7 +217,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	<section class="home-flagship" id="flagship">
 		<div class="shell">
 			<div class="home-flagship__header">
-				<h2 class="home-flagship__heading">Flagship Programmes</h2>
+				<h2 class="home-flagship__heading">Flagship programmes.</h2>
 				<p class="home-flagship__sub">
 					Long-running, IMDA-supported initiatives that bring coding to Infocomm Clubs and students across Singapore schools.
 				</p>
@@ -270,7 +270,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		<section class="home-popular" id="programmes">
 			<div class="shell">
 				<div class="home-popular__header">
-					<h2 class="home-popular__heading">Popular Courses</h2>
+					<h2 class="home-popular__heading">Popular courses.</h2>
 					<p class="home-popular__sub">
 						Courses we run for schools, companies, and teams, from AI and app development to web and digital making.
 					</p>
@@ -421,7 +421,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-partners {
 		padding: 2.5rem 0;
 		background: #fff;
-		border-bottom: 1px solid rgb(238, 238, 238);
 	}
 
 	.home-partners__inner {
@@ -436,10 +435,16 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-size: clamp(1.05rem, 1.6vw, 1.35rem);
 		font-weight: 500;
 		color: rgb(51, 51, 51);
-		margin: 0;
-		max-width: 50rem;
+		margin: 0 0 0.5rem;
 		letter-spacing: 0.01em;
 		line-height: 1.35;
+		white-space: nowrap;
+	}
+
+	@media (max-width: 640px) {
+		.home-partners__statement {
+			white-space: normal;
+		}
 	}
 
 	.home-partners__marquee {
@@ -585,16 +590,26 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-certs {
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		padding: 3rem 0;
+		padding: 4rem 0 5rem;
 		background: linear-gradient(180deg, rgb(50, 50, 50) 0%, rgb(20, 20, 20) 100%);
 	}
 
 	.home-certs__heading {
-		font-family: 'Rubik', sans-serif;
-		font-size: clamp(1rem, 1.6vw, 1.2rem);
-		text-align: center;
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+		font-weight: 500;
 		color: rgba(255, 255, 255, 0.92);
-		margin: 0 0 2rem;
+		margin: 0 0 2.5rem;
+		letter-spacing: 0.01em;
+		line-height: 1.35;
+		white-space: nowrap;
+		text-align: center;
+	}
+
+	@media (max-width: 640px) {
+		.home-certs__heading {
+			white-space: normal;
+		}
 	}
 
 	.home-certs__inner {
@@ -790,7 +805,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	/* ─── Popular ────────────────────────────────────────────────────── */
 	.home-popular {
-		padding: 3.5rem 0;
+		padding: 3.5rem 0 5rem;
 		scroll-margin-top: 80px;
 	}
 
