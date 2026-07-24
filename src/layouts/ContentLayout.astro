@@ -143,6 +143,16 @@ const organisationSchema = {
 	}
 
 	@font-face {
+		font-family: 'Lora Ampersand';
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url('/fonts/s/lora/v37/lora-italic-500-ampersand.woff2') format('woff2');
+		unicode-range: U+0026;
+		size-adjust: 95%;
+	}
+
+	@font-face {
 		font-family: 'Rubik';
 		font-style: normal;
 		font-weight: 400;
@@ -196,6 +206,7 @@ const organisationSchema = {
 		   text on accent-dark buttons both clear WCAG AA (4.5:1). */
 		--accent-dark: #bd3a34;
 		--heading: 'IBM Plex Serif', Georgia, serif;
+		--page-title-font-size: clamp(2rem, 4.5vw, 3.2rem);
 		--meta: 'Rubik', sans-serif;
 		--text: rgb(51, 51, 51);
 
@@ -300,8 +311,8 @@ const organisationSchema = {
 	.prose h3,
 	.prose h4 {
 		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.03em;
 		font-weight: 500;
-		letter-spacing: 0.02em;
 	}
 
 	.hero {
@@ -325,7 +336,8 @@ const organisationSchema = {
 	.hero h1 {
 		margin: 0;
 		font-family: 'IBM Plex Serif', Georgia, serif;
-		font-size: clamp(2.4rem, 7vw, 5rem);
+		letter-spacing: -0.03em;
+		font-size: var(--page-title-font-size);
 		font-weight: 500;
 		line-height: 0.95;
 		max-width: 12ch;
@@ -422,6 +434,7 @@ const organisationSchema = {
 	.section-title {
 		margin: 0 0 1rem;
 		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.03em;
 		font-size: 2rem;
 		font-weight: 500;
 		text-transform: uppercase;
