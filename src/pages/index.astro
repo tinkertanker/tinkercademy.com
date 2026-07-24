@@ -16,7 +16,7 @@ import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
-import { getHomeFeaturedProgrammes, getProgrammeFilterOptions, toProgrammeCardData } from '../lib/programmes.ts';
+import { getAllProgrammes, getHomeFeaturedProgrammes, getProgrammeFilterOptions, toProgrammeCardData } from '../lib/programmes.ts';
 import { createProgrammeFilterHref } from '../lib/programme-filters.ts';
 import {
 	HOME_CERTIFICATION_BADGES,
@@ -40,7 +40,9 @@ const partnerStatement =
 	page.partner_statement ??
 	'Official training partner for tech companies, schools, and the Singapore government.';
 
-const focusAreas = getProgrammeFilterOptions().domains;
+const allProgrammes = await getAllProgrammes();
+const usedDomainIds = new Set(allProgrammes.flatMap((p) => p.domainIds));
+const focusAreas = getProgrammeFilterOptions().domains.filter((d) => usedDomainIds.has(d.id));
 const proofPoints: string[] = page.proof_points ?? [];
 
 const flagshipItems: Array<{ title: string; description: string; image?: string }> =
