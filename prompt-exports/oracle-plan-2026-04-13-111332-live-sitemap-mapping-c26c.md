@@ -1,3 +1,5 @@
+> **Historical prompt export.** This sitemap and screenshot plan describes the retired pre-rebuild Framer site; it is not a current route or design baseline.
+
 ## Final Prompt
 <taskname="Live sitemap mapping"/>
 <task>Verify the live sitemap route inventory at https://tinkercademy.com/sitemap.xml, then produce a concise URL → deterministic mobile screenshot filename inventory for files that should live under docs/screenshots/live/mobile/. Also report slug-normalisation cautions (especially encoded/non-ASCII slugs). Do not modify repo files.

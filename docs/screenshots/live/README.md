@@ -1,21 +1,23 @@
-# Live Screenshot Pack
+# Pre-rebuild Framer Screenshot Archive
 
-This folder is the live-site reference pack for rebuild and parity work against `https://tinkercademy.com`.
+> **Historical archive — not the current design.** These screenshots capture the retired Framer site before the Astro rebuild. The folder retains its original `live` name only to avoid a large binary rename and broken historical references.
+
+Use this pack only for migration history and intentional comparisons with the old site. To inspect the current design, build and render the current Astro source.
 
 ## Coverage
 
-- `desktop/` contains full-page desktop captures for every public URL in the live sitemap.
-- `tablet/` contains full-page tablet captures for every public URL in the live sitemap.
-- `mobile/` contains full-page mobile captures for every public URL in the live sitemap.
-- `states/` contains interaction and reference-state captures such as hover, search-open, and mobile viewport shots.
+- `desktop/` contains full-page desktop captures from the pre-rebuild sitemap.
+- `tablet/` contains full-page tablet captures from the pre-rebuild sitemap.
+- `mobile/` contains full-page mobile captures from the pre-rebuild sitemap.
+- `states/` contains historical interaction states such as hover, search-open, and mobile viewport shots.
 
-Current baseline coverage:
+Archived crawl coverage:
 
 - `65` desktop screenshots
 - `65` tablet screenshots
 - `65` mobile screenshots
 
-The baseline folders match the current `sitemap.xml` exactly, with no missing or extra route files.
+The baseline folders matched `sitemap.xml` at capture time. They are not expected to match the current route inventory.
 
 ## Naming
 
@@ -31,16 +33,16 @@ The baseline folders match the current `sitemap.xml` exactly, with no missing or
 
 ## State Pack
 
-The `states/` folder is a smaller targeted set for interaction checks, including:
+The `states/` folder is a smaller targeted set of old-site interactions, including:
 
 - desktop hover states for nav, cards, links, and contact elements
 - desktop search-open state
 - mobile viewport reference shots
 
-See `states/states-manifest.json` for the current state inventory and any failed attempts.
+See `states/states-manifest.json` for the archived state inventory and any failed attempts.
 
 ## How To Use
 
-- Compare local rebuilds against the matching viewport folder before changing layout, spacing, typography, imagery, or copy.
-- Use `states/` when reproducing hover, open, and other non-default UI behaviour.
-- Treat these screenshots as the visual source of truth for parity checks, then record any deltas in the rebuild or parity docs.
+- Use these screenshots only when investigating migration history or intentionally comparing the Astro site with its Framer predecessor.
+- Do not use them to infer current layout, typography, casing, imagery, or interaction behaviour.
+- Do not run the bundled capture scripts in place: that would mix current captures into this historical archive. Create a new dated pack for any future baseline.

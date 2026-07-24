@@ -13,20 +13,11 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 | Re-crawl live data | `pnpm run import:live` (requires internet; data already committed) |
 | Enrich from Framer CMS | `pnpm run import:framer` (requires local Framer credentials) |
 
-### Checking the current design — build and render first
+### Checking the current design
 
-For any question about how the site currently looks (fonts, casing, colours, animations, layout), the rendered site is the only source of truth. Build and look at it before reading CSS:
-
-```sh
-pnpm install && pnpm run build
-cd dist && python3 -m http.server 4599   # then screenshot http://localhost:4599/ headlessly
-```
-
-Traps that have burned agents before — all three misled the same session:
-
-- **Component CSS lies by omission.** `ContentLayout.astro` applies a global `h1, h2, h3, h4, h5, h6 { text-transform: none !important }` reset ("don't shout"). Page-scoped styles such as the homepage hero still declare `text-transform: uppercase` — that declaration is dead. Reading `src/pages/index.astro` in isolation tells you the hero is uppercase serif; the rendered hero is sentence case. Check rendered/computed styles, never a single component's CSS.
-- **`docs/screenshots/live/` is NOT the current site.** It is a crawl of the old pre-rebuild (Framer) tinkercademy.com, kept only as a parity/migration reference. The same goes for `prompt-exports/` audits and legacy data under `src/data/`. Fonts that appear only there (Karla, Inter, Oswald-era headings) belong to the old site, not this one.
-- **The repo's font files ≠ the fonts in use.** `public/fonts/` and `public/third-party-assets/fontshare/` also carry legacy faces for old document payloads. The faces the site actually uses are the ones declared in `ContentLayout.astro`: IBM Plex Serif 500/600 for headings (with `Lora Ampersand` for `&`), Rubik for body/UI, Fragment Mono for code accents.
+- Build and render the Astro site before making claims about its current fonts, casing, colours, animations, or layout. Source files and historical screenshots are not substitutes for computed styles.
+- `docs/screenshots/live/` and `prompt-exports/` preserve the pre-rebuild Framer site and migration work. Despite the directory name, they are not evidence of the current design.
+- Current typography is declared in `src/layouts/ContentLayout.astro`: IBM Plex Serif for headings, Rubik for body and UI, Fragment Mono for code accents, and a Lora ampersand subset.
 
 ### Non-obvious notes
 
@@ -39,8 +30,7 @@ Traps that have burned agents before — all three misled the same session:
 - Programme authoring is Astro-first. Do not extend the Framer programme pipeline unless the user explicitly asks for migration work.
 - `pnpm run import:live` still hits the live `tinkercademy.com` site and regenerates legacy structured data for non-programme content.
 - Page rendering is now Astro-native; `downloads/rehosted_site/` is no longer a build input.
-- High-fidelity document payloads are checked in under `src/generated/route-documents.js`; route files import those payloads directly instead of reading a mirror folder at runtime.
-- Runtime assets required by those document payloads live under `public/assets/`, `public/fonts/`, `public/images/`, `public/sites/`, and `public/third-party-assets/`.
+- The former high-fidelity document renderer and `src/generated/route-documents.js` payload have been removed. Do not infer current design choices from leftover migration data or public asset files.
 - The Framer enrichment step currently backfills richer programme/tutorial metadata and writes additional collections under `src/data/pages/` and `src/data/crm/`, including `platforms`, `domains`, `articles`, and `external-logos`.
 - `pnpm run import:framer` also writes a raw inspection snapshot to `scripts/_artifacts/framer-api/export.json`.
 - Current page integrations that still depend on imported Framer data:
@@ -67,7 +57,7 @@ Traps that have burned agents before — all three misled the same session:
 ### Shared shell parity
 
 - When the user says to apply page A's design onto page B, treat page A as the canonical visual source. Do not "standardise" by changing page A to match page B unless the user explicitly asks for that reversal.
-- For shared shell work such as headers, footers, or nav bars, do not rely on generic utility wrappers like `.shell` inside the shared component if those wrappers are also defined by page layouts. Use component-scoped wrappers so document-driven and structured Astro pages render identically.
+- For shared shell work such as headers, footers, or nav bars, do not rely on generic utility wrappers like `.shell` inside the shared component if those wrappers are also defined by page layouts. Use component-scoped wrappers so all Astro page types render identically.
 - Header and nav links must use absolute site paths such as `/contact-us`, not relative `contact-us` or `./contact-us`, to avoid route-dependent navigation bugs.
 - For parity fixes, verify both `pnpm run dev` and built output in a real browser on representative routes before declaring success. Check computed styles and layout metrics, not just screenshots.
 
