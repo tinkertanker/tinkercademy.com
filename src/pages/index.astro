@@ -419,7 +419,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	@property --sx {
 		syntax: '<percentage>';
 		inherits: false;
-		initial-value: 28.9%;
+		initial-value: 28.95%;
 	}
 
 	.home-hero__highlight::before {
@@ -441,10 +441,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	@keyframes highlight-spot {
-		0% { --sx: 28.9%; opacity: 0; }
+		0% { --sx: 28.95%; opacity: 0; }
 		15% { opacity: 1; }
-		55% { --sx: 75.1%; opacity: 1; }
-		70%, 100% { --sx: 75.1%; opacity: 0; }
+		55% { --sx: 71.05%; opacity: 1; }
+		70%, 100% { --sx: 71.05%; opacity: 0; }
 	}
 
 	@media (prefers-reduced-motion: reduce) {
