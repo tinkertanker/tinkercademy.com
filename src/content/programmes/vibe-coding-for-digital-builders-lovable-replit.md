@@ -4,7 +4,7 @@ subtitle: "Corporate training"
 duration: "2 days"
 heroImage: "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp"
 audienceIds: ["public", "businesses"]
-domainIds: ["ai"]
+domainIds: ["ai-engineering"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
 cardBlurb: "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic…"
 weight: 99

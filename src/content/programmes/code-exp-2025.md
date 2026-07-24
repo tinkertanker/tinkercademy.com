@@ -4,7 +4,7 @@ subtitle: "May–June annually"
 duration: "4 days"
 heroImage: "/images/generated/hero-review/code-exp-2025/cdx_001.webp"
 audienceIds: ["students", "teachers"]
-domainIds: ["ai", "appdev"]
+domainIds: ["ai-engineering", "appdev"]
 platformIds: ["react-native", "tensorflow"]
 cardBlurb: "BrainHack CODE_EXP is a mobile dev hackathon held annually in May–June, spread over three phases: Phase 1: Training sessions, Phase 2: Qualifiers, Phase 3: Finals."
 weight: 30

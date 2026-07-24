@@ -4,7 +4,7 @@ subtitle: "An introductory course on machine learning models using Orange."
 duration: "2 days"
 heroImage: "/images/generated/hero-review/no-code-machine-learning/cdx_001.webp"
 audienceIds: ["students", "teachers"]
-domainIds: ["ai"]
+domainIds: ["ml-ds"]
 platformIds: ["orange"]
 cardBlurb: "No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and…"
 weight: 0

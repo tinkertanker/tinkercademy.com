@@ -19,7 +19,7 @@ Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
 
 1. **Homepage (`src/pages/index.astro`)**  
    - Hero background uses `hero_image` from `static-pages.json` (Framer URL) instead of the static `/images/hero-bg.jpg` placeholder.  
-   - Partner marquee label, domain bubbles, and institution/certification captions read from `partner_statement`, `focus_areas`, and `proof_points` when present (fallbacks preserve previous behaviour).
+   - Partner marquee label, domain bubbles, and institution/certification captions read from `partner_statement`, `domains.json` (via `getProgrammeFilterOptions().domains`), and `proof_points` when present (fallbacks preserve previous behaviour).
 
 2. **Header / search (`src/components/SiteHeader.astro`, `src/pages/programme-search-index.json.ts`, `src/lib/data.js`)**  
    - Search control opens a full-viewport overlay with dimmed backdrop, pill search field, close control, and a results list — aligned with `home-search-open-desktop.png`.  
