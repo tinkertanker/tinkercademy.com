@@ -4,7 +4,7 @@ subtitle: "Corporate training"
 duration: "2 days"
 heroImage: "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp"
 audienceIds: ["public", "businesses"]
-domainIds: ["ai"]
+domainIds: ["ai-engineering"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
 cardBlurb: "Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in…"
 weight: 99

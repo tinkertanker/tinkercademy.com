@@ -4,7 +4,7 @@ subtitle: "A CODE@SG initiative by IMDA and MOE."
 duration: "10 hours"
 heroImage: "/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp"
 audienceIds: ["students", "teachers"]
-domainIds: ["ai", "cs"]
+domainIds: ["ml-ds", "cs"]
 platformIds: ["scratch", "python", "bbc-micro-bit", "makecode-arcade"]
 cardBlurb: "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…"
 weight: 100

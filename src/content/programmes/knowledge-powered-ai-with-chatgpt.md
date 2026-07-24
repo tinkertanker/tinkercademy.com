@@ -4,7 +4,7 @@ subtitle: "Corporate training"
 duration: "½, 1, 2 days"
 heroImage: "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp"
 audienceIds: ["public", "businesses"]
-domainIds: ["ai"]
+domainIds: ["ai-engineering"]
 platformIds: ["chatgpt"]
 cardBlurb: "Generative AI isn't just transforming how we create content. It's revolutionising how organisations access and leverage their knowledge. Whether you're looking to enhance customer…"
 weight: 98

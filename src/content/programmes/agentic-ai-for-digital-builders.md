@@ -4,7 +4,7 @@ subtitle: "Corporate training"
 duration: "1 day"
 heroImage: "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp"
 audienceIds: ["public", "businesses"]
-domainIds: ["ai"]
+domainIds: ["ai-engineering"]
 platformIds: ["claude"]
 cardBlurb: "You've vibe coded a prototype. Now automate the work itself. This hands-on sequel shows professional teams how to deploy autonomous AI agents on Claude Cowork to scrape data, draft…"
 weight: 200

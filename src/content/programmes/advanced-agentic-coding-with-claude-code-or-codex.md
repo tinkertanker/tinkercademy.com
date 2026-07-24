@@ -4,7 +4,7 @@ subtitle: "2- or 3-day corporate training"
 duration: "2 or 3 days"
 heroImage: "/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_002.webp"
 audienceIds: ["businesses", "public"]
-domainIds: ["ai", "software-engineering"]
+domainIds: ["ai-engineering", "software-engineering"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js", "python"]
 cardBlurb: "Build a resident coding and workflow agent with Claude Code or Codex: standing instructions, tools, memory, loops, scheduled runs, review gates, and a live monitoring dashboard."
 weight: 210

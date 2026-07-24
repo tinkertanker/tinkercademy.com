@@ -48,7 +48,7 @@
     "label": "AWS PartyRock",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ai-engineering"
     ],
     "content_html": null,
     "content_text": "",
@@ -82,7 +82,8 @@
     "label": "ChatGPT",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ai-engineering",
+      "tech-productivity"
     ],
     "content_html": null,
     "content_text": "",
@@ -93,7 +94,8 @@
     "label": "Claude",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ai-engineering",
+      "tech-productivity"
     ],
     "content_html": null,
     "content_text": ""
@@ -210,7 +212,7 @@
     "label": "Jupyter Notebooks",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ml-ds"
     ],
     "content_html": null,
     "content_text": "",
@@ -263,7 +265,7 @@
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "tech-productivity",
-      "ai"
+      "ai-engineering"
     ],
     "content_html": null,
     "content_text": "",
@@ -304,7 +306,7 @@
     "label": "pandas",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ml-ds"
     ],
     "content_html": null,
     "content_text": "",
@@ -349,7 +351,7 @@
     "label": "Pytorch",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ml-ds"
     ],
     "content_html": null,
     "content_text": "",
@@ -460,7 +462,7 @@
     "label": "TensorFlow",
     "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
-      "ai"
+      "ml-ds"
     ],
     "content_html": null,
     "content_text": "",

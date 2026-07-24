@@ -363,7 +363,19 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		const filterLabels = JSON.parse(
 			section.getAttribute('data-filter-labels') ?? '{}',
 		) as FilterLabels;
-		const activeFilters = getValidFilters(window.location.search, filterLabels);
+
+		/* Legacy domain alias: ?domain=ai → ?domain=ml-ds (renamed taxonomy) */
+		const searchParams = new URLSearchParams(window.location.search);
+		if (searchParams.get('domain') === 'ai') {
+			searchParams.set('domain', 'ml-ds');
+			history.replaceState(
+				history.state,
+				'',
+				`${window.location.pathname}?${searchParams.toString()}${window.location.hash}`,
+			);
+		}
+
+		const activeFilters = getValidFilters(searchParams.toString(), filterLabels);
 		const pagePath = section.getAttribute('data-page-path') ?? window.location.pathname;
 
 		clearLink.href = pagePath;

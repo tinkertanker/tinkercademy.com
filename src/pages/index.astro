@@ -16,7 +16,8 @@ import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
-import { getHomeFeaturedProgrammes, toProgrammeCardData } from '../lib/programmes.ts';
+import { getAllProgrammes, getHomeFeaturedProgrammes, getProgrammeFilterOptions, toProgrammeCardData } from '../lib/programmes.ts';
+import { createProgrammeFilterHref } from '../lib/programme-filters.ts';
 import {
 	HOME_CERTIFICATION_BADGES,
 	HOME_FLAGSHIP_IMAGES,
@@ -39,7 +40,9 @@ const partnerStatement =
 	page.partner_statement ??
 	'Official training partner for tech companies, schools, and the Singapore government.';
 
-const focusAreas: string[] = page.focus_areas ?? [];
+const allProgrammes = await getAllProgrammes();
+const usedDomainIds = new Set(allProgrammes.flatMap((p) => p.domainIds));
+const focusAreas = getProgrammeFilterOptions().domains.filter((d) => usedDomainIds.has(d.id));
 const proofPoints: string[] = page.proof_points ?? [];
 
 const flagshipItems: Array<{ title: string; description: string; image?: string }> =
@@ -158,8 +161,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 			{focusAreas.length > 0 && (
 				<ul class="home-educators__chips">
-					{focusAreas.map((label) => (
-						<li class="home-educators__chip">{label}</li>
+					{focusAreas.map(({ id, label }) => (
+						<li class="home-educators__chip-item">
+							<a class="home-educators__chip" href={createProgrammeFilterHref({ domain: id })}>{label}</a>
+						</li>
 					))}
 				</ul>
 			)}
@@ -534,7 +539,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		gap: 0.5rem 0.7rem;
 	}
 
+	.home-educators__chip-item {
+		list-style: none;
+	}
+
 	.home-educators__chip {
+		display: inline-block;
 		padding: 0.5rem 0.9rem;
 		border-radius: 999px;
 		background: rgba(240, 93, 87, 0.09);
@@ -543,6 +553,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-size: 0.88rem;
 		font-weight: 500;
 		line-height: 1.2;
+		text-decoration: none;
+		transition: background 0.15s;
+	}
+
+	.home-educators__chip:hover {
+		background: rgba(240, 93, 87, 0.18);
 	}
 
 	.home-educators__proof {

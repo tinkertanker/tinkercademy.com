@@ -1,7 +1,11 @@
 [
   {
-    "id": "ai",
-    "label": "AI and Machine Learning with Data Science",
+    "id": "ai-engineering",
+    "label": "AI Engineering"
+  },
+  {
+    "id": "ml-ds",
+    "label": "Machine Learning and Data Science",
     "source_id": "vpWDOwfOJ"
   },
   {
