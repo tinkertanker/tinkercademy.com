@@ -107,10 +107,12 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 	}
 
 	.logo-mark {
-		max-height: 80px;
+		/* Reserve space before lazy logos load. Without a fixed height, remote
+		   images have no box inside the masked marquee and Chromium can leave
+		   them unloaded because it never considers them visible. */
+		height: 80px;
 		max-width: 170px;
 		width: auto;
-		height: auto;
 		object-fit: contain;
 		flex: 0 0 auto;
 	}
