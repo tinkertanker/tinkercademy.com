@@ -14,6 +14,16 @@ export default defineConfig({
 	output: 'static',
 	trailingSlash: 'always',
 	compressHTML: true,
+	/* Amp's portal loads the development server through a cross-origin proxy.
+	   This site is fully static, so allowing proxied dev origins does not expose
+	   server actions or on-demand routes. */
+	security: {
+		allowedDomains: [{}],
+	},
+	server: {
+		host: true,
+		allowedHosts: true,
+	},
 	prefetch: {
 		prefetchAll: true,
 		defaultStrategy: 'viewport',

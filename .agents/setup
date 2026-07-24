@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+node_home="$HOME/.local/share/node-v22"
+
+install_node() {
+  local architecture archive checksum_file download_dir filename
+
+  case "$(uname -m)" in
+    x86_64) architecture="x64" ;;
+    aarch64 | arm64) architecture="arm64" ;;
+    *)
+      echo "Unsupported architecture: $(uname -m)" >&2
+      return 1
+      ;;
+  esac
+
+  download_dir="$(mktemp -d)"
+  trap 'rm -rf "$download_dir"' RETURN
+  checksum_file="$download_dir/SHASUMS256.txt"
+
+  echo "Downloading the latest Node.js 22 release..."
+  curl --fail --location --silent --show-error \
+    https://nodejs.org/dist/latest-v22.x/SHASUMS256.txt \
+    --output "$checksum_file"
+  filename="$(awk -v suffix="linux-${architecture}.tar.xz" '$2 ~ suffix "$" { print $2; exit }' "$checksum_file")"
+  if [[ -z "$filename" ]]; then
+    echo "Could not find a Node.js 22 archive for ${architecture}." >&2
+    return 1
+  fi
+
+  archive="$download_dir/$filename"
+  curl --fail --location --silent --show-error \
+    "https://nodejs.org/dist/latest-v22.x/$filename" \
+    --output "$archive"
+  (
+    cd "$download_dir"
+    grep "  $filename$" SHASUMS256.txt | sha256sum --check --status
+  )
+
+  rm -rf "$node_home"
+  mkdir -p "$node_home"
+  tar --extract --xz --file "$archive" --directory "$node_home" --strip-components=1
+  rm -rf "$download_dir"
+  trap - RETURN
+}
+
+if [[ ! -x "$node_home/bin/node" ]] ||
+  ! "$node_home/bin/node" -e 'const [major, minor] = process.versions.node.split(".").map(Number); process.exit(major === 22 && minor >= 12 ? 0 : 1)'; then
+  install_node
+else
+  echo "Node.js $("$node_home/bin/node" --version) is already installed."
+fi
+
+profile_marker="# tinkercademy.com orb toolchain"
+if ! grep -Fqx "$profile_marker" "$HOME/.bash_profile" 2>/dev/null; then
+  cat >> "$HOME/.bash_profile" <<EOF
+
+$profile_marker
+case ":\$PATH:" in
+  *":$node_home/bin:"*) ;;
+  *) export PATH="$node_home/bin:\$PATH" ;;
+esac
+EOF
+fi
+
+export PATH="$node_home/bin:$PATH"
+echo "Activating the package-manager-pinned pnpm with Corepack..."
+corepack enable pnpm
+
+echo "Installing project dependencies..."
+cd "$repo_root"
+pnpm install --frozen-lockfile
+
+echo "Orb setup complete: $(node --version), pnpm $(pnpm --version)."

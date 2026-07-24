@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+node_home="$HOME/.local/share/node-v22"
+export PATH="$node_home/bin:$PATH"
+
+if [[ ! -x "$node_home/bin/node" ]] || [[ ! -x "$node_home/bin/pnpm" ]]; then
+  echo "Orb toolchain is missing; rerun .agents/setup." >&2
+  exit 1
+fi
+
+echo "Orb ready: $(node --version), pnpm $(pnpm --version)."
