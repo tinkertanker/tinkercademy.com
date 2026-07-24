@@ -300,9 +300,9 @@ const organisationSchema = {
 		margin: 0 auto;
 	}
 
-	/* Site-wide: don't shout. Override scoped page styles that set uppercase. */
+	/* Headings preserve their authored casing unless a component opts in to another treatment. */
 	h1, h2, h3, h4, h5, h6 {
-		text-transform: none !important;
+		text-transform: none;
 	}
 
 	/* ── Prose (used by sub-pages) ── */
@@ -341,7 +341,6 @@ const organisationSchema = {
 		font-weight: 500;
 		line-height: 0.95;
 		max-width: 12ch;
-		text-transform: uppercase;
 	}
 
 	.lead {
@@ -437,6 +436,5 @@ const organisationSchema = {
 		letter-spacing: -0.03em;
 		font-size: 2rem;
 		font-weight: 500;
-		text-transform: uppercase;
 	}
 </style>

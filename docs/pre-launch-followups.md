@@ -74,11 +74,6 @@ needed at cutover — the only variable is the Cloudflare Pages
 
 ## Tooling notes
 
-- `docs/screenshots/live/mobile/*.png` is our last committed snapshot of
-  the live sitemap. `capture-mobile-screenshots.spec.js` regenerates them
-  from `tinkercademy.com/sitemap.xml` via Playwright.
-- `public/sites/nYHde9VjOGeoz41IditJr/…mjs` (rehosted Framer microsite
-  bundle) still references `/fonts/s/rubik/v30/…WYi1VU80V4bVkA.woff2` —
-  the file is present and this JS is not loaded by any Astro page, so
-  it's benign. Worth a cleanup pass if the rehosted microsites are fully
-  retired.
+- `docs/screenshots/live/mobile/*.png` is the last committed snapshot of
+  the pre-rebuild Framer sitemap. It is a historical archive, not a
+  current baseline; do not regenerate it in place.

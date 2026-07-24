@@ -1,10 +1,12 @@
 # Visual parity notes
 
-Reference pack: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
+> **Historical migration notes.** The reference pack at `docs/screenshots/live/` captures the retired pre-rebuild Framer site, not the current design.
+
+Reference pack used during the migration: `docs/screenshots/live/` (desktop, tablet, mobile, `states/`).
 
 ## Pass 2 — re-check (Popular Courses grid)
 
-- **Verified** against `docs/screenshots/live/desktop/home.png`: live “Popular Courses” is a **multi-column grid**, not a horizontal scroller.
+- **Verified** against `docs/screenshots/live/desktop/home.png`: the pre-rebuild “Popular Courses” section was a **multi-column grid**, not a horizontal scroller.
 - **Change:** `src/pages/index.astro` — replaced the carousel strip with `popular-grid` (`repeat(4, 1fr)` desktop, 2 columns tablet, 1 column mobile), card `width: 100%`, and hover closer to listing cards (lift, shadow, border tint, image scale, title accent).
 - **Build:** `npm run build` and `npm run check` run clean after the change.
 

@@ -1,3 +1,5 @@
+> **Historical prompt export.** This audit describes the retired pre-rebuild Framer site and its old typography; it is not evidence of the current Astro design.
+
 <file_map>
 /Users/yingjie/Developer/tt-projects/tinkercademy.com
 ├── scripts
