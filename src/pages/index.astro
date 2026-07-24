@@ -391,6 +391,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-hero__highlight::after {
 		content: attr(data-text);
+		/* alt-text syntax marks the visual clone as decorative so
+		   assistive tech doesn't read "Illuminate" twice; browsers
+		   without support fall back to the plain declaration above */
+		content: attr(data-text) / '';
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
@@ -1016,13 +1020,21 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		});
 
 		let last = 0;
+		let running = false;
+		let visible = false;
 		const tick = (ts: number) => {
+			if (!visible) {
+				running = false;
+				return;
+			}
 			const w = canvas.clientWidth;
 			const h = canvas.clientHeight;
 			const dpr = window.devicePixelRatio || 1;
-			if (canvas.width !== w * dpr) {
-				canvas.width = w * dpr;
-				canvas.height = h * dpr;
+			const targetW = Math.round(w * dpr);
+			const targetH = Math.round(h * dpr);
+			if (canvas.width !== targetW || canvas.height !== targetH) {
+				canvas.width = targetW;
+				canvas.height = targetH;
 			}
 			const dt = Math.min(0.05, (ts - last) / 1000);
 			last = ts;
@@ -1054,6 +1066,15 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			}
 			requestAnimationFrame(tick);
 		};
-		requestAnimationFrame(tick);
+		/* only animate while the hero is on screen */
+		const io = new IntersectionObserver((entries) => {
+			visible = entries[0]?.isIntersecting ?? true;
+			if (visible && !running) {
+				running = true;
+				last = performance.now();
+				requestAnimationFrame(tick);
+			}
+		});
+		io.observe(canvas);
 	}
 </script>

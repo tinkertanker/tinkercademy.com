@@ -198,6 +198,7 @@
 	}
 	.base-on .t-spec::after {
 		content: attr(data-text);
+		content: attr(data-text) / ''; /* decorative for assistive tech */
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
@@ -539,7 +540,8 @@ spotlight ${S.spOn ? 'ON ' : 'off'}  radius=${S.radius}px  intensity=${S.int.toF
 	let last = 0;
 	function tick(ts) {
 		const w = cvs.clientWidth, h = cvs.clientHeight, d = window.devicePixelRatio || 1;
-		if (cvs.width !== w * d) { cvs.width = w * d; cvs.height = h * d; }
+		const W = Math.round(w * d), H = Math.round(h * d);
+		if (cvs.width !== W || cvs.height !== H) { cvs.width = W; cvs.height = H; }
 		const dt = Math.min(0.05, (ts - last) / 1000); last = ts;
 		cx.setTransform(d, 0, 0, d, 0, 0);
 		cx.clearRect(0, 0, w, h);
