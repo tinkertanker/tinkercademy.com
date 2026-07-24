@@ -102,9 +102,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			decoding="async"
 		/>
 		<div class="home-hero__scrim"></div>
+		<canvas class="home-hero__motes" aria-hidden="true"></canvas>
 		<div class="home-hero__content shell">
 			<h1 class="home-hero__title">
-				<span class="home-hero__highlight">Illuminate</span> your journey into tech & AI.
+				<span class="home-hero__highlight" data-text="Illuminate">Illuminate</span> your journey into tech & AI.
 			</h1>
 			<p class="home-hero__lead">Learn coding, digital making, and agentic engineering from expert teachers and builders.</p>
 			<div class="home-hero__actions">
@@ -355,21 +356,98 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		margin: 0;
 		max-width: 16ch;
 		text-wrap: balance;
+		/* keeps the highlight's z-index:-1 light layer inside the title */
+		isolation: isolate;
 	}
 
+	.home-hero__motes {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	/* "Gilded Ember": 2s heartbeat + a gilded pass every 7s.
+	   Tuned in the glow lab (docs/glow-tuning-lab.html), 2026-07-24. */
 	.home-hero__highlight {
+		position: relative;
+		display: inline-block;
 		color: #fff;
-		text-shadow: 0 0 20px rgba(240, 93, 87, 0.4), 0 0 40px rgba(240, 93, 87, 0.2);
-		animation: highlight-pulse 4s ease-in-out infinite;
+		text-shadow: 0 0 1px rgba(255, 255, 255, 0.35), 0 0 20px rgba(240, 93, 87, 0.5), 0 0 40px rgba(240, 93, 87, 0.3);
+		animation: highlight-pulse 2s ease-in-out infinite;
 	}
 
 	@keyframes highlight-pulse {
 		0%, 100% {
-			text-shadow: 0 0 16px rgba(240, 93, 87, 0.35), 0 0 32px rgba(240, 93, 87, 0.15);
+			text-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 16px rgba(240, 93, 87, 0.45), 0 0 34px rgba(240, 93, 87, 0.24);
+			filter: brightness(1);
 		}
 		50% {
-			text-shadow: 0 0 28px rgba(240, 93, 87, 0.55), 0 0 48px rgba(240, 93, 87, 0.3);
+			text-shadow: 0 0 2px rgba(255, 255, 255, 0.55), 0 0 34px rgba(240, 93, 87, 0.85), 0 0 64px rgba(240, 93, 87, 0.5);
+			filter: brightness(1.12);
 		}
+	}
+
+	.home-hero__highlight::after {
+		content: attr(data-text);
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		background: linear-gradient(105deg, transparent 40%, rgba(255, 240, 220, 0.75) 50%, transparent 60%);
+		background-size: 260% 100%;
+		background-position: 130% 0;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+		text-shadow: none;
+		animation: highlight-sheen 7s ease-in-out infinite;
+	}
+
+	@keyframes highlight-sheen {
+		0% { background-position: 130% 0; }
+		32%, 100% { background-position: -30% 0; }
+	}
+
+	/* Word-locked spotlight: a pool of warm light sweeping I→E,
+	   measured in the span's own coordinates so it never drifts. */
+	@property --sx {
+		syntax: '<percentage>';
+		inherits: false;
+		initial-value: 28.9%;
+	}
+
+	.home-hero__highlight::before {
+		content: '';
+		position: absolute;
+		top: -250%;
+		bottom: -250%;
+		left: -60%;
+		right: -60%;
+		z-index: -1;
+		pointer-events: none;
+		mix-blend-mode: screen;
+		background: radial-gradient(135px circle at var(--sx) 50%,
+			rgba(255, 236, 220, 0.34) 0%,
+			rgba(240, 93, 87, 0.15) 45%,
+			transparent 72%);
+		opacity: 0;
+		animation: highlight-spot 10.5s ease-in-out infinite;
+	}
+
+	@keyframes highlight-spot {
+		0% { --sx: 28.9%; opacity: 0; }
+		15% { opacity: 1; }
+		55% { --sx: 75.1%; opacity: 1; }
+		70%, 100% { --sx: 75.1%; opacity: 0; }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.home-hero__highlight,
+		.home-hero__highlight::after { animation: none; }
+		.home-hero__highlight::before { animation: none; opacity: 0; }
+		.home-hero__motes { display: none; }
 	}
 
 	.home-hero__lead {
@@ -885,3 +963,97 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		}
 	}
 </style>
+
+<script>
+	/* Hero fireflies: warm light motes radiating from the "Illuminate" span.
+	   Tuned in the glow lab (docs/glow-tuning-lab.html), 2026-07-24:
+	   30 motes, 250ms respawn pause, speed ×0.7, range 35-85px,
+	   size ×0.85, brightness 0.44, sin(π·p) envelope. */
+	const canvas = document.querySelector('.home-hero__motes') as HTMLCanvasElement | null;
+	const word = document.querySelector('.home-hero__highlight') as HTMLElement | null;
+	if (canvas && word && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		const ctx = canvas.getContext('2d')!;
+		const STAGGER = 250;
+
+		type Mote = {
+			x: number; y: number; x0: number; y0: number;
+			vx: number; vy: number; r: number; range: number;
+			wait: number; tw: number;
+		};
+
+		const spawn = (waitMs: number): Mote => {
+			const wr = word.getBoundingClientRect();
+			const hr = canvas.getBoundingClientRect();
+			const bx = wr.left - hr.left;
+			const by = wr.top - hr.top;
+			const x = bx + Math.random() * wr.width;
+			const y = by + wr.height * (0.1 + Math.random() * 0.8);
+			const wcx = bx + wr.width / 2;
+			const wcy = by + wr.height / 2;
+			const d = Math.hypot(x - wcx, y - wcy);
+			const ang =
+				(d < 4 ? Math.random() * 6.283 : Math.atan2(y - wcy, x - wcx)) +
+				(Math.random() - 0.5) * 0.7;
+			const sp = (16 + Math.random() * 18) * 0.7;
+			return {
+				x, y, x0: x, y0: y,
+				vx: Math.cos(ang) * sp,
+				vy: Math.sin(ang) * sp,
+				r: (0.6 + Math.random() * 1.4) * 0.85,
+				range: 35 + Math.random() * 50,
+				wait: waitMs,
+				tw: Math.random() * 6.28,
+			};
+		};
+
+		const motes: Mote[] = Array.from({ length: 30 }, () => {
+			const m = spawn(Math.random() * STAGGER);
+			const head = Math.random() * m.range;
+			const a = Math.atan2(m.vy, m.vx);
+			m.x += Math.cos(a) * head;
+			m.y += Math.sin(a) * head;
+			return m;
+		});
+
+		let last = 0;
+		const tick = (ts: number) => {
+			const w = canvas.clientWidth;
+			const h = canvas.clientHeight;
+			const dpr = window.devicePixelRatio || 1;
+			if (canvas.width !== w * dpr) {
+				canvas.width = w * dpr;
+				canvas.height = h * dpr;
+			}
+			const dt = Math.min(0.05, (ts - last) / 1000);
+			last = ts;
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+			ctx.clearRect(0, 0, w, h);
+			ctx.globalCompositeOperation = 'lighter';
+			for (const m of motes) {
+				if (m.wait > 0) {
+					m.wait -= dt * 1000;
+					continue;
+				}
+				m.x += m.vx * dt;
+				m.y += m.vy * dt;
+				const prog = Math.hypot(m.x - m.x0, m.y - m.y0) / m.range;
+				if (prog >= 1) {
+					Object.assign(m, spawn(STAGGER * (0.4 + Math.random() * 0.6)));
+					continue;
+				}
+				const p = Math.min(1, Math.max(0, prog));
+				const env = Math.sin(Math.PI * p);
+				const alpha = env * 0.44 * (0.6 + 0.4 * Math.sin(ts / 700 + m.tw));
+				if (alpha <= 0.005) continue;
+				const g = ctx.createRadialGradient(m.x, m.y, 0, m.x, m.y, m.r * 6);
+				g.addColorStop(0, `rgba(255,240,225,${alpha})`);
+				g.addColorStop(0.4, `rgba(248,150,130,${alpha * 0.5})`);
+				g.addColorStop(1, 'rgba(240,93,87,0)');
+				ctx.fillStyle = g;
+				ctx.fillRect(m.x - m.r * 6, m.y - m.r * 6, m.r * 12, m.r * 12);
+			}
+			requestAnimationFrame(tick);
+		};
+		requestAnimationFrame(tick);
+	}
+</script>
