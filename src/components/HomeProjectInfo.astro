@@ -1,4 +1,23 @@
 <div class="project-info" data-project-info>
+	<button
+		class="project-info__toggle"
+		type="button"
+		aria-expanded="false"
+		aria-controls="home-project-info"
+		aria-label="Show information about Body, Heart, and Soul"
+	>
+		<svg class="project-info__icon project-info__icon--info" viewBox="0 0 48 48" aria-hidden="true">
+			<circle cx="24" cy="24" r="20.5"></circle>
+			<circle class="project-info__dot" cx="24" cy="15" r="1.7"></circle>
+			<path d="M22.5 21.5h2v13"></path>
+			<path d="M20.5 34.5h7"></path>
+		</svg>
+		<svg class="project-info__icon project-info__icon--close" viewBox="0 0 48 48" aria-hidden="true">
+			<circle cx="24" cy="24" r="20.5"></circle>
+			<path d="m17.5 17.5 13 13m0-13-13 13"></path>
+		</svg>
+	</button>
+
 	<div
 		class="project-info__panel"
 		id="home-project-info"
@@ -23,25 +42,6 @@
 			</a>
 		</p>
 	</div>
-
-	<button
-		class="project-info__toggle"
-		type="button"
-		aria-expanded="false"
-		aria-controls="home-project-info"
-		aria-label="Show information about Body, Heart, and Soul"
-	>
-		<svg class="project-info__icon project-info__icon--info" viewBox="0 0 48 48" aria-hidden="true">
-			<circle cx="24" cy="24" r="20.5"></circle>
-			<circle class="project-info__dot" cx="24" cy="15" r="1.7"></circle>
-			<path d="M22.5 21.5h2v13"></path>
-			<path d="M20.5 34.5h7"></path>
-		</svg>
-		<svg class="project-info__icon project-info__icon--close" viewBox="0 0 48 48" aria-hidden="true">
-			<circle cx="24" cy="24" r="20.5"></circle>
-			<path d="m17.5 17.5 13 13m0-13-13 13"></path>
-		</svg>
-	</button>
 </div>
 
 <script>
