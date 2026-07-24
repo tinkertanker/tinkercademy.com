@@ -1,0 +1,290 @@
+<div class="project-info" data-project-info>
+	<button
+		class="project-info__toggle"
+		type="button"
+		aria-expanded="false"
+		aria-controls="home-project-info"
+		aria-label="Show information about Body, Heart, and Soul"
+	>
+		<svg class="project-info__icon project-info__icon--info" viewBox="0 0 48 48" aria-hidden="true">
+			<circle cx="24" cy="24" r="20.5"></circle>
+			<circle class="project-info__dot" cx="24" cy="15" r="1.7"></circle>
+			<path d="M22.5 21.5h2v13"></path>
+			<path d="M20.5 34.5h7"></path>
+		</svg>
+		<svg class="project-info__icon project-info__icon--close" viewBox="0 0 48 48" aria-hidden="true">
+			<circle cx="24" cy="24" r="20.5"></circle>
+			<path d="m17.5 17.5 13 13m0-13-13 13"></path>
+		</svg>
+	</button>
+
+	<div
+		class="project-info__panel"
+		id="home-project-info"
+		role="region"
+		aria-label="About Body, Heart, and Soul"
+		hidden
+	>
+		<p>
+			Body, Heart, and Soul, a German Design Award recipient for the year 2024. We created
+			this IoT-powered exhibit in collaboration with Yume Architects.
+			<a
+				class="project-info__link"
+				href="https://www.kgd-a.org/laureates/en/body-heart-and-soul"
+				target="_blank"
+				rel="noopener"
+			>
+				Read more
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M7 17 17 7M9 7h8v8"></path>
+				</svg>
+				<span class="visually-hidden"> about Body, Heart, and Soul (opens in a new tab)</span>
+			</a>
+		</p>
+	</div>
+</div>
+
+<script>
+	const projectInfo = document.querySelector<HTMLElement>('[data-project-info]');
+	const toggle = projectInfo?.querySelector<HTMLButtonElement>('.project-info__toggle');
+	const panel = projectInfo?.querySelector<HTMLElement>('.project-info__panel');
+
+	function setProjectInfoOpen(open: boolean) {
+		if (!toggle || !panel) return;
+
+		toggle.setAttribute('aria-expanded', String(open));
+		toggle.setAttribute(
+			'aria-label',
+			open
+				? 'Hide information about Body, Heart, and Soul'
+				: 'Show information about Body, Heart, and Soul',
+		);
+		projectInfo?.classList.toggle('is-open', open);
+		panel.hidden = !open;
+	}
+
+	toggle?.addEventListener('click', () => {
+		setProjectInfoOpen(toggle.getAttribute('aria-expanded') !== 'true');
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
+			setProjectInfoOpen(false);
+			toggle.focus();
+		}
+	});
+
+	document.addEventListener('click', (event) => {
+		if (
+			toggle?.getAttribute('aria-expanded') === 'true' &&
+			event.target instanceof Node &&
+			!projectInfo?.contains(event.target)
+		) {
+			setProjectInfoOpen(false);
+		}
+	});
+</script>
+
+<style>
+	.project-info {
+		position: absolute;
+		right: max(clamp(1.25rem, 4vw, 3.5rem), env(safe-area-inset-right));
+		bottom: max(var(--home-hero-bottom-space, 3rem), env(safe-area-inset-bottom));
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	.project-info__panel {
+		position: absolute;
+		right: 0;
+		bottom: calc(100% - 0.25rem);
+		width: min(25rem, calc(100vw - 2.5rem));
+		padding: clamp(1.35rem, 3vw, 2rem);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 1.75rem;
+		background: rgba(5, 5, 5, 0.9);
+		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.38);
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
+		color: #fff;
+		transform-origin: bottom right;
+		animation: project-info-in 180ms ease-out both;
+	}
+
+	.project-info__panel[hidden] {
+		display: none;
+	}
+
+	.project-info__panel p {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: clamp(1rem, 1.5vw, 1.2rem);
+		font-weight: 400;
+		line-height: 1.55;
+		text-wrap: pretty;
+	}
+
+	.project-info__link {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.16em;
+		margin-left: 0.2em;
+		color: #ff807a;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		text-decoration-line: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.18em;
+		transition: color 150ms ease;
+	}
+
+	.project-info__link svg {
+		width: 0.85em;
+		height: 0.85em;
+		fill: none;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 2;
+	}
+
+	.project-info__link:hover {
+		color: #ffaaa6;
+	}
+
+	.project-info__link:focus-visible {
+		border-radius: 0.15rem;
+		outline: 2px solid #fff;
+		outline-offset: 0.3rem;
+	}
+
+	.project-info__toggle {
+		display: grid;
+		width: 2.75rem;
+		height: 2.75rem;
+		padding: 0;
+		place-items: center;
+		align-items: end;
+		border: 0;
+		border-radius: 50%;
+		background: transparent;
+		color: #fff;
+		cursor: pointer;
+		opacity: 0.9;
+		transition: opacity 150ms ease;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.project-info__toggle:hover {
+		opacity: 1;
+	}
+
+	.project-info__toggle:focus-visible {
+		outline: none;
+	}
+
+	.project-info__toggle:focus-visible .project-info__icon {
+		border-radius: 50%;
+		outline: 2px solid #fff;
+		outline-offset: 0.15rem;
+	}
+
+	.project-info__icon {
+		grid-area: 1 / 1;
+		width: 1.35rem;
+		height: 1.35rem;
+		fill: none;
+		stroke: currentColor;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 3;
+		filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
+		transition:
+			opacity 150ms ease,
+			transform 180ms ease;
+	}
+
+	.project-info__dot {
+		fill: currentColor;
+		stroke: none;
+	}
+
+	.project-info__icon--close {
+		opacity: 0;
+		transform: rotate(-45deg) scale(0.8);
+	}
+
+	.project-info.is-open .project-info__icon--info {
+		opacity: 0;
+		transform: rotate(45deg) scale(0.8);
+	}
+
+	.project-info.is-open .project-info__icon--close {
+		opacity: 1;
+		transform: rotate(0) scale(1);
+	}
+
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	@keyframes project-info-in {
+		from {
+			opacity: 0;
+			transform: translateY(0.5rem) scale(0.97);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
+
+	@media (max-width: 700px) {
+		.project-info {
+			right: max(1.15rem, env(safe-area-inset-right));
+		}
+
+		.project-info__panel {
+			bottom: calc(100% + 1rem);
+			width: min(22rem, calc(100vw - 2.3rem));
+			padding: 1.35rem;
+			border-radius: 1.4rem;
+		}
+
+		.project-info__panel p {
+			font-size: 1rem;
+		}
+
+		.project-info__toggle {
+			width: 2.75rem;
+			height: 2.75rem;
+		}
+
+		.project-info__icon {
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.project-info__panel {
+			animation: none;
+		}
+
+		.project-info__toggle,
+		.project-info__icon {
+			transition: none;
+		}
+	}
+</style>
