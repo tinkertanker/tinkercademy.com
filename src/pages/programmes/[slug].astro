@@ -541,6 +541,41 @@ const breadcrumbSchema = {
 		font-weight: 600;
 	}
 
+	/* ─── Tables (fees, schedules, etc.) ────────────────────── */
+	/* Constrain the wrapping <figure> so wide tables scroll locally
+	   instead of expanding the page and causing horizontal overflow. */
+	.prog-body :global(figure) {
+		margin: 0 0 1rem;
+		overflow-x: auto;
+		max-width: 100%;
+	}
+
+	.prog-body :global(table) {
+		width: 100%;
+		border-collapse: collapse;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		line-height: var(--body-line-height);
+		color: rgb(51, 51, 51);
+	}
+
+	.prog-body :global(th),
+	.prog-body :global(td) {
+		padding: 0.5rem 0.65rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.prog-body :global(th) {
+		font-weight: 600;
+	}
+
+	/* Keep row-header cells visually distinct without a strong fill. */
+	.prog-body :global(tr > th:first-child) {
+		white-space: nowrap;
+	}
+
 	/* ─── Responsive ───────────────────────────────────────── */
 	@media (max-width: 809px) {
 		.prog-hero {
