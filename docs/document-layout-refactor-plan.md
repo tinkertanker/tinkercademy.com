@@ -1,5 +1,7 @@
 # Document-to-Astro Refactor Plan
 
+> **Status: completed and retained for migration history.** The document renderer, `DocumentLayout`, and generated route-document payload have been removed. Do not treat the implementation steps below as current architecture or pending work.
+
 ## Summary
 
 The refactor plan is good to continue, but it needs one important correction before handoff:
