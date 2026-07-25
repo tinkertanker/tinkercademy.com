@@ -333,6 +333,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		inset: 0;
 		background:
 			linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.7) 100%);
+		/* floor under the gradient, whose 0.15 mid-stop lands right on the text */
+		background-color: rgba(0, 0, 0, 0.35);
 	}
 
 	.home-hero__content {
@@ -441,8 +443,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	@keyframes highlight-spot {
 		0% { --sx: 28.95%; opacity: 0; }
-		15% { opacity: 1; }
-		55% { --sx: 71.05%; opacity: 1; }
+		15% { opacity: 0.5; }
+		55% { --sx: 71.05%; opacity: 0.5; }
 		70%, 100% { --sx: 71.05%; opacity: 0; }
 	}
 
