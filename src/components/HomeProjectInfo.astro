@@ -4,7 +4,7 @@
 		type="button"
 		aria-expanded="false"
 		aria-controls="home-project-info"
-		aria-label="Show information about Body, Heart, and Soul"
+		aria-label="View the hero image and project details"
 	>
 		<svg class="project-info__icon project-info__icon--info" viewBox="0 0 48 48" aria-hidden="true">
 			<circle cx="24" cy="24" r="20.5"></circle>
@@ -49,18 +49,43 @@
 	const toggle = projectInfo?.querySelector<HTMLButtonElement>('.project-info__toggle');
 	const panel = projectInfo?.querySelector<HTMLElement>('.project-info__panel');
 
+	/* opening also hands the hero over to the photograph: see the
+	   [data-image-focus] block in src/pages/index.astro */
+	const hero = projectInfo?.closest<HTMLElement>('.home-hero');
+	const heroContent = hero?.querySelector<HTMLElement>('.home-hero__content');
+	const heroFocusables = heroContent
+		? [...heroContent.querySelectorAll<HTMLElement>('a[href], button')]
+		: [];
+	const supportsInert = 'inert' in HTMLElement.prototype;
+
 	function setProjectInfoOpen(open: boolean) {
 		if (!toggle || !panel) return;
 
 		toggle.setAttribute('aria-expanded', String(open));
 		toggle.setAttribute(
 			'aria-label',
-			open
-				? 'Hide information about Body, Heart, and Soul'
-				: 'Show information about Body, Heart, and Soul',
+			open ? 'Return to the page' : 'View the hero image and project details',
 		);
 		projectInfo?.classList.toggle('is-open', open);
 		panel.hidden = !open;
+
+		hero?.toggleAttribute('data-image-focus', open);
+		if (!heroContent) return;
+
+		if (open) {
+			heroContent.setAttribute('aria-hidden', 'true');
+			if (heroContent.contains(document.activeElement)) toggle.focus();
+		} else {
+			heroContent.removeAttribute('aria-hidden');
+		}
+		if (supportsInert) {
+			heroContent.toggleAttribute('inert', open);
+		} else {
+			for (const el of heroFocusables) {
+				if (open) el.setAttribute('tabindex', '-1');
+				else el.removeAttribute('tabindex');
+			}
+		}
 	}
 
 	toggle?.addEventListener('click', () => {

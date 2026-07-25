@@ -115,6 +115,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 				<a class="home-hero__pill" href="/individuals/">Individuals</a>
 			</div>
 		</div>
+		<p class="home-hero__hint" aria-hidden="true">Esc or tap to return</p>
 		<HomeProjectInfo />
 	</section>
 
@@ -311,6 +312,23 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	/* ─── Hero ─────────────────────────────────────────────────────────── */
 	.home-hero {
 		--home-hero-bottom-space: clamp(3rem, 5vw, 4rem);
+		/* every tunable of the scrim, the glow peak and image-focus mode lives
+		   here, so tuning is a one-line edit rather than a keyframe hunt */
+		--home-hero-scrim-base: 0.35;
+		/* the gradient used to spend its darkness at 0%, where no text sits.
+		   the ramp now starts at the 15% stop instead, so the same ink lands
+		   under the text and the top of the photo is left alone */
+		--home-hero-scrim-top: 0;
+		--home-hero-scrim-mid: 0.15;
+		--home-hero-scrim-mid-stop: 15%;
+		--home-hero-scrim-bottom: 0.7;
+		/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
+		--home-hero-spot-peak: 1;
+		--home-hero-focus-text-opacity: 0;
+		--home-hero-focus-zoom: 1.07;
+		--home-hero-focus-zoom-duration: 36s;
+		--home-hero-focus-fade: 700ms;
+		--home-hero-focus-fade-reduced: 0s;
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
@@ -331,13 +349,14 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-hero__scrim {
 		position: absolute;
 		inset: 0;
-		/* the gradient used to spend its darkness at 0%, where no text sits.
-		   the ramp now starts at the 15% stop instead, so the same ink lands
-		   under the text and the top of the photo is left alone */
 		background:
-			linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.7) 100%);
+			linear-gradient(180deg,
+				rgba(0, 0, 0, var(--home-hero-scrim-top)) 0%,
+				rgba(0, 0, 0, var(--home-hero-scrim-mid)) var(--home-hero-scrim-mid-stop),
+				rgba(0, 0, 0, var(--home-hero-scrim-bottom)) 100%);
 		/* floor under the gradient, which is at its lightest over the text */
-		background-color: rgba(0, 0, 0, 0.35);
+		background-color: rgba(0, 0, 0, var(--home-hero-scrim-base));
+		transition: opacity var(--home-hero-focus-fade) ease;
 	}
 
 	.home-hero__content {
@@ -348,6 +367,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		min-height: inherit;
 		padding: clamp(4rem, 9vw, 7rem) 0 var(--home-hero-bottom-space);
 		gap: 1.1rem;
+		transition: opacity var(--home-hero-focus-fade) ease;
 	}
 
 	.home-hero__title {
@@ -444,11 +464,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		animation: highlight-spot 10.5s ease-in-out infinite;
 	}
 
-	/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
 	@keyframes highlight-spot {
 		0% { --sx: 28.95%; opacity: 0; }
-		15% { opacity: 1; }
-		55% { --sx: 71.05%; opacity: 1; }
+		15% { opacity: var(--home-hero-spot-peak); }
+		55% { --sx: 71.05%; opacity: var(--home-hero-spot-peak); }
 		70%, 100% { --sx: 71.05%; opacity: 0; }
 	}
 
@@ -457,6 +476,9 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		.home-hero__highlight::after { animation: none; }
 		.home-hero__highlight::before { animation: none; opacity: 0; }
 		.home-hero__motes { display: none; }
+		/* image focus still works, minus the drift and the cross-fade */
+		.home-hero { --home-hero-focus-fade: var(--home-hero-focus-fade-reduced); }
+		.home-hero[data-image-focus] .home-hero__bg { animation: none; }
 	}
 
 	.home-hero__lead {
@@ -507,6 +529,55 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-hero__pill--primary:hover {
 		background: rgb(154, 44, 39);
 		border-color: rgb(154, 44, 39);
+	}
+
+	/* ─── Image focus ────────────────────────────────────────────────── */
+	/* no hero text is over the photo in this state, so the scrim can go to
+	   zero without touching the contrast floor the normal state needs */
+	.home-hero[data-image-focus] .home-hero__scrim {
+		opacity: 0;
+	}
+
+	.home-hero[data-image-focus] .home-hero__content,
+	.home-hero[data-image-focus] .home-hero__motes {
+		opacity: var(--home-hero-focus-text-opacity);
+		pointer-events: none;
+	}
+
+	.home-hero[data-image-focus] .home-hero__bg {
+		transform-origin: center;
+		animation: home-hero-zoom var(--home-hero-focus-zoom-duration) ease-in-out infinite alternate;
+	}
+
+	@keyframes home-hero-zoom {
+		from { transform: scale(1); }
+		to { transform: scale(var(--home-hero-focus-zoom)); }
+	}
+
+	.home-hero__hint {
+		position: absolute;
+		left: max(clamp(1.25rem, 4vw, 3.5rem), env(safe-area-inset-left));
+		bottom: max(var(--home-hero-bottom-space), env(safe-area-inset-bottom));
+		z-index: 3;
+		margin: 0;
+		padding: 0.4rem 0.8rem;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 999px;
+		/* its own plate, like the info panel: the scrim is gone underneath */
+		background: rgba(5, 5, 5, 0.72);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		color: rgba(255, 255, 255, 0.85);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.75rem;
+		letter-spacing: 0.01em;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity var(--home-hero-focus-fade) ease;
+	}
+
+	.home-hero[data-image-focus] .home-hero__hint {
+		opacity: 1;
 	}
 
 	/* ─── Partner strip ──────────────────────────────────────────────── */
