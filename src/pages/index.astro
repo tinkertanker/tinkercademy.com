@@ -115,7 +115,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 				<a class="home-hero__pill" href="/individuals/">Individuals</a>
 			</div>
 		</div>
-		<p class="home-hero__hint" aria-hidden="true">Esc or tap to return</p>
+		{/* the script in HomeProjectInfo swaps this for the touch wording */}
+		<p class="home-hero__hint" aria-hidden="true">Esc or click the hero to return</p>
 		<HomeProjectInfo />
 	</section>
 
@@ -577,8 +578,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		animation: home-hero-zoom-out var(--home-hero-focus-fade) ease both;
 	}
 
+	/* the enter scale is 1 from rest, and whatever the unwind reached when the
+	   toggle is re-pressed mid-exit; the script drops it after the first turn */
 	@keyframes home-hero-zoom {
-		from { transform: scale(1); }
+		from { transform: scale(var(--home-hero-focus-enter-scale, 1)); }
 		to { transform: scale(var(--home-hero-focus-zoom)); }
 	}
 

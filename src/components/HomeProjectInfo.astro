@@ -68,6 +68,7 @@
 	const hero = projectInfo?.closest<HTMLElement>('.home-hero');
 	const heroBg = hero?.querySelector<HTMLElement>('.home-hero__bg');
 	const heroContent = hero?.querySelector<HTMLElement>('.home-hero__content');
+	const heroHint = hero?.querySelector<HTMLElement>('.home-hero__hint');
 	const heroFocusables = heroContent
 		? [...heroContent.querySelectorAll<HTMLElement>('a[href], button')]
 		: [];
@@ -76,6 +77,11 @@
 	/* used only if the custom properties can't be read */
 	const READ_WPM = 200;
 	const READ_MIN = 6;
+
+	/* a tap on the panel pauses rather than returns, so the touch wording has to
+	   name the hero; one string is swapped in, never both, so nothing reads twice */
+	const HINT_HOVER = 'Esc or click the hero to return';
+	const HINT_TOUCH = 'Tap the hero to return';
 
 	function seconds(value: string) {
 		const n = Number.parseFloat(value);
@@ -116,6 +122,11 @@
 		setPaused(false);
 		if (open) {
 			hero?.style.setProperty('--home-hero-read-time', `${readingSeconds().toFixed(2)}s`);
+			/* read live, so a press during the unwind picks the drift up where the
+			   image is rather than snapping back to 1; from rest this reads 1 */
+			hero?.style.setProperty('--home-hero-focus-enter-scale', String(bgScale()));
+			const noHover = matchMedia('(hover: none)').matches;
+			if (heroHint) heroHint.textContent = noHover ? HINT_TOUCH : HINT_HOVER;
 			hero?.removeAttribute('data-focus-exiting');
 		} else if (hero?.hasAttribute('data-image-focus')) {
 			/* freeze the drift where it stands, then let CSS ease it back to 1 */
@@ -156,6 +167,14 @@
 
 	heroBg?.addEventListener('animationend', (event) => {
 		if (event.animationName === 'home-hero-zoom-out') hero?.removeAttribute('data-focus-exiting');
+	});
+
+	/* the drift turns around at the top either way, so dropping the enter scale
+	   here is seamless and gives the following legs their full range back */
+	heroBg?.addEventListener('animationiteration', (event) => {
+		if (event.animationName === 'home-hero-zoom') {
+			hero?.style.removeProperty('--home-hero-focus-enter-scale');
+		}
 	});
 
 	/* the bar depletes on CSS alone, so its end is the whole time limit */
