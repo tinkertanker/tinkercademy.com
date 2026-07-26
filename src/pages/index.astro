@@ -325,10 +325,26 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
 		--home-hero-spot-peak: 1;
 		--home-hero-focus-text-opacity: 0;
-		--home-hero-focus-zoom: 1.07;
-		--home-hero-focus-zoom-duration: 36s;
-		--home-hero-focus-fade: 700ms;
+		--home-hero-focus-zoom: 1.06;
+		/* `auto` follows the panel's reading time; an explicit <time> overrides it */
+		--home-hero-focus-zoom-duration: auto;
+		/* the reading-time script overwrites this; 30s is the no-script default */
+		--home-hero-read-time: 30s;
+		--home-hero-read-wpm: 200;
+		--home-hero-read-min: 6s;
+		--home-hero-focus-fade: 900ms;
 		--home-hero-focus-fade-reduced: 0s;
+		/* countdown: reading time plus 10%, so the zoom turns around as it ends */
+		--home-hero-timer-slack: 1.1;
+		--home-hero-timer-height: 0.35rem;
+		--home-hero-timer-track: 0.16;
+		/* the credit panel's frosted glass, over an undimmed photo */
+		--home-hero-panel-bg-alpha: 0.72;
+		--home-hero-panel-bg-alpha-fallback: 0.93;
+		--home-hero-panel-blur: 22px;
+		--home-hero-panel-saturate: 1.4;
+		--home-hero-panel-sheen: 0.05;
+		--home-hero-panel-edge: 0.22;
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
@@ -543,14 +559,32 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		pointer-events: none;
 	}
 
+	/* transform-origin is already the default centre and the first keyframe is
+	   scale(1), so attaching this on press cannot shift the framing */
 	.home-hero[data-image-focus] .home-hero__bg {
 		transform-origin: center;
-		animation: home-hero-zoom var(--home-hero-focus-zoom-duration) ease-in-out infinite alternate;
+		/* half-period = the panel's reading time */
+		animation: home-hero-zoom var(--home-hero-read-time) ease-in-out infinite alternate;
+	}
+
+	/* after the shorthand above, which resets play-state to running */
+	.home-hero[data-focus-paused] .home-hero__bg {
+		animation-play-state: paused;
+	}
+
+	/* unwinds the drift over the fade instead of snapping back to scale(1) */
+	.home-hero[data-focus-exiting] .home-hero__bg {
+		animation: home-hero-zoom-out var(--home-hero-focus-fade) ease both;
 	}
 
 	@keyframes home-hero-zoom {
 		from { transform: scale(1); }
 		to { transform: scale(var(--home-hero-focus-zoom)); }
+	}
+
+	@keyframes home-hero-zoom-out {
+		from { transform: scale(var(--home-hero-focus-exit-scale, 1)); }
+		to { transform: scale(1); }
 	}
 
 	/* after the rule it overrides, so order decides it here — not the global reset */
