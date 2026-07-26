@@ -478,7 +478,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		.home-hero__motes { display: none; }
 		/* image focus still works, minus the drift and the cross-fade */
 		.home-hero { --home-hero-focus-fade: var(--home-hero-focus-fade-reduced); }
-		.home-hero[data-image-focus] .home-hero__bg { animation: none; }
 	}
 
 	.home-hero__lead {
@@ -552,6 +551,11 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	@keyframes home-hero-zoom {
 		from { transform: scale(1); }
 		to { transform: scale(var(--home-hero-focus-zoom)); }
+	}
+
+	/* after the rule it overrides, so order decides it here — not the global reset */
+	@media (prefers-reduced-motion: reduce) {
+		.home-hero[data-image-focus] .home-hero__bg { animation: none; }
 	}
 
 	.home-hero__hint {
