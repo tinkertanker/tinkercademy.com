@@ -1106,15 +1106,33 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			wait: number; tw: number;
 		};
 
-		const spawn = (waitMs: number): Mote => {
+		/* the word's box in canvas space, refreshed once a frame. the hero
+		   reflows on resize, orientation change and mobile url-bar collapse,
+		   and motes already in flight have to be carried along with it or they
+		   keep streaming out of wherever the word used to be */
+		const box = { x: 0, y: 0, w: 0, h: 0 };
+		/* the delta is measured on the word's centre, not its corner: a rewrap
+		   changes the word's width too, and the cloud has to stay centred on
+		   it rather than pinned to its left edge */
+		const measure = () => {
 			const wr = word.getBoundingClientRect();
 			const hr = canvas.getBoundingClientRect();
-			const bx = wr.left - hr.left;
-			const by = wr.top - hr.top;
-			const x = bx + Math.random() * wr.width;
-			const y = by + wr.height * (0.1 + Math.random() * 0.8);
-			const wcx = bx + wr.width / 2;
-			const wcy = by + wr.height / 2;
+			const x = wr.left - hr.left;
+			const y = wr.top - hr.top;
+			const dx = x + wr.width / 2 - (box.x + box.w / 2);
+			const dy = y + wr.height / 2 - (box.y + box.h / 2);
+			box.x = x;
+			box.y = y;
+			box.w = wr.width;
+			box.h = wr.height;
+			return { dx, dy };
+		};
+
+		const spawn = (waitMs: number): Mote => {
+			const x = box.x + Math.random() * box.w;
+			const y = box.y + box.h * (0.1 + Math.random() * 0.8);
+			const wcx = box.x + box.w / 2;
+			const wcy = box.y + box.h / 2;
 			const d = Math.hypot(x - wcx, y - wcy);
 			const ang =
 				(d < 4 ? Math.random() * 6.283 : Math.atan2(y - wcy, x - wcx)) +
@@ -1131,6 +1149,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			};
 		};
 
+		measure();
 		const motes: Mote[] = Array.from({ length: 30 }, () => {
 			const m = spawn(Math.random() * STAGGER);
 			const head = Math.random() * m.range;
@@ -1159,6 +1178,15 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			}
 			const dt = Math.min(0.05, (ts - last) / 1000);
 			last = ts;
+			const { dx, dy } = measure();
+			if (dx || dy) {
+				for (const m of motes) {
+					m.x += dx;
+					m.y += dy;
+					m.x0 += dx;
+					m.y0 += dy;
+				}
+			}
 			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 			ctx.clearRect(0, 0, w, h);
 			ctx.globalCompositeOperation = 'lighter';
