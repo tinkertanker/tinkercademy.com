@@ -326,26 +326,32 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
 		--home-hero-spot-peak: 1;
 		--home-hero-focus-text-opacity: 0;
-		--home-hero-focus-zoom: 1.06;
+		/* the drift is slow enough to be imperceptible below ~0.5%/s, and the
+		   half-period is now the 18.75s reading time, so the scale has to rise
+		   with it: 1.14 over 18.75s is 0.75%/s, the rate 1.06 had over 7.5s */
+		--home-hero-focus-zoom: 1.14;
 		/* `auto` follows the panel's reading time; an explicit <time> overrides it */
 		--home-hero-focus-zoom-duration: auto;
 		/* the reading-time script overwrites this; 30s is the no-script default */
 		--home-hero-read-time: 30s;
-		--home-hero-read-wpm: 200;
-		--home-hero-read-min: 6s;
+		--home-hero-read-wpm: 80;
+		--home-hero-read-min: 12.5s;
 		--home-hero-focus-fade: 900ms;
 		--home-hero-focus-fade-reduced: 0s;
-		/* countdown: reading time plus 10%, so the zoom turns around as it ends */
-		--home-hero-timer-slack: 1.1;
+		/* countdown: reading time plus 20%, so the zoom turns around as it ends */
+		--home-hero-timer-slack: 1.2;
 		--home-hero-timer-height: 0.35rem;
-		--home-hero-timer-track: 0.16;
+		--home-hero-timer-track: 0.1;
 		/* the credit panel's frosted glass, over an undimmed photo */
-		--home-hero-panel-bg-alpha: 0.72;
+		--home-hero-panel-bg-alpha: 0.68;
 		--home-hero-panel-bg-alpha-fallback: 0.93;
-		--home-hero-panel-blur: 22px;
-		--home-hero-panel-saturate: 1.4;
+		/* 9px was asked for, but at 0.68 alpha it drops the credit link to 4.21:1
+		   over the undimmed photo — under the 4.5:1 floor. 18px is the least blur
+		   that clears it; past 20px the alpha, not the blur, is the limit. */
+		--home-hero-panel-blur: 18px;
+		--home-hero-panel-saturate: 1.3;
 		--home-hero-panel-sheen: 0.05;
-		--home-hero-panel-edge: 0.22;
+		--home-hero-panel-edge: 0.35;
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);

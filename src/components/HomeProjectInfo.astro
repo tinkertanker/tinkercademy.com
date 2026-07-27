@@ -75,8 +75,8 @@
 	const supportsInert = 'inert' in HTMLElement.prototype;
 
 	/* used only if the custom properties can't be read */
-	const READ_WPM = 200;
-	const READ_MIN = 6;
+	const READ_WPM = 80;
+	const READ_MIN = 12.5;
 
 	/* a tap on the panel pauses rather than returns, so the touch wording has to
 	   name the hero; one string is swapped in, never both, so nothing reads twice */
@@ -240,18 +240,21 @@
 		border: 1px solid rgba(255, 255, 255, 0.16);
 		border-top-color: rgba(255, 255, 255, 0.3);
 		border-radius: 1.75rem;
-		background-color: rgba(5, 5, 5, var(--home-hero-panel-bg-alpha, 0.72));
+		/* the countdown is a full-width strip on the bottom edge, so the panel
+		   has to clip it — otherwise its ends run straight past the corner curve */
+		overflow: clip;
+		background-color: rgba(5, 5, 5, var(--home-hero-panel-bg-alpha, 0.68));
 		background-image: linear-gradient(
 			160deg,
 			rgba(255, 255, 255, var(--home-hero-panel-sheen, 0.05)),
 			rgba(255, 255, 255, 0) 42%);
 		box-shadow:
-			inset 0 1px 0 rgba(255, 255, 255, var(--home-hero-panel-edge, 0.22)),
+			inset 0 1px 0 rgba(255, 255, 255, var(--home-hero-panel-edge, 0.35)),
 			0 1.5rem 4rem rgba(0, 0, 0, 0.45);
-		backdrop-filter: blur(var(--home-hero-panel-blur, 22px))
-			saturate(var(--home-hero-panel-saturate, 1.4));
-		-webkit-backdrop-filter: blur(var(--home-hero-panel-blur, 22px))
-			saturate(var(--home-hero-panel-saturate, 1.4));
+		backdrop-filter: blur(var(--home-hero-panel-blur, 18px))
+			saturate(var(--home-hero-panel-saturate, 1.3));
+		-webkit-backdrop-filter: blur(var(--home-hero-panel-blur, 18px))
+			saturate(var(--home-hero-panel-saturate, 1.3));
 		color: #fff;
 		transform-origin: bottom right;
 		animation: project-info-in 180ms ease-out both;
@@ -386,17 +389,17 @@
 		display: initial;
 	}
 
-	/* the countdown, drawn as the panel's own thickened bottom border */
+	/* the countdown, drawn as the panel's own thickened bottom border: it spans
+	   the panel's inner edge and the panel's own overflow clips its ends to the
+	   corner curve. Its own radii can't do that — scaled to a 0.35rem box they
+	   would round far tighter than the corner they sit in. */
 	.project-info__timer {
 		position: absolute;
 		right: 0;
 		bottom: 0;
 		left: 0;
 		height: var(--home-hero-timer-height, 0.35rem);
-		overflow: clip;
-		border-bottom-right-radius: inherit;
-		border-bottom-left-radius: inherit;
-		background: rgba(255, 255, 255, var(--home-hero-timer-track, 0.16));
+		background: rgba(255, 255, 255, var(--home-hero-timer-track, 0.1));
 	}
 
 	.project-info__timer-bar {
@@ -405,7 +408,7 @@
 		background: var(--accent, #f05d57);
 		transform-origin: left center;
 		animation: project-info-timer
-			calc(var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.1)) linear forwards;
+			calc(var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.2)) linear forwards;
 	}
 
 	.project-info[data-paused] .project-info__timer-bar {
@@ -548,7 +551,7 @@
 		   duration and its plain linear depletion despite the global reset */
 		.project-info__timer-bar {
 			animation-duration: calc(
-				var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.1)
+				var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.2)
 			) !important;
 			animation-iteration-count: 1 !important;
 		}
