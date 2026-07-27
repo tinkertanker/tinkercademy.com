@@ -444,8 +444,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		animation: highlight-spot 10.5s ease-in-out infinite;
 	}
 
-	/* back to full strength at the owner's request: he'd rather have the
-	   glow than the contrast it costs. what it costs is measured in #25 */
+	/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
 	@keyframes highlight-spot {
 		0% { --sx: 28.95%; opacity: 0; }
 		15% { opacity: 1; }
