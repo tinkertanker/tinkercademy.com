@@ -331,9 +331,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-hero__scrim {
 		position: absolute;
 		inset: 0;
+		/* the gradient used to spend its darkness at 0%, where no text sits.
+		   the ramp now starts at the 15% stop instead, so the same ink lands
+		   under the text and the top of the photo is left alone */
 		background:
-			linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.7) 100%);
-		/* floor under the gradient, whose 0.15 mid-stop lands right on the text */
+			linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.7) 100%);
+		/* floor under the gradient, which is at its lightest over the text */
 		background-color: rgba(0, 0, 0, 0.35);
 	}
 
@@ -441,10 +444,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		animation: highlight-spot 10.5s ease-in-out infinite;
 	}
 
+	/* back to full strength at the owner's request: he'd rather have the
+	   glow than the contrast it costs. what it costs is measured in #25 */
 	@keyframes highlight-spot {
 		0% { --sx: 28.95%; opacity: 0; }
-		15% { opacity: 0.5; }
-		55% { --sx: 71.05%; opacity: 0.5; }
+		15% { opacity: 1; }
+		55% { --sx: 71.05%; opacity: 1; }
 		70%, 100% { --sx: 71.05%; opacity: 0; }
 	}
 
