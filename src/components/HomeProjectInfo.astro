@@ -41,19 +41,6 @@
 				<span class="visually-hidden"> about Body, Heart, and Soul (opens in a new tab)</span>
 			</a>
 		</p>
-
-		<button class="project-info__pause" type="button">
-			<svg class="project-info__pause-icon" viewBox="0 0 24 24" aria-hidden="true">
-				<path class="project-info__pause-bars" d="M9.5 6v12M14.5 6v12"></path>
-				<path class="project-info__pause-play" d="M9 5.5 19 12 9 18.5Z"></path>
-			</svg>
-			<span class="project-info__pause-text project-info__pause-text--pause">Pause</span>
-			<span class="project-info__pause-text project-info__pause-text--resume">Resume</span>
-		</button>
-
-		<div class="project-info__timer" aria-hidden="true">
-			<span class="project-info__timer-bar"></span>
-		</div>
 	</div>
 </div>
 
@@ -61,14 +48,12 @@
 	const projectInfo = document.querySelector<HTMLElement>('[data-project-info]');
 	const toggle = projectInfo?.querySelector<HTMLButtonElement>('.project-info__toggle');
 	const panel = projectInfo?.querySelector<HTMLElement>('.project-info__panel');
-	const timerBar = projectInfo?.querySelector<HTMLElement>('.project-info__timer-bar');
 
 	/* opening also hands the hero over to the photograph: see the
 	   [data-image-focus] block in src/pages/index.astro */
 	const hero = projectInfo?.closest<HTMLElement>('.home-hero');
 	const heroBg = hero?.querySelector<HTMLElement>('.home-hero__bg');
 	const heroContent = hero?.querySelector<HTMLElement>('.home-hero__content');
-	const heroHint = hero?.querySelector<HTMLElement>('.home-hero__hint');
 	const heroFocusables = heroContent
 		? [...heroContent.querySelectorAll<HTMLElement>('a[href], button')]
 		: [];
@@ -77,11 +62,6 @@
 	/* used only if the custom properties can't be read */
 	const READ_WPM = 80;
 	const READ_MIN = 12.5;
-
-	/* a tap on the panel pauses rather than returns, so the touch wording has to
-	   name the hero; one string is swapped in, never both, so nothing reads twice */
-	const HINT_HOVER = 'Esc or click the hero to return';
-	const HINT_TOUCH = 'Tap the hero to return';
 
 	function seconds(value: string) {
 		const n = Number.parseFloat(value);
@@ -125,8 +105,6 @@
 			/* read live, so a press during the unwind picks the drift up where the
 			   image is rather than snapping back to 1; from rest this reads 1 */
 			hero?.style.setProperty('--home-hero-focus-enter-scale', String(bgScale()));
-			const noHover = matchMedia('(hover: none)').matches;
-			if (heroHint) heroHint.textContent = noHover ? HINT_TOUCH : HINT_HOVER;
 			hero?.removeAttribute('data-focus-exiting');
 		} else if (hero?.hasAttribute('data-image-focus')) {
 			/* freeze the drift where it stands, then let CSS ease it back to 1 */
@@ -177,9 +155,9 @@
 		}
 	});
 
-	/* the bar depletes on CSS alone, so its end is the whole time limit */
-	timerBar?.addEventListener('animationend', (event) => {
-		if (event.animationName !== 'project-info-timer') return;
+	/* the ring depletes on CSS alone, so its end is the whole time limit */
+	projectInfo?.addEventListener('animationend', (event) => {
+		if (event.animationName !== 'project-info-ring') return;
 		const hadFocus = panel?.contains(document.activeElement) ?? false;
 		setProjectInfoOpen(false);
 		if (hadFocus) toggle?.focus();
@@ -191,12 +169,8 @@
 		setPaused(!projectInfo?.hasAttribute('data-paused'));
 	});
 
-	/* a keyboard user can't hover, so focus alone stops the clock — except on
-	   the pause button itself, whose own click would immediately undo it */
-	panel?.addEventListener('focusin', (event) => {
-		if (event.target instanceof Element && event.target.closest('.project-info__pause')) return;
-		setPaused(true);
-	});
+	/* a keyboard user can't hover, so focus reaching the panel stops the clock */
+	panel?.addEventListener('focusin', () => setPaused(true));
 
 	document.addEventListener('keydown', (event) => {
 		if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
@@ -232,7 +206,9 @@
 	.project-info__panel {
 		position: absolute;
 		right: 0;
-		bottom: calc(100% - 0.25rem);
+		/* clears the countdown ring that now rings the toggle, so the ring's
+		   12-o'clock start is never tucked under the panel's bottom edge */
+		bottom: calc(100% + var(--home-hero-timer-ring-gap, 0.3rem) + 0.35rem);
 		display: flex;
 		flex-direction: column;
 		width: min(25rem, calc(100vw - 2.5rem));
@@ -240,9 +216,6 @@
 		border: 1px solid rgba(255, 255, 255, 0.16);
 		border-top-color: rgba(255, 255, 255, 0.3);
 		border-radius: 1.75rem;
-		/* the countdown is a full-width strip on the bottom edge, so the panel
-		   has to clip it — otherwise its ends run straight past the corner curve */
-		overflow: clip;
 		background-color: rgba(5, 5, 5, var(--home-hero-panel-bg-alpha, 0.68));
 		background-image: linear-gradient(
 			160deg,
@@ -315,112 +288,56 @@
 		outline-offset: 0.3rem;
 	}
 
-	/* hidden until the panel is hovered, focused or already paused; on touch,
-	   where there is no hover, it stays visible so it can be discovered */
-	.project-info__pause {
-		display: inline-flex;
-		align-self: flex-end;
-		align-items: center;
-		gap: 0.4rem;
-		margin-top: 0.9rem;
-		padding: 0.32rem 0.75rem 0.32rem 0.6rem;
-		border: 1px solid rgba(255, 255, 255, 0.34);
-		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.14);
-		color: #fff;
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.78rem;
-		font-weight: 500;
-		cursor: pointer;
-		opacity: 0;
-		transition:
-			opacity 150ms ease,
-			background 150ms ease;
-		-webkit-tap-highlight-color: transparent;
+	/* the countdown, drawn as a ring around the toggle: a conic sweep un-fills
+	   clockwise from 12 o'clock as the clock runs, and a radial mask cuts the
+	   disc down to a stroke. the sweep angle is a registered property so it can
+	   be animated and paused; its end is the whole time limit. */
+	@property --pi-ring-sweep {
+		syntax: '<angle>';
+		inherits: false;
+		initial-value: 0deg;
 	}
 
-	.project-info__panel:hover .project-info__pause,
-	.project-info__panel:focus-within .project-info__pause,
-	.project-info[data-paused] .project-info__pause {
-		opacity: 1;
-	}
-
-	.project-info__pause:hover {
-		background: rgba(255, 255, 255, 0.24);
-	}
-
-	.project-info__pause:focus-visible {
-		opacity: 1;
-		outline: 2px solid #fff;
-		outline-offset: 0.2rem;
-	}
-
-	/* no hover to reveal it on a touch screen, so it just stays out */
-	@media (hover: none) {
-		.project-info__pause {
-			opacity: 1;
-		}
-	}
-
-	.project-info__pause-icon {
-		width: 0.95rem;
-		height: 0.95rem;
-		fill: none;
-		stroke: currentColor;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		stroke-width: 2.4;
-	}
-
-	.project-info__pause-play {
-		fill: currentColor;
-		stroke: none;
-	}
-
-	.project-info__pause-play,
-	.project-info__pause-text--resume,
-	.project-info[data-paused] .project-info__pause-bars,
-	.project-info[data-paused] .project-info__pause-text--pause {
-		display: none;
-	}
-
-	.project-info[data-paused] .project-info__pause-play,
-	.project-info[data-paused] .project-info__pause-text--resume {
-		display: initial;
-	}
-
-	/* the countdown, drawn as the panel's own thickened bottom border: it spans
-	   the panel's inner edge and the panel's own overflow clips its ends to the
-	   corner curve. Its own radii can't do that — scaled to a 0.35rem box they
-	   would round far tighter than the corner they sit in. */
-	.project-info__timer {
+	.project-info__toggle::before {
+		content: '';
 		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		height: var(--home-hero-timer-height, 0.35rem);
-		background: rgba(255, 255, 255, var(--home-hero-timer-track, 0.1));
+		inset: calc(-1 * var(--home-hero-timer-ring-gap, 0.3rem));
+		border-radius: 50%;
+		background: conic-gradient(
+			from 0deg,
+			rgba(255, 255, 255, var(--home-hero-timer-track, 0.18)) 0 var(--pi-ring-sweep, 0deg),
+			var(--accent, #f05d57) var(--pi-ring-sweep, 0deg));
+		-webkit-mask: radial-gradient(
+			farthest-side,
+			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)),
+			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)));
+		mask: radial-gradient(
+			farthest-side,
+			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)),
+			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)));
+		opacity: 0;
+		pointer-events: none;
+		filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+		transition: opacity 150ms ease;
 	}
 
-	.project-info__timer-bar {
-		display: block;
-		height: 100%;
-		background: var(--accent, #f05d57);
-		transform-origin: left center;
-		animation: project-info-timer
-			calc(var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.2)) linear forwards;
+	.project-info.is-open .project-info__toggle::before {
+		opacity: 1;
+		animation: project-info-ring
+			calc(var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.44)) linear forwards;
 	}
 
-	.project-info[data-paused] .project-info__timer-bar {
+	.project-info[data-paused] .project-info__toggle::before {
 		animation-play-state: paused;
 	}
 
-	@keyframes project-info-timer {
-		from { transform: scaleX(1); }
-		to { transform: scaleX(0); }
+	@keyframes project-info-ring {
+		from { --pi-ring-sweep: 0deg; }
+		to { --pi-ring-sweep: 360deg; }
 	}
 
 	.project-info__toggle {
+		position: relative;
 		display: grid;
 		width: 2.75rem;
 		height: 2.75rem;
@@ -476,14 +393,31 @@
 		transform: rotate(-45deg) scale(0.8);
 	}
 
-	.project-info.is-open .project-info__icon--info {
+	/* while open the mark stays the ⓘ inside its depleting ring; hovering or
+	   focusing the button turns it into a ✗ that reads as "click to close" */
+	.project-info.is-open .project-info__toggle:hover .project-info__icon--info,
+	.project-info.is-open .project-info__toggle:focus-visible .project-info__icon--info {
 		opacity: 0;
 		transform: rotate(45deg) scale(0.8);
 	}
 
-	.project-info.is-open .project-info__icon--close {
+	.project-info.is-open .project-info__toggle:hover .project-info__icon--close,
+	.project-info.is-open .project-info__toggle:focus-visible .project-info__icon--close {
 		opacity: 1;
 		transform: rotate(0) scale(1);
+	}
+
+	/* no hover to reveal it on a touch screen, so the open button just shows ✗ */
+	@media (hover: none) {
+		.project-info.is-open .project-info__icon--info {
+			opacity: 0;
+			transform: rotate(45deg) scale(0.8);
+		}
+
+		.project-info.is-open .project-info__icon--close {
+			opacity: 1;
+			transform: rotate(0) scale(1);
+		}
 	}
 
 	.visually-hidden {
@@ -542,16 +476,15 @@
 		}
 
 		.project-info__toggle,
-		.project-info__icon,
-		.project-info__pause {
+		.project-info__icon {
 			transition: none;
 		}
 
-		/* the countdown is information, not decoration, so it keeps its real
-		   duration and its plain linear depletion despite the global reset */
-		.project-info__timer-bar {
+		/* the countdown is information, not decoration, so the ring keeps its real
+		   duration and its plain linear sweep despite the global reset */
+		.project-info.is-open .project-info__toggle::before {
 			animation-duration: calc(
-				var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.2)
+				var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.44)
 			) !important;
 			animation-iteration-count: 1 !important;
 		}

@@ -115,8 +115,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 				<a class="home-hero__pill" href="/individuals/">Individuals</a>
 			</div>
 		</div>
-		{/* the script in HomeProjectInfo swaps this for the touch wording */}
-		<p class="home-hero__hint" aria-hidden="true">Esc or click the hero to return</p>
 		<HomeProjectInfo />
 	</section>
 
@@ -338,10 +336,13 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		--home-hero-read-min: 12.5s;
 		--home-hero-focus-fade: 900ms;
 		--home-hero-focus-fade-reduced: 0s;
-		/* countdown: reading time plus 20%, so the zoom turns around as it ends */
-		--home-hero-timer-slack: 1.2;
-		--home-hero-timer-height: 0.35rem;
-		--home-hero-timer-track: 0.1;
+		/* countdown: reading time plus 44%, so the zoom turns around as it ends */
+		--home-hero-timer-slack: 1.44;
+		/* the countdown ring around the toggle: stroke width, its gap outside the
+		   button, and the alpha of the emptied track it leaves behind */
+		--home-hero-timer-ring-stroke: 0.28rem;
+		--home-hero-timer-ring-gap: 0.3rem;
+		--home-hero-timer-track: 0.18;
 		/* the credit panel's frosted glass, over an undimmed photo */
 		--home-hero-panel-bg-alpha: 0.68;
 		--home-hero-panel-bg-alpha-fallback: 0.93;
@@ -600,32 +601,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	/* after the rule it overrides, so order decides it here — not the global reset */
 	@media (prefers-reduced-motion: reduce) {
 		.home-hero[data-image-focus] .home-hero__bg { animation: none; }
-	}
-
-	.home-hero__hint {
-		position: absolute;
-		left: max(clamp(1.25rem, 4vw, 3.5rem), env(safe-area-inset-left));
-		bottom: max(var(--home-hero-bottom-space), env(safe-area-inset-bottom));
-		z-index: 3;
-		margin: 0;
-		padding: 0.4rem 0.8rem;
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 999px;
-		/* its own plate, like the info panel: the scrim is gone underneath */
-		background: rgba(5, 5, 5, 0.72);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		color: rgba(255, 255, 255, 0.85);
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.75rem;
-		letter-spacing: 0.01em;
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity var(--home-hero-focus-fade) ease;
-	}
-
-	.home-hero[data-image-focus] .home-hero__hint {
-		opacity: 1;
 	}
 
 	/* ─── Partner strip ──────────────────────────────────────────────── */
