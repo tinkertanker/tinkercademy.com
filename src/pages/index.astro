@@ -338,10 +338,20 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		--home-hero-focus-fade-reduced: 0s;
 		/* countdown: reading time plus 44%, so the zoom turns around as it ends */
 		--home-hero-timer-slack: 1.44;
-		/* the countdown ring around the toggle: stroke width, its gap outside the
-		   button, and the alpha of the emptied track it leaves behind */
-		--home-hero-timer-ring-stroke: 0.28rem;
-		--home-hero-timer-ring-gap: 0.3rem;
+		/* the credit panel's corner radius, and the countdown ring nested into that
+		   corner. the ring shares the centre of the corner's rounding arc — so its
+		   centre is inset from the two edges by the radius itself — which makes it
+		   read as tucked concentrically into the curve. its outer diameter is that
+		   radius times -ring-scale (kept below the button ring, so it stays small),
+		   -ring-stroke is a deliberately thick stroke, -ring-inset nudges the centre
+		   further into the panel from that concentric point (0 = concentric), and
+		   -track is the alpha of the emptied arc it leaves behind. the ring maths is
+		   resolved at the pseudo-element (see HomeProjectInfo.astro) so overriding
+		   -panel-radius per breakpoint retunes the ring with it. */
+		--home-hero-panel-radius: 1.75rem;
+		--home-hero-timer-ring-scale: 1.15;
+		--home-hero-timer-ring-stroke: 0.42rem;
+		--home-hero-timer-ring-inset: 0rem;
 		--home-hero-timer-track: 0.18;
 		/* the credit panel's frosted glass, over an undimmed photo */
 		--home-hero-panel-bg-alpha: 0.68;

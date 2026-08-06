@@ -206,16 +206,16 @@
 	.project-info__panel {
 		position: absolute;
 		right: 0;
-		/* clears the countdown ring that now rings the toggle, so the ring's
-		   12-o'clock start is never tucked under the panel's bottom edge */
-		bottom: calc(100% + var(--home-hero-timer-ring-gap, 0.3rem) + 0.35rem);
+		/* the ring lives inside this panel now, so this is just the gap that
+		   floats the panel clear of the toggle below it */
+		bottom: calc(100% + 0.65rem);
 		display: flex;
 		flex-direction: column;
 		width: min(25rem, calc(100vw - 2.5rem));
 		padding: clamp(1.35rem, 3vw, 2rem);
 		border: 1px solid rgba(255, 255, 255, 0.16);
 		border-top-color: rgba(255, 255, 255, 0.3);
-		border-radius: 1.75rem;
+		border-radius: var(--home-hero-panel-radius, 1.75rem);
 		background-color: rgba(5, 5, 5, var(--home-hero-panel-bg-alpha, 0.68));
 		background-image: linear-gradient(
 			160deg,
@@ -288,20 +288,32 @@
 		outline-offset: 0.3rem;
 	}
 
-	/* the countdown, drawn as a ring around the toggle: a conic sweep un-fills
-	   clockwise from 12 o'clock as the clock runs, and a radial mask cuts the
-	   disc down to a stroke. the sweep angle is a registered property so it can
-	   be animated and paused; its end is the whole time limit. */
+	/* the countdown, drawn as a small ring tucked into the panel's bottom-right
+	   corner: a conic sweep un-fills clockwise from 12 o'clock as the clock runs,
+	   and a radial mask cuts the disc down to a stroke. the sweep angle is a
+	   registered property so it can be animated and paused; its end is the whole
+	   time limit. the ring shares the centre of the corner's rounding arc — its
+	   inset from both edges is the corner radius — so it nests concentrically into
+	   the curve rather than floating, and its diameter is derived from that radius. */
 	@property --pi-ring-sweep {
 		syntax: '<angle>';
 		inherits: false;
 		initial-value: 0deg;
 	}
 
-	.project-info__toggle::before {
+	.project-info__panel::after {
 		content: '';
 		position: absolute;
-		inset: calc(-1 * var(--home-hero-timer-ring-gap, 0.3rem));
+		/* resolved here, on the pseudo-element, so the panel's per-breakpoint
+		   --home-hero-panel-radius flows into both the size and the concentric
+		   inset. centre sits (radius + nudge) in from each edge; the box offset
+		   backs that out by half the diameter. */
+		--pi-ring-radius: var(--home-hero-panel-radius, 1.75rem);
+		--pi-ring-size: calc(var(--pi-ring-radius) * var(--home-hero-timer-ring-scale, 1.15));
+		right: calc(var(--pi-ring-radius) + var(--home-hero-timer-ring-inset, 0rem) - var(--pi-ring-size) / 2);
+		bottom: calc(var(--pi-ring-radius) + var(--home-hero-timer-ring-inset, 0rem) - var(--pi-ring-size) / 2);
+		width: var(--pi-ring-size);
+		height: var(--pi-ring-size);
 		border-radius: 50%;
 		background: conic-gradient(
 			from 0deg,
@@ -309,25 +321,25 @@
 			var(--accent, #f05d57) var(--pi-ring-sweep, 0deg));
 		-webkit-mask: radial-gradient(
 			farthest-side,
-			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)),
-			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)));
+			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)),
+			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)));
 		mask: radial-gradient(
 			farthest-side,
-			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)),
-			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.28rem)));
+			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)),
+			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)));
 		opacity: 0;
 		pointer-events: none;
 		filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
 		transition: opacity 150ms ease;
 	}
 
-	.project-info.is-open .project-info__toggle::before {
+	.project-info.is-open .project-info__panel::after {
 		opacity: 1;
 		animation: project-info-ring
 			calc(var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.44)) linear forwards;
 	}
 
-	.project-info[data-paused] .project-info__toggle::before {
+	.project-info[data-paused] .project-info__panel::after {
 		animation-play-state: paused;
 	}
 
@@ -393,8 +405,8 @@
 		transform: rotate(-45deg) scale(0.8);
 	}
 
-	/* while open the mark stays the ⓘ inside its depleting ring; hovering or
-	   focusing the button turns it into a ✗ that reads as "click to close" */
+	/* while open the mark stays the ⓘ; hovering or focusing the button turns it
+	   into a ✗ that reads as "click to close" (the countdown ring is on the panel) */
 	.project-info.is-open .project-info__toggle:hover .project-info__icon--info,
 	.project-info.is-open .project-info__toggle:focus-visible .project-info__icon--info {
 		opacity: 0;
@@ -449,10 +461,10 @@
 		}
 
 		.project-info__panel {
+			--home-hero-panel-radius: 1.4rem;
 			bottom: calc(100% + 1rem);
 			width: min(22rem, calc(100vw - 2.3rem));
 			padding: 1.35rem;
-			border-radius: 1.4rem;
 		}
 
 		.project-info__panel p {
@@ -482,7 +494,7 @@
 
 		/* the countdown is information, not decoration, so the ring keeps its real
 		   duration and its plain linear sweep despite the global reset */
-		.project-info.is-open .project-info__toggle::before {
+		.project-info.is-open .project-info__panel::after {
 			animation-duration: calc(
 				var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.44)
 			) !important;
