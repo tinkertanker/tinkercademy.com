@@ -4,7 +4,7 @@
 		type="button"
 		aria-expanded="false"
 		aria-controls="home-project-info"
-		aria-label="Show information about Body, Heart, and Soul"
+		aria-label="View the hero image and project details"
 	>
 		<svg class="project-info__icon project-info__icon--info" viewBox="0 0 48 48" aria-hidden="true">
 			<circle cx="24" cy="24" r="20.5"></circle>
@@ -49,23 +49,128 @@
 	const toggle = projectInfo?.querySelector<HTMLButtonElement>('.project-info__toggle');
 	const panel = projectInfo?.querySelector<HTMLElement>('.project-info__panel');
 
+	/* opening also hands the hero over to the photograph: see the
+	   [data-image-focus] block in src/pages/index.astro */
+	const hero = projectInfo?.closest<HTMLElement>('.home-hero');
+	const heroBg = hero?.querySelector<HTMLElement>('.home-hero__bg');
+	const heroContent = hero?.querySelector<HTMLElement>('.home-hero__content');
+	const heroFocusables = heroContent
+		? [...heroContent.querySelectorAll<HTMLElement>('a[href], button')]
+		: [];
+	const supportsInert = 'inert' in HTMLElement.prototype;
+
+	/* used only if the custom properties can't be read */
+	const READ_WPM = 80;
+	const READ_MIN = 12.5;
+
+	function seconds(value: string) {
+		const n = Number.parseFloat(value);
+		if (!Number.isFinite(n)) return null;
+		return value.trim().endsWith('ms') ? n / 1000 : n;
+	}
+
+	/* the countdown and the Ken Burns half-period both come from how long this
+	   panel's own copy takes to read, so retiming is a copy edit */
+	function readingSeconds() {
+		const style = hero ? getComputedStyle(hero) : null;
+		const override = style?.getPropertyValue('--home-hero-focus-zoom-duration').trim() ?? '';
+		if (override && override !== 'auto') return seconds(override) ?? READ_MIN;
+
+		const copy = panel?.querySelector('p')?.cloneNode(true) as HTMLElement | undefined;
+		copy?.querySelectorAll('.visually-hidden').forEach((el) => el.remove());
+		const words = (copy?.textContent ?? '').trim().split(/\s+/).filter(Boolean).length;
+
+		const wpm = Number.parseFloat(style?.getPropertyValue('--home-hero-read-wpm') ?? '') || READ_WPM;
+		const min = seconds(style?.getPropertyValue('--home-hero-read-min') ?? '') ?? READ_MIN;
+		return Math.max(min, (words / wpm) * 60);
+	}
+
+	function bgScale() {
+		const value = heroBg ? getComputedStyle(heroBg).transform : 'none';
+		if (!value || value === 'none') return 1;
+		return new DOMMatrixReadOnly(value).a || 1;
+	}
+
+	function setPaused(paused: boolean) {
+		projectInfo?.toggleAttribute('data-paused', paused);
+		hero?.toggleAttribute('data-focus-paused', paused);
+	}
+
 	function setProjectInfoOpen(open: boolean) {
 		if (!toggle || !panel) return;
+
+		setPaused(false);
+		if (open) {
+			hero?.style.setProperty('--home-hero-read-time', `${readingSeconds().toFixed(2)}s`);
+			/* read live, so a press during the unwind picks the drift up where the
+			   image is rather than snapping back to 1; from rest this reads 1 */
+			hero?.style.setProperty('--home-hero-focus-enter-scale', String(bgScale()));
+			hero?.removeAttribute('data-focus-exiting');
+		} else if (hero?.hasAttribute('data-image-focus')) {
+			/* freeze the drift where it stands, then let CSS ease it back to 1 */
+			hero.style.setProperty('--home-hero-focus-exit-scale', String(bgScale()));
+			hero.setAttribute('data-focus-exiting', '');
+		}
 
 		toggle.setAttribute('aria-expanded', String(open));
 		toggle.setAttribute(
 			'aria-label',
-			open
-				? 'Hide information about Body, Heart, and Soul'
-				: 'Show information about Body, Heart, and Soul',
+			open ? 'Return to the page' : 'View the hero image and project details',
 		);
 		projectInfo?.classList.toggle('is-open', open);
 		panel.hidden = !open;
+
+		hero?.toggleAttribute('data-image-focus', open);
+		if (!heroContent) return;
+
+		if (open) {
+			heroContent.setAttribute('aria-hidden', 'true');
+			if (heroContent.contains(document.activeElement)) toggle.focus();
+		} else {
+			heroContent.removeAttribute('aria-hidden');
+		}
+		if (supportsInert) {
+			heroContent.toggleAttribute('inert', open);
+		} else {
+			for (const el of heroFocusables) {
+				if (open) el.setAttribute('tabindex', '-1');
+				else el.removeAttribute('tabindex');
+			}
+		}
 	}
 
 	toggle?.addEventListener('click', () => {
 		setProjectInfoOpen(toggle.getAttribute('aria-expanded') !== 'true');
 	});
+
+	heroBg?.addEventListener('animationend', (event) => {
+		if (event.animationName === 'home-hero-zoom-out') hero?.removeAttribute('data-focus-exiting');
+	});
+
+	/* the drift turns around at the top either way, so dropping the enter scale
+	   here is seamless and gives the following legs their full range back */
+	heroBg?.addEventListener('animationiteration', (event) => {
+		if (event.animationName === 'home-hero-zoom') {
+			hero?.style.removeProperty('--home-hero-focus-enter-scale');
+		}
+	});
+
+	/* the ring depletes on CSS alone, so its end is the whole time limit */
+	projectInfo?.addEventListener('animationend', (event) => {
+		if (event.animationName !== 'project-info-ring') return;
+		const hadFocus = panel?.contains(document.activeElement) ?? false;
+		setProjectInfoOpen(false);
+		if (hadFocus) toggle?.focus();
+	});
+
+	/* a press anywhere on the panel stops the clock; the credit link still wins */
+	panel?.addEventListener('click', (event) => {
+		if (event.target instanceof Element && event.target.closest('.project-info__link')) return;
+		setPaused(true);
+	});
+
+	/* a keyboard user can't hover, so focus reaching the panel stops the clock */
+	panel?.addEventListener('focusin', () => setPaused(true));
 
 	document.addEventListener('keydown', (event) => {
 		if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') {
@@ -96,21 +201,43 @@
 		align-items: flex-end;
 	}
 
+	/* frosted glass: focus mode takes the scrim to zero, so this plate alone
+	   carries the text contrast. Tunables live on .home-hero in index.astro. */
 	.project-info__panel {
 		position: absolute;
 		right: 0;
-		bottom: calc(100% - 0.25rem);
+		/* the ring lives inside this panel now, so this is just the gap that
+		   floats the panel clear of the toggle below it */
+		bottom: calc(100% + 0.65rem);
+		display: flex;
+		flex-direction: column;
 		width: min(25rem, calc(100vw - 2.5rem));
 		padding: clamp(1.35rem, 3vw, 2rem);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 1.75rem;
-		background: rgba(5, 5, 5, 0.9);
-		box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.38);
-		backdrop-filter: blur(18px);
-		-webkit-backdrop-filter: blur(18px);
+		border: 1px solid rgba(255, 255, 255, 0.16);
+		border-top-color: rgba(255, 255, 255, 0.3);
+		border-radius: var(--home-hero-panel-radius, 1.75rem);
+		background-color: rgba(5, 5, 5, var(--home-hero-panel-bg-alpha, 0.68));
+		background-image: linear-gradient(
+			160deg,
+			rgba(255, 255, 255, var(--home-hero-panel-sheen, 0.05)),
+			rgba(255, 255, 255, 0) 42%);
+		box-shadow:
+			inset 0 1px 0 rgba(255, 255, 255, var(--home-hero-panel-edge, 0.35)),
+			0 1.5rem 4rem rgba(0, 0, 0, 0.45);
+		backdrop-filter: blur(var(--home-hero-panel-blur, 18px))
+			saturate(var(--home-hero-panel-saturate, 1.3));
+		-webkit-backdrop-filter: blur(var(--home-hero-panel-blur, 18px))
+			saturate(var(--home-hero-panel-saturate, 1.3));
 		color: #fff;
 		transform-origin: bottom right;
 		animation: project-info-in 180ms ease-out both;
+	}
+
+	/* without the blur a transparent plate over a busy photo is unreadable */
+	@supports not (backdrop-filter: blur(2px)) {
+		.project-info__panel {
+			background-color: rgba(5, 5, 5, var(--home-hero-panel-bg-alpha-fallback, 0.93));
+		}
 	}
 
 	.project-info__panel[hidden] {
@@ -161,7 +288,68 @@
 		outline-offset: 0.3rem;
 	}
 
+	/* the countdown, drawn as a small ring tucked into the panel's bottom-right
+	   corner: a conic sweep un-fills clockwise from 12 o'clock as the clock runs,
+	   and a radial mask cuts the disc down to a stroke. the sweep angle is a
+	   registered property so it can be animated and paused; its end is the whole
+	   time limit. the ring shares the centre of the corner's rounding arc — its
+	   inset from both edges is the corner radius — so it nests concentrically into
+	   the curve rather than floating, and its diameter is derived from that radius. */
+	@property --pi-ring-sweep {
+		syntax: '<angle>';
+		inherits: false;
+		initial-value: 0deg;
+	}
+
+	.project-info__panel::after {
+		content: '';
+		position: absolute;
+		/* resolved here, on the pseudo-element, so the panel's per-breakpoint
+		   --home-hero-panel-radius flows into both the size and the concentric
+		   inset. centre sits (radius + nudge) in from each edge; the box offset
+		   backs that out by half the diameter. */
+		--pi-ring-radius: var(--home-hero-panel-radius, 1.75rem);
+		--pi-ring-size: calc(var(--pi-ring-radius) * var(--home-hero-timer-ring-scale, 1.15));
+		right: calc(var(--pi-ring-radius) + var(--home-hero-timer-ring-inset, 0rem) - var(--pi-ring-size) / 2);
+		bottom: calc(var(--pi-ring-radius) + var(--home-hero-timer-ring-inset, 0rem) - var(--pi-ring-size) / 2);
+		width: var(--pi-ring-size);
+		height: var(--pi-ring-size);
+		border-radius: 50%;
+		background: conic-gradient(
+			from 0deg,
+			rgba(255, 255, 255, var(--home-hero-timer-track, 0.18)) 0 var(--pi-ring-sweep, 0deg),
+			var(--accent, #f05d57) var(--pi-ring-sweep, 0deg));
+		-webkit-mask: radial-gradient(
+			farthest-side,
+			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)),
+			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)));
+		mask: radial-gradient(
+			farthest-side,
+			#0000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)),
+			#000 calc(100% - var(--home-hero-timer-ring-stroke, 0.42rem)));
+		opacity: 0;
+		pointer-events: none;
+		filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55));
+		transition: opacity 150ms ease;
+	}
+
+	.project-info.is-open .project-info__panel::after {
+		opacity: 1;
+		animation: project-info-ring
+			calc(var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.44)) linear forwards;
+	}
+
+	.project-info[data-paused] .project-info__panel::after {
+		animation-play-state: paused;
+	}
+
+	@keyframes project-info-ring {
+		from { --pi-ring-sweep: 0deg; }
+		to { --pi-ring-sweep: 360deg; }
+	}
+
 	.project-info__toggle {
+		position: relative;
 		display: grid;
 		width: 2.75rem;
 		height: 2.75rem;
@@ -217,14 +405,31 @@
 		transform: rotate(-45deg) scale(0.8);
 	}
 
-	.project-info.is-open .project-info__icon--info {
+	/* while open the mark stays the ⓘ; hovering or focusing the button turns it
+	   into a ✗ that reads as "click to close" (the countdown ring is on the panel) */
+	.project-info.is-open .project-info__toggle:hover .project-info__icon--info,
+	.project-info.is-open .project-info__toggle:focus-visible .project-info__icon--info {
 		opacity: 0;
 		transform: rotate(45deg) scale(0.8);
 	}
 
-	.project-info.is-open .project-info__icon--close {
+	.project-info.is-open .project-info__toggle:hover .project-info__icon--close,
+	.project-info.is-open .project-info__toggle:focus-visible .project-info__icon--close {
 		opacity: 1;
 		transform: rotate(0) scale(1);
+	}
+
+	/* no hover to reveal it on a touch screen, so the open button just shows ✗ */
+	@media (hover: none) {
+		.project-info.is-open .project-info__icon--info {
+			opacity: 0;
+			transform: rotate(45deg) scale(0.8);
+		}
+
+		.project-info.is-open .project-info__icon--close {
+			opacity: 1;
+			transform: rotate(0) scale(1);
+		}
 	}
 
 	.visually-hidden {
@@ -256,10 +461,10 @@
 		}
 
 		.project-info__panel {
+			--home-hero-panel-radius: 1.4rem;
 			bottom: calc(100% + 1rem);
 			width: min(22rem, calc(100vw - 2.3rem));
 			padding: 1.35rem;
-			border-radius: 1.4rem;
 		}
 
 		.project-info__panel p {
@@ -285,6 +490,15 @@
 		.project-info__toggle,
 		.project-info__icon {
 			transition: none;
+		}
+
+		/* the countdown is information, not decoration, so the ring keeps its real
+		   duration and its plain linear sweep despite the global reset */
+		.project-info.is-open .project-info__panel::after {
+			animation-duration: calc(
+				var(--home-hero-read-time, 30s) * var(--home-hero-timer-slack, 1.44)
+			) !important;
+			animation-iteration-count: 1 !important;
 		}
 	}
 </style>

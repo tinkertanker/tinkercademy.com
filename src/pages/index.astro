@@ -311,6 +311,58 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	/* ─── Hero ─────────────────────────────────────────────────────────── */
 	.home-hero {
 		--home-hero-bottom-space: clamp(3rem, 5vw, 4rem);
+		/* every tunable of the scrim, the glow peak and image-focus mode lives
+		   here, so tuning is a one-line edit rather than a keyframe hunt */
+		--home-hero-scrim-base: 0.35;
+		/* the gradient used to spend its darkness at 0%, where no text sits.
+		   the ramp now starts at the 15% stop instead, so the same ink lands
+		   under the text and the top of the photo is left alone */
+		--home-hero-scrim-top: 0;
+		--home-hero-scrim-mid: 0.15;
+		--home-hero-scrim-mid-stop: 15%;
+		--home-hero-scrim-bottom: 0.7;
+		/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
+		--home-hero-spot-peak: 1;
+		--home-hero-focus-text-opacity: 0;
+		/* the drift is slow enough to be imperceptible below ~0.5%/s, and the
+		   half-period is now the 18.75s reading time, so the scale has to rise
+		   with it: 1.14 over 18.75s is 0.75%/s, the rate 1.06 had over 7.5s */
+		--home-hero-focus-zoom: 1.14;
+		/* `auto` follows the panel's reading time; an explicit <time> overrides it */
+		--home-hero-focus-zoom-duration: auto;
+		/* the reading-time script overwrites this; 30s is the no-script default */
+		--home-hero-read-time: 30s;
+		--home-hero-read-wpm: 80;
+		--home-hero-read-min: 12.5s;
+		--home-hero-focus-fade: 900ms;
+		--home-hero-focus-fade-reduced: 0s;
+		/* countdown: reading time plus 44%, so the zoom turns around as it ends */
+		--home-hero-timer-slack: 1.44;
+		/* the credit panel's corner radius, and the countdown ring nested into that
+		   corner. the ring shares the centre of the corner's rounding arc — so its
+		   centre is inset from the two edges by the radius itself — which makes it
+		   read as tucked concentrically into the curve. its outer diameter is that
+		   radius times -ring-scale (kept below the button ring, so it stays small),
+		   -ring-stroke is a deliberately thick stroke, -ring-inset nudges the centre
+		   further into the panel from that concentric point (0 = concentric), and
+		   -track is the alpha of the emptied arc it leaves behind. the ring maths is
+		   resolved at the pseudo-element (see HomeProjectInfo.astro) so overriding
+		   -panel-radius per breakpoint retunes the ring with it. */
+		--home-hero-panel-radius: 1.75rem;
+		--home-hero-timer-ring-scale: 1.15;
+		--home-hero-timer-ring-stroke: 0.42rem;
+		--home-hero-timer-ring-inset: 0rem;
+		--home-hero-timer-track: 0.18;
+		/* the credit panel's frosted glass, over an undimmed photo */
+		--home-hero-panel-bg-alpha: 0.68;
+		--home-hero-panel-bg-alpha-fallback: 0.93;
+		/* 9px was asked for, but at 0.68 alpha it drops the credit link to 4.21:1
+		   over the undimmed photo — under the 4.5:1 floor. 18px is the least blur
+		   that clears it; past 20px the alpha, not the blur, is the limit. */
+		--home-hero-panel-blur: 18px;
+		--home-hero-panel-saturate: 1.3;
+		--home-hero-panel-sheen: 0.05;
+		--home-hero-panel-edge: 0.35;
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
@@ -331,13 +383,14 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-hero__scrim {
 		position: absolute;
 		inset: 0;
-		/* the gradient used to spend its darkness at 0%, where no text sits.
-		   the ramp now starts at the 15% stop instead, so the same ink lands
-		   under the text and the top of the photo is left alone */
 		background:
-			linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.7) 100%);
+			linear-gradient(180deg,
+				rgba(0, 0, 0, var(--home-hero-scrim-top)) 0%,
+				rgba(0, 0, 0, var(--home-hero-scrim-mid)) var(--home-hero-scrim-mid-stop),
+				rgba(0, 0, 0, var(--home-hero-scrim-bottom)) 100%);
 		/* floor under the gradient, which is at its lightest over the text */
-		background-color: rgba(0, 0, 0, 0.35);
+		background-color: rgba(0, 0, 0, var(--home-hero-scrim-base));
+		transition: opacity var(--home-hero-focus-fade) ease;
 	}
 
 	.home-hero__content {
@@ -348,6 +401,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		min-height: inherit;
 		padding: clamp(4rem, 9vw, 7rem) 0 var(--home-hero-bottom-space);
 		gap: 1.1rem;
+		transition: opacity var(--home-hero-focus-fade) ease;
 	}
 
 	.home-hero__title {
@@ -370,6 +424,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		width: 100%;
 		height: 100%;
 		pointer-events: none;
+		transition: opacity var(--home-hero-focus-fade) ease;
 	}
 
 	/* "Gilded Ember": 2s heartbeat + a gilded pass every 7s.
@@ -444,11 +499,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		animation: highlight-spot 10.5s ease-in-out infinite;
 	}
 
-	/* peak 1, not 0.5: the owner would rather have the glow than the contrast it costs */
 	@keyframes highlight-spot {
 		0% { --sx: 28.95%; opacity: 0; }
-		15% { opacity: 1; }
-		55% { --sx: 71.05%; opacity: 1; }
+		15% { opacity: var(--home-hero-spot-peak); }
+		55% { --sx: 71.05%; opacity: var(--home-hero-spot-peak); }
 		70%, 100% { --sx: 71.05%; opacity: 0; }
 	}
 
@@ -457,6 +511,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		.home-hero__highlight::after { animation: none; }
 		.home-hero__highlight::before { animation: none; opacity: 0; }
 		.home-hero__motes { display: none; }
+		/* image focus still works, minus the drift and the cross-fade */
+		.home-hero { --home-hero-focus-fade: var(--home-hero-focus-fade-reduced); }
 	}
 
 	.home-hero__lead {
@@ -507,6 +563,54 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-hero__pill--primary:hover {
 		background: rgb(154, 44, 39);
 		border-color: rgb(154, 44, 39);
+	}
+
+	/* ─── Image focus ────────────────────────────────────────────────── */
+	/* no hero text is over the photo in this state, so the scrim can go to
+	   zero without touching the contrast floor the normal state needs */
+	.home-hero[data-image-focus] .home-hero__scrim {
+		opacity: 0;
+	}
+
+	.home-hero[data-image-focus] .home-hero__content,
+	.home-hero[data-image-focus] .home-hero__motes {
+		opacity: var(--home-hero-focus-text-opacity);
+		pointer-events: none;
+	}
+
+	/* transform-origin is already the default centre and the first keyframe is
+	   scale(1), so attaching this on press cannot shift the framing */
+	.home-hero[data-image-focus] .home-hero__bg {
+		transform-origin: center;
+		/* half-period = the panel's reading time */
+		animation: home-hero-zoom var(--home-hero-read-time) ease-in-out infinite alternate;
+	}
+
+	/* after the shorthand above, which resets play-state to running */
+	.home-hero[data-focus-paused] .home-hero__bg {
+		animation-play-state: paused;
+	}
+
+	/* unwinds the drift over the fade instead of snapping back to scale(1) */
+	.home-hero[data-focus-exiting] .home-hero__bg {
+		animation: home-hero-zoom-out var(--home-hero-focus-fade) ease both;
+	}
+
+	/* the enter scale is 1 from rest, and whatever the unwind reached when the
+	   toggle is re-pressed mid-exit; the script drops it after the first turn */
+	@keyframes home-hero-zoom {
+		from { transform: scale(var(--home-hero-focus-enter-scale, 1)); }
+		to { transform: scale(var(--home-hero-focus-zoom)); }
+	}
+
+	@keyframes home-hero-zoom-out {
+		from { transform: scale(var(--home-hero-focus-exit-scale, 1)); }
+		to { transform: scale(1); }
+	}
+
+	/* after the rule it overrides, so order decides it here — not the global reset */
+	@media (prefers-reduced-motion: reduce) {
+		.home-hero[data-image-focus] .home-hero__bg { animation: none; }
 	}
 
 	/* ─── Partner strip ──────────────────────────────────────────────── */
@@ -987,15 +1091,33 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			wait: number; tw: number;
 		};
 
-		const spawn = (waitMs: number): Mote => {
+		/* the word's box in canvas space, refreshed once a frame. the hero
+		   reflows on resize, orientation change and mobile url-bar collapse,
+		   and motes already in flight have to be carried along with it or they
+		   keep streaming out of wherever the word used to be */
+		const box = { x: 0, y: 0, w: 0, h: 0 };
+		/* the delta is measured on the word's centre, not its corner: a rewrap
+		   changes the word's width too, and the cloud has to stay centred on
+		   it rather than pinned to its left edge */
+		const measure = () => {
 			const wr = word.getBoundingClientRect();
 			const hr = canvas.getBoundingClientRect();
-			const bx = wr.left - hr.left;
-			const by = wr.top - hr.top;
-			const x = bx + Math.random() * wr.width;
-			const y = by + wr.height * (0.1 + Math.random() * 0.8);
-			const wcx = bx + wr.width / 2;
-			const wcy = by + wr.height / 2;
+			const x = wr.left - hr.left;
+			const y = wr.top - hr.top;
+			const dx = x + wr.width / 2 - (box.x + box.w / 2);
+			const dy = y + wr.height / 2 - (box.y + box.h / 2);
+			box.x = x;
+			box.y = y;
+			box.w = wr.width;
+			box.h = wr.height;
+			return { dx, dy };
+		};
+
+		const spawn = (waitMs: number): Mote => {
+			const x = box.x + Math.random() * box.w;
+			const y = box.y + box.h * (0.1 + Math.random() * 0.8);
+			const wcx = box.x + box.w / 2;
+			const wcy = box.y + box.h / 2;
 			const d = Math.hypot(x - wcx, y - wcy);
 			const ang =
 				(d < 4 ? Math.random() * 6.283 : Math.atan2(y - wcy, x - wcx)) +
@@ -1012,6 +1134,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			};
 		};
 
+		measure();
 		const motes: Mote[] = Array.from({ length: 30 }, () => {
 			const m = spawn(Math.random() * STAGGER);
 			const head = Math.random() * m.range;
@@ -1040,6 +1163,15 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			}
 			const dt = Math.min(0.05, (ts - last) / 1000);
 			last = ts;
+			const { dx, dy } = measure();
+			if (dx || dy) {
+				for (const m of motes) {
+					m.x += dx;
+					m.y += dy;
+					m.x0 += dx;
+					m.y0 += dy;
+				}
+			}
 			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 			ctx.clearRect(0, 0, w, h);
 			ctx.globalCompositeOperation = 'lighter';
