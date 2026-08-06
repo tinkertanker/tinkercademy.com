@@ -166,7 +166,7 @@
 	/* a press anywhere on the panel stops the clock; the credit link still wins */
 	panel?.addEventListener('click', (event) => {
 		if (event.target instanceof Element && event.target.closest('.project-info__link')) return;
-		setPaused(!projectInfo?.hasAttribute('data-paused'));
+		setPaused(true);
 	});
 
 	/* a keyboard user can't hover, so focus reaching the panel stops the clock */
