@@ -1,0 +1,85 @@
+[
+	{
+		"id": "home",
+		"note": "Homepage hero — mascot waving hello beside a block-coding laptop.",
+		"accent": "red",
+		"headlineSide": "left",
+		"mascot": { "pose": "greetings", "x": 0.6, "y": 0.51, "h": 0.62 },
+		"props": [
+			{ "type": "laptop", "screen": "blocks", "x": 0.85, "y": 0.8, "w": 0.21 },
+			{ "type": "blocks", "x": 0.71, "y": 0.772, "w": 0.08, "layer": "front" },
+			{ "type": "bubble", "kind": "code", "x": 0.47, "y": 0.22, "w": 0.09, "tail": "right" },
+			{ "type": "sparkle", "x": 0.7, "y": 0.15, "w": 0.025 },
+			{ "type": "sparkle", "x": 0.94, "y": 0.3, "w": 0.018 },
+			{ "type": "sparkle", "x": 0.5, "y": 0.68, "w": 0.015 }
+		]
+	},
+	{
+		"id": "courses-schools",
+		"note": "Schools course listing — mascot points toward the headline; micro:bit + blocks laptop.",
+		"accent": "orange",
+		"headlineSide": "left",
+		"mascot": { "pose": "point-left", "x": 0.68, "y": 0.52, "h": 0.6 },
+		"props": [
+			{ "type": "microbit", "x": 0.875, "y": 0.711, "w": 0.16, "accent": "red" },
+			{ "type": "laptop", "screen": "blocks", "x": 0.48, "y": 0.8, "w": 0.19 },
+			{ "type": "sparkle", "x": 0.79, "y": 0.16, "w": 0.022 },
+			{ "type": "sparkle", "x": 0.95, "y": 0.36, "w": 0.015 }
+		]
+	},
+	{
+		"id": "individuals",
+		"note": "Self-directed learners — mascot saluting, code laptop, phone, coffee.",
+		"accent": "teal",
+		"headlineSide": "left",
+		"mascot": { "pose": "salute", "x": 0.62, "y": 0.52, "h": 0.6 },
+		"props": [
+			{ "type": "laptop", "screen": "code", "x": 0.84, "y": 0.8, "w": 0.2 },
+			{ "type": "phone", "x": 0.955, "y": 0.731, "w": 0.045 },
+			{ "type": "mug", "x": 0.485, "y": 0.771, "w": 0.05 },
+			{ "type": "bubble", "kind": "dots", "x": 0.49, "y": 0.24, "w": 0.085, "tail": "right" },
+			{ "type": "sparkle", "x": 0.73, "y": 0.14, "w": 0.02 }
+		]
+	},
+	{
+		"id": "imda-microbit-2025",
+		"note": "micro:bit programme — hand up to answer, oversized micro:bit.",
+		"accent": "red",
+		"headlineSide": "left",
+		"mascot": { "pose": "handraise", "x": 0.57, "y": 0.49, "h": 0.66 },
+		"props": [
+			{ "type": "microbit", "x": 0.81, "y": 0.697, "w": 0.18 },
+			{ "type": "blocks", "x": 0.935, "y": 0.772, "w": 0.07 },
+			{ "type": "bubble", "kind": "spark", "x": 0.45, "y": 0.2, "w": 0.08, "tail": "right", "accent": "orange" },
+			{ "type": "sparkle", "x": 0.68, "y": 0.13, "w": 0.02 },
+			{ "type": "sparkle", "x": 0.92, "y": 0.32, "w": 0.015 }
+		]
+	},
+	{
+		"id": "mastering-the-web",
+		"note": "Professional web course — browser window + typed-code laptop, confident thumbs up.",
+		"accent": "teal",
+		"headlineSide": "left",
+		"mascot": { "pose": "thumbsup", "x": 0.645, "y": 0.52, "h": 0.6 },
+		"props": [
+			{ "type": "browser", "x": 0.865, "y": 0.36, "w": 0.18 },
+			{ "type": "laptop", "screen": "code", "x": 0.475, "y": 0.8, "w": 0.19 },
+			{ "type": "sparkle", "x": 0.74, "y": 0.14, "w": 0.02 },
+			{ "type": "sparkle", "x": 0.95, "y": 0.75, "w": 0.016 }
+		]
+	},
+	{
+		"id": "agentic-ai-for-digital-builders",
+		"note": "Agentic AI course — chat-panel laptop, thinking and code bubbles, finger guns.",
+		"accent": "red",
+		"headlineSide": "left",
+		"mascot": { "pose": "fingerguns", "x": 0.63, "y": 0.53, "h": 0.58 },
+		"props": [
+			{ "type": "laptop", "screen": "chat", "x": 0.86, "y": 0.8, "w": 0.2 },
+			{ "type": "bubble", "kind": "dots", "x": 0.46, "y": 0.26, "w": 0.08, "tail": "right" },
+			{ "type": "bubble", "kind": "code", "x": 0.9, "y": 0.22, "w": 0.08, "tail": "left", "accent": "teal" },
+			{ "type": "sparkle", "x": 0.66, "y": 0.13, "w": 0.02 },
+			{ "type": "sparkle", "x": 0.52, "y": 0.74, "w": 0.015 }
+		]
+	}
+]
