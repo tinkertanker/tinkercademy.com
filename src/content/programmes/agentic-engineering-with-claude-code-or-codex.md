@@ -26,11 +26,11 @@ seoDescription: "A two-day workshop for software developers: direct Claude Code 
 
 <h3>Setup</h3><p dir="auto">Form a team and prepare Claude Code or Codex, GitHub, and the course tools. You'll also get a short briefing on how coding agents work inside a development environment.</p>
 
-<h3>Project 1: CRUD app</h3><ul dir="auto"><li data-preset-tag="p"><p>Write a one-page PRD and have the agent build a small app from it.</p></li><li data-preset-tag="p"><p>Check the result against the brief.</p></li></ul>
+<h3>Project 1: CRUD app</h3><ul dir="auto"><li data-preset-tag="p"><p>Write a one-page PRD and have the agent build a small app from it.</p></li></ul>
 
 <h3>Project 2: Simulation agent</h3><ul dir="auto"><li data-preset-tag="p"><p>Play a simulation, then build an agent that operates it.</p></li><li data-preset-tag="p"><p>Practise tools, MCP, skills, loops, and persistent state.</p></li><li data-preset-tag="p"><p>Write evals, compare models, and add quality gates.</p></li></ul>
 
-<h3>Project 3: Team AI app</h3><ul dir="auto"><li data-preset-tag="p"><p>Build a small team app using at least three course techniques.</p></li><li data-preset-tag="p"><p>The app does not need a simulation or an agent loop.</p></li></ul>
+<h3>Project 3: Team AI app</h3><ul dir="auto"><li data-preset-tag="p"><p>Build a small team app using at least three course techniques.</p></li></ul>
 
 <h3>Presentations and conclusion</h3><p dir="auto">Explore Claude Code on the web, present the AI app, and plan what comes next. Each team explains the problem, the input-to-output path, the three techniques they chose, and one item of evidence.</p>
 
