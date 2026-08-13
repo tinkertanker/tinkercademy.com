@@ -43,6 +43,8 @@
 /programmes/page/5/ /courses-all/ 301
 
 # Legacy programme and attachment URLs with clear parent pages.
+/programmes/advanced-agentic-coding-with-claude-code-or-codex /programmes/agentic-engineering-with-claude-code-or-codex/ 301
+/programmes/advanced-agentic-coding-with-claude-code-or-codex/ /programmes/agentic-engineering-with-claude-code-or-codex/ 301
 /programmes/code-for-fun/ /programmes/code-for-fun-baseline-workshop/ 301
 /corporate/640px-phillipcapital_logo/ /professionals/ 301
 /programmes/minecraft-hacker-camp/python-icon/ /programmes/imda-minecraft-2025/ 301
