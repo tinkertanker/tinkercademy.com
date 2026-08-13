@@ -38,6 +38,7 @@ export default defineConfig({
 			filter: (page) => {
 				const path = new URL(page).pathname;
 				if (/\/courses\/?$/.test(path)) return false;
+				if (/\/programmes\/advanced-agentic-coding-with-claude-code-or-codex\/?$/.test(path)) return false;
 				if (path.startsWith('/review/')) return false;
 				return true;
 			},
