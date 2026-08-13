@@ -58,6 +58,10 @@ export function createdOnOf(build) {
 	return build?.created_on || build?.createdOn || '';
 }
 
+export function branchOf(build) {
+	return String(build?.branch || build?.build_trigger_metadata?.branch || '').trim();
+}
+
 export function flattenLogText(payload) {
 	const result = payload?.result ?? payload;
 	if (typeof result === 'string') return result;
@@ -100,17 +104,31 @@ export function classifyCommitBuilds(builds, sha) {
 	const matches = (builds || []).filter((build) => commitsMatch(commitHashOf(build), sha));
 	const newest = (list) =>
 		[...list].sort((a, b) => String(createdOnOf(b)).localeCompare(String(createdOnOf(a))))[0];
+	const mainMatches = matches.filter((build) => branchOf(build).toLowerCase() === 'main');
+	// Same SHA can be built on a PR branch (preview, no SITE_URL) and later on
+	// main (production SITE_URL). Live example: 84f655e3 on both
+	// cursor/update-agentic-engineering-aug-dates-c490 and main. If any main
+	// build exists, only that upload is promotable. If we can see a branch
+	// but none of them is main, keep waiting rather than shipping preview.
+	const sawBranch = matches.some((build) => branchOf(build));
+	const considered = mainMatches.length ? mainMatches : sawBranch ? [] : matches;
 
-	const successes = matches.filter((build) => statusOf(build) === 'stopped' && outcomeOf(build) === 'success');
+	if (!considered.length && sawBranch) {
+		const pending = matches.filter((build) => IN_PROGRESS.has(statusOf(build)));
+		if (pending.length) return { state: 'pending', build: newest(pending), matches, reason: 'preview_only' };
+		return { state: 'missing', build: newest(matches), matches, reason: 'preview_only' };
+	}
+
+	const successes = considered.filter((build) => statusOf(build) === 'stopped' && outcomeOf(build) === 'success');
 	if (successes.length) return { state: 'success', build: newest(successes), matches };
 
-	const pending = matches.filter((build) => IN_PROGRESS.has(statusOf(build)));
+	const pending = considered.filter((build) => IN_PROGRESS.has(statusOf(build)));
 	if (pending.length) return { state: 'pending', build: newest(pending), matches };
 
-	const failures = matches.filter((build) => FAILED_OUTCOMES.has(outcomeOf(build)));
+	const failures = considered.filter((build) => FAILED_OUTCOMES.has(outcomeOf(build)));
 	if (failures.length) return { state: 'failed', build: newest(failures), matches };
 
-	const skipped = matches.filter((build) => outcomeOf(build) === 'skipped');
+	const skipped = considered.filter((build) => outcomeOf(build) === 'skipped');
 	if (skipped.length) return { state: 'skipped', build: newest(skipped), matches };
 
 	return { state: 'missing', build: null, matches };
@@ -235,6 +253,7 @@ function describeBuild(build) {
 	if (!build) return 'none';
 	return [
 		`uuid=${buildUuidOf(build) || '?'}`,
+		`branch=${branchOf(build) || '?'}`,
 		`status=${statusOf(build) || '?'}`,
 		`outcome=${outcomeOf(build) || '?'}`,
 		`commit=${commitHashOf(build) || '?'}`,
@@ -244,10 +263,12 @@ function describeBuild(build) {
 async function waitForSuccessfulBuild(sha, timeoutMs, intervalMs) {
 	const deadline = Date.now() + timeoutMs;
 	let lastState = 'missing';
+	let lastReason = '';
 	while (Date.now() <= deadline) {
 		const builds = await listAllBuilds();
 		const classified = classifyCommitBuilds(builds, sha);
 		lastState = classified.state;
+		lastReason = classified.reason || '';
 		if (classified.state === 'success') {
 			console.log(`Workers Build succeeded for ${sha} (${describeBuild(classified.build)})`);
 			return classified.build;
@@ -273,6 +294,11 @@ async function waitForSuccessfulBuild(sha, timeoutMs, intervalMs) {
 	if (lastState === 'pending') {
 		fail(
 			`Timed out after ${Math.round(timeoutMs / 60000)} minutes waiting for Workers Build of ${sha} to finish. Not promoting.`,
+		);
+	}
+	if (lastReason === 'preview_only') {
+		fail(
+			`No successful main/production Workers Build for ${sha} after ${Math.round(timeoutMs / 60000)} minutes. A preview-branch upload exists, but that build does not set SITE_URL=https://tinkercademy.com. Not promoting a preview version.`,
 		);
 	}
 	fail(
@@ -367,6 +393,40 @@ function runSelfTest() {
 		sha,
 	);
 	equal(missing.state, 'missing', 'other commits are ignored');
+
+	const race = classifyCommitBuilds(
+		[
+			{ commit_hash: sha, branch: 'cursor/update-agentic-engineering-aug-dates-c490', status: 'stopped', build_outcome: 'success', created_on: '2026-08-13T11:57:06Z', build_uuid: 'preview' },
+			{ commit_hash: sha, branch: 'main', status: 'running', created_on: '2026-08-13T12:34:00Z', build_uuid: 'main-pending' },
+		],
+		sha,
+	);
+	equal(race.state, 'pending', 'wait for main even if preview already succeeded');
+	equal(buildUuidOf(race.build), 'main-pending', 'pending build is the main one');
+
+	const bothDone = classifyCommitBuilds(
+		[
+			{ commit_hash: sha, branch: 'cursor/x', status: 'stopped', build_outcome: 'success', created_on: '2026-08-13T13:00:00Z', build_uuid: 'newer-preview' },
+			{ commit_hash: sha, branch: 'main', status: 'stopped', build_outcome: 'success', created_on: '2026-08-13T12:34:22Z', build_uuid: 'older-main' },
+		],
+		sha,
+	);
+	equal(bothDone.state, 'success', 'main success wins over newer preview');
+	equal(buildUuidOf(bothDone.build), 'older-main', 'promote the main upload');
+
+	const previewOnly = classifyCommitBuilds(
+		[{ commit_hash: sha, branch: 'cursor/x', status: 'stopped', build_outcome: 'success', build_uuid: 'preview-only' }],
+		sha,
+	);
+	equal(previewOnly.state, 'missing', 'preview-only success is not promotable');
+	equal(previewOnly.reason, 'preview_only', 'preview-only reason');
+
+	const noBranch = classifyCommitBuilds(
+		[{ commit_hash: sha, status: 'stopped', build_outcome: 'success', build_uuid: 'unbranched' }],
+		sha,
+	);
+	equal(noBranch.state, 'success', 'builds with no branch field still resolve');
+	equal(buildUuidOf(noBranch.build), 'unbranched', 'unbranched success');
 
 	console.log('self-test ok');
 }

@@ -49,7 +49,7 @@ Examples: `v2026.08.14`, `v1.2.3`.
 The Action then:
 
 1. Takes `GITHUB_SHA` from the tagged commit.
-2. Polls `GET /accounts/{account}/builds/workers/f71a28eda02e4d47922ba00cb262e3f7/builds` until that commit has `status=stopped` and `outcome=success` (about 15–20 minutes timeout).
+2. Polls `GET /accounts/{account}/builds/workers/f71a28eda02e4d47922ba00cb262e3f7/builds` until that commit has a successful **main** upload (`status=stopped`, `outcome=success`; about 15–20 minutes timeout). A preview-branch upload of the same SHA is not promoted (it does not set `SITE_URL=https://tinkercademy.com`).
 3. Resolves that build to a Worker version ID from the `wrangler versions upload` logs (`Worker Version ID: <uuid>`), verified against `GET /builds/builds?version_ids=`. It will not guess "latest version".
 4. Runs `npx wrangler versions deploy <version-id>@100 --yes --message "Promote <tag> (<sha>)"`.
 

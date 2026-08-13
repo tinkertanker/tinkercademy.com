@@ -119,9 +119,10 @@ git push origin vYYYY.MM.DD
 ```
 
 `.github/workflows/promote-production.yml` waits for the Workers Builds
-upload of that commit, resolves its Worker version ID, and runs
-`npx wrangler versions deploy <id>@100`. It will not rebuild the site and
-will not guess "the latest version" if a newer `main` push has landed.
+upload of that commit **on `main`**, resolves its Worker version ID, and runs
+`npx wrangler versions deploy <id>@100`. It will not rebuild the site,
+will not promote a preview-branch upload of the same SHA, and will not
+guess "the latest version" if a newer `main` push has landed.
 
 The workflow needs a `CLOUDFLARE_API_TOKEN` repository secret (Account API
 token with Edit Cloudflare Workers). Do not put the token in the repo.
