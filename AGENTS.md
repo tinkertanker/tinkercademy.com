@@ -47,11 +47,11 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 
 ### Deploy
 
-- Production runs on a Cloudflare Worker (static assets). **Every push to `main` builds and uploads a new Worker version but does NOT serve it.** Production stays on the previously-promoted version until someone explicitly promotes the new one.
-- `wrangler.jsonc` pins the production account ID (`b8b1032c61d9475cd00229c74db7ec72`, Tinkertanker). Before promoting, run `npx wrangler whoami` and confirm Wrangler is authenticated to the expected Cloudflare account. If you have access to multiple Cloudflare accounts, prefer an account-scoped API token via `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` or your own local wrapper rather than relying on whichever `wrangler login` OAuth context happens to be active.
-- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback", or similar, follow `.claude/skills/deploy/SKILL.md`. The short version: run `pnpm run deploy:list` to find the uploaded version, then `npx wrangler versions deploy <id>@100 --yes` to promote it, then `pnpm run smoke https://tinkercademy.com` to verify. Prefix those Wrangler commands with your local account-selection wrapper if your environment needs one.
+- Production runs on a Cloudflare Worker (static assets). **Every push to `main` builds and uploads a new Worker version but does NOT serve it.** Live traffic moves only when a `v*` tag is pushed (`.github/workflows/promote-production.yml`).
+- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback", or similar, follow `.claude/skills/deploy/SKILL.md`. The short version: tag the commit you want live and push the tag (`git tag vYYYY.MM.DD && git push origin vYYYY.MM.DD`). The Action waits for the Workers Builds upload of that commit, then runs `npx wrangler versions deploy <id>@100`.
+- Rollback: tag an older known-good commit (the commit must already contain the promote workflow), or run `npx wrangler versions deploy <old-id>@100 --yes`.
+- `wrangler.jsonc` pins the production account ID (`b8b1032c61d9475cd00229c74db7ec72`, Tinkertanker). The GitHub Action authenticates with the `CLOUDFLARE_API_TOKEN` repo secret (Account API token with Edit Cloudflare Workers). Do not put the token in the repo. Local Wrangler commands still need your own token or `wrangler login`; if you have access to multiple Cloudflare accounts, prefer an account-scoped token via `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` rather than whichever OAuth context is active.
 - "Build" is automatic on push. The user typing "build this" probably means `pnpm run build` locally or a `git push` — not a deploy.
-- Rollback is the same mechanism: run `pnpm run deploy:list`, pick an older version ID, then promote it with `npx wrangler versions deploy <id>@100 --yes`.
 - Full setup details: `docs/deployment.md`.
 
 ### Shared shell parity

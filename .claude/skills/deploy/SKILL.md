@@ -1,13 +1,16 @@
 ---
 name: deploy
-description: Promote the latest Cloudflare Worker version to serve 100% of traffic on tinkercademy.com. Use when the user says "deploy", "ship it", "go live", "promote", "push to prod", or similar. Pushes to main build and upload a new version automatically; this skill is the explicit step that moves production traffic onto it.
+description: Ship tinkercademy.com to production by tagging the commit that should go live. Use when the user says "deploy", "ship it", "go live", "promote", "push to prod", or similar. Pushes to main only upload a Worker version; a v* tag is what promotes it.
 ---
 
 # Deploy Skill
 
-Production for `tinkercademy.com` runs on a Cloudflare Worker with static assets. The CI pipeline is set up as **upload-only**: every push to `main` runs `pnpm run build` and then `npx wrangler versions upload`, which creates a new Worker version but does **not** route traffic to it. Production keeps serving the previously-promoted version until someone explicitly promotes the new one.
+Production for `tinkercademy.com` runs on a Cloudflare Worker with static assets.
 
-This skill is the "explicitly promote" step.
+- **Push to `main`:** Cloudflare Workers Builds runs `pnpm run build` then `npx wrangler versions upload`. That creates a new Worker version and does **not** route traffic to it.
+- **Push a `v*` tag:** `.github/workflows/promote-production.yml` waits for the successful upload of that tagged commit, then promotes that exact version to 100% traffic.
+
+Do not change the Cloudflare dashboard deploy command. It must stay `npx wrangler versions upload`. If it is ever changed to `npx wrangler deploy`, every push to `main` ships live.
 
 ## When to invoke
 
@@ -15,77 +18,94 @@ User phrasings that should trigger this flow:
 
 - "deploy" / "ship it" / "ship this" / "go live" / "push to prod" / "promote"
 - "roll out" / "release"
-- "rollback" / "revert the last deploy" — same mechanism, different version picked
+- "rollback" / "revert the last deploy" — same mechanism, different commit or version
 
 Do **not** invoke for:
 
 - "build" — happens automatically on push; just `git push`.
 - "push" — they mean `git push`, not deploy.
 
-When ambiguous (e.g. the user has local changes and says "deploy"), clarify: do they want you to commit+push first, then promote? Or promote what's already in CI?
+When ambiguous (e.g. the user has local changes and says "deploy"), clarify: do they want you to commit+push first, then tag? Or tag what is already on `origin/main`?
 
 ## Preflight
 
-Before running the deploy, check:
+1. **The commit you want live is on `origin/main`.** `git status` is clean and `git log origin/main..HEAD` is empty, or you have already pushed the intended commit. Tags on unpushed commits will not have a Workers Build.
 
-1. **Local is pushed.** `git status` is clean and `git log origin/main..main` shows nothing. If the user has uncommitted or unpushed changes and meant them to go out, commit and push first. Builds won't include them otherwise.
+2. **The commit actually triggers Workers Builds.** Build watch path excludes are `README.md`, `AGENTS.md`, `docs/**`, `.github/**`, `.claude/**`. A tag on a docs-only commit will fail the promote workflow on purpose rather than shipping some other version.
 
-2. **CI has finished building the target commit.** Either:
-   - Check the Cloudflare dashboard: https://dash.cloudflare.com/b8b1032c61d9475cd00229c74db7ec72/workers/services/view/tinkercademy-dot-com/production/builds
-   - Or, if a `CLOUDFLARE_API_TOKEN` with `Workers Builds Configuration: Read` is available, poll `GET /accounts/{account}/builds/workers/{worker_tag}/builds?page=1&per_page=1` and confirm the latest entry's `status=stopped` + `outcome=success` and `commit_hash` matches the tip of main.
-   - If still building: wait, don't promote a stale version.
+3. **GitHub repo secrets include `CLOUDFLARE_API_TOKEN`.** Create an Account API token with **Edit Cloudflare Workers** and store it as a repository secret. Never commit the token. `CLOUDFLARE_ACCOUNT_ID` is already public in `wrangler.jsonc` (`b8b1032c61d9475cd00229c74db7ec72`) and is hardcoded in the workflow.
 
-3. **(Optional) Smoke-check the preview.** Each uploaded version has its own preview URL. The workers.dev URL always points at the currently-*promoted* version, not the most recent upload — so don't confuse them. `pnpm run deploy:list` shows recent versions with their preview URLs.
+## Ship it
 
-## Promote
+Tag the commit and push the tag. Date tags or semver both match `v*`:
 
 ```
-pnpm run deploy
+git tag vYYYY.MM.DD
+git push origin vYYYY.MM.DD
 ```
 
-This invokes `npx wrangler versions deploy`. It is **interactive**:
+Examples: `v2026.08.14`, `v1.2.3`.
 
-1. Wrangler lists recent versions.
-2. User picks the one to promote. Default is usually fine (most recent).
-3. User picks a traffic percentage. `100` for instant cut-over; lower for canary.
-4. User confirms.
+The Action then:
 
-For fully non-interactive promotion (e.g. from another agent, CI, or a script):
+1. Takes `GITHUB_SHA` from the tagged commit.
+2. Polls `GET /accounts/{account}/builds/workers/f71a28eda02e4d47922ba00cb262e3f7/builds` until that commit has `status=stopped` and `outcome=success` (about 15–20 minutes timeout).
+3. Resolves that build to a Worker version ID from the `wrangler versions upload` logs (`Worker Version ID: <uuid>`), verified against `GET /builds/builds?version_ids=`. It will not guess "latest version".
+4. Runs `npx wrangler versions deploy <version-id>@100 --yes --message "Promote <tag> (<sha>)"`.
 
-```
-npx wrangler versions deploy <version-id>@100 --yes --message "<why>"
-```
-
-Get the version ID from `pnpm run deploy:list` first.
+Watch the **Promote production** workflow on GitHub. Do not run `npx wrangler deploy` locally as a shortcut.
 
 ## Verify
 
-Right after promotion:
+Right after the Action succeeds:
 
 1. `curl -sSI https://tinkercademy.com/` → `HTTP/2 200`.
 2. `pnpm run smoke https://tinkercademy.com` → all-green.
-3. Spot-check whatever changed in the commit being deployed.
+3. Spot-check whatever changed in the tagged commit.
 
 If any check fails, roll back immediately.
 
 ## Rollback
 
+Either:
+
 ```
-pnpm run deploy
+git tag vYYYY.MM.DD <old-commit>
+git push origin vYYYY.MM.DD
 ```
 
-Same command, pick an older version ID from the list. Promotion flips in seconds.
+The old commit must already contain `.github/workflows/promote-production.yml` (GitHub runs the workflow file from the tagged commit). For commits from before that workflow existed, promote by version ID instead:
+
+```
+pnpm run deploy:list
+npx wrangler versions deploy <old-version-id>@100 --yes --message "Rollback to <id>"
+```
+
+Prefix those Wrangler commands with your local account-selection wrapper if your environment needs one.
+
+## Manual promote (break-glass)
+
+If the tag workflow cannot run (missing secret, GitHub Actions down) and the user still wants traffic moved:
+
+```
+npx wrangler versions deploy <version-id>@100 --yes --message "<why>"
+```
+
+Get the version ID from `pnpm run deploy:list` or from the Workers Builds log line `Worker Version ID:`. Confirm it belongs to the intended commit; the human listing does not show commit hashes.
 
 ## What NOT to do
 
-- **Don't** run `npx wrangler deploy` (without `versions deploy`). That's the old-world "upload and promote in one go" command; under our current trigger config it'd still work but would bypass the preview/promote split and surprise-ship whatever is in local `dist/`.
-- **Don't** promote without checking CI finished. The version list only shows uploaded versions, but a stale version from before the latest push looks identical to a fresh one in the listing.
-- **Don't** promote while the build is in progress. Wait for it.
+- **Don't** run `npx wrangler deploy` (without `versions deploy`). That uploads-and-promotes from local `dist/` and bypasses the preview/promote split.
+- **Don't** change the Cloudflare dashboard deploy command to `npx wrangler deploy`.
+- **Don't** promote "the latest version" because a newer `main` push may have landed after the tag.
+- **Don't** put `CLOUDFLARE_API_TOKEN` in the repo, in workflow YAML, or in commit messages.
 
 ## Config pointers
 
+- Workflow: `.github/workflows/promote-production.yml` (tag promote). Leave `.github/workflows/deploy.yml` (GitHub Pages staging) alone.
+- Resolver: `scripts/resolve-worker-version.mjs`.
 - Wrangler config: `wrangler.jsonc` (Worker name, assets dir, custom domain routes).
-- CI trigger config: Cloudflare dashboard → Workers → `tinkercademy-dot-com` → Settings → Builds. The production trigger's deploy command is `npx wrangler versions upload` (upload-only). If it ever gets changed to `npx wrangler deploy`, the upload-then-promote workflow breaks and every push ships live.
+- CI trigger config: Cloudflare dashboard → Workers → `tinkercademy-dot-com` → Settings → Builds. Production deploy command: `npx wrangler versions upload`.
 - Full setup doc: `docs/deployment.md`.
 
 ## Adding build-skip path excludes — careful
