@@ -33,7 +33,7 @@ When ambiguous (e.g. the user has local changes and says "deploy"), clarify: do 
 
 2. **The commit actually triggers Workers Builds.** Build watch path excludes are `README.md`, `AGENTS.md`, `docs/**`, `.github/**`, `.claude/**`. A tag on a docs-only commit will fail the promote workflow on purpose rather than shipping some other version.
 
-3. **GitHub repo secrets include `CLOUDFLARE_API_TOKEN`.** Create an Account API token with **Edit Cloudflare Workers** and store it as a repository secret. Never commit the token. `CLOUDFLARE_ACCOUNT_ID` is already public in `wrangler.jsonc` (`b8b1032c61d9475cd00229c74db7ec72`) and is hardcoded in the workflow.
+3. **GitHub repo secrets include `CLOUDFLARE_API_TOKEN`.** Create a **user-scoped** token at [My Profile → API Tokens](https://dash.cloudflare.com/profile/api-tokens) (account-owned tokens return "Invalid token" on the Workers Builds API) with **Workers Builds Configuration: Edit** and **Workers Scripts: Edit**. The "Edit Cloudflare Workers" template is not enough. Never commit the token. `CLOUDFLARE_ACCOUNT_ID` is already public in `wrangler.jsonc` (`b8b1032c61d9475cd00229c74db7ec72`) and is hardcoded in the workflow.
 
 ## Ship it
 

@@ -23,6 +23,8 @@ jobs:
       WORKER_TAG: f71a28eda02e4d47922ba00cb262e3f7
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
@@ -44,4 +46,4 @@ jobs:
             echo "Resolver did not write version_id; refusing to guess a version." >&2
             exit 1
           fi
-          npx --yes wrangler@4 versions deploy "${VERSION_ID}@100" --yes --message "Promote ${GIT_TAG} (${COMMIT_SHA})"
+          npx --yes wrangler@4.123.0 versions deploy "${VERSION_ID}@100" --yes --message "Promote ${GIT_TAG} (${COMMIT_SHA})"

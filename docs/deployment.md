@@ -124,9 +124,12 @@ upload of that commit **on `main`**, resolves its Worker version ID, and runs
 will not promote a preview-branch upload of the same SHA, and will not
 guess "the latest version" if a newer `main` push has landed.
 
-The workflow needs a `CLOUDFLARE_API_TOKEN` repository secret (Account API
-token with Edit Cloudflare Workers). Do not put the token in the repo.
-`CLOUDFLARE_ACCOUNT_ID` is already public in `wrangler.jsonc`.
+The workflow needs a `CLOUDFLARE_API_TOKEN` repository secret: a
+**user-scoped** token from My Profile → API Tokens, with Workers Builds
+Configuration: Edit and Workers Scripts: Edit. Account-owned tokens are
+rejected by the Builds API; the Edit Cloudflare Workers template is not
+enough. Do not put the token in the repo. `CLOUDFLARE_ACCOUNT_ID` is
+already public in `wrangler.jsonc`.
 
 Rollback: tag an older known-good commit (it must already contain the
 promote workflow), or `npx wrangler versions deploy <old-id>@100 --yes`.

@@ -151,7 +151,7 @@ async function cfFetch(path, { query } = {}) {
 	const token = process.env.CLOUDFLARE_API_TOKEN;
 	if (!token) {
 		fail(
-			'CLOUDFLARE_API_TOKEN is not set. Add it as a GitHub Actions secret (Account API token with Edit Cloudflare Workers). Do not commit the token.',
+			'CLOUDFLARE_API_TOKEN is not set. Add a user-scoped token (My Profile → API Tokens) with Workers Builds Configuration: Edit and Workers Scripts: Edit as a GitHub Actions secret. Account-owned tokens are rejected by the Builds API. Do not commit the token.',
 		);
 	}
 	const url = new URL(`${API_BASE}${path}`);
@@ -166,7 +166,11 @@ async function cfFetch(path, { query } = {}) {
 	const body = await response.json().catch(() => ({}));
 	if (!response.ok || body.success === false) {
 		const detail = JSON.stringify(body.errors || body, null, 2);
-		fail(`Cloudflare API ${response.status} ${url.pathname}: ${detail}`);
+		const hint =
+			response.status === 401 || response.status === 403
+				? ' The GitHub secret CLOUDFLARE_API_TOKEN must be a user-scoped token (My Profile → API Tokens) with Workers Builds Configuration: Edit and Workers Scripts: Edit. Account-owned tokens and the Edit Cloudflare Workers template are not enough for the Builds API.'
+				: '';
+		fail(`Cloudflare API ${response.status} ${url.pathname}: ${detail}.${hint}`);
 	}
 	return body;
 }
