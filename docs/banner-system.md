@@ -74,11 +74,42 @@ programme, `hero_image` in `src/data/pages/static-pages.json` for a static page.
    should differ in pose *and* silhouette (a floating window vs a big
    micro:bit vs a bubble cluster), not just accent.
 
+## Dark mode (`"mode": "dark"`)
+
+Listing and static pages render heroes under the site's scrim
+(`.course-hero__scrim` in `src/pages/[slug].astro`: black 68% → 8% left-to-right
+plus bottom darkening) with a **white serif headline bottom-left**. Dark scenes
+are designed for that contract natively:
+
+- Ground: accent-tinted charcoal gradient (`DARK_GROUNDS`), faint cream
+  dot-grid texture, a radial **spotlight** pool behind the subject (override
+  with `"spotlight": {x, y, r}`), a floor glow, and an extra left-edge
+  darkening so the headline zone stays near-black.
+- The mascot gets an automatic **die-cut sticker keyline** (cream halo built by
+  dilating the PNG's alpha) so the black body separates from the dark ground.
+- Props switch to cream outlines automatically; screens stay warm-white so
+  they pop. Nothing needs changing in the prop objects themselves.
+- Keep the light (`paper`) variants for in-page media bands and cards on white
+  layouts; use dark variants wherever text overlays the image.
+
+## The cartoony dial (corporate / professional audiences)
+
+Three registers, same system — pick per audience, don't invent new styles:
+
+1. **Full mascot** (`h` 0.55–0.66) — schools, community, homepage.
+2. **Cameo** — professional courses: mascot at `h` ≈ 0.35–0.4 standing beside
+   the work; the windows (browser/terminal/laptop) are the protagonists.
+3. **No mascot** — corporate/enterprise contexts: window collage plus the
+  `diamond` motif (`outline: true`, `opacity` ≈ 0.1–0.15) as the only brand
+  cue. Still unmistakably the same family via palette + linework.
+
 ## Prop library
 
 `laptop` (screens: `blocks` | `code` | `chat` | `canvas`), `browser`,
-`microbit`, `bubble` (kinds: `dots` | `code` | `spark`; `tail: left|right`),
-`blocks`, `mug`, `phone`, `sparkle`.
+`terminal` (dark dev window, pro scenes), `microbit` (PCB with LED matrix,
+A/B buttons, gold edge connector), `bubble` (kinds: `dots` | `code` | `spark`;
+`tail: left|right`), `blocks`, `mug`, `phone`, `sparkle`, `diamond`
+(brand gem; `outline` + `opacity` for background motif use).
 
 Style contract for new props: flat fills from the palette only, thick ink
 outlines (`stroke(w)` helper ≈ 3.5% of width), rounded corners, no text ever,
