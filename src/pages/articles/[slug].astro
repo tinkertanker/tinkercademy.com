@@ -141,26 +141,31 @@ const contentHtml = (article.content_html ?? '').replace(
 		display: none; /* already shown in hero */
 	}
 
-	.article-body :global(h2),
-	.article-body :global(h3),
-	.article-body :global(h4) {
+	.article-body :global(h2) {
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
 		font-weight: 500;
+		font-size: 1.35rem;
 		color: rgb(51, 51, 51);
 		margin: 1.75rem 0 0.5rem;
 	}
 
-	.article-body :global(h2) {
-		font-size: 1.35rem;
-	}
-
 	.article-body :global(h3) {
-		font-size: 1.15rem;
+		font-family: 'Rubik', sans-serif;
+		letter-spacing: 0;
+		font-weight: 300;
+		font-size: 1.05rem;
+		color: var(--accent-dark);
+		margin: 1.75rem 0 0.5rem;
 	}
 
 	.article-body :global(h4) {
+		font-family: 'Rubik', sans-serif;
+		letter-spacing: 0;
+		font-weight: 500;
 		font-size: 1rem;
+		color: rgb(51, 51, 51);
+		margin: 1.75rem 0 0.5rem;
 	}
 
 	.article-body :global(p) {
