@@ -27,13 +27,13 @@ The active font declarations live in `src/layouts/ContentLayout.astro`: IBM Plex
 
 ## Deployment
 
-Production deploys to a Cloudflare Worker (static assets) on pushes to `main`. The repo ships a `wrangler.jsonc` at the root; see [docs/deployment.md](./docs/deployment.md) for the dashboard-side setup and the per-environment `SITE_URL` behaviour.
+Pushes to `main` upload a Cloudflare Worker version but do not serve it. Production traffic moves when a `v*` tag is pushed; see [docs/deployment.md](./docs/deployment.md).
 
 ## Claude Code skills
 
 A few Claude Code skills ship with this repo under `.claude/skills/`. Invoke them in Claude Code the way you invoke any other skill (the model will pick them up from the listing):
 
-- **`deploy`** — Promote the latest uploaded Cloudflare Worker version to 100% traffic. Triggers: "deploy", "ship it", "promote", "rollback".
+- **`deploy`** — Ship production by tagging the commit that should go live (`v*`). Triggers: "deploy", "ship it", "promote", "rollback".
 - **`new-programme`** — End-to-end authoring of a new `src/content/programmes/<slug>.md` page: quizzes you for every field, handles taxonomy enum lookups, adds missing platforms to `src/data/pages/platforms.json`, and generates a hero image via [mmx](https://www.npmjs.com/package/mmx-cli). Triggers: "new programme", "add a course", "draft a programme".
 - **`writing-style-review`** — Audit copy against the Tinkercademy house voice, or evolve the style guide. Triggers: "does this sound like Tinkercademy?", "review the copy".
 

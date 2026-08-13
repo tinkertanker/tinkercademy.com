@@ -9,7 +9,7 @@ is identical across builds.
 | Environment | Host | Platform | Triggered by | `SITE_URL` |
 |---|---|---|---|---|
 | Staging | `webstaging.tinkercademy.com` | GitHub Pages | Push to `main` (`.github/workflows/deploy.yml`) | *(unset → default)* |
-| Production | `tinkercademy.com` | Cloudflare Workers (static assets) | Git integration in Cloudflare | `https://tinkercademy.com` |
+| Production | `tinkercademy.com` | Cloudflare Workers (static assets) | Push to `main` uploads a version; a `v*` tag promotes it (`.github/workflows/promote-production.yml`) | `https://tinkercademy.com` |
 
 ### Why two platforms?
 
@@ -52,7 +52,7 @@ that value — mismatches will either create a second Worker or fail.
    - Pick the repo. Production branch: `main`.
    - Worker name: `tinkercademy-dot-com` (must match `wrangler.jsonc`).
    - Build command: `pnpm run build`
-   - Deploy command: `npx wrangler deploy` (default).
+   - Deploy command: `npx wrangler versions upload` (upload-only; do **not** use `npx wrangler deploy`, or every push to `main` goes live).
    - Node version (Environment variable `NODE_VERSION`): `22`.
 
 2. **Set the production env var**
@@ -108,10 +108,37 @@ that value — mismatches will either create a second Worker or fail.
        Status = 301, Preserve query string = On.
      - Deploy.
 
+## Going live (tag promote)
+
+Pushes to `main` only upload a Worker version. To serve a commit on
+`tinkercademy.com`, tag it and push the tag:
+
+```
+git tag vYYYY.MM.DD
+git push origin vYYYY.MM.DD
+```
+
+`.github/workflows/promote-production.yml` waits for the Workers Builds
+upload of that commit **on `main`**, resolves its Worker version ID, and runs
+`npx wrangler versions deploy <id>@100`. It will not rebuild the site,
+will not promote a preview-branch upload of the same SHA, and will not
+guess "the latest version" if a newer `main` push has landed.
+
+The workflow needs a `CLOUDFLARE_API_TOKEN` repository secret: a
+**user-scoped** token from My Profile → API Tokens, with Workers Builds
+Configuration: Edit and Workers Scripts: Edit. Account-owned tokens are
+rejected by the Builds API; the Edit Cloudflare Workers template is not
+enough. Do not put the token in the repo. `CLOUDFLARE_ACCOUNT_ID` is
+already public in `wrangler.jsonc`.
+
+Rollback: tag an older known-good commit (it must already contain the
+promote workflow), or `npx wrangler versions deploy <old-id>@100 --yes`.
+
 ## GitHub Pages (staging) — already wired
 
 No cutover action needed. `public/CNAME` stays `webstaging.tinkercademy.com`;
-the existing workflow keeps pushing builds there.
+the existing workflow keeps pushing builds there. Staging is independent of
+the production tag promote.
 
 ## Smoke-check
 
