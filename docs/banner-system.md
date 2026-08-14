@@ -103,13 +103,47 @@ Three registers, same system — pick per audience, don't invent new styles:
   `diamond` motif (`outline: true`, `opacity` ≈ 0.1–0.15) as the only brand
   cue. Still unmistakably the same family via palette + linework.
 
-## Prop library
+## Prop library — a grammar, not a pile
 
-`laptop` (screens: `blocks` | `code` | `chat` | `canvas`), `browser`,
-`terminal` (dark dev window, pro scenes), `microbit` (PCB with LED matrix,
-A/B buttons, gold edge connector), `bubble` (kinds: `dots` | `code` | `spark`;
-`tail: left|right`), `blocks`, `mug`, `phone`, `sparkle`, `diamond`
-(brand gem; `outline` + `opacity` for background motif use).
+Specimen sheets (regenerate with `node scripts/banner/prop-specimen.mjs`):
+`public/images/banners/_specimen-light.webp` / `_specimen-dark.webp`. Review
+them before adding a prop — the new item must look at home next to the rest.
+
+The library is organised by **role**, and the roles combine:
+
+1. **Devices** — `laptop`, `monitor`, `tablet`, `browser`, `terminal`,
+   `phone`. Devices are frames.
+2. **Screens** — `blocks`, `code`, `chat`, `canvas`, `game`, `scene3d`,
+   `sheet`, `slides`. Screens are content, decoupled from devices: any screen
+   renders into any device via the `screen` field (`{"type": "monitor",
+   "screen": "scene3d"}`). New course topic → usually a new *screen*, not a
+   new device. 6 devices × 8 screens already gives ~48 combinations.
+3. **Hardware** — `microbit`, `breadboard`, `gamepad`.
+4. **Connectors** — `wire`: `{type: "wire", x, y, x2, y2, sag?}` draws a
+   sagging cable between two scene points (croc-clip energy; ties hardware to
+   devices so clusters read as one build, not scattered objects).
+5. **Speech** — `bubble` kinds `dots` | `code` | `spark` | `heart` |
+   `question` | `bulb`; `tail: left|right`.
+6. **Dressing** — `blocks`, `mug`, `books`, `plant`, `sticky`, `trophy`.
+7. **Backdrops & brand** — `skyline` (Singapore silhouette band, use
+   `opacity` 0.1–0.2), `diamond` (brand gem motif), `sparkle`.
+
+Style contract for new props: flat fills from the palette only, thick outlines
+via the `stroke(w)` helper, rounded corners, no text ever, no gradients, no
+logos. Screens take `(x0, y0, w, h, accent)` so they stretch to any display.
+
+Growth paths, in order of preference:
+
+- **New screen content** (cheapest, multiplies with every device).
+- **New flat prop** (hand-authored SVG function, ~20 lines).
+- **Sticker-props** for organic/complex objects that fight flat SVG (robot
+  buggy, 3D printer, tangled cables, cardboard builds): mint once with an
+  image model against the tkrobot style guide, cut to transparent PNG, and
+  lock into `reference/stickers/props/` — after that they compose exactly like
+  mascot poses. Never regenerate a locked sticker-prop.
+- **New mascot poses interacting with props** (sitting at a laptop, holding a
+  micro:bit) belong upstream in tinkertanker/tkrobot-stickers, then get
+  vendored here.
 
 Style contract for new props: flat fills from the palette only, thick ink
 outlines (`stroke(w)` helper ≈ 3.5% of width), rounded corners, no text ever,

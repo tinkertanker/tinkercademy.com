@@ -610,5 +610,164 @@
     "w": 0.018
    }
   ]
+ },
+ {
+  "id": "iotmaker-dark",
+  "note": "IoT maker course — breadboard wired to a micro:bit across the scene.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "ok",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "wire",
+    "x": 0.47,
+    "y": 0.7,
+    "x2": 0.83,
+    "y2": 0.72,
+    "sag": 0.09,
+    "accent": "red"
+   },
+   {
+    "type": "microbit",
+    "x": 0.46,
+    "y": 0.76,
+    "w": 0.11,
+    "accent": "red"
+   },
+   {
+    "type": "breadboard",
+    "x": 0.85,
+    "y": 0.772,
+    "w": 0.16
+   },
+   {
+    "type": "bubble",
+    "kind": "bulb",
+    "x": 0.5,
+    "y": 0.24,
+    "w": 0.08,
+    "tail": "right"
+   },
+   {
+    "type": "sparkle",
+    "x": 0.73,
+    "y": 0.15,
+    "w": 0.02
+   },
+   {
+    "type": "sparkle",
+    "x": 0.94,
+    "y": 0.34,
+    "w": 0.015
+   }
+  ]
+ },
+ {
+  "id": "imda-unity-2025-dark",
+  "note": "Unity course — desk monitor with a 3D viewport, gamepad on the desk.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "yay",
+   "x": 0.58,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "monitor",
+    "screen": "scene3d",
+    "x": 0.85,
+    "y": 0.66,
+    "w": 0.17
+   },
+   {
+    "type": "gamepad",
+    "x": 0.47,
+    "y": 0.776,
+    "w": 0.09
+   },
+   {
+    "type": "bubble",
+    "kind": "spark",
+    "x": 0.46,
+    "y": 0.22,
+    "w": 0.08,
+    "tail": "right"
+   },
+   {
+    "type": "sparkle",
+    "x": 0.7,
+    "y": 0.14,
+    "w": 0.02
+   },
+   {
+    "type": "sparkle",
+    "x": 0.95,
+    "y": 0.3,
+    "w": 0.015
+   }
+  ]
+ },
+ {
+  "id": "code-exp-2025-dark",
+  "note": "Code EXP event — skyline backdrop, trophy, celebration.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.6,
+   "y": 0.5,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "skyline",
+    "x": 0.68,
+    "y": 0.4,
+    "w": 0.52,
+    "opacity": 0.16
+   },
+   {
+    "type": "trophy",
+    "x": 0.86,
+    "y": 0.724,
+    "w": 0.09
+   },
+   {
+    "type": "books",
+    "x": 0.46,
+    "y": 0.783,
+    "w": 0.07
+   },
+   {
+    "type": "bubble",
+    "kind": "heart",
+    "x": 0.45,
+    "y": 0.22,
+    "w": 0.08,
+    "tail": "right"
+   },
+   {
+    "type": "sparkle",
+    "x": 0.72,
+    "y": 0.13,
+    "w": 0.022
+   },
+   {
+    "type": "sparkle",
+    "x": 0.93,
+    "y": 0.28,
+    "w": 0.015
+   }
+  ]
  }
 ]
