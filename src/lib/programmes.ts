@@ -5,6 +5,7 @@ import domainsData from '../data/pages/domains.json';
 import platformsData from '../data/pages/platforms.json';
 import { localiseFramerImage, normaliseFramerMedia } from './media.js';
 import { createProgrammeFilterHref } from './programme-filters.ts';
+import { getSeriesMembership, type ProgrammeSeriesMembership } from './programme-series.ts';
 
 type AudienceRecord = {
 	id: string;
@@ -69,6 +70,7 @@ export type ResolvedProgramme = {
 	domains: ResolvedTaxonomyRecord[];
 	platforms: ResolvedPlatformRecord[];
 	primaryAudience: ResolvedTaxonomyRecord | null;
+	series: ProgrammeSeriesMembership | null;
 	searchText: string;
 };
 
@@ -85,6 +87,7 @@ export type ProgrammeCardData = {
 	shortDescription: string;
 	searchText: string;
 	badgeHref: string | null;
+	seriesCode: string | null;
 };
 
 export type ProgrammeCardOverride = {
@@ -166,6 +169,7 @@ function resolveProgramme(entry: ProgrammeEntry): ResolvedProgramme {
 	const domains = entry.data.domainIds.map((id) => resolveTaxonomyRecord(id, domainById, 'domain'));
 	const platforms = entry.data.platformIds.map((id) => resolvePlatformRecord(id));
 	const primaryAudience = audiences[0] ?? null;
+	const series = getSeriesMembership(entry.id);
 
 	return {
 		entry,
@@ -188,11 +192,14 @@ function resolveProgramme(entry: ProgrammeEntry): ResolvedProgramme {
 		domains,
 		platforms,
 		primaryAudience,
+		series,
 		searchText: buildSearchText([
 			entry.data.title,
 			entry.data.subtitle,
 			entry.data.duration,
 			entry.data.cardBlurb,
+			series?.code,
+			series?.label,
 			...audiences.map((item) => item.label),
 			...domains.map((item) => item.label),
 			...platforms.map((item) => item.label),
@@ -300,6 +307,7 @@ export function toProgrammeCardData(
 	const audienceLabel = normalisedOverride?.audience_label || audience?.label || 'Programme';
 	const duration = normalisedOverride?.duration || programme.duration;
 	const shortDescription = normalisedOverride?.blurb || programme.cardBlurb;
+	const seriesCode = programme.series?.code ?? null;
 
 	return {
 		slug: programme.slug,
@@ -317,11 +325,14 @@ export function toProgrammeCardData(
 			audienceLabel,
 			duration,
 			shortDescription,
+			seriesCode,
+			programme.series?.label,
 			...programme.audiences.map((item) => item.label),
 			...programme.domains.map((item) => item.label),
 			...programme.platforms.map((item) => item.label),
 		]),
 		badgeHref,
+		seriesCode,
 	};
 }
 

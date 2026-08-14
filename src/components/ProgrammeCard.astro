@@ -19,9 +19,11 @@ interface Props {
 	shortDescription?: string;
 	searchText?: string;
 	badgeHref?: string | null;
+	seriesCode?: string | null;
 }
 
 import { getResponsiveImage } from '../lib/responsive-images.js';
+import { getSeriesMembership } from '../lib/programme-series.ts';
 
 const {
 	slug,
@@ -36,7 +38,10 @@ const {
 	shortDescription = '',
 	searchText = '',
 	badgeHref = null,
+	seriesCode = null,
 } = Astro.props;
+
+const resolvedSeriesCode = seriesCode ?? getSeriesMembership(slug)?.code ?? null;
 
 const href = `/programmes/${slug}/`;
 
@@ -96,6 +101,7 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'var(--accent-dark)';
 
 			{/* Text content */}
 			<div class="prog-card__body">
+				{resolvedSeriesCode && <p class="prog-card__code">{resolvedSeriesCode}</p>}
 				<h2 class="prog-card__title">{title}</h2>
 				<div class="prog-card__divider" />
 				<div class="prog-card__meta">
@@ -214,6 +220,20 @@ const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'var(--accent-dark)';
 		gap: 10px;
 		padding: 0 18px 24px;
 		flex: 1;
+	}
+
+	.prog-card__code {
+		margin: 15px 0 0;
+		font-family: 'Fragment Mono', ui-monospace, monospace;
+		font-size: 0.78rem;
+		font-weight: 400;
+		letter-spacing: 0.04em;
+		color: var(--accent-dark);
+		line-height: 1.2;
+	}
+
+	.prog-card__code + .prog-card__title {
+		margin-top: 0.35rem;
 	}
 
 	.prog-card__title {

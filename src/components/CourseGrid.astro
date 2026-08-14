@@ -23,6 +23,7 @@ interface Programme {
 	shortDescription?: string;
 	searchText?: string;
 	badgeHref?: string | null;
+	seriesCode?: string | null;
 }
 
 interface NavPill {
@@ -91,6 +92,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 					shortDescription={prog.shortDescription}
 					searchText={prog.searchText}
 					badgeHref={prog.badgeHref}
+					seriesCode={prog.seriesCode}
 				/>
 			))}
 		</div>
