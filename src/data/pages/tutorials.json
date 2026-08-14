@@ -5,7 +5,7 @@
     "title": "Access Denied! A Door Entry Tutorial",
     "subtitle": "micro:bit",
     "description": "Step 1 – Setting Up!",
-    "hero_image": "https://framerusercontent.com/images/bD2Vq60gsIBWmTLGkqM6gnfat4.jpg?width=1080&height=1440",
+    "hero_image": "/images/bD2Vq60gsIBWmTLGkqM6gnfat4.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -29,7 +29,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/bD2Vq60gsIBWmTLGkqM6gnfat4.jpg?width=1080&height=1440",
+        "src": "/images/bD2Vq60gsIBWmTLGkqM6gnfat4.jpg",
         "width": 1080,
         "height": 1440
       },
@@ -53,7 +53,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/WZ8mk0w26AqzChPMfpNcR0EkxI.jpg?width=1024&height=502",
+        "src": "/images/WZ8mk0w26AqzChPMfpNcR0EkxI.jpg",
         "width": 1024,
         "height": 502
       },
@@ -65,7 +65,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/QlzcTPeFKjrSJnJBZr1JKMQHn98.png?width=768&height=625",
+        "src": "/images/QlzcTPeFKjrSJnJBZr1JKMQHn98.png",
         "width": 768,
         "height": 625
       },
@@ -77,7 +77,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/cXINI03qmKHrTFaGI0CdgJHBBo.png?width=768&height=439",
+        "src": "/images/cXINI03qmKHrTFaGI0CdgJHBBo.png",
         "width": 768,
         "height": 439
       }
@@ -123,7 +123,7 @@
     "title": "Ang Bao Collector",
     "subtitle": "Collect your Ang Baos with Micro:bit, Neopixel and a Buzzer",
     "description": "Build an Ang Bao collector that keeps count of the number of Ang Baos you have!",
-    "hero_image": "https://framerusercontent.com/images/Qf7E9zlctuoxJQhtW2ETkP9eSYI.jpg?width=2880&height=2626",
+    "hero_image": "/images/Qf7E9zlctuoxJQhtW2ETkP9eSYI.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -147,7 +147,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Qf7E9zlctuoxJQhtW2ETkP9eSYI.jpg?width=2880&height=2626",
+        "src": "/images/Qf7E9zlctuoxJQhtW2ETkP9eSYI.jpg",
         "width": 2880,
         "height": 2626
       },
@@ -171,13 +171,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/VrNw8QlsfrZkfapvmBEqmFg1pg4.jpg?width=2880&height=2160",
+        "src": "/images/VrNw8QlsfrZkfapvmBEqmFg1pg4.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uBZrigZidVImUOk99gM1tprrrw.jpg?width=2880&height=1670",
+        "src": "/images/uBZrigZidVImUOk99gM1tprrrw.jpg",
         "width": 2880,
         "height": 1670
       },
@@ -189,19 +189,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Dbakk2QHX0IBT2M74QmO8XS1ZIc.jpg?width=2880&height=2160",
+        "src": "/images/Dbakk2QHX0IBT2M74QmO8XS1ZIc.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/1KxCnot1QQizN66nQjsoIUGA.jpg?width=2880&height=2160",
+        "src": "/images/1KxCnot1QQizN66nQjsoIUGA.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/t6rOgfjW0Srw8DL93dc6r4H530.jpg?width=2880&height=2160",
+        "src": "/images/t6rOgfjW0Srw8DL93dc6r4H530.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -213,25 +213,25 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/96iA8nlYJg2iuokLU2JMF0Lsc.jpg?width=2880&height=2160",
+        "src": "/images/96iA8nlYJg2iuokLU2JMF0Lsc.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/EbNgogcrkdjLtrsBY0urYm4mSs.jpg?width=2880&height=2160",
+        "src": "/images/EbNgogcrkdjLtrsBY0urYm4mSs.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/th4wl4yvliYoSS5J7efm1aZUM0g.jpg?width=2880&height=1389",
+        "src": "/images/th4wl4yvliYoSS5J7efm1aZUM0g.jpg",
         "width": 2880,
         "height": 1389
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/0VuQt1etV8pgVECVVkjvvddbg.jpg?width=2880&height=2160",
+        "src": "/images/0VuQt1etV8pgVECVVkjvvddbg.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -243,13 +243,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/D9DV6zCkQwFFAB6npPXdibxPnw.jpg?width=2880&height=2755",
+        "src": "/images/D9DV6zCkQwFFAB6npPXdibxPnw.jpg",
         "width": 2880,
         "height": 2755
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uBFKhphTO4AggigR3RR5UiQPfL4.jpg?width=2833&height=2810",
+        "src": "/images/uBFKhphTO4AggigR3RR5UiQPfL4.jpg",
         "width": 2833,
         "height": 2810
       },
@@ -261,7 +261,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/8yUGGQJPdobsYwsfsNmH0KQ7Uk.jpg?width=1080&height=718",
+        "src": "/images/8yUGGQJPdobsYwsfsNmH0KQ7Uk.jpg",
         "width": 1080,
         "height": 718
       },
@@ -273,7 +273,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/VzHfrnZLdZC1IIEnFtVPLmgWWc.png?width=1919&height=865",
+        "src": "/images/VzHfrnZLdZC1IIEnFtVPLmgWWc.png",
         "width": 1919,
         "height": 865
       },
@@ -285,19 +285,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Wb2VtxU5atmKMhiauejjveB7f8.png?width=731&height=420",
+        "src": "/images/Wb2VtxU5atmKMhiauejjveB7f8.png",
         "width": 731,
         "height": 420
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/C07Omh5chuk2EiR2CdaWmdUE6I.png?width=553&height=635",
+        "src": "/images/C07Omh5chuk2EiR2CdaWmdUE6I.png",
         "width": 553,
         "height": 635
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/9G76jSuViuPzWDFa25R399dWY.png?width=916&height=641",
+        "src": "/images/9G76jSuViuPzWDFa25R399dWY.png",
         "width": 916,
         "height": 641
       }
@@ -367,7 +367,7 @@
     "title": "Build your own Micro:bit Security Door!",
     "subtitle": "Protect your house or valuables with a micro:bit, a servo motor, and a 4x4 keypad!\nCreated by Mohd Shafiq from NUS.",
     "description": "Step 1 – Interfacing the Keypad",
-    "hero_image": "https://framerusercontent.com/images/TEdcK4xzIfno2gsJPBuYfVxGj8w.jpg?width=1024&height=576",
+    "hero_image": "/images/TEdcK4xzIfno2gsJPBuYfVxGj8w.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -391,7 +391,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/TEdcK4xzIfno2gsJPBuYfVxGj8w.jpg?width=1024&height=576",
+        "src": "/images/TEdcK4xzIfno2gsJPBuYfVxGj8w.jpg",
         "width": 1024,
         "height": 576
       },
@@ -415,13 +415,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6yF8GEox10cMWfAo3Gz3kOxP30.jpg?width=768&height=352",
+        "src": "/images/6yF8GEox10cMWfAo3Gz3kOxP30.jpg",
         "width": 768,
         "height": 352
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/XkSwAxJkCy2KUJ2oCMXr8Ol2qw.jpg?width=1019&height=1024",
+        "src": "/images/XkSwAxJkCy2KUJ2oCMXr8Ol2qw.jpg",
         "width": 1019,
         "height": 1024
       },
@@ -433,13 +433,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/3NJ7ecKCxqJSaCpYCFC77Xqh4KU.jpg?width=1024&height=576",
+        "src": "/images/3NJ7ecKCxqJSaCpYCFC77Xqh4KU.jpg",
         "width": 1024,
         "height": 576
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2o10ZPETjdjUQpQoqTp8peufY.jpg?width=1024&height=576",
+        "src": "/images/2o10ZPETjdjUQpQoqTp8peufY.jpg",
         "width": 1024,
         "height": 576
       },
@@ -451,25 +451,25 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/83ed9IQ9FwSWXdx0nJrQSV0LU.jpg?width=768&height=546",
+        "src": "/images/83ed9IQ9FwSWXdx0nJrQSV0LU.jpg",
         "width": 768,
         "height": 546
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/eG81MGcvzgASIabjotTSf9QNzQ.jpg?width=688&height=521",
+        "src": "/images/eG81MGcvzgASIabjotTSf9QNzQ.jpg",
         "width": 688,
         "height": 521
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/U5sChtkcTCkyejxEU8EtWfydVFg.jpg?width=388&height=730",
+        "src": "/images/U5sChtkcTCkyejxEU8EtWfydVFg.jpg",
         "width": 388,
         "height": 730
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/X9hmFyO7acE1hMQBbFQrtkXGnOQ.jpg?width=535&height=732",
+        "src": "/images/X9hmFyO7acE1hMQBbFQrtkXGnOQ.jpg",
         "width": 535,
         "height": 732
       },
@@ -481,13 +481,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/7ef0VqystNLYofgvW65ZeDfTwQ.png?width=1024&height=587",
+        "src": "/images/7ef0VqystNLYofgvW65ZeDfTwQ.png",
         "width": 1024,
         "height": 587
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/fnLkqJAvJjdu0VDSS31nkbpB5H4.jpg?width=1024&height=576",
+        "src": "/images/fnLkqJAvJjdu0VDSS31nkbpB5H4.jpg",
         "width": 1024,
         "height": 576
       },
@@ -499,13 +499,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/f0i249ow31owqEoI87x0MfFNI.jpg?width=1024&height=576",
+        "src": "/images/f0i249ow31owqEoI87x0MfFNI.jpg",
         "width": 1024,
         "height": 576
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/HysdsA3kLs76sUwQf0xHHtNk1w.jpg?width=1024&height=576",
+        "src": "/images/HysdsA3kLs76sUwQf0xHHtNk1w.jpg",
         "width": 1024,
         "height": 576
       }
@@ -563,7 +563,7 @@
     "title": "Coin Sorter with Micro:bit",
     "subtitle": "Ever just accumulate a bunch of coins in a jar and now want to sort out the giant mess your past self should have foreseen? No? Just me? Ok well let’s build a coin sorter for fun then, adding on an ultrasound to count the amount you have sorted. Written by Hannah from Raffles Institution during a job attachment.",
     "description": "Hardware",
-    "hero_image": "https://framerusercontent.com/images/DYffUNTKvjHf2wF1BsJXIS60VsY.jpg?width=2880&height=2550",
+    "hero_image": "/images/DYffUNTKvjHf2wF1BsJXIS60VsY.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -587,7 +587,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/DYffUNTKvjHf2wF1BsJXIS60VsY.jpg?width=2880&height=2550",
+        "src": "/images/DYffUNTKvjHf2wF1BsJXIS60VsY.jpg",
         "width": 2880,
         "height": 2550
       },
@@ -611,61 +611,61 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/EOhXyZP1VCvUwxVeYdBZte1X8M.jpg?width=2880&height=1670",
+        "src": "/images/EOhXyZP1VCvUwxVeYdBZte1X8M.jpg",
         "width": 2880,
         "height": 1670
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CXpllcbj0g5lLepfvJuYNCwN7c.jpg?width=2880&height=1706",
+        "src": "/images/CXpllcbj0g5lLepfvJuYNCwN7c.jpg",
         "width": 2880,
         "height": 1706
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/J55UKs5V1Ho58hpMJcRQxsSgTs.jpg?width=2880&height=1184",
+        "src": "/images/J55UKs5V1Ho58hpMJcRQxsSgTs.jpg",
         "width": 2880,
         "height": 1184
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/C1irPqmZ6wGZcOkk52Yavbz6CI.jpg?width=4608&height=3456",
+        "src": "/images/C1irPqmZ6wGZcOkk52Yavbz6CI.jpg",
         "width": 4608,
         "height": 3456
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/cMmfQi9hSkBEWr1I4Bpmk7ZEn4g.jpg?width=2880&height=722",
+        "src": "/images/cMmfQi9hSkBEWr1I4Bpmk7ZEn4g.jpg",
         "width": 2880,
         "height": 722
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zyn8OFtaRF9UhOuiDai4kLw78.jpg?width=2880&height=2160",
+        "src": "/images/zyn8OFtaRF9UhOuiDai4kLw78.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Pm6aVi2IRY7oKlCh7tgsKtCuQ8.jpg?width=2880&height=3840",
+        "src": "/images/Pm6aVi2IRY7oKlCh7tgsKtCuQ8.jpg",
         "width": 2880,
         "height": 3840
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Cca2InAAE5dsoT4Bfgd97mJlPBY.jpg?width=2880&height=1116",
+        "src": "/images/Cca2InAAE5dsoT4Bfgd97mJlPBY.jpg",
         "width": 2880,
         "height": 1116
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/faObSeR7mqAlmMFDbpkIY4CUhI.jpg?width=2880&height=2160",
+        "src": "/images/faObSeR7mqAlmMFDbpkIY4CUhI.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Sbrf1YMyTbAQN0t2ncpbPeu5hU.jpg?width=2880&height=2160",
+        "src": "/images/Sbrf1YMyTbAQN0t2ncpbPeu5hU.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -677,19 +677,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/SSanVJhFHOr1vncsAycWgemd2aU.jpg?width=960&height=1280",
+        "src": "/images/SSanVJhFHOr1vncsAycWgemd2aU.jpg",
         "width": 960,
         "height": 1280
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Mgark2lfh4uLauWJmvHrZnlAzAI.jpg?width=2880&height=3840",
+        "src": "/images/Mgark2lfh4uLauWJmvHrZnlAzAI.jpg",
         "width": 2880,
         "height": 3840
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/hSAup4bh0kt5QjOQvA5UlfzrZA.jpg?width=2880&height=2513",
+        "src": "/images/hSAup4bh0kt5QjOQvA5UlfzrZA.jpg",
         "width": 2880,
         "height": 2513
       },
@@ -701,13 +701,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Oq7nxQYejgjNrdWi4IYG8GIn8do.jpg?width=1080&height=1440",
+        "src": "/images/Oq7nxQYejgjNrdWi4IYG8GIn8do.jpg",
         "width": 1080,
         "height": 1440
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/w6OGHGfjkLy8L1nOTJmVPAVX1Gc.jpg?width=2880&height=3840",
+        "src": "/images/w6OGHGfjkLy8L1nOTJmVPAVX1Gc.jpg",
         "width": 2880,
         "height": 3840
       },
@@ -719,19 +719,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zX8NKxB84Mp0fQ1nqOh09aoSSOQ.jpg?width=2880&height=2378",
+        "src": "/images/zX8NKxB84Mp0fQ1nqOh09aoSSOQ.jpg",
         "width": 2880,
         "height": 2378
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/o7XM1F6hk4e6gYXos48adDvfyXI.jpg?width=2880&height=3840",
+        "src": "/images/o7XM1F6hk4e6gYXos48adDvfyXI.jpg",
         "width": 2880,
         "height": 3840
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CWEUByX8jZirfimW0jEPQHS62w.jpg?width=2880&height=3840",
+        "src": "/images/CWEUByX8jZirfimW0jEPQHS62w.jpg",
         "width": 2880,
         "height": 3840
       },
@@ -743,25 +743,25 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/qdd7JiyFHbbvRMkzpU82Xo7O0.jpg?width=2880&height=2160",
+        "src": "/images/qdd7JiyFHbbvRMkzpU82Xo7O0.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/8JGmHAtPoekXM12RpFdS0vPw18.jpg?width=2880&height=3840",
+        "src": "/images/8JGmHAtPoekXM12RpFdS0vPw18.jpg",
         "width": 2880,
         "height": 3840
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ZwMdV5WsE2ZHUQQ7jlFW8uOcx7I.jpg?width=595&height=1244",
+        "src": "/images/ZwMdV5WsE2ZHUQQ7jlFW8uOcx7I.jpg",
         "width": 595,
         "height": 1244
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ueraMeaquuISh4thNDwl8db9M8.jpg?width=582&height=1161",
+        "src": "/images/ueraMeaquuISh4thNDwl8db9M8.jpg",
         "width": 582,
         "height": 1161
       },
@@ -779,19 +779,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/fBv2Fvs7sz6tJGYGKbdOPQrszPk.png?width=1068&height=485",
+        "src": "/images/fBv2Fvs7sz6tJGYGKbdOPQrszPk.png",
         "width": 1068,
         "height": 485
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/xxBqvoyqff4hNizFcb4dt8FvyF8.png?width=1277&height=614",
+        "src": "/images/xxBqvoyqff4hNizFcb4dt8FvyF8.png",
         "width": 1277,
         "height": 614
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/fgrvecYsCNE5jyjoGaf9v1K7Rc.png?width=1278&height=613",
+        "src": "/images/fgrvecYsCNE5jyjoGaf9v1K7Rc.png",
         "width": 1278,
         "height": 613
       },
@@ -803,13 +803,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/IqxbpqPdInWIVQ8A1M4WbXR4Q.png?width=1277&height=613",
+        "src": "/images/IqxbpqPdInWIVQ8A1M4WbXR4Q.png",
         "width": 1277,
         "height": 613
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/BOiodvo0wSVC8sMGohMR1qWmAxk.png?width=1276&height=614",
+        "src": "/images/BOiodvo0wSVC8sMGohMR1qWmAxk.png",
         "width": 1276,
         "height": 614
       },
@@ -897,7 +897,7 @@
     "title": "Create an Electric Spirit Level",
     "subtitle": "Use this spirit level to quickly and easily display the tilt of any object attached!\n\nCreated by Kaitlyn from Raffles Institution.",
     "description": "Pre Coding: Connect your Micro:Bit",
-    "hero_image": "https://framerusercontent.com/images/vJC2mRsNiQvuIEx7bkS4zxlAtI.png?width=802&height=813",
+    "hero_image": "/images/vJC2mRsNiQvuIEx7bkS4zxlAtI.png",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -921,7 +921,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/vJC2mRsNiQvuIEx7bkS4zxlAtI.png?width=802&height=813",
+        "src": "/images/vJC2mRsNiQvuIEx7bkS4zxlAtI.png",
         "width": 802,
         "height": 813
       },
@@ -945,7 +945,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/bdoOFSpHyoQTJBy9vRVeZ08xus.png?width=1440&height=900",
+        "src": "/images/bdoOFSpHyoQTJBy9vRVeZ08xus.png",
         "width": 1440,
         "height": 900
       },
@@ -957,7 +957,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/HVpA8J3znp9poN5NJRCKnQqYI.png?width=482&height=723",
+        "src": "/images/HVpA8J3znp9poN5NJRCKnQqYI.png",
         "width": 482,
         "height": 723
       },
@@ -969,7 +969,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/JdBF3jASnN8MCFORK9XQdlAWOo.png?width=363&height=354",
+        "src": "/images/JdBF3jASnN8MCFORK9XQdlAWOo.png",
         "width": 363,
         "height": 354
       },
@@ -981,7 +981,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/R0uIH4DcourhZGaYuXArrQNCnY.png?width=1149&height=371",
+        "src": "/images/R0uIH4DcourhZGaYuXArrQNCnY.png",
         "width": 1149,
         "height": 371
       },
@@ -993,7 +993,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ML8K4E2amVBWQDFDxtfeEyilg.png?width=666&height=675",
+        "src": "/images/ML8K4E2amVBWQDFDxtfeEyilg.png",
         "width": 666,
         "height": 675
       },
@@ -1005,19 +1005,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rYzkwBAivaNvJWyNr8vwE1jKU.png?width=369&height=346",
+        "src": "/images/rYzkwBAivaNvJWyNr8vwE1jKU.png",
         "width": 369,
         "height": 346
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/K9kCHC9JjC6nOB2D3i5vCZFGy5k.png?width=395&height=168",
+        "src": "/images/K9kCHC9JjC6nOB2D3i5vCZFGy5k.png",
         "width": 395,
         "height": 168
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/u0VckV4xkyystHSbVmZ2bg1Y.png?width=359&height=342",
+        "src": "/images/u0VckV4xkyystHSbVmZ2bg1Y.png",
         "width": 359,
         "height": 342
       },
@@ -1029,37 +1029,37 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/k7CUSyQYMQiHAl0o044tUEkoBtg.png?width=886&height=500",
+        "src": "/images/k7CUSyQYMQiHAl0o044tUEkoBtg.png",
         "width": 886,
         "height": 500
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/lJJPEYfQk3Z5FVS1MhC2ieKYXg.png?width=873&height=483",
+        "src": "/images/lJJPEYfQk3Z5FVS1MhC2ieKYXg.png",
         "width": 873,
         "height": 483
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/C7yenZGOmFIgdUioxvssA4AD7ZA.png?width=835&height=415",
+        "src": "/images/C7yenZGOmFIgdUioxvssA4AD7ZA.png",
         "width": 835,
         "height": 415
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wx05LqEYs2MdQ1xujTWRpaXf3k.png?width=839&height=359",
+        "src": "/images/wx05LqEYs2MdQ1xujTWRpaXf3k.png",
         "width": 839,
         "height": 359
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/TulE93FgrEYKZmiklIcs1NISwk.png?width=844&height=557",
+        "src": "/images/TulE93FgrEYKZmiklIcs1NISwk.png",
         "width": 844,
         "height": 557
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/gor2xV2hDYxTV5vulLqpTHEBrU.png?width=857&height=575",
+        "src": "/images/gor2xV2hDYxTV5vulLqpTHEBrU.png",
         "width": 857,
         "height": 575
       },
@@ -1071,7 +1071,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/RKkN6U0eCLu2U5TbrUdH9dVY.png?width=461&height=199",
+        "src": "/images/RKkN6U0eCLu2U5TbrUdH9dVY.png",
         "width": 461,
         "height": 199
       },
@@ -1089,7 +1089,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/pVn7HcF0ERXroPsrMxt0fssv4.png?width=593&height=438",
+        "src": "/images/pVn7HcF0ERXroPsrMxt0fssv4.png",
         "width": 593,
         "height": 438
       },
@@ -1101,7 +1101,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CKeGoJOZaVnNVERr6e0RGmKEfpI.png?width=493&height=312",
+        "src": "/images/CKeGoJOZaVnNVERr6e0RGmKEfpI.png",
         "width": 493,
         "height": 312
       },
@@ -1113,7 +1113,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/5bbGWnKG79Wysm5aSAbpyxdp4.jpg?width=1080&height=1920",
+        "src": "/images/5bbGWnKG79Wysm5aSAbpyxdp4.jpg",
         "width": 1080,
         "height": 1920
       }
@@ -1213,7 +1213,7 @@
     "title": "Create an Electro-Theremin",
     "subtitle": "Get down to the funky sounds of electric ‘analog’ music",
     "description": "Step 1",
-    "hero_image": "https://framerusercontent.com/images/6NH5uFn1Vvqva0lzwRAhxXW8g.jpg?width=1024&height=731",
+    "hero_image": "/images/6NH5uFn1Vvqva0lzwRAhxXW8g.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -1237,7 +1237,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6NH5uFn1Vvqva0lzwRAhxXW8g.jpg?width=1024&height=731",
+        "src": "/images/6NH5uFn1Vvqva0lzwRAhxXW8g.jpg",
         "width": 1024,
         "height": 731
       },
@@ -1261,7 +1261,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/7qe4NmxcUDg8AMroar1KPLPIk.jpg?width=1024&height=731",
+        "src": "/images/7qe4NmxcUDg8AMroar1KPLPIk.jpg",
         "width": 1024,
         "height": 731
       },
@@ -1273,7 +1273,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/42ilGCDwRROKnq6qzr3GnZCrVLM.png?width=768&height=228",
+        "src": "/images/42ilGCDwRROKnq6qzr3GnZCrVLM.png",
         "width": 768,
         "height": 228
       },
@@ -1285,7 +1285,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/EqfVl2hsUi9yJeUXlTfcIkcJs.png?width=713&height=277",
+        "src": "/images/EqfVl2hsUi9yJeUXlTfcIkcJs.png",
         "width": 713,
         "height": 277
       },
@@ -1297,7 +1297,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zMj2ulwB9z9jHcKt6LyEPLxzI.png?width=768&height=403",
+        "src": "/images/zMj2ulwB9z9jHcKt6LyEPLxzI.png",
         "width": 768,
         "height": 403
       },
@@ -1309,7 +1309,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/1L8mNfXQRavNvPRdHivIa4JrxI.jpg?width=1024&height=731",
+        "src": "/images/1L8mNfXQRavNvPRdHivIa4JrxI.jpg",
         "width": 1024,
         "height": 731
       },
@@ -1379,7 +1379,7 @@
     "title": "Finger Dexerity Micro:bit Game",
     "subtitle": "Are your psychomotor skills as bad as mine?",
     "description": "Congratulations!",
-    "hero_image": "https://framerusercontent.com/images/cxBy1hH7GTEkd3QO6tMrA1dgs.jpg?width=2880&height=3840",
+    "hero_image": "/images/cxBy1hH7GTEkd3QO6tMrA1dgs.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -1403,7 +1403,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/cxBy1hH7GTEkd3QO6tMrA1dgs.jpg?width=2880&height=3840",
+        "src": "/images/cxBy1hH7GTEkd3QO6tMrA1dgs.jpg",
         "width": 2880,
         "height": 3840
       },
@@ -1427,7 +1427,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/XjR5KV8HDijMlcVPFd1uHIbOA8.png?width=750&height=1488",
+        "src": "/images/XjR5KV8HDijMlcVPFd1uHIbOA8.png",
         "width": 750,
         "height": 1488
       },
@@ -1439,7 +1439,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ib7QCO7I2IF3HQmiFyUpFjxgYE.png?width=1134&height=374",
+        "src": "/images/ib7QCO7I2IF3HQmiFyUpFjxgYE.png",
         "width": 1134,
         "height": 374
       },
@@ -1451,7 +1451,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/r9wcRyKrWZ8tbNT5AD7KJTgWsU.png?width=486&height=174",
+        "src": "/images/r9wcRyKrWZ8tbNT5AD7KJTgWsU.png",
         "width": 486,
         "height": 174
       },
@@ -1463,7 +1463,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CO2stskLNWzntWeYIhJmkSaYo.png?width=1216&height=918",
+        "src": "/images/CO2stskLNWzntWeYIhJmkSaYo.png",
         "width": 1216,
         "height": 918
       },
@@ -1475,7 +1475,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/UJ5s7BmqY2X4WCD7i5TAkLU04.png?width=1238&height=1064",
+        "src": "/images/UJ5s7BmqY2X4WCD7i5TAkLU04.png",
         "width": 1238,
         "height": 1064
       },
@@ -1487,7 +1487,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/XjR5KV8HDijMlcVPFd1uHIbOA8.png?width=750&height=1488",
+        "src": "/images/XjR5KV8HDijMlcVPFd1uHIbOA8.png",
         "width": 750,
         "height": 1488
       },
@@ -1499,7 +1499,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/1jFP3sMj646nR6WeywtZNo9oto.png?width=622&height=510",
+        "src": "/images/1jFP3sMj646nR6WeywtZNo9oto.png",
         "width": 622,
         "height": 510
       },
@@ -1511,7 +1511,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/x89J1GxF2UqUg958YpqHyeUkAwI.png?width=460&height=180",
+        "src": "/images/x89J1GxF2UqUg958YpqHyeUkAwI.png",
         "width": 460,
         "height": 180
       },
@@ -1611,7 +1611,7 @@
     "title": "Flippy Pancakes Micro:bit Game",
     "subtitle": "Do you have what it takes to flip the perfect pancake?",
     "description": "Step 1",
-    "hero_image": "https://framerusercontent.com/images/TGE0wbZ9rn5h1Bgyx3zqqAdM.gif?width=596&height=548",
+    "hero_image": "/images/TGE0wbZ9rn5h1Bgyx3zqqAdM.gif",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -1635,7 +1635,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/TGE0wbZ9rn5h1Bgyx3zqqAdM.gif?width=596&height=548",
+        "src": "/images/TGE0wbZ9rn5h1Bgyx3zqqAdM.gif",
         "width": 596,
         "height": 548
       },
@@ -1659,7 +1659,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/c4D8DAHILCwpGqERf6jaGR12CWA.jpg?width=1510&height=1078",
+        "src": "/images/c4D8DAHILCwpGqERf6jaGR12CWA.jpg",
         "width": 1510,
         "height": 1078
       },
@@ -1671,7 +1671,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/P2NL3x5wMiz9dmo3SLIOrMaHM.png?width=797&height=469",
+        "src": "/images/P2NL3x5wMiz9dmo3SLIOrMaHM.png",
         "width": 797,
         "height": 469
       },
@@ -1683,7 +1683,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/DalhBZLwNBpqcovN4tqvnw6ahqM.png?width=160&height=1298",
+        "src": "/images/DalhBZLwNBpqcovN4tqvnw6ahqM.png",
         "width": 160,
         "height": 1298
       },
@@ -1695,7 +1695,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wzUa9JNMx2kJogJz6jmySBLFwj8.png?width=2202&height=1065",
+        "src": "/images/wzUa9JNMx2kJogJz6jmySBLFwj8.png",
         "width": 2202,
         "height": 1065
       },
@@ -1707,13 +1707,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kp7IFLRShuRF3xvwXOwXskpEU.png?width=1370&height=1270",
+        "src": "/images/kp7IFLRShuRF3xvwXOwXskpEU.png",
         "width": 1370,
         "height": 1270
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2IJHKhOHFQ9pE2lLvJr8RLIeCd0.png?width=1347&height=523",
+        "src": "/images/2IJHKhOHFQ9pE2lLvJr8RLIeCd0.png",
         "width": 1347,
         "height": 523
       },
@@ -1725,7 +1725,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kMdATbnOId8YkDLMCDBKywsxz4.png?width=860&height=457",
+        "src": "/images/kMdATbnOId8YkDLMCDBKywsxz4.png",
         "width": 860,
         "height": 457
       },
@@ -1737,7 +1737,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kYzccATYh5nc5zBgmmEX0uNPCw.png?width=1124&height=919",
+        "src": "/images/kYzccATYh5nc5zBgmmEX0uNPCw.png",
         "width": 1124,
         "height": 919
       },
@@ -1749,7 +1749,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/JwoBGtN40FJYeHAziHR3ZbqL3GM.png?width=880&height=503",
+        "src": "/images/JwoBGtN40FJYeHAziHR3ZbqL3GM.png",
         "width": 880,
         "height": 503
       },
@@ -1849,7 +1849,7 @@
     "title": "Making a Waving Fortune Cat",
     "subtitle": "\nUse a micro:bit and mini servo to make your very own Maneki-Neko, or Fortune Cat, who waves its hand when you press a button!\n\nDesigned and written by Tim Ho from the National University of Singapore",
     "description": "Step 1 – Choose a cat",
-    "hero_image": "https://framerusercontent.com/images/pmsl1tHBnpSl79LDhU4ILYgiuVQ.gif?width=480&height=270",
+    "hero_image": "/images/pmsl1tHBnpSl79LDhU4ILYgiuVQ.gif",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -1873,7 +1873,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/pmsl1tHBnpSl79LDhU4ILYgiuVQ.gif?width=480&height=270",
+        "src": "/images/pmsl1tHBnpSl79LDhU4ILYgiuVQ.gif",
         "width": 480,
         "height": 270
       },
@@ -1897,7 +1897,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/8l8e9TpNF14Z9cuK9Bp2hfX95EM.jpg?width=2448&height=3264",
+        "src": "/images/8l8e9TpNF14Z9cuK9Bp2hfX95EM.jpg",
         "width": 2448,
         "height": 3264
       },
@@ -1909,7 +1909,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CkdqLNWsQfRYffR6WYwziG7cU.jpg?width=2880&height=2160",
+        "src": "/images/CkdqLNWsQfRYffR6WYwziG7cU.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -1921,7 +1921,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/LYKdIKDvlgU1jeRQNwIXImZido.jpg?width=2880&height=2160",
+        "src": "/images/LYKdIKDvlgU1jeRQNwIXImZido.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -1933,7 +1933,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ACa7VkzrA0yN5tZuAG6uGW6GHM.png?width=701&height=772",
+        "src": "/images/ACa7VkzrA0yN5tZuAG6uGW6GHM.png",
         "width": 701,
         "height": 772
       },
@@ -1997,7 +1997,7 @@
     "title": "Maze Runner Micro:bit Game",
     "subtitle": "Can you make it through all the levels?",
     "description": "Step 1",
-    "hero_image": "https://framerusercontent.com/images/LLVkRe2f1FqxdOWR718Pb7GM3Vg.gif?width=596&height=548",
+    "hero_image": "/images/LLVkRe2f1FqxdOWR718Pb7GM3Vg.gif",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -2021,7 +2021,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/LLVkRe2f1FqxdOWR718Pb7GM3Vg.gif?width=596&height=548",
+        "src": "/images/LLVkRe2f1FqxdOWR718Pb7GM3Vg.gif",
         "width": 596,
         "height": 548
       },
@@ -2045,7 +2045,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/c4D8DAHILCwpGqERf6jaGR12CWA.jpg?width=1510&height=1078",
+        "src": "/images/c4D8DAHILCwpGqERf6jaGR12CWA.jpg",
         "width": 1510,
         "height": 1078
       },
@@ -2057,7 +2057,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/NjknGCmB46efUT1ahgJ0qPOZq9w.png?width=1133&height=464",
+        "src": "/images/NjknGCmB46efUT1ahgJ0qPOZq9w.png",
         "width": 1133,
         "height": 464
       },
@@ -2069,7 +2069,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/n1HLQLfzrpRn3zsLNv4GQghLhhs.png?width=990&height=418",
+        "src": "/images/n1HLQLfzrpRn3zsLNv4GQghLhhs.png",
         "width": 990,
         "height": 418
       },
@@ -2081,7 +2081,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wzUa9JNMx2kJogJz6jmySBLFwj8.png?width=2202&height=1065",
+        "src": "/images/wzUa9JNMx2kJogJz6jmySBLFwj8.png",
         "width": 2202,
         "height": 1065
       },
@@ -2093,7 +2093,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/AVeafstscGQQkVK0CyLpy3Uc0.png?width=1053&height=1311",
+        "src": "/images/AVeafstscGQQkVK0CyLpy3Uc0.png",
         "width": 1053,
         "height": 1311
       },
@@ -2105,7 +2105,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/DdFoZd9sfSwBtbQaEEAVapOvvd4.png?width=1288&height=1272",
+        "src": "/images/DdFoZd9sfSwBtbQaEEAVapOvvd4.png",
         "width": 1288,
         "height": 1272
       },
@@ -2117,7 +2117,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zU3n7Z4NdL3gJHdHMkZLoGSxHQc.png?width=994&height=566",
+        "src": "/images/zU3n7Z4NdL3gJHdHMkZLoGSxHQc.png",
         "width": 994,
         "height": 566
       },
@@ -2129,7 +2129,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/IGYlSuDXXwdYRExuyBAMTsp26JM.png?width=999&height=386",
+        "src": "/images/IGYlSuDXXwdYRExuyBAMTsp26JM.png",
         "width": 999,
         "height": 386
       },
@@ -2147,7 +2147,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/X3VZXb9Wk0Dayxrk3hM1yzT4ODU.png?width=1114&height=596",
+        "src": "/images/X3VZXb9Wk0Dayxrk3hM1yzT4ODU.png",
         "width": 1114,
         "height": 596
       },
@@ -2247,7 +2247,7 @@
     "title": "micro:bit Flappy Bird Game",
     "subtitle": "Take flight and achieve your pipe dreams with your own version of the notoriously challenging Flappy Bird game, using nothing but a micro:bit (no extras needed) and some Python code.\n\nMade by Cheryl from Raffles Institution. Warning: heavy dosage of bird puns included.",
     "description": "Step 3 - Leaving The Nest",
-    "hero_image": "https://framerusercontent.com/images/rGRnnPJ7wMBplG84QcB4R7uVR8.png?width=316&height=316",
+    "hero_image": "/images/rGRnnPJ7wMBplG84QcB4R7uVR8.png",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -2271,7 +2271,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rGRnnPJ7wMBplG84QcB4R7uVR8.png?width=316&height=316",
+        "src": "/images/rGRnnPJ7wMBplG84QcB4R7uVR8.png",
         "width": 316,
         "height": 316
       },
@@ -2295,13 +2295,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/oTfMoC8BmSfdnTJF3DV9fGKek.gif?width=600&height=457",
+        "src": "/images/oTfMoC8BmSfdnTJF3DV9fGKek.gif",
         "width": 600,
         "height": 457
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/aQI4wTkf64TWIAVrQiM9y1CY.png?width=768&height=305",
+        "src": "/images/aQI4wTkf64TWIAVrQiM9y1CY.png",
         "width": 768,
         "height": 305
       },
@@ -2313,7 +2313,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/tO4ZN9E4rcjbpERUtuuGi172rWI.png?width=768&height=201",
+        "src": "/images/tO4ZN9E4rcjbpERUtuuGi172rWI.png",
         "width": 768,
         "height": 201
       },
@@ -2325,7 +2325,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Si1PwacxC6rACFZTDLalRpn8wc.png?width=768&height=547",
+        "src": "/images/Si1PwacxC6rACFZTDLalRpn8wc.png",
         "width": 768,
         "height": 547
       },
@@ -2337,7 +2337,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/cJaqyJu2qodO0IrzcxxFrjISM.png?width=768&height=346",
+        "src": "/images/cJaqyJu2qodO0IrzcxxFrjISM.png",
         "width": 768,
         "height": 346
       },
@@ -2349,7 +2349,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/TI8TKzrnsB9vvu2jNreoMCqilLo.png?width=1024&height=402",
+        "src": "/images/TI8TKzrnsB9vvu2jNreoMCqilLo.png",
         "width": 1024,
         "height": 402
       },
@@ -2361,7 +2361,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/cNML8lXdlaAxZbN0jCm7rZneic.png?width=1468&height=724",
+        "src": "/images/cNML8lXdlaAxZbN0jCm7rZneic.png",
         "width": 1468,
         "height": 724
       },
@@ -2373,7 +2373,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/a7BwKwoiR5jd7q2m28HRt6da4k.png?width=768&height=405",
+        "src": "/images/a7BwKwoiR5jd7q2m28HRt6da4k.png",
         "width": 768,
         "height": 405
       },
@@ -2385,7 +2385,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kaK1onLpGLCQchtViljGU88xRo.png?width=1024&height=419",
+        "src": "/images/kaK1onLpGLCQchtViljGU88xRo.png",
         "width": 1024,
         "height": 419
       }
@@ -2461,7 +2461,7 @@
     "title": "micro:bit Snake Game",
     "subtitle": "micro:bit",
     "description": "Why Python?",
-    "hero_image": "https://framerusercontent.com/images/GrXoLE9wGBAv2T1TlJi8I7E6CLs.gif?width=339&height=240",
+    "hero_image": "/images/GrXoLE9wGBAv2T1TlJi8I7E6CLs.gif",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -2485,7 +2485,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/GrXoLE9wGBAv2T1TlJi8I7E6CLs.gif?width=339&height=240",
+        "src": "/images/GrXoLE9wGBAv2T1TlJi8I7E6CLs.gif",
         "width": 339,
         "height": 240
       },
@@ -2527,7 +2527,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/1xc3FItBakESuhI1fzJCI7cTX1M.png?width=329&height=57",
+        "src": "/images/1xc3FItBakESuhI1fzJCI7cTX1M.png",
         "width": 329,
         "height": 57
       },
@@ -2539,7 +2539,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/eBB8J4iFiNbnBQAtIO7xzJblUgs.png?width=506&height=165",
+        "src": "/images/eBB8J4iFiNbnBQAtIO7xzJblUgs.png",
         "width": 506,
         "height": 165
       },
@@ -2551,7 +2551,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/TlVXt29OLfPMyYQa4gL5cqHDnU.png?width=152&height=29",
+        "src": "/images/TlVXt29OLfPMyYQa4gL5cqHDnU.png",
         "width": 152,
         "height": 29
       },
@@ -2563,7 +2563,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/PwFM9pUiI7LHNYkr3pyEH4K5xXk.png?width=903&height=155",
+        "src": "/images/PwFM9pUiI7LHNYkr3pyEH4K5xXk.png",
         "width": 903,
         "height": 155
       },
@@ -2575,7 +2575,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/YPADSvpF2JtR0RKZasifGqpow4.gif?width=339&height=240",
+        "src": "/images/YPADSvpF2JtR0RKZasifGqpow4.gif",
         "width": 339,
         "height": 240
       },
@@ -2593,7 +2593,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/APnCxkJ8m7aoazrHMQeh9wEQpI.gif?width=339&height=240",
+        "src": "/images/APnCxkJ8m7aoazrHMQeh9wEQpI.gif",
         "width": 339,
         "height": 240
       },
@@ -2605,7 +2605,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/LCMHAEvzn7fBQ7c5xMf3DKPHR0.png?width=385&height=137",
+        "src": "/images/LCMHAEvzn7fBQ7c5xMf3DKPHR0.png",
         "width": 385,
         "height": 137
       },
@@ -2617,7 +2617,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/LdHq3egO3pmDh4qCGOUOhcXsjE.gif?width=339&height=240",
+        "src": "/images/LdHq3egO3pmDh4qCGOUOhcXsjE.gif",
         "width": 339,
         "height": 240
       }
@@ -2717,7 +2717,7 @@
     "title": "micro:bit Wire Transmission",
     "subtitle": "Communicate between two micro:bits using Morse code, fishing line, a servo and a sensor! Why use micro:bit’s radio when this is so much cooler?",
     "description": "Why Python?",
-    "hero_image": "https://framerusercontent.com/images/DDl0KNXbAnRrmhYEZ1XM5mJvy40.gif?width=450&height=277",
+    "hero_image": "/images/DDl0KNXbAnRrmhYEZ1XM5mJvy40.gif",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -2741,7 +2741,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/DDl0KNXbAnRrmhYEZ1XM5mJvy40.gif?width=450&height=277",
+        "src": "/images/DDl0KNXbAnRrmhYEZ1XM5mJvy40.gif",
         "width": 450,
         "height": 277
       },
@@ -2783,7 +2783,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6qCqn9IAvDAcdyyDxpRNqnjsc.jpg?width=2462&height=3066",
+        "src": "/images/6qCqn9IAvDAcdyyDxpRNqnjsc.jpg",
         "width": 2462,
         "height": 3066
       },
@@ -2801,7 +2801,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/z19al6Cb4dfoySTyO6Zc3kww.png?width=1214&height=576",
+        "src": "/images/z19al6Cb4dfoySTyO6Zc3kww.png",
         "width": 1214,
         "height": 576
       },
@@ -2813,13 +2813,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/GcyyLn8YSST6tOpoOWMwvim86hw.jpg?width=2880&height=2160",
+        "src": "/images/GcyyLn8YSST6tOpoOWMwvim86hw.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/FRG4JQEG5lK9ZnC7UQoUdiAFM.png?width=1152&height=566",
+        "src": "/images/FRG4JQEG5lK9ZnC7UQoUdiAFM.png",
         "width": 1152,
         "height": 566
       },
@@ -2831,13 +2831,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/I7kNOwGDqvTH0RWxPvwPnSmYKY.jpg?width=2880&height=2160",
+        "src": "/images/I7kNOwGDqvTH0RWxPvwPnSmYKY.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/32DzKtvqHxA9nlgkvXZGtjdmujY.png?width=842&height=508",
+        "src": "/images/32DzKtvqHxA9nlgkvXZGtjdmujY.png",
         "width": 842,
         "height": 508
       },
@@ -2861,7 +2861,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/t1uEEMe4Jukrs4MAzPlglLhGBTE.png?width=640&height=400",
+        "src": "/images/t1uEEMe4Jukrs4MAzPlglLhGBTE.png",
         "width": 640,
         "height": 400
       }
@@ -2955,7 +2955,7 @@
     "title": "MicroPython",
     "subtitle": "Micro:bit",
     "description": "Project 01: Music Machine",
-    "hero_image": "https://framerusercontent.com/images/HHX6pAYSwZXM7bwsH86S00nwU.png?width=1552&height=1157",
+    "hero_image": "/images/HHX6pAYSwZXM7bwsH86S00nwU.png",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -2979,7 +2979,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/HHX6pAYSwZXM7bwsH86S00nwU.png?width=1552&height=1157",
+        "src": "/images/HHX6pAYSwZXM7bwsH86S00nwU.png",
         "width": 1552,
         "height": 1157
       },
@@ -2997,13 +2997,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/mt19icpUxFRzjjis3mtEOXKn9oI.jpg?width=225&height=300",
+        "src": "/images/mt19icpUxFRzjjis3mtEOXKn9oI.jpg",
         "width": 225,
         "height": 300
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/qaqwqaaXhz5FzCnPqSOCmqXg.png?width=1792&height=750",
+        "src": "/images/qaqwqaaXhz5FzCnPqSOCmqXg.png",
         "width": 1792,
         "height": 750
       },
@@ -3015,13 +3015,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/QZED5NrEcBSDFGPAqi0pvyIYG5Y.jpg?width=225&height=300",
+        "src": "/images/QZED5NrEcBSDFGPAqi0pvyIYG5Y.jpg",
         "width": 225,
         "height": 300
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/1y571LbpI6D5oOBFULGkiwOkc8.png?width=1394&height=350",
+        "src": "/images/1y571LbpI6D5oOBFULGkiwOkc8.png",
         "width": 1394,
         "height": 350
       },
@@ -3033,13 +3033,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/9pTCEuFTcwKrf2gt36NPGPoctgQ.jpg?width=225&height=300",
+        "src": "/images/9pTCEuFTcwKrf2gt36NPGPoctgQ.jpg",
         "width": 225,
         "height": 300
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2JTh75md6jU1IiSqM9ayZ2pt8Ss.png?width=1982&height=774",
+        "src": "/images/2JTh75md6jU1IiSqM9ayZ2pt8Ss.png",
         "width": 1982,
         "height": 774
       },
@@ -3051,13 +3051,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Pav0L5VEgueLmP3xgZ83uCE4o.jpg?width=150&height=200",
+        "src": "/images/Pav0L5VEgueLmP3xgZ83uCE4o.jpg",
         "width": 150,
         "height": 200
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kdfULEIIHmQMsJ34ixpiQ4EaeD4.png?width=1204&height=1622",
+        "src": "/images/kdfULEIIHmQMsJ34ixpiQ4EaeD4.png",
         "width": 1204,
         "height": 1622
       },
@@ -3069,13 +3069,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/4JTEHpnqm2o008J6lk5HdzIAkyo.jpg?width=200&height=267",
+        "src": "/images/4JTEHpnqm2o008J6lk5HdzIAkyo.jpg",
         "width": 200,
         "height": 267
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Kh2oJ5H9M1yIaWvDO3vBRmOyko.png?width=1174&height=1578",
+        "src": "/images/Kh2oJ5H9M1yIaWvDO3vBRmOyko.png",
         "width": 1174,
         "height": 1578
       },
@@ -3185,7 +3185,7 @@
     "title": "Morse Code Transmitter",
     "subtitle": "Make a simple morse code transmitter using MakeCode, micro:bits, and some crocodile clips!\n\nThis tutorial was written by Anahita from the University of California at Berkeley, during her summer internship in Singapore.",
     "description": "Step 0 – Preview",
-    "hero_image": "https://framerusercontent.com/images/Im9m2uepC9Q9eON1uPJUCEWzBWM.png?width=1024&height=576",
+    "hero_image": "/images/Im9m2uepC9Q9eON1uPJUCEWzBWM.png",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -3209,7 +3209,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Im9m2uepC9Q9eON1uPJUCEWzBWM.png?width=1024&height=576",
+        "src": "/images/Im9m2uepC9Q9eON1uPJUCEWzBWM.png",
         "width": 1024,
         "height": 576
       },
@@ -3239,7 +3239,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rTv1P1HqMkifH4qUFLgx2nesaFI.png?width=1024&height=768",
+        "src": "/images/rTv1P1HqMkifH4qUFLgx2nesaFI.png",
         "width": 1024,
         "height": 768
       },
@@ -3251,7 +3251,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CCm9KLcZAl5jP2xF7l8cpdKqW4.png?width=752&height=754",
+        "src": "/images/CCm9KLcZAl5jP2xF7l8cpdKqW4.png",
         "width": 752,
         "height": 754
       },
@@ -3263,7 +3263,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/gEbq5cSxQBdcA3sKYdDyrAUWCZs.png?width=768&height=724",
+        "src": "/images/gEbq5cSxQBdcA3sKYdDyrAUWCZs.png",
         "width": 768,
         "height": 724
       },
@@ -3275,7 +3275,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/QBsuhZgn5Kzwfg0ISo4OpU8vUk.png?width=768&height=253",
+        "src": "/images/QBsuhZgn5Kzwfg0ISo4OpU8vUk.png",
         "width": 768,
         "height": 253
       },
@@ -3287,7 +3287,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/G54S7Y7JBItWSbSUXRMFottypIE.png?width=1024&height=791",
+        "src": "/images/G54S7Y7JBItWSbSUXRMFottypIE.png",
         "width": 1024,
         "height": 791
       },
@@ -3363,7 +3363,7 @@
     "title": "Pitch Perfect",
     "subtitle": "Do you think your ears are pitch perfect, then try my game. Or even better, create one!",
     "description": "Step 1:",
-    "hero_image": "https://framerusercontent.com/images/aSfebjilUTmQ0hDSh1HNeYrJs4.jpg?width=2880&height=1620",
+    "hero_image": "/images/aSfebjilUTmQ0hDSh1HNeYrJs4.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -3387,7 +3387,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/aSfebjilUTmQ0hDSh1HNeYrJs4.jpg?width=2880&height=1620",
+        "src": "/images/aSfebjilUTmQ0hDSh1HNeYrJs4.jpg",
         "width": 2880,
         "height": 1620
       },
@@ -3417,13 +3417,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/CgClkqD8Wq0hwjYJxlwwEMsPZLI.png?width=1075&height=460",
+        "src": "/images/CgClkqD8Wq0hwjYJxlwwEMsPZLI.png",
         "width": 1075,
         "height": 460
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zxZnuBdTTSxCI2eCP9c3Uc1cVGU.png?width=1076&height=320",
+        "src": "/images/zxZnuBdTTSxCI2eCP9c3Uc1cVGU.png",
         "width": 1076,
         "height": 320
       },
@@ -3435,7 +3435,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/nJoKYioLDzmZKqyWwAN2wgNZp1s.png?width=505&height=222",
+        "src": "/images/nJoKYioLDzmZKqyWwAN2wgNZp1s.png",
         "width": 505,
         "height": 222
       },
@@ -3447,7 +3447,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/pDNrj03Uvqxf1vaswmMsXZrJU.png?width=730&height=191",
+        "src": "/images/pDNrj03Uvqxf1vaswmMsXZrJU.png",
         "width": 730,
         "height": 191
       },
@@ -3459,7 +3459,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/MW6LAd7NurDhQM8DXd9DgsBVk.png?width=489&height=527",
+        "src": "/images/MW6LAd7NurDhQM8DXd9DgsBVk.png",
         "width": 489,
         "height": 527
       },
@@ -3471,13 +3471,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/9Vdt33oJUx2qSruXlu1mkfKGw.png?width=560&height=359",
+        "src": "/images/9Vdt33oJUx2qSruXlu1mkfKGw.png",
         "width": 560,
         "height": 359
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/5zCs9y7Q6KxtQpIRt2KQDT7IXLQ.png?width=637&height=418",
+        "src": "/images/5zCs9y7Q6KxtQpIRt2KQDT7IXLQ.png",
         "width": 637,
         "height": 418
       },
@@ -3489,7 +3489,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wKevZXxb40CmihOkojxdgYoZrn8.png?width=526&height=203",
+        "src": "/images/wKevZXxb40CmihOkojxdgYoZrn8.png",
         "width": 526,
         "height": 203
       }
@@ -3559,7 +3559,7 @@
     "title": "Put together the Game:bit!",
     "subtitle": "Let’s figure out where all those screws are supposed to go.",
     "description": "Step 1 – Buttons!",
-    "hero_image": "https://framerusercontent.com/images/fMylL1SpY5t6JOFlPQEG6aCGZY.jpg?width=1555&height=1036",
+    "hero_image": "/images/fMylL1SpY5t6JOFlPQEG6aCGZY.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -3583,7 +3583,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/fMylL1SpY5t6JOFlPQEG6aCGZY.jpg?width=1555&height=1036",
+        "src": "/images/fMylL1SpY5t6JOFlPQEG6aCGZY.jpg",
         "width": 1555,
         "height": 1036
       },
@@ -3607,7 +3607,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/v1ToX2ZqYxUJfNqiIRJCeK6oYd0.png?width=1920&height=1080",
+        "src": "/images/v1ToX2ZqYxUJfNqiIRJCeK6oYd0.png",
         "width": 1920,
         "height": 1080
       },
@@ -3619,7 +3619,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/9DEMPvtdTMo3y3fhSuVB31fzBg.png?width=1920&height=1080",
+        "src": "/images/9DEMPvtdTMo3y3fhSuVB31fzBg.png",
         "width": 1920,
         "height": 1080
       },
@@ -3631,7 +3631,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/xgu5Vv7loVfHF6jgDMo7qGd0c6Q.png?width=1920&height=1080",
+        "src": "/images/xgu5Vv7loVfHF6jgDMo7qGd0c6Q.png",
         "width": 1920,
         "height": 1080
       },
@@ -3643,7 +3643,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ln1M4JAeynNVgcQhYJGH1JSqv5c.png?width=1920&height=1080",
+        "src": "/images/ln1M4JAeynNVgcQhYJGH1JSqv5c.png",
         "width": 1920,
         "height": 1080
       },
@@ -3655,7 +3655,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/7BSVj6Q4r7YRJqFN8xjGfbBWA4g.png?width=1920&height=1080",
+        "src": "/images/7BSVj6Q4r7YRJqFN8xjGfbBWA4g.png",
         "width": 1920,
         "height": 1080
       },
@@ -3667,7 +3667,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/lPQZYr0nOr4RSweCf4hkpaUWQY.png?width=1920&height=1080",
+        "src": "/images/lPQZYr0nOr4RSweCf4hkpaUWQY.png",
         "width": 1920,
         "height": 1080
       },
@@ -3679,7 +3679,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/AQPG4X31UkdSLjpdxRHHyOs.png?width=1920&height=1080",
+        "src": "/images/AQPG4X31UkdSLjpdxRHHyOs.png",
         "width": 1920,
         "height": 1080
       },
@@ -3691,7 +3691,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/tQMXZzeeF5PPOWKEr5eFageszWU.png?width=1920&height=1080",
+        "src": "/images/tQMXZzeeF5PPOWKEr5eFageszWU.png",
         "width": 1920,
         "height": 1080
       },
@@ -3779,7 +3779,7 @@
     "title": "Put together the Krazy Kar v2",
     "subtitle": "Got our Krazy Kar Kit and ready to get started? Follow along to put it together here.\nDon’t like instructions? Use your creativity and make a krazy octopus instead.",
     "description": "Step 1 – Shell it!",
-    "hero_image": "https://framerusercontent.com/images/bDXq6Ap8j8OhUNkbZXwvrKiw18w.png?width=1024&height=576",
+    "hero_image": "/images/bDXq6Ap8j8OhUNkbZXwvrKiw18w.png",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -3803,7 +3803,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/bDXq6Ap8j8OhUNkbZXwvrKiw18w.png?width=1024&height=576",
+        "src": "/images/bDXq6Ap8j8OhUNkbZXwvrKiw18w.png",
         "width": 1024,
         "height": 576
       },
@@ -3827,7 +3827,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/GHiZhHjsVyB8iu4AF6qNDrk8hto.png?width=1024&height=576",
+        "src": "/images/GHiZhHjsVyB8iu4AF6qNDrk8hto.png",
         "width": 1024,
         "height": 576
       },
@@ -3839,7 +3839,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/NnSWa6XZ9tHPoj0Mxri4QK06E.png?width=1024&height=576",
+        "src": "/images/NnSWa6XZ9tHPoj0Mxri4QK06E.png",
         "width": 1024,
         "height": 576
       },
@@ -3851,7 +3851,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ZKlyJpWodzIPjSmlP6uDw2mz4.png?width=1024&height=576",
+        "src": "/images/ZKlyJpWodzIPjSmlP6uDw2mz4.png",
         "width": 1024,
         "height": 576
       },
@@ -3863,19 +3863,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6mWF0Ccva5IdpRXpNINPYcRgYE.png?width=1024&height=576",
+        "src": "/images/6mWF0Ccva5IdpRXpNINPYcRgYE.png",
         "width": 1024,
         "height": 576
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/k07oAqWQMU4U5Ro0GlRi6J4pLM.png?width=1024&height=576",
+        "src": "/images/k07oAqWQMU4U5Ro0GlRi6J4pLM.png",
         "width": 1024,
         "height": 576
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/VoRXA5NymwmtWm8t5Uv8RvD15bQ.png?width=1024&height=576",
+        "src": "/images/VoRXA5NymwmtWm8t5Uv8RvD15bQ.png",
         "width": 1024,
         "height": 576
       },
@@ -3887,7 +3887,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rWnIUHz2MF1GPSFfsUlDHtdmY.jpg?width=1024&height=768",
+        "src": "/images/rWnIUHz2MF1GPSFfsUlDHtdmY.jpg",
         "width": 1024,
         "height": 768
       }
@@ -3945,7 +3945,7 @@
     "title": "QUICK MATHS",
     "subtitle": "QUICK MATHS a game where its all about testing your mental calculations. Too slow and you lose, too fast you may make mistakes.\n\n",
     "description": "Pre Build Overview",
-    "hero_image": "https://framerusercontent.com/images/atohjWm2eEqupKusOgokkVstViM.jpg?width=1819&height=3013",
+    "hero_image": "/images/atohjWm2eEqupKusOgokkVstViM.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -3969,7 +3969,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/atohjWm2eEqupKusOgokkVstViM.jpg?width=1819&height=3013",
+        "src": "/images/atohjWm2eEqupKusOgokkVstViM.jpg",
         "width": 1819,
         "height": 3013
       },
@@ -3993,13 +3993,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/mrTP1drddTIa5EAZ1M6mP8tYG8.jpg?width=2880&height=2160",
+        "src": "/images/mrTP1drddTIa5EAZ1M6mP8tYG8.jpg",
         "width": 2880,
         "height": 2160
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2cRVvI06dKtgpPi8cuzOWGAWk.jpg?width=2880&height=2160",
+        "src": "/images/2cRVvI06dKtgpPi8cuzOWGAWk.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -4011,13 +4011,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/XYzhuDSgb8WpQlRt1V4Cxr9zR0.jpg?width=968&height=691",
+        "src": "/images/XYzhuDSgb8WpQlRt1V4Cxr9zR0.jpg",
         "width": 968,
         "height": 691
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/l1RepWyUhTXSaHqYAszIZtXTQa4.png?width=2160&height=1014",
+        "src": "/images/l1RepWyUhTXSaHqYAszIZtXTQa4.png",
         "width": 2160,
         "height": 1014
       },
@@ -4029,7 +4029,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/V8KlQKtubFKDYkzjlArfnk7AEVM.png?width=978&height=690",
+        "src": "/images/V8KlQKtubFKDYkzjlArfnk7AEVM.png",
         "width": 978,
         "height": 690
       },
@@ -4041,7 +4041,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/NdkOTYg1aCviqtVkpIkgMFfa1Y.png?width=768&height=1440",
+        "src": "/images/NdkOTYg1aCviqtVkpIkgMFfa1Y.png",
         "width": 768,
         "height": 1440
       },
@@ -4053,7 +4053,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/8NBneMNAa5wQqlDuwQQZA1Mg8.png?width=654&height=686",
+        "src": "/images/8NBneMNAa5wQqlDuwQQZA1Mg8.png",
         "width": 654,
         "height": 686
       },
@@ -4065,7 +4065,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/EcAWfVVqsrRoBbvurLV0WElt3gU.png?width=372&height=186",
+        "src": "/images/EcAWfVVqsrRoBbvurLV0WElt3gU.png",
         "width": 372,
         "height": 186
       },
@@ -4077,19 +4077,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/1K3r4Yn1wQUL2X7dBiPdqIRtdUY.png?width=644&height=216",
+        "src": "/images/1K3r4Yn1wQUL2X7dBiPdqIRtdUY.png",
         "width": 644,
         "height": 216
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/8NBneMNAa5wQqlDuwQQZA1Mg8.png?width=654&height=686",
+        "src": "/images/8NBneMNAa5wQqlDuwQQZA1Mg8.png",
         "width": 654,
         "height": 686
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/YotYCQVda8YjTvctGWHJjlp42Qo.png?width=1018&height=354",
+        "src": "/images/YotYCQVda8YjTvctGWHJjlp42Qo.png",
         "width": 1018,
         "height": 354
       },
@@ -4101,13 +4101,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/3yRYhM7SJbDUMgNuzhiVLvXkfg.png?width=626&height=472",
+        "src": "/images/3yRYhM7SJbDUMgNuzhiVLvXkfg.png",
         "width": 626,
         "height": 472
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uRZBLfOSrx4yV5OeQrZjtPRtEys.png?width=660&height=464",
+        "src": "/images/uRZBLfOSrx4yV5OeQrZjtPRtEys.png",
         "width": 660,
         "height": 464
       },
@@ -4195,7 +4195,7 @@
     "title": "Reaction Time Tester",
     "subtitle": "Test yourself with this Python-based mini-game for the micro:bit and OLED! Written by Jensen from Raffles Institution.",
     "description": "Step 1 – Input/Output",
-    "hero_image": "https://framerusercontent.com/images/ezqHf467E8H5lw75OZV4QKr5b6w.jpg?width=1080&height=1913",
+    "hero_image": "/images/ezqHf467E8H5lw75OZV4QKr5b6w.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -4219,7 +4219,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ezqHf467E8H5lw75OZV4QKr5b6w.jpg?width=1080&height=1913",
+        "src": "/images/ezqHf467E8H5lw75OZV4QKr5b6w.jpg",
         "width": 1080,
         "height": 1913
       },
@@ -4243,7 +4243,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zBTCW1uldcKiCKaTRJ5dJt9ijUk.jpg?width=1080&height=1440",
+        "src": "/images/zBTCW1uldcKiCKaTRJ5dJt9ijUk.jpg",
         "width": 1080,
         "height": 1440
       },
@@ -4255,13 +4255,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ciEeVVKad5A0gNqTKqHhHVvFVBE.png?width=696&height=171",
+        "src": "/images/ciEeVVKad5A0gNqTKqHhHVvFVBE.png",
         "width": 696,
         "height": 171
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/InRiWaZXpcMav6PdzNOfWGRhFwI.png?width=1024&height=165",
+        "src": "/images/InRiWaZXpcMav6PdzNOfWGRhFwI.png",
         "width": 1024,
         "height": 165
       },
@@ -4273,7 +4273,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kmDYIN4PvUdpNLrCfYLI4MxF1j8.png?width=1024&height=183",
+        "src": "/images/kmDYIN4PvUdpNLrCfYLI4MxF1j8.png",
         "width": 1024,
         "height": 183
       },
@@ -4285,7 +4285,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/dyBjcNnhHRTITiuqWa33qOSiq8.png?width=743&height=267",
+        "src": "/images/dyBjcNnhHRTITiuqWa33qOSiq8.png",
         "width": 743,
         "height": 267
       },
@@ -4297,7 +4297,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/mOEjQhOwrIg9ZuqfW3s54u0HnD8.png?width=768&height=437",
+        "src": "/images/mOEjQhOwrIg9ZuqfW3s54u0HnD8.png",
         "width": 768,
         "height": 437
       },
@@ -4309,13 +4309,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/SamneRuaPyP5B9ZZEsrSmNPzI.png?width=691&height=650",
+        "src": "/images/SamneRuaPyP5B9ZZEsrSmNPzI.png",
         "width": 691,
         "height": 650
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/PR0x5EpKzXjL6iirqxunsU6IS3o.png?width=249&height=300",
+        "src": "/images/PR0x5EpKzXjL6iirqxunsU6IS3o.png",
         "width": 249,
         "height": 300
       }
@@ -4379,7 +4379,7 @@
     "title": "Reclusebot",
     "subtitle": "Make a reclusive robot that squeals when toggled, touched, or when it detects motion\nUse the micro:bit to make a robot that squeals when it detects motion, is touched on any of its sensors or when lifted up. Written by Shaun Toh, from the Singapore University of Technology & Design, on his summer internship.",
     "description": "Step 1 – Connect the Micro:bit parts",
-    "hero_image": "https://framerusercontent.com/images/kPgWcfj9SCxrtxyh00JBGQbgOiA.jpeg?width=510&height=382",
+    "hero_image": "/images/kPgWcfj9SCxrtxyh00JBGQbgOiA.jpeg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -4403,7 +4403,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kPgWcfj9SCxrtxyh00JBGQbgOiA.jpeg?width=510&height=382",
+        "src": "/images/kPgWcfj9SCxrtxyh00JBGQbgOiA.jpeg",
         "width": 510,
         "height": 382
       },
@@ -4427,13 +4427,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/r1T4eO0vLArc4erdc0SrenyFzXs.jpeg?width=1024&height=576",
+        "src": "/images/r1T4eO0vLArc4erdc0SrenyFzXs.jpeg",
         "width": 1024,
         "height": 576
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/4U11jUVNcHgIxI8C5gVdObp4.jpeg?width=1024&height=576",
+        "src": "/images/4U11jUVNcHgIxI8C5gVdObp4.jpeg",
         "width": 1024,
         "height": 576
       },
@@ -4445,13 +4445,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/9A0fFmizcZLrgMWVHKs2nmbcmp8.png?width=1024&height=438",
+        "src": "/images/9A0fFmizcZLrgMWVHKs2nmbcmp8.png",
         "width": 1024,
         "height": 438
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zrzVSfKAlKGF65dQfHxaImXs.jpg?width=1024&height=472",
+        "src": "/images/zrzVSfKAlKGF65dQfHxaImXs.jpg",
         "width": 1024,
         "height": 472
       },
@@ -4463,7 +4463,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rKMJ7riQCsWVvpdR1WFalb7G88.jpg?width=669&height=466",
+        "src": "/images/rKMJ7riQCsWVvpdR1WFalb7G88.jpg",
         "width": 669,
         "height": 466
       },
@@ -4475,7 +4475,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/GWfdNARrgtDygNFIY6Hq4eytc.jpeg?width=1024&height=755",
+        "src": "/images/GWfdNARrgtDygNFIY6Hq4eytc.jpeg",
         "width": 1024,
         "height": 755
       }
@@ -4527,7 +4527,7 @@
     "title": "Shoot Em Up Kit",
     "subtitle": "You’ve got a town to save and a dragon to shoot! \nThis here is the formula to get your own tabletop shooter arcade working in good form!",
     "description": "Step 1 – Put your town in order!",
-    "hero_image": "https://framerusercontent.com/images/19CYlknp9407PkeDhDOh020G6M.jpg?width=1024&height=768",
+    "hero_image": "/images/19CYlknp9407PkeDhDOh020G6M.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -4551,7 +4551,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/19CYlknp9407PkeDhDOh020G6M.jpg?width=1024&height=768",
+        "src": "/images/19CYlknp9407PkeDhDOh020G6M.jpg",
         "width": 1024,
         "height": 768
       },
@@ -4575,19 +4575,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/bkTm8SgAXx7ytTo2jI3TVE3o0.jpg?width=1024&height=768",
+        "src": "/images/bkTm8SgAXx7ytTo2jI3TVE3o0.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/P4ewakKCnD33bTvGe8aZBkxauTU.jpg?width=1024&height=768",
+        "src": "/images/P4ewakKCnD33bTvGe8aZBkxauTU.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kdvnlAWsei2ogJ2WoTleP7TWQ.jpg?width=2880&height=2160",
+        "src": "/images/kdvnlAWsei2ogJ2WoTleP7TWQ.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -4599,25 +4599,25 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/EeC0cQ2SLTJ3YfxGeQlZot2l6I4.jpg?width=1024&height=768",
+        "src": "/images/EeC0cQ2SLTJ3YfxGeQlZot2l6I4.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wk6X2iuEvk0YqkcSCCUn15GH58.jpg?width=1024&height=768",
+        "src": "/images/wk6X2iuEvk0YqkcSCCUn15GH58.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/D1WiZefA3XyQOu6xRPt5RocAuc.jpg?width=1024&height=768",
+        "src": "/images/D1WiZefA3XyQOu6xRPt5RocAuc.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/jewPdNR9ZAc440QWwoWKed4ZFac.jpg?width=1024&height=768",
+        "src": "/images/jewPdNR9ZAc440QWwoWKed4ZFac.jpg",
         "width": 1024,
         "height": 768
       },
@@ -4629,13 +4629,13 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zKIW0VkCbiJfhOmTicp1Hl4tGA8.jpg?width=1024&height=768",
+        "src": "/images/zKIW0VkCbiJfhOmTicp1Hl4tGA8.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/n30tGXBDm1evG7KvtFU5JQEF5E.jpg?width=2880&height=2160",
+        "src": "/images/n30tGXBDm1evG7KvtFU5JQEF5E.jpg",
         "width": 2880,
         "height": 2160
       },
@@ -4647,7 +4647,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/RlaZ6H6z9NgNa1Vasw6i4xAJ8Nw.png?width=768&height=529",
+        "src": "/images/RlaZ6H6z9NgNa1Vasw6i4xAJ8Nw.png",
         "width": 768,
         "height": 529
       },
@@ -4659,7 +4659,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/0Gt03RQogGUuqpIICB7MR02Qbw.png?width=448&height=274",
+        "src": "/images/0Gt03RQogGUuqpIICB7MR02Qbw.png",
         "width": 448,
         "height": 274
       },
@@ -4671,19 +4671,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/RkcMVYyceBcYmvQgmXy89Jnu0Y.jpg?width=1024&height=768",
+        "src": "/images/RkcMVYyceBcYmvQgmXy89Jnu0Y.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/G69upNyNN2WSOmCo9tOue98rHg.jpg?width=1024&height=768",
+        "src": "/images/G69upNyNN2WSOmCo9tOue98rHg.jpg",
         "width": 1024,
         "height": 768
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/eam7wHjNHa9nmEDOQd6lZbZrBmo.png?width=525&height=133",
+        "src": "/images/eam7wHjNHa9nmEDOQd6lZbZrBmo.png",
         "width": 525,
         "height": 133
       },
@@ -4695,7 +4695,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/qBFikrTKyJ3nDjcAoerVLEDQ8lg.png?width=719&height=756",
+        "src": "/images/qBFikrTKyJ3nDjcAoerVLEDQ8lg.png",
         "width": 719,
         "height": 756
       },
@@ -4777,7 +4777,7 @@
     "title": "µ reMorse",
     "subtitle": "Make a  Morse Code “Keyboard”/Editor the hard way.",
     "description": "Step 1 – Development Environment",
-    "hero_image": "https://framerusercontent.com/images/2LYDGOlVS6xqRCSxPz9Go91zbE.jpg?width=1939&height=1804",
+    "hero_image": "/images/2LYDGOlVS6xqRCSxPz9Go91zbE.jpg",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -4801,7 +4801,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2LYDGOlVS6xqRCSxPz9Go91zbE.jpg?width=1939&height=1804",
+        "src": "/images/2LYDGOlVS6xqRCSxPz9Go91zbE.jpg",
         "width": 1939,
         "height": 1804
       },
@@ -4825,19 +4825,19 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/tiGPrEg8gEvpv9p41Kpe9HsUCdQ.png?width=1308&height=502",
+        "src": "/images/tiGPrEg8gEvpv9p41Kpe9HsUCdQ.png",
         "width": 1308,
         "height": 502
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/JUMHugk9VvpZ7az7O3xgrLcfGnM.png?width=592&height=553",
+        "src": "/images/JUMHugk9VvpZ7az7O3xgrLcfGnM.png",
         "width": 592,
         "height": 553
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/gkoYmJuF61VlIxYnEbITRk0Wzo.jpg?width=1711&height=1149",
+        "src": "/images/gkoYmJuF61VlIxYnEbITRk0Wzo.jpg",
         "width": 1711,
         "height": 1149
       },
@@ -4849,7 +4849,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6GTpyqYfkxN3lbZ6VEblJaGDcU.png?width=624&height=246",
+        "src": "/images/6GTpyqYfkxN3lbZ6VEblJaGDcU.png",
         "width": 624,
         "height": 246
       },
@@ -4861,7 +4861,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/f7oV875JcIYhyE9PBAGZAUfXDo.png?width=1272&height=794",
+        "src": "/images/f7oV875JcIYhyE9PBAGZAUfXDo.png",
         "width": 1272,
         "height": 794
       },
@@ -4873,7 +4873,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/T1fXYvgaQqmDRZsJZw2DUs5P6O0.jpg?width=2192&height=1074",
+        "src": "/images/T1fXYvgaQqmDRZsJZw2DUs5P6O0.jpg",
         "width": 2192,
         "height": 1074
       },
@@ -4885,7 +4885,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/AVeafstscGQQkVK0CyLpy3Uc0.png?width=1053&height=1311",
+        "src": "/images/AVeafstscGQQkVK0CyLpy3Uc0.png",
         "width": 1053,
         "height": 1311
       },
@@ -4897,7 +4897,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/DdFoZd9sfSwBtbQaEEAVapOvvd4.png?width=1288&height=1272",
+        "src": "/images/DdFoZd9sfSwBtbQaEEAVapOvvd4.png",
         "width": 1288,
         "height": 1272
       },
@@ -4909,7 +4909,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/zU3n7Z4NdL3gJHdHMkZLoGSxHQc.png?width=994&height=566",
+        "src": "/images/zU3n7Z4NdL3gJHdHMkZLoGSxHQc.png",
         "width": 994,
         "height": 566
       },
@@ -4921,7 +4921,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/IGYlSuDXXwdYRExuyBAMTsp26JM.png?width=999&height=386",
+        "src": "/images/IGYlSuDXXwdYRExuyBAMTsp26JM.png",
         "width": 999,
         "height": 386
       },
@@ -4939,7 +4939,7 @@
       },
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/X3VZXb9Wk0Dayxrk3hM1yzT4ODU.png?width=1114&height=596",
+        "src": "/images/X3VZXb9Wk0Dayxrk3hM1yzT4ODU.png",
         "width": 1114,
         "height": 596
       },

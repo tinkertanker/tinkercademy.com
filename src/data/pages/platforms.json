@@ -2,7 +2,7 @@
   {
     "id": "3d-printing",
     "label": "3D Printing",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "making"
     ],
@@ -13,7 +13,7 @@
   {
     "id": "android-studio",
     "label": "Android Studio",
-    "icon": "https://framerusercontent.com/images/HoS8KzPS6QplCq1Lx6wLnrdldOA.svg",
+    "icon": "/images/HoS8KzPS6QplCq1Lx6wLnrdldOA.svg",
     "domain_ids": [
       "design-thinking",
       "uiux",
@@ -26,7 +26,7 @@
   {
     "id": "ar-vr",
     "label": "AR/VR",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -35,7 +35,7 @@
   {
     "id": "arduino",
     "label": "Arduino",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "iot"
     ],
@@ -46,7 +46,7 @@
   {
     "id": "aws-partyrock",
     "label": "AWS PartyRock",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ai-engineering"
     ],
@@ -57,7 +57,7 @@
   {
     "id": "bbc-micro-bit",
     "label": "BBC micro:bit",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "making",
       "iot"
@@ -69,7 +69,7 @@
   {
     "id": "bubble",
     "label": "Bubble",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -80,7 +80,7 @@
   {
     "id": "chatgpt",
     "label": "ChatGPT",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ai-engineering",
       "tech-productivity"
@@ -92,7 +92,7 @@
   {
     "id": "claude",
     "label": "Claude",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ai-engineering",
       "tech-productivity"
@@ -103,7 +103,7 @@
   {
     "id": "express",
     "label": "Express",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -114,7 +114,7 @@
   {
     "id": "figma",
     "label": "Figma",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "uiux",
       "design-thinking"
@@ -126,7 +126,7 @@
   {
     "id": "firebase",
     "label": "Firebase",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -137,7 +137,7 @@
   {
     "id": "flask",
     "label": "Flask",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -148,7 +148,7 @@
   {
     "id": "framer",
     "label": "Framer",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -157,7 +157,7 @@
   {
     "id": "git-github",
     "label": "Git & GitHub",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "software-engineering"
     ],
@@ -168,7 +168,7 @@
   {
     "id": "html-css",
     "label": "HTML and CSS",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -179,7 +179,7 @@
   {
     "id": "imovie",
     "label": "iMovie",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "making"
     ],
@@ -190,7 +190,7 @@
   {
     "id": "java",
     "label": "Java",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -199,7 +199,7 @@
   {
     "id": "javascript",
     "label": "JavaScript",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -210,7 +210,7 @@
   {
     "id": "jupyter-notebooks",
     "label": "Jupyter Notebooks",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ml-ds"
     ],
@@ -221,7 +221,7 @@
   {
     "id": "keynote",
     "label": "Keynote",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -230,7 +230,7 @@
   {
     "id": "kotlin",
     "label": "Kotlin",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -239,7 +239,7 @@
   {
     "id": "m5stack",
     "label": "M5Stack",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "iot"
     ],
@@ -250,7 +250,7 @@
   {
     "id": "makecode-arcade",
     "label": "MakeCode Arcade",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "cs",
       "gamedev"
@@ -262,7 +262,7 @@
   {
     "id": "microsoft-copilot",
     "label": "Microsoft Copilot",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "tech-productivity",
       "ai-engineering"
@@ -274,7 +274,7 @@
   {
     "id": "minecraft",
     "label": "Minecraft",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "gamedev",
       "cs"
@@ -286,7 +286,7 @@
   {
     "id": "node-js",
     "label": "Node.JS",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -295,7 +295,7 @@
   {
     "id": "orange",
     "label": "Orange",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [],
     "content_html": null,
     "content_text": "",
@@ -304,7 +304,7 @@
   {
     "id": "pandas",
     "label": "pandas",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ml-ds"
     ],
@@ -315,7 +315,7 @@
   {
     "id": "phaserjs",
     "label": "PhaserJS",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "gamedev",
       "webdev"
@@ -327,7 +327,7 @@
   {
     "id": "power-apps",
     "label": "Power Apps",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "tech-productivity"
     ],
@@ -338,7 +338,7 @@
   {
     "id": "python",
     "label": "Python",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "cs"
     ],
@@ -349,7 +349,7 @@
   {
     "id": "pytorch",
     "label": "Pytorch",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ml-ds"
     ],
@@ -360,7 +360,7 @@
   {
     "id": "raspberry-pi",
     "label": "Raspberry Pi",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "iot"
     ],
@@ -371,7 +371,7 @@
   {
     "id": "react",
     "label": "React",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -382,7 +382,7 @@
   {
     "id": "react-native",
     "label": "React Native",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "appdev"
     ],
@@ -393,7 +393,7 @@
   {
     "id": "scratch",
     "label": "Scratch",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "cs",
       "gamedev"
@@ -405,7 +405,7 @@
   {
     "id": "sql",
     "label": "SQL",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "webdev"
     ],
@@ -416,7 +416,7 @@
   {
     "id": "stellar",
     "label": "Stellar",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "cryptography"
     ],
@@ -427,7 +427,7 @@
   {
     "id": "swift",
     "label": "Swift",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "appdev"
     ],
@@ -438,7 +438,7 @@
   {
     "id": "swiftui",
     "label": "SwiftUI",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "appdev"
     ],
@@ -449,7 +449,7 @@
   {
     "id": "drone-programming",
     "label": "Tello Drone Coding",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "cs"
     ],
@@ -460,7 +460,7 @@
   {
     "id": "tensorflow",
     "label": "TensorFlow",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "ml-ds"
     ],
@@ -471,7 +471,7 @@
   {
     "id": "thunkable",
     "label": "Thunkable",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "cs",
       "appdev"
@@ -483,7 +483,7 @@
   {
     "id": "unity",
     "label": "Unity",
-    "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
     "domain_ids": [
       "gamedev"
     ],

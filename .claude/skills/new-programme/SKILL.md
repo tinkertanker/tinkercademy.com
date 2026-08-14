@@ -117,7 +117,7 @@ If a platform the user named isn't in `src/data/pages/platforms.json`, append an
 {
   "id": "<kebab-id>",
   "label": "<Display Name>",
-  "icon": "https://framerusercontent.com/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+  "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
   "domain_ids": ["ai"],
   "content_html": null,
   "content_text": ""
@@ -125,7 +125,7 @@ If a platform the user named isn't in `src/data/pages/platforms.json`, append an
 ```
 
 Notes:
-- `icon` — reuse the generic `SCbZqPZak9L4pDz7y9XT1mDI.svg` placeholder if we don't have a proper logo asset yet. Flag that a real logo should be sourced later.
+- `icon` — reuse the generic `/images/SCbZqPZak9L4pDz7y9XT1mDI.svg` placeholder if we don't have a proper logo asset yet. Flag that a real logo should be sourced later.
 - `domain_ids` — at least one, from `src/data/pages/domains.json`.
 - Do not add a `source_id` (that's a Framer-export field for legacy entries only).
 - The Zod enum in `src/content.config.ts:10` is derived from this JSON at build time, so the platform is immediately usable in `platformIds`.

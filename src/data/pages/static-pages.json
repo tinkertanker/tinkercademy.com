@@ -6,7 +6,7 @@
     "description": "Learn coding, digital making, and agentic engineering from expert teachers and builders.",
     "hero_title": "Illuminate your journey into tech & AI.",
     "hero_lead": "Learn coding, digital making, and agentic engineering from expert teachers and builders.",
-    "hero_image": "https://framerusercontent.com/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg?width=4068&height=2000",
+    "hero_image": "/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -840,7 +840,7 @@
       }
     ],
     "partner_statement": "Official training partner for tech companies, schools, and the Singapore government.",
-    "partner_strip_image": "https://framerusercontent.com/images/7JzS84mvFUEd3VM3WRXC2AaWn4k.svg?width=340&height=0",
+    "partner_strip_image": "/images/7JzS84mvFUEd3VM3WRXC2AaWn4k.svg",
     "focus_areas": [
       "AI Engineering",
       "Machine Learning and Data Science",
@@ -864,17 +864,17 @@
       {
         "title": "Swift Accelerator",
         "description": "Learn about this intensive talent development programme for secondary school students where you can build an iOS app using Apple's own programming language, Swift.",
-        "image": "https://framerusercontent.com/images/y6eRckuBXhTJbECX9bWxb3URwA.png?width=550&height=670"
+        "image": "/images/y6eRckuBXhTJbECX9bWxb3URwA.png"
       },
       {
         "title": "IMDA LEARN Roadmap",
         "description": "We are proud to offer tech education courses to Infocomm Media Clubs for Primary Schools, secondary schools, and junior colleges, as part of IMDA's LEARN Roadmap.",
-        "image": "https://framerusercontent.com/images/ccAm2I4TKCuYyi1NVJdIrvzAw.png?width=600&height=600"
+        "image": "/images/ccAm2I4TKCuYyi1NVJdIrvzAw.png"
       },
       {
         "title": "Code For Fun",
         "description": "Discover how students can learn coding, computational thinking, and AI through hands-on experience with microcontrollers. We offer fully subsidised training for up to 2 cohorts per school.",
-        "image": "https://framerusercontent.com/images/Qf7w4K5k1qsLYbnAWi1zmxSec.png?width=400&height=534"
+        "image": "/images/Qf7w4K5k1qsLYbnAWi1zmxSec.png"
       }
     ],
     "featured_programme_slugs": [
@@ -918,12 +918,12 @@
       "openGraph": {
         "title": "Tinkercademy at Work: Expert-Led Tech Upskilling",
         "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
-        "image": "https://framerusercontent.com/assets/Hpib447RIgaq1OV8VQAc9Vxhac.png"
+        "image": "/images/Hpib447RIgaq1OV8VQAc9Vxhac.png"
       },
       "twitter": {
         "title": "Tinkercademy at Work: Expert-Led Tech Upskilling",
         "description": "Empower your teams with expert-led customisable professional development in coding, app development, data science, AI, and more. ",
-        "image": "https://framerusercontent.com/assets/Hpib447RIgaq1OV8VQAc9Vxhac.png"
+        "image": "/images/Hpib447RIgaq1OV8VQAc9Vxhac.png"
       },
       "robots": "max-image-preview:large"
     },
@@ -1466,7 +1466,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425",
+        "src": "/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
         "width": 765,
         "height": 425
       }
@@ -1586,7 +1586,7 @@
     "description": "Get started with our BBC Micro:bit Kit and the Breakout Board here!",
     "hero_title": "micro:bit Tutorials",
     "hero_lead": "Get started with our BBC Micro:bit Kit and the Breakout Board here!",
-    "hero_image": "https://framerusercontent.com/images/3wvrDe3ohG9X1GAVgOtYRjkdWCs.jpg?width=2880&height=929",
+    "hero_image": "/images/3wvrDe3ohG9X1GAVgOtYRjkdWCs.jpg",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -1984,7 +1984,7 @@
     "description": "A flexible program for hands-on learning in coding and making.",
     "hero_title": "Tinker X",
     "hero_lead": "A flexible program for hands-on learning in coding and making.",
-    "hero_image": "https://framerusercontent.com/images/3cybNehmDehCXeBSMBiUWGpbgI.jpg?width=1000&height=667",
+    "hero_image": "/images/3cybNehmDehCXeBSMBiUWGpbgI.jpg",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -3924,7 +3924,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+        "src": "/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
         "width": 4985,
         "height": 2874
       }
@@ -4038,12 +4038,12 @@
       "openGraph": {
         "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
         "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
-        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+        "image": "/images/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
       },
       "twitter": {
         "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
         "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
-        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+        "image": "/images/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
       },
       "robots": "max-image-preview:large"
     },
@@ -4721,7 +4721,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png?width=765&height=425",
+        "src": "/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
         "width": 765,
         "height": 425
       }
@@ -4849,12 +4849,12 @@
       "openGraph": {
         "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
         "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
-        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+        "image": "/images/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
       },
       "twitter": {
         "title": "Tinkercademy | Singapore's Top Professional Development Tech Courses",
         "description": "Master Every Tech Skill: Beginner to Advanced Courses (Wharton & Stamford Instructors).  Upskill your team with our 5-star rated professional development programs. Find the perfect course for your needs!",
-        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+        "image": "/images/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
       },
       "robots": "max-image-preview:large"
     },
@@ -5710,7 +5710,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+        "src": "/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
         "width": 4985,
         "height": 2874
       }
@@ -6833,7 +6833,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png?width=4985&height=2874",
+        "src": "/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
         "width": 4985,
         "height": 2874
       }
@@ -6939,7 +6939,7 @@
     "description": "Getting here",
     "hero_title": "Get in touch",
     "hero_lead": "Getting here",
-    "hero_image": "https://framerusercontent.com/images/Y5ckhN7Nwo504xYtcd1f4y6Wy78.png?width=1018&height=762",
+    "hero_image": "/images/Y5ckhN7Nwo504xYtcd1f4y6Wy78.png",
     "seo": {
       "title": "Tinkercademy: Coding and Making for Schools and Professionals",
       "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
@@ -6947,12 +6947,12 @@
       "openGraph": {
         "title": "Tinkercademy: Coding and Making for Schools and Professionals",
         "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
-        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+        "image": "/images/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
       },
       "twitter": {
         "title": "Tinkercademy: Coding and Making for Schools and Professionals",
         "description": "We're Singapore-based expert coders and makers who teach coding and making to schools, companies, and professionals worldwide. ",
-        "image": "https://framerusercontent.com/assets/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
+        "image": "/images/BPcWkLszbcWVMEaeXfRnQ9yMk.png"
       },
       "robots": "max-image-preview:large"
     },

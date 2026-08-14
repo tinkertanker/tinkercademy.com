@@ -1,85 +1,107 @@
 #!/usr/bin/env python3
-"""Download all framerusercontent.com images referenced in data files to public/images/."""
+"""Download all framerusercontent.com images referenced in the repo to public/images/.
+
+Scans JSON/YML plus markdown/HTML/source files. Keeps the Framer hash filename so
+localiseFramerImage() can match. Handles both /images/ and /assets/ CDN paths.
+"""
+
+from __future__ import annotations
 
 import os
-import sys
-import json
 import re
-import asyncio
-import aiohttp
+import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 from urllib.parse import urlparse
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = PROJECT_ROOT / "src" / "data"
 OUTPUT_DIR = PROJECT_ROOT / "public" / "images"
-MAX_CONCURRENT = 20
+SCAN_ROOTS = (
+    PROJECT_ROOT / "src",
+    PROJECT_ROOT / ".claude",
+)
+SCAN_SUFFIXES = {
+    ".json",
+    ".yml",
+    ".yaml",
+    ".md",
+    ".astro",
+    ".js",
+    ".ts",
+    ".jsx",
+    ".tsx",
+    ".html",
+    ".mjs",
+    ".cjs",
+}
+SKIP_DIR_NAMES = {
+    ".git",
+    "node_modules",
+    "dist",
+    ".astro",
+    ".wrangler",
+    "scripts/_artifacts",
+}
+# Match /images/ and /assets/ Framer URLs, including those inside escaped HTML.
+FRAMER_URL_RE = re.compile(
+    r"https://framerusercontent\.com/(?:images|assets)/[A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|gif|svg)"
+)
 TIMEOUT = 30
+USER_AGENT = "tinkercademy-image-rehost/1.0"
 
 
-def find_all_urls(directory: Path) -> set[str]:
-    """Scan all JSON/YML files for framerusercontent.com image URLs."""
-    urls = set()
-    pattern = re.compile(r'https://framerusercontent\.com/images/[^"?\s]+')
-    for root, _, files in os.walk(directory):
-        for fname in files:
-            if fname.endswith((".json", ".yml", ".yaml")):
-                fpath = Path(root) / fname
-                text = fpath.read_text(encoding="utf-8")
-                urls.update(pattern.findall(text))
+def find_all_urls() -> set[str]:
+    urls: set[str] = set()
+    for scan_root in SCAN_ROOTS:
+        if not scan_root.exists():
+            continue
+        for dirpath, dirnames, filenames in os.walk(scan_root):
+            dirnames[:] = [name for name in dirnames if name not in SKIP_DIR_NAMES]
+            for fname in filenames:
+                if Path(fname).suffix.lower() not in SCAN_SUFFIXES:
+                    continue
+                fpath = Path(dirpath) / fname
+                try:
+                    text = fpath.read_text(encoding="utf-8")
+                except OSError:
+                    continue
+                urls.update(FRAMER_URL_RE.findall(text))
     return urls
 
 
 def url_to_filename(url: str) -> str:
-    """Extract filename from URL: the hash+extension part."""
-    path = urlparse(url).path  # e.g. /images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp
-    return path.split("/")[-1]
+    return urlparse(url).path.split("/")[-1]
 
 
-async def download_one(
-    session: aiohttp.ClientSession, url: str, dest: Path, sem: asyncio.Semaphore
-) -> tuple[str, bool, str]:
-    """Download a single image. Returns (url, success, message)."""
-    async with sem:
-        try:
-            async with session.get(
-                url, timeout=aiohttp.ClientTimeout(total=TIMEOUT)
-            ) as resp:
-                if resp.status == 200:
-                    data = await resp.read()
-                    dest.write_bytes(data)
-                    return (url, True, f"{len(data)} bytes")
-                else:
-                    return (url, False, f"HTTP {resp.status}")
-        except Exception as e:
-            return (url, False, str(e))
+def download_one(url: str, dest: Path) -> tuple[str, bool, str]:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(request, timeout=TIMEOUT) as resp:
+            if resp.status != 200:
+                return (url, False, f"HTTP {resp.status}")
+            data = resp.read()
+            if not data:
+                return (url, False, "empty body")
+            dest.write_bytes(data)
+            return (url, True, f"{len(data)} bytes")
+    except urllib.error.HTTPError as exc:
+        return (url, False, f"HTTP {exc.code}")
+    except Exception as exc:  # noqa: BLE001 — report any download failure
+        return (url, False, str(exc))
 
 
-async def main():
+def main() -> int:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("Scanning data files for image URLs...")
-    urls = find_all_urls(DATA_DIR)
-    print(f"Found {len(urls)} unique image URLs")
+    print("Scanning source and data files for Framer image URLs...")
+    urls = find_all_urls()
+    print(f"Found {len(urls)} unique Framer image URLs")
 
-    # Also scan astro source files for any direct references
-    src_dir = PROJECT_ROOT / "src"
-    src_pattern = re.compile(r'https://framerusercontent\.com/images/[^"?\s\)]+')
-    for root, _, files in os.walk(src_dir):
-        for fname in files:
-            if fname.endswith((".astro", ".js", ".ts", ".jsx", ".tsx")):
-                fpath = Path(root) / fname
-                text = fpath.read_text(encoding="utf-8")
-                urls.update(src_pattern.findall(text))
-
-    print(f"Total unique URLs (including source files): {len(urls)}")
-
-    # Filter out already-downloaded
-    to_download = []
+    to_download: list[tuple[str, Path]] = []
     already_exists = 0
     for url in sorted(urls):
-        filename = url_to_filename(url)
-        dest = OUTPUT_DIR / filename
+        dest = OUTPUT_DIR / url_to_filename(url)
         if dest.exists() and dest.stat().st_size > 0:
             already_exists += 1
         else:
@@ -90,27 +112,24 @@ async def main():
 
     if not to_download:
         print("Nothing to download!")
-        return
+        return 0
 
-    sem = asyncio.Semaphore(MAX_CONCURRENT)
     success_count = 0
     fail_count = 0
-
-    async with aiohttp.ClientSession() as session:
-        tasks = [download_one(session, url, dest, sem) for url, dest in to_download]
-        for i, coro in enumerate(asyncio.as_completed(tasks), 1):
-            url, ok, msg = await coro
-            filename = url_to_filename(url)
-            if ok:
-                success_count += 1
-                status = "OK"
-            else:
-                fail_count += 1
-                status = f"FAIL: {msg}"
-            print(f"[{i}/{len(to_download)}] {status} - {filename}")
+    for i, (url, dest) in enumerate(to_download, 1):
+        _, ok, msg = download_one(url, dest)
+        filename = url_to_filename(url)
+        if ok:
+            success_count += 1
+            status = "OK"
+        else:
+            fail_count += 1
+            status = f"FAIL: {msg}"
+        print(f"[{i}/{len(to_download)}] {status} - {filename}")
 
     print(f"\nDone! Downloaded: {success_count}, Failed: {fail_count}")
+    return 1 if fail_count else 0
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    sys.exit(main())

@@ -6,7 +6,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap course with Phaser.",
     "duration": "24 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438",
+    "hero_image": "/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp",
     "audience_ids": [
       "students",
       "teachers"
@@ -50,7 +50,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438",
+        "src": "/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp",
         "width": 800,
         "height": 438
       },
@@ -96,7 +96,7 @@
     "card_blurb": "Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design…",
     "featured": true,
     "weight": 75,
-    "icon": "https://framerusercontent.com/images/3kg5CT7qKsmehew05r2MIUeuSI.png",
+    "icon": "/images/3kg5CT7qKsmehew05r2MIUeuSI.png",
     "icon_alt": "Game Development",
     "platform_ids": [
       "html-css",
@@ -122,7 +122,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "hero_image": "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -163,7 +163,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+        "src": "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png",
         "width": 386,
         "height": 214
       },
@@ -209,7 +209,7 @@
     "card_blurb": "This course, suitable for students with programming experience in Swift or web/game/mobile development, empowers interested students to go further in SwiftUI with Augmented…",
     "featured": true,
     "weight": 65,
-    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon": "/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
     "icon_alt": "Swift",
     "platform_ids": [
       "swift"
@@ -232,7 +232,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap course with Apple Singapore.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+    "hero_image": "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -274,7 +274,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214",
+        "src": "/images/MieXrGTvm2GnVsHnT6TfYWd9w.png",
         "width": 386,
         "height": 214
       },
@@ -320,7 +320,7 @@
     "card_blurb": "Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines. This programme is suitable for students who are…",
     "featured": true,
     "weight": 60,
-    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon": "/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
     "icon_alt": "Swift",
     "platform_ids": [
       "swift",
@@ -345,7 +345,7 @@
     "subtitle": "Corporate training, 21 & 22 August 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335",
+    "hero_image": "/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -386,7 +386,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335",
+        "src": "/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg",
         "width": 2000,
         "height": 1335
       },
@@ -432,7 +432,7 @@
     "card_blurb": "Jump into mobile app development and build real apps that work on both iOS and Android!Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences…",
     "featured": true,
     "weight": 93,
-    "icon": "https://framerusercontent.com/images/bZhkNwEa64Xr6qWOth5GdGolk4.png",
+    "icon": "/images/bZhkNwEa64Xr6qWOth5GdGolk4.png",
     "icon_alt": "React Native",
     "platform_ids": [
       "javascript",
@@ -457,7 +457,7 @@
     "subtitle": "Corporate training",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316",
+    "hero_image": "/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp",
     "audience_ids": [
       "public",
       "businesses"
@@ -497,7 +497,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316",
+        "src": "/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp",
         "width": 480,
         "height": 316
       },
@@ -543,7 +543,7 @@
     "card_blurb": "Stop building chatbots. Start deploying autonomous systems. The future of AI isn't a text box, it’s an Agentic Loop. This intensive course dives deep into OpenClaw, the premier…",
     "featured": false,
     "weight": 99,
-    "icon": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
+    "icon": "/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
     "icon_alt": "Lovable",
     "platform_ids": [
       "html-css",
@@ -569,7 +569,7 @@
     "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "17 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360",
+    "hero_image": "/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg",
     "audience_ids": [
       "businesses",
       "public"
@@ -610,7 +610,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360",
+        "src": "/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg",
         "width": 640,
         "height": 360
       },
@@ -656,7 +656,7 @@
     "card_blurb": "More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance…",
     "featured": true,
     "weight": 81,
-    "icon": "https://framerusercontent.com/images/5lUlMn2yi5S5KDkBEGDYH5wkN8I.png",
+    "icon": "/images/5lUlMn2yi5S5KDkBEGDYH5wkN8I.png",
     "icon_alt": null,
     "platform_ids": [
       "arduino",
@@ -681,7 +681,7 @@
     "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "17 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360",
+    "hero_image": "/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg",
     "audience_ids": [
       "businesses",
       "public"
@@ -722,7 +722,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360",
+        "src": "/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg",
         "width": 640,
         "height": 360
       },
@@ -768,7 +768,7 @@
     "card_blurb": "Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and…",
     "featured": true,
     "weight": 80,
-    "icon": "https://framerusercontent.com/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png",
+    "icon": "/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png",
     "icon_alt": null,
     "platform_ids": [
       "stellar"
@@ -791,7 +791,7 @@
     "subtitle": "A CODE@SG initiative by IMDA and MOE.",
     "duration": "10 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+    "hero_image": "/images/uB9togx2WZjo52kW3eDPGODhN8.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -833,7 +833,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+        "src": "/images/uB9togx2WZjo52kW3eDPGODhN8.png",
         "width": 2127,
         "height": 771
       },
@@ -879,7 +879,7 @@
     "card_blurb": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…",
     "featured": false,
     "weight": 100,
-    "icon": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
+    "icon": "/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
     "icon_alt": null,
     "platform_ids": [
       "scratch",
@@ -894,7 +894,7 @@
     "sign_up_label": "Enquire now",
     "sign_up_url": "mailto:imda_codesg@imda.gov.sg",
     "intro_html": "<p><strong>Our CFF 2025 Scheme of Work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>",
-    "learning_objectives_html": "<h2>AI for Fun for Primary Schools</h2><p>Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, two new 5-hour AI for Fun modules will be offered to primary schools. Students will get to learn more about Generative AI and AI with Smart Robots through these engaging AI courses. Under the two modules, students will have hands-on experience in learning the following:</p><ol><li data-preset-tag=\"p\"><p>Generative AI</p><ul><li data-preset-tag=\"p\"><p>Natural Language Processing</p></li><li data-preset-tag=\"p\"><p>Safe and responsible use of Generative AI</p></li><li data-preset-tag=\"p\"><p>Applying Generative AI for ideation and content creation<br><br></p></li></ul></li><li data-preset-tag=\"p\"><p>AI with Smart Robots</p><ul><li data-preset-tag=\"p\"><p>Computer vision</p></li><li data-preset-tag=\"p\"><p>How smart robots respond to inputs via sensors</p></li><li data-preset-tag=\"p\"><p>Integrating Computer vision with smart robots to solve problems</p></li></ul></li></ol><img alt=\"\" src=\"https://framerusercontent.com/images/lwtS0iVp9mgTsAeVutkPxcUPVAI.png\"><h2>AI for Fun for Secondary Schools</h2><p>Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, a new 10-hour AI for Fun module will be offered to secondary schools. </p><p>Under the AI for Fun module, students will have hands-on experience in learning the following:</p><ol><li data-preset-tag=\"p\"><p>How the quantity and quality of training data affects AI performance</p></li><li data-preset-tag=\"p\"><p>How biases are formed in AI-generated content</p></li><li data-preset-tag=\"p\"><p>The societal implications of AI</p></li><li data-preset-tag=\"p\"><p>Large Language Models</p></li><li data-preset-tag=\"p\"><p>Custom chatbots</p></li><li data-preset-tag=\"p\"><p>Writing effective prompts for Generative AI</p></li><li data-preset-tag=\"p\"><p>Applying Generative AI to solve problems related to a theme such as Sustainable Living</p></li></ol><img alt=\"\" src=\"https://framerusercontent.com/images/cyOC2RTds2BTmo90RXGKxppjWJw.png\">",
+    "learning_objectives_html": "<h2>AI for Fun for Primary Schools</h2><p>Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, two new 5-hour AI for Fun modules will be offered to primary schools. Students will get to learn more about Generative AI and AI with Smart Robots through these engaging AI courses. Under the two modules, students will have hands-on experience in learning the following:</p><ol><li data-preset-tag=\"p\"><p>Generative AI</p><ul><li data-preset-tag=\"p\"><p>Natural Language Processing</p></li><li data-preset-tag=\"p\"><p>Safe and responsible use of Generative AI</p></li><li data-preset-tag=\"p\"><p>Applying Generative AI for ideation and content creation<br><br></p></li></ul></li><li data-preset-tag=\"p\"><p>AI with Smart Robots</p><ul><li data-preset-tag=\"p\"><p>Computer vision</p></li><li data-preset-tag=\"p\"><p>How smart robots respond to inputs via sensors</p></li><li data-preset-tag=\"p\"><p>Integrating Computer vision with smart robots to solve problems</p></li></ul></li></ol><img alt=\"\" src=\"/images/lwtS0iVp9mgTsAeVutkPxcUPVAI.png\"><h2>AI for Fun for Secondary Schools</h2><p>Aligned to the goal of Smart Nation 2.0 to prepare our next generation for the digital future, students will be provided opportunities to learn more about Artificial Intelligence (AI) and enhance their digital and AI-related skills. From 2025, a new 10-hour AI for Fun module will be offered to secondary schools. </p><p>Under the AI for Fun module, students will have hands-on experience in learning the following:</p><ol><li data-preset-tag=\"p\"><p>How the quantity and quality of training data affects AI performance</p></li><li data-preset-tag=\"p\"><p>How biases are formed in AI-generated content</p></li><li data-preset-tag=\"p\"><p>The societal implications of AI</p></li><li data-preset-tag=\"p\"><p>Large Language Models</p></li><li data-preset-tag=\"p\"><p>Custom chatbots</p></li><li data-preset-tag=\"p\"><p>Writing effective prompts for Generative AI</p></li><li data-preset-tag=\"p\"><p>Applying Generative AI to solve problems related to a theme such as Sustainable Living</p></li></ol><img alt=\"\" src=\"/images/cyOC2RTds2BTmo90RXGKxppjWJw.png\">",
     "details_html": "<h2>How to apply?</h2><p>All Ministry of Education (MOE) government and government-aided secondary schools are eligible to apply for the AI for Fun module. Students are required to complete the Code for Fun programme or a comparable programme before they are eligible to participate in the AI for Fun module. If schools are on Code for Fun, AI for Fun may be taken up by the same cohort (e.g. Secondary 1 cohort to do both CFF and AIFF) or a later cohort (e.g. Secondary 1 cohort to do CFF, Secondary 2 cohort to do AIFF). Application instructions will be sent to all MOE government and government-aided secondary schools between September to October annually. Schools keen to apply for the programme should submit their application within the application window stated. For enquires regarding AI for Fun for secondary schools, please contact us at <a href=\"mailto:imda_codesg@imda.gov.sg\">imda_codesg@imda.gov.sg</a>.</p>",
     "source_collection": "Programmes",
     "source_id": "AH7djn2Me"
@@ -906,7 +906,7 @@
     "subtitle": "A CODE@SG initiative by IMDA and MOE.",
     "duration": "10 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+    "hero_image": "/images/uB9togx2WZjo52kW3eDPGODhN8.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -948,7 +948,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771",
+        "src": "/images/uB9togx2WZjo52kW3eDPGODhN8.png",
         "width": 2127,
         "height": 771
       },
@@ -994,7 +994,7 @@
     "card_blurb": "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…",
     "featured": false,
     "weight": 100,
-    "icon": "https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
+    "icon": "/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png",
     "icon_alt": null,
     "platform_ids": [
       "makecode-arcade",
@@ -1009,7 +1009,7 @@
     "sign_up_label": "Enquire now",
     "sign_up_url": "mailto:imda_codesg@imda.gov.sg",
     "intro_html": "<p><strong>Our CFF 2025 Scheme of Work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>",
-    "learning_objectives_html": "<h2>Code for Fun for Primary Schools</h2><p>The Code for Fun programme offers upper primary students 10 hours of lessons on computational thinking, coding, and introduction to emerging technologies such as Artificial Intelligence (AI).</p><p>Through the programme, students will:<br>- Learn about core computational thinking concepts and how it can be applied to daily life.<br>- Understand basic programming concepts such as debugging, events, loops, variables, functions, and conditionals.<br>- Develop logical thinking and problem-solving skills.<br>- Discover how emerging technologies such as AI are part of, and influence our daily lives.</p><img alt=\"\" src=\"https://framerusercontent.com/images/E8REPxfDIMr6Z1CeiqAn5ZMmTw.png\"><h2>Code for Fun for Secondary Schools</h2><p>For secondary school students, Code for Fun strengthens students’ inventive thinking, design thinking and digital making skills and complements Ministry of Education (MOE)’s EdTech Masterplan 2030 and other existing technology-related curriculum. </p><p>The programme offers 10 hours of lessons which:<br>- Focuses on digital making and design prototyping using microcontrollers.<br>- Reinforces students’ digital literacy and understanding through practical project work and real-world examples.<br>- Includes two programming tracks for schools to choose from – block-based programming and text-based programming.</p><p>The following enhancements to the Code for Fun programme were introduced from 2023:<br>1. Training hardware will be delivered by a vendor and funded by IMDA and MOE HQ. Schools can also choose between a vendor delivering student training or conducting it internally.<br>2. Better integration with schools’ Applied Learning Programmes (ALP) via student projects involving ALP themes such as sustainability and the future of transportation.<br>3. Inclusion of emerging tech through hands-on project work using hardware such as AI-enabled camera.</p><img alt=\"\" src=\"https://framerusercontent.com/images/hZsI1TefMdCpVJFxNYYNSjp9NI.png\">",
+    "learning_objectives_html": "<h2>Code for Fun for Primary Schools</h2><p>The Code for Fun programme offers upper primary students 10 hours of lessons on computational thinking, coding, and introduction to emerging technologies such as Artificial Intelligence (AI).</p><p>Through the programme, students will:<br>- Learn about core computational thinking concepts and how it can be applied to daily life.<br>- Understand basic programming concepts such as debugging, events, loops, variables, functions, and conditionals.<br>- Develop logical thinking and problem-solving skills.<br>- Discover how emerging technologies such as AI are part of, and influence our daily lives.</p><img alt=\"\" src=\"/images/E8REPxfDIMr6Z1CeiqAn5ZMmTw.png\"><h2>Code for Fun for Secondary Schools</h2><p>For secondary school students, Code for Fun strengthens students’ inventive thinking, design thinking and digital making skills and complements Ministry of Education (MOE)’s EdTech Masterplan 2030 and other existing technology-related curriculum. </p><p>The programme offers 10 hours of lessons which:<br>- Focuses on digital making and design prototyping using microcontrollers.<br>- Reinforces students’ digital literacy and understanding through practical project work and real-world examples.<br>- Includes two programming tracks for schools to choose from – block-based programming and text-based programming.</p><p>The following enhancements to the Code for Fun programme were introduced from 2023:<br>1. Training hardware will be delivered by a vendor and funded by IMDA and MOE HQ. Schools can also choose between a vendor delivering student training or conducting it internally.<br>2. Better integration with schools’ Applied Learning Programmes (ALP) via student projects involving ALP themes such as sustainability and the future of transportation.<br>3. Inclusion of emerging tech through hands-on project work using hardware such as AI-enabled camera.</p><img alt=\"\" src=\"/images/hZsI1TefMdCpVJFxNYYNSjp9NI.png\">",
     "details_html": "<h2>How to apply?</h2><p>All MOE government and government-aided secondary schools are eligible to apply for the Code for Fun programme for secondary schools. Application instructions will be sent to all Ministry of Education (MOE) government and government-aided secondary schools between September to October annually. Schools applying for the programme should submit their application within the application period provided. For enquiries regarding Code for Fun for secondary schools, please contact us at <a href=\"mailto:imda_codesg@imda.gov.sg\">imda_codesg@imda.gov.sg</a>.</p>",
     "source_collection": "Programmes",
     "source_id": "fJw14A0IZ"
@@ -1021,7 +1021,7 @@
     "subtitle": "11 May 2025",
     "duration": "4 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484",
+    "hero_image": "/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -1062,7 +1062,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484",
+        "src": "/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png",
         "width": 1375,
         "height": 484
       },
@@ -1108,7 +1108,7 @@
     "card_blurb": "CODE_EXP is a mobile dev hackathon spread over three phases:Phase 1: Training sessionsPhase 2: QualifiersPhase 3: Finals",
     "featured": true,
     "weight": 30,
-    "icon": "https://framerusercontent.com/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png",
+    "icon": "/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png",
     "icon_alt": null,
     "platform_ids": [
       "react-native",
@@ -1133,7 +1133,7 @@
     "subtitle": "14 - 15 January 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006",
+    "hero_image": "/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -1175,7 +1175,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006",
+        "src": "/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png",
         "width": 6015,
         "height": 4006
       },
@@ -1221,7 +1221,7 @@
     "card_blurb": "Ever wondered how things are made, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are…",
     "featured": false,
     "weight": 30,
-    "icon": "https://framerusercontent.com/images/PN4JpLKZiMpUuKHxWvrW4KymVw.png",
+    "icon": "/images/PN4JpLKZiMpUuKHxWvrW4KymVw.png",
     "icon_alt": "3D Printing",
     "platform_ids": [
       "3d-printing",
@@ -1246,7 +1246,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap course with micro:bit.",
     "duration": "24 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245",
+    "hero_image": "/images/URlCPC41VwVGXM7WtFXQcFo4yE.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -1291,7 +1291,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245",
+        "src": "/images/URlCPC41VwVGXM7WtFXQcFo4yE.png",
         "width": 1920,
         "height": 1245
       },
@@ -1337,7 +1337,7 @@
     "card_blurb": "In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to…",
     "featured": true,
     "weight": 86,
-    "icon": "https://framerusercontent.com/images/Ie760gVdIFj1Rc5gz4kaJ36mT4.jpg",
+    "icon": "/images/Ie760gVdIFj1Rc5gz4kaJ36mT4.jpg",
     "icon_alt": "micro:bit",
     "platform_ids": [
       "makecode-arcade",
@@ -1362,7 +1362,7 @@
     "subtitle": "An introductory course on digital making with Micro:bit & IoT.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500",
+    "hero_image": "/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png",
     "audience_ids": [
       "businesses",
       "public"
@@ -1403,7 +1403,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500",
+        "src": "/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png",
         "width": 6000,
         "height": 4500
       },
@@ -1449,7 +1449,7 @@
     "card_blurb": "Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the…",
     "featured": false,
     "weight": 0,
-    "icon": "https://framerusercontent.com/images/qDxwnf110DDqLSIYw78MZ2QSZE.png",
+    "icon": "/images/qDxwnf110DDqLSIYw78MZ2QSZE.png",
     "icon_alt": "IoT",
     "platform_ids": [
       "bbc-micro-bit"
@@ -1473,7 +1473,7 @@
     "subtitle": "11 - 12 February 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912",
+    "hero_image": "/images/A5Dd868Qo1geG7lsgR36QkJm9c.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -1515,7 +1515,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912",
+        "src": "/images/A5Dd868Qo1geG7lsgR36QkJm9c.png",
         "width": 7360,
         "height": 4912
       },
@@ -1561,7 +1561,7 @@
     "card_blurb": "Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working…",
     "featured": false,
     "weight": 30,
-    "icon": "https://framerusercontent.com/images/iqewfsrP4f68PRBpb9CQTIejU.png",
+    "icon": "/images/iqewfsrP4f68PRBpb9CQTIejU.png",
     "icon_alt": "Unity",
     "platform_ids": [
       "unity",
@@ -1585,7 +1585,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap bootcamp with Unity.",
     "duration": "32 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720",
+    "hero_image": "/images/kuS9B3BanadFYL050aWsShzhoM.webp",
     "audience_ids": [
       "students",
       "teachers"
@@ -1625,7 +1625,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720",
+        "src": "/images/kuS9B3BanadFYL050aWsShzhoM.webp",
         "width": 1280,
         "height": 720
       },
@@ -1671,7 +1671,7 @@
     "card_blurb": "In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates.Unity is a powerful and versatile game engine,…",
     "featured": true,
     "weight": 78,
-    "icon": "https://framerusercontent.com/images/0OOu86wVjbq3jXKiC0xVgRJWZg.png",
+    "icon": "/images/0OOu86wVjbq3jXKiC0xVgRJWZg.png",
     "icon_alt": "Unity",
     "platform_ids": [
       "unity"
@@ -1694,7 +1694,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.",
     "duration": "24 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450",
+    "hero_image": "/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg",
     "audience_ids": [
       "students"
     ],
@@ -1738,7 +1738,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450",
+        "src": "/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg",
         "width": 1000,
         "height": 450
       },
@@ -1784,7 +1784,7 @@
     "card_blurb": "In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a…",
     "featured": true,
     "weight": 85,
-    "icon": "https://framerusercontent.com/images/DpOBnZ09CRXXgXc0fPYlHdh8GQI.png",
+    "icon": "/images/DpOBnZ09CRXXgXc0fPYlHdh8GQI.png",
     "icon_alt": "Minecraft",
     "platform_ids": [
       "makecode-arcade",
@@ -1809,7 +1809,7 @@
     "subtitle": "Corporate training",
     "duration": "½, 1, 2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125",
+    "hero_image": "/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -1849,7 +1849,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125",
+        "src": "/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg",
         "width": 2000,
         "height": 1125
       },
@@ -1895,7 +1895,7 @@
     "card_blurb": "Generative AI isn't just transforming how we create content. It's revolutionising how organisations access and leverage their knowledge. Whether you're looking to enhance customer…",
     "featured": true,
     "weight": 98,
-    "icon": "https://framerusercontent.com/images/FId8k56H3S4bGtYZjSSXC24LVI.png",
+    "icon": "/images/FId8k56H3S4bGtYZjSSXC24LVI.png",
     "icon_alt": "ChatGPT",
     "platform_ids": [
       "chatgpt"
@@ -1918,7 +1918,7 @@
     "subtitle": "Corporate training",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733",
+    "hero_image": "/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -1958,7 +1958,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733",
+        "src": "/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg",
         "width": 5600,
         "height": 3733
       },
@@ -2004,7 +2004,7 @@
     "card_blurb": "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic…",
     "featured": true,
     "weight": 99,
-    "icon": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
+    "icon": "/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
     "icon_alt": "Lovable",
     "platform_ids": [
       "html-css",
@@ -2030,7 +2030,7 @@
     "subtitle": "Corporate training, 3 & 4 July 2025",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034",
+    "hero_image": "/images/LvTrPWE98zoDD5wX1uoP1UGit4.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -2072,7 +2072,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034",
+        "src": "/images/LvTrPWE98zoDD5wX1uoP1UGit4.png",
         "width": 4551,
         "height": 3034
       },
@@ -2118,7 +2118,7 @@
     "card_blurb": "Discover the inner workings of web applications in just 1-2 days!Web apps are part of everyday life, from banking, to email, to shopping, and productivity. What actually happens,…",
     "featured": true,
     "weight": 93,
-    "icon": "https://framerusercontent.com/images/m2e5vLFU2BGj1eEVY3FTucPeA.png",
+    "icon": "/images/m2e5vLFU2BGj1eEVY3FTucPeA.png",
     "icon_alt": "Web Development",
     "platform_ids": [
       "html-css",
@@ -2145,7 +2145,7 @@
     "subtitle": "An introductory course on leveraging Microsoft Copilot to enhance productivity.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080",
+    "hero_image": "/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png",
     "audience_ids": [
       "tech-productivity",
       "businesses",
@@ -2186,7 +2186,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080",
+        "src": "/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png",
         "width": 1920,
         "height": 1080
       },
@@ -2232,7 +2232,7 @@
     "card_blurb": "Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of…",
     "featured": false,
     "weight": 0,
-    "icon": "https://framerusercontent.com/images/QXIiHIkWlAeSeR06kl09KTnnLIc.png",
+    "icon": "/images/QXIiHIkWlAeSeR06kl09KTnnLIc.png",
     "icon_alt": "Microsoft Copilot",
     "platform_ids": [
       "microsoft-copilot"
@@ -2255,7 +2255,7 @@
     "subtitle": "An introductory course on machine learning models using Orange.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456",
+    "hero_image": "/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -2295,7 +2295,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456",
+        "src": "/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png",
         "width": 6144,
         "height": 3456
       },
@@ -2341,7 +2341,7 @@
     "card_blurb": "No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and…",
     "featured": false,
     "weight": 0,
-    "icon": "https://framerusercontent.com/images/1QBHB8ypQ3erWXDDpHcQlYDU14.png",
+    "icon": "/images/1QBHB8ypQ3erWXDDpHcQlYDU14.png",
     "icon_alt": "Orange",
     "platform_ids": [
       "orange"
@@ -2364,7 +2364,7 @@
     "subtitle": "An introductory course on building websites using Framer.",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256",
+    "hero_image": "/images/6AquPe6snR8cp5io7SOUGbf8eGU.png",
     "audience_ids": [
       "businesses",
       "public"
@@ -2404,7 +2404,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256",
+        "src": "/images/6AquPe6snR8cp5io7SOUGbf8eGU.png",
         "width": 2396,
         "height": 1256
       },
@@ -2450,7 +2450,7 @@
     "card_blurb": "In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and…",
     "featured": false,
     "weight": 0,
-    "icon": "https://framerusercontent.com/images/AcyKvCqXBblmvGC8X1c86dmnxa4.png",
+    "icon": "/images/AcyKvCqXBblmvGC8X1c86dmnxa4.png",
     "icon_alt": "Framer",
     "platform_ids": [
       "framer"
@@ -2473,7 +2473,7 @@
     "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "2 days/module",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504",
+    "hero_image": "/images/PuT46Rc7thhhYyLZrhYVo6wObE.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -2524,7 +2524,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504",
+        "src": "/images/PuT46Rc7thhhYyLZrhYVo6wObE.png",
         "width": 8256,
         "height": 5504
       },
@@ -2570,7 +2570,7 @@
     "card_blurb": "In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps…",
     "featured": true,
     "weight": 88,
-    "icon": "https://framerusercontent.com/images/dy8VLvD6CAJQ8DornnFQC6sbNQ.png",
+    "icon": "/images/dy8VLvD6CAJQ8DornnFQC6sbNQ.png",
     "icon_alt": "Mobile Application Development",
     "platform_ids": [
       "android-studio",
@@ -2596,7 +2596,7 @@
     "subtitle": "A SkillsFuture-Supported Course Offered by SMU Academy",
     "duration": "2 days/module",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912",
+    "hero_image": "/images/fWouEVvBE4OgXcNYbaPWP57gdM.png",
     "audience_ids": [
       "public",
       "businesses"
@@ -2646,7 +2646,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912",
+        "src": "/images/fWouEVvBE4OgXcNYbaPWP57gdM.png",
         "width": 7360,
         "height": 4912
       },
@@ -2692,7 +2692,7 @@
     "card_blurb": "In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to…",
     "featured": true,
     "weight": 82,
-    "icon": "https://framerusercontent.com/images/m2e5vLFU2BGj1eEVY3FTucPeA.png",
+    "icon": "/images/m2e5vLFU2BGj1eEVY3FTucPeA.png",
     "icon_alt": "Web Development",
     "platform_ids": [
       "bubble",
@@ -2718,7 +2718,7 @@
     "subtitle": "A hands-on digital maker programme for RI students.",
     "duration": "4 years",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600",
+    "hero_image": "/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg",
     "audience_ids": [
       "students",
       "teachers"
@@ -2758,7 +2758,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600",
+        "src": "/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg",
         "width": 800,
         "height": 600
       },
@@ -2804,7 +2804,7 @@
     "card_blurb": "The RI FutureCreate Maker Programme is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven…",
     "featured": true,
     "weight": 89,
-    "icon": "https://framerusercontent.com/images/WeIaLloGW571bF6elC5cFIYTEQ.png",
+    "icon": "/images/WeIaLloGW571bF6elC5cFIYTEQ.png",
     "icon_alt": "3D Printing",
     "platform_ids": [
       "3d-printing",
@@ -2830,7 +2830,7 @@
     "subtitle": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants",
     "duration": "8 months",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200",
+    "hero_image": "/images/pzZfgIklaSw80TJTGemWvQyrCLo.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -2870,7 +2870,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200",
+        "src": "/images/pzZfgIklaSw80TJTGemWvQyrCLo.png",
         "width": 1200,
         "height": 1200
       },
@@ -2916,7 +2916,7 @@
     "card_blurb": "The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications.…",
     "featured": true,
     "weight": 67,
-    "icon": "https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
+    "icon": "/images/cxlYOQBbQLUVc8ylcLfluK0eY.png",
     "icon_alt": "Swift",
     "platform_ids": [
       "swift"
@@ -2939,7 +2939,7 @@
     "subtitle": "An IMDA Infocom LEARN Roadmap course with Figma.",
     "duration": "26 hours",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260",
+    "hero_image": "/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png",
     "audience_ids": [
       "students",
       "teachers"
@@ -2981,7 +2981,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260",
+        "src": "/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png",
         "width": 2400,
         "height": 1260
       },
@@ -3027,7 +3027,7 @@
     "card_blurb": "Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX…",
     "featured": true,
     "weight": 78,
-    "icon": "https://framerusercontent.com/images/7SoVlCsTaQWSWuDRzCULLs20Ho8.png",
+    "icon": "/images/7SoVlCsTaQWSWuDRzCULLs20Ho8.png",
     "icon_alt": "Figma",
     "platform_ids": [
       "figma"
@@ -3050,7 +3050,7 @@
     "subtitle": "Corporate training",
     "duration": "2 days",
     "description": "Lesson Outcomes",
-    "hero_image": "https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832",
+    "hero_image": "/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg",
     "audience_ids": [
       "public",
       "businesses"
@@ -3090,7 +3090,7 @@
     "content": [
       {
         "type": "image",
-        "src": "https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832",
+        "src": "/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg",
         "width": 1248,
         "height": 832
       },
@@ -3136,7 +3136,7 @@
     "card_blurb": "Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in…",
     "featured": true,
     "weight": 99,
-    "icon": "https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
+    "icon": "/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png",
     "icon_alt": "Lovable",
     "platform_ids": [
       "html-css",
