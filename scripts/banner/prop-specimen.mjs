@@ -60,6 +60,14 @@ const ITEMS = [
 	{ label: 'printer3d (minted)', type: 'printer3d', w: 130 },
 	{ label: 'vr-headset (minted)', type: 'vr-headset', w: 170 },
 	{ label: 'marble-run (minted)', type: 'marble-run', w: 140 },
+	{ label: 'bee-bot (minted)', type: 'bee-bot', w: 160 },
+	{ label: 'drone (minted)', type: 'drone', w: 180 },
+	{ label: 'rocket (minted)', type: 'rocket', w: 100 },
+	{ label: 'pen3d (minted)', type: 'pen3d', w: 60 },
+	{ label: 'croc-clips (minted)', type: 'croc-clips', w: 160 },
+	{ label: 'soldering-iron (minted)', type: 'soldering-iron', w: 160 },
+	{ label: 'cardboard-robot (minted)', type: 'cardboard-robot', w: 130 },
+	{ label: 'handheld-console (minted)', type: 'handheld-console', w: 110 },
 ];
 
 // pre-render sticker-based cells (async) into inline <image> markup
