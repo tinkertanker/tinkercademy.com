@@ -72,6 +72,10 @@ const ITEMS = [
 	{ label: 'servo (minted)', type: 'servo', w: 130 },
 	{ label: 'led-strip (minted)', type: 'led-strip', w: 190 },
 	{ label: 'smart-plant (minted)', type: 'smart-plant', w: 120 },
+	{ label: 'laptop-gamepad (minted)', type: 'laptop-gamepad', w: 170 },
+	{ label: 'laptop-phone (minted)', type: 'laptop-phone', w: 170 },
+	{ label: 'laptop-microbit (minted)', type: 'laptop-microbit', w: 170 },
+	{ label: 'server (minted)', type: 'server', w: 120 },
 ];
 
 // pre-render sticker-based cells (async) into inline <image> markup

@@ -26,9 +26,13 @@ new files.
 | `servo` | Mini hobby servo with cross horn and ribbon wires (Tinker Kit) |
 | `led-strip` | Addressable LED strip segment, lit (Tinker Kit / smart kits) |
 | `smart-plant` | Potted seedling with soil-moisture sensor (ElecFreaks Smart Agriculture) |
+| `laptop-gamepad` | Laptop wired to a game controller — playtesting (game dev tracks) |
+| `laptop-phone` | Laptop wired to a phone mirroring the app (mobile dev tracks) |
+| `laptop-microbit` | Laptop flashing a micro:bit over USB (physical computing) |
+| `server` | Mini server tower with indicator lights (web/backend tracks) |
 
 Round-2 subjects were derived from the TT Curriculum drive (Bee-Bot, Tello
 drones, Space Camp, 3D Pen Art, High Tech Maker, Makedo, MakeCode Arcade).
-Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
+Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
 KTANE-style defusal box (Digital Making), blockchain cubes, sensor modules.
 Process a new batch with `python3 scripts/banner/process-mint.py <dir> <names>`.
