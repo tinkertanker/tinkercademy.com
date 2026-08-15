@@ -36,3 +36,9 @@ drones, Space Camp, 3D Pen Art, High Tech Maker, Makedo, MakeCode Arcade).
 Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
 KTANE-style defusal box (Digital Making), blockchain cubes, sensor modules.
 Process a new batch with `python3 scripts/banner/process-mint.py <dir> <names>`.
+
+**Flatness rule (from review):** props must match the pack's flat 2D language —
+straight-on front view, no perspective, no foreshortening, no three-quarter
+angles, no visible side faces. Put "STRICTLY FLAT ... straight-on front view,
+no perspective, no vanishing points" in every mint prompt; "three-quarter
+view" produces 3D-looking output that clashes with the stickers.
