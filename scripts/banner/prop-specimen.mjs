@@ -82,6 +82,12 @@ const ITEMS = [
 	{ label: 'agent-cli (minted)', type: 'agent-cli', w: 160 },
 	{ label: 'app-builder (minted)', type: 'app-builder', w: 160 },
 	{ label: 'chat-app (minted)', type: 'chat-app', w: 160 },
+	{ label: 'blockchain (minted)', type: 'blockchain', w: 190 },
+	{ label: 'robot-arm (minted)', type: 'robot-arm', w: 140 },
+	{ label: 'voxel-blocks (minted)', type: 'voxel-blocks', w: 140 },
+	{ label: 'doc-stack (minted)', type: 'doc-stack', w: 120 },
+	{ label: 'webcam (minted)', type: 'webcam', w: 100 },
+	{ label: 'battery-pack (minted)', type: 'battery-pack', w: 100 },
 ];
 
 // pre-render sticker-based cells (async) into inline <image> markup

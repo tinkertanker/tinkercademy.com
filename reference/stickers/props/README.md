@@ -36,10 +36,16 @@ new files.
 | `agent-cli` | AI coding agent terminal with prompts + spinner (Codex/Claude-style) |
 | `app-builder` | Chat + live phone preview split (Lovable-style) |
 | `chat-app` | Chat assistant conversation window (ChatGPT/Copilot-style) |
+| `blockchain` | Three linked blocks (blockchain certificate) |
+| `robot-arm` | Desktop robotic arm gripping a cube (RPA / automation) |
+| `voxel-blocks` | Grass-capped voxel block pyramid with ore (Minecraft-style worlds) |
+| `doc-stack` | Source documents with citation card (knowledge-powered AI / RAG) |
+| `webcam` | Classroom webcam (no-code ML classification) |
+| `battery-pack` | micro:bit AA battery holder with connector (physical computing) |
 
 Round-2 subjects were derived from the TT Curriculum drive (Bee-Bot, Tello
 drones, Space Camp, 3D Pen Art, High Tech Maker, Makedo, MakeCode Arcade).
-Round-5 added professional app-window stickers — deliberately unbranded (no fake logos/text) so scenes can pair them with real simple-icons logo badges. Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
+Round-6 filled programme-coverage gaps (blockchain, RPA, Minecraft, RAG, no-code ML, battery pack) and re-minted code-editor (stray window dots) and agent-cli (now: user bubble, bullet response with inline chips, bottom prompt box per YJ's reference). Round-5 added professional app-window stickers — deliberately unbranded (no fake logos/text) so scenes can pair them with real simple-icons logo badges. Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
 KTANE-style defusal box (Digital Making), blockchain cubes, sensor modules.
 Process a new batch with `python3 scripts/banner/process-mint.py <dir> <names>`.
 
