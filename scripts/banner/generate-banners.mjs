@@ -16,6 +16,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
+import * as simpleIcons from 'simple-icons';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const SCENES = path.join(ROOT, 'src', 'data', 'banner-scenes.json');
@@ -88,6 +89,23 @@ function lucideIcon(name, size, color, weight = 2.2) {
 	}
 	const s = size / 24;
 	return `<g transform="scale(${s}) translate(-12,-12)" fill="none" stroke="${color}" stroke-width="${weight}" stroke-linecap="round" stroke-linejoin="round">${lucideCache.get(name)}</g>`;
+}
+
+// ── Tool logos ────────────────────────────────────────────────────
+// Official brand marks from simple-icons (CC0). Devices take a `logo` field
+// (e.g. "unity", "react", "figma") and render the mark in the window chrome.
+// Marks whose official colour is too light for a white screen fall back to ink.
+
+function logoMark(slug, size, onDark = false) {
+	const key = 'si' + slug.charAt(0).toUpperCase() + slug.slice(1);
+	const icon = simpleIcons[key];
+	if (!icon) throw new Error(`No simple-icons entry for "${slug}"`);
+	let fill = `#${icon.hex}`;
+	const [r, g, b] = [0, 2, 4].map((i) => parseInt(icon.hex.slice(i, i + 2), 16));
+	const luma = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+	if (!onDark && luma > 0.72) fill = PALETTE.ink;
+	if (onDark && luma < 0.25) fill = PALETTE.paper;
+	return `<g transform="scale(${size / 24}) translate(-12,-12)"><path d="${icon.path}" fill="${fill}"/></g>`;
 }
 
 // ── Screen contents ───────────────────────────────────────────────
@@ -212,24 +230,29 @@ function screenContent(name, x0, y0, w, h, accent) {
 // Every prop draws into a group centred on (0,0); the compositor
 // translates it to the scene position. `w` is the prop width in px.
 
-function laptop(w, { screen = 'blocks', accent = 'red' }) {
+function laptop(w, { screen = 'blocks', accent = 'red', logo }) {
 	const sw = stroke(w);
 	const scrW = w * 0.9;
 	const scrH = scrW * 0.64;
+	const mark = logo
+		? `<g transform="translate(${scrW * 0.38}, ${-scrH * 0.16})">${logoMark(logo, scrH * 0.18)}</g>`
+		: '';
 	return `
 		<rect x="${-scrW / 2}" y="${-scrH}" width="${scrW}" height="${scrH}" rx="${w * 0.03}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}"/>
 		${screenContent(screen, -scrW / 2, -scrH, scrW, scrH, accent)}
+		${mark}
 		<rect x="${-w / 2}" y="${-sw / 2}" width="${w}" height="${w * 0.055}" rx="${w * 0.0275}" fill="${T.device}" stroke="${T.line}" stroke-width="${sw * 0.7}"/>`;
 }
 
-function monitor(w, { screen = 'code', accent = 'red' }) {
+function monitor(w, { screen = 'code', accent = 'red', logo }) {
 	const sw = stroke(w);
 	const scrH = w * 0.6;
 	return `
 		<rect x="${-w * 0.06}" y="${scrH / 2}" width="${w * 0.12}" height="${w * 0.14}" fill="${T.device}" stroke="${T.line}" stroke-width="${sw * 0.7}"/>
 		<rect x="${-w * 0.18}" y="${scrH / 2 + w * 0.14}" width="${w * 0.36}" height="${w * 0.05}" rx="${w * 0.025}" fill="${T.device}" stroke="${T.line}" stroke-width="${sw * 0.7}"/>
 		<rect x="${-w / 2}" y="${-scrH / 2}" width="${w}" height="${scrH}" rx="${w * 0.03}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}"/>
-		${screenContent(screen, -w / 2 + w * 0.03, -scrH / 2 + w * 0.03, w * 0.94, scrH - w * 0.06, accent)}`;
+		${screenContent(screen, -w / 2 + w * 0.03, -scrH / 2 + w * 0.03, w * 0.94, scrH - w * 0.06, accent)}
+		${logo ? `<g transform="translate(${w * 0.4}, ${scrH * 0.36})">${logoMark(logo, scrH * 0.16)}</g>` : ''}`;
 }
 
 function tablet(w, { screen = 'canvas', accent = 'red' }) {
@@ -240,7 +263,7 @@ function tablet(w, { screen = 'canvas', accent = 'red' }) {
 		${screenContent(screen, -w / 2 + w * 0.07, -h / 2 + w * 0.07, w * 0.86, h - w * 0.14, accent)}`;
 }
 
-function browser(w, { screen, accent = 'red' }) {
+function browser(w, { screen, accent = 'red', logo }) {
 	const sw = stroke(w);
 	const h = w * 0.72;
 	const acc = PALETTE[accent];
@@ -258,10 +281,10 @@ function browser(w, { screen, accent = 'red' }) {
 	return `
 		<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${w * 0.04}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}"/>
 		<line x1="${-w / 2}" y1="${-h / 2 + h * 0.2}" x2="${w / 2}" y2="${-h / 2 + h * 0.2}" stroke="${T.line}" stroke-width="${sw * 0.8}"/>
-		${dots}${content}`;
+		${dots}${logo ? `<g transform="translate(${w * 0.42}, ${-h / 2 + h * 0.1})">${logoMark(logo, h * 0.13)}</g>` : ''}${content}`;
 }
 
-function terminal(w, { accent = 'teal' }) {
+function terminal(w, { accent = 'teal', logo }) {
 	const sw = stroke(w);
 	const h = w * 0.66;
 	const acc = PALETTE[accent];
@@ -283,6 +306,7 @@ function terminal(w, { accent = 'teal' }) {
 		<circle cx="${-w / 2 + w * 0.07}" cy="${-h / 2 + h * 0.09}" r="${w * 0.02}" fill="${PALETTE.red}"/>
 		<circle cx="${-w / 2 + w * 0.14}" cy="${-h / 2 + h * 0.09}" r="${w * 0.02}" fill="${PALETTE.orange}"/>
 		<circle cx="${-w / 2 + w * 0.21}" cy="${-h / 2 + h * 0.09}" r="${w * 0.02}" fill="${PALETTE.teal}"/>
+		${logo ? `<g transform="translate(${w * 0.42}, ${-h / 2 + h * 0.09})">${logoMark(logo, h * 0.11, true)}</g>` : ''}
 		${rows}`;
 }
 
@@ -432,69 +456,8 @@ function star(r, fill) {
 	return `<path d="M 0 ${-r} Q ${s * 0.3} ${-s * 0.3} ${r} 0 Q ${s * 0.3} ${s * 0.3} 0 ${r} Q ${-s * 0.3} ${s * 0.3} ${-r} 0 Q ${-s * 0.3} ${-s * 0.3} 0 ${-r} Z" fill="${fill}"/>`;
 }
 
-// ── Brand icons ───────────────────────────────────────────────────
-// The mascot's own anatomy as flat marks: chest diamond (see diamond()),
-// the glasses, and the head. Restrained enough for corporate placements.
 
-function glasses(w, { }) {
-	const sw = Math.max(3, w * 0.055);
-	const r = w * 0.28;
-	// black rims drawn as filled discs behind the lenses, with a theme-line
-	// keyline so the rims stay visible on dark grounds
-	const lens = (cx) =>
-		`<circle cx="${cx}" cy="0" r="${r * 1.2}" fill="${PALETTE.ink}" stroke="${T.line}" stroke-width="${sw * 0.7}"/>` +
-		`<circle cx="${cx}" cy="0" r="${r * 0.92}" fill="${PALETTE.white}"/>`;
-	return `
-		<path d="M ${-w * 0.08} ${-r * 0.2} Q 0 ${-r * 0.62} ${w * 0.08} ${-r * 0.2}" fill="none" stroke="${T.line}" stroke-width="${sw * 1.4}"/>
-		${lens(-w * 0.31)}${lens(w * 0.31)}`;
-}
 
-function roundedPoly(pts, r) {
-	// closed polygon with quadratic-rounded corners
-	const n = pts.length;
-	const seg = [];
-	for (let i = 0; i < n; i++) {
-		const p = pts[i];
-		const prev = pts[(i - 1 + n) % n];
-		const next = pts[(i + 1) % n];
-		const toPrev = [prev[0] - p[0], prev[1] - p[1]];
-		const toNext = [next[0] - p[0], next[1] - p[1]];
-		const lp = Math.hypot(...toPrev);
-		const ln = Math.hypot(...toNext);
-		const a = [p[0] + (toPrev[0] / lp) * r, p[1] + (toPrev[1] / lp) * r];
-		const b = [p[0] + (toNext[0] / ln) * r, p[1] + (toNext[1] / ln) * r];
-		seg.push({ a, corner: p, b });
-	}
-	let d = `M ${seg[0].a[0]} ${seg[0].a[1]}`;
-	for (let i = 0; i < n; i++) {
-		const s = seg[i];
-		d += ` Q ${s.corner[0]} ${s.corner[1]} ${s.b[0]} ${s.b[1]}`;
-		const nxt = seg[(i + 1) % n];
-		d += ` L ${nxt.a[0]} ${nxt.a[1]}`;
-	}
-	return d + ' Z';
-}
-
-function robohead(w, { }) {
-	const h = w * 0.82;
-	const sw = Math.max(3, w * 0.04);
-	// softened trapezoid, top ~90% of bottom width (locked v11 proportions)
-	const head = roundedPoly(
-		[
-			[-w * 0.45, -h / 2],
-			[w * 0.45, -h / 2],
-			[w * 0.5, h / 2],
-			[-w * 0.5, h / 2],
-		],
-		w * 0.1
-	);
-	const r = w * 0.26;
-	return `
-		<path d="${head}" fill="${PALETTE.ink}" stroke="${T.line}" stroke-width="${sw}"/>
-		<line x1="${-w * 0.3}" y1="${h * 0.36}" x2="${w * 0.3}" y2="${h * 0.36}" stroke="${PALETTE.grey}" stroke-width="${sw * 0.45}" stroke-linecap="round"/>
-		<circle cx="${-w * 0.24}" cy="${-h * 0.04}" r="${r}" fill="${PALETTE.white}" stroke="${PALETTE.ink}" stroke-width="${sw * 1.2}"/>
-		<circle cx="${w * 0.24}" cy="${-h * 0.04}" r="${r}" fill="${PALETTE.white}" stroke="${PALETTE.ink}" stroke-width="${sw * 1.2}"/>`;
-}
 
 function blocks(w, { accent = 'red' }) {
 	const sw = stroke(w);
@@ -528,15 +491,6 @@ function books(w, { accent = 'red' }) {
 		.join('');
 }
 
-function plant(w, { accent = 'teal' }) {
-	const sw = stroke(w);
-	const h = w * 1.1;
-	return `
-		<path d="M 0 ${-h * 0.05} C ${-w * 0.5} ${-h * 0.35}, ${-w * 0.4} ${-h * 0.62}, ${-w * 0.05} ${-h * 0.5} Z" fill="${PALETTE[accent]}" stroke="${T.line}" stroke-width="${sw}"/>
-		<path d="M 0 ${-h * 0.05} C ${w * 0.5} ${-h * 0.4}, ${w * 0.35} ${-h * 0.68}, ${w * 0.03} ${-h * 0.52} Z" fill="${PALETTE[accent]}" stroke="${T.line}" stroke-width="${sw}"/>
-		<path d="M 0 ${-h * 0.02} C ${-w * 0.08} ${-h * 0.45}, ${w * 0.08} ${-h * 0.55}, 0 ${-h * 0.7}" fill="none" stroke="${T.line}" stroke-width="${sw}"/>
-		<path d="M ${-w * 0.35} ${-h * 0.05} L ${w * 0.35} ${-h * 0.05} L ${w * 0.26} ${h * 0.5} L ${-w * 0.26} ${h * 0.5} Z" fill="${PALETTE[accent === 'teal' ? 'red' : 'teal']}" stroke="${T.line}" stroke-width="${sw}" stroke-linejoin="round"/>`;
-}
 
 function sticky(w, { accent = 'orange' }) {
 	const sw = stroke(w);
@@ -605,14 +559,49 @@ function diamond(w, { accent = 'red', outline = false }) {
 export const PROPS = {
 	laptop, monitor, tablet, browser, terminal, phone,
 	microbit, breadboard, gamepad,
-	bubble, blocks, mug, books, plant, sticky, trophy, skyline,
-	diamond, glasses, robohead,
+	bubble, blocks, mug, books, sticky, trophy, skyline, diamond,
 };
+
+// ── Sticker props ─────────────────────────────────────────────────
+// PNG assets from the tkrobot pack (and imagegen-minted object stickers in
+// reference/stickers/props/) placed as scene props. Rendered async like the
+// mascot; get the dark-mode halo automatically. `w` is width fraction.
+export const STICKER_PROPS = {
+	face: 'face.png',
+};
+for (const f of fs.existsSync(path.join(STICKERS, 'props'))
+	? fs.readdirSync(path.join(STICKERS, 'props'))
+	: []) {
+	if (f.endsWith('.png')) STICKER_PROPS[f.replace('.png', '')] = `props/${f}`;
+}
+
+async function stickerPropSVG(p, mode) {
+	const file = path.join(STICKERS, STICKER_PROPS[p.type]);
+	const { data, info } = await sharp(file).trim().png().toBuffer({ resolveWithObject: true });
+	const pw = p.w * W;
+	const ph = (info.height / info.width) * pw;
+	const x0 = p.x * W - pw / 2;
+	const y0 = p.y * H - ph / 2;
+	const img = (b64) =>
+		`<image href="data:image/png;base64,${b64}" x="${x0}" y="${y0}" width="${pw}" height="${ph}"/>`;
+	let layers = '';
+	if (mode === 'dark') {
+		const halo = await stickerHalo(data, info);
+		layers += img(halo.toString('base64'));
+	}
+	layers += img(data.toString('base64'));
+	const shadow =
+		p.shadow === false
+			? ''
+			: `<ellipse cx="${p.x * W}" cy="${y0 + ph + 4}" rx="${pw * 0.5}" ry="${pw * 0.06}" fill="${T.shadow}"/>`;
+	const opacity = p.opacity != null ? ` opacity="${p.opacity}"` : '';
+	return `${shadow}<g${opacity}>${layers}</g>`;
+}
 
 // ── Scene assembly ────────────────────────────────────────────────
 
 // Background-dressing prop types: skipped by margin validation and shadows.
-const BACKGROUND_TYPES = new Set(['diamond', 'skyline', 'wire', 'glasses', 'robohead']);
+const BACKGROUND_TYPES = new Set(['diamond', 'skyline', 'wire', 'face']);
 
 function propExtent(p) {
 	return (p.w * W) / 2 + 8;
@@ -762,7 +751,6 @@ const BOTTOM_OFFSET = {
 	mug: (w) => w * 0.55,
 	phone: (w) => w * 1.0,
 	books: (w) => w * 0.24,
-	plant: (w) => w * 0.55,
 	trophy: (w) => w * 0.34,
 };
 
@@ -830,20 +818,74 @@ async function photoLayer(photo) {
 	if (!fs.existsSync(src)) throw new Error(`photo.src not found: ${src}`);
 	const buf = await sharp(src)
 		.resize(W, H, { fit: 'cover' })
-		.modulate({ brightness: photo.darken ?? 0.42, saturation: photo.sat ?? 0.25 })
+		.modulate({ brightness: photo.darken ?? 0.36, saturation: photo.sat ?? 0.22 })
 		.png()
 		.toBuffer();
 	return `<image href="data:image/png;base64,${buf.toString('base64')}" width="${W}" height="${H}"/>`;
 }
 
-export async function renderScene(scene) {
+// ── Layout templates ──────────────────────────────────────────────
+// Named arrangements so scenes don't need hand-tuned coordinates and the
+// catalogue stays visually consistent. A template assigns position + size to
+// the mascot and to each non-background prop in spec order.
+const LAYOUTS = {
+	// classic: big mascot centre-right, grounded device far right, bubble
+	// upper-left of the mascot, optional small foreground item at its feet
+	hero: {
+		mascot: { x: 0.6, y: 0.51, h: 0.62 },
+		slots: [
+			{ x: 0.85, y: 0.8, w: 0.21 },
+			{ x: 0.47, y: 0.22, w: 0.09, tail: 'right' },
+			{ x: 0.7, y: 0.772, w: 0.08, layer: 'front' },
+		],
+	},
+	// bottom-right trio: three elements stepping down in size toward the
+	// corner — large floating window, medium window in front, big mascot
+	// grounded at the right edge behind the work
+	trio: {
+		mascot: { x: 0.89, y: 0.57, h: 0.5 },
+		slots: [
+			{ x: 0.55, y: 0.4, w: 0.24 },
+			{ x: 0.73, y: 0.64, w: 0.18, layer: 'front' },
+		],
+	},
+};
+
+function applyLayout(scene) {
+	const layout = LAYOUTS[scene.layout];
+	if (!layout) {
+		if (scene.layout) throw new Error(`${scene.id}: unknown layout "${scene.layout}"`);
+		return scene;
+	}
+	const out = structuredClone(scene);
+	if (out.mascot) Object.assign(out.mascot, layout.mascot);
+	let i = 0;
+	for (const p of out.props ?? []) {
+		if (BACKGROUND_TYPES.has(p.type)) continue;
+		if (i < layout.slots.length) {
+			Object.assign(p, layout.slots[i++]);
+			// grounded prop types sit on the scene baseline regardless of the
+			// slot's y (which is tuned for floating windows)
+			if (BOTTOM_OFFSET[p.type]) {
+				p.y = 0.82 - BOTTOM_OFFSET[p.type](p.w * W) / H;
+			}
+		}
+	}
+	return out;
+}
+
+export async function renderScene(rawScene) {
+	const scene = applyLayout(rawScene);
 	validateMargin(scene);
 	const mode = scene.mode ?? 'light';
 	setTheme(mode);
 	const props = (scene.props ?? []).map((p) => ({ accent: scene.accent ?? 'red', ...p }));
 	const mascot = scene.mascot ? await mascotImage(scene, mode) : '';
-	const front = props.filter((p) => p.layer === 'front').map(propSVG);
-	const back = props.filter((p) => p.layer !== 'front').map(propSVG);
+	const rendered = await Promise.all(
+		props.map((p) => (STICKER_PROPS[p.type] ? stickerPropSVG(p, mode) : Promise.resolve(propSVG(p))))
+	);
+	const front = rendered.filter((_, i) => props[i].layer === 'front');
+	const back = rendered.filter((_, i) => props[i].layer !== 'front');
 	let defs = '';
 	let ground = `<rect width="${W}" height="${H}" fill="${scene.background ?? PALETTE.paper}"/>`;
 	if (mode === 'dark') {
@@ -854,7 +896,7 @@ export async function renderScene(scene) {
 			// photo sits under the gradient; the gradient becomes a tint
 			const img = await photoLayer(scene.photo);
 			ground = ground.replace('<rect width="1600" height="900" fill="url(#ground)"/>',
-				`${img}<rect width="${W}" height="${H}" fill="url(#ground)" opacity="0.72"/>`);
+				`${img}<rect width="${W}" height="${H}" fill="url(#ground)" opacity="0.8"/>`);
 		}
 	}
 	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">

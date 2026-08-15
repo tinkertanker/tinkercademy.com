@@ -50,7 +50,7 @@
    {
     "type": "microbit",
     "x": 0.875,
-    "y": 0.711,
+    "y": 0.706,
     "w": 0.16,
     "accent": "red"
    },
@@ -59,7 +59,8 @@
     "screen": "blocks",
     "x": 0.48,
     "y": 0.8,
-    "w": 0.19
+    "w": 0.19,
+    "logo": "scratch"
    }
   ]
  },
@@ -119,14 +120,8 @@
    {
     "type": "microbit",
     "x": 0.81,
-    "y": 0.697,
+    "y": 0.692,
     "w": 0.18
-   },
-   {
-    "type": "blocks",
-    "x": 0.935,
-    "y": 0.772,
-    "w": 0.07
    },
    {
     "type": "bubble",
@@ -136,6 +131,12 @@
     "w": 0.08,
     "tail": "right",
     "accent": "orange"
+   },
+   {
+    "type": "robot-buggy",
+    "x": 0.93,
+    "y": 0.745,
+    "w": 0.11
    }
   ]
  },
@@ -155,14 +156,16 @@
     "type": "browser",
     "x": 0.865,
     "y": 0.36,
-    "w": 0.18
+    "w": 0.18,
+    "logo": "html5"
    },
    {
     "type": "laptop",
     "screen": "code",
     "x": 0.475,
     "y": 0.8,
-    "w": 0.19
+    "w": 0.19,
+    "logo": "javascript"
    }
   ]
  },
@@ -257,7 +260,7 @@
    {
     "type": "microbit",
     "x": 0.875,
-    "y": 0.73,
+    "y": 0.706,
     "w": 0.16,
     "accent": "red"
    },
@@ -266,7 +269,8 @@
     "screen": "blocks",
     "x": 0.48,
     "y": 0.8,
-    "w": 0.19
+    "w": 0.19,
+    "logo": "scratch"
    }
   ]
  },
@@ -328,14 +332,8 @@
    {
     "type": "microbit",
     "x": 0.81,
-    "y": 0.72,
+    "y": 0.692,
     "w": 0.18
-   },
-   {
-    "type": "blocks",
-    "x": 0.945,
-    "y": 0.772,
-    "w": 0.07
    },
    {
     "type": "bubble",
@@ -345,6 +343,12 @@
     "w": 0.08,
     "tail": "right",
     "accent": "orange"
+   },
+   {
+    "type": "robot-buggy",
+    "x": 0.93,
+    "y": 0.745,
+    "w": 0.11
    }
   ]
  },
@@ -365,20 +369,22 @@
     "type": "browser",
     "x": 0.865,
     "y": 0.36,
-    "w": 0.18
+    "w": 0.18,
+    "logo": "html5"
    },
    {
     "type": "laptop",
     "screen": "code",
     "x": 0.475,
     "y": 0.8,
-    "w": 0.19
+    "w": 0.19,
+    "logo": "javascript"
    }
   ]
  },
  {
   "id": "mastering-the-web-pro-dark",
-  "note": "PRO variant: windows collage, brand diamond motif, mascot as a small corner cameo.",
+  "note": "PRO variant: trio layout — big mascot at the corner behind the work; HTML5-badged browser.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
@@ -398,16 +404,10 @@
    },
    {
     "type": "browser",
-    "x": 0.63,
-    "y": 0.42,
-    "w": 0.24
+    "logo": "html5"
    },
    {
-    "type": "terminal",
-    "x": 0.82,
-    "y": 0.66,
-    "w": 0.19,
-    "layer": "front"
+    "type": "terminal"
    }
   ],
   "mascot": {
@@ -415,11 +415,12 @@
    "x": 0.945,
    "y": 0.69,
    "h": 0.26
-  }
+  },
+  "layout": "trio"
  },
  {
   "id": "agentic-ai-pro-dark",
-  "note": "PRO variant: work as protagonist, mascot as a small corner cameo, no bubbles.",
+  "note": "PRO variant: trio layout, Copilot-badged terminal.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
@@ -445,19 +446,15 @@
    },
    {
     "type": "laptop",
-    "screen": "chat",
-    "x": 0.6,
-    "y": 0.8,
-    "w": 0.2
+    "screen": "chat"
    },
    {
     "type": "terminal",
-    "x": 0.82,
-    "y": 0.36,
-    "w": 0.17,
-    "accent": "teal"
+    "accent": "teal",
+    "logo": "githubcopilot"
    }
-  ]
+  ],
+  "layout": "trio"
  },
  {
   "id": "iotmaker-dark",
@@ -484,7 +481,7 @@
    {
     "type": "microbit",
     "x": 0.46,
-    "y": 0.76,
+    "y": 0.742,
     "w": 0.11,
     "accent": "red"
    },
@@ -522,13 +519,8 @@
     "screen": "scene3d",
     "x": 0.85,
     "y": 0.66,
-    "w": 0.17
-   },
-   {
-    "type": "gamepad",
-    "x": 0.47,
-    "y": 0.776,
-    "w": 0.09
+    "w": 0.17,
+    "logo": "unity"
    },
    {
     "type": "bubble",
@@ -537,6 +529,12 @@
     "y": 0.22,
     "w": 0.08,
     "tail": "right"
+   },
+   {
+    "type": "vr-headset",
+    "x": 0.46,
+    "y": 0.75,
+    "w": 0.1
    }
   ]
  },
@@ -567,24 +565,24 @@
     "w": 0.09
    },
    {
-    "type": "books",
-    "x": 0.46,
-    "y": 0.783,
-    "w": 0.07
-   },
-   {
     "type": "bubble",
     "kind": "heart",
     "x": 0.45,
     "y": 0.22,
     "w": 0.08,
     "tail": "right"
+   },
+   {
+    "type": "marble-run",
+    "x": 0.45,
+    "y": 0.71,
+    "w": 0.11
    }
   ]
  },
  {
   "id": "professionals-photo-dark",
-  "note": "Exploration: retired AI photo as heavily faded backdrop texture; illustration system on top; corner cameo.",
+  "note": "Faded-photo backdrop + trio layout.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
@@ -606,17 +604,10 @@
   },
   "props": [
    {
-    "type": "browser",
-    "x": 0.65,
-    "y": 0.44,
-    "w": 0.22
+    "type": "browser"
    },
    {
-    "type": "terminal",
-    "x": 0.83,
-    "y": 0.68,
-    "w": 0.17,
-    "layer": "front"
+    "type": "terminal"
    },
    {
     "type": "diamond",
@@ -626,6 +617,7 @@
     "w": 0.2,
     "opacity": 0.15
    }
-  ]
+  ],
+  "layout": "trio"
  }
 ]

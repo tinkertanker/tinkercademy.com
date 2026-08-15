@@ -56,6 +56,22 @@ programme, `hero_image` in `src/data/pages/static-pages.json` for a static page.
 - Props render in array order, **behind** the mascot; add `layer: "front"` to
   draw one in front (foreground depth, e.g. blocks at the mascot's feet).
 
+## Layout templates
+
+Prefer a named `layout` over hand-tuned coordinates — templates keep the
+catalogue consistent and snap grounded devices to the baseline automatically:
+
+- `"layout": "hero"` — the classic: big mascot centre-right, grounded device
+  far right, bubble upper-left, optional small foreground item. Slots are
+  assigned to non-background props in spec order.
+- `"layout": "trio"` — bottom-right arrangement in three descending sizes:
+  large floating window, medium window in front, big mascot (`h` 0.5)
+  grounded at the right edge *behind* the work. This is the corporate
+  register — mascot present and generously sized, but clearly not the
+  centrepiece. Pair with brand icons, no bubbles.
+
+Freeform x/y still works for scenes that need something bespoke.
+
 ## Composition grammar (the rules that keep banners consistent)
 
 1. **Headline zone stays clean.** The third of the canvas named by
@@ -97,11 +113,12 @@ are designed for that contract natively:
 Three registers, same system — pick per audience, don't invent new styles:
 
 1. **Full mascot** (`h` 0.55–0.66) — schools, community, homepage.
-2. **Corner cameo** — professional/corporate: mascot small (`h` ≈ 0.26–0.3)
-   in the bottom-right corner, feet on the baseline, optionally peeking from
-   behind a front-layer window; the windows are the protagonists. No bubbles.
-3. **No mascot** — most formal contexts: window collage plus brand icons
-   (`diamond`, `glasses`, `robohead`) at low opacity as the only brand cues.
+2. **Trio** (`"layout": "trio"`) — professional/corporate: big mascot
+   grounded at the right edge behind two windows of descending size. The
+   tiny-cameo experiment read worse than a properly sized robot — keep the
+   character large, just not the protagonist. No bubbles.
+3. **No mascot** — most formal contexts: window collage plus `diamond` /
+   `face` icons at low opacity as the only brand cues.
 
 For corporate placements a **faded-photo backdrop** also works: set
 `"photo": {"src": "<retired cdx hero path>", "darken": 0.4, "sat": 0.22}` on a
@@ -143,11 +160,23 @@ The library is organised by **role**, and the roles combine:
    (lucide-static, ISC licence) — when adding a bubble kind or any small
    symbol, map it to a Lucide icon via `BUBBLE_ICONS` / `lucideIcon()`
    instead of hand-drawing.
-6. **Dressing** — `blocks`, `mug`, `books`, `plant`, `sticky`, `trophy`.
+6. **Dressing** — `blocks`, `mug`, `books`, `sticky`, `trophy`.
    (No sparkles — retired; emphasis comes from the glow and accent colour.)
 7. **Backdrops & brand** — `skyline` (Singapore silhouette band, use
-   `opacity` 0.1–0.2), and the brand icons `diamond` (filled or
-   `outline: true`), `glasses`, `robohead`.
+   `opacity` 0.1–0.2), `diamond` (filled or `outline: true`), and `face` —
+   the actual T Krobot face sticker from the pack, placed as a prop. Never
+   redraw the character's anatomy as vectors; use the real sticker assets.
+8. **Sticker props** — every PNG in `reference/stickers/props/` is
+   auto-registered as a prop named after its filename (imagegen-minted
+   objects: hardware, builds, anything that fights flat SVG). They render
+   like the mascot (trimmed, dark-mode halo, ground shadow).
+9. **Tool logos** — devices (`laptop`, `browser`, `monitor`, `terminal`)
+   take a `logo` field with a [simple-icons](https://simpleicons.org) slug
+   (`"unity"`, `"react"`, `"figma"`, `"scratch"`, `"html5"`,
+   `"javascript"`, `"microbit"`, `"swift"`, `"framer"`, `"githubcopilot"`,
+   `"replit"` all verified). The official brand colour is used unless it
+   fails contrast on the surface, then it falls back to ink/paper. Not in
+   simple-icons: OpenAI, Minecraft, Phaser — skip logos there.
 
 Style contract for new props: flat fills from the palette only, thick outlines
 via the `stroke(w)` helper, rounded corners, no text ever, no gradients, no

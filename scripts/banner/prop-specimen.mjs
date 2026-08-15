@@ -7,7 +7,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
-import { PROPS, SCREENS, PALETTE, setTheme } from './generate-banners.mjs';
+import sharpMod from 'sharp';
+import { PROPS, STICKER_PROPS, PALETTE, setTheme } from './generate-banners.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const OUT_DIR = path.join(ROOT, 'public', 'images', 'banners');
@@ -34,7 +35,6 @@ const ITEMS = [
 	{ label: 'monitor·game', type: 'monitor', screen: 'game', w: 170 },
 	{ label: 'terminal', type: 'terminal', w: 180 },
 	{ label: 'phone·chat', type: 'phone', screen: 'chat', w: 80 },
-	{ label: 'microbit', type: 'microbit', w: 170 },
 	{ label: 'breadboard', type: 'breadboard', w: 190 },
 	{ label: 'gamepad', type: 'gamepad', w: 170 },
 	...['dots', 'code', 'zap', 'heart', 'question', 'bulb'].map((k) => ({
@@ -43,18 +43,37 @@ const ITEMS = [
 		kind: k,
 		w: 150,
 	})),
+	{ label: 'laptop·code+react', type: 'laptop', screen: 'code', logo: 'react', w: 200 },
+	{ label: 'browser·canvas+figma', type: 'browser', screen: 'canvas', logo: 'figma', w: 180 },
+	{ label: 'terminal+copilot', type: 'terminal', logo: 'githubcopilot', w: 180 },
 	{ label: 'blocks', type: 'blocks', w: 130 },
 	{ label: 'mug', type: 'mug', w: 80 },
 	{ label: 'books', type: 'books', w: 150 },
-	{ label: 'plant', type: 'plant', w: 100 },
 	{ label: 'sticky', type: 'sticky', w: 130 },
 	{ label: 'trophy', type: 'trophy', w: 110 },
 	{ label: 'skyline', type: 'skyline', w: 210, opacity: 0.85 },
 	{ label: 'diamond', type: 'diamond', w: 80 },
 	{ label: 'diamond·outline', type: 'diamond', outline: true, w: 80 },
-	{ label: 'glasses', type: 'glasses', w: 150 },
-	{ label: 'robohead', type: 'robohead', w: 150 },
+	{ label: 'face (sticker)', type: 'face', w: 150 },
+	{ label: 'microbit (minted)', type: 'microbit', w: 190 },
+	{ label: 'robot-buggy (minted)', type: 'robot-buggy', w: 170 },
+	{ label: 'printer3d (minted)', type: 'printer3d', w: 130 },
+	{ label: 'vr-headset (minted)', type: 'vr-headset', w: 170 },
+	{ label: 'marble-run (minted)', type: 'marble-run', w: 140 },
 ];
+
+// pre-render sticker-based cells (async) into inline <image> markup
+const stickerCells = new Map();
+for (const item of ITEMS) {
+	if (!STICKER_PROPS[item.type]) continue;
+	const file = path.join(ROOT, 'reference', 'stickers', STICKER_PROPS[item.type]);
+	const { data, info } = await sharpMod(file).trim().png().toBuffer({ resolveWithObject: true });
+	const h = (info.height / info.width) * item.w;
+	stickerCells.set(
+		item.type,
+		`<image href="data:image/png;base64,${data.toString('base64')}" x="${-item.w / 2}" y="${-h / 2}" width="${item.w}" height="${h}"/>`
+	);
+}
 
 function sheetSVG(mode) {
 	const T = setTheme(mode);
@@ -70,7 +89,7 @@ function sheetSVG(mode) {
 		const c = i % cols;
 		const x = PAD + c * (CELL + PAD) + CELL / 2;
 		const y = PAD + r * (CELL + LABEL + PAD) + CELL / 2;
-		const body = PROPS[item.type](item.w, { accent: 'red', ...item });
+		const body = stickerCells.get(item.type) ?? PROPS[item.type](item.w, { accent: 'red', ...item });
 		const op = item.opacity != null ? ` opacity="${item.opacity}"` : '';
 		cells += `
 			<rect x="${x - CELL / 2}" y="${y - CELL / 2}" width="${CELL}" height="${CELL}" fill="none" stroke="${label}" stroke-opacity="0.15"/>
