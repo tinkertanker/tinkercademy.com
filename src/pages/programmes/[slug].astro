@@ -164,32 +164,31 @@ const breadcrumbSchema = {
 	{/* ════════ Meta bar ═════════════════════════════════════════════ */}
 	<section class="prog-meta">
 		<div class="shell prog-meta__inner">
-			{(audiences.length > 0 || seriesCourses.length > 0) && (
+			{audiences.length > 0 && (
 				<div class="prog-meta__group">
-					{audiences.length > 0 && (
-						<>
-							<span class="prog-meta__label">Audiences:</span>
-							<div class="prog-meta__tags">
-								{audiences.map((aud) => (
-									<a
-										class:list={[
-											'prog-meta__tag',
-											(aud.id === 'businesses' || aud.id === 'public') && 'prog-meta__tag--blue',
-										]}
-										href={createProgrammeFilterHref({ audience: aud.id })}
-									>
-										{aud.label}
-									</a>
-								))}
-							</div>
-						</>
-					)}
-					{seriesCourses.length > 0 && (
-						<ProgrammeSeriesNav
-							label={programme.series?.label ?? 'Series'}
-							courses={seriesCourses}
-						/>
-					)}
+					<span class="prog-meta__label">Audiences:</span>
+					<div class="prog-meta__tags">
+						{audiences.map((aud) => (
+							<a
+								class:list={[
+									'prog-meta__tag',
+									(aud.id === 'businesses' || aud.id === 'public') && 'prog-meta__tag--blue',
+								]}
+								href={createProgrammeFilterHref({ audience: aud.id })}
+							>
+								{aud.label}
+							</a>
+						))}
+					</div>
+				</div>
+			)}
+			{seriesCourses.length > 0 && (
+				<div class="prog-meta__group">
+					<span class="prog-meta__label">Series:</span>
+					<ProgrammeSeriesNav
+						label={programme.series?.label ?? 'Series'}
+						courses={seriesCourses}
+					/>
 				</div>
 			)}
 			{duration && (
