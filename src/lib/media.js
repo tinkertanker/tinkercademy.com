@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const FRAMER_IMAGE_URL_RE =
-	/https:\/\/framerusercontent\.com\/images\/([A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|gif|svg))(?:\?[^"'\s<)]*)?/g;
+	/https:\/\/framerusercontent\.com\/(?:images|assets)\/([A-Za-z0-9._-]+\.(?:png|jpg|jpeg|webp|gif|svg))(?:\?[^"'\s<)]*)?/g;
 
 const LOCAL_IMAGE_DIR = resolve(process.cwd(), 'public/images');
 const localAssetCache = new Map();
@@ -33,7 +33,7 @@ export function localiseFramerImage(value) {
 		return localiseRepoImagePath(value);
 	}
 
-	if (!value.includes('framerusercontent.com/images/')) {
+	if (!value.includes('framerusercontent.com/')) {
 		return value;
 	}
 

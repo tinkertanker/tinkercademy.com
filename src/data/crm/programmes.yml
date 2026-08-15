@@ -4,7 +4,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with Phaser.
   duration: 24 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438
+  hero_image: /images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp
   audience_ids:
     - students
     - teachers
@@ -47,7 +47,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp?width=800&height=438
+      src: /images/RxSGzAwHnPNmiolhpN9izHUQdvs.webp
       width: 800
       height: 438
     - type: richtext
@@ -194,7 +194,7 @@
     projects, they will explore game design…
   featured: true
   weight: 75
-  icon: https://framerusercontent.com/images/3kg5CT7qKsmehew05r2MIUeuSI.png
+  icon: /images/3kg5CT7qKsmehew05r2MIUeuSI.png
   icon_alt: Game Development
   platform_ids:
     - html-css
@@ -249,7 +249,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with Apple Singapore.
   duration: 26 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214
+  hero_image: /images/MieXrGTvm2GnVsHnT6TfYWd9w.png
   audience_ids:
     - students
     - teachers
@@ -289,7 +289,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214
+      src: /images/MieXrGTvm2GnVsHnT6TfYWd9w.png
       width: 386
       height: 214
     - type: richtext
@@ -408,7 +408,7 @@
     learn coding fundamentals using…
   featured: true
   weight: 65
-  icon: https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png
+  icon: /images/cxlYOQBbQLUVc8ylcLfluK0eY.png
   icon_alt: Swift
   platform_ids:
     - swift
@@ -451,7 +451,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with Apple Singapore.
   duration: 26 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214
+  hero_image: /images/MieXrGTvm2GnVsHnT6TfYWd9w.png
   audience_ids:
     - students
     - teachers
@@ -491,7 +491,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214
+      src: /images/MieXrGTvm2GnVsHnT6TfYWd9w.png
       width: 386
       height: 214
     - type: richtext
@@ -602,7 +602,7 @@
     further in SwiftUI with Augmented…
   featured: true
   weight: 65
-  icon: https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png
+  icon: /images/cxlYOQBbQLUVc8ylcLfluK0eY.png
   icon_alt: Swift
   platform_ids:
     - swift
@@ -644,7 +644,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with Apple Singapore.
   duration: 26 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214
+  hero_image: /images/MieXrGTvm2GnVsHnT6TfYWd9w.png
   audience_ids:
     - students
     - teachers
@@ -685,7 +685,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/MieXrGTvm2GnVsHnT6TfYWd9w.png?width=386&height=214
+      src: /images/MieXrGTvm2GnVsHnT6TfYWd9w.png
       width: 386
       height: 214
     - type: richtext
@@ -798,7 +798,7 @@
     programme is suitable for students who are…
   featured: true
   weight: 60
-  icon: https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png
+  icon: /images/cxlYOQBbQLUVc8ylcLfluK0eY.png
   icon_alt: Swift
   platform_ids:
     - swift
@@ -842,7 +842,7 @@
   subtitle: Corporate training, 21 & 22 August 2025
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335
+  hero_image: /images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg
   audience_ids:
     - public
     - businesses
@@ -882,7 +882,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg?width=2000&height=1335
+      src: /images/Xr4xIVKeDdiCsMuiP4gMzxzWM.jpg
       width: 2000
       height: 1335
     - type: richtext
@@ -1093,7 +1093,7 @@
     Discord create native mobile experiences…
   featured: true
   weight: 93
-  icon: https://framerusercontent.com/images/bZhkNwEa64Xr6qWOth5GdGolk4.png
+  icon: /images/bZhkNwEa64Xr6qWOth5GdGolk4.png
   icon_alt: React Native
   platform_ids:
     - javascript
@@ -1162,7 +1162,7 @@
   subtitle: Corporate training
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316
+  hero_image: /images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp
   audience_ids:
     - public
     - businesses
@@ -1201,7 +1201,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp?width=480&height=316
+      src: /images/puKHc1oZqW1A2vZUd0Qo46mBR5I.webp
       width: 480
       height: 316
     - type: richtext
@@ -1330,7 +1330,7 @@
     dives deep into OpenClaw, the premier…
   featured: false
   weight: 99
-  icon: https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png
+  icon: /images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png
   icon_alt: Lovable
   platform_ids:
     - html-css
@@ -1381,7 +1381,7 @@
   subtitle: A SkillsFuture-Supported Course Offered by SMU Academy
   duration: 17 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360
+  hero_image: /images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg
   audience_ids:
     - businesses
     - public
@@ -1424,7 +1424,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg?width=640&height=360
+      src: /images/yAICKDgrNghg1JyWMSy5gXh7DOQ.jpg
       width: 640
       height: 360
     - type: richtext
@@ -1529,7 +1529,7 @@
     surrounded by digital toys that enhance…
   featured: true
   weight: 81
-  icon: https://framerusercontent.com/images/5lUlMn2yi5S5KDkBEGDYH5wkN8I.png
+  icon: /images/5lUlMn2yi5S5KDkBEGDYH5wkN8I.png
   icon_alt: null
   platform_ids:
     - arduino
@@ -1572,7 +1572,7 @@
   subtitle: A SkillsFuture-Supported Course Offered by SMU Academy
   duration: 17 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360
+  hero_image: /images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg
   audience_ids:
     - businesses
     - public
@@ -1615,7 +1615,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg?width=640&height=360
+      src: /images/WPfvSE5w5gyB6ippvoGs2pZN8.jpg
       width: 640
       height: 360
     - type: richtext
@@ -1702,7 +1702,7 @@
     discover how blockchain came about and…
   featured: true
   weight: 80
-  icon: https://framerusercontent.com/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png
+  icon: /images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png
   icon_alt: null
   platform_ids:
     - stellar
@@ -1738,7 +1738,7 @@
   subtitle: A CODE@SG initiative by IMDA and MOE.
   duration: 10 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771
+  hero_image: /images/uB9togx2WZjo52kW3eDPGODhN8.png
   audience_ids:
     - students
     - teachers
@@ -1779,7 +1779,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771
+      src: /images/uB9togx2WZjo52kW3eDPGODhN8.png
       width: 2127
       height: 771
     - type: richtext
@@ -2002,7 +2002,7 @@
     understanding, decision-making, and…
   featured: false
   weight: 100
-  icon: https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png
+  icon: /images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png
   icon_alt: null
   platform_ids:
     - scratch
@@ -2042,7 +2042,7 @@
     data-preset-tag="p"><p>How smart robots respond to inputs via
     sensors</p></li><li data-preset-tag="p"><p>Integrating Computer vision with
     smart robots to solve problems</p></li></ul></li></ol><img alt=""
-    src="https://framerusercontent.com/images/lwtS0iVp9mgTsAeVutkPxcUPVAI.png"><h2>AI
+    src="/images/lwtS0iVp9mgTsAeVutkPxcUPVAI.png"><h2>AI
     for Fun for Secondary Schools</h2><p>Aligned to the goal of Smart Nation 2.0
     to prepare our next generation for the digital future, students will be
     provided opportunities to learn more about Artificial Intelligence (AI) and
@@ -2059,7 +2059,7 @@
     AI</p></li><li data-preset-tag="p"><p>Applying Generative AI to solve
     problems related to a theme such as Sustainable Living</p></li></ol><img
     alt=""
-    src="https://framerusercontent.com/images/cyOC2RTds2BTmo90RXGKxppjWJw.png">
+    src="/images/cyOC2RTds2BTmo90RXGKxppjWJw.png">
   details_html: <h2>How to apply?</h2><p>All Ministry of Education (MOE)
     government and government-aided secondary schools are eligible to apply for
     the AI for Fun module. Students are required to complete the Code for Fun
@@ -2081,7 +2081,7 @@
   subtitle: A CODE@SG initiative by IMDA and MOE.
   duration: 10 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771
+  hero_image: /images/uB9togx2WZjo52kW3eDPGODhN8.png
   audience_ids:
     - students
     - teachers
@@ -2122,7 +2122,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/uB9togx2WZjo52kW3eDPGODhN8.png?width=2127&height=771
+      src: /images/uB9togx2WZjo52kW3eDPGODhN8.png
       width: 2127
       height: 771
     - type: richtext
@@ -2331,7 +2331,7 @@
     understanding, decision-making, and…
   featured: false
   weight: 100
-  icon: https://framerusercontent.com/images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png
+  icon: /images/2NpNJXdo2tuUILUJ69j5Vd5kXA.png
   icon_alt: null
   platform_ids:
     - makecode-arcade
@@ -2364,7 +2364,7 @@
     Develop logical thinking and problem-solving skills.<br>- Discover how
     emerging technologies such as AI are part of, and influence our daily
     lives.</p><img alt=""
-    src="https://framerusercontent.com/images/E8REPxfDIMr6Z1CeiqAn5ZMmTw.png"><h2>Code
+    src="/images/E8REPxfDIMr6Z1CeiqAn5ZMmTw.png"><h2>Code
     for Fun for Secondary Schools</h2><p>For secondary school students, Code for
     Fun strengthens students’ inventive thinking, design thinking and digital
     making skills and complements Ministry of Education (MOE)’s EdTech
@@ -2382,7 +2382,7 @@
     such as sustainability and the future of transportation.<br>3. Inclusion of
     emerging tech through hands-on project work using hardware such as
     AI-enabled camera.</p><img alt=""
-    src="https://framerusercontent.com/images/hZsI1TefMdCpVJFxNYYNSjp9NI.png">
+    src="/images/hZsI1TefMdCpVJFxNYYNSjp9NI.png">
   details_html: <h2>How to apply?</h2><p>All MOE government and government-aided
     secondary schools are eligible to apply for the Code for Fun programme for
     secondary schools. Application instructions will be sent to all Ministry of
@@ -2399,7 +2399,7 @@
   subtitle: 11 May 2025
   duration: 4 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484
+  hero_image: /images/AW3bQ3c9TVwK1z0hWlPAdz6o.png
   audience_ids:
     - students
     - teachers
@@ -2439,7 +2439,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/AW3bQ3c9TVwK1z0hWlPAdz6o.png?width=1375&height=484
+      src: /images/AW3bQ3c9TVwK1z0hWlPAdz6o.png
       width: 1375
       height: 484
     - type: richtext
@@ -2637,7 +2637,7 @@
     1: Training sessionsPhase 2: QualifiersPhase 3: Finals"
   featured: true
   weight: 30
-  icon: https://framerusercontent.com/images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png
+  icon: /images/hFExYYoFP3Iwv5qFZUQMFWUoyto.png
   icon_alt: null
   platform_ids:
     - react-native
@@ -2717,7 +2717,7 @@
   subtitle: 14 - 15 January 2025
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006
+  hero_image: /images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png
   audience_ids:
     - public
     - businesses
@@ -2758,7 +2758,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png?width=6015&height=4006
+      src: /images/mBTJUdJzeoxQDjnmm5gXFKkOIM4.png
       width: 6015
       height: 4006
     - type: richtext
@@ -2935,7 +2935,7 @@
     tech gadgets work? These devices are…
   featured: false
   weight: 30
-  icon: https://framerusercontent.com/images/PN4JpLKZiMpUuKHxWvrW4KymVw.png
+  icon: /images/PN4JpLKZiMpUuKHxWvrW4KymVw.png
   icon_alt: 3D Printing
   platform_ids:
     - 3d-printing
@@ -2994,7 +2994,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with micro:bit.
   duration: 24 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245
+  hero_image: /images/URlCPC41VwVGXM7WtFXQcFo4yE.png
   audience_ids:
     - students
     - teachers
@@ -3038,7 +3038,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/URlCPC41VwVGXM7WtFXQcFo4yE.png?width=1920&height=1245
+      src: /images/URlCPC41VwVGXM7WtFXQcFo4yE.png
       width: 1920
       height: 1245
     - type: richtext
@@ -3171,7 +3171,7 @@
     and hands-on digital making to…
   featured: true
   weight: 86
-  icon: https://framerusercontent.com/images/Ie760gVdIFj1Rc5gz4kaJ36mT4.jpg
+  icon: /images/Ie760gVdIFj1Rc5gz4kaJ36mT4.jpg
   icon_alt: micro:bit
   platform_ids:
     - makecode-arcade
@@ -3220,7 +3220,7 @@
   subtitle: An introductory course on digital making with Micro:bit & IoT.
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500
+  hero_image: /images/NwJDnH6HoIQPm3sf8sCAsXvidM.png
   audience_ids:
     - businesses
     - public
@@ -3260,7 +3260,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/NwJDnH6HoIQPm3sf8sCAsXvidM.png?width=6000&height=4500
+      src: /images/NwJDnH6HoIQPm3sf8sCAsXvidM.png
       width: 6000
       height: 4500
     - type: richtext
@@ -3387,7 +3387,7 @@
     that bridge the gap between the…
   featured: false
   weight: 0
-  icon: https://framerusercontent.com/images/qDxwnf110DDqLSIYw78MZ2QSZE.png
+  icon: /images/qDxwnf110DDqLSIYw78MZ2QSZE.png
   icon_alt: IoT
   platform_ids:
     - bbc-micro-bit
@@ -3431,7 +3431,7 @@
   subtitle: 11 - 12 February 2025
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912
+  hero_image: /images/A5Dd868Qo1geG7lsgR36QkJm9c.png
   audience_ids:
     - public
     - businesses
@@ -3472,7 +3472,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/A5Dd868Qo1geG7lsgR36QkJm9c.png?width=7360&height=4912
+      src: /images/A5Dd868Qo1geG7lsgR36QkJm9c.png
       width: 7360
       height: 4912
     - type: richtext
@@ -3657,7 +3657,7 @@
     dreaming up AR/VR experiences or working…
   featured: false
   weight: 30
-  icon: https://framerusercontent.com/images/iqewfsrP4f68PRBpb9CQTIejU.png
+  icon: /images/iqewfsrP4f68PRBpb9CQTIejU.png
   icon_alt: Unity
   platform_ids:
     - unity
@@ -3719,7 +3719,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap bootcamp with Unity.
   duration: 32 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720
+  hero_image: /images/kuS9B3BanadFYL050aWsShzhoM.webp
   audience_ids:
     - students
     - teachers
@@ -3758,7 +3758,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/kuS9B3BanadFYL050aWsShzhoM.webp?width=1280&height=720
+      src: /images/kuS9B3BanadFYL050aWsShzhoM.webp
       width: 1280
       height: 720
     - type: richtext
@@ -3887,7 +3887,7 @@
     a powerful and versatile game engine,…
   featured: true
   weight: 78
-  icon: https://framerusercontent.com/images/0OOu86wVjbq3jXKiC0xVgRJWZg.png
+  icon: /images/0OOu86wVjbq3jXKiC0xVgRJWZg.png
   icon_alt: Unity
   platform_ids:
     - unity
@@ -3936,7 +3936,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft.
   duration: 24 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450
+  hero_image: /images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg
   audience_ids:
     - students
   topic_ids:
@@ -3979,7 +3979,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg?width=1000&height=450
+      src: /images/aoVkrZOD4jCL9uq91wRjB4Z5KY.jpg
       width: 1000
       height: 450
     - type: richtext
@@ -4140,7 +4140,7 @@
     MakeCode Arcade platform, a…
   featured: true
   weight: 85
-  icon: https://framerusercontent.com/images/DpOBnZ09CRXXgXc0fPYlHdh8GQI.png
+  icon: /images/DpOBnZ09CRXXgXc0fPYlHdh8GQI.png
   icon_alt: Minecraft
   platform_ids:
     - makecode-arcade
@@ -4195,7 +4195,7 @@
   subtitle: Corporate training
   duration: ½, 1, 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125
+  hero_image: /images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg
   audience_ids:
     - public
     - businesses
@@ -4234,7 +4234,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg?width=2000&height=1125
+      src: /images/rQGUvAhb4dw3WuL7MIz9a8GOg.jpg
       width: 2000
       height: 1125
     - type: richtext
@@ -4475,7 +4475,7 @@
     Whether you're looking to enhance customer…
   featured: true
   weight: 98
-  icon: https://framerusercontent.com/images/FId8k56H3S4bGtYZjSSXC24LVI.png
+  icon: /images/FId8k56H3S4bGtYZjSSXC24LVI.png
   icon_alt: ChatGPT
   platform_ids:
     - chatgpt
@@ -4553,7 +4553,7 @@
   subtitle: Corporate training
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733
+  hero_image: /images/oOitMFgLeulDejOAmyZwxgWuxg.jpg
   audience_ids:
     - public
     - businesses
@@ -4592,7 +4592,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/oOitMFgLeulDejOAmyZwxgWuxg.jpg?width=5600&height=3733
+      src: /images/oOitMFgLeulDejOAmyZwxgWuxg.jpg
       width: 5600
       height: 3733
     - type: richtext
@@ -4735,7 +4735,7 @@
     agentic coding. We leverage the symbiotic…
   featured: true
   weight: 99
-  icon: https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png
+  icon: /images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png
   icon_alt: Lovable
   platform_ids:
     - html-css
@@ -4790,7 +4790,7 @@
   subtitle: Corporate training, 3 & 4 July 2025
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034
+  hero_image: /images/LvTrPWE98zoDD5wX1uoP1UGit4.png
   audience_ids:
     - public
     - businesses
@@ -4831,7 +4831,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/LvTrPWE98zoDD5wX1uoP1UGit4.png?width=4551&height=3034
+      src: /images/LvTrPWE98zoDD5wX1uoP1UGit4.png
       width: 4551
       height: 3034
     - type: richtext
@@ -5002,7 +5002,7 @@
     productivity. What actually happens,…
   featured: true
   weight: 93
-  icon: https://framerusercontent.com/images/m2e5vLFU2BGj1eEVY3FTucPeA.png
+  icon: /images/m2e5vLFU2BGj1eEVY3FTucPeA.png
   icon_alt: Web Development
   platform_ids:
     - html-css
@@ -5062,7 +5062,7 @@
     productivity.
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080
+  hero_image: /images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png
   audience_ids:
     - tech-productivity
     - businesses
@@ -5102,7 +5102,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png?width=1920&height=1080
+      src: /images/IRgW5yEXLnHZADRC2V0Chd9ogrc.png
       width: 1920
       height: 1080
     - type: richtext
@@ -5227,7 +5227,7 @@
     innovative tool harnesses the power of…
   featured: false
   weight: 0
-  icon: https://framerusercontent.com/images/QXIiHIkWlAeSeR06kl09KTnnLIc.png
+  icon: /images/QXIiHIkWlAeSeR06kl09KTnnLIc.png
   icon_alt: Microsoft Copilot
   platform_ids:
     - microsoft-copilot
@@ -5272,7 +5272,7 @@
   subtitle: An introductory course on machine learning models using Orange.
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456
+  hero_image: /images/JxXpAu98LjIbh9p6qymMH0UUMRA.png
   audience_ids:
     - students
     - teachers
@@ -5311,7 +5311,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/JxXpAu98LjIbh9p6qymMH0UUMRA.png?width=6144&height=3456
+      src: /images/JxXpAu98LjIbh9p6qymMH0UUMRA.png
       width: 6144
       height: 3456
     - type: richtext
@@ -5434,7 +5434,7 @@
     Orange, you can easily build, train, and…
   featured: false
   weight: 0
-  icon: https://framerusercontent.com/images/1QBHB8ypQ3erWXDDpHcQlYDU14.png
+  icon: /images/1QBHB8ypQ3erWXDDpHcQlYDU14.png
   icon_alt: Orange
   platform_ids:
     - orange
@@ -5479,7 +5479,7 @@
   subtitle: An introductory course on building websites using Framer.
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256
+  hero_image: /images/6AquPe6snR8cp5io7SOUGbf8eGU.png
   audience_ids:
     - businesses
     - public
@@ -5518,7 +5518,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/6AquPe6snR8cp5io7SOUGbf8eGU.png?width=2396&height=1256
+      src: /images/6AquPe6snR8cp5io7SOUGbf8eGU.png
       width: 2396
       height: 1256
     - type: richtext
@@ -5651,7 +5651,7 @@
     audience, enhance user experience, and…
   featured: false
   weight: 0
-  icon: https://framerusercontent.com/images/AcyKvCqXBblmvGC8X1c86dmnxa4.png
+  icon: /images/AcyKvCqXBblmvGC8X1c86dmnxa4.png
   icon_alt: Framer
   platform_ids:
     - framer
@@ -5698,7 +5698,7 @@
   subtitle: A SkillsFuture-Supported Course Offered by SMU Academy
   duration: 2 days/module
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504
+  hero_image: /images/PuT46Rc7thhhYyLZrhYVo6wObE.png
   audience_ids:
     - public
     - businesses
@@ -5748,7 +5748,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/PuT46Rc7thhhYyLZrhYVo6wObE.png?width=8256&height=5504
+      src: /images/PuT46Rc7thhhYyLZrhYVo6wObE.png
       width: 8256
       height: 5504
     - type: richtext
@@ -5995,7 +5995,7 @@
     technology and create innovative apps…
   featured: true
   weight: 88
-  icon: https://framerusercontent.com/images/dy8VLvD6CAJQ8DornnFQC6sbNQ.png
+  icon: /images/dy8VLvD6CAJQ8DornnFQC6sbNQ.png
   icon_alt: Mobile Application Development
   platform_ids:
     - android-studio
@@ -6081,7 +6081,7 @@
   subtitle: A SkillsFuture-Supported Course Offered by SMU Academy
   duration: 2 days/module
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912
+  hero_image: /images/fWouEVvBE4OgXcNYbaPWP57gdM.png
   audience_ids:
     - public
     - businesses
@@ -6130,7 +6130,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/fWouEVvBE4OgXcNYbaPWP57gdM.png?width=7360&height=4912
+      src: /images/fWouEVvBE4OgXcNYbaPWP57gdM.png
       width: 7360
       height: 4912
     - type: richtext
@@ -6347,7 +6347,7 @@
     you with the essential skills to…
   featured: true
   weight: 82
-  icon: https://framerusercontent.com/images/m2e5vLFU2BGj1eEVY3FTucPeA.png
+  icon: /images/m2e5vLFU2BGj1eEVY3FTucPeA.png
   icon_alt: Web Development
   platform_ids:
     - bubble
@@ -6429,7 +6429,7 @@
   subtitle: A hands-on digital maker programme for RI students.
   duration: 4 years
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600
+  hero_image: /images/wqyxF3zF22qYEH16VE70ko2CEak.jpg
   audience_ids:
     - students
     - teachers
@@ -6468,7 +6468,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg?width=800&height=600
+      src: /images/wqyxF3zF22qYEH16VE70ko2CEak.jpg
       width: 800
       height: 600
     - type: richtext
@@ -6645,7 +6645,7 @@
     tangible creations. Across seven…
   featured: true
   weight: 89
-  icon: https://framerusercontent.com/images/WeIaLloGW571bF6elC5cFIYTEQ.png
+  icon: /images/WeIaLloGW571bF6elC5cFIYTEQ.png
   icon_alt: 3D Printing
   platform_ids:
     - 3d-printing
@@ -6712,7 +6712,7 @@
   subtitle: "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
   duration: 8 months
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200
+  hero_image: /images/pzZfgIklaSw80TJTGemWvQyrCLo.png
   audience_ids:
     - students
     - teachers
@@ -6751,7 +6751,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/pzZfgIklaSw80TJTGemWvQyrCLo.png?width=1200&height=1200
+      src: /images/pzZfgIklaSw80TJTGemWvQyrCLo.png
       width: 1200
       height: 1200
     - type: richtext
@@ -6848,7 +6848,7 @@
     exceptional iOS and macOS applications.…
   featured: true
   weight: 67
-  icon: https://framerusercontent.com/images/cxlYOQBbQLUVc8ylcLfluK0eY.png
+  icon: /images/cxlYOQBbQLUVc8ylcLfluK0eY.png
   icon_alt: Swift
   platform_ids:
     - swift
@@ -6885,7 +6885,7 @@
   subtitle: An IMDA Infocom LEARN Roadmap course with Figma.
   duration: 26 hours
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260
+  hero_image: /images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png
   audience_ids:
     - students
     - teachers
@@ -6926,7 +6926,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png?width=2400&height=1260
+      src: /images/3Iy0tiNcx6GQ1D8zsjP8p7GCxE.png
       width: 2400
       height: 1260
     - type: richtext
@@ -7033,7 +7033,7 @@
     prototyping. They will make use of UI/UX…
   featured: true
   weight: 78
-  icon: https://framerusercontent.com/images/7SoVlCsTaQWSWuDRzCULLs20Ho8.png
+  icon: /images/7SoVlCsTaQWSWuDRzCULLs20Ho8.png
   icon_alt: Figma
   platform_ids:
     - figma
@@ -7074,7 +7074,7 @@
   subtitle: Corporate training
   duration: 2 days
   description: Lesson Outcomes
-  hero_image: https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832
+  hero_image: /images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg
   audience_ids:
     - public
     - businesses
@@ -7113,7 +7113,7 @@
     robots: max-image-preview:large
   content:
     - type: image
-      src: https://framerusercontent.com/images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg?width=1248&height=832
+      src: /images/ZquQacjrBD49fcKSa0LrIs5hQU.jpg
       width: 1248
       height: 832
     - type: richtext
@@ -7264,7 +7264,7 @@
     provides hands-on experience in…
   featured: true
   weight: 99
-  icon: https://framerusercontent.com/images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png
+  icon: /images/r3EDNPVFVYoPE9DDUDL4E6C2nJM.png
   icon_alt: Lovable
   platform_ids:
     - html-css

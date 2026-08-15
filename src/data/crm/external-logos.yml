@@ -10,7 +10,7 @@
   source_id: LNwmg7KpL
 - id: arclab
   label: ArcLab
-  logo: https://framerusercontent.com/images/nI5l61MSsRmuWTFJqVH4cpNjfqY.webp
+  logo: /images/nI5l61MSsRmuWTFJqVH4cpNjfqY.webp
   partner: true
   type: Partner
   featured: false
@@ -20,7 +20,7 @@
   source_id: i9fmrhE5K
 - id: cedar-primary-school
   label: Cedar Primary School
-  logo: https://framerusercontent.com/images/3403HTb7X83detosvH9J86FTE.png
+  logo: /images/3403HTb7X83detosvH9J86FTE.png
   partner: false
   type: School Client
   featured: false
@@ -30,7 +30,7 @@
   source_id: NMHobQ2hi
 - id: classroom-hk
   label: Classroom HK
-  logo: https://framerusercontent.com/images/m4aQlLtGTef2FbAG9CTD4ReFE.png
+  logo: /images/m4aQlLtGTef2FbAG9CTD4ReFE.png
   partner: true
   type: Partner
   featured: false
@@ -40,7 +40,7 @@
   source_id: Ad95MznRC
 - id: clementi-town-secondary-school
   label: Clementi Town Secondary School
-  logo: https://framerusercontent.com/images/C5u80qH09z3yPeGLW5Ha9m0Ahyg.png
+  logo: /images/C5u80qH09z3yPeGLW5Ha9m0Ahyg.png
   partner: false
   type: School Client
   featured: false
@@ -50,7 +50,7 @@
   source_id: RnsUlOX_Y
 - id: commonwealth-secondary-school
   label: Commonwealth Secondary School
-  logo: https://framerusercontent.com/images/vIleRziUfN50M1xopUzpL6N7E.webp
+  logo: /images/vIleRziUfN50M1xopUzpL6N7E.webp
   partner: false
   type: School Client
   featured: false
@@ -60,7 +60,7 @@
   source_id: G0qnQPD8w
 - id: crescent-girls-school
   label: Crescent Girls School
-  logo: https://framerusercontent.com/images/vwIzyDKnGvimoriXB6IVZqsE6U.jpg
+  logo: /images/vwIzyDKnGvimoriXB6IVZqsE6U.jpg
   partner: false
   type: School Client
   featured: false
@@ -70,7 +70,7 @@
   source_id: JKiVdXQuo
 - id: dbs
   label: DBS
-  logo: https://framerusercontent.com/images/BWsZ77XMQf1TA1kquWlIQvH278.webp
+  logo: /images/BWsZ77XMQf1TA1kquWlIQvH278.webp
   partner: false
   type: School Client
   featured: false
@@ -80,7 +80,7 @@
   source_id: o3pgpwvGO
 - id: dunman-high-school
   label: Dunman High School
-  logo: https://framerusercontent.com/images/RUt6n9CGHU2JYlananDb4C4QLI.webp
+  logo: /images/RUt6n9CGHU2JYlananDb4C4QLI.webp
   partner: false
   type: School Client
   featured: false
@@ -90,7 +90,7 @@
   source_id: Av8YvidcV
 - id: dunman-secondary-school
   label: Dunman Secondary School
-  logo: https://framerusercontent.com/images/HEWUMM0ts0EHYszokOs3GXdUE.png
+  logo: /images/HEWUMM0ts0EHYszokOs3GXdUE.png
   partner: false
   type: School Client
   featured: false
@@ -100,7 +100,7 @@
   source_id: C_h0_4saC
 - id: hwa-chong-institution
   label: Hwa Chong Institution
-  logo: https://framerusercontent.com/images/dM4W8pXFiSaisKiQ66aATgJ8ac.webp
+  logo: /images/dM4W8pXFiSaisKiQ66aATgJ8ac.webp
   partner: false
   type: School Client
   featured: false
@@ -110,7 +110,7 @@
   source_id: vYlzGWyyN
 - id: infocomm-media-development-authority
   label: Infocomm Media Development Authority
-  logo: https://framerusercontent.com/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png
+  logo: /images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png
   partner: true
   type: Partner
   featured: false
@@ -120,7 +120,7 @@
   source_id: TWtw3X5R3
 - id: institute-of-singapore-chartered-accountants
   label: Institute of Singapore Chartered Accountants
-  logo: https://framerusercontent.com/images/W5TrPI4TQ7ldyHjx1tFRClDkVI.png
+  logo: /images/W5TrPI4TQ7ldyHjx1tFRClDkVI.png
   partner: false
   type: School Client
   featured: false
@@ -130,7 +130,7 @@
   source_id: ZbAgBpEVa
 - id: methodist-girls-school
   label: Methodist Girls School
-  logo: https://framerusercontent.com/images/EeQgsZhGeo5B8SsOriPf6iEbpU.webp
+  logo: /images/EeQgsZhGeo5B8SsOriPf6iEbpU.webp
   partner: false
   type: School Client
   featured: false
@@ -140,7 +140,7 @@
   source_id: hTiqfBY26
 - id: my-first-skool
   label: my first skool
-  logo: https://framerusercontent.com/images/9vhoMPV4uJM9DFnT5eXGEy1ONM.webp
+  logo: /images/9vhoMPV4uJM9DFnT5eXGEy1ONM.webp
   partner: false
   type: School Client
   featured: false
@@ -150,7 +150,7 @@
   source_id: mHccGbTxP
 - id: nan-hua-high-school
   label: Nan Hua High School
-  logo: https://framerusercontent.com/images/t0GECZGPjGmJ5PvurGo9m1Oaq7M.webp
+  logo: /images/t0GECZGPjGmJ5PvurGo9m1Oaq7M.webp
   partner: false
   type: School Client
   featured: false
@@ -160,7 +160,7 @@
   source_id: tmCwLb3DK
 - id: ngee-ann-polytechnic
   label: Ngee Ann Polytechnic
-  logo: https://framerusercontent.com/images/Q26iqzgBEYDzlm8JjOdHP7xSE.webp
+  logo: /images/Q26iqzgBEYDzlm8JjOdHP7xSE.webp
   partner: false
   type: School Client
   featured: false
@@ -170,7 +170,7 @@
   source_id: WIQQxgWXm
 - id: ngee-ann-secondary
   label: Ngee Ann Secondary
-  logo: https://framerusercontent.com/images/xHwcdydT3oqZNLuEPhUYed1o.gif
+  logo: /images/xHwcdydT3oqZNLuEPhUYed1o.gif
   partner: false
   type: School Client
   featured: false
@@ -180,7 +180,7 @@
   source_id: ffoJ4voFY
 - id: nus-high-school-of-math-science
   label: NUS High School of Math & Science
-  logo: https://framerusercontent.com/images/WgR1sP4O4uhgUKI9oibFEKUSQo.png
+  logo: /images/WgR1sP4O4uhgUKI9oibFEKUSQo.png
   partner: false
   type: School Client
   featured: false
@@ -190,7 +190,7 @@
   source_id: Rnbr6r1b0
 - id: phillipcapital
   label: PhillipCapital
-  logo: https://framerusercontent.com/images/khARVmoBLCZ3wl54aq5QXzPdq8.jpg
+  logo: /images/khARVmoBLCZ3wl54aq5QXzPdq8.jpg
   partner: false
   type: School Client
   featured: false
@@ -200,7 +200,7 @@
   source_id: fogIYoCPx
 - id: raffles-girls-school
   label: Raffles Girls School
-  logo: https://framerusercontent.com/images/ZYZcVNiPEg6tMjHGhU520Ord5uI.webp
+  logo: /images/ZYZcVNiPEg6tMjHGhU520Ord5uI.webp
   partner: false
   type: School Client
   featured: false
@@ -210,7 +210,7 @@
   source_id: mJuHRJwMT
 - id: raffles-institution
   label: Raffles Institution
-  logo: https://framerusercontent.com/images/BDt3R80YV6FiInYlrnHOw8DQ.svg
+  logo: /images/BDt3R80YV6FiInYlrnHOw8DQ.svg
   partner: false
   type: School Client
   featured: false
@@ -220,7 +220,7 @@
   source_id: Vg9cvsqxg
 - id: regent-secondary-school
   label: Regent Secondary School
-  logo: https://framerusercontent.com/images/VSFWPAOUiTx7hAK2q6WSRDSe6Y.webp
+  logo: /images/VSFWPAOUiTx7hAK2q6WSRDSe6Y.webp
   partner: false
   type: School Client
   featured: false
@@ -230,7 +230,7 @@
   source_id: UtRmxVNUN
 - id: rosyth-school
   label: Rosyth School
-  logo: https://framerusercontent.com/images/h9pxErhdfEV9OM4Djs2TMOxmjuc.png
+  logo: /images/h9pxErhdfEV9OM4Djs2TMOxmjuc.png
   partner: false
   type: School Client
   featured: false
@@ -240,7 +240,7 @@
   source_id: ddOWhlZeR
 - id: school-of-science-and-technology
   label: School of Science and Technology
-  logo: https://framerusercontent.com/images/8vJUYlercFnZuD8WRKnmuwiqDA.png
+  logo: /images/8vJUYlercFnZuD8WRKnmuwiqDA.png
   partner: false
   type: School Client
   featured: false
@@ -250,7 +250,7 @@
   source_id: wOCBKeHdY
 - id: sephora
   label: Sephora
-  logo: https://framerusercontent.com/images/jG3pf9CmgdJIcbJC7XdXtcRL9iQ.webp
+  logo: /images/jG3pf9CmgdJIcbJC7XdXtcRL9iQ.webp
   partner: false
   type: School Client
   featured: false
@@ -260,7 +260,7 @@
   source_id: uLL1NxmEU
 - id: singapore-business-federation
   label: Singapore Business Federation
-  logo: https://framerusercontent.com/images/VZuEtnu1YA4Ok7MgE5wNo2A.svg
+  logo: /images/VZuEtnu1YA4Ok7MgE5wNo2A.svg
   partner: false
   type: Corporate Client
   featured: false
@@ -270,7 +270,7 @@
   source_id: UMcutXp_3
 - id: singapore-university-of-technology-and-design
   label: Singapore University of Technology and Design
-  logo: https://framerusercontent.com/images/pCtnAxJTkN7sehJge3uZZPhtIMw.png
+  logo: /images/pCtnAxJTkN7sehJge3uZZPhtIMw.png
   partner: false
   type: School Client
   featured: false
@@ -280,7 +280,7 @@
   source_id: jTwq_n33D
 - id: smu-academy
   label: SMU Academy
-  logo: https://framerusercontent.com/images/icLJqUI2otyj00sfJ4Dvlfxbo.webp
+  logo: /images/icLJqUI2otyj00sfJ4Dvlfxbo.webp
   partner: true
   type: Partner
   featured: false
@@ -290,7 +290,7 @@
   source_id: QXydrTcqm
 - id: temasek-polytechnic
   label: Temasek Polytechnic
-  logo: https://framerusercontent.com/images/ulfjKjqdhSNeeFUKfqy6m3G8X0Q.png
+  logo: /images/ulfjKjqdhSNeeFUKfqy6m3G8X0Q.png
   partner: false
   type: School Client
   featured: false
@@ -300,7 +300,7 @@
   source_id: jJkvVP6yw
 - id: tinkermind
   label: Tinkermind
-  logo: https://framerusercontent.com/images/Rl2dNu7CjKUj50GoHP4FX8cpA.png
+  logo: /images/Rl2dNu7CjKUj50GoHP4FX8cpA.png
   partner: true
   type: Partner
   featured: false
@@ -370,7 +370,7 @@
   source_id: manual-presbyterian-high-school
 - id: sandooq-al-watan
   label: Sandooq Al Watan
-  logo: /images/partners/sandooq-al-watan.webp
+  logo: /images/partners/sandooq-al-watan.png
   partner: false
   type: Corporate Client
   featured: false
