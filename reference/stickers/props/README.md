@@ -20,11 +20,15 @@ new files.
 | `pen3d` | 3D-printing art pen drawing a plastic squiggle (3D Pen Art) |
 | `croc-clips` | Crocodile-clip test leads (micro:bit projects) |
 | `soldering-iron` | Iron on stand with solder spool (High Tech Maker) |
-| `cardboard-robot` | Kid-made cardboard box robot (Makedo / Cardboard Creation) |
 | `handheld-console` | Retro handheld running a pixel platformer (MakeCode Arcade) |
+| `cardboard-house` | Kid-made cardboard playhouse with fastener screws (Makedo / Cardboard Creation) |
+| `ultrasonic-sensor` | HC-SR04-style ultrasonic distance sensor (Tinker Kit robotics) |
+| `servo` | Mini hobby servo with cross horn and ribbon wires (Tinker Kit) |
+| `led-strip` | Addressable LED strip segment, lit (Tinker Kit / smart kits) |
+| `smart-plant` | Potted seedling with soil-moisture sensor (ElecFreaks Smart Agriculture) |
 
 Round-2 subjects were derived from the TT Curriculum drive (Bee-Bot, Tello
 drones, Space Camp, 3D Pen Art, High Tech Maker, Makedo, MakeCode Arcade).
-Shortlist for the next round: battery-pack, servo motor, robot arm (RPA),
+Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
 KTANE-style defusal box (Digital Making), blockchain cubes, sensor modules.
 Process a new batch with `python3 scripts/banner/process-mint.py <dir> <names>`.

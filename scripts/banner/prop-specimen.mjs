@@ -66,8 +66,12 @@ const ITEMS = [
 	{ label: 'pen3d (minted)', type: 'pen3d', w: 60 },
 	{ label: 'croc-clips (minted)', type: 'croc-clips', w: 160 },
 	{ label: 'soldering-iron (minted)', type: 'soldering-iron', w: 160 },
-	{ label: 'cardboard-robot (minted)', type: 'cardboard-robot', w: 130 },
 	{ label: 'handheld-console (minted)', type: 'handheld-console', w: 110 },
+	{ label: 'cardboard-house (minted)', type: 'cardboard-house', w: 140 },
+	{ label: 'ultrasonic-sensor (minted)', type: 'ultrasonic-sensor', w: 150 },
+	{ label: 'servo (minted)', type: 'servo', w: 130 },
+	{ label: 'led-strip (minted)', type: 'led-strip', w: 190 },
+	{ label: 'smart-plant (minted)', type: 'smart-plant', w: 120 },
 ];
 
 // pre-render sticker-based cells (async) into inline <image> markup
