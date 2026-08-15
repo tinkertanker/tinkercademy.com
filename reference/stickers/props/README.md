@@ -30,10 +30,16 @@ new files.
 | `laptop-phone` | Laptop wired to a phone mirroring the app (mobile dev tracks) |
 | `laptop-microbit` | Laptop flashing a micro:bit over USB (physical computing) |
 | `server` | Mini server tower with indicator lights (web/backend tracks) |
+| `spreadsheet-app` | Spreadsheet window with chart (Excel-style; data/business tracks) |
+| `design-app` | Design canvas with prototype arrow + cursor (Figma-style) |
+| `code-editor` | Dark editor with file tree (VS Code-style) |
+| `agent-cli` | AI coding agent terminal with prompts + spinner (Codex/Claude-style) |
+| `app-builder` | Chat + live phone preview split (Lovable-style) |
+| `chat-app` | Chat assistant conversation window (ChatGPT/Copilot-style) |
 
 Round-2 subjects were derived from the TT Curriculum drive (Bee-Bot, Tello
 drones, Space Camp, 3D Pen Art, High Tech Maker, Makedo, MakeCode Arcade).
-Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
+Round-5 added professional app-window stickers — deliberately unbranded (no fake logos/text) so scenes can pair them with real simple-icons logo badges. Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
 KTANE-style defusal box (Digital Making), blockchain cubes, sensor modules.
 Process a new batch with `python3 scripts/banner/process-mint.py <dir> <names>`.
 

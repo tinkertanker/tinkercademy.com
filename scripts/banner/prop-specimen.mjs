@@ -76,6 +76,12 @@ const ITEMS = [
 	{ label: 'laptop-phone (minted)', type: 'laptop-phone', w: 170 },
 	{ label: 'laptop-microbit (minted)', type: 'laptop-microbit', w: 170 },
 	{ label: 'server (minted)', type: 'server', w: 120 },
+	{ label: 'spreadsheet-app (minted)', type: 'spreadsheet-app', w: 160 },
+	{ label: 'design-app (minted)', type: 'design-app', w: 160 },
+	{ label: 'code-editor (minted)', type: 'code-editor', w: 160 },
+	{ label: 'agent-cli (minted)', type: 'agent-cli', w: 160 },
+	{ label: 'app-builder (minted)', type: 'app-builder', w: 160 },
+	{ label: 'chat-app (minted)', type: 'chat-app', w: 160 },
 ];
 
 // pre-render sticker-based cells (async) into inline <image> markup
