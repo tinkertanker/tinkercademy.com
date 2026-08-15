@@ -66,7 +66,7 @@ const navPills = isCourseListing
 const filterLabels = isCourseListing ? getProgrammeFilterLabels() : null;
 const partnerLogos = page.slug === 'courses-all' ? getPartnerLogoItems(site.externalLogos) : [];
 const clientLogos = page.slug === 'courses-all' ? getClientLogoItems(site.externalLogos) : [];
-const courseAllHeroImage = '/images/generated/hero-review/showcase/cdx_001.webp';
+const courseAllHeroImage = page.hero_image ?? '/images/banners/courses-all.webp';
 const courseAllHero = getResponsiveImage(courseAllHeroImage);
 const courseHeroPreload =
 	page.slug === 'courses-all' && courseAllHero
@@ -142,7 +142,7 @@ const hasRichContent = contentBlocks.some(
 >
 	{isCourseListing ? (
 		<>
-			{page.slug === 'courses-all' && (
+			{isCourseListing && (
 				<>
 					<section class="course-hero">
 						<img
@@ -160,7 +160,7 @@ const hasRichContent = contentBlocks.some(
 						<div class="course-hero__scrim"></div>
 						<div class="course-hero__content shell">
 							<h1 class="course-hero__title">{displayTitle}</h1>
-							<p class="course-hero__lead">{courseAllLead}</p>
+							{page.slug === 'courses-all' && <p class="course-hero__lead">{courseAllLead}</p>}
 						</div>
 					</section>
 					<LogoCarouselSection

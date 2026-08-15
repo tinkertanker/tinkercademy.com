@@ -1327,5 +1327,111 @@
    }
   ],
   "layout": "trio"
+ },
+ {
+  "id": "flagship-swift-accelerator",
+  "note": "Flagship card — official SA lockup centred (swiftinsg/branding), rocket + mascot flanking.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "none",
+  "spotlight": {
+   "x": 0.5,
+   "y": 0.42,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.68,
+   "y": 0.65,
+   "h": 0.34
+  },
+  "props": [
+   {
+    "type": "image",
+    "src": "reference/logos/swift-accelerator-dark.png",
+    "x": 0.5,
+    "y": 0.44,
+    "w": 0.17
+   },
+   {
+    "type": "rocket",
+    "x": 0.33,
+    "y": 0.7,
+    "w": 0.09,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "flagship-imda-learn",
+  "note": "Flagship card — Figma / game dev / programming fan, mascot centre.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "none",
+  "spotlight": {
+   "x": 0.5,
+   "y": 0.45,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "happy",
+   "x": 0.5,
+   "y": 0.665,
+   "h": 0.31
+  },
+  "props": [
+   {
+    "type": "code-editor",
+    "x": 0.29,
+    "y": 0.42,
+    "w": 0.15
+   },
+   {
+    "type": "design-app",
+    "x": 0.5,
+    "y": 0.36,
+    "w": 0.16
+   },
+   {
+    "type": "laptop",
+    "screen": "game",
+    "x": 0.72,
+    "y": 0.8,
+    "w": 0.17
+   }
+  ]
+ },
+ {
+  "id": "flagship-code-for-fun",
+  "note": "Flagship card — micro:bit + chatbot, celebratory mascot centre.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "none",
+  "spotlight": {
+   "x": 0.5,
+   "y": 0.45,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.5,
+   "y": 0.6,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.3,
+    "y": 0.7,
+    "w": 0.15,
+    "ground": true
+   },
+   {
+    "type": "chat-app",
+    "x": 0.71,
+    "y": 0.45,
+    "w": 0.15
+   }
+  ]
  }
 ]

@@ -579,6 +579,18 @@ for (const f of fs.existsSync(path.join(STICKERS, 'props'))
 	if (f.endsWith('.png')) STICKER_PROPS[f.replace('.png', '')] = `props/${f}`;
 }
 
+async function imagePropSVG(p) {
+	const file = path.join(ROOT, p.src);
+	if (!fs.existsSync(file)) throw new Error(`image prop src not found: ${p.src}`);
+	const { data, info } = await sharp(file).trim().png().toBuffer({ resolveWithObject: true });
+	const pw = p.w * W;
+	const ph = (info.height / info.width) * pw;
+	const x0 = p.x * W - pw / 2;
+	const y0 = p.ground ? 0.82 * H - ph : p.y * H - ph / 2;
+	const opacity = p.opacity != null ? ` opacity="${p.opacity}"` : '';
+	return `<g${opacity}><image href="data:image/png;base64,${data.toString('base64')}" x="${x0}" y="${y0}" width="${pw}" height="${ph}"/></g>`;
+}
+
 async function stickerPropSVG(p, mode) {
 	const file = path.join(STICKERS, STICKER_PROPS[p.type]);
 	const { data, info } = await sharp(file).trim().png().toBuffer({ resolveWithObject: true });
@@ -606,7 +618,7 @@ async function stickerPropSVG(p, mode) {
 // ── Scene assembly ────────────────────────────────────────────────
 
 // Background-dressing prop types: skipped by margin validation and shadows.
-const BACKGROUND_TYPES = new Set(['diamond', 'skyline', 'wire', 'face']);
+const BACKGROUND_TYPES = new Set(['diamond', 'skyline', 'wire', 'face', 'image']);
 
 function propExtent(p) {
 	return (p.w * W) / 2 + 8;
@@ -614,6 +626,7 @@ function propExtent(p) {
 
 function validateMargin(scene) {
 	const side = scene.headlineSide ?? 'left';
+	if (side === 'none') return;
 	const boundary = W / 3;
 	const items = [...(scene.props ?? [])];
 	if (scene.mascot) {
@@ -887,7 +900,7 @@ export async function renderScene(rawScene) {
 	const props = (scene.props ?? []).map((p) => ({ accent: scene.accent ?? 'red', ...p }));
 	const mascot = scene.mascot ? await mascotImage(scene, mode) : '';
 	const rendered = await Promise.all(
-		props.map((p) => (STICKER_PROPS[p.type] ? stickerPropSVG(p, mode) : Promise.resolve(propSVG(p))))
+		props.map((p) => p.type === 'image' ? imagePropSVG(p) : STICKER_PROPS[p.type] ? stickerPropSVG(p, mode) : Promise.resolve(propSVG(p)))
 	);
 	const front = rendered.filter((_, i) => props[i].layer === 'front');
 	const back = rendered.filter((_, i) => props[i].layer !== 'front');
