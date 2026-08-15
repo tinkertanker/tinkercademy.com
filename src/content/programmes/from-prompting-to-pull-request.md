@@ -1,7 +1,7 @@
 ---
 title: "From Prompting to Pull Request"
 subtitle: "Public workshop"
-duration: "4 × 3 hours"
+duration: "2 days"
 heroImage: "/images/generated/hero-review/from-prompting-to-pull-request/cdx_001.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai-engineering", "software-engineering"]
@@ -11,7 +11,7 @@ weight: 150
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "From Prompting to Pull Request - Tinkercademy"
-seoDescription: "A public 4 × 3-hour workshop. Learn the terminal, Git, and Claude or Codex, then ship a web app to GitHub and a live URL."
+seoDescription: "A public 2-day workshop. Learn the terminal, Git, and Claude or Codex, then ship a web app to GitHub and a live URL."
 ---
 
 ## Course Overview
@@ -24,7 +24,7 @@ seoDescription: "A public 4 × 3-hour workshop. Learn the terminal, Git, and Cla
 
 ## Curriculum
 
-<p dir="auto">Four sessions, three hours each.</p>
+<p dir="auto">Four sessions across two days.</p>
 
 <h3>Session 1: Foundations</h3><ul dir="auto"><li data-preset-tag="p"><p>Terminal, Git, and VS Code or Cursor</p></li><li data-preset-tag="p"><p>Write a small script with Claude or Codex, then commit it</p></li></ul>
 
@@ -36,4 +36,4 @@ seoDescription: "A public 4 × 3-hour workshop. Learn the terminal, Git, and Cla
 
 ## Details
 
-<p><strong>Dates and Times</strong>: 4 × 3-hour sessions. Four evenings or two half-days. Write in to enquire.</p><p><strong>Location</strong>: CT Hub 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop. Windows, Mac, or Linux. We use VS Code or Cursor with Claude or Codex.</p><p><strong>Prerequisites</strong>: You've used ChatGPT, Gemini, Lovable, or any vibe coding tool. If you haven't, you'd want to take <a href="/programmes/vibe-coding-for-digital-builders/"><em>Vibe Coding for Digital Builders</em></a>. If you're already familiar with terminal and GitHub, please try <a href="/programmes/agentic-engineering-with-claude-code-or-codex/"><em>Agentic Engineering</em></a>.</p><p><strong>Fees</strong>: Write in to enquire.</p>
+<p><strong>Dates and Times</strong>: 2 days. Write in to enquire.</p><p><strong>Location</strong>: CT Hub 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop. Windows, Mac, or Linux. We use VS Code or Cursor with Claude or Codex.</p><p><strong>Prerequisites</strong>: You've used ChatGPT, Gemini, Lovable, or any vibe coding tool. If you haven't, you'd want to take <a href="/programmes/vibe-coding-for-digital-builders/"><em>Vibe Coding for Digital Builders</em></a>. If you're already familiar with terminal and GitHub, please try <a href="/programmes/agentic-engineering-with-claude-code-or-codex/"><em>Agentic Engineering</em></a>.</p><p><strong>Fees</strong>: Write in to enquire.</p>

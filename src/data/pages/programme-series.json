@@ -1,0 +1,20 @@
+[
+	{
+		"id": "ai-engineering",
+		"label": "AI Engineering",
+		"courses": [
+			{
+				"slug": "vibe-coding-for-digital-builders",
+				"shortTitle": "Vibe Coding"
+			},
+			{
+				"slug": "from-prompting-to-pull-request",
+				"shortTitle": "Prompting"
+			},
+			{
+				"slug": "agentic-engineering-with-claude-code-or-codex",
+				"shortTitle": "Agentic Engineering"
+			}
+		]
+	}
+]

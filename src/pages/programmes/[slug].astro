@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import ContactForm from '../../components/ContactForm.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import ProgrammeSeriesNav from '../../components/ProgrammeSeriesNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
@@ -89,6 +90,22 @@ if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
 
+const seriesCourses = programme.series
+	? (await getAllProgrammes())
+			.filter((item) => programme.series?.courses.some((course) => course.slug === item.slug))
+			.sort((left, right) => {
+				const order = programme.series?.courses.map((course) => course.slug) ?? [];
+				return order.indexOf(left.slug) - order.indexOf(right.slug);
+			})
+			.map((item) => ({
+				slug: item.slug,
+				title: item.title,
+				shortTitle: item.series?.shortTitle ?? item.title,
+				href: `/programmes/${item.slug}/`,
+				current: item.slug === programme.slug,
+			}))
+	: [];
+
 const heroResponsive = getResponsiveImage(programme.heroImage);
 const heroPreload = heroResponsive
 	? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
@@ -163,6 +180,15 @@ const breadcrumbSchema = {
 							</a>
 						))}
 					</div>
+				</div>
+			)}
+			{seriesCourses.length > 0 && (
+				<div class="prog-meta__group">
+					<span class="prog-meta__label">Series:</span>
+					<ProgrammeSeriesNav
+						label={programme.series?.label ?? 'Series'}
+						courses={seriesCourses}
+					/>
 				</div>
 			)}
 			{duration && (

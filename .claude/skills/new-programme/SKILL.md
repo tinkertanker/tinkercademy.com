@@ -32,11 +32,11 @@ Do not start the quiz if preflight fails; fix or get user acknowledgment first.
 
 ## The Quiz
 
-Ask these questions **in order**, in small batches (≈3 at a time), letting the user respond before the next batch. Every field maps to a concrete decision made previously when authoring the "Agentic AI for Digital Builders" programme — don't skip any unless the user explicitly says "use the default".
+Ask these questions **in order**, in small batches (≈3 at a time), letting the user respond before the next batch. Every field maps to a concrete decision made previously when authoring the "Agentic Workflows for Businesses" programme — don't skip any unless the user explicitly says "use the default".
 
 ### Batch 1 — Identity and slug
 
-1. **Title.** What's the programme called? Mention that parallel structure with an existing course signals a series (e.g. "Agentic AI for Digital Builders" parallels "Vibe Coding for Digital Builders" — both "<Topic> for <Audience>").
+1. **Title.** What's the programme called? Series membership is declared in `src/data/pages/programme-series.json` (AI Engineering: Vibe Coding → Prompting → Agentic Engineering). Parallel titles alone do not put a course in a series — Agentic Workflows for Businesses is a separate business track.
 2. **Slug / filename.** Derive a kebab-case slug from the title and confirm. This becomes the URL (`/programmes/<slug>/`) and filename (`src/content/programmes/<slug>.md`).
 3. **Subtitle.** For corporate/professional courses the default is `"Corporate training"`. For school programmes it's usually the domain/audience (e.g. `"For secondary schools"`). Confirm or override.
 

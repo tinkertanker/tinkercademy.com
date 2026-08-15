@@ -39,6 +39,7 @@ export default defineConfig({
 				const path = new URL(page).pathname;
 				if (/\/courses\/?$/.test(path)) return false;
 				if (/\/programmes\/advanced-agentic-coding-with-claude-code-or-codex\/?$/.test(path)) return false;
+				if (/\/programmes\/agentic-ai-for-digital-builders\/?$/.test(path)) return false;
 				if (path.startsWith('/review/')) return false;
 				return true;
 			},

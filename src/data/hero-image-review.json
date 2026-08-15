@@ -191,8 +191,8 @@
   {
     "id": "agentic-ai-for-digital-builders",
     "targetType": "programme",
-    "title": "Agentic AI for Digital Builders",
-    "route": "/programmes/agentic-ai-for-digital-builders",
+    "title": "Agentic Workflows for Businesses",
+    "route": "/programmes/agentic-workflows-for-businesses",
     "currentImage": "/images/agentic-ai-hero_002.jpg",
     "priority": "replace",
     "family": "Corporate",
