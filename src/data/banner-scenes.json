@@ -32,24 +32,6 @@
     "y": 0.22,
     "w": 0.09,
     "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.7,
-    "y": 0.15,
-    "w": 0.025
-   },
-   {
-    "type": "sparkle",
-    "x": 0.94,
-    "y": 0.3,
-    "w": 0.018
-   },
-   {
-    "type": "sparkle",
-    "x": 0.5,
-    "y": 0.68,
-    "w": 0.015
    }
   ]
  },
@@ -78,18 +60,6 @@
     "x": 0.48,
     "y": 0.8,
     "w": 0.19
-   },
-   {
-    "type": "sparkle",
-    "x": 0.79,
-    "y": 0.16,
-    "w": 0.022
-   },
-   {
-    "type": "sparkle",
-    "x": 0.95,
-    "y": 0.36,
-    "w": 0.015
    }
   ]
  },
@@ -131,12 +101,6 @@
     "y": 0.24,
     "w": 0.085,
     "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.73,
-    "y": 0.14,
-    "w": 0.02
    }
   ]
  },
@@ -166,24 +130,12 @@
    },
    {
     "type": "bubble",
-    "kind": "spark",
+    "kind": "zap",
     "x": 0.45,
     "y": 0.2,
     "w": 0.08,
     "tail": "right",
     "accent": "orange"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.68,
-    "y": 0.13,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.92,
-    "y": 0.32,
-    "w": 0.015
    }
   ]
  },
@@ -211,18 +163,6 @@
     "x": 0.475,
     "y": 0.8,
     "w": 0.19
-   },
-   {
-    "type": "sparkle",
-    "x": 0.74,
-    "y": 0.14,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.95,
-    "y": 0.75,
-    "w": 0.016
    }
   ]
  },
@@ -261,18 +201,6 @@
     "w": 0.08,
     "tail": "left",
     "accent": "teal"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.66,
-    "y": 0.13,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.52,
-    "y": 0.74,
-    "w": 0.015
    }
   ]
  },
@@ -310,24 +238,6 @@
     "y": 0.22,
     "w": 0.09,
     "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.7,
-    "y": 0.15,
-    "w": 0.025
-   },
-   {
-    "type": "sparkle",
-    "x": 0.94,
-    "y": 0.3,
-    "w": 0.018
-   },
-   {
-    "type": "sparkle",
-    "x": 0.5,
-    "y": 0.68,
-    "w": 0.015
    }
   ]
  },
@@ -357,18 +267,6 @@
     "x": 0.48,
     "y": 0.8,
     "w": 0.19
-   },
-   {
-    "type": "sparkle",
-    "x": 0.79,
-    "y": 0.16,
-    "w": 0.022
-   },
-   {
-    "type": "sparkle",
-    "x": 0.95,
-    "y": 0.36,
-    "w": 0.015
    }
   ]
  },
@@ -411,12 +309,6 @@
     "y": 0.24,
     "w": 0.085,
     "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.73,
-    "y": 0.14,
-    "w": 0.02
    }
   ]
  },
@@ -447,24 +339,12 @@
    },
    {
     "type": "bubble",
-    "kind": "spark",
+    "kind": "zap",
     "x": 0.45,
     "y": 0.2,
     "w": 0.08,
     "tail": "right",
     "accent": "orange"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.68,
-    "y": 0.13,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.92,
-    "y": 0.32,
-    "w": 0.015
    }
   ]
  },
@@ -493,24 +373,12 @@
     "x": 0.475,
     "y": 0.8,
     "w": 0.19
-   },
-   {
-    "type": "sparkle",
-    "x": 0.74,
-    "y": 0.14,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.95,
-    "y": 0.75,
-    "w": 0.016
    }
   ]
  },
  {
   "id": "mastering-the-web-pro-dark",
-  "note": "PRO variant: no mascot — window collage + quiet diamond motif for corporate audiences.",
+  "note": "PRO variant: windows collage, brand diamond motif, mascot as a small corner cameo.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
@@ -523,41 +391,35 @@
    {
     "type": "diamond",
     "outline": true,
-    "x": 0.71,
-    "y": 0.48,
-    "w": 0.26,
+    "x": 0.68,
+    "y": 0.46,
+    "w": 0.24,
     "opacity": 0.14
    },
    {
     "type": "browser",
-    "x": 0.66,
-    "y": 0.44,
-    "w": 0.25
+    "x": 0.63,
+    "y": 0.42,
+    "w": 0.24
    },
    {
     "type": "terminal",
-    "x": 0.86,
-    "y": 0.68,
-    "w": 0.2,
+    "x": 0.82,
+    "y": 0.66,
+    "w": 0.19,
     "layer": "front"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.49,
-    "y": 0.2,
-    "w": 0.018
-   },
-   {
-    "type": "sparkle",
-    "x": 0.95,
-    "y": 0.28,
-    "w": 0.014
    }
-  ]
+  ],
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.945,
+   "y": 0.69,
+   "h": 0.26
+  }
  },
  {
   "id": "agentic-ai-pro-dark",
-  "note": "PRO variant: mascot scaled down to a cameo beside the work — halfway point on the cartoony dial.",
+  "note": "PRO variant: work as protagonist, mascot as a small corner cameo, no bubbles.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
@@ -568,15 +430,15 @@
   },
   "mascot": {
    "pose": "ok",
-   "x": 0.5,
-   "y": 0.63,
-   "h": 0.38
+   "x": 0.93,
+   "y": 0.68,
+   "h": 0.28
   },
   "props": [
    {
     "type": "diamond",
     "outline": true,
-    "x": 0.8,
+    "x": 0.62,
     "y": 0.42,
     "w": 0.2,
     "opacity": 0.12
@@ -584,30 +446,16 @@
    {
     "type": "laptop",
     "screen": "chat",
-    "x": 0.7,
+    "x": 0.6,
     "y": 0.8,
-    "w": 0.19
+    "w": 0.2
    },
    {
     "type": "terminal",
-    "x": 0.89,
-    "y": 0.38,
+    "x": 0.82,
+    "y": 0.36,
     "w": 0.17,
     "accent": "teal"
-   },
-   {
-    "type": "bubble",
-    "kind": "dots",
-    "x": 0.44,
-    "y": 0.36,
-    "w": 0.07,
-    "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.6,
-    "y": 0.18,
-    "w": 0.018
    }
   ]
  },
@@ -653,18 +501,6 @@
     "y": 0.24,
     "w": 0.08,
     "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.73,
-    "y": 0.15,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.94,
-    "y": 0.34,
-    "w": 0.015
    }
   ]
  },
@@ -696,23 +532,11 @@
    },
    {
     "type": "bubble",
-    "kind": "spark",
+    "kind": "zap",
     "x": 0.46,
     "y": 0.22,
     "w": 0.08,
     "tail": "right"
-   },
-   {
-    "type": "sparkle",
-    "x": 0.7,
-    "y": 0.14,
-    "w": 0.02
-   },
-   {
-    "type": "sparkle",
-    "x": 0.95,
-    "y": 0.3,
-    "w": 0.015
    }
   ]
  },
@@ -755,18 +579,52 @@
     "y": 0.22,
     "w": 0.08,
     "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "professionals-photo-dark",
+  "note": "Exploration: retired AI photo as heavily faded backdrop texture; illustration system on top; corner cameo.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "photo": {
+   "src": "/images/generated/hero-review/professionals/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.22
+  },
+  "spotlight": {
+   "x": 0.7,
+   "y": 0.45,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "greetings",
+   "x": 0.92,
+   "y": 0.675,
+   "h": 0.29
+  },
+  "props": [
+   {
+    "type": "browser",
+    "x": 0.65,
+    "y": 0.44,
+    "w": 0.22
    },
    {
-    "type": "sparkle",
+    "type": "terminal",
+    "x": 0.83,
+    "y": 0.68,
+    "w": 0.17,
+    "layer": "front"
+   },
+   {
+    "type": "diamond",
+    "outline": true,
     "x": 0.72,
-    "y": 0.13,
-    "w": 0.022
-   },
-   {
-    "type": "sparkle",
-    "x": 0.93,
-    "y": 0.28,
-    "w": 0.015
+    "y": 0.42,
+    "w": 0.2,
+    "opacity": 0.15
    }
   ]
  }

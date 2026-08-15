@@ -28,13 +28,16 @@ const ITEMS = [
 	{ label: 'monitor·scene3d', type: 'monitor', screen: 'scene3d', w: 170 },
 	{ label: 'tablet·canvas', type: 'tablet', screen: 'canvas', w: 110 },
 	{ label: 'browser·hero', type: 'browser', w: 180 },
+	{ label: 'browser·chat', type: 'browser', screen: 'chat', w: 180 },
+	{ label: 'browser·blocks', type: 'browser', screen: 'blocks', w: 180 },
 	{ label: 'browser·sheet', type: 'browser', screen: 'sheet', w: 180 },
+	{ label: 'monitor·game', type: 'monitor', screen: 'game', w: 170 },
 	{ label: 'terminal', type: 'terminal', w: 180 },
 	{ label: 'phone·chat', type: 'phone', screen: 'chat', w: 80 },
 	{ label: 'microbit', type: 'microbit', w: 170 },
 	{ label: 'breadboard', type: 'breadboard', w: 190 },
 	{ label: 'gamepad', type: 'gamepad', w: 170 },
-	...['dots', 'code', 'spark', 'heart', 'question', 'bulb'].map((k) => ({
+	...['dots', 'code', 'zap', 'heart', 'question', 'bulb'].map((k) => ({
 		label: `bubble·${k}`,
 		type: 'bubble',
 		kind: k,
@@ -47,8 +50,10 @@ const ITEMS = [
 	{ label: 'sticky', type: 'sticky', w: 130 },
 	{ label: 'trophy', type: 'trophy', w: 110 },
 	{ label: 'skyline', type: 'skyline', w: 210, opacity: 0.85 },
-	{ label: 'diamond·outline', type: 'diamond', outline: true, w: 90 },
-	{ label: 'sparkle', type: 'sparkle', w: 46 },
+	{ label: 'diamond', type: 'diamond', w: 80 },
+	{ label: 'diamond·outline', type: 'diamond', outline: true, w: 80 },
+	{ label: 'glasses', type: 'glasses', w: 150 },
+	{ label: 'robohead', type: 'robohead', w: 150 },
 ];
 
 function sheetSVG(mode) {

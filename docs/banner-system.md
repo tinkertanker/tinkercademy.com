@@ -97,11 +97,27 @@ are designed for that contract natively:
 Three registers, same system — pick per audience, don't invent new styles:
 
 1. **Full mascot** (`h` 0.55–0.66) — schools, community, homepage.
-2. **Cameo** — professional courses: mascot at `h` ≈ 0.35–0.4 standing beside
-   the work; the windows (browser/terminal/laptop) are the protagonists.
-3. **No mascot** — corporate/enterprise contexts: window collage plus the
-  `diamond` motif (`outline: true`, `opacity` ≈ 0.1–0.15) as the only brand
-  cue. Still unmistakably the same family via palette + linework.
+2. **Corner cameo** — professional/corporate: mascot small (`h` ≈ 0.26–0.3)
+   in the bottom-right corner, feet on the baseline, optionally peeking from
+   behind a front-layer window; the windows are the protagonists. No bubbles.
+3. **No mascot** — most formal contexts: window collage plus brand icons
+   (`diamond`, `glasses`, `robohead`) at low opacity as the only brand cues.
+
+For corporate placements a **faded-photo backdrop** also works: set
+`"photo": {"src": "<retired cdx hero path>", "darken": 0.4, "sat": 0.22}` on a
+dark scene — the photo becomes heavily darkened environmental texture under
+the gradient tint, with the illustration system on top. Real-world grounding
+without an AI photo as centrepiece.
+
+## Mascot handling (automatic)
+
+- **Emanata are stripped automatically.** Sticker PNGs carry baked-in motion
+  marks; the compositor removes orange/yellow fills by hue, then drops every
+  opaque region not connected to the character's body. Set
+  `"marks": true` on the mascot to keep them (rarely wanted in banners).
+- **A soft radial glow** renders behind the mascot in both themes (paper glow
+  on dark, white on light) plus the dark-mode die-cut keyline, so the black
+  body always separates from the ground.
 
 ## Prop library — a grammar, not a pile
 
@@ -122,11 +138,16 @@ The library is organised by **role**, and the roles combine:
 4. **Connectors** — `wire`: `{type: "wire", x, y, x2, y2, sag?}` draws a
    sagging cable between two scene points (croc-clip energy; ties hardware to
    devices so clusters read as one build, not scattered objects).
-5. **Speech** — `bubble` kinds `dots` | `code` | `spark` | `heart` |
-   `question` | `bulb`; `tail: left|right`.
+5. **Speech** — `bubble` kinds `dots` | `code` | `heart` | `question` |
+   `bulb` | `zap`; `tail: left|right`. Glyphs come from **Lucide**
+   (lucide-static, ISC licence) — when adding a bubble kind or any small
+   symbol, map it to a Lucide icon via `BUBBLE_ICONS` / `lucideIcon()`
+   instead of hand-drawing.
 6. **Dressing** — `blocks`, `mug`, `books`, `plant`, `sticky`, `trophy`.
+   (No sparkles — retired; emphasis comes from the glow and accent colour.)
 7. **Backdrops & brand** — `skyline` (Singapore silhouette band, use
-   `opacity` 0.1–0.2), `diamond` (brand gem motif), `sparkle`.
+   `opacity` 0.1–0.2), and the brand icons `diamond` (filled or
+   `outline: true`), `glasses`, `robohead`.
 
 Style contract for new props: flat fills from the palette only, thick outlines
 via the `stroke(w)` helper, rounded corners, no text ever, no gradients, no
@@ -137,10 +158,12 @@ Growth paths, in order of preference:
 - **New screen content** (cheapest, multiplies with every device).
 - **New flat prop** (hand-authored SVG function, ~20 lines).
 - **Sticker-props** for organic/complex objects that fight flat SVG (robot
-  buggy, 3D printer, tangled cables, cardboard builds): mint once with an
-  image model against the tkrobot style guide, cut to transparent PNG, and
-  lock into `reference/stickers/props/` — after that they compose exactly like
-  mascot poses. Never regenerate a locked sticker-prop.
+  buggy, 3D printer, tangled cables, cardboard builds): mint once with the
+  local `imagegen` skill (codex `image_gen` via `codex exec`; chroma-key
+  workflow and prompt skeletons in tinkertanker/tkrobot-stickers under
+  `docs/prompts/` and `docs/skills/tkrobot-sticker-generation/`), cut to
+  transparent PNG, and lock into `reference/stickers/props/` — after that they
+  compose exactly like mascot poses. Never regenerate a locked sticker-prop.
 - **New mascot poses interacting with props** (sitting at a laptop, holding a
   micro:bit) belong upstream in tinkertanker/tkrobot-stickers, then get
   vendored here.

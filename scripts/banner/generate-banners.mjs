@@ -69,6 +69,27 @@ function stroke(w) {
 	return Math.max(3, w * 0.035);
 }
 
+// ── Lucide icons ──────────────────────────────────────────────────
+// Open-source icon set (ISC licence, lucide.dev) vendored via the
+// lucide-static package. Icons are 24x24 stroke paths; we scale them and
+// restroke to match the library's line weight. Use for bubble glyphs and
+// any small symbol — do not hand-draw new glyphs when Lucide has one.
+
+const LUCIDE_DIR = path.join(ROOT, 'node_modules', 'lucide-static', 'icons');
+const lucideCache = new Map();
+
+function lucideIcon(name, size, color, weight = 2.2) {
+	if (!lucideCache.has(name)) {
+		const file = path.join(LUCIDE_DIR, `${name}.svg`);
+		if (!fs.existsSync(file)) throw new Error(`Unknown Lucide icon "${name}"`);
+		const svg = fs.readFileSync(file, 'utf8');
+		const inner = svg.slice(svg.indexOf('>', svg.indexOf('<svg')) + 1).replace('</svg>', '');
+		lucideCache.set(name, inner.trim());
+	}
+	const s = size / 24;
+	return `<g transform="scale(${s}) translate(-12,-12)" fill="none" stroke="${color}" stroke-width="${weight}" stroke-linecap="round" stroke-linejoin="round">${lucideCache.get(name)}</g>`;
+}
+
 // ── Screen contents ───────────────────────────────────────────────
 // Decoupled from devices: any screen renders into any device's display
 // rect. Each takes the rect's top-left (x0,y0), size (w,h), and accent.
@@ -370,38 +391,39 @@ function gamepad(w, { accent = 'red' }) {
 		<circle cx="${w * 0.32}" cy="${h * 0.1}" r="${h * 0.09}" fill="${PALETTE.teal}"/>`;
 }
 
+// Speech bubble with an integrated tail (tail is stroked first, then the
+// body, then the tail is re-filled to erase the seam — reads as one shape).
+// Glyphs come from Lucide (open-source) instead of hand-drawn marks.
+const BUBBLE_ICONS = {
+	code: 'code',
+	heart: 'heart',
+	question: 'circle-help',
+	bulb: 'lightbulb',
+	zap: 'zap',
+};
+
 function bubble(w, { kind = 'dots', accent = 'red', tail = 'left' }) {
-	const sw = stroke(w);
-	const h = w * 0.68;
+	const sw = stroke(w) * 1.1;
+	const h = w * 0.62;
 	const acc = PALETTE[accent];
-	const tx = tail === 'left' ? -w * 0.2 : w * 0.2;
+	const dir = tail === 'left' ? -1 : 1;
+	const tx = dir * w * 0.16;
+	const tailPath = `M ${tx - w * 0.09} ${h * 0.3} L ${tx + w * 0.05} ${h * 0.3} L ${tx + dir * 0.02 * w - w * 0.02} ${h * 0.62} Z`;
 	let inner = '';
 	if (kind === 'dots') {
 		inner = [-1, 0, 1]
-			.map((i) => `<circle cx="${i * w * 0.16}" cy="0" r="${w * 0.05}" fill="${PALETTE.ink}"/>`)
+			.map((i) => `<circle cx="${i * w * 0.14}" cy="0" r="${w * 0.038}" fill="${PALETTE.ink}"/>`)
 			.join('');
-	} else if (kind === 'code') {
-		inner =
-			`<polyline points="${-w * 0.22},${-h * 0.14} ${-w * 0.34},0 ${-w * 0.22},${h * 0.14}" fill="none" stroke="${PALETTE.ink}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round"/>` +
-			`<polyline points="${w * 0.22},${-h * 0.14} ${w * 0.34},0 ${w * 0.22},${h * 0.14}" fill="none" stroke="${PALETTE.ink}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round"/>` +
-			`<line x1="${w * 0.07}" y1="${-h * 0.18}" x2="${-w * 0.07}" y2="${h * 0.18}" stroke="${acc}" stroke-width="${sw}" stroke-linecap="round"/>`;
-	} else if (kind === 'spark') {
-		inner = star(w * 0.34, acc);
-	} else if (kind === 'heart') {
-		const s = w * 0.36;
-		inner = `<path d="M 0 ${s * 0.35} C ${-s * 0.9} ${-s * 0.4}, ${-s * 0.35} ${-s * 0.95}, 0 ${-s * 0.4} C ${s * 0.35} ${-s * 0.95}, ${s * 0.9} ${-s * 0.4}, 0 ${s * 0.35} Z" fill="${acc}"/>`;
-	} else if (kind === 'question') {
-		inner =
-			`<path d="M ${-w * 0.1} ${-h * 0.12} a ${w * 0.11} ${w * 0.11} 0 1 1 ${w * 0.16} ${w * 0.13} l ${-w * 0.05} ${w * 0.05}" fill="none" stroke="${PALETTE.ink}" stroke-width="${sw * 1.3}" stroke-linecap="round"/>` +
-			`<circle cx="${w * 0.01}" cy="${h * 0.22}" r="${sw * 0.9}" fill="${PALETTE.ink}"/>`;
-	} else if (kind === 'bulb') {
-		inner =
-			`<circle cx="0" cy="${-h * 0.06}" r="${w * 0.13}" fill="${PALETTE.orange}" stroke="${PALETTE.ink}" stroke-width="${sw}"/>` +
-			`<rect x="${-w * 0.05}" y="${h * 0.06}" width="${w * 0.1}" height="${h * 0.12}" rx="${w * 0.02}" fill="${PALETTE.grey}" stroke="${PALETTE.ink}" stroke-width="${sw * 0.7}"/>`;
+	} else {
+		const icon = BUBBLE_ICONS[kind];
+		if (!icon) throw new Error(`Unknown bubble kind "${kind}"`);
+		const colored = kind === 'heart' || kind === 'bulb' || kind === 'zap';
+		inner = lucideIcon(icon, h * 0.52, colored ? acc : PALETTE.ink);
 	}
 	return `
-		<path d="M ${tx} ${h * 0.42} l ${tail === 'left' ? -w * 0.08 : w * 0.08} ${h * 0.22} l ${tail === 'left' ? w * 0.14 : -w * 0.14} ${-h * 0.16} Z" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}" stroke-linejoin="round"/>
-		<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h * 0.92}" rx="${h * 0.3}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}"/>
+		<path d="${tailPath}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}" stroke-linejoin="round"/>
+		<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="${h * 0.32}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}"/>
+		<path d="${tailPath}" fill="${T.screen}"/>
 		${inner}`;
 }
 
@@ -410,8 +432,68 @@ function star(r, fill) {
 	return `<path d="M 0 ${-r} Q ${s * 0.3} ${-s * 0.3} ${r} 0 Q ${s * 0.3} ${s * 0.3} 0 ${r} Q ${-s * 0.3} ${s * 0.3} ${-r} 0 Q ${-s * 0.3} ${-s * 0.3} 0 ${-r} Z" fill="${fill}"/>`;
 }
 
-function sparkle(w, { accent = 'orange' }) {
-	return star(w / 2, PALETTE[accent]);
+// ── Brand icons ───────────────────────────────────────────────────
+// The mascot's own anatomy as flat marks: chest diamond (see diamond()),
+// the glasses, and the head. Restrained enough for corporate placements.
+
+function glasses(w, { }) {
+	const sw = Math.max(3, w * 0.055);
+	const r = w * 0.28;
+	// black rims drawn as filled discs behind the lenses, with a theme-line
+	// keyline so the rims stay visible on dark grounds
+	const lens = (cx) =>
+		`<circle cx="${cx}" cy="0" r="${r * 1.2}" fill="${PALETTE.ink}" stroke="${T.line}" stroke-width="${sw * 0.7}"/>` +
+		`<circle cx="${cx}" cy="0" r="${r * 0.92}" fill="${PALETTE.white}"/>`;
+	return `
+		<path d="M ${-w * 0.08} ${-r * 0.2} Q 0 ${-r * 0.62} ${w * 0.08} ${-r * 0.2}" fill="none" stroke="${T.line}" stroke-width="${sw * 1.4}"/>
+		${lens(-w * 0.31)}${lens(w * 0.31)}`;
+}
+
+function roundedPoly(pts, r) {
+	// closed polygon with quadratic-rounded corners
+	const n = pts.length;
+	const seg = [];
+	for (let i = 0; i < n; i++) {
+		const p = pts[i];
+		const prev = pts[(i - 1 + n) % n];
+		const next = pts[(i + 1) % n];
+		const toPrev = [prev[0] - p[0], prev[1] - p[1]];
+		const toNext = [next[0] - p[0], next[1] - p[1]];
+		const lp = Math.hypot(...toPrev);
+		const ln = Math.hypot(...toNext);
+		const a = [p[0] + (toPrev[0] / lp) * r, p[1] + (toPrev[1] / lp) * r];
+		const b = [p[0] + (toNext[0] / ln) * r, p[1] + (toNext[1] / ln) * r];
+		seg.push({ a, corner: p, b });
+	}
+	let d = `M ${seg[0].a[0]} ${seg[0].a[1]}`;
+	for (let i = 0; i < n; i++) {
+		const s = seg[i];
+		d += ` Q ${s.corner[0]} ${s.corner[1]} ${s.b[0]} ${s.b[1]}`;
+		const nxt = seg[(i + 1) % n];
+		d += ` L ${nxt.a[0]} ${nxt.a[1]}`;
+	}
+	return d + ' Z';
+}
+
+function robohead(w, { }) {
+	const h = w * 0.82;
+	const sw = Math.max(3, w * 0.04);
+	// softened trapezoid, top ~90% of bottom width (locked v11 proportions)
+	const head = roundedPoly(
+		[
+			[-w * 0.45, -h / 2],
+			[w * 0.45, -h / 2],
+			[w * 0.5, h / 2],
+			[-w * 0.5, h / 2],
+		],
+		w * 0.1
+	);
+	const r = w * 0.26;
+	return `
+		<path d="${head}" fill="${PALETTE.ink}" stroke="${T.line}" stroke-width="${sw}"/>
+		<line x1="${-w * 0.3}" y1="${h * 0.36}" x2="${w * 0.3}" y2="${h * 0.36}" stroke="${PALETTE.grey}" stroke-width="${sw * 0.45}" stroke-linecap="round"/>
+		<circle cx="${-w * 0.24}" cy="${-h * 0.04}" r="${r}" fill="${PALETTE.white}" stroke="${PALETTE.ink}" stroke-width="${sw * 1.2}"/>
+		<circle cx="${w * 0.24}" cy="${-h * 0.04}" r="${r}" fill="${PALETTE.white}" stroke="${PALETTE.ink}" stroke-width="${sw * 1.2}"/>`;
 }
 
 function blocks(w, { accent = 'red' }) {
@@ -486,7 +568,7 @@ function skyline(w, { accent }) {
 	// Marina Bay Sands: three towers + deck
 	for (let i = 0; i < 3; i++)
 		g.push(
-			`<rect x="${-w * 0.5 + i * w * 0.075}" y="${-h * 0.55}" width="${w * 0.05}" height="${h * 0.55}" fill="${c}"/>`
+			`<rect x="${-w * 0.5 + i * w * 0.075}" y="${-h * 0.63}" width="${w * 0.05}" height="${h * 0.63}" fill="${c}"/>`
 		);
 	g.push(
 		`<rect x="${-w * 0.52}" y="${-h * 0.72}" width="${w * 0.24}" height="${h * 0.1}" rx="${h * 0.05}" fill="${c}"/>`
@@ -523,13 +605,14 @@ function diamond(w, { accent = 'red', outline = false }) {
 export const PROPS = {
 	laptop, monitor, tablet, browser, terminal, phone,
 	microbit, breadboard, gamepad,
-	bubble, sparkle, blocks, mug, books, plant, sticky, trophy, skyline, diamond,
+	bubble, blocks, mug, books, plant, sticky, trophy, skyline,
+	diamond, glasses, robohead,
 };
 
 // ── Scene assembly ────────────────────────────────────────────────
 
 // Background-dressing prop types: skipped by margin validation and shadows.
-const BACKGROUND_TYPES = new Set(['sparkle', 'diamond', 'skyline', 'wire']);
+const BACKGROUND_TYPES = new Set(['diamond', 'skyline', 'wire', 'glasses', 'robohead']);
 
 function propExtent(p) {
 	return (p.w * W) / 2 + 8;
@@ -574,11 +657,65 @@ async function stickerHalo(trimmedPng, info) {
 		.toBuffer();
 }
 
+// Remove the emanata baked into the sticker PNGs (orange/yellow motion
+// marks, exclamation bursts) so the mascot reads clean in banner scenes.
+// The character itself has no orange — gem is red, limbs grey — so hue
+// filtering is safe. Re-trims afterwards since marks often set the bbox.
+async function stripEmanata(pngBuffer) {
+	const { data, info } = await sharp(pngBuffer)
+		.ensureAlpha()
+		.raw()
+		.toBuffer({ resolveWithObject: true });
+	const { width, height } = info;
+	// 1) knock out orange/yellow mark fills by hue (the character has no orange)
+	for (let i = 0; i < data.length; i += 4) {
+		const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
+		if (a > 0 && r > 170 && g > 85 && b < 140 && r - b > 80 && g - b > 40) {
+			data[i + 3] = 0;
+		}
+	}
+	// 2) drop every opaque region not connected to the character's main body —
+	// removes mark outlines and any leftover floating shapes wholesale
+	const n = width * height;
+	const label = new Int32Array(n).fill(-1);
+	const sizes = [];
+	const stack = [];
+	for (let start = 0; start < n; start++) {
+		if (label[start] !== -1 || data[start * 4 + 3] < 40) continue;
+		const id = sizes.length;
+		let size = 0;
+		stack.push(start);
+		label[start] = id;
+		while (stack.length) {
+			const px = stack.pop();
+			size++;
+			const x = px % width, y = (px / width) | 0;
+			for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+				const nx = x + dx, ny = y + dy;
+				if (nx < 0 || ny < 0 || nx >= width || ny >= height) continue;
+				const np = ny * width + nx;
+				if (label[np] === -1 && data[np * 4 + 3] >= 40) {
+					label[np] = id;
+					stack.push(np);
+				}
+			}
+		}
+		sizes.push(size);
+	}
+	const main = sizes.indexOf(Math.max(...sizes, 0));
+	for (let px = 0; px < n; px++) {
+		if (data[px * 4 + 3] > 0 && label[px] !== main) data[px * 4 + 3] = 0;
+	}
+	return sharp(data, { raw: { width, height, channels: 4 } }).png().toBuffer();
+}
+
 async function mascotImage(scene, mode) {
-	const { pose, x, y, h, flip = false } = scene.mascot;
+	const { pose, x, y, h, flip = false, marks = false } = scene.mascot;
 	const file = path.join(STICKERS, `${pose}.png`);
 	if (!fs.existsSync(file)) throw new Error(`Unknown pose "${pose}" — add it to reference/stickers/`);
-	const { data, info } = await sharp(file).trim().png().toBuffer({ resolveWithObject: true });
+	let png = await sharp(file).trim().png().toBuffer();
+	if (!marks) png = await stripEmanata(png);
+	const { data, info } = await sharp(png).trim().png().toBuffer({ resolveWithObject: true });
 	const ph = Math.round(h * H);
 	const pw = Math.round((info.width / info.height) * ph);
 	const cx = x * W;
@@ -590,6 +727,18 @@ async function mascotImage(scene, mode) {
 			: `translate(${cx - pw / 2}, ${cy - ph / 2})`;
 		return `<g transform="${transform}"><image href="data:image/png;base64,${b64}" width="${pw}" height="${ph}"/></g>`;
 	};
+	// soft radial glow behind the character so the black body separates
+	// from the ground in both themes
+	const glowId = `glow-${Math.round(cx)}-${Math.round(cy)}`;
+	const glowOpacity = mode === 'dark' ? 0.16 : 0.55;
+	const glowColor = mode === 'dark' ? PALETTE.paper : PALETTE.white;
+	const glow = `
+		<radialGradient id="${glowId}" cx="0.5" cy="0.5" r="0.5">
+			<stop offset="0" stop-color="${glowColor}" stop-opacity="${glowOpacity}"/>
+			<stop offset="0.65" stop-color="${glowColor}" stop-opacity="${glowOpacity * 0.35}"/>
+			<stop offset="1" stop-color="${glowColor}" stop-opacity="0"/>
+		</radialGradient>
+		<ellipse cx="${cx}" cy="${cy}" rx="${pw * 0.85}" ry="${ph * 0.62}" fill="url(#${glowId})"/>`;
 	let layers = '';
 	if (mode === 'dark') {
 		const halo = await stickerHalo(data, info);
@@ -597,6 +746,7 @@ async function mascotImage(scene, mode) {
 	}
 	layers += place(data.toString('base64'));
 	return `
+		${glow}
 		<ellipse cx="${cx}" cy="${cy + ph / 2 + 6}" rx="${shadowW}" ry="${shadowW * 0.16}" fill="${T.shadow}"/>
 		${layers}`;
 }
@@ -672,6 +822,20 @@ export function setTheme(mode) {
 	return T;
 }
 
+// Faded-photo backdrop: an existing photo (e.g. a retired cdx hero) heavily
+// darkened and desaturated so it reads as environmental texture, with the
+// dark-mode atmosphere layered over it. scene.photo = { src, darken?, sat? }.
+async function photoLayer(photo) {
+	const src = path.join(ROOT, photo.src.startsWith('/') ? `public${photo.src}` : photo.src);
+	if (!fs.existsSync(src)) throw new Error(`photo.src not found: ${src}`);
+	const buf = await sharp(src)
+		.resize(W, H, { fit: 'cover' })
+		.modulate({ brightness: photo.darken ?? 0.42, saturation: photo.sat ?? 0.25 })
+		.png()
+		.toBuffer();
+	return `<image href="data:image/png;base64,${buf.toString('base64')}" width="${W}" height="${H}"/>`;
+}
+
 export async function renderScene(scene) {
 	validateMargin(scene);
 	const mode = scene.mode ?? 'light';
@@ -686,6 +850,12 @@ export async function renderScene(scene) {
 		const g = darkGround(scene);
 		defs = g.defs;
 		ground = g.layers;
+		if (scene.photo) {
+			// photo sits under the gradient; the gradient becomes a tint
+			const img = await photoLayer(scene.photo);
+			ground = ground.replace('<rect width="1600" height="900" fill="url(#ground)"/>',
+				`${img}<rect width="${W}" height="${H}" fill="url(#ground)" opacity="0.72"/>`);
+		}
 	}
 	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 		<defs>${defs}</defs>
