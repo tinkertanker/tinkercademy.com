@@ -3,6 +3,7 @@ title: "From Prompting to Pull Request"
 subtitle: "Public workshop"
 duration: "2 days"
 heroImage: "/images/generated/hero-review/from-prompting-to-pull-request/cdx_001.webp"
+heroObjectPosition: "50% 12%"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai-engineering", "software-engineering"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js"]

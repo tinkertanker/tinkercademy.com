@@ -16,6 +16,10 @@ const programmes = defineCollection({
 		subtitle: z.string().min(1),
 		duration: z.string().min(1),
 		heroImage: z.string().min(1),
+		heroObjectPosition: z
+			.string()
+			.regex(/^\d{1,3}(?:\.\d+)?%\s+\d{1,3}(?:\.\d+)?%$/, 'Use a CSS object-position pair such as 50% 15%')
+			.optional(),
 		audienceIds: z.array(z.enum(audienceIds)).min(1),
 		domainIds: z.array(z.enum(domainIds)).min(1),
 		platformIds: z.array(z.enum(platformIds)).min(1),
