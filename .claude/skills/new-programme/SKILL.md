@@ -36,7 +36,7 @@ Ask these questions **in order**, in small batches (≈3 at a time), letting the
 
 ### Batch 1 — Identity and slug
 
-1. **Title.** What's the programme called? Numbered series membership is declared in `src/data/pages/programme-series.json` (AI101 / AI201 / AI301 under AI Engineering). Parallel titles alone do not put a course in a series — Agentic Workflows for Businesses is a separate business track.
+1. **Title.** What's the programme called? Series membership is declared in `src/data/pages/programme-series.json` (AI Engineering: Vibe Coding → Prompting → Agentic Engineering). Parallel titles alone do not put a course in a series — Agentic Workflows for Businesses is a separate business track.
 2. **Slug / filename.** Derive a kebab-case slug from the title and confirm. This becomes the URL (`/programmes/<slug>/`) and filename (`src/content/programmes/<slug>.md`).
 3. **Subtitle.** For corporate/professional courses the default is `"Corporate training"`. For school programmes it's usually the domain/audience (e.g. `"For secondary schools"`). Confirm or override.
 

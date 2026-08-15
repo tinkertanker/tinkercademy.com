@@ -87,7 +87,6 @@ export type ProgrammeCardData = {
 	shortDescription: string;
 	searchText: string;
 	badgeHref: string | null;
-	seriesCode: string | null;
 };
 
 export type ProgrammeCardOverride = {
@@ -198,7 +197,6 @@ function resolveProgramme(entry: ProgrammeEntry): ResolvedProgramme {
 			entry.data.subtitle,
 			entry.data.duration,
 			entry.data.cardBlurb,
-			series?.code,
 			series?.label,
 			...audiences.map((item) => item.label),
 			...domains.map((item) => item.label),
@@ -307,8 +305,6 @@ export function toProgrammeCardData(
 	const audienceLabel = normalisedOverride?.audience_label || audience?.label || 'Programme';
 	const duration = normalisedOverride?.duration || programme.duration;
 	const shortDescription = normalisedOverride?.blurb || programme.cardBlurb;
-	const seriesCode = programme.series?.code ?? null;
-
 	return {
 		slug: programme.slug,
 		title,
@@ -325,14 +321,12 @@ export function toProgrammeCardData(
 			audienceLabel,
 			duration,
 			shortDescription,
-			seriesCode,
 			programme.series?.label,
 			...programme.audiences.map((item) => item.label),
 			...programme.domains.map((item) => item.label),
 			...programme.platforms.map((item) => item.label),
 		]),
 		badgeHref,
-		seriesCode,
 	};
 }
 

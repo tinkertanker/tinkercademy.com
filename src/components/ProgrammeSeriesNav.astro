@@ -1,12 +1,12 @@
 ---
 /**
- * Compact “In this series” row for numbered programme tracks.
- * The current course is marked; the others link through.
+ * Compact segmented control for a programme series.
+ * Sits on the meta bar next to audiences; current course is marked.
  */
 interface Course {
-	code: string;
 	slug: string;
 	title: string;
+	shortTitle: string;
 	href: string;
 	current: boolean;
 }
@@ -20,95 +20,67 @@ const { label, courses } = Astro.props;
 ---
 
 {courses.length > 0 && (
-	<nav class="series-nav" aria-label={`${label} series`}>
-		<p class="series-nav__label">In this series</p>
-		<ol class="series-nav__list">
-			{courses.map((course) => (
-				<li class="series-nav__item">
-					{course.current ? (
-						<span class="series-nav__link series-nav__link--current" aria-current="page">
-							<span class="series-nav__code">{course.code}</span>
-							<span class="series-nav__title">{course.title}</span>
-						</span>
-					) : (
-						<a class="series-nav__link" href={course.href}>
-							<span class="series-nav__code">{course.code}</span>
-							<span class="series-nav__title">{course.title}</span>
-						</a>
-					)}
-				</li>
-			))}
-		</ol>
+	<nav class="series-seg" aria-label={`${label} series`}>
+		{courses.map((course) =>
+			course.current ? (
+				<span
+					class="series-seg__item series-seg__item--current"
+					aria-current="page"
+					title={course.title}
+				>
+					{course.shortTitle}
+				</span>
+			) : (
+				<a class="series-seg__item" href={course.href} title={course.title}>
+					{course.shortTitle}
+				</a>
+			),
+		)}
 	</nav>
 )}
 
 <style>
-	.series-nav {
-		padding: 0.85rem 0;
+	.series-seg {
+		display: inline-flex;
+		align-items: stretch;
+		margin-inline-start: 0.35rem;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		border-radius: 6px;
+		overflow: hidden;
+		background: #fff;
 	}
 
-	.series-nav__label {
-		margin: 0 0 0.55rem;
+	.series-seg__item {
+		display: inline-flex;
+		align-items: center;
+		min-height: 24px;
+		padding: 5px 10px;
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
 		font-family: 'Rubik', sans-serif;
 		font-size: 12px;
 		font-weight: 500;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
-		color: rgb(90, 90, 90);
-	}
-
-	.series-nav__list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem 0.75rem;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	.series-nav__item {
-		margin: 0;
-	}
-
-	.series-nav__link {
-		display: inline-flex;
-		align-items: baseline;
-		gap: 0.45rem;
-		padding: 0.4rem 0.7rem;
-		border-radius: 999px;
-		border: 1px solid rgba(0, 0, 0, 0.08);
-		background: rgb(247, 247, 247);
+		line-height: 1;
+		color: rgb(51, 51, 51);
 		text-decoration: none;
-		color: rgb(51, 51, 51);
-		line-height: 1.2;
-	}
-
-	.series-nav__link:hover {
-		border-color: rgba(240, 93, 87, 0.28);
-		color: var(--accent-dark);
-	}
-
-	.series-nav__link--current {
-		background: rgba(189, 58, 52, 0.08);
-		border-color: rgba(189, 58, 52, 0.28);
-		color: rgb(51, 51, 51);
-	}
-
-	.series-nav__code {
-		font-family: 'Fragment Mono', ui-monospace, monospace;
-		font-size: 0.78rem;
-		letter-spacing: 0.03em;
-		color: var(--accent-dark);
 		white-space: nowrap;
+		background: #fff;
 	}
 
-	.series-nav__title {
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.82rem;
-		font-weight: 500;
+	.series-seg__item:last-child {
+		border-right: 0;
 	}
 
-	.series-nav__link--current .series-nav__title {
+	.series-seg__item:hover {
+		color: var(--accent-dark);
+	}
+
+	.series-seg__item--current {
+		background: rgba(189, 58, 52, 0.1);
+		color: rgb(51, 51, 51);
 		font-weight: 600;
+	}
+
+	.series-seg__item--current:hover {
+		color: rgb(51, 51, 51);
 	}
 </style>

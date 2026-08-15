@@ -4,16 +4,16 @@
 		"label": "AI Engineering",
 		"courses": [
 			{
-				"code": "AI101",
-				"slug": "vibe-coding-for-digital-builders"
+				"slug": "vibe-coding-for-digital-builders",
+				"shortTitle": "Vibe Coding"
 			},
 			{
-				"code": "AI201",
-				"slug": "from-prompting-to-pull-request"
+				"slug": "from-prompting-to-pull-request",
+				"shortTitle": "Prompting"
 			},
 			{
-				"code": "AI301",
-				"slug": "agentic-engineering-with-claude-code-or-codex"
+				"slug": "agentic-engineering-with-claude-code-or-codex",
+				"shortTitle": "Agentic Engineering"
 			}
 		]
 	}

@@ -1,8 +1,8 @@
 import seriesData from '../data/pages/programme-series.json';
 
 export type ProgrammeSeriesCourse = {
-	code: string;
 	slug: string;
+	shortTitle: string;
 };
 
 export type ProgrammeSeries = {
@@ -14,7 +14,7 @@ export type ProgrammeSeries = {
 export type ProgrammeSeriesMembership = {
 	id: string;
 	label: string;
-	code: string;
+	shortTitle: string;
 	courses: ProgrammeSeriesCourse[];
 };
 
@@ -27,7 +27,7 @@ for (const series of seriesList) {
 		membershipBySlug.set(course.slug, {
 			id: series.id,
 			label: series.label,
-			code: course.code,
+			shortTitle: course.shortTitle,
 			courses: series.courses,
 		});
 	}

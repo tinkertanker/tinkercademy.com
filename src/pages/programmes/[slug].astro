@@ -98,9 +98,9 @@ const seriesCourses = programme.series
 				return order.indexOf(left.slug) - order.indexOf(right.slug);
 			})
 			.map((item) => ({
-				code: item.series?.code ?? '',
 				slug: item.slug,
 				title: item.title,
+				shortTitle: item.series?.shortTitle ?? item.title,
 				href: `/programmes/${item.slug}/`,
 				current: item.slug === programme.slug,
 			}))
@@ -147,13 +147,6 @@ const breadcrumbSchema = {
 		)}
 		<div class="prog-hero__overlay" />
 		<div class="prog-hero__text shell">
-			{programme.series && (
-				<p class="prog-hero__kicker">
-					<span class="prog-hero__kicker-code">{programme.series.code}</span>
-					<span class="prog-hero__kicker-sep" aria-hidden="true">·</span>
-					<span>{programme.series.label}</span>
-				</p>
-			)}
 			<h1 class="prog-hero__title">{programme.title}</h1>
 			{duration && <p class="prog-hero__duration">{duration}</p>}
 			<div class="prog-hero__actions">
@@ -168,33 +161,35 @@ const breadcrumbSchema = {
 		</div>
 	</section>
 
-	{seriesCourses.length > 0 && (
-		<section class="prog-series">
-			<div class="shell">
-				<ProgrammeSeriesNav label={programme.series?.label ?? 'Series'} courses={seriesCourses} />
-			</div>
-		</section>
-	)}
-
 	{/* ════════ Meta bar ═════════════════════════════════════════════ */}
 	<section class="prog-meta">
 		<div class="shell prog-meta__inner">
-			{audiences.length > 0 && (
+			{(audiences.length > 0 || seriesCourses.length > 0) && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Audiences:</span>
-					<div class="prog-meta__tags">
-						{audiences.map((aud) => (
-							<a
-								class:list={[
-									'prog-meta__tag',
-									(aud.id === 'businesses' || aud.id === 'public') && 'prog-meta__tag--blue',
-								]}
-								href={createProgrammeFilterHref({ audience: aud.id })}
-							>
-								{aud.label}
-							</a>
-						))}
-					</div>
+					{audiences.length > 0 && (
+						<>
+							<span class="prog-meta__label">Audiences:</span>
+							<div class="prog-meta__tags">
+								{audiences.map((aud) => (
+									<a
+										class:list={[
+											'prog-meta__tag',
+											(aud.id === 'businesses' || aud.id === 'public') && 'prog-meta__tag--blue',
+										]}
+										href={createProgrammeFilterHref({ audience: aud.id })}
+									>
+										{aud.label}
+									</a>
+								))}
+							</div>
+						</>
+					)}
+					{seriesCourses.length > 0 && (
+						<ProgrammeSeriesNav
+							label={programme.series?.label ?? 'Series'}
+							courses={seriesCourses}
+						/>
+					)}
 				</div>
 			)}
 			{duration && (
@@ -319,28 +314,6 @@ const breadcrumbSchema = {
 		padding-bottom: 48px;
 	}
 
-	.prog-hero__kicker {
-		display: flex;
-		align-items: baseline;
-		flex-wrap: wrap;
-		gap: 0.4rem;
-		margin: 0 0 0.65rem;
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.92rem;
-		font-weight: 500;
-		letter-spacing: 0.02em;
-		color: rgba(255, 255, 255, 0.88);
-	}
-
-	.prog-hero__kicker-code {
-		font-family: 'Fragment Mono', ui-monospace, monospace;
-		letter-spacing: 0.04em;
-	}
-
-	.prog-hero__kicker-sep {
-		opacity: 0.7;
-	}
-
 	.prog-hero__title {
 		font-family: 'Lora Ampersand', 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
@@ -391,11 +364,6 @@ const breadcrumbSchema = {
 
 	.prog-hero__cta--secondary:hover {
 		background: rgba(255, 255, 255, 0.12);
-	}
-
-	.prog-series {
-		background: #fff;
-		border-bottom: 1px solid #e3e3e3;
 	}
 
 	/* ─── Meta bar (live: pill audiences, inline meta) ─────── */
