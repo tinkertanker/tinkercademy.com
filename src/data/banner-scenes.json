@@ -1,7 +1,8 @@
 [
  {
   "id": "home",
-  "note": "Homepage hero — mascot waving hello beside a block-coding laptop.",
+  "note": "Homepage — wave hello, block coding.",
+  "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
   "mascot": {
@@ -32,73 +33,273 @@
     "y": 0.22,
     "w": 0.09,
     "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "schools",
+  "note": "Schools — pointing at the headline, Scratch laptop, micro:bit.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.68,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.48,
+    "y": 0.8,
+    "w": 0.2,
+    "logo": "scratch"
+   },
+   {
+    "type": "microbit",
+    "x": 0.875,
+    "y": 0.7,
+    "w": 0.17,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "professionals",
+  "note": "Professionals — trio: browser + terminal.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "browser",
+    "logo": "html5"
+   },
+   {
+    "type": "terminal",
+    "layer": "front"
+   }
+  ],
+  "layout": "trio"
+ },
+ {
+  "id": "individuals",
+  "note": "Individuals — self-directed coder.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "salute",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.84,
+    "y": 0.8,
+    "w": 0.21,
+    "logo": "javascript"
+   },
+   {
+    "type": "mug",
+    "x": 0.485,
+    "y": 0.771,
+    "w": 0.06
+   },
+   {
+    "type": "bubble",
+    "kind": "dots",
+    "x": 0.49,
+    "y": 0.24,
+    "w": 0.085,
+    "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "courses-all",
+  "note": "All courses — a bit of everything.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.62,
+   "y": 0.54,
+   "h": 0.56
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "canvas",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.22
+   },
+   {
+    "type": "handheld-console",
+    "x": 0.69,
+    "y": 0.7,
+    "w": 0.1,
+    "ground": true,
+    "layer": "front"
    }
   ]
  },
  {
   "id": "courses-schools",
-  "note": "Schools course listing — mascot points toward the headline; micro:bit + blocks laptop.",
+  "note": "Schools courses — micro:bit + bee-bot.",
+  "mode": "dark",
   "accent": "orange",
   "headlineSide": "left",
   "mascot": {
-   "pose": "point-left",
-   "x": 0.68,
+   "pose": "yay",
+   "x": 0.64,
    "y": 0.52,
    "h": 0.6
   },
   "props": [
    {
     "type": "microbit",
-    "x": 0.875,
-    "y": 0.706,
-    "w": 0.16,
-    "accent": "red"
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.18,
+    "ground": true
    },
    {
-    "type": "laptop",
-    "screen": "blocks",
-    "x": 0.48,
-    "y": 0.8,
-    "w": 0.19,
-    "logo": "scratch"
+    "type": "bee-bot",
+    "x": 0.49,
+    "y": 0.7,
+    "w": 0.15,
+    "ground": true
    }
   ]
  },
  {
-  "id": "individuals",
-  "note": "Self-directed learners — mascot saluting, code laptop, phone, coffee.",
+  "id": "courses-professionals",
+  "note": "Professional courses — trio of dev windows.",
+  "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
   "mascot": {
-   "pose": "salute",
+   "pose": "ok",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "agent-cli",
+    "x": 0,
+    "y": 0,
+    "w": 0.15
+   },
+   {
+    "type": "code-editor",
+    "x": 0,
+    "y": 0,
+    "w": 0.18
+   }
+  ],
+  "layout": "trio"
+ },
+ {
+  "id": "about-us",
+  "note": "About us — heart, skyline, the face.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "heart",
    "x": 0.62,
    "y": 0.52,
    "h": 0.6
   },
   "props": [
    {
-    "type": "laptop",
-    "screen": "code",
-    "x": 0.84,
-    "y": 0.8,
-    "w": 0.2
-   },
-   {
-    "type": "phone",
-    "x": 0.955,
-    "y": 0.731,
-    "w": 0.045
+    "type": "skyline",
+    "x": 0.68,
+    "y": 0.48,
+    "w": 0.55,
+    "opacity": 0.18
    },
    {
     "type": "mug",
-    "x": 0.485,
+    "x": 0.48,
     "y": 0.771,
-    "w": 0.05
+    "w": 0.06
+   }
+  ]
+ },
+ {
+  "id": "showcase",
+  "note": "Showcase — proud builds.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "hands-on-hips",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "skyline",
+    "x": 0.7,
+    "y": 0.48,
+    "w": 0.46,
+    "opacity": 0.1
+   },
+   {
+    "type": "trophy",
+    "x": 0.85,
+    "y": 0.754,
+    "w": 0.11
+   },
+   {
+    "type": "marble-run",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.14,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "contact-us",
+  "note": "Contact — friendly chat.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "happy",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "chat-app",
+    "x": 0.85,
+    "y": 0.5,
+    "w": 0.18
    },
    {
     "type": "bubble",
-    "kind": "dots",
-    "x": 0.49,
+    "kind": "heart",
+    "x": 0.47,
     "y": 0.24,
     "w": 0.085,
     "tail": "right"
@@ -106,219 +307,37 @@
   ]
  },
  {
-  "id": "imda-microbit-2025",
-  "note": "micro:bit programme — hand up to answer, oversized micro:bit.",
-  "accent": "red",
-  "headlineSide": "left",
-  "mascot": {
-   "pose": "handraise",
-   "x": 0.57,
-   "y": 0.49,
-   "h": 0.66
-  },
-  "props": [
-   {
-    "type": "microbit",
-    "x": 0.81,
-    "y": 0.692,
-    "w": 0.18
-   },
-   {
-    "type": "bubble",
-    "kind": "zap",
-    "x": 0.45,
-    "y": 0.2,
-    "w": 0.08,
-    "tail": "right",
-    "accent": "orange"
-   },
-   {
-    "type": "robot-buggy",
-    "x": 0.93,
-    "y": 0.745,
-    "w": 0.11
-   }
-  ]
- },
- {
-  "id": "mastering-the-web",
-  "note": "Professional web course — browser window + typed-code laptop, confident thumbs up.",
-  "accent": "teal",
-  "headlineSide": "left",
-  "mascot": {
-   "pose": "thumbsup",
-   "x": 0.645,
-   "y": 0.52,
-   "h": 0.6
-  },
-  "props": [
-   {
-    "type": "browser",
-    "x": 0.865,
-    "y": 0.36,
-    "w": 0.18,
-    "logo": "html5"
-   },
-   {
-    "type": "laptop",
-    "screen": "code",
-    "x": 0.475,
-    "y": 0.8,
-    "w": 0.19,
-    "logo": "javascript"
-   }
-  ]
- },
- {
-  "id": "agentic-ai-for-digital-builders",
-  "note": "Agentic AI course — chat-panel laptop, thinking and code bubbles, finger guns.",
-  "accent": "red",
+  "id": "infocomm-club",
+  "note": "Infocomm club — game dev energy.",
+  "mode": "dark",
+  "accent": "orange",
   "headlineSide": "left",
   "mascot": {
    "pose": "fingerguns",
    "x": 0.63,
-   "y": 0.53,
-   "h": 0.58
+   "y": 0.54,
+   "h": 0.56
   },
   "props": [
    {
     "type": "laptop",
-    "screen": "chat",
+    "screen": "game",
     "x": 0.86,
     "y": 0.8,
     "w": 0.2
    },
    {
-    "type": "bubble",
-    "kind": "dots",
-    "x": 0.46,
-    "y": 0.26,
-    "w": 0.08,
-    "tail": "right"
-   },
-   {
-    "type": "bubble",
-    "kind": "code",
-    "x": 0.9,
-    "y": 0.22,
-    "w": 0.08,
-    "tail": "left",
-    "accent": "teal"
-   }
-  ]
- },
- {
-  "id": "home-dark",
-  "note": "Dark exploration of the homepage scene — spotlight + die-cut sticker halo.",
-  "mode": "dark",
-  "accent": "red",
-  "headlineSide": "left",
-  "mascot": {
-   "pose": "greetings",
-   "x": 0.6,
-   "y": 0.51,
-   "h": 0.62
-  },
-  "props": [
-   {
-    "type": "laptop",
-    "screen": "blocks",
-    "x": 0.85,
-    "y": 0.8,
-    "w": 0.21
-   },
-   {
-    "type": "blocks",
-    "x": 0.71,
-    "y": 0.772,
-    "w": 0.08,
-    "layer": "front"
-   },
-   {
-    "type": "bubble",
-    "kind": "code",
+    "type": "handheld-console",
     "x": 0.47,
-    "y": 0.22,
-    "w": 0.09,
-    "tail": "right"
+    "y": 0.7,
+    "w": 0.11,
+    "ground": true
    }
   ]
  },
  {
-  "id": "courses-schools-dark",
-  "note": "Dark schools listing — pointing at the headline, redrawn micro:bit.",
-  "mode": "dark",
-  "accent": "orange",
-  "headlineSide": "left",
-  "mascot": {
-   "pose": "point-left",
-   "x": 0.68,
-   "y": 0.52,
-   "h": 0.6
-  },
-  "props": [
-   {
-    "type": "microbit",
-    "x": 0.875,
-    "y": 0.706,
-    "w": 0.16,
-    "accent": "red"
-   },
-   {
-    "type": "laptop",
-    "screen": "blocks",
-    "x": 0.48,
-    "y": 0.8,
-    "w": 0.19,
-    "logo": "scratch"
-   }
-  ]
- },
- {
-  "id": "individuals-dark",
-  "note": "Dark self-directed learners scene.",
-  "mode": "dark",
-  "accent": "teal",
-  "headlineSide": "left",
-  "mascot": {
-   "pose": "salute",
-   "x": 0.62,
-   "y": 0.52,
-   "h": 0.6
-  },
-  "props": [
-   {
-    "type": "laptop",
-    "screen": "code",
-    "x": 0.84,
-    "y": 0.8,
-    "w": 0.2
-   },
-   {
-    "type": "phone",
-    "x": 0.955,
-    "y": 0.731,
-    "w": 0.045
-   },
-   {
-    "type": "mug",
-    "x": 0.485,
-    "y": 0.771,
-    "w": 0.05
-   },
-   {
-    "type": "bubble",
-    "kind": "dots",
-    "x": 0.49,
-    "y": 0.24,
-    "w": 0.085,
-    "tail": "right"
-   }
-  ]
- },
- {
-  "id": "imda-microbit-2025-dark",
-  "note": "Dark micro:bit programme — hand raised, redrawn oversized board.",
+  "id": "microbit",
+  "note": "micro:bit tutorials — the full kit.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
@@ -331,144 +350,169 @@
   "props": [
    {
     "type": "microbit",
-    "x": 0.81,
-    "y": 0.692,
-    "w": 0.18
+    "x": 0.8,
+    "y": 0.7,
+    "w": 0.19,
+    "ground": true
    },
    {
-    "type": "bubble",
-    "kind": "zap",
-    "x": 0.45,
-    "y": 0.2,
+    "type": "battery-pack",
+    "x": 0.94,
+    "y": 0.7,
     "w": 0.08,
-    "tail": "right",
-    "accent": "orange"
+    "ground": true
    },
    {
-    "type": "robot-buggy",
-    "x": 0.93,
-    "y": 0.745,
-    "w": 0.11
+    "type": "croc-clips",
+    "x": 0.46,
+    "y": 0.7,
+    "w": 0.13,
+    "ground": true
    }
   ]
  },
  {
-  "id": "mastering-the-web-dark",
-  "note": "Dark professional web course — mascot version, for comparison with the pro variant.",
+  "id": "tinker-x",
+  "note": "Tinker X — launch trajectory.",
   "mode": "dark",
-  "accent": "teal",
+  "accent": "red",
   "headlineSide": "left",
   "mascot": {
-   "pose": "thumbsup",
-   "x": 0.645,
+   "pose": "running-right",
+   "x": 0.6,
+   "y": 0.53,
+   "h": 0.58
+  },
+  "props": [
+   {
+    "type": "rocket",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "bubble",
+    "kind": "zap",
+    "x": 0.47,
+    "y": 0.24,
+    "w": 0.08,
+    "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "advanced-agentic-coding-with-claude-code-or-codex",
+  "note": "Agentic coding — trio of agent windows.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "fingerguns",
+   "x": 0.6,
    "y": 0.52,
    "h": 0.6
   },
   "props": [
    {
-    "type": "browser",
-    "x": 0.865,
-    "y": 0.36,
-    "w": 0.18,
-    "logo": "html5"
+    "type": "agent-cli",
+    "x": 0,
+    "y": 0,
+    "w": 0.15
    },
    {
-    "type": "laptop",
-    "screen": "code",
-    "x": 0.475,
-    "y": 0.8,
-    "w": 0.19,
-    "logo": "javascript"
-   }
-  ]
- },
- {
-  "id": "mastering-the-web-pro-dark",
-  "note": "PRO variant: trio layout — big mascot at the corner behind the work; HTML5-badged browser.",
-  "mode": "dark",
-  "accent": "teal",
-  "headlineSide": "left",
-  "spotlight": {
-   "x": 0.7,
-   "y": 0.45,
-   "r": 0.5
-  },
-  "props": [
-   {
-    "type": "diamond",
-    "outline": true,
-    "x": 0.68,
-    "y": 0.46,
-    "w": 0.24,
-    "opacity": 0.14
-   },
-   {
-    "type": "browser",
-    "logo": "html5"
-   },
-   {
-    "type": "terminal"
+    "type": "code-editor",
+    "x": 0,
+    "y": 0,
+    "w": 0.18
    }
   ],
-  "mascot": {
-   "pose": "thumbsup",
-   "x": 0.945,
-   "y": 0.69,
-   "h": 0.26
-  },
   "layout": "trio"
  },
  {
-  "id": "agentic-ai-pro-dark",
-  "note": "PRO variant: trio layout, Copilot-badged terminal.",
+  "id": "agentic-ai-for-digital-builders",
+  "note": "Agentic AI — chat + agent terminal.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
-  "spotlight": {
-   "x": 0.7,
-   "y": 0.5,
-   "r": 0.5
-  },
   "mascot": {
-   "pose": "ok",
-   "x": 0.93,
-   "y": 0.68,
-   "h": 0.28
-  },
-  "props": [
-   {
-    "type": "diamond",
-    "outline": true,
-    "x": 0.62,
-    "y": 0.42,
-    "w": 0.2,
-    "opacity": 0.12
-   },
-   {
-    "type": "laptop",
-    "screen": "chat"
-   },
-   {
-    "type": "terminal",
-    "accent": "teal",
-    "logo": "githubcopilot"
-   }
-  ],
-  "layout": "trio"
- },
- {
-  "id": "iotmaker-dark",
-  "note": "IoT maker course — breadboard wired to a micro:bit across the scene.",
-  "mode": "dark",
-  "accent": "orange",
-  "headlineSide": "left",
-  "mascot": {
-   "pose": "ok",
+   "pose": "hands-on-hips",
    "x": 0.62,
    "y": 0.52,
    "h": 0.6
   },
   "props": [
+   {
+    "type": "laptop",
+    "screen": "chat",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.2
+   },
+   {
+    "type": "agent-cli",
+    "x": 0.47,
+    "y": 0.36,
+    "w": 0.15
+   }
+  ]
+ },
+ {
+  "id": "build-for-mobile-with-react-native",
+  "note": "React Native — laptop wired to phone.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "ok",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop-phone",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.24,
+    "ground": true
+   },
+   {
+    "type": "bubble",
+    "kind": "code",
+    "x": 0.47,
+    "y": 0.24,
+    "w": 0.085,
+    "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+  "note": "IoT certificate — wired build.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "palm-open",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "breadboard",
+    "x": 0.85,
+    "y": 0.772,
+    "w": 0.18
+   },
+   {
+    "type": "microbit",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   },
    {
     "type": "wire",
     "x": 0.47,
@@ -479,17 +523,413 @@
     "accent": "red"
    },
    {
+    "type": "servo",
+    "x": 0.95,
+    "y": 0.7,
+    "w": 0.08,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+  "note": "Blockchain certificate — linked blocks.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.66,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "blockchain",
+    "x": 0.85,
+    "y": 0.45,
+    "w": 0.18
+   },
+   {
+    "type": "laptop",
+    "screen": "sheet",
+    "x": 0.47,
+    "y": 0.8,
+    "w": 0.18
+   }
+  ]
+ },
+ {
+  "id": "code-exp-2025",
+  "note": "Code EXP — celebration.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "skyline",
+    "x": 0.68,
+    "y": 0.48,
+    "w": 0.5,
+    "opacity": 0.12
+   },
+   {
+    "type": "trophy",
+    "x": 0.86,
+    "y": 0.754,
+    "w": 0.11
+   },
+   {
+    "type": "marble-run",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.13,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "code-for-fun-ai-workshop",
+  "note": "Code For Fun AI — webcam classifier.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "happy",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.21
+   },
+   {
+    "type": "webcam",
+    "x": 0.48,
+    "y": 0.7,
+    "w": 0.1,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "code-for-fun-baseline-workshop",
+  "note": "Code For Fun — blocks + bee-bot.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "greetings",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.21
+   },
+   {
+    "type": "bee-bot",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.14,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "digital-making-with-micro-bit-iot",
+  "note": "Digital making — micro:bit kit.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.68,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.87,
+    "y": 0.7,
+    "w": 0.17,
+    "ground": true
+   },
+   {
+    "type": "battery-pack",
+    "x": 0.48,
+    "y": 0.7,
+    "w": 0.09,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "imda-apple-2025-a",
+  "note": "IMDA Apple A — Swift on iPad.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "yay",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "canvas",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "tablet",
+    "screen": "canvas",
+    "x": 0.47,
+    "y": 0.69,
+    "w": 0.11
+   }
+  ]
+ },
+ {
+  "id": "imda-apple-2025-c",
+  "note": "IMDA Apple C — Swift to device.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "ok",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "phone",
+    "x": 0.47,
+    "y": 0.713,
+    "w": 0.06
+   }
+  ]
+ },
+ {
+  "id": "imda-figma-2025",
+  "note": "IMDA Figma — prototype canvas.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-right",
+   "x": 0.58,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.85,
+    "y": 0.44,
+    "w": 0.19
+   },
+   {
+    "type": "bubble",
+    "kind": "dots",
+    "x": 0.45,
+    "y": 0.24,
+    "w": 0.085,
+    "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "imda-microbit-2025",
+  "note": "IMDA micro:bit — board + buggy.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "handraise",
+   "x": 0.57,
+   "y": 0.49,
+   "h": 0.66
+  },
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.81,
+    "y": 0.7,
+    "w": 0.18,
+    "ground": true
+   },
+   {
+    "type": "robot-buggy",
+    "x": 0.94,
+    "y": 0.7,
+    "w": 0.11,
+    "ground": true
+   },
+   {
+    "type": "bubble",
+    "kind": "zap",
+    "x": 0.45,
+    "y": 0.2,
+    "w": 0.08,
+    "tail": "right",
+    "accent": "orange"
+   }
+  ]
+ },
+ {
+  "id": "imda-minecraft-2025",
+  "note": "IMDA Minecraft — voxel world.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "gasp",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "voxel-blocks",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.17,
+    "ground": true
+   },
+   {
+    "type": "laptop",
+    "screen": "game",
+    "x": 0.47,
+    "y": 0.8,
+    "w": 0.18
+   }
+  ]
+ },
+ {
+  "id": "imda-phaser-2025",
+  "note": "IMDA Phaser — 2D game dev.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "running-right",
+   "x": 0.62,
+   "y": 0.53,
+   "h": 0.58
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "game",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.21,
+    "logo": "javascript"
+   },
+   {
+    "type": "handheld-console",
+    "x": 0.44,
+    "y": 0.7,
+    "w": 0.1,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "imda-unity-2025",
+  "note": "IMDA Unity — 3D viewport.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "monitor",
+    "screen": "scene3d",
+    "logo": "unity",
+    "x": 0.85,
+    "y": 0.655,
+    "w": 0.19
+   },
+   {
+    "type": "vr-headset",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "iotmaker",
+  "note": "IoT maker — wired micro:bit.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "ok",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
     "type": "microbit",
     "x": 0.46,
-    "y": 0.742,
-    "w": 0.11,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "wire",
+    "x": 0.47,
+    "y": 0.7,
+    "x2": 0.83,
+    "y2": 0.72,
+    "sag": 0.09,
     "accent": "red"
    },
    {
     "type": "breadboard",
     "x": 0.85,
     "y": 0.772,
-    "w": 0.16
+    "w": 0.18
    },
    {
     "type": "bubble",
@@ -502,81 +942,349 @@
   ]
  },
  {
-  "id": "imda-unity-2025-dark",
-  "note": "Unity course — desk monitor with a 3D viewport, gamepad on the desk.",
+  "id": "knowledge-powered-ai-with-chatgpt",
+  "note": "Knowledge-powered AI — sources + chat.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
   "mascot": {
-   "pose": "yay",
-   "x": 0.58,
+   "pose": "palm-open",
+   "x": 0.6,
    "y": 0.52,
    "h": 0.6
   },
   "props": [
    {
-    "type": "monitor",
-    "screen": "scene3d",
+    "type": "laptop",
+    "screen": "chat",
     "x": 0.85,
-    "y": 0.66,
-    "w": 0.17,
-    "logo": "unity"
+    "y": 0.8,
+    "w": 0.21
    },
    {
-    "type": "bubble",
-    "kind": "zap",
-    "x": 0.46,
-    "y": 0.22,
-    "w": 0.08,
-    "tail": "right"
-   },
-   {
-    "type": "vr-headset",
-    "x": 0.46,
-    "y": 0.75,
-    "w": 0.1
+    "type": "doc-stack",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
    }
   ]
  },
  {
-  "id": "code-exp-2025-dark",
-  "note": "Code EXP event — skyline backdrop, trophy, celebration.",
+  "id": "mastering-the-web",
+  "note": "Mastering the Web — browser + code.",
   "mode": "dark",
-  "accent": "red",
+  "accent": "teal",
   "headlineSide": "left",
   "mascot": {
-   "pose": "jumping-for-joy",
-   "x": 0.6,
-   "y": 0.5,
+   "pose": "happy",
+   "x": 0.64,
+   "y": 0.52,
    "h": 0.6
   },
   "props": [
    {
-    "type": "skyline",
-    "x": 0.68,
-    "y": 0.4,
-    "w": 0.52,
-    "opacity": 0.16
+    "type": "browser",
+    "x": 0.86,
+    "y": 0.38,
+    "w": 0.18,
+    "logo": "html5"
    },
    {
-    "type": "trophy",
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.475,
+    "y": 0.8,
+    "w": 0.19,
+    "logo": "javascript"
+   }
+  ]
+ },
+ {
+  "id": "microsoft-copilot",
+  "note": "Copilot — spreadsheet + assistant.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.66,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "sheet",
+    "x": 0.85,
+    "y": 0.8,
+    "w": 0.21,
+    "logo": "githubcopilot"
+   },
+   {
+    "type": "chat-app",
+    "x": 0.46,
+    "y": 0.4,
+    "w": 0.15
+   }
+  ]
+ },
+ {
+  "id": "no-code-machine-learning",
+  "note": "No-code ML — webcam + data.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "hands-on-hips",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "webcam",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.11,
+    "ground": true
+   },
+   {
+    "type": "laptop",
+    "screen": "sheet",
+    "x": 0.47,
+    "y": 0.8,
+    "w": 0.18
+   }
+  ]
+ },
+ {
+  "id": "no-code-web-design-framer",
+  "note": "Framer — design to site.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "heart",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.85,
+    "y": 0.42,
+    "w": 0.18
+   },
+   {
+    "type": "browser",
+    "x": 0.47,
+    "y": 0.6,
+    "w": 0.16,
+    "logo": "framer"
+   }
+  ]
+ },
+ {
+  "id": "professional-certificate-in-mobile-application-development",
+  "note": "Mobile cert — code to device.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "ok",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "laptop-phone",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.24,
+    "ground": true
+   },
+   {
+    "type": "code-editor",
+    "x": 0.46,
+    "y": 0.4,
+    "w": 0.15
+   }
+  ]
+ },
+ {
+  "id": "professional-certificate-in-web-application-development",
+  "note": "Web cert — editor + server.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "palm-open",
+   "x": 0.62,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "code-editor",
+    "x": 0.85,
+    "y": 0.42,
+    "w": 0.18
+   },
+   {
+    "type": "server",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.1,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "ri-futurecreate-maker-programme-2025",
+  "note": "RI FutureCreate — maker builds.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "hands-on-hips",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "marble-run",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "cardboard-house",
+    "x": 0.47,
+    "y": 0.7,
+    "w": 0.11,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "swift-accelerator",
+  "note": "Swift Accelerator — launch.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "fingerguns",
+   "x": 0.6,
+   "y": 0.54,
+   "h": 0.56
+  },
+  "props": [
+   {
+    "type": "rocket",
     "x": 0.86,
-    "y": 0.724,
-    "w": 0.09
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.47,
+    "y": 0.8,
+    "w": 0.18,
+    "logo": "swift"
+   }
+  ]
+ },
+ {
+  "id": "unityarvr",
+  "note": "Unity AR/VR — headset first.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "gasp",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "vr-headset",
+    "x": 0.85,
+    "y": 0.7,
+    "w": 0.13,
+    "ground": true
+   },
+   {
+    "type": "monitor",
+    "screen": "scene3d",
+    "logo": "unity",
+    "x": 0.47,
+    "y": 0.68,
+    "w": 0.16
+   }
+  ]
+ },
+ {
+  "id": "vibe-coding-for-digital-builders",
+  "note": "Vibe coding — app builder.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "yay",
+   "x": 0.6,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "app-builder",
+    "x": 0.85,
+    "y": 0.45,
+    "w": 0.19
    },
    {
     "type": "bubble",
-    "kind": "heart",
-    "x": 0.45,
-    "y": 0.22,
-    "w": 0.08,
+    "kind": "dots",
+    "x": 0.47,
+    "y": 0.24,
+    "w": 0.085,
     "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "vibe-coding-for-digital-builders-lovable-replit",
+  "note": "Vibe coding (Lovable/Replit) — chat to app.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.66,
+   "y": 0.52,
+   "h": 0.6
+  },
+  "props": [
+   {
+    "type": "app-builder",
+    "x": 0.84,
+    "y": 0.45,
+    "w": 0.19
    },
    {
-    "type": "marble-run",
-    "x": 0.45,
-    "y": 0.71,
-    "w": 0.11
+    "type": "laptop",
+    "screen": "chat",
+    "x": 0.47,
+    "y": 0.8,
+    "w": 0.15
    }
   ]
  },

@@ -213,3 +213,44 @@ from the locked pack eliminates all three failure classes by construction, runs
 offline in any environment with `pnpm install`, and produces ~25 KB webps. Use
 image generation only for things this system cannot express (photographic
 proof shots, complex environments) — and never for the mascot.
+
+## Minting sticker-props (consolidated guidance)
+
+The full mint workflow, learned across rounds 1–6:
+
+1. **Generate** with the `imagegen` skill (codex `image_gen` via
+   `codex exec -i <style-ref.png> -`, prompt on stdin). Attach a mascot
+   sticker as the style reference. One `codex exec` per asset, run batches in
+   parallel background shells (~2–3 min each; use ≥420s timeouts — a killed
+   batch loses only unfinished items).
+2. **Prompt invariants** (all learned the hard way):
+   - "STRICTLY FLAT — straight-on front view, no perspective, no
+     foreshortening, no three-quarter angles, no visible side faces." Never
+     say "three-quarter view"; it produces 3D-ish output that clashes with
+     the pack.
+   - Chroma: "perfectly flat solid #00ff00 background, no shadows/gradients/
+     reflections; do not use that green in the subject."
+   - Palette lock: black #141414, white/cream, grey #E1E1E1, red #FB0101,
+     orange #FCA403, teal #2E7D74 (+ warm tan for cardboard).
+   - "No readable text, letters, numbers or logos" — screens carry abstract
+     coloured bars only. Tool identity comes from pairing with real
+     simple-icons `logo` badges in the scene, never from fake branding.
+   - App windows: traffic-light dots top-left ONLY; nothing button-like
+     anywhere else in the window. Agent-chat windows follow the real
+     anatomy: user bubble top-right, bullet response bars with inline chips,
+     prompt input box with send button at the bottom.
+   - **No faces or characters on props** — T Krobot is the only character
+     (a cardboard robot prop was vetoed for this).
+3. **Process** with `python3 scripts/banner/process-mint.py <dir> <names>` —
+   de-keys, trims, downscales to 900px, vendors into
+   `reference/stickers/props/`, and emits a light/dark review sheet.
+4. **Record**: add a row to `reference/stickers/props/README.md`, add a
+   specimen entry in `prop-specimen.mjs`, regenerate specimen sheets, and
+   eyeball them before committing. Mint once, lock forever — re-mint only on
+   explicit design review, never regenerate casually.
+
+Sticker props accept `"ground": true` to sit their bottom edge on the scene
+baseline (preferred over hand-computing `y` from the image aspect).
+
+The 33-prop library gives every current programme an identifying object; see
+the README table for the prop → course mapping.

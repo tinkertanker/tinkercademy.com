@@ -148,9 +148,13 @@ export const SCREENS = {
 	},
 	canvas(x0, y0, w, h, acc) {
 		return (
-			`<rect x="${x0 + w * 0.1}" y="${y0 + h * 0.16}" width="${w * 0.34}" height="${h * 0.6}" rx="${h * 0.03}" fill="${T.screen}" stroke="${PALETTE.midgrey}" stroke-width="${h * 0.02}"/>` +
-			`<rect x="${x0 + w * 0.54}" y="${y0 + h * 0.16}" width="${w * 0.34}" height="${h * 0.38}" rx="${h * 0.03}" fill="${T.screen}" stroke="${PALETTE.midgrey}" stroke-width="${h * 0.02}"/>` +
-			`<circle cx="${x0 + w * 0.62}" cy="${y0 + h * 0.68}" r="${h * 0.07}" fill="${acc}"/>`
+			`<rect x="${x0 + w * 0.06}" y="${y0 + h * 0.1}" width="${w * 0.88}" height="${h * 0.8}" rx="${h * 0.03}" fill="${PALETTE.grey}"/>` +
+			`<rect x="${x0 + w * 0.12}" y="${y0 + h * 0.2}" width="${w * 0.32}" height="${h * 0.56}" rx="${h * 0.03}" fill="${T.screen}"/>` +
+			`<rect x="${x0 + w * 0.54}" y="${y0 + h * 0.2}" width="${w * 0.32}" height="${h * 0.36}" rx="${h * 0.03}" fill="${T.screen}"/>` +
+			`<rect x="${x0 + w * 0.18}" y="${y0 + h * 0.3}" width="${w * 0.2}" height="${h * 0.08}" rx="${h * 0.04}" fill="${PALETTE.midgrey}"/>` +
+			`<rect x="${x0 + w * 0.18}" y="${y0 + h * 0.44}" width="${w * 0.14}" height="${h * 0.08}" rx="${h * 0.04}" fill="${acc}"/>` +
+			`<path d="M ${x0 + w * 0.44} ${y0 + h * 0.4} C ${x0 + w * 0.49} ${y0 + h * 0.32}, ${x0 + w * 0.49} ${y0 + h * 0.32}, ${x0 + w * 0.54} ${y0 + h * 0.36}" fill="none" stroke="${acc}" stroke-width="${h * 0.025}"/>` +
+			`<circle cx="${x0 + w * 0.62}" cy="${y0 + h * 0.68}" r="${h * 0.06}" fill="${acc}"/>`
 		);
 	},
 	// 2D platformer: ground, platforms, player block, coins, goal flag
@@ -581,7 +585,8 @@ async function stickerPropSVG(p, mode) {
 	const pw = p.w * W;
 	const ph = (info.height / info.width) * pw;
 	const x0 = p.x * W - pw / 2;
-	const y0 = p.y * H - ph / 2;
+	// ground:true sits the sticker's bottom edge on the scene baseline
+	const y0 = p.ground ? 0.82 * H - ph : p.y * H - ph / 2;
 	const img = (b64) =>
 		`<image href="data:image/png;base64,${b64}" x="${x0}" y="${y0}" width="${pw}" height="${ph}"/>`;
 	let layers = '';
