@@ -586,7 +586,7 @@ async function imagePropSVG(p) {
 	const pw = p.w * W;
 	const ph = (info.height / info.width) * pw;
 	const x0 = p.x * W - pw / 2;
-	const y0 = p.ground ? 0.82 * H - ph : p.y * H - ph / 2;
+	const y0 = p.ground ? 0.79 * H - ph : p.y * H - ph / 2;
 	const opacity = p.opacity != null ? ` opacity="${p.opacity}"` : '';
 	return `<g${opacity}><image href="data:image/png;base64,${data.toString('base64')}" x="${x0}" y="${y0}" width="${pw}" height="${ph}"/></g>`;
 }
@@ -598,7 +598,7 @@ async function stickerPropSVG(p, mode) {
 	const ph = (info.height / info.width) * pw;
 	const x0 = p.x * W - pw / 2;
 	// ground:true sits the sticker's bottom edge on the scene baseline
-	const y0 = p.ground ? 0.82 * H - ph : p.y * H - ph / 2;
+	const y0 = p.ground ? 0.79 * H - ph : p.y * H - ph / 2;
 	const img = (b64) =>
 		`<image href="data:image/png;base64,${b64}" x="${x0}" y="${y0}" width="${pw}" height="${ph}"/>`;
 	let layers = '';
@@ -818,7 +818,7 @@ function darkGround(scene) {
 			<rect width="${W}" height="${H}" fill="url(#ground)"/>
 			<rect width="${W}" height="${H}" fill="url(#dots)"/>
 			<ellipse cx="${spotX * W}" cy="${spotY * H}" rx="${spotR * W}" ry="${spotR * W * 0.82}" fill="url(#spot)"/>
-			<ellipse cx="${spotX * W}" cy="${0.85 * H}" rx="${0.3 * W}" ry="${0.045 * H}" fill="${PALETTE.paper}" opacity="0.05"/>
+			<ellipse cx="${spotX * W}" cy="${0.82 * H}" rx="${0.3 * W}" ry="${0.045 * H}" fill="${PALETTE.paper}" opacity="0.05"/>
 			<rect width="${W}" height="${H}" fill="url(#textguard)"/>`,
 	};
 }
@@ -850,7 +850,7 @@ const LAYOUTS = {
 	// classic: big mascot centre-right, grounded device far right, bubble
 	// upper-left of the mascot, optional small foreground item at its feet
 	hero: {
-		mascot: { x: 0.84, y: 0.51, h: 0.62 },
+		mascot: { x: 0.84, y: 0.48, h: 0.62 },
 		slots: [
 			{ x: 0.53, y: 0.8, w: 0.21 },
 			{ x: 0.72, y: 0.19, w: 0.09, tail: 'right' },
@@ -861,7 +861,7 @@ const LAYOUTS = {
 	// corner — large floating window, medium window in front, big mascot
 	// grounded at the right edge behind the work
 	trio: {
-		mascot: { x: 0.89, y: 0.57, h: 0.5 },
+		mascot: { x: 0.89, y: 0.54, h: 0.5 },
 		slots: [
 			{ x: 0.55, y: 0.4, w: 0.24 },
 			{ x: 0.73, y: 0.64, w: 0.18, layer: 'front' },
@@ -885,7 +885,7 @@ function applyLayout(scene) {
 			// grounded prop types sit on the scene baseline regardless of the
 			// slot's y (which is tuned for floating windows)
 			if (BOTTOM_OFFSET[p.type]) {
-				p.y = 0.82 - BOTTOM_OFFSET[p.type](p.w * W) / H;
+				p.y = 0.79 - BOTTOM_OFFSET[p.type](p.w * W) / H;
 			}
 		}
 	}

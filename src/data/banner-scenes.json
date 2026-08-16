@@ -8,7 +8,7 @@
   "mascot": {
    "pose": "greetings",
    "x": 0.84,
-   "y": 0.59,
+   "y": 0.56,
    "h": 0.46
   },
   "props": [
@@ -16,13 +16,13 @@
     "type": "laptop",
     "screen": "blocks",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21
    },
    {
     "type": "blocks",
     "x": 0.7,
-    "y": 0.772,
+    "y": 0.742,
     "w": 0.08,
     "layer": "front"
    },
@@ -30,7 +30,7 @@
     "type": "bubble",
     "kind": "code",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.09,
     "tail": "right"
    }
@@ -45,7 +45,7 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -53,14 +53,14 @@
     "type": "laptop",
     "screen": "blocks",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.2,
     "logo": "scratch"
    },
    {
     "type": "microbit",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.17,
     "ground": true
    }
@@ -75,7 +75,7 @@
   "mascot": {
    "pose": "thumbsup",
    "x": 0.6,
-   "y": 0.52,
+   "y": 0.49,
    "h": 0.44
   },
   "props": [
@@ -99,7 +99,7 @@
   "mascot": {
    "pose": "salute",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -107,21 +107,21 @@
     "type": "laptop",
     "screen": "code",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21,
     "logo": "javascript"
    },
    {
     "type": "mug",
     "x": 0.7,
-    "y": 0.771,
+    "y": 0.741,
     "w": 0.06
    },
    {
     "type": "bubble",
     "kind": "dots",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.085,
     "tail": "right"
    }
@@ -136,7 +136,7 @@
   "mascot": {
    "pose": "jumping-for-joy",
    "x": 0.84,
-   "y": 0.615,
+   "y": 0.585,
    "h": 0.41
   },
   "props": [
@@ -144,13 +144,13 @@
     "type": "laptop",
     "screen": "canvas",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.22
    },
    {
     "type": "handheld-console",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.1,
     "ground": true,
     "layer": "front"
@@ -166,21 +166,21 @@
   "mascot": {
    "pose": "yay",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "microbit",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.18,
     "ground": true
    },
    {
     "type": "bee-bot",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.15,
     "ground": true
    }
@@ -195,20 +195,20 @@
   "mascot": {
    "pose": "ok",
    "x": 0.6,
-   "y": 0.52,
+   "y": 0.49,
    "h": 0.44
   },
   "props": [
    {
     "type": "agent-cli",
     "x": 0,
-    "y": 0,
+    "y": -0.03,
     "w": 0.15
    },
    {
     "type": "code-editor",
     "x": 0,
-    "y": 0,
+    "y": -0.03,
     "w": 0.18
    }
   ],
@@ -223,14 +223,14 @@
   "mascot": {
    "pose": "heart",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "skyline",
     "x": 0.55,
-    "y": 0.5,
+    "y": 0.47,
     "w": 0.6,
     "opacity": 0.18
    }
@@ -245,27 +245,27 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "skyline",
     "x": 0.6,
-    "y": 0.48,
+    "y": 0.45,
     "w": 0.46,
     "opacity": 0.1
    },
    {
     "type": "trophy",
     "x": 0.5,
-    "y": 0.754,
+    "y": 0.724,
     "w": 0.11
    },
    {
     "type": "marble-run",
     "x": 0.66,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.14,
     "ground": true
    }
@@ -280,21 +280,21 @@
   "mascot": {
    "pose": "happy",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "chat-app",
     "x": 0.55,
-    "y": 0.5,
+    "y": 0.47,
     "w": 0.18
    },
    {
     "type": "bubble",
     "kind": "heart",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.085,
     "tail": "right"
    }
@@ -309,7 +309,7 @@
   "mascot": {
    "pose": "fingerguns",
    "x": 0.84,
-   "y": 0.615,
+   "y": 0.585,
    "h": 0.41
   },
   "props": [
@@ -317,13 +317,13 @@
     "type": "laptop",
     "screen": "game",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.2
    },
    {
     "type": "handheld-console",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.11,
     "ground": true
    }
@@ -338,28 +338,28 @@
   "mascot": {
    "pose": "handraise",
    "x": 0.84,
-   "y": 0.575,
+   "y": 0.545,
    "h": 0.49
   },
   "props": [
    {
     "type": "microbit",
     "x": 0.5,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.19,
     "ground": true
    },
    {
     "type": "battery-pack",
     "x": 0.64,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.08,
     "ground": true
    },
    {
     "type": "croc-clips",
     "x": 0.74,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.13,
     "ground": true
    }
@@ -374,35 +374,35 @@
   "mascot": {
    "pose": "running-left",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "ultrasonic-sensor",
     "x": 0.45,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.08,
     "ground": true
    },
    {
     "type": "soldering-iron",
     "x": 0.55,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.1,
     "ground": true
    },
    {
     "type": "croc-clips",
     "x": 0.66,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.09,
     "ground": true
    },
    {
     "type": "cardboard-house",
     "x": 0.755,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.09,
     "ground": true
    }
@@ -417,20 +417,20 @@
   "mascot": {
    "pose": "fingerguns",
    "x": 0.6,
-   "y": 0.52,
+   "y": 0.49,
    "h": 0.44
   },
   "props": [
    {
     "type": "agent-cli",
     "x": 0,
-    "y": 0,
+    "y": -0.03,
     "w": 0.15
    },
    {
     "type": "code-editor",
     "x": 0,
-    "y": 0,
+    "y": -0.03,
     "w": 0.18
    }
   ],
@@ -445,7 +445,7 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -453,13 +453,13 @@
     "type": "laptop",
     "screen": "chat",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.2
    },
    {
     "type": "agent-cli",
     "x": 0.7,
-    "y": 0.36,
+    "y": 0.33,
     "w": 0.15
    }
   ]
@@ -473,14 +473,14 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "laptop-phone",
     "x": 0.55,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.24,
     "ground": true
    },
@@ -488,7 +488,7 @@
     "type": "bubble",
     "kind": "code",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.085,
     "tail": "right"
    }
@@ -503,36 +503,36 @@
   "mascot": {
    "pose": "palm-open",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "breadboard",
     "x": 0.5,
-    "y": 0.772,
+    "y": 0.742,
     "w": 0.18
    },
    {
     "type": "microbit",
     "x": 0.64,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.12,
     "ground": true
    },
    {
     "type": "wire",
     "x": 0.5,
-    "y": 0.7,
+    "y": 0.67,
     "x2": 0.64,
-    "y2": 0.72,
+    "y2": 0.69,
     "sag": 0.09,
     "accent": "red"
    },
    {
     "type": "servo",
     "x": 0.74,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.08,
     "ground": true
    }
@@ -547,21 +547,21 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "blockchain",
     "x": 0.53,
-    "y": 0.45,
+    "y": 0.42,
     "w": 0.18
    },
    {
     "type": "laptop",
     "screen": "sheet",
     "x": 0.7,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.18
    }
   ]
@@ -575,27 +575,27 @@
   "mascot": {
    "pose": "jumping-for-joy",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "skyline",
     "x": 0.6,
-    "y": 0.48,
+    "y": 0.45,
     "w": 0.5,
     "opacity": 0.12
    },
    {
     "type": "trophy",
     "x": 0.53,
-    "y": 0.754,
+    "y": 0.724,
     "w": 0.11
    },
    {
     "type": "marble-run",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.13,
     "ground": true
    }
@@ -610,7 +610,7 @@
   "mascot": {
    "pose": "happy",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -618,13 +618,13 @@
     "type": "laptop",
     "screen": "blocks",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21
    },
    {
     "type": "webcam",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.1,
     "ground": true
    }
@@ -639,7 +639,7 @@
   "mascot": {
    "pose": "greetings",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -647,13 +647,13 @@
     "type": "laptop",
     "screen": "blocks",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21
    },
    {
     "type": "bee-bot",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.14,
     "ground": true
    }
@@ -668,21 +668,21 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "microbit",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.17,
     "ground": true
    },
    {
     "type": "battery-pack",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.09,
     "ground": true
    }
@@ -697,7 +697,7 @@
   "mascot": {
    "pose": "yay",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -705,7 +705,7 @@
     "type": "laptop",
     "screen": "canvas",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21,
     "logo": "swift"
    },
@@ -713,7 +713,7 @@
     "type": "tablet",
     "screen": "canvas",
     "x": 0.7,
-    "y": 0.69,
+    "y": 0.66,
     "w": 0.11
    }
   ]
@@ -727,7 +727,7 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -735,14 +735,14 @@
     "type": "laptop",
     "screen": "code",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21,
     "logo": "swift"
    },
    {
     "type": "phone",
     "x": 0.7,
-    "y": 0.713,
+    "y": 0.683,
     "w": 0.06
    }
   ]
@@ -756,7 +756,7 @@
   "mascot": {
    "pose": "point-right",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44,
    "flip": true
   },
@@ -764,14 +764,14 @@
    {
     "type": "design-app",
     "x": 0.55,
-    "y": 0.44,
+    "y": 0.41,
     "w": 0.19
    },
    {
     "type": "bubble",
     "kind": "dots",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.085,
     "tail": "right"
    }
@@ -786,21 +786,21 @@
   "mascot": {
    "pose": "handraise",
    "x": 0.84,
-   "y": 0.575,
+   "y": 0.545,
    "h": 0.49
   },
   "props": [
    {
     "type": "microbit",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.18,
     "ground": true
    },
    {
     "type": "robot-buggy",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.11,
     "ground": true
    },
@@ -808,7 +808,7 @@
     "type": "bubble",
     "kind": "zap",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.08,
     "tail": "right",
     "accent": "orange"
@@ -824,14 +824,14 @@
   "mascot": {
    "pose": "gasp",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "voxel-blocks",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.17,
     "ground": true
    },
@@ -839,7 +839,7 @@
     "type": "laptop",
     "screen": "game",
     "x": 0.7,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.18
    }
   ]
@@ -853,7 +853,7 @@
   "mascot": {
    "pose": "running-right",
    "x": 0.84,
-   "y": 0.605,
+   "y": 0.575,
    "h": 0.43
   },
   "props": [
@@ -861,14 +861,14 @@
     "type": "laptop",
     "screen": "game",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21,
     "logo": "javascript"
    },
    {
     "type": "handheld-console",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.1,
     "ground": true
    }
@@ -883,7 +883,7 @@
   "mascot": {
    "pose": "thumbsup",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -892,13 +892,13 @@
     "screen": "scene3d",
     "logo": "unity",
     "x": 0.53,
-    "y": 0.655,
+    "y": 0.625,
     "w": 0.19
    },
    {
     "type": "vr-headset",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.12,
     "ground": true
    }
@@ -913,37 +913,37 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "microbit",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.12,
     "ground": true
    },
    {
     "type": "wire",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "x2": 0.7,
-    "y2": 0.72,
+    "y2": 0.69,
     "sag": 0.09,
     "accent": "red"
    },
    {
     "type": "breadboard",
     "x": 0.7,
-    "y": 0.772,
+    "y": 0.742,
     "w": 0.18
    },
    {
     "type": "bubble",
     "kind": "bulb",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.08,
     "tail": "right"
    }
@@ -958,7 +958,7 @@
   "mascot": {
    "pose": "palm-open",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -966,13 +966,13 @@
     "type": "laptop",
     "screen": "chat",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21
    },
    {
     "type": "doc-stack",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.12,
     "ground": true
    }
@@ -987,14 +987,14 @@
   "mascot": {
    "pose": "happy",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "browser",
     "x": 0.53,
-    "y": 0.38,
+    "y": 0.35,
     "w": 0.18,
     "logo": "html5"
    },
@@ -1002,7 +1002,7 @@
     "type": "laptop",
     "screen": "code",
     "x": 0.7,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.19,
     "logo": "javascript"
    }
@@ -1017,7 +1017,7 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
@@ -1025,14 +1025,14 @@
     "type": "laptop",
     "screen": "sheet",
     "x": 0.53,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.21,
     "logo": "githubcopilot"
    },
    {
     "type": "chat-app",
     "x": 0.7,
-    "y": 0.4,
+    "y": 0.37,
     "w": 0.15
    }
   ]
@@ -1046,14 +1046,14 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "webcam",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.11,
     "ground": true
    },
@@ -1061,7 +1061,7 @@
     "type": "laptop",
     "screen": "sheet",
     "x": 0.7,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.18
    }
   ]
@@ -1075,20 +1075,20 @@
   "mascot": {
    "pose": "heart",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "design-app",
     "x": 0.53,
-    "y": 0.42,
+    "y": 0.39,
     "w": 0.18
    },
    {
     "type": "browser",
     "x": 0.7,
-    "y": 0.6,
+    "y": 0.57,
     "w": 0.16,
     "logo": "framer"
    }
@@ -1103,21 +1103,21 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "laptop-phone",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.24,
     "ground": true
    },
    {
     "type": "code-editor",
     "x": 0.7,
-    "y": 0.4,
+    "y": 0.37,
     "w": 0.15
    }
   ]
@@ -1131,20 +1131,20 @@
   "mascot": {
    "pose": "palm-open",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "code-editor",
     "x": 0.53,
-    "y": 0.42,
+    "y": 0.39,
     "w": 0.18
    },
    {
     "type": "server",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.1,
     "ground": true
    }
@@ -1159,21 +1159,21 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "marble-run",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.12,
     "ground": true
    },
    {
     "type": "cardboard-house",
     "x": 0.7,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.11,
     "ground": true
    }
@@ -1188,14 +1188,14 @@
   "mascot": {
    "pose": "fingerguns",
    "x": 0.84,
-   "y": 0.615,
+   "y": 0.585,
    "h": 0.41
   },
   "props": [
    {
     "type": "rocket",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.12,
     "ground": true
    },
@@ -1203,7 +1203,7 @@
     "type": "laptop",
     "screen": "code",
     "x": 0.7,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.18,
     "logo": "swift"
    }
@@ -1218,14 +1218,14 @@
   "mascot": {
    "pose": "gasp",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "vr-headset",
     "x": 0.53,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.13,
     "ground": true
    },
@@ -1234,7 +1234,7 @@
     "screen": "scene3d",
     "logo": "unity",
     "x": 0.7,
-    "y": 0.68,
+    "y": 0.65,
     "w": 0.16
    }
   ]
@@ -1248,21 +1248,21 @@
   "mascot": {
    "pose": "yay",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "app-builder",
     "x": 0.55,
-    "y": 0.45,
+    "y": 0.42,
     "w": 0.19
    },
    {
     "type": "bubble",
     "kind": "dots",
     "x": 0.72,
-    "y": 0.32,
+    "y": 0.29,
     "w": 0.085,
     "tail": "right"
    }
@@ -1277,21 +1277,21 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.6,
+   "y": 0.57,
    "h": 0.44
   },
   "props": [
    {
     "type": "app-builder",
     "x": 0.53,
-    "y": 0.45,
+    "y": 0.42,
     "w": 0.19
    },
    {
     "type": "laptop",
     "screen": "chat",
     "x": 0.7,
-    "y": 0.8,
+    "y": 0.77,
     "w": 0.15
    }
   ]
@@ -1315,7 +1315,7 @@
   "mascot": {
    "pose": "greetings",
    "x": 0.92,
-   "y": 0.675,
+   "y": 0.645,
    "h": 0.29
   },
   "props": [
@@ -1329,7 +1329,7 @@
     "type": "diamond",
     "outline": true,
     "x": 0.72,
-    "y": 0.42,
+    "y": 0.39,
     "w": 0.2,
     "opacity": 0.15
    }
@@ -1350,7 +1350,7 @@
   "mascot": {
    "pose": "thumbsup",
    "x": 0.68,
-   "y": 0.65,
+   "y": 0.62,
    "h": 0.34
   },
   "props": [
@@ -1358,13 +1358,13 @@
     "type": "image",
     "src": "reference/logos/swift-accelerator-dark.png",
     "x": 0.5,
-    "y": 0.44,
+    "y": 0.41,
     "w": 0.17
    },
    {
     "type": "rocket",
     "x": 0.33,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.09,
     "ground": true
    }
@@ -1384,27 +1384,27 @@
   "mascot": {
    "pose": "happy",
    "x": 0.5,
-   "y": 0.665,
+   "y": 0.635,
    "h": 0.31
   },
   "props": [
    {
     "type": "code-editor",
     "x": 0.29,
-    "y": 0.46,
+    "y": 0.43,
     "w": 0.15
    },
    {
     "type": "design-app",
     "x": 0.5,
-    "y": 0.36,
+    "y": 0.33,
     "w": 0.15
    },
    {
     "type": "browser",
     "screen": "game",
     "x": 0.71,
-    "y": 0.46,
+    "y": 0.43,
     "w": 0.16
    }
   ]
@@ -1423,7 +1423,7 @@
   "mascot": {
    "pose": "jumping-for-joy",
    "x": 0.5,
-   "y": 0.58,
+   "y": 0.55,
    "h": 0.42
   },
   "props": [
@@ -1431,26 +1431,26 @@
     "type": "browser",
     "screen": "blocks",
     "x": 0.29,
-    "y": 0.44,
+    "y": 0.41,
     "w": 0.16
    },
    {
     "type": "chat-app",
     "x": 0.71,
-    "y": 0.44,
+    "y": 0.41,
     "w": 0.14
    },
    {
     "type": "microbit",
     "x": 0.3,
-    "y": 0.7,
+    "y": 0.67,
     "w": 0.13,
     "ground": true
    },
    {
     "type": "blocks",
     "x": 0.7,
-    "y": 0.772,
+    "y": 0.742,
     "w": 0.08
    }
   ]
