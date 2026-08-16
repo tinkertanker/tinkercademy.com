@@ -44,13 +44,13 @@ const href = `/programmes/${slug}/`;
 const cardImage = getResponsiveImage(heroImage, { maxWidth: 960 });
 const CARD_SIZES = '(max-width: 560px) calc(100vw - 26px), 400px';
 
-// Audience badge colour:  Students / Teachers → brand red,  Businesses / Public → blue
-// (darkened shades so the white badge text meets WCAG AA 4.5:1 contrast)
+// Audience badge colour: unified brand coral across all audiences
+// (darkened shade so the white badge text meets WCAG AA 4.5:1 contrast)
 const AUDIENCE_COLOURS: Record<string, string> = {
 	students: 'var(--accent-dark)',
 	teachers: 'var(--accent-dark)',
-	businesses: '#0071c1',
-	public: '#0071c1',
+	businesses: 'var(--accent-dark)',
+	public: 'var(--accent-dark)',
 };
 const badgeColour = AUDIENCE_COLOURS[audienceId] ?? 'var(--accent-dark)';
 ---
