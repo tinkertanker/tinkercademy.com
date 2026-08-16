@@ -8,8 +8,8 @@
   "mascot": {
    "pose": "greetings",
    "x": 0.84,
-   "y": 0.51,
-   "h": 0.62
+   "y": 0.59,
+   "h": 0.46
   },
   "props": [
    {
@@ -30,7 +30,7 @@
     "type": "bubble",
     "kind": "code",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.09,
     "tail": "right"
    }
@@ -45,8 +45,8 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -76,7 +76,7 @@
    "pose": "thumbsup",
    "x": 0.6,
    "y": 0.52,
-   "h": 0.6
+   "h": 0.44
   },
   "props": [
    {
@@ -99,8 +99,8 @@
   "mascot": {
    "pose": "salute",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -121,7 +121,7 @@
     "type": "bubble",
     "kind": "dots",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.085,
     "tail": "right"
    }
@@ -136,8 +136,8 @@
   "mascot": {
    "pose": "jumping-for-joy",
    "x": 0.84,
-   "y": 0.54,
-   "h": 0.56
+   "y": 0.615,
+   "h": 0.41
   },
   "props": [
    {
@@ -166,8 +166,8 @@
   "mascot": {
    "pose": "yay",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -196,7 +196,7 @@
    "pose": "ok",
    "x": 0.6,
    "y": 0.52,
-   "h": 0.6
+   "h": 0.44
   },
   "props": [
    {
@@ -223,8 +223,8 @@
   "mascot": {
    "pose": "heart",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -245,8 +245,8 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -280,8 +280,8 @@
   "mascot": {
    "pose": "happy",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -294,7 +294,7 @@
     "type": "bubble",
     "kind": "heart",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.085,
     "tail": "right"
    }
@@ -309,8 +309,8 @@
   "mascot": {
    "pose": "fingerguns",
    "x": 0.84,
-   "y": 0.54,
-   "h": 0.56
+   "y": 0.615,
+   "h": 0.41
   },
   "props": [
    {
@@ -338,8 +338,8 @@
   "mascot": {
    "pose": "handraise",
    "x": 0.84,
-   "y": 0.49,
-   "h": 0.66
+   "y": 0.575,
+   "h": 0.49
   },
   "props": [
    {
@@ -367,31 +367,44 @@
  },
  {
   "id": "tinker-x",
-  "note": "Tinker X — launch trajectory.",
+  "note": "Tinker X — running left toward a maker-tool spread.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
   "mascot": {
-   "pose": "running-right",
+   "pose": "running-left",
    "x": 0.84,
-   "y": 0.53,
-   "h": 0.58
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
-    "type": "rocket",
-    "x": 0.55,
+    "type": "ultrasonic-sensor",
+    "x": 0.45,
     "y": 0.7,
-    "w": 0.12,
+    "w": 0.08,
     "ground": true
    },
    {
-    "type": "bubble",
-    "kind": "zap",
-    "x": 0.72,
-    "y": 0.25,
-    "w": 0.08,
-    "tail": "right"
+    "type": "soldering-iron",
+    "x": 0.55,
+    "y": 0.7,
+    "w": 0.1,
+    "ground": true
+   },
+   {
+    "type": "croc-clips",
+    "x": 0.66,
+    "y": 0.7,
+    "w": 0.09,
+    "ground": true
+   },
+   {
+    "type": "cardboard-house",
+    "x": 0.755,
+    "y": 0.7,
+    "w": 0.09,
+    "ground": true
    }
   ]
  },
@@ -405,7 +418,7 @@
    "pose": "fingerguns",
    "x": 0.6,
    "y": 0.52,
-   "h": 0.6
+   "h": 0.44
   },
   "props": [
    {
@@ -432,8 +445,8 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -460,8 +473,8 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -475,7 +488,7 @@
     "type": "bubble",
     "kind": "code",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.085,
     "tail": "right"
    }
@@ -490,8 +503,8 @@
   "mascot": {
    "pose": "palm-open",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -534,8 +547,8 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -562,8 +575,8 @@
   "mascot": {
    "pose": "jumping-for-joy",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -597,8 +610,8 @@
   "mascot": {
    "pose": "happy",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -626,8 +639,8 @@
   "mascot": {
    "pose": "greetings",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -655,8 +668,8 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -684,8 +697,8 @@
   "mascot": {
    "pose": "yay",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -714,8 +727,8 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -743,8 +756,8 @@
   "mascot": {
    "pose": "point-right",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6,
+   "y": 0.6,
+   "h": 0.44,
    "flip": true
   },
   "props": [
@@ -758,7 +771,7 @@
     "type": "bubble",
     "kind": "dots",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.085,
     "tail": "right"
    }
@@ -773,8 +786,8 @@
   "mascot": {
    "pose": "handraise",
    "x": 0.84,
-   "y": 0.49,
-   "h": 0.66
+   "y": 0.575,
+   "h": 0.49
   },
   "props": [
    {
@@ -795,7 +808,7 @@
     "type": "bubble",
     "kind": "zap",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.08,
     "tail": "right",
     "accent": "orange"
@@ -811,8 +824,8 @@
   "mascot": {
    "pose": "gasp",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -840,8 +853,8 @@
   "mascot": {
    "pose": "running-right",
    "x": 0.84,
-   "y": 0.53,
-   "h": 0.58
+   "y": 0.605,
+   "h": 0.43
   },
   "props": [
    {
@@ -870,8 +883,8 @@
   "mascot": {
    "pose": "thumbsup",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -900,8 +913,8 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -930,7 +943,7 @@
     "type": "bubble",
     "kind": "bulb",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.08,
     "tail": "right"
    }
@@ -945,8 +958,8 @@
   "mascot": {
    "pose": "palm-open",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -974,8 +987,8 @@
   "mascot": {
    "pose": "happy",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1004,8 +1017,8 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1033,8 +1046,8 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1062,8 +1075,8 @@
   "mascot": {
    "pose": "heart",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1090,8 +1103,8 @@
   "mascot": {
    "pose": "ok",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1118,8 +1131,8 @@
   "mascot": {
    "pose": "palm-open",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1146,8 +1159,8 @@
   "mascot": {
    "pose": "hands-on-hips",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1175,8 +1188,8 @@
   "mascot": {
    "pose": "fingerguns",
    "x": 0.84,
-   "y": 0.54,
-   "h": 0.56
+   "y": 0.615,
+   "h": 0.41
   },
   "props": [
    {
@@ -1205,8 +1218,8 @@
   "mascot": {
    "pose": "gasp",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1235,8 +1248,8 @@
   "mascot": {
    "pose": "yay",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
@@ -1249,7 +1262,7 @@
     "type": "bubble",
     "kind": "dots",
     "x": 0.72,
-    "y": 0.25,
+    "y": 0.32,
     "w": 0.085,
     "tail": "right"
    }
@@ -1264,8 +1277,8 @@
   "mascot": {
    "pose": "point-left",
    "x": 0.84,
-   "y": 0.52,
-   "h": 0.6
+   "y": 0.6,
+   "h": 0.44
   },
   "props": [
    {
