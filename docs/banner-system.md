@@ -81,14 +81,19 @@ Freeform x/y still works for scenes that need something bespoke.
    `y = 0.82 − h/2`. Grounded props get a ground shadow automatically; put
    their origin so their bottom lands on the baseline (laptop origin *is* its
    base: `y: 0.8`). Only bubbles, browser windows, and sparkles float.
-3. **The formula: one robot, one screen, one-plus props.** A scene is one
+3. **The mascot is the rightmost element.** Content (device, props) occupies
+   the middle band (~x 0.45–0.75); the robot stands at x ≈ 0.84 engaging with
+   it — pointing, saluting, reacting. Poses that point off-canvas get
+   `flip: true`. (Centred compositions are for `headlineSide: "none"` cards
+   only.) Page-hero bands share one height: `clamp(420px, 56vh, 580px)`.
+4. **The formula: one robot, one screen, one-plus props.** A scene is one
    mascot pose + one device·screen combo + one or two *physical* sticker-props
    that identify the course (prefer a minted object over a second screen —
    the library exists so scenes don't read as generic screen icons). At most
    one bubble. If a prop doesn't help a stranger guess the course, cut it.
-4. **Mascot scale** `h` between 0.55 and 0.66. Wide poses (fingerguns,
+5. **Mascot scale** `h` between 0.55 and 0.66. Wide poses (fingerguns,
    jumping-for-joy) need smaller `h`; narrow poses (handraise) larger.
-5. **Vary adjacent placements.** Cards that sit next to each other in a listing
+6. **Vary adjacent placements.** Cards that sit next to each other in a listing
    should differ in pose *and* silhouette (a floating window vs a big
    micro:bit vs a bubble cluster), not just accent.
 

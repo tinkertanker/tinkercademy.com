@@ -850,11 +850,11 @@ const LAYOUTS = {
 	// classic: big mascot centre-right, grounded device far right, bubble
 	// upper-left of the mascot, optional small foreground item at its feet
 	hero: {
-		mascot: { x: 0.6, y: 0.51, h: 0.62 },
+		mascot: { x: 0.84, y: 0.51, h: 0.62 },
 		slots: [
-			{ x: 0.85, y: 0.8, w: 0.21 },
-			{ x: 0.47, y: 0.22, w: 0.09, tail: 'right' },
-			{ x: 0.7, y: 0.772, w: 0.08, layer: 'front' },
+			{ x: 0.53, y: 0.8, w: 0.21 },
+			{ x: 0.72, y: 0.19, w: 0.09, tail: 'right' },
+			{ x: 0.68, y: 0.772, w: 0.08, layer: 'front' },
 		],
 	},
 	// bottom-right trio: three elements stepping down in size toward the
