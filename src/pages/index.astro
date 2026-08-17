@@ -651,10 +651,12 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-partners__track {
+		--home-partners-gap: clamp(1.5rem, 4vw, 3.25rem);
 		display: flex;
 		width: max-content;
 		align-items: center;
-		gap: clamp(1.5rem, 4vw, 3.25rem);
+		/* Trailing margin, not gap: flex gap has one fewer slot than items,
+		   so translateX(-50%) is short by half a gap and the loop snaps. */
 		animation: home-marquee 45s linear infinite;
 		will-change: transform;
 	}
@@ -664,6 +666,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		align-items: center;
 		justify-content: center;
 		flex: 0 0 auto;
+		margin-inline-end: var(--home-partners-gap);
 		opacity: 0.8;
 		transition: opacity 0.15s;
 	}
@@ -831,10 +834,10 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-certs__track {
+		--home-certs-gap: clamp(1.5rem, 3vw, 2.75rem);
 		display: flex;
 		width: max-content;
 		align-items: center;
-		gap: clamp(1.5rem, 3vw, 2.75rem);
 		animation: home-marquee 55s linear infinite;
 		will-change: transform;
 	}
@@ -846,6 +849,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		max-width: 160px;
 		object-fit: contain;
 		flex: 0 0 auto;
+		margin-inline-end: var(--home-certs-gap);
 	}
 
 	/* ─── Flagship ───────────────────────────────────────────────────── */
