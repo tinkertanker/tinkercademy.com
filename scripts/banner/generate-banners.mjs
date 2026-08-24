@@ -563,7 +563,7 @@ function diamond(w, { accent = 'red', outline = false }) {
 export const PROPS = {
 	laptop, monitor, tablet, browser, terminal, phone,
 	microbit, breadboard, gamepad,
-	bubble, blocks, mug, books, sticky, trophy, skyline, diamond,
+	bubble, blocks, mug, books, sticky, trophy, diamond,
 };
 
 // ── Sticker props ─────────────────────────────────────────────────
@@ -914,7 +914,7 @@ export async function renderScene(rawScene) {
 			// photo sits under the gradient; the gradient becomes a tint
 			const img = await photoLayer(scene.photo);
 			ground = ground.replace('<rect width="1600" height="900" fill="url(#ground)"/>',
-				`${img}<rect width="${W}" height="${H}" fill="url(#ground)" opacity="0.8"/>`);
+				`${img}<rect width="${W}" height="${H}" fill="url(#ground)" opacity="${scene.photo.tint ?? 0.8}"/>`);
 		}
 	}
 	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">

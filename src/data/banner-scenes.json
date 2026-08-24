@@ -64,7 +64,13 @@
     "w": 0.14,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "professionals",
@@ -88,7 +94,13 @@
     "layer": "front"
    }
   ],
-  "layout": "trio"
+  "layout": "trio",
+  "photo": {
+   "src": "/images/generated/hero-review/professionals/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "individuals",
@@ -131,7 +143,13 @@
     "y": 0.715,
     "w": 0.045
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/individuals/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "courses-all",
@@ -161,7 +179,13 @@
     "ground": true,
     "layer": "front"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/showcase/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "courses-schools",
@@ -218,7 +242,13 @@
     "w": 0.18
    }
   ],
-  "layout": "trio"
+  "layout": "trio",
+  "photo": {
+   "src": "/images/generated/hero-review/courses-professionals/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "about-us",
@@ -233,13 +263,6 @@
    "h": 0.44
   },
   "props": [
-   {
-    "type": "skyline",
-    "x": 0.55,
-    "y": 0.44,
-    "w": 0.6,
-    "opacity": 0.18
-   },
    {
     "type": "books",
     "x": 0.5,
@@ -259,7 +282,13 @@
     "y": 0.733,
     "w": 0.05
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/contact-hero.jpg",
+   "darken": 0.34,
+   "sat": 0.2,
+   "tint": 0.84
+  }
  },
  {
   "id": "showcase",
@@ -274,13 +303,6 @@
    "h": 0.44
   },
   "props": [
-   {
-    "type": "skyline",
-    "x": 0.6,
-    "y": 0.42,
-    "w": 0.46,
-    "opacity": 0.1
-   },
    {
     "type": "trophy",
     "x": 0.47,
@@ -301,7 +323,13 @@
     "w": 0.09,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/1mmWhHMr6MnhWIa0MEoHFHdS4I.jpg",
+   "darken": 0.32,
+   "sat": 0.18,
+   "tint": 0.85
+  }
  },
  {
   "id": "contact-us",
@@ -342,7 +370,13 @@
     "w": 0.08,
     "tail": "right"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/contact-hero.jpg",
+   "darken": 0.34,
+   "sat": 0.2,
+   "tint": 0.84
+  }
  },
  {
   "id": "infocomm-club",
@@ -377,7 +411,13 @@
     "y": 0.739,
     "w": 0.08
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/infocomm-club/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "microbit",
@@ -484,7 +524,13 @@
     "w": 0.18
    }
   ],
-  "layout": "trio"
+  "layout": "trio",
+  "photo": {
+   "src": "/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "agentic-ai-for-digital-builders",
@@ -512,7 +558,13 @@
     "y": 0.3,
     "w": 0.15
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "build-for-mobile-with-react-native",
@@ -542,7 +594,13 @@
     "w": 0.085,
     "tail": "right"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
@@ -586,7 +644,13 @@
     "w": 0.08,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
@@ -614,11 +678,17 @@
     "y": 0.74,
     "w": 0.18
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/certificate-blockchain-technology/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "code-exp-2025",
-  "note": "Code EXP — celebration.",
+  "note": "Code EXP — web-dev competition: code, site, trophy.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
@@ -630,26 +700,33 @@
   },
   "props": [
    {
-    "type": "skyline",
-    "x": 0.6,
-    "y": 0.42,
-    "w": 0.5,
-    "opacity": 0.12
+    "type": "laptop",
+    "screen": "code",
+    "logo": "javascript",
+    "x": 0.48,
+    "y": 0.74,
+    "w": 0.18
+   },
+   {
+    "type": "browser",
+    "logo": "html5",
+    "x": 0.63,
+    "y": 0.36,
+    "w": 0.15
    },
    {
     "type": "trophy",
-    "x": 0.53,
-    "y": 0.694,
-    "w": 0.11
-   },
-   {
-    "type": "marble-run",
-    "x": 0.7,
-    "y": 0.64,
-    "w": 0.13,
-    "ground": true
+    "x": 0.74,
+    "y": 0.726,
+    "w": 0.1
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/code-exp-2025/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "code-for-fun-ai-workshop",
@@ -678,7 +755,13 @@
     "w": 0.1,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "code-for-fun-baseline-workshop",
@@ -701,10 +784,10 @@
     "w": 0.21
    },
    {
-    "type": "bee-bot",
+    "type": "microbit",
     "x": 0.7,
     "y": 0.64,
-    "w": 0.14,
+    "w": 0.13,
     "ground": true
    }
   ]
@@ -736,7 +819,13 @@
     "w": 0.09,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/digital-making-with-micro-bit-iot/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-apple-2025-a",
@@ -766,7 +855,13 @@
     "y": 0.63,
     "w": 0.11
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-apple-2025-c",
@@ -795,7 +890,13 @@
     "y": 0.653,
     "w": 0.06
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-figma-2025",
@@ -825,7 +926,13 @@
     "w": 0.085,
     "tail": "right"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-microbit-2025",
@@ -863,7 +970,13 @@
     "tail": "right",
     "accent": "orange"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-microbit-2025/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-minecraft-2025",
@@ -892,7 +1005,13 @@
     "y": 0.74,
     "w": 0.18
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-minecraft-2025/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-phaser-2025",
@@ -922,7 +1041,13 @@
     "w": 0.1,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-phaser-2025/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "imda-unity-2025",
@@ -952,7 +1077,13 @@
     "w": 0.12,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-unity-2025/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "iotmaker",
@@ -997,7 +1128,13 @@
     "w": 0.08,
     "tail": "right"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/iotmaker/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "knowledge-powered-ai-with-chatgpt",
@@ -1026,7 +1163,13 @@
     "w": 0.12,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "mastering-the-web",
@@ -1056,7 +1199,13 @@
     "w": 0.19,
     "logo": "javascript"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/mastering-the-web/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "microsoft-copilot",
@@ -1085,7 +1234,13 @@
     "y": 0.34,
     "w": 0.15
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/microsoft-copilot/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "no-code-machine-learning",
@@ -1114,7 +1269,13 @@
     "y": 0.74,
     "w": 0.18
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/no-code-machine-learning/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "no-code-web-design-framer",
@@ -1142,7 +1303,13 @@
     "w": 0.16,
     "logo": "framer"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "professional-certificate-in-mobile-application-development",
@@ -1170,7 +1337,13 @@
     "y": 0.34,
     "w": 0.15
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/professional-certificate-in-mobile-application-development/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "professional-certificate-in-web-application-development",
@@ -1198,7 +1371,13 @@
     "w": 0.1,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/professional-certificate-in-web-application-development/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "ri-futurecreate-maker-programme-2025",
@@ -1287,7 +1466,13 @@
     "y": 0.62,
     "w": 0.16
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/unityarvr/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "vibe-coding-for-digital-builders",
@@ -1316,7 +1501,13 @@
     "w": 0.085,
     "tail": "right"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "vibe-coding-for-digital-builders-lovable-replit",
@@ -1344,47 +1535,13 @@
     "y": 0.74,
     "w": 0.15
    }
-  ]
- },
- {
-  "id": "professionals-photo-dark",
-  "note": "Faded-photo backdrop + trio layout.",
-  "mode": "dark",
-  "accent": "teal",
-  "headlineSide": "left",
-  "photo": {
-   "src": "/images/generated/hero-review/professionals/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.22
-  },
-  "spotlight": {
-   "x": 0.7,
-   "y": 0.45,
-   "r": 0.5
-  },
-  "mascot": {
-   "pose": "greetings",
-   "x": 0.92,
-   "y": 0.615,
-   "h": 0.29
-  },
-  "props": [
-   {
-    "type": "browser"
-   },
-   {
-    "type": "terminal"
-   },
-   {
-    "type": "diamond",
-    "outline": true,
-    "x": 0.72,
-    "y": 0.36,
-    "w": 0.2,
-    "opacity": 0.15
-   }
   ],
-  "layout": "trio"
+  "photo": {
+   "src": "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp",
+   "darken": 0.3,
+   "sat": 0.15,
+   "tint": 0.86
+  }
  },
  {
   "id": "flagship-swift-accelerator",
@@ -1406,10 +1563,10 @@
   "props": [
    {
     "type": "image",
-    "src": "reference/logos/swift-accelerator-dark.png",
+    "src": "reference/logos/swift-accelerator-icon-dark.png",
     "x": 0.5,
-    "y": 0.38,
-    "w": 0.17
+    "y": 0.42,
+    "w": 0.13
    },
    {
     "type": "rocket",
@@ -1422,7 +1579,7 @@
  },
  {
   "id": "flagship-imda-learn",
-  "note": "Flagship card — symmetric arc of design/code/game windows, mascot centre.",
+  "note": "Flagship card — robot in front, three windows receding behind.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "none",
@@ -1434,28 +1591,31 @@
   "mascot": {
    "pose": "happy",
    "x": 0.5,
-   "y": 0.605,
-   "h": 0.31
+   "y": 0.53,
+   "h": 0.46
   },
   "props": [
    {
     "type": "code-editor",
-    "x": 0.29,
-    "y": 0.4,
-    "w": 0.15
+    "x": 0.66,
+    "y": 0.31,
+    "w": 0.11,
+    "opacity": 0.45
    },
    {
     "type": "design-app",
-    "x": 0.5,
-    "y": 0.3,
-    "w": 0.15
+    "x": 0.57,
+    "y": 0.36,
+    "w": 0.14,
+    "opacity": 0.65
    },
    {
     "type": "browser",
     "screen": "game",
-    "x": 0.71,
-    "y": 0.4,
-    "w": 0.16
+    "x": 0.44,
+    "y": 0.42,
+    "w": 0.17,
+    "opacity": 0.9
    }
   ]
  },
@@ -1496,12 +1656,6 @@
     "y": 0.64,
     "w": 0.13,
     "ground": true
-   },
-   {
-    "type": "blocks",
-    "x": 0.7,
-    "y": 0.712,
-    "w": 0.08
    }
   ]
  }

@@ -51,7 +51,6 @@ const ITEMS = [
 	{ label: 'books', type: 'books', w: 150 },
 	{ label: 'sticky', type: 'sticky', w: 130 },
 	{ label: 'trophy', type: 'trophy', w: 110 },
-	{ label: 'skyline', type: 'skyline', w: 210, opacity: 0.85 },
 	{ label: 'diamond', type: 'diamond', w: 80 },
 	{ label: 'diamond·outline', type: 'diamond', outline: true, w: 80 },
 	{ label: 'face (sticker)', type: 'face', w: 150 },
