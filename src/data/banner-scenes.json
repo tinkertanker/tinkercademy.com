@@ -67,9 +67,9 @@
   ],
   "photo": {
    "src": "/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -97,9 +97,9 @@
   "layout": "trio",
   "photo": {
    "src": "/images/generated/hero-review/professionals/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -146,9 +146,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/individuals/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -182,9 +182,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/showcase/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -245,9 +245,9 @@
   "layout": "trio",
   "photo": {
    "src": "/images/generated/hero-review/courses-professionals/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -285,9 +285,9 @@
   ],
   "photo": {
    "src": "/images/contact-hero.jpg",
-   "darken": 0.34,
-   "sat": 0.2,
-   "tint": 0.84
+   "darken": 0.44,
+   "sat": 0.3,
+   "tint": 0.76
   }
  },
  {
@@ -326,9 +326,9 @@
   ],
   "photo": {
    "src": "/images/1mmWhHMr6MnhWIa0MEoHFHdS4I.jpg",
-   "darken": 0.32,
-   "sat": 0.18,
-   "tint": 0.85
+   "darken": 0.42,
+   "sat": 0.28,
+   "tint": 0.77
   }
  },
  {
@@ -373,9 +373,9 @@
   ],
   "photo": {
    "src": "/images/contact-hero.jpg",
-   "darken": 0.34,
-   "sat": 0.2,
-   "tint": 0.84
+   "darken": 0.44,
+   "sat": 0.3,
+   "tint": 0.76
   }
  },
  {
@@ -414,9 +414,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/infocomm-club/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -527,9 +527,9 @@
   "layout": "trio",
   "photo": {
    "src": "/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -561,9 +561,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -597,9 +597,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -647,9 +647,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -681,9 +681,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/certificate-blockchain-technology/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -723,9 +723,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/code-exp-2025/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -758,9 +758,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -822,9 +822,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/digital-making-with-micro-bit-iot/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -858,9 +858,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -893,9 +893,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -929,9 +929,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -973,9 +973,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-microbit-2025/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1008,9 +1008,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-minecraft-2025/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1044,9 +1044,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-phaser-2025/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1080,9 +1080,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-unity-2025/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1131,9 +1131,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/iotmaker/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1166,9 +1166,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1202,9 +1202,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/mastering-the-web/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1237,9 +1237,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/microsoft-copilot/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1272,9 +1272,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/no-code-machine-learning/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1306,9 +1306,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1340,9 +1340,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/professional-certificate-in-mobile-application-development/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1374,9 +1374,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/professional-certificate-in-web-application-development/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1469,9 +1469,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/unityarvr/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1504,9 +1504,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -1538,9 +1538,9 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp",
-   "darken": 0.3,
-   "sat": 0.15,
-   "tint": 0.86
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
