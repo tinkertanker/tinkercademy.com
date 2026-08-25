@@ -145,7 +145,7 @@
    }
   ],
   "photo": {
-   "src": "/images/generated/hero-review/individuals/cdx_001.webp",
+   "src": "/images/6gctHPSd4luM1PjI9WIcmXL25k.jpg",
    "darken": 0.4,
    "sat": 0.25,
    "tint": 0.78
@@ -214,7 +214,13 @@
     "w": 0.15,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  },
  {
   "id": "courses-professionals",
@@ -325,10 +331,10 @@
    }
   ],
   "photo": {
-   "src": "/images/1mmWhHMr6MnhWIa0MEoHFHdS4I.jpg",
-   "darken": 0.42,
-   "sat": 0.28,
-   "tint": 0.77
+   "src": "/images/generated/hero-review/showcase/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
   }
  },
  {
@@ -453,7 +459,13 @@
     "w": 0.13,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/originals/microbit-page-hero.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  },
  {
   "id": "tinker-x",
@@ -496,7 +508,13 @@
     "w": 0.09,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/3cybNehmDehCXeBSMBiUWGpbgI.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  },
  {
   "id": "advanced-agentic-coding-with-claude-code-or-codex",
@@ -790,7 +808,13 @@
     "w": 0.13,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/code-for-fun-flagship/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  },
  {
   "id": "digital-making-with-micro-bit-iot",
@@ -1406,7 +1430,13 @@
     "w": 0.11,
     "ground": true
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  },
  {
   "id": "swift-accelerator",
@@ -1436,7 +1466,13 @@
     "w": 0.18,
     "logo": "swift"
    }
-  ]
+  ],
+  "photo": {
+   "src": "/images/HcdNlviMb6etFvqiKcJkxSLAtHQ.jpeg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  },
  {
   "id": "unityarvr",
