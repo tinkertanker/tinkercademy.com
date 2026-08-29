@@ -1,0 +1,170 @@
+---
+title: "Viennale Annals IV: In-Depth Light Remote Electronics"
+subtitle: "Editor’s note: Read Parts 1, 2, and 3 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…"
+description: "Editor’s note: Read Parts 1, 2, and 3 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…"
+legacyPath: viennale-annals-iv-light-panel-electronics-a6b721038fe7
+canonicalUrl: https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7
+sourceMediumUrl: https://medium.com/tinkertanker/viennale-annals-iv-light-panel-electronics-a6b721038fe7
+author:
+  id: e3592718b554
+  name: Melvin Foo
+  handle: foomelvin
+  profileUrl: https://medium.com/@foomelvin
+publishedAt: 2018-08-09T04:44:34.607Z
+updatedAt: 2018-08-13T23:26:48.978Z
+tags:
+  - name: I2c
+    slug: i2c
+  - name: Signal Processing
+    slug: signal-processing
+  - name: Electrical Engineering
+    slug: electrical-engineering
+  - name: Making
+    slug: making
+  - name: Makers
+    slug: makers
+license: All rights reserved
+rightsStatus: review-required
+heroImage: /blog-media/8ff1a56929ab62c230a03c0de5eb5f20d023ba08e496f3567897fb92777a0ef3.jpg
+heroAlt: The “Light Sabres” (background), the “Light Sabre” remote (foreground), and the Arduino MKR1000 (right).
+heroAltDecision: meaningful
+provenance:
+  mediumId: a6b721038fe7
+  publicationId: ca1fc9543b6f
+  sourceSha256: 45f8d466bf7e342986d67d4d6971f90ab795d9ded9f2cb5f9024063dea8eddb9
+migration:
+  paragraphCount: 42
+  imageCount: 12
+  embedCount: 3
+  altReviewRequired: 1
+---
+
+import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+
+<em>Editor’s note: Read </em><em><a href="https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015">Parts 1</a></em><em>, </em><em><a href="https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb">2</a></em><em>, and </em><em><a href="https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558">3</a></em><em> first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale, </em><em><a href="http://nomorefreespace.com">No More Free Space</a></em><em>, a project we undertook in collaboration with the Singapore University of Technology &amp; Design. Concluding the story with a tale of extreme signal processing is Melvin, our intern who’s just started school at NTU:</em>
+
+Steven and Sarah’s plan was to use CE-certified lights for the panels so as to ensure there would not be any safety issues (almost 1000W of power) whilst adhering to European law (we’re a law-abiding company 😄).
+
+However, the lights’ remotes had no obvious programming interfaces, so there was no easy way to control them with a computer. I was tasked to develop that interface.
+
+{/* medium-image:0*dVdh-4oHDS5VY99f alt-decision:meaningful */}
+
+![The “Light Sabres” (background), the “Light Sabre” remote (foreground), and the Arduino MKR1000 (right).](/blog-media/8ff1a56929ab62c230a03c0de5eb5f20d023ba08e496f3567897fb92777a0ef3.jpg)
+
+<em>The “Light Sabres” (background), the “Light Sabre” remote (foreground), and the Arduino MKR1000 (right).</em>
+
+I started out by disassembling the casing, but instead of the push-buttons and potentiometer I was expecting, I was met with… capacitive buttons and rings. Luckily, the internet had tons of documentation on how capacitive touch sensors worked.
+
+{/* medium-image:0*MdhgSsSKcXUSNck2 alt-decision:meaningful */}
+
+![Strange green PCB that definitely has not been tampered with](/blog-media/af39420e2c0595162142510c931a4cca8ab6be9a0ed36d8c52e81bb5d54b9e86.jpg)
+
+<em>Strange green PCB that definitely has not been tampered with</em>
+
+## How do capacitive touch sensors work?
+
+An average human body has a capacitance of 100 picofarads. Thus, when you touch one of the pads, you have essentially “added” a 100 picofarad capacitor to ground. While this is happening, the touch IC is constantly sending sawtooth signals at a fixed frequency every once in awhile.
+
+{/* medium-image:0*VZONeTdxncj3tbqs alt-decision:meaningful */}
+
+![Example of a sawtooth signal](/blog-media/d8958326e47bdf8acc8f458c9d7f244b3e2dc04050ca5134e0c3e70ddda8aa16.jpg)
+
+<em>Example of a sawtooth signal</em>
+
+A capacitor is basically a small and fast charging battery. So when the voltage is rising, it takes longer to rise to the maximum as it’s “charging the battery”. By extension, when the voltage is decreasing, it also takes longer to reach the minimum as the battery is “discharging” into the circuit (A more eloquent explanation at <a href="https://youtu.be/mWR9Q_pTagw?t=2m28s">this YouTube video</a>).
+
+Since the time taken to discharge and charge is increased, this means there is also an increase in the frequency of the sawtooth signal. The IC detects this change in frequency and once it passes a certain threshold, a button is flagged as being pressed.
+
+> <strong>TLDR: </strong>Our body is able to store and release some electricity. When we touch the sensor, it decreases the frequency of the electrical signal that the sensor sends out. The microchip senses this change in frequency.
+
+## <strong>First Prototype</strong>
+
+{/* medium-image:0*ay75eGo8LcH7ZGjp alt-decision:meaningful */}
+
+![“What did I sign up for in this internship again?”](/blog-media/6c372d979004040ed686ccec23363a8eedf54b0c5b9aa092d23e722d94bf0453.jpg)
+
+<em>“What did I sign up for in this internship again?”</em>
+
+My first “bright” idea (pictured above) was to literally simulate touches by connecting 100 picofarad capacitor to the pads. I decided to use relays as switches because transistors have capacitance themselves (which would “trigger” the button press). Surprisingly, the device worked! Unfortunately, it wasn’t able to emulate the smooth colour transitions of the capacitive ring. Reliability and space usage also left a lot to be desired, ahem.
+
+## Second Prototype
+
+{/* medium-image:1*G4wdMtbtIn94OutWOfI1BQ.png alt-decision:meaningful */}
+
+![Left: Other side of the PCB. Right: using the oscilloscope to probe the board](/blog-media/b1b5fb7c69757b18374441f960dbfb8a3f605507facad2dbc6719abe8c9fe502.png)
+
+<em>Left: Other side of the PCB. Right: using the oscilloscope to probe the board</em>
+
+Looking on the other side of the PCB, there were 3 chips. I theorised that these were a capacitive chip, a micro-controller, and a wifi chip. Why didn’t I just look up the data sheets? It turns out the manufacturer actually ground off the chips models in an effort to thwart their competitors from copying their design (is this a common practice?). Even when we contacted them directly, they were unwilling to disclose the models of the chips.
+
+It was pretty challenging dealing with SMD (surface-mount device) electronics. Even simple probing can be quite challenging. I had to learn how to solder jumper wires on the <em>tiny</em> pins (tips: blue-tac to hold stuff, use a really hot iron, pre-tin everything, and <em>use lots of flux!!</em>) just to be able to probe them.
+
+After lots of investigation (<em>ahem</em>, trial and error), I managed to reverse-engineer the pins that were responsible for communication between the microcontroller and the capacitive touch IC and also the protocol running on it. I decided to hijack this part as the button presses would predictability activate certain signals on the oscilloscope.
+
+## Decoding the Electrical Gibberish
+
+Having access to what I thought was the data, clock and sleep lines was just the beginning, more importantly, I had to use my secret “sophisticated” method to <strong>totally hack </strong>the code.
+
+{/* medium-image:0*H4aBMyfnCqHTq23S alt-decision:meaningful */}
+
+![Imma hackerrrrrr. Source.](/blog-media/02fc659b4799b6ece22a2682ea7b4b8b23b2e000384f5f5751c8455a6c7db693.gif)
+
+<em>Imma hackerrrrrr. Source.</em>
+
+So… my method was to primitively activate a button and then frantically write down the bit value for each clock edge. I would then proceed to pull my hair out in trying to match the binary data to some sort of message.
+
+After two (or what felt like an eternity of) days of trying to figuring out the protocol, a very kind Steven asked a magical question: <em>“err… did you know we have a logic analyser?”</em>
+
+{/* medium-image:1*q1mA4kcqFVC3syBDxl_WdQ.png alt-decision:meaningful */}
+
+![Writing and brain vs logic analyser. No contest. Source; source.](/blog-media/b06de0b4dc25c6e3848d9cad2706f3cdcc3a8da03bf51aa5da62b94834c1c37b.png)
+
+<em>Writing and brain vs logic analyser. No contest. Source; source.</em>
+
+A logic analyser was <em>the</em><em><strong> </strong></em>perfect tool for the task, it even had a I2C decoder which decoded what each bit meant—namely, addresses, read or write, and the actual data payload.
+
+Since I could now read the signals, the next step was to write. To do that, I had to disconnect the existing wiring, an irreversible step. Luckily, the firmware I wrote worked! While Steven continued to worked on the web server so we could communicate with the lights wireless, I improved upon the firmware controlling the remote.
+
+Simultaneously, the shipment of lights and remotes came in and I was in charge of unpacking, checking, unpairing (with the wrong remotes) , pairing (with the right remotes) , labeling, re-packing and shipment of almost 220 remotes! I have a newfound respect for delivery men and QC officers after 2 days of hard work.
+
+<ArticleEmbed provider="youtube" href={"https://youtu.be/YX9_9OFFKtM"} title={"Testing and shipment"} />
+
+At this point, I’ll let the pictures do the talking:
+
+{/* medium-image:0*iCtBwaVIHxeX5Mbk alt-decision:meaningful */}
+
+![Precisely soldered connections, ready to ship.](/blog-media/47ed7812a6d67bee5aa4d4f53f1e17f8bbb0bdbd5dd591ca2bb316c32ca40873.jpg)
+
+<em>Precisely soldered connections, ready to ship.</em>
+
+And we were off to Venice to complete the set-up!
+
+{/* medium-image:0*J_Aj_Q71BfigkkSY alt-decision:meaningful */}
+
+![Fixing bugs in Venice](/blog-media/3b91543ea59351bf058c8e293d250000f59ff28788908ae6fb853b470c0b2925.jpg)
+
+<em>Fixing bugs in Venice</em>
+
+{/* medium-image:1*ll3P12SbqrjGNwXuanoCkg.png alt-decision:meaningful */}
+
+![We had weird URL timeout errors, which were fixed by just repositioning the router and optimising the channel width.](/blog-media/4ed875f7ff9ed80cbafb298d18500c36a1334e85d2dd04dca7b7465673d14543.png)
+
+<em>We had weird URL timeout errors, which were fixed by just repositioning the router and optimising the channel width.</em>
+
+{/* medium-image:0*cpMjQHIXYhPbhaom alt-decision:meaningful */}
+
+![We introduced a interlacing pattern & a delay between commands to reduce interference between remotes.](/blog-media/658372522ae68afec76d94ef6637ce7ef96d2711b3f6cf5845ad8820b1568280.jpg)
+
+<em>We introduced a interlacing pattern &amp; a delay between commands to reduce interference between remotes.</em>
+
+<ArticleEmbed provider="youtube" href={"https://youtu.be/1pqGFNId9Ek"} title={"Subtly changing light panels"} />
+
+<ArticleEmbed provider="youtube" href={"https://youtu.be/LgqW48BgYGM"} title={"Disco?"} />
+
+{/* medium-image:1*ek71y95VhALHNWavXhqOmw.jpeg alt-decision:review-required */}
+
+![](/blog-media/95bd576058e89a54486a1988c31ff1e583c8cf1325de6ecdcc021f61e5b65c4f.jpg)
+
+And that’s it! I think the launch went well, and the exhibit is on-going until November 2018. Look up the official website at <a href="http://nomorefreespace.com">nomorefreespace.com</a> for news.
+
+Thank you Tinkertanker for giving me this opportunity (I tried my best)! I would like to specially thank Sarah and Steven for rallying together when times were tough!

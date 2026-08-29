@@ -284,7 +284,7 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById })
 	}
 
 	return {
-		body: blocks.join('\n\n'),
+		body: blocks.join('\n\n').replace(/[ \t]+$/gmu, ''),
 		altDecisions,
 		embedCount,
 		renderedParagraphs: story.paragraphs.length - (skippedTitle ? 1 : 0),
