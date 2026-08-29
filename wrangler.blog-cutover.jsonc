@@ -1,3 +1,5 @@
+// Prepared configuration only. Do not deploy this file until the Medium
+// custom-domain detachment and blog cutover have been explicitly approved.
 {
 	"name": "tinkercademy-dot-com",
 	"main": "./worker.mjs",
@@ -10,6 +12,7 @@
 		"run_worker_first": true
 	},
 	"routes": [
-		{ "pattern": "tinkercademy.com", "custom_domain": true }
+		{ "pattern": "tinkercademy.com", "custom_domain": true },
+		{ "pattern": "blog.tinkercademy.com", "custom_domain": true }
 	]
 }

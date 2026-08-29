@@ -1,0 +1,166 @@
+---
+// The Worker maps blog.tinkercademy.com/ to this isolated build route.
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import {
+	BLOG_DESCRIPTION,
+	BLOG_FEED_URL,
+	BLOG_ORIGIN,
+	BLOG_TITLE,
+	formatBlogDate,
+	getBlogStories,
+	getBlogYears,
+} from '../../lib/blog';
+
+const stories = await getBlogStories();
+const years = getBlogYears(stories);
+const blogSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Blog',
+	name: BLOG_TITLE,
+	description: BLOG_DESCRIPTION,
+	url: `${BLOG_ORIGIN}/`,
+	publisher: { '@type': 'Organization', name: 'Tinkertanker Pte Ltd', url: 'https://tinkercademy.com/' },
+};
+---
+
+<ContentLayout
+	title={`${BLOG_TITLE} — Tinkercademy`}
+	description={BLOG_DESCRIPTION}
+	canonical={`${BLOG_ORIGIN}/`}
+	internalLinkOrigin="https://tinkercademy.com"
+	showSearch={false}
+	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
+	structuredData={blogSchema}
+>
+	<header class="blog-hero">
+		<div class="shell">
+			<p class="eyebrow">Tinkercademy</p>
+			<h1>{BLOG_TITLE}</h1>
+			<p>{BLOG_DESCRIPTION}</p>
+			<nav aria-label="Article archives">
+				<span>Archive:</span>
+				{years.map((year) => <a href={`${BLOG_ORIGIN}/archive/${year}/`}>{year}</a>)}
+				<a href={BLOG_FEED_URL}>RSS</a>
+			</nav>
+		</div>
+	</header>
+
+	<section class="blog-list shell" aria-labelledby="all-stories">
+		<h2 id="all-stories">All stories</h2>
+		<ul>
+			{stories.map((story) => (
+				<li>
+					<a class="story-card" href={story.data.canonicalUrl}>
+						{story.data.heroImage && (
+							<img src={story.data.heroImage} alt="" loading="lazy" decoding="async" />
+						)}
+						<span class="story-card__copy">
+							<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+							<strong>{story.data.title}</strong>
+							<span>{story.data.author.name}</span>
+							{story.data.subtitle && <span class="story-card__summary">{story.data.subtitle}</span>}
+						</span>
+					</a>
+				</li>
+			))}
+		</ul>
+	</section>
+</ContentLayout>
+
+<style>
+	.blog-hero {
+		padding: 4rem 0 3rem;
+		background: linear-gradient(135deg, #342c68, #251e51);
+		color: #fff;
+	}
+
+	.blog-hero h1 {
+		max-width: 18ch;
+		margin: 0;
+		font-family: var(--heading);
+		font-size: var(--page-title-font-size);
+		line-height: 1;
+	}
+
+	.blog-hero p:not(.eyebrow) {
+		max-width: 60ch;
+		margin: 1rem 0;
+	}
+
+	.blog-hero nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 0.9rem;
+		font-size: 0.9rem;
+	}
+
+	.blog-hero nav a {
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+	}
+
+	.blog-list {
+		padding-top: 2.5rem;
+		padding-bottom: 4rem;
+	}
+
+	.blog-list h2 {
+		font-family: var(--heading);
+		font-size: 2rem;
+	}
+
+	.blog-list ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+		gap: 1.25rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.story-card {
+		display: grid;
+		grid-template-rows: auto 1fr;
+		height: 100%;
+		overflow: hidden;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 0.9rem;
+		background: #fff;
+		text-decoration: none;
+	}
+
+	.story-card img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+	}
+
+	.story-card__copy {
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+		padding: 1.1rem;
+	}
+
+	.story-card time,
+	.story-card__copy > span:not(.story-card__summary) {
+		font-size: 0.82rem;
+		color: rgb(95, 95, 95);
+	}
+
+	.story-card strong {
+		font-family: var(--heading);
+		font-size: 1.2rem;
+		line-height: 1.25;
+	}
+
+	.story-card__summary {
+		display: -webkit-box;
+		overflow: hidden;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		font-size: 0.9rem;
+		line-height: 1.45;
+		color: rgb(75, 75, 75);
+	}
+</style>

@@ -1,0 +1,183 @@
+---
+// The Worker serves this build route at the unchanged legacy story path.
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, formatBlogDate } from '../../lib/blog';
+
+export async function getStaticPaths() {
+	return (await getCollection('blog')).map((story) => ({
+		params: { legacyPath: story.data.legacyPath },
+		props: { story },
+	}));
+}
+
+const { story } = Astro.props as { story: CollectionEntry<'blog'> };
+const { Content } = await render(story);
+const modifiedAt = story.data.updatedAt ?? story.data.publishedAt;
+const absoluteImage = story.data.heroImage ? new URL(story.data.heroImage, BLOG_ORIGIN).toString() : undefined;
+const articleSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: story.data.title,
+	description: story.data.description,
+	url: story.data.canonicalUrl,
+	mainEntityOfPage: story.data.canonicalUrl,
+	datePublished: story.data.publishedAt.toISOString(),
+	dateModified: modifiedAt.toISOString(),
+	author: {
+		'@type': 'Person',
+		name: story.data.author.name,
+		...(story.data.author.profileUrl ? { url: story.data.author.profileUrl } : {}),
+	},
+	publisher: { '@type': 'Organization', name: 'Tinkertanker Pte Ltd', url: 'https://tinkercademy.com/' },
+	...(absoluteImage ? { image: absoluteImage } : {}),
+	copyrightNotice: 'All rights reserved. Copyright ownership remains with the applicable rights holder.',
+	isPartOf: { '@type': 'Blog', name: BLOG_TITLE, url: `${BLOG_ORIGIN}/` },
+};
+---
+
+<ContentLayout
+	title={`${story.data.title} — ${BLOG_TITLE}`}
+	description={story.data.description}
+	canonical={story.data.canonicalUrl}
+	image={story.data.heroImage}
+	ogType="article"
+	internalLinkOrigin="https://tinkercademy.com"
+	showSearch={false}
+	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
+	structuredData={articleSchema}
+>
+	<article class="blog-article">
+		<header class="blog-article__header shell">
+			<p class="blog-article__home"><a href={`${BLOG_ORIGIN}/`}>{BLOG_TITLE}</a></p>
+			<h1>{story.data.title}</h1>
+			{story.data.subtitle && <p class="blog-article__subtitle">{story.data.subtitle}</p>}
+			<p class="blog-article__byline">
+				By
+				{story.data.author.profileUrl ? (
+					<a href={story.data.author.profileUrl} rel="author">{story.data.author.name}</a>
+				) : story.data.author.name}
+				<span aria-hidden="true"> · </span>
+				<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+			</p>
+		</header>
+
+		<div class="blog-article__body prose shell">
+			<Content />
+		</div>
+
+		<footer class="blog-article__footer shell">
+			<p><strong>{story.data.license}.</strong> Copyright ownership remains with the credited author or other applicable rights holder.</p>
+			{story.data.sourceMediumUrl && (
+				<p><a href={story.data.sourceMediumUrl} rel="alternate">View the original article on Medium</a>.</p>
+			)}
+		</footer>
+	</article>
+</ContentLayout>
+
+<style>
+	.blog-article__header {
+		max-width: 52rem;
+		padding-top: 3.5rem;
+		padding-bottom: 2rem;
+	}
+
+	.blog-article__home {
+		margin: 0 0 1.25rem;
+		font-size: 0.85rem;
+		font-weight: 500;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--accent-dark);
+	}
+
+	.blog-article__header h1 {
+		margin: 0;
+		font-family: var(--heading);
+		font-size: var(--page-title-font-size);
+		line-height: 1.05;
+	}
+
+	.blog-article__subtitle {
+		max-width: 60ch;
+		margin: 1rem 0;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
+		color: rgb(80, 80, 80);
+	}
+
+	.blog-article__byline {
+		margin: 1rem 0 0;
+		color: rgb(85, 85, 85);
+	}
+
+	.blog-article__byline a,
+	.blog-article__home a,
+	.blog-article__footer a {
+		color: var(--accent-dark);
+		text-underline-offset: 0.18em;
+	}
+
+	.blog-article__body {
+		max-width: 52rem;
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+	}
+
+	.blog-article__body :global(p),
+	.blog-article__body :global(li),
+	.blog-article__body :global(blockquote) {
+		font-size: 1rem;
+		line-height: 1.7;
+	}
+
+	.blog-article__body :global(h2) {
+		font-size: 1.7rem;
+	}
+
+	.blog-article__body :global(h3) {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+
+	.blog-article__body :global(img) {
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		margin: 1.75rem auto 0.5rem;
+		border-radius: 0.5rem;
+	}
+
+	.blog-article__body :global(blockquote) {
+		margin: 1.5rem 0;
+		padding-left: 1rem;
+		border-left: 4px solid rgba(189, 58, 52, 0.55);
+		color: rgb(70, 70, 70);
+	}
+
+	.blog-article__body :global(pre) {
+		overflow-x: auto;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		background: rgb(35, 35, 35);
+		color: #fff;
+	}
+
+	.blog-article__body :global(code) {
+		font-family: 'Fragment Mono', monospace;
+	}
+
+	.blog-article__body :global(:not(pre) > code) {
+		overflow-wrap: anywhere;
+	}
+
+	.blog-article__footer {
+		max-width: 52rem;
+		padding-top: 1.5rem;
+		padding-bottom: 4rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.12);
+		font-size: 0.9rem;
+		color: rgb(75, 75, 75);
+	}
+</style>

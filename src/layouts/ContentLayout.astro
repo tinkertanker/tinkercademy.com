@@ -11,6 +11,10 @@ const {
 	image = site.siteSettings?.default_seo?.openGraph?.image ?? null,
 	ogType = 'website',
 	noindex = false,
+	alternateFeed = null,
+	structuredData = [],
+	internalLinkOrigin = null,
+	showSearch = true,
 	/* Optional LCP hero image preload: { src, srcset?, sizes? } */
 	preloadHero = null,
 } = Astro.props;
@@ -41,6 +45,7 @@ const organisationSchema = {
 		.map((link) => link?.url)
 		.filter((url): url is string => typeof url === 'string' && /^https?:\/\//i.test(url)),
 };
+const additionalSchemas = Array.isArray(structuredData) ? structuredData : [structuredData];
 ---
 
 <!doctype html>
@@ -51,6 +56,7 @@ const organisationSchema = {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
+		{alternateFeed && <link rel="alternate" type="application/rss+xml" title={alternateFeed.title} href={alternateFeed.href} />}
 		{noindex && <meta name="robots" content="noindex,nofollow" />}
 
 		<link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -110,10 +116,13 @@ const organisationSchema = {
 			gtag('config', gaMeasurementId);
 		</script>
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)}></script>
+		{additionalSchemas.filter(Boolean).map((schema) => (
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+		))}
 	</head>
 	<body>
 		<a class="skip-link" href="#main-content">Skip to main content</a>
-		<SiteHeader navigation={site.siteSettings?.navigation ?? []} />
+		<SiteHeader navigation={site.siteSettings?.navigation ?? []} internalLinkOrigin={internalLinkOrigin} showSearch={showSearch} />
 		<main id="main-content" tabindex="-1">
 			<slot />
 		</main>
@@ -121,6 +130,7 @@ const organisationSchema = {
 			contacts={site.contacts}
 			locations={site.locations}
 			socialLinks={site.socialLinks ?? []}
+			internalLinkOrigin={internalLinkOrigin}
 		/>
 	</body>
 </html>

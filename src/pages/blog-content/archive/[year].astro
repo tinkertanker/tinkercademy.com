@@ -1,0 +1,85 @@
+---
+// The Worker removes /blog-content from the public blog-host URL.
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, formatBlogDate, getBlogStories, getBlogYears, type BlogStory } from '../../../lib/blog';
+
+export async function getStaticPaths() {
+	const stories = await getBlogStories();
+	return getBlogYears(stories).map((year) => ({
+		params: { year: String(year) },
+		props: { year, stories: stories.filter((story) => story.data.publishedAt.getUTCFullYear() === year) },
+	}));
+}
+
+const { year, stories } = Astro.props as { year: number; stories: BlogStory[] };
+const canonical = `${BLOG_ORIGIN}/archive/${year}/`;
+---
+
+<ContentLayout
+	title={`${year} archive — ${BLOG_TITLE}`}
+	description={`Tinkercademy Build Log stories published in ${year}.`}
+	canonical={canonical}
+	internalLinkOrigin="https://tinkercademy.com"
+	showSearch={false}
+	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
+>
+	<section class="archive shell">
+		<p><a href={`${BLOG_ORIGIN}/`}>← All stories</a></p>
+		<h1>{year} archive</h1>
+		<ul>
+			{stories.map((story) => (
+				<li>
+					<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+					<a href={story.data.canonicalUrl}>{story.data.title}</a>
+					<span>{story.data.author.name}</span>
+				</li>
+			))}
+		</ul>
+	</section>
+</ContentLayout>
+
+<style>
+	.archive {
+		max-width: 52rem;
+		padding-top: 3.5rem;
+		padding-bottom: 4rem;
+	}
+
+	.archive h1 {
+		font-family: var(--heading);
+		font-size: var(--page-title-font-size);
+	}
+
+	.archive > p a,
+	.archive li a {
+		color: var(--accent-dark);
+		text-underline-offset: 0.18em;
+	}
+
+	.archive ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.archive li {
+		display: grid;
+		grid-template-columns: 9rem minmax(0, 1fr) 10rem;
+		gap: 1rem;
+		padding: 1rem 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.archive time,
+	.archive li span {
+		font-size: 0.88rem;
+		color: rgb(90, 90, 90);
+	}
+
+	@media (max-width: 650px) {
+		.archive li {
+			grid-template-columns: 1fr;
+			gap: 0.35rem;
+		}
+	}
+</style>

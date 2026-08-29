@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 /* SITE_URL is set per environment:
@@ -34,9 +35,11 @@ export default defineConfig({
 		inlineStylesheets: 'always',
 	},
 	integrations: [
+		mdx(),
 		sitemap({
 			filter: (page) => {
 				const path = new URL(page).pathname;
+				if (path.startsWith('/blog-content/')) return false;
 				if (/\/courses\/?$/.test(path)) return false;
 				if (/\/programmes\/advanced-agentic-coding-with-claude-code-or-codex\/?$/.test(path)) return false;
 				if (/\/programmes\/agentic-ai-for-digital-builders\/?$/.test(path)) return false;

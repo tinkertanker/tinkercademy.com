@@ -1,0 +1,35 @@
+---
+// The Worker uses this as the nearest static 404 within the blog namespace.
+import ContentLayout from '../../layouts/ContentLayout.astro';
+import { BLOG_ORIGIN, BLOG_TITLE } from '../../lib/blog';
+---
+
+<ContentLayout
+	title={`Story not found — ${BLOG_TITLE}`}
+	description="The requested Tinkercademy Build Log story could not be found."
+	canonical={`${BLOG_ORIGIN}/`}
+	noindex={true}
+	internalLinkOrigin="https://tinkercademy.com"
+	showSearch={false}
+>
+	<section class="not-found shell">
+		<h1>Story not found</h1>
+		<p><a href={`${BLOG_ORIGIN}/`}>Browse all Build Log stories</a>.</p>
+	</section>
+</ContentLayout>
+
+<style>
+	.not-found {
+		padding-top: 4rem;
+		padding-bottom: 5rem;
+	}
+
+	.not-found h1 {
+		font-family: var(--heading);
+		font-size: var(--page-title-font-size);
+	}
+
+	.not-found a {
+		color: var(--accent-dark);
+	}
+</style>

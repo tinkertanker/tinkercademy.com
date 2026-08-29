@@ -1,0 +1,77 @@
+---
+type Provider = 'youtube' | 'github-gist' | 'giphy' | 'twitter' | 'instagram' | 'external-link';
+
+const { provider, href, title } = Astro.props as { provider: Provider; href: string; title: string };
+const url = new URL(href);
+const host = url.hostname.toLowerCase().replace(/^www\./, '');
+const providerHosts: Record<Exclude<Provider, 'external-link'>, (host: string) => boolean> = {
+	youtube: (value) => value === 'youtu.be' || value === 'youtube.com' || value.endsWith('.youtube.com'),
+	'github-gist': (value) => value === 'gist.github.com',
+	giphy: (value) => value === 'giphy.com' || value.endsWith('.giphy.com'),
+	twitter: (value) => value === 'twitter.com' || value.endsWith('.twitter.com') || value === 'x.com' || value.endsWith('.x.com'),
+	instagram: (value) => value === 'instagram.com' || value.endsWith('.instagram.com'),
+};
+
+if (url.protocol !== 'https:' || provider !== 'external-link' && !providerHosts[provider](host)) {
+	throw new Error(`Unsafe ${provider} embed URL: ${href}`);
+}
+
+const providerLabels: Record<Provider, string> = {
+	youtube: 'YouTube video',
+	'github-gist': 'GitHub Gist',
+	giphy: 'Giphy animation',
+	twitter: 'X/Twitter post',
+	instagram: 'Instagram post',
+	'external-link': 'External media',
+};
+---
+
+<aside class="article-embed" data-provider={provider}>
+	<p class="article-embed__label">Embedded media</p>
+	<p class="article-embed__title">{title}</p>
+	<p class="article-embed__privacy">
+		This archived article does not load third-party embed scripts automatically.
+	</p>
+	<a href={href} target="_blank" rel="noopener noreferrer">
+		View the {providerLabels[provider]} on its original site
+	</a>
+</aside>
+
+<style>
+	.article-embed {
+		margin: 1.75rem 0;
+		padding: 1.25rem;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		border-left: 4px solid var(--accent-dark);
+		border-radius: 0.75rem;
+		background: rgba(240, 93, 87, 0.05);
+	}
+
+	.article-embed p {
+		margin: 0 0 0.5rem;
+	}
+
+	.article-embed__label {
+		font-size: 0.78rem;
+		font-weight: 600;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--accent-dark);
+	}
+
+	.article-embed__title {
+		font-family: var(--heading);
+		font-size: 1.1rem;
+		font-weight: 500;
+	}
+
+	.article-embed__privacy {
+		font-size: 0.9rem;
+		color: rgb(90, 90, 90);
+	}
+
+	.article-embed a {
+		font-weight: 500;
+		color: var(--accent-dark);
+	}
+</style>

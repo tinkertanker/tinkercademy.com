@@ -4,9 +4,15 @@ import { LOGO_BLACK, LOGO_BLACK_SIZE } from '../lib/site-media.js';
 
 type NavLink = { label: string; href: string; hasDropdown?: boolean };
 
-const props = Astro.props as { navigation?: NavLink[] };
+const props = Astro.props as { navigation?: NavLink[]; internalLinkOrigin?: string | null; showSearch?: boolean };
 const rawNav = props.navigation ?? [];
+const internalLinkOrigin = props.internalLinkOrigin ?? null;
+const showSearch = props.showSearch ?? true;
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const brandHref = internalLinkOrigin ? new URL('/', internalLinkOrigin).toString() : '/';
+const searchIndexUrl = internalLinkOrigin
+	? new URL('/programme-search-index.json', internalLinkOrigin).toString()
+	: '/programme-search-index.json';
 
 /* Inject "COURSES" as first nav item with a dropdown chevron if not already present */
 const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all/', hasDropdown: true };
@@ -49,6 +55,7 @@ function isActiveLink(href: string) {
 
 function toNavHref(href: string) {
 	const siteHref = toSiteHref(href);
+	let normalisedHref: string;
 	if (
 		siteHref === '/' ||
 		siteHref.startsWith('#') ||
@@ -56,15 +63,19 @@ function toNavHref(href: string) {
 		/[?#]/.test(siteHref) ||
 		/\.[^/]+$/.test(siteHref)
 	) {
-		return siteHref;
+		normalisedHref = siteHref;
+	} else {
+		normalisedHref = siteHref.endsWith('/') ? siteHref : `${siteHref}/`;
 	}
-	return siteHref.endsWith('/') ? siteHref : `${siteHref}/`;
+	return internalLinkOrigin && normalisedHref.startsWith('/')
+		? new URL(normalisedHref, internalLinkOrigin).toString()
+		: normalisedHref;
 }
 ---
 
-<header class="site-header">
+<header class="site-header" data-search-index-url={searchIndexUrl}>
 	<div class="header-inner">
-		<a class="brand" href="/">
+		<a class="brand" href={brandHref}>
 			<img
 				src={LOGO_BLACK}
 				alt="Tinkercademy"
@@ -109,11 +120,13 @@ function toNavHref(href: string) {
 			</ul>
 		</nav>
 
-		<button type="button" class="nav-search" aria-label="Open search" aria-expanded="false" aria-controls="site-search-overlay">
-			<svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true">
-				<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
-			</svg>
-		</button>
+		{showSearch && (
+			<button type="button" class="nav-search" aria-label="Open search" aria-expanded="false" aria-controls="site-search-overlay">
+				<svg viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true">
+					<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
+				</svg>
+			</button>
+		)}
 
 		<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
 			<span class="nav-toggle__bar"></span>
@@ -207,7 +220,8 @@ function toNavHref(href: string) {
 		searchText: string;
 	};
 
-	const SEARCH_INDEX_URL = '/programme-search-index.json';
+	const siteHeader = document.querySelector<HTMLElement>('.site-header');
+	const SEARCH_INDEX_URL = siteHeader?.dataset.searchIndexUrl ?? '/programme-search-index.json';
 
 	const AUDIENCE_COLOURS: Record<string, string> = {
 		students: 'var(--accent-dark)',

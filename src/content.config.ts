@@ -33,6 +33,60 @@ const programmes = defineCollection({
 	}),
 });
 
+const blog = defineCollection({
+	loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+	schema: z.object({
+		title: z.string().min(1),
+		subtitle: z.string().min(1).optional(),
+		description: z.string().min(1),
+		legacyPath: z.string().regex(/^[^/]+$/, 'Blog story paths must be one segment without slashes'),
+		canonicalUrl: z.url(),
+		sourceMediumUrl: z.url().optional(),
+		author: z.object({
+			id: z.string().min(1),
+			name: z.string().min(1),
+			handle: z.string().min(1).nullable().optional(),
+			profileUrl: z.url().optional(),
+		}),
+		publishedAt: z.coerce.date(),
+		updatedAt: z.coerce.date().optional(),
+		tags: z.array(z.object({ name: z.string().min(1), slug: z.string().min(1) })).default([]),
+		license: z.literal('All rights reserved'),
+		rightsStatus: z.enum(['review-required', 'permission-recorded', 'organisation-owned', 'author-owned']),
+		heroImage: z.string().startsWith('/blog-media/').optional(),
+		heroAlt: z.string().optional(),
+		heroAltDecision: z.enum(['meaningful', 'decorative', 'review-required']).optional(),
+		provenance: z.object({
+			mediumId: z.string().min(1),
+			publicationId: z.string().min(1),
+			sourceSha256: z.string().regex(/^[a-f0-9]{64}$/),
+		}).optional(),
+		migration: z.object({
+			paragraphCount: z.number().int().nonnegative(),
+			imageCount: z.number().int().nonnegative(),
+			embedCount: z.number().int().nonnegative(),
+			altReviewRequired: z.number().int().nonnegative(),
+		}).optional(),
+	}).superRefine((article, context) => {
+		const expectedCanonical = `https://blog.tinkercademy.com/${article.legacyPath}`;
+		if (article.canonicalUrl !== expectedCanonical) {
+			context.addIssue({
+				code: 'custom',
+				path: ['canonicalUrl'],
+				message: `Canonical must be ${expectedCanonical}`,
+			});
+		}
+		if (article.heroImage && !article.heroAltDecision) {
+			context.addIssue({
+				code: 'custom',
+				path: ['heroAltDecision'],
+				message: 'A hero image requires an explicit alt-text decision',
+			});
+		}
+	}),
+});
+
 export const collections = {
 	programmes,
+	blog,
 };

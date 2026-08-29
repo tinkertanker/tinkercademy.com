@@ -9,10 +9,14 @@ const props = Astro.props as {
 	contacts?: Contact[];
 	locations?: Location[];
 	socialLinks?: SocialLink[];
+	internalLinkOrigin?: string | null;
 };
 const contacts = props.contacts ?? [];
 const locations = props.locations ?? [];
 const socialLinks = props.socialLinks ?? [];
+const internalLinkOrigin = props.internalLinkOrigin ?? null;
+const siteHomeHref = internalLinkOrigin ? new URL('/', internalLinkOrigin).toString() : '/';
+const contactHref = internalLinkOrigin ? new URL('/contact-us/', internalLinkOrigin).toString() : '/contact-us/';
 
 const email = contacts.find((c) => c.channel_type === 'email')?.value ?? 'hello@tk.sg';
 const phone = contacts.find((c) => c.channel_type === 'phone')?.value ?? '6917 6920';
@@ -39,7 +43,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 <footer class="site-footer">
 	<div class="site-footer__inner">
 		<div class="site-footer__brand">
-			<a href="/" class="site-footer__logo-link">
+			<a href={siteHomeHref} class="site-footer__logo-link">
 				<img
 					src={LOGO_WHITE}
 					alt="Tinkercademy"
@@ -97,7 +101,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 				<p class="site-footer__body">
 					<a href={`tel:${phone}`} class="site-footer__link">{phoneDisplay}</a>
 				</p>
-				<a class="site-footer__cta" href="/contact-us/">Contact Us</a>
+				<a class="site-footer__cta" href={contactHref}>Contact Us</a>
 			</div>
 		</div>
 	</div>
