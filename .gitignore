@@ -2,7 +2,11 @@ node_modules
 dist
 .astro
 .wrangler
-scripts/_artifacts
+scripts/_artifacts/*
+!scripts/_artifacts/medium/
+scripts/_artifacts/medium/*
+!scripts/_artifacts/medium/raw/
+!scripts/_artifacts/medium/raw/**
 .codex
 .DS_Store
 output
