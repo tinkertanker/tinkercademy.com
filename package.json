@@ -16,6 +16,7 @@
     "import:live": "npm run crawl:site && npm run build:crm",
     "inventory:medium": "node scripts/inventory-medium.mjs",
     "import:medium": "node scripts/import-medium.mjs",
+    "review:medium": "node scripts/review-medium-migration.mjs",
     "verify:medium": "node scripts/verify-medium-migration.mjs",
     "test:medium": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/worker-routing.test.mjs",
     "check": "astro check",

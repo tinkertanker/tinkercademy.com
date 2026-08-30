@@ -16,6 +16,13 @@ import {
 	rewriteInternalStoryHref,
 	sha256,
 } from './lib/medium.mjs';
+import {
+	applyImageReview,
+	applyRightsReview,
+	emptyReviewDecisions,
+	placementKey,
+	validateReviewDecisions,
+} from './lib/medium-review.mjs';
 
 const SCRIPTS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.dirname(SCRIPTS_DIR);
@@ -26,6 +33,7 @@ const DEFAULT_MEDIA = path.join(ROOT, 'public', 'blog-media');
 const DEFAULT_MEDIA_MANIFEST = path.join(ROOT, 'docs', 'migrations', 'medium', 'media-manifest.json');
 const DEFAULT_EMBED_MANIFEST = path.join(ROOT, 'docs', 'migrations', 'medium', 'embed-manifest.json');
 const DEFAULT_AUTHORS = path.join(ROOT, 'src', 'data', 'blog-authors.json');
+const DEFAULT_REVIEW_DECISIONS = path.join(ROOT, 'docs', 'migrations', 'medium', 'review-decisions.json');
 
 function parseArgs(argv) {
 	const options = {
@@ -35,6 +43,7 @@ function parseArgs(argv) {
 		cacheDir: DEFAULT_CACHE,
 		contentDir: DEFAULT_CONTENT,
 		mediaDir: DEFAULT_MEDIA,
+		reviewDecisions: DEFAULT_REVIEW_DECISIONS,
 	};
 	for (let index = 0; index < argv.length; index += 1) {
 		const argument = argv[index];
@@ -45,6 +54,7 @@ function parseArgs(argv) {
 		else if (argument === '--cache-dir') options.cacheDir = path.resolve(argv[++index]);
 		else if (argument === '--content-dir') options.contentDir = path.resolve(argv[++index]);
 		else if (argument === '--media-dir') options.mediaDir = path.resolve(argv[++index]);
+		else if (argument === '--review-decisions') options.reviewDecisions = path.resolve(argv[++index]);
 		else throw new Error(`Unknown argument: ${argument}`);
 	}
 	return options;
@@ -52,6 +62,15 @@ function parseArgs(argv) {
 
 async function readJson(file) {
 	return JSON.parse(await readFile(file, 'utf8'));
+}
+
+async function loadReviewDecisions(file) {
+	try {
+		return validateReviewDecisions(await readJson(file));
+	} catch (error) {
+		if (error?.code === 'ENOENT') return emptyReviewDecisions();
+		throw error;
+	}
 }
 
 async function writeJson(file, value) {
@@ -190,7 +209,7 @@ function quoteMarkdown(value) {
 	return value.split('\n').map((line) => `> ${line}`).join('\n');
 }
 
-function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById }) {
+function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions }) {
 	const blocks = [];
 	const altDecisions = [];
 	let embedCount = 0;
@@ -228,10 +247,12 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById })
 			case 4: {
 				const asset = assetsById.get(paragraph.metadata?.id);
 				if (!asset) throw new Error(`No local asset for ${paragraph.metadata?.id} in ${story.id}`);
-				const alt = imageAltDecision(paragraph);
+				const reviewKey = placementKey({ storyId: story.id, paragraph: index, imageId: paragraph.metadata.id });
+				const alt = applyImageReview(imageAltDecision(paragraph), reviewDecisions.images[reviewKey]);
 				altDecisions.push({
 					paragraph: index,
 					imageId: paragraph.metadata.id,
+					reviewKey,
 					caption: paragraph.text || '',
 					sourceAlt: paragraph.metadata.alt || '',
 					sourceWidth: paragraph.metadata.originalWidth,
@@ -247,6 +268,7 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById })
 					`![${escapeMarkdownImageAlt(alt.alt)}](${asset.localPath})`,
 				];
 				if (paragraph.text?.trim()) lines.push(`<em>${renderInlineHtml({ text: paragraph.text, markups: [] }, pathsById)}</em>`);
+				if (alt.credit) lines.push(`<em>Credit: ${renderInlineHtml({ text: alt.credit, markups: [] }, pathsById)}</em>`);
 				blocks.push(lines.join('\n\n'));
 				break;
 			}
@@ -307,7 +329,10 @@ function normaliseMediaRaw(raw, id) {
 
 async function main() {
 	const options = parseArgs(process.argv.slice(2));
-	const inventory = await readJson(options.inventory);
+	const [inventory, reviewDecisions] = await Promise.all([
+		readJson(options.inventory),
+		loadReviewDecisions(options.reviewDecisions),
+	]);
 	if (inventory.publication?.id !== MEDIUM_PUBLICATION_ID || inventory.summary?.stories !== 68) {
 		throw new Error('Inventory is not the reviewed 68-story Tinkercademy baseline');
 	}
@@ -335,11 +360,14 @@ async function main() {
 	const embedPlacements = [];
 	const contentFiles = [];
 	let altReviewRequired = 0;
+	let rightsReviewRequired = 0;
 	let renderedParagraphs = 0;
 
 	for (const story of stories) {
-		const rendered = renderStoryBody({ story, assetsById, mediaById, pathsById, usersById });
+		const rendered = renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions });
 		altReviewRequired += rendered.altDecisions.filter(({ decision }) => decision === 'review-required').length;
+		const rightsStatus = applyRightsReview(story.rightsStatus, reviewDecisions.rights[story.legacyPath]);
+		if (rightsStatus === 'review-required') rightsReviewRequired += 1;
 		renderedParagraphs += rendered.renderedParagraphs;
 		for (const decision of rendered.altDecisions) {
 			placementsByImageId.get(decision.imageId).push({ storyId: story.id, legacyPath: story.legacyPath, ...decision });
@@ -348,7 +376,9 @@ async function main() {
 
 		const featured = story.images.find(({ isFeatured }) => isFeatured) ?? story.images[0] ?? null;
 		const featuredAsset = featured ? assetsById.get(featured.id) : null;
-		const featuredDecision = featured ? imageAltDecision({ text: featured.caption, metadata: { alt: featured.sourceAlt } }) : null;
+		const featuredDecision = featured
+			? rendered.altDecisions.find(({ paragraph, imageId }) => paragraph === featured.paragraph && imageId === featured.id)
+			: null;
 		const frontmatter = {
 			title: story.title,
 			subtitle: story.subtitle || undefined,
@@ -361,7 +391,7 @@ async function main() {
 			updatedAt: story.updatedAt,
 			tags: story.tags,
 			license: story.license,
-			rightsStatus: story.rightsStatus,
+			rightsStatus,
 			heroImage: featuredAsset?.localPath,
 			heroAlt: featuredDecision?.alt,
 			heroAltDecision: featuredDecision?.decision,
@@ -426,6 +456,7 @@ async function main() {
 		embedResources: embedManifest.resources.length,
 		embedPlacements: embedManifest.placements.length,
 		altReviewRequired,
+		rightsReviewRequired,
 		renderedParagraphs,
 		authors: authors.length,
 	}, null, 2));

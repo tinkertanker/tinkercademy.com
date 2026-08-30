@@ -34,6 +34,8 @@ cutover until the rights and accessibility holds are resolved.
   SHA-256 hashes, byte counts, animation/frame metadata, captions, source alt,
   and per-placement alt decisions.
 - `embed-manifest.json`: allowlisted provider metadata and all placements.
+- `review-decisions.json`: human rights and image accessibility decisions,
+  evidence references, reviewer names, timestamps, credits, and internal notes.
 - `src/data/blog-authors.json`: exact public Medium attribution records.
 - `src/content/blog/medium/`: generated Markdown/MDX.
 - `public/blog-media/`: locally stored source bytes, named by SHA-256.
@@ -66,6 +68,51 @@ pnpm run import:medium -- --offline --dry-run
 The inventory command fails if the reviewed 68/397/395/41/39 baseline drifts
 unless an operator deliberately supplies `--allow-count-change` and reviews the
 new public records.
+
+## Complete the private release review
+
+Do not edit generated story Markdown or `media-manifest.json` to clear a hold;
+the next import overwrites them. Use the repository-local review application:
+
+```sh
+pnpm run review:medium
+```
+
+It serves a private review UI (port 4174 by default) for all 68 story rights
+records and 397 image placements, defaulting to the 134 unresolved images. It
+shows local thumbnails, source captions and alt, nearby story text, exact
+attribution, and original Medium links. Completed decisions require a reviewer
+name; rights decisions require an evidence reference. Bulk-by-author and
+identical-image actions are available, but should be used only when the same
+evidence or contextual description genuinely applies.
+
+**Rights statuses:**
+
+- `organisation-owned`: use only when supporting records establish ownership.
+- `permission-recorded`: use when the contributor retains copyright and
+  republication permission is documented.
+- `author-owned`: use only when the credited author is personally recording
+  their approval for publication.
+- `review-required`: keep this status when ownership or permission is uncertain.
+
+“All rights reserved” is not evidence for any of these choices. Do not paste
+credentials, cookies, or unnecessary personal data into the evidence field;
+store a concise reference to the appropriate internal record.
+
+For each unresolved image, choose `meaningful` and write context-appropriate
+alt text, or choose `decorative` when surrounding text conveys everything the
+image contributes. Add a visible credit where needed. Saving writes only
+`review-decisions.json`; it does not contact or change Medium or production.
+After saving, regenerate and verify the imported output:
+
+```sh
+pnpm run import:medium -- --offline
+SITE_URL=https://tinkercademy.com pnpm run build
+pnpm run verify:medium -- --dist dist --allow-review-required
+```
+
+Leave the temporary verifier flag in place until all legitimate holds are
+resolved. The strict command without that flag remains the cutover gate.
 
 ## Host-aware output
 

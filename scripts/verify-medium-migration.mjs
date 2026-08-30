@@ -7,11 +7,14 @@ import { fileURLToPath } from 'node:url';
 
 import YAML from 'yaml';
 
+import { placementKey, validateReviewDecisions } from './lib/medium-review.mjs';
+
 const SCRIPTS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.dirname(SCRIPTS_DIR);
 const INVENTORY_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'inventory.json');
 const MEDIA_MANIFEST_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'media-manifest.json');
 const EMBED_MANIFEST_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'embed-manifest.json');
+const REVIEW_DECISIONS_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'review-decisions.json');
 const CONTENT_DIR = path.join(ROOT, 'src', 'content', 'blog', 'medium');
 const PUBLIC_DIR = path.join(ROOT, 'public');
 const BLOG_ORIGIN = 'https://blog.tinkercademy.com';
@@ -62,8 +65,10 @@ async function verifySource(options) {
 	const inventory = await readJson(INVENTORY_PATH);
 	const mediaManifest = await readJson(MEDIA_MANIFEST_PATH);
 	const embedManifest = await readJson(EMBED_MANIFEST_PATH);
+	const reviewDecisions = validateReviewDecisions(await readJson(REVIEW_DECISIONS_PATH));
 	const contentNames = (await readdir(CONTENT_DIR)).filter((name) => /\.mdx?$/u.test(name)).sort();
 	const contentByPath = new Map();
+	const inventoryPaths = new Set(inventory.stories.map(({ legacyPath }) => legacyPath));
 
 	expect(inventory.summary.stories === 68, `Expected 68 inventory stories; found ${inventory.summary.stories}`, errors);
 	expect(inventory.summary.imagePlacements === 397, `Expected 397 image placements; found ${inventory.summary.imagePlacements}`, errors);
@@ -75,6 +80,9 @@ async function verifySource(options) {
 	expect(mediaManifest.summary.placements === 397, `Expected 397 asset placements; found ${mediaManifest.summary.placements}`, errors);
 	expect(embedManifest.resources.length === 39, `Expected 39 embed resources; found ${embedManifest.resources.length}`, errors);
 	expect(embedManifest.placements.length === 41, `Expected 41 embed placements; found ${embedManifest.placements.length}`, errors);
+	for (const legacyPath of Object.keys(reviewDecisions.rights)) {
+		expect(inventoryPaths.has(legacyPath), `Rights review contains unknown story ${legacyPath}`, errors);
+	}
 
 	for (const name of contentNames) {
 		const file = path.join(CONTENT_DIR, name);
@@ -101,6 +109,12 @@ async function verifySource(options) {
 		expect(data.author?.id === story.author.id && data.author?.name === story.author.name, `Author drift for ${story.legacyPath}`, errors);
 		expect(data.license === 'All rights reserved', `Wrong licence for ${story.legacyPath}`, errors);
 		expect(data.provenance?.sourceSha256 === story.sourceSha256, `Source hash drift for ${story.legacyPath}`, errors);
+		const rightsDecision = reviewDecisions.rights[story.legacyPath];
+		if (rightsDecision) {
+			expect(data.rightsStatus === rightsDecision.status, `Rights review was not imported for ${story.legacyPath}`, errors);
+		} else {
+			expect(data.rightsStatus === story.rightsStatus, `Unreviewed rights status drift for ${story.legacyPath}`, errors);
+		}
 		expect(body.includes(story.sourceMediumUrl) === false, `Medium source link leaked into body for ${story.legacyPath}`, errors);
 		bodyImagePlacements += countMatches(body, /!\[[^\n]*\]\(\/blog-media\/[a-f0-9]{64}\.(?:jpg|png|gif|webp)\)/gu);
 		bodyEmbedPlacements += countMatches(body, /<ArticleEmbed\b/gu);
@@ -116,6 +130,7 @@ async function verifySource(options) {
 	expect(bodyEmbedPlacements === 41, `Expected 41 typed embed placements; found ${bodyEmbedPlacements}`, errors);
 
 	const localPaths = new Set();
+	const placementKeys = new Set();
 	for (const asset of mediaManifest.assets) {
 		const file = path.join(PUBLIC_DIR, asset.localPath.replace(/^\//u, ''));
 		try {
@@ -125,6 +140,20 @@ async function verifySource(options) {
 		} catch {
 			errors.push(`Missing local asset: ${asset.localPath}`);
 		}
+		for (const placement of asset.placements) {
+			const key = placementKey(placement);
+			placementKeys.add(key);
+			expect(placement.reviewKey === key, `Missing or unstable review key for ${key}`, errors);
+			const decision = reviewDecisions.images[key];
+			if (!decision) continue;
+			expect(placement.decision === decision.decision, `Image review decision was not imported for ${key}`, errors);
+			expect(placement.alt === (decision.decision === 'meaningful' ? decision.alt.trim() : ''), `Image review alt text was not imported for ${key}`, errors);
+			expect(placement.source === 'editorial-review', `Image review provenance is missing for ${key}`, errors);
+			expect((placement.credit || '') === (decision.credit?.trim() || ''), `Image credit was not imported for ${key}`, errors);
+		}
+	}
+	for (const key of Object.keys(reviewDecisions.images)) {
+		expect(placementKeys.has(key), `Image review contains unknown placement ${key}`, errors);
 	}
 
 	if (rightsReviewRequired || altReviewRequired) {
