@@ -24,7 +24,7 @@ tags:
   - name: Bernina
     slug: bernina
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/d480c299cc5fcb6d95d3b764fff2f2353095c5cc3deb98331741e7dc6b4868eb.jpg
 heroAlt: Designs made by our campers!
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 49
   imageCount: 9
   embedCount: 0
-  altReviewRequired: 3
+  altReviewRequired: 0
 ---
 
 <!-- medium-image:0*_2u39aRT3kmpu5kR alt-decision:meaningful -->
@@ -111,17 +111,17 @@ Beginning with the simplest of shapes, the square, our campers slowly progressed
 
 With their designs completed and ready to be embroidered, the Bernina 535 machines got to work. The speedy machine churned out a total of 20 embroidered fabrics at record speed. Lo and behold, our campers’ masterpieces:
 
-<!-- medium-image:0*x3jtwvvVLC88xAt0 alt-decision:review-required -->
+<!-- medium-image:0*x3jtwvvVLC88xAt0 alt-decision:meaningful -->
 
-![](/blog-media/fa77acd202b4bbdd983a3af60cdc896d60b52974c6b38e6f15595c5674ce1686.jpg)
+![Twenty embroidered fabric designs including flowers, spirals, hearts and names](/blog-media/fa77acd202b4bbdd983a3af60cdc896d60b52974c6b38e6f15595c5674ce1686.jpg)
 
 ### DAY 03
 
 After two consecutive days of sewing, it was at last time for coding! With a box full of micro:bits, LEDs, crocodile wires and many more, we began our demonstration of the various micro:bit features.
 
-<!-- medium-image:0*re06lqKGWAA7swpT alt-decision:review-required -->
+<!-- medium-image:0*re06lqKGWAA7swpT alt-decision:meaningful -->
 
-![](/blog-media/92280a5f22ccdb02e4834aa9a07424c3b2120030281c4682bf2a74a942e0c7a7.png)
+![Front and back of a micro:bit labelled with its buttons, LEDs, ports and edge pins](/blog-media/92280a5f22ccdb02e4834aa9a07424c3b2120030281c4682bf2a74a942e0c7a7.png)
 
 From the in-built speaker, to the LED lights and the 2 buttons, we covered all of the micro:bit’s most essential features. To top that off, our campers also worked on mini micro:bit coding exercises to apply the knowledge they learnt.
 
@@ -153,9 +153,9 @@ Without a moment’s delay, each team of campers took a stab at building their m
 
 In the end, each of our teams finished their robots to perfection and managed to build remote controls to navigate their robots around their tables. Hence, the football battle commenced! Check out their robots in action below:
 
-<!-- medium-image:1*w4jT9-Hl1VXb53ZpCWVQYg.gif alt-decision:review-required -->
+<!-- medium-image:1*w4jT9-Hl1VXb53ZpCWVQYg.gif alt-decision:meaningful -->
 
-![](/blog-media/898065b57bad0f0fb225249b89a5db64362dc61ae25374ba6f0f96853d335bc2.gif)
+![Remote-controlled robots converge on a ball and reposition during a tabletop football match](/blog-media/898065b57bad0f0fb225249b89a5db64362dc61ae25374ba6f0f96853d335bc2.gif)
 
 ### FINAL TAKEAWAYS
 

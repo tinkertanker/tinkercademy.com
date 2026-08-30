@@ -24,7 +24,7 @@ tags:
   - name: Life Lessons
     slug: life-lessons
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/aa5a41d81226f9ed889e63f51b6b132575f73a682c00661f216dd80a9f30d70c.jpg
 heroAlt: Gardens by the Bay on the Mid-Autumn Festival earlier this year
 heroAltDecision: meaningful
@@ -36,18 +36,18 @@ migration:
   paragraphCount: 14
   imageCount: 6
   embedCount: 0
-  altReviewRequired: 3
+  altReviewRequired: 0
 ---
 
 ### Reflections on Working in Singapore
 
-<!-- medium-image:1*zsX_KGXnGnzAIGrVmMtH8A.jpeg alt-decision:review-required -->
+<!-- medium-image:1*zsX_KGXnGnzAIGrVmMtH8A.jpeg alt-decision:meaningful -->
 
-![](/blog-media/a1a58188e51bbdf57e7cfc5cc07ac997855f68d4773353a7b22c8a4d3d51ed17.jpg)
+![Singapore Flyer and city skyline reflected in a waterfront pond at night](/blog-media/a1a58188e51bbdf57e7cfc5cc07ac997855f68d4773353a7b22c8a4d3d51ed17.jpg)
 
-<!-- medium-image:1*DC8kdXQXlG6jzsV-gwvQog.jpeg alt-decision:review-required -->
+<!-- medium-image:1*DC8kdXQXlG6jzsV-gwvQog.jpeg alt-decision:meaningful -->
 
-![](/blog-media/51c07153aac3f2cbcd73a3e2bce38dcb899d7b77ca55dd71be09f9daded2b328.jpg)
+![Blue-lit Supertrees beneath a starry night sky in Singapore](/blog-media/51c07153aac3f2cbcd73a3e2bce38dcb899d7b77ca55dd71be09f9daded2b328.jpg)
 
 <!-- medium-image:1*s13CWB5pYHKTNWXDgN8aYg.jpeg alt-decision:meaningful -->
 
@@ -73,9 +73,9 @@ Tinkertanker is a small company and thus seeing a project to fruition requires s
 
 It’s critical for a company to craft a culture where people are encouraged to produce their best work and know that it’s okay to make mistakes and learn from them — Tinkertanker succeeds at this. It’s been wonderful getting to know the Tinkertanker team (and laughing, hiking, and making hot pot in the office with them). Working and assimilating into life in Singapore has truly been an incredible adventure.
 
-<!-- medium-image:1*Nq5qTLs9mS1f-aOhzUza3g.jpeg alt-decision:review-required -->
+<!-- medium-image:1*Nq5qTLs9mS1f-aOhzUza3g.jpeg alt-decision:meaningful -->
 
-![](/blog-media/e8f2551ed69acd15cbc4f6bfd8c3614e864c3c55c2b5f789856022de7da16f8f.jpg)
+![Purple flower stalk rising among broad green leaves](/blog-media/e8f2551ed69acd15cbc4f6bfd8c3614e864c3c55c2b5f789856022de7da16f8f.jpg)
 
 <!-- medium-image:1*df_dobF3WwR-dPt3m-1q9g.jpeg alt-decision:meaningful -->
 

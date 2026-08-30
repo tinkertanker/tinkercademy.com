@@ -24,10 +24,10 @@ tags:
   - name: Girls In Tech
     slug: girls-in-tech
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/9da8572c94cb1ccc1ef18ed7a49a1ae3f0bdffdd4cbcf4cf162110808604e9fe.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: ‘Reducing the Gender Gap in Tech’ event graphic featuring speaker Goh Aik Hong.
+heroAltDecision: meaningful
 provenance:
   mediumId: c591a8c9ff88
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 39
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:0*N0xhkSgtfS-17Y6r alt-decision:review-required -->
+<!-- medium-image:0*N0xhkSgtfS-17Y6r alt-decision:meaningful -->
 
-![](/blog-media/9da8572c94cb1ccc1ef18ed7a49a1ae3f0bdffdd4cbcf4cf162110808604e9fe.png)
+![‘Reducing the Gender Gap in Tech’ event graphic featuring speaker Goh Aik Hong.](/blog-media/9da8572c94cb1ccc1ef18ed7a49a1ae3f0bdffdd4cbcf4cf162110808604e9fe.png)
 
 “Even in the most prestigious universities, you will find that boys make up most of the Maths, Physics, and STEM-related subjects. This has been true since the time of Albert Einstein.”
 

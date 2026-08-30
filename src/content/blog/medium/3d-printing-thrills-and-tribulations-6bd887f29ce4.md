@@ -18,7 +18,7 @@ tags:
   - name: Internships
     slug: internships
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/da4439d61655cce78488ef02f142416b60745eef8d63d00a636e146e10942eb8.png
 heroAlt: TKRobot in my go-to 3D software, Blender ❤️️
 heroAltDecision: meaningful
@@ -30,7 +30,7 @@ migration:
   paragraphCount: 51
   imageCount: 11
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Here’s Mireille’s second blog post, this one detailing her 3D printing adventures! You can read </em><em><a href="https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042">her first post here</a></em><em>.</em>
@@ -168,6 +168,6 @@ After the two prints, I went on to write a 3D printing guide for the company as 
 
 Given more time, I can see myself having fun working on a project that combines fabrication using the 3D printer with electronics such as the micro:bit. Maybe some day, I will return to the office and do just that. Until then, it brings me joy just knowing that the two precious prints are on the company KALLAX shelves on display, and that the 3D printer is ready for anyone to use for their tinkering endeavours.
 
-<!-- medium-image:0*9qv0zrxP5aFbFkFR alt-decision:review-required -->
+<!-- medium-image:0*9qv0zrxP5aFbFkFR alt-decision:meaningful -->
 
-![](/blog-media/7fed291d23df87b4a1ceea8554d747fcad530eb56b364c3b82af4731375cf838.jpg)
+![Two gold 3D-printed models, a cartoon mouse and a small tugboat, displayed on a wooden shelf.](/blog-media/7fed291d23df87b4a1ceea8554d747fcad530eb56b364c3b82af4731375cf838.jpg)

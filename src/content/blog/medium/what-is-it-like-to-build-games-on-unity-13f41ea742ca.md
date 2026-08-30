@@ -24,7 +24,7 @@ tags:
   - name: Unity Game Developer
     slug: unity-game-developer
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/37dc8e72b73b9b45e47af97b6b4870ae17f524dd9fde238da099cbe96ae28f0c.gif
 heroAlt: Simple 2D Platformer game made by our students
 heroAltDecision: meaningful

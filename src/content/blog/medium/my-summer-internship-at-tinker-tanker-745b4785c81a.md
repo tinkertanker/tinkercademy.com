@@ -22,7 +22,7 @@ tags:
   - name: Edtech
     slug: edtech
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/e125abedd430bf07593f17d48dcb7878e6e1126780344ac05fcd8a9a60436d28.png
 heroAlt: Login page
 heroAltDecision: meaningful
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 13
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ### Intern report: Building an in-class chat app for Tinkercademy
@@ -45,9 +45,9 @@ Hello! I am Raynold, and I was a Software Engineering Intern at Tinkertanker.
 
 During my summer internship, I have been able to work on existing and new web applications as a full stack developer. I was tasked with creating a web chat application for Tinkercademy instructors to use during lessons for communication. They found their existing proprietary solutions (<em>Editor’s Note: a giant Slack chat</em>) to not meet their needs. So I re-purposed a program called <a href="https://sdelements.github.io/lets-chat/">Let’s Chat</a>, released under an MIT license and written on top of the <a href="http://node.js/">Node.js</a> platform, to create TinkerChatter.
 
-<!-- medium-image:1*9OIJ8E96m5gefkyUd05RNQ.jpeg alt-decision:review-required -->
+<!-- medium-image:1*9OIJ8E96m5gefkyUd05RNQ.jpeg alt-decision:meaningful -->
 
-![](/blog-media/c68694409cb1c08633b5ca018436b111f1332e023b7fa396e819db8cd9ec36fc.jpg)
+![Let’s Chat running on laptop and phone screens, captioned “Self-hosted chat for small teams”](/blog-media/c68694409cb1c08633b5ca018436b111f1332e023b7fa396e819db8cd9ec36fc.jpg)
 
 This internship was so much more than just a series of programming tasks. As the project owner, I went through all stages of product development: idea generation, discussion with end users, development, live demonstrations to troubleshooting and maintenance.
 

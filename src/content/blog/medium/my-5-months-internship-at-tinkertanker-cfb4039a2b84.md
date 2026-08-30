@@ -24,7 +24,7 @@ tags:
   - name: Education
     slug: education
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/829615242bca345a13cfb927c926bd6d877d03fd909a3186ba5adb889982a05e.gif
 heroAlt: The Calculator App I made with ReactJS
 heroAltDecision: meaningful

@@ -24,7 +24,7 @@ tags:
   - name: Technology
     slug: technology
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/f85ba6148a88269bf428c7032f09ed1b7644da54f4743e37f18c374fb880b212.jpg
 heroAlt: National Day Parade Preview
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 11
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ### Rambling Into The Next Adventure
@@ -59,9 +59,9 @@ By a stroke of luck, I came into contact with a company called Tinkertanker — 
 
 Already two weeks into my job, I’ve had the chance to observe technical workshops delivered to teachers and banking professionals, and to teach programming classes to primary school children. It has been interesting to see the differences (and similarities) between kids’ and adults’ interactions in classes. Additionally, as someone who has grown up in the American education system, it’s fascinating to experience the different types of schools (international and local) in Singapore and the classroom cultures that exist within these settings. While it may sound like a hectic first two weeks, it was a great introduction to the company and its work. Tinkertankerers are welcoming, friendly, intelligent, and motivated to make things happen. I’m grateful for the opportunity to work with this group of people and to be getting my vitamin D from this Singaporean sun.
 
-<!-- medium-image:1*vNuUH_VVB8iWH8jPKPkaww.jpeg alt-decision:review-required -->
+<!-- medium-image:1*vNuUH_VVB8iWH8jPKPkaww.jpeg alt-decision:meaningful -->
 
-![](/blog-media/8a92434b7031a681763ffc118ab963e181271aa5d743f46280bea6de16e5f8de.jpg)
+![Tree-lined Singapore street outside a white multi-storey building](/blog-media/8a92434b7031a681763ffc118ab963e181271aa5d743f46280bea6de16e5f8de.jpg)
 
 <!-- medium-image:1*cjgaiAdLbMlpDu-4B7XLww.jpeg alt-decision:meaningful -->
 

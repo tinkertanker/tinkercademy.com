@@ -22,7 +22,7 @@ tags:
   - name: Hands On Learning
     slug: hands-on-learning
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/b28e741a513442476a9831b61cca346119b764e65dd85d7a6bf4417baf5516b1.jpg
 heroAlt: Father and son building a Bristlebot dragon!
 heroAltDecision: meaningful
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 33
   imageCount: 8
   embedCount: 0
-  altReviewRequired: 4
+  altReviewRequired: 0
 ---
 
 <!-- medium-image:0*vxK8VUfinQ4FgnCc alt-decision:meaningful -->
@@ -63,17 +63,17 @@ This wasn’t the first time we were approached to conduct parent-child workshop
 
 First, we thought of our most successful parent-child workshop that we ran in collaboration with the Asian Civilisation Museum. We’ll let the photos speak for themselves:
 
-<!-- medium-image:1*fDBi4YncbLLm-oechoBtCw.jpeg alt-decision:review-required -->
+<!-- medium-image:1*fDBi4YncbLLm-oechoBtCw.jpeg alt-decision:meaningful -->
 
-![](/blog-media/cc536cb0b7fc04c40a2a40dee6d3e6b99e393d8d79aefc71995ab32cc2a9166d.jpg)
+![Child watches a Bee-Bot travel across a large illustrated grid mat during the workshop.](/blog-media/cc536cb0b7fc04c40a2a40dee6d3e6b99e393d8d79aefc71995ab32cc2a9166d.jpg)
 
-<!-- medium-image:1*ho-_UcP--CJS2e4yDj_Hmw.jpeg alt-decision:review-required -->
+<!-- medium-image:1*ho-_UcP--CJS2e4yDj_Hmw.jpeg alt-decision:meaningful -->
 
-![](/blog-media/e07d779d8b5bf223401edcf5c8d3f9411a65d2769c44fb6eb724181c7fa0332d.jpg)
+![Child and adult sit together beside a Bee-Bot on an activity mat marked ‘Start.’](/blog-media/e07d779d8b5bf223401edcf5c8d3f9411a65d2769c44fb6eb724181c7fa0332d.jpg)
 
-<!-- medium-image:1*k_X55Xc7ELsZzDrojd6NaA.jpeg alt-decision:review-required -->
+<!-- medium-image:1*k_X55Xc7ELsZzDrojd6NaA.jpeg alt-decision:meaningful -->
 
-![](/blog-media/8a4e0e60a10d9d65d400559b6b65d17f8d6b56a72028920e52eb8a914fd9915a.jpg)
+![Child and adult colour worksheets together beside a handmade Bee-Bot outfit.](/blog-media/8a4e0e60a10d9d65d400559b6b65d17f8d6b56a72028920e52eb8a914fd9915a.jpg)
 
 <!-- medium-image:1*__s6HmZuefWKQzSryFDvvw.jpeg alt-decision:meaningful -->
 
@@ -113,9 +113,9 @@ However, yet again, it dawned on us that this wasn’t a great fit for our clien
 
 Generally, coding evokes an image of a person sitting in front of a computer and hacking away tirelessly at a keyboard.
 
-<!-- medium-image:0*09nh_uySUME1R36y alt-decision:review-required -->
+<!-- medium-image:0*09nh_uySUME1R36y alt-decision:meaningful -->
 
-![](/blog-media/ad15b65348856714f34b8f6e8451082a75db8b5fb05363565158bd9a61aa1969.jpg)
+![Orange Meow:bit handheld console running a pixel-art game with a heart counter.](/blog-media/ad15b65348856714f34b8f6e8451082a75db8b5fb05363565158bd9a61aa1969.jpg)
 
 However, with the Meow:bit (see above), the added element of a GameBoy-like console allows parents and their kids to enjoy their code in its physical form. They get to write code for games and play their final masterpieces! Needless to say, this workshop hit the jackpot. Our client loved the idea!
 

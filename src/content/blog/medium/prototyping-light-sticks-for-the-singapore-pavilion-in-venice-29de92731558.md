@@ -24,7 +24,7 @@ tags:
   - name: Makers
     slug: makers
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/ad0a6430ac4ee24040dd48dd5aeea096f7000ee58141adf7a9d9c8271fd9e187.jpg
 heroAlt: “Prototype” light stick with an external battery case. Not my finest work…
 heroAltDecision: meaningful

@@ -24,7 +24,7 @@ tags:
   - name: Tech
     slug: tech
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/330a8bb214ed43be57f0db7c7d132097b59906e2a97a52c4181ddc8a32bd08d7.jpg
 heroAlt: Photo by Christina Morillo
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 27
   imageCount: 4
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 <!-- medium-image:0*5BMvVkb1hJOSizXw alt-decision:meaningful -->
@@ -77,9 +77,9 @@ Let’s use ChatGPT as an example. If you asked ChatGPT to write a summary of th
 
 The fact of the matter is that AI models thrive when there is a plethora of data. On the flip side, in the absence of data, AI flounders and ends up predicting a string of words that are completely irrelevant, foolish and outright wrong!
 
-<!-- medium-image:1*GlkMxvlBvhU8Dtt7abxKsg.png alt-decision:review-required -->
+<!-- medium-image:1*GlkMxvlBvhU8Dtt7abxKsg.png alt-decision:meaningful -->
 
-![](/blog-media/dd05746d629559ea3496ae4bf045905b0cf2f2d089fc5759a7e5e8c29f0ae864.png)
+![Letterboard with the nonsensical, misspelled definition: ‘String — The Wrong Oder.’](/blog-media/dd05746d629559ea3496ae4bf045905b0cf2f2d089fc5759a7e5e8c29f0ae864.png)
 
 This underscores the importance of being knowledgeable in coding. As a project becomes more complex, chances are AI would not have sufficient data to predict accurate lines of code. It would begin hallucinating package functions and modules that don’t exist. This can be frustrating for a non-coder as they would not know why their AI-generated code isn’t working as it should. On a micro-level, AI-generated code might introduce subtle bugs, especially those that result from interactions between far-flung lines of code. Those kinds of bugs are the hardest to track down, requiring sophisticated critical thinking skills that a language prediction engine simply lacks. Trying to correct the mistakes would again require knowledge of coding, which non-coders would not have, thus leading to a catch-22 situation.
 
@@ -89,9 +89,9 @@ Look at recent troubles at Boeing. For years, they prioritised financiers over e
 
 In a world where coding becomes as simple as talking to an AI machine, being able to develop games, mobile applications or even websites, would no longer be seen as a task reserved solely for programmers. Instead, we expect that with the help of AI, more people will begin dabbling in programming. Coding skills would then become a differentiating factor for professions such as researchers, lawyers, engineers and perhaps even teachers.
 
-<!-- medium-image:1*wdbp1ML7yMeDDFrqaVIAvQ.png alt-decision:review-required -->
+<!-- medium-image:1*wdbp1ML7yMeDDFrqaVIAvQ.png alt-decision:meaningful -->
 
-![](/blog-media/0503dbe58f43e0fa412cfa853c3222137f0e34a0d86133f24382411ff08223b0.png)
+![Illustration of workers from varied professions raising their hands before analytics dashboards.](/blog-media/0503dbe58f43e0fa412cfa853c3222137f0e34a0d86133f24382411ff08223b0.png)
 
 Imagine an architect that writes code to generate intricate building blueprints, that would have otherwise been too labour-intensive to create by hand. Or a hawker who programs an automated queueing system as soon as they notice an untenably long queue during the peak lunch hour. Administrators might turn to code to automate their routine paperwork and filing duties, saving them from hours of tedium. These citizen developers can improve their working environment, and make the world a more pleasant place, because they are on the ground experiencing these issues. Thanks to AI, they would be empowered to develop their own solutions through coding. But of course, they won’t be able to do so without first having some coding and computer science skills.
 

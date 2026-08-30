@@ -24,7 +24,7 @@ tags:
   - name: Soldering
     slug: soldering
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/848f9d4714709a6bf2e2b4a4822f00d4193cac03452c7f1d323a3f9b3c450db3.png
 heroAlt: Assembly line mess
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 37
   imageCount: 7
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 <em>Part 2 of our journey to the Venice Biennale. Read </em><em><a href="https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015">Part 1</a></em><em> first to avoid spoilers.</em>
@@ -72,9 +72,9 @@ The choice is clear: we’ll print 120 flexible circuits, and solder parts to th
 
 <em>Automated enough to mass-produce these circuit prints</em>
 
-<!-- medium-image:1*4AS1YqvsyC254EMVVlI02g.png alt-decision:review-required -->
+<!-- medium-image:1*4AS1YqvsyC254EMVVlI02g.png alt-decision:meaningful -->
 
-![](/blog-media/3a42e8f62b5597944d2a638a849821e610b47fea9a985081baaff81512a8f6a0.png)
+![Flexible circuit and wires fitted inside a transparent tube for testing](/blog-media/3a42e8f62b5597944d2a638a849821e610b47fea9a985081baaff81512a8f6a0.png)
 
 As it turns out, printing the circuits is the easy part. However:
 
@@ -104,9 +104,9 @@ In early May, after I’ve left for Venice, Steven decides to <a href="https://e
 
 To house our motion detectors, we find these almost perfect acrylic tubes at <a href="http://dama.com.sg/">Dama Trading</a>:
 
-<!-- medium-image:1*0MARDnJEcLGywPgBaTSD9g.png alt-decision:review-required -->
+<!-- medium-image:1*0MARDnJEcLGywPgBaTSD9g.png alt-decision:meaningful -->
 
-![](/blog-media/a619cbd42dc86177f4cc86a9ef0eb9f85ac6576a1a68c4ea918398865fc3c5c7.png)
+![Cardboard box filled with clear acrylic tubes and white end pieces](/blog-media/a619cbd42dc86177f4cc86a9ef0eb9f85ac6576a1a68c4ea918398865fc3c5c7.png)
 
 They’re only a millimetre or so off the diameters of the knots, they hold our motion detectors ever so snugly, and the batteries were <em>made to fit </em>the long clear plastic pipes. A match made in heaven!
 

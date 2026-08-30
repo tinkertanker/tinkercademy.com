@@ -22,10 +22,10 @@ tags:
   - name: Internships
     slug: internships
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/3fca5d185e5eb3c150b4fec5fe6cb4c5860c5bf72444eac4db3d4e03acac393d.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Homemade PVC-pipe gun with exposed electronics aimed at sensor-equipped cardboard aliens.
+heroAltDecision: meaningful
 provenance:
   mediumId: ef141c460192
   publicationId: ca1fc9543b6f
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 14
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 ### Intern report: Building a micro:bit Space Shooter arcade game
@@ -45,17 +45,17 @@ Maker Faire 2017 Singapore was a blast! I had so much fun building/crafting/maki
 
 The game comprises a home-made PVC-pipe gun, which fires off an IR signal to various cardboard aliens. Each of these—the gun, the aliens—is connected to a micro:bit, which drives the various functions (sending IR, receiving IR, as well as various lights and displays).
 
-<!-- medium-image:1*vvx5-fMvg7_U9_J2XAPsxg.jpeg alt-decision:review-required -->
+<!-- medium-image:1*vvx5-fMvg7_U9_J2XAPsxg.jpeg alt-decision:meaningful -->
 
-![](/blog-media/3fca5d185e5eb3c150b4fec5fe6cb4c5860c5bf72444eac4db3d4e03acac393d.jpg)
+![Homemade PVC-pipe gun with exposed electronics aimed at sensor-equipped cardboard aliens.](/blog-media/3fca5d185e5eb3c150b4fec5fe6cb4c5860c5bf72444eac4db3d4e03acac393d.jpg)
 
 Building and programming the gun was the easy part. What was difficult was the design and thought process that went into it.
 
 On the day of Maker Faire, when the arcade was ready to be played by the public, I discovered a grave mistake that I made… or rather, something I didn’t make—the gun had<em> really</em> low durability. Throughout the fair, bits and pieces of the gun kept coming apart, especially the parts that were hot-glued. (Lesson learned: I should have used PVC glue, and clamped the pieces together.) This left me with no choice but to <em>duct tape everything. </em>Parts that were falling apart, parts that had fallen apart… all duct taped.
 
-<!-- medium-image:1*z9NgjN44p3FA99-4y1J5mw.jpeg alt-decision:review-required -->
+<!-- medium-image:1*z9NgjN44p3FA99-4y1J5mw.jpeg alt-decision:meaningful -->
 
-![](/blog-media/160e04f085d64aa6247bc3f169700f552632fc389abedb0448e70ce9f63080ae.jpg)
+![Child operates the improvised electronic gun, with exposed wires and red tape around its frame.](/blog-media/160e04f085d64aa6247bc3f169700f552632fc389abedb0448e70ce9f63080ae.jpg)
 
 Another major issue that I discovered as the Faire started, was that some users could not understand how all the features on the gun worked! That’s a major no-no on user experience. An arcade game should be easily understood by everyone, especially little kids—we shouldn’t need someone to stand by the arcade explaining to others how the game actually works. Anyways, this wasn’t nearly as bad as a gun that disintegrated every other minute.
 

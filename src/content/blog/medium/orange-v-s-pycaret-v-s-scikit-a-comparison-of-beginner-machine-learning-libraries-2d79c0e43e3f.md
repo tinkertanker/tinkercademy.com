@@ -24,7 +24,7 @@ tags:
   - name: Data Science
     slug: data-science
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/1f1671f5d2e1801d9da94a59c88fc4426264007c2751fc120fcf55e11dbe1ace.png
 heroAlt: 3 Simple Steps to train a neural network in Orange
 heroAltDecision: meaningful
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 64
   imageCount: 11
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ## A Comparison of the Top 3 Tools for Machine Learning Beginners: Orange vs PyCaret vs Scikit
 
-<!-- medium-image:1*pMYyu_JLQQnpVI_Q6gIUkw.jpeg alt-decision:review-required -->
+<!-- medium-image:1*pMYyu_JLQQnpVI_Q6gIUkw.jpeg alt-decision:decorative -->
 
 ![](/blog-media/dc4007c078153d6ba6331806da548802442b32fd6d0c7cc5c735970f93851fcc.jpg)
 

@@ -24,10 +24,10 @@ tags:
   - name: Learning
     slug: learning
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/90fee8a12caaa8a1ab0421991bd3812fe767a141124e11c717237456dc0a02ea.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Human hand reaching toward a robotic hand
+heroAltDecision: meaningful
 provenance:
   mediumId: 8de79b270ff9
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 63
   imageCount: 5
   embedCount: 0
-  altReviewRequired: 4
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:0*_CO-PBcZ7VgNIhbp alt-decision:review-required -->
+<!-- medium-image:0*_CO-PBcZ7VgNIhbp alt-decision:meaningful -->
 
-![](/blog-media/90fee8a12caaa8a1ab0421991bd3812fe767a141124e11c717237456dc0a02ea.jpg)
+![Human hand reaching toward a robotic hand](/blog-media/90fee8a12caaa8a1ab0421991bd3812fe767a141124e11c717237456dc0a02ea.jpg)
 
 AI has become such a ubiquitous part of our daily lives that we often don’t realise it’s there. Today, many people use Apple’s Siri, Netflix’s movie recommendation system, Tesla’s self-driving cars and Snapchat’s face-recognising filters to help them with a variety of tasks. But, if you asked them if they’ve ever interacted with an AI, chances are that <a href="https://www.forbes.com/sites/shephyken/2017/06/10/half-of-people-who-encounter-artificial-intelligence-dont-even-realize-it/?sh=5c23f241745f">50 per cent</a> of them would say “no”.
 
@@ -53,9 +53,9 @@ That’s why we believe it’s vital to teach AI to non-programmers. By demystif
 
 ## What is AI?
 
-<!-- medium-image:0*X6vmNb0kKkieK_ST alt-decision:review-required -->
+<!-- medium-image:0*X6vmNb0kKkieK_ST alt-decision:meaningful -->
 
-![](/blog-media/047edca761a21f6cf492791f3f3d683bca31afe0fff25c650d77efa5f9fe68c7.jpg)
+![Humanoid robot standing before a glowing network of connected lines](/blog-media/047edca761a21f6cf492791f3f3d683bca31afe0fff25c650d77efa5f9fe68c7.jpg)
 
 AI has long been a topic of fascination and debate among scientists, technologists, and the general public. Since its establishment as an academic field in the 1950s, it has undergone multiple upgrades eventually culminating in what we now experience as AI.
 
@@ -75,9 +75,9 @@ With the help of complex statistical models and thousands of images, AIs have le
 
 In 2016, Roaf, the world’s first fully-automated waste sorting plant, employed computer vision to allow machines to self-sort recyclable and non-recyclable materials without human intervention. Meanwhile, a year later in 2017, Waymo was likewise able to tap into the power of computer vision to unleash driverless cars onto the road.
 
-<!-- medium-image:0*UKbpT1Q18M4yQw15 alt-decision:review-required -->
+<!-- medium-image:0*UKbpT1Q18M4yQw15 alt-decision:meaningful -->
 
-![](/blog-media/9e71e8b3c39102fdf0610dac7249f5950cb42fd5afd7cad9b1f905d58b3006e7.jpg)
+![Traffic reflected in a car’s side-view mirror on a highway at dusk](/blog-media/9e71e8b3c39102fdf0610dac7249f5950cb42fd5afd7cad9b1f905d58b3006e7.jpg)
 
 ### <strong>AIs Can Read, Speak &amp; Write</strong>
 
@@ -109,9 +109,9 @@ Although AI clearly exhibits great prowess in many areas, it nonetheless continu
 
 On the other hand, a human friend would recognize that you’re feeling down and suggest a playlist of uplifting songs aimed at cheering you up. That’s because where humans have the ability to empathise and understand others’ emotions, AI is characterised by apathy.
 
-<!-- medium-image:0*k56uAxcTCDAHoojf alt-decision:review-required -->
+<!-- medium-image:0*k56uAxcTCDAHoojf alt-decision:meaningful -->
 
-![](/blog-media/83f4eaea80cb924047f31de75f5a7a3439f901aacadd3ab8a0069e5c540c5382.jpg)
+![Rows of yellow smiley-face tokens representing human emotion and empathy.](/blog-media/83f4eaea80cb924047f31de75f5a7a3439f901aacadd3ab8a0069e5c540c5382.jpg)
 
 So while AI can be incredibly useful and efficient in certain tasks, it can never replace humans in empathy-based skills — which just happens to be humanity’s natural gift.
 

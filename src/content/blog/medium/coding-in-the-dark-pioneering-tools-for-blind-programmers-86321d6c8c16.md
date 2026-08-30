@@ -24,10 +24,10 @@ tags:
   - name: Inclusive Design
     slug: inclusive-design
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/8a6d53094e9f7e9e637f1cf9edb0529ae0f1d4587e5e32503282b4aef394c3e7.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Close-up of green and orange programming code on a dark screen
+heroAltDecision: meaningful
 provenance:
   mediumId: 86321d6c8c16
   publicationId: ca1fc9543b6f
@@ -36,14 +36,14 @@ migration:
   paragraphCount: 33
   imageCount: 6
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 ## Coding in The Dark — Pioneering Tools for Blind Programmers
 
-<!-- medium-image:0*EfZpsygfhJOJAvYV alt-decision:review-required -->
+<!-- medium-image:0*EfZpsygfhJOJAvYV alt-decision:meaningful -->
 
-![](/blog-media/8a6d53094e9f7e9e637f1cf9edb0529ae0f1d4587e5e32503282b4aef394c3e7.png)
+![Close-up of green and orange programming code on a dark screen](/blog-media/8a6d53094e9f7e9e637f1cf9edb0529ae0f1d4587e5e32503282b4aef394c3e7.png)
 
 Close your eyes and try typing the first word that pops into your head.
 
@@ -105,9 +105,9 @@ Meanwhile, other participants who were blind preferred the tactile maps that off
 
 “With the tactile map, we can feel the graphics on the map so we’ll know where there are obstacles, etc. It helped a lot!”, he continued.
 
-<!-- medium-image:1*-mm75NF9OhGkcikWb_QmKA.jpeg alt-decision:review-required -->
+<!-- medium-image:1*-mm75NF9OhGkcikWb_QmKA.jpeg alt-decision:meaningful -->
 
-![](/blog-media/9e5007890b6ba4deb9846a2b11c5617ca169b6c2479e2df810488238f11195a7.jpg)
+![Participant examining a spiral-bound tactile map beside a tablet](/blog-media/9e5007890b6ba4deb9846a2b11c5617ca169b6c2479e2df810488238f11195a7.jpg)
 
 <!-- medium-image:1*YNfHFEvbEaI2t8nL6_dzRg.jpeg alt-decision:meaningful -->
 

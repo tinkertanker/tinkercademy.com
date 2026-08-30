@@ -24,7 +24,7 @@ tags:
   - name: iOS App Development
     slug: ios-app-development
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/427ab4a3ad28fe54b8e9dc239ffc5781bc9f1ca4bfb70c90720e9c8deff1afa6.png
 heroAlt: 2D game exemplar
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 11
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Enric Tan is currently pursuing a Computer Science degree at the Nanyang Technological University (NTU). He interned with us over the summer break this year and dove right into a wide array of coding languages. Here, he writes about the main takeaways from his internship with us. Thanks for sharing your experience Enric!</em>
@@ -63,8 +63,8 @@ The second task that I worked on was the Swift Explorers Hackathon. I had totall
 
 Lastly, one of the major tasks that I worked on during my internship was to work with Virtual Machines (VM). I was tasked to install Canvas LMS on a VM which entailed many command line work that I was unfamiliar with. It was also my first time using a Linux-based system and running many commands on the terminal. I ran into many difficulties while trying to install Canvas LMS from scratch, there were many dependencies errors that I had to deal with. However, I managed to get the system to work in the end and I was able to pick up many useful skills from this experience. Such as navigating through directories in the terminal and using GitHub CLI.
 
-<!-- medium-image:1*OlZKEVA1O6oQPuj4mVEoKg.png alt-decision:review-required -->
+<!-- medium-image:1*OlZKEVA1O6oQPuj4mVEoKg.png alt-decision:meaningful -->
 
-![](/blog-media/105a21bdaf6c5bafc4e6102dd082ed0cb4b7bbbe56a270c54ed520befd04e062.png)
+![Linux terminal showing Canvas LMS Docker setup before the script was interrupted](/blog-media/105a21bdaf6c5bafc4e6102dd082ed0cb4b7bbbe56a270c54ed520befd04e062.png)
 
 All in all, interning at Tinkertanker was a very enriching experience. I was able to take part in the teaching of classes and even try out many different coding languages and programs such as VMs. And all of these have helped me improve and grow as a Computer Science undergraduate.

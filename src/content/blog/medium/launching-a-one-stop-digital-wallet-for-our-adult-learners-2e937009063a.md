@@ -24,10 +24,10 @@ tags:
   - name: Learning And Development
     slug: learning-and-development
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Illustration of a digital certificate secured by fingerprint authentication and a padlock.
+heroAltDecision: meaningful
 provenance:
   mediumId: 2e937009063a
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 24
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:0*jCWabjyMj1bkYTZx alt-decision:review-required -->
+<!-- medium-image:0*jCWabjyMj1bkYTZx alt-decision:meaningful -->
 
-![](/blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png)
+![Illustration of a digital certificate secured by fingerprint authentication and a padlock.](/blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png)
 
 Do you recall the very first time you attended a workshop or training course? Can you remember what you learnt? Or who your instructor was?
 

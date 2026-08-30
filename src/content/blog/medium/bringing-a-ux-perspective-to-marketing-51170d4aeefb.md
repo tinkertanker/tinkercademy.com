@@ -20,10 +20,10 @@ tags:
   - name: Tinkertanker
     slug: tinkertanker
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/9038ff1d1480581f2cb0a5d38fb66dda97306095a5db72b5fa4d6bcc25e1a0e1.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: A winding path connects “UX” to “Marketing”
+heroAltDecision: meaningful
 provenance:
   mediumId: 51170d4aeefb
   publicationId: ca1fc9543b6f
@@ -32,14 +32,14 @@ migration:
   paragraphCount: 9
   imageCount: 1
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ### Learnings From 2 Months Into My Job at Tinkertanker
 
-<!-- medium-image:1*WMbdDMWK3EBjyFURDZCnSA.png alt-decision:review-required -->
+<!-- medium-image:1*WMbdDMWK3EBjyFURDZCnSA.png alt-decision:meaningful -->
 
-![](/blog-media/9038ff1d1480581f2cb0a5d38fb66dda97306095a5db72b5fa4d6bcc25e1a0e1.png)
+![A winding path connects “UX” to “Marketing”](/blog-media/9038ff1d1480581f2cb0a5d38fb66dda97306095a5db72b5fa4d6bcc25e1a0e1.png)
 
 Processes tend to flow smoothly in Singapore — as smooth as the soya beancurd pudding from Rochor Beancurd. Having experienced the <em>joys</em> of places like the Department of Motor Vehicles, I thought picking up my Singaporean work visa would provide a comparably irritating and time-consuming experience. In actuality, going to the service center to finalize the paperwork and to pick up the visa was a breeze. Also, contrary to what almost every Singaporean has told me, I find the MRT to be fairly efficient and painless. (I urge these individuals to try some of the other public transportation systems around the world.) NYC MTA, please take note: the trains in Singapore are clean, people queue to enter a crowded train car, and the electronic signage in stations clearly provides updates and train arrival times.
 

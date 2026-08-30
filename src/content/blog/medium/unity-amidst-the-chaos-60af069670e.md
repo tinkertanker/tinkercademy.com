@@ -19,7 +19,7 @@ tags:
   - name: Tinkercademy
     slug: tinkercademy
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/2e81a0fa8195b24b8ce53857c2ddb0de442f5fbf79aeff559bdfa574d429c218.gif
 heroAlt: unity-mp-rpg
 heroAltDecision: meaningful

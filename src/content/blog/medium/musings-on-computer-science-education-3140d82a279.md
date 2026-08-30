@@ -24,7 +24,7 @@ tags:
   - name: Smart Nation
     slug: smart-nation
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/e462f39f50964525edbead10d3e388e8e6894822be68082d9b3076ffa4e9d413.jpg
 heroAlt: KIBOs set up at a preschool
 heroAltDecision: meaningful

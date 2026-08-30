@@ -24,10 +24,10 @@ tags:
   - name: Data Analysis Process
     slug: data-analysis-process
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/f5d737e7c6d3cdd53c1d005b46461edb51c3d398b7028ed0ace7b37691da0f88.png
 heroAlt: ""
-heroAltDecision: review-required
+heroAltDecision: decorative
 provenance:
   mediumId: 6237608a433
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 61
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 <em>Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post </em><em><a href="https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382">here</a></em><em>.</em>
 
-<!-- medium-image:1*u1uv_VXeIXWsOSgJWCtjvg.png alt-decision:review-required -->
+<!-- medium-image:1*u1uv_VXeIXWsOSgJWCtjvg.png alt-decision:decorative -->
 
 ![](/blog-media/f5d737e7c6d3cdd53c1d005b46461edb51c3d398b7028ed0ace7b37691da0f88.png)
 
@@ -61,9 +61,9 @@ Let’s start with counting the scores of the rubrics of each group. There is a 
 
 The rubric columns of the responses contain the score that each respondent has given to a teacher or teaching group.
 
-<!-- medium-image:1*DGWiAXlMawbFb1eT1f15cg.png alt-decision:review-required -->
+<!-- medium-image:1*DGWiAXlMawbFb1eT1f15cg.png alt-decision:meaningful -->
 
-![](/blog-media/1ffdbcbe98ba725415b48286b44b0192cb183285d70b23626fa96a7b9d2b7973.png)
+![Pandas table of numeric ratings across eight teacher-feedback questions](/blog-media/1ffdbcbe98ba725415b48286b44b0192cb183285d70b23626fa96a7b9d2b7973.png)
 
 I first filter the group by rubric_columns so that it is just the dataframe containing the rubric columns, I then use .apply() with the function Series.value_counts, this will get the counts of each unique value in the column. I then use transpose to flip the rows and columns.
 

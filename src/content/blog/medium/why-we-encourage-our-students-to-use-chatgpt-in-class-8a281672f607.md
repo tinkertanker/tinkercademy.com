@@ -22,10 +22,10 @@ tags:
   - name: Artificial Intelligence
     slug: artificial-intelligence
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/5db71524cc72cc96751a15cf602c5ddfbbc90910612b3dbfa5339917b7fc2b14.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: ChatGPT homepage with the prompt “What is the best image generator?”
+heroAltDecision: meaningful
 provenance:
   mediumId: 8a281672f607
   publicationId: ca1fc9543b6f
@@ -34,12 +34,12 @@ migration:
   paragraphCount: 21
   imageCount: 2
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:1*0J35cuXNhV5rQ4ouvox82A.jpeg alt-decision:review-required -->
+<!-- medium-image:1*0J35cuXNhV5rQ4ouvox82A.jpeg alt-decision:meaningful -->
 
-![](/blog-media/5db71524cc72cc96751a15cf602c5ddfbbc90910612b3dbfa5339917b7fc2b14.jpg)
+![ChatGPT homepage with the prompt “What is the best image generator?”](/blog-media/5db71524cc72cc96751a15cf602c5ddfbbc90910612b3dbfa5339917b7fc2b14.jpg)
 
 With more than 1 billion users worldwide, ChatGPT has sparked much debate about issues like academic fraud, plagiarism, and the validity of assessments. The increasing scale at which students are using ChatGPT to complete assignments has left educators wondering about its potential impact on their students’ learning.
 

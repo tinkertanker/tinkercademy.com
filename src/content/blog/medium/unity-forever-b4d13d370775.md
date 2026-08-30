@@ -21,7 +21,7 @@ tags:
   - name: Curriculum
     slug: curriculum
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/8756906c990f1ae65405dca0a97aa96b63239f7a2713a7f9c936630b51ba6dc2.gif
 heroAlt: This is educational, trust me
 heroAltDecision: meaningful
@@ -33,7 +33,7 @@ migration:
   paragraphCount: 31
   imageCount: 7
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Yan Wei, a former student of YJ’s, joined us for a 3.5-month internship , which happened to coincide with Singapore’s “circuit breaker” lockdown. Nevertheless, Yan Wei managed to make the most of his time with us by diving into a project developing curriculum and example games for Unity—something we know he’s been very passionate about since he was in school. At time of publication, he’s about to start his first year at NTU in Computer Science, where we’re sure he’ll be up to some really cool projects.</em>
@@ -44,9 +44,9 @@ This article will talk about none of those things. Instead, this is about the th
 
 I joined Tinkertanker in March 2020 with a friend, Zhi Yi, who I worked with closely throughout my internship. We weren’t completely new to the company, though. Indeed, our first experience with Tinkertanker was during a Unity course in secondary school, taught by the boss man himself, Mr Soon. I remember having a lot of fun during lesson time, so when I was given the opportunity to help update the Unity curriculum during my internship, I was elated! Surely, planning lessons should be just as fun as going through the lesson themselves, right?
 
-<!-- medium-image:0*nluDJ0DTRzQiuzPh alt-decision:review-required -->
+<!-- medium-image:0*nluDJ0DTRzQiuzPh alt-decision:meaningful -->
 
-![](/blog-media/0e4a91762fcab07f790c5a9d304aab5267b437df250c523d8cb33010653ec669.png)
+![Cartoon figure pointing beside the words “that’s where you’re wrong kiddo”](/blog-media/0e4a91762fcab07f790c5a9d304aab5267b437df250c523d8cb33010653ec669.png)
 
 ### Heirloom
 

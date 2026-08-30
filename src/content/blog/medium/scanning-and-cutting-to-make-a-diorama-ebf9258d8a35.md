@@ -20,7 +20,7 @@ tags:
   - name: Art
     slug: art
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/1e9f3d688f5c1a75f7bd06cdc04e71aff466901b38a3ab0d2655af1cd5a291d7.jpg
 heroAlt: self-made diorama
 heroAltDecision: meaningful

@@ -24,10 +24,10 @@ tags:
   - name: Read Csv File
     slug: read-csv-file
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/f5d737e7c6d3cdd53c1d005b46461edb51c3d398b7028ed0ace7b37691da0f88.png
 heroAlt: ""
-heroAltDecision: review-required
+heroAltDecision: decorative
 provenance:
   mediumId: 2582307b4382
   publicationId: ca1fc9543b6f
@@ -36,14 +36,14 @@ migration:
   paragraphCount: 67
   imageCount: 8
   embedCount: 0
-  altReviewRequired: 8
+  altReviewRequired: 0
 ---
 
 <em>Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&amp;L) survey. In this survey, students offered valuable feedback on their teachers, the classroom learning environment and much much more… With the huge amount of data we collected, we turned to Python programming to help us process the survey results.</em>
 
 <em>Below, Ong Yi Shen, our intern from Nanyang Technological University (NTU) tackles this task as he uses a variety of Python tricks to clean, analyse and report data obtained from CSV files.</em>
 
-<!-- medium-image:1*u1uv_VXeIXWsOSgJWCtjvg.png alt-decision:review-required -->
+<!-- medium-image:1*u1uv_VXeIXWsOSgJWCtjvg.png alt-decision:decorative -->
 
 ![](/blog-media/f5d737e7c6d3cdd53c1d005b46461edb51c3d398b7028ed0ace7b37691da0f88.png)
 
@@ -65,9 +65,9 @@ The “as” keyword is basically an alias, so instead of using pandas.read_csv 
 
 On the left side of Google Colab, you can drag and drop the files needed. (Recall that Google Colab is using cloud computing, so files that will be used to generate the report need to be uploaded)
 
-<!-- medium-image:1*xextGx9QebUhuZidiBc39Q.png alt-decision:review-required -->
+<!-- medium-image:1*xextGx9QebUhuZidiBc39Q.png alt-decision:meaningful -->
 
-![](/blog-media/4d9a19154d083e6c5175760af0c76b2102f5dd7b8cea6dd29bfd1cf85ab1031f.png)
+![Google Colab Files panel with responses.csv uploaded](/blog-media/4d9a19154d083e6c5175760af0c76b2102f5dd7b8cea6dd29bfd1cf85ab1031f.png)
 
 Using pandas, I read the “responses.csv” file which returns a Pandas dataframe object which I saved into the variable df.
 
@@ -83,9 +83,9 @@ df.head(5)
 
 These are just some of the column names shown with the .head() method:
 
-<!-- medium-image:1*NlvhO4HhdDalsXdR-eHNNg.png alt-decision:review-required -->
+<!-- medium-image:1*NlvhO4HhdDalsXdR-eHNNg.png alt-decision:meaningful -->
 
-![](/blog-media/b250ba14c4069e7203b2a3363a11fc4d01ec9f2b4ff17de4aca0ebef5ff4559a.png)
+![Pandas table with Name of Teacher and several duplicate Teaching Group columns](/blog-media/b250ba14c4069e7203b2a3363a11fc4d01ec9f2b4ff17de4aca0ebef5ff4559a.png)
 
 Strangely, there are duplicate columns of “Teaching Group”.
 
@@ -102,9 +102,9 @@ I notice that the duplicate Teaching Group columns all start with “Teaching Gr
 
 The result is a list ranging from index 3 all the way to index 96.
 
-<!-- medium-image:1*FUd4cPlwuvnu2aNDy2yDNA.png alt-decision:review-required -->
+<!-- medium-image:1*FUd4cPlwuvnu2aNDy2yDNA.png alt-decision:meaningful -->
 
-![](/blog-media/924f7fbb66f90e5c70a8b58e235a78223de991fcf1c7464aeb87be101c7d1e01.png)
+![Teaching Group columns filled mostly with NaN, with one group value in a row](/blog-media/924f7fbb66f90e5c70a8b58e235a78223de991fcf1c7464aeb87be101c7d1e01.png)
 
 Something interesting I noticed as well is that each row is filled with NaN values. I also noticed that for each row, among the NaN values in the Teaching Group columns, one of these columns will contain the teaching group.
 
@@ -127,9 +127,9 @@ I use a lambda function to do the counting of non-NaN values. X is the series ob
 
 This is the result! However, at first glance, we can’t really tell if every single row has only 1 non-NaN value, there are too many rows
 
-<!-- medium-image:1*4vSFd0d7TPNs9YVMRRUBKw.png alt-decision:review-required -->
+<!-- medium-image:1*4vSFd0d7TPNs9YVMRRUBKw.png alt-decision:meaningful -->
 
-![](/blog-media/fc13e61714e50dda52d742670218eee284bd397cfe76dee0341c3157829840db.png)
+![Pandas Series of 5,394 rows, each with the value 1](/blog-media/fc13e61714e50dda52d742670218eee284bd397cfe76dee0341c3157829840db.png)
 
 We can use the set() function on the series to get all the unique values, if our guess is correct, the only numbers in this set should be 1.
 
@@ -139,9 +139,9 @@ set(teaching_groups_df.apply(lambda x: len(indexes) - x.isna().sum(), axis=1))
 
 After applying the set() function I get a set containing only one number, 1.
 
-<!-- medium-image:1*yKwmvK5u-j8DPVhNbRhd6Q.png alt-decision:review-required -->
+<!-- medium-image:1*yKwmvK5u-j8DPVhNbRhd6Q.png alt-decision:meaningful -->
 
-![](/blog-media/47874b856d0bc749aaf9c4cd611ae87a9895224aca535debbddcdcf6352ea7bc.png)
+![Python set output containing only the value 1](/blog-media/47874b856d0bc749aaf9c4cd611ae87a9895224aca535debbddcdcf6352ea7bc.png)
 
 Now after confirming this is the case, I can go ahead with merging all the duplicate columns into one “Teaching Group” column containing the teaching group.
 
@@ -181,9 +181,9 @@ print("NaN in Name of Teacher field:", df["Name of Teacher"].isnull().values.any
 print("NaN in rubrics section:", df.loc[:, rubric_columns].isnull().values.any())
 ```
 
-<!-- medium-image:1*ABNGRz2cf-JzDJBuZfSLfg.png alt-decision:review-required -->
+<!-- medium-image:1*ABNGRz2cf-JzDJBuZfSLfg.png alt-decision:meaningful -->
 
-![](/blog-media/830e94f8d512f7542fa70d06bcfe70c9321593022c84e2c58959bbaa2b976fad.png)
+![Checks report no NaN values in the teacher-name or rubric fields](/blog-media/830e94f8d512f7542fa70d06bcfe70c9321593022c84e2c58959bbaa2b976fad.png)
 
 Another possibility is that students can submit multiple responses to the survey, and as such I should only take the most recent response.
 
@@ -254,8 +254,8 @@ df.groupby(["Name of Teacher", "Teaching Group"]).count()["Timestamp"].to_frame(
 
 The result is a CSV grouped by “Name of Teacher” and “Teaching Group” along with the counts of each group
 
-<!-- medium-image:1*OJg6GxjRRYGGyc5uGpSb-Q.png alt-decision:review-required -->
+<!-- medium-image:1*OJg6GxjRRYGGyc5uGpSb-Q.png alt-decision:meaningful -->
 
-![](/blog-media/3c2ff802b75959e2eed3bf7d20fd6573acbc2baf28c456c2df08314e5a824372.png)
+![CSV grouped by teacher and teaching group, with a count for each group](/blog-media/3c2ff802b75959e2eed3bf7d20fd6573acbc2baf28c456c2df08314e5a824372.png)
 
 Click <a href="https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433">here</a> to continue part 2 of this article!

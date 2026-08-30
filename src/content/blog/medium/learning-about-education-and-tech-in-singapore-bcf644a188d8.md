@@ -24,7 +24,7 @@ tags:
   - name: Early Childhood Education
     slug: early-childhood-education
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/5bdd401c3fcea3a85e608a459abc019327a3b32cdf90e399192e656bbdd79d92.jpg
 heroAlt: One of the slides from the digital marketing presentation
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 29
   imageCount: 4
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ### Attending the Early Childhood Conference and a Digital Marketing Workshop
@@ -55,9 +55,9 @@ At the Early Childhood Conference in the beginning of October, I helped my colle
 
 Helping to facilitate the workshop allowed me to interact with a fairly large population of early childhood educators. It was interesting to see their reactions to the circuit stickers activity. Some took to it very quickly and were really interested in the whole idea of it. Others were not so enthusiastic or were confused about how the circuit stickers worked. It’s become fairly clear to me that in order for a program like PlayMaker to deliver the most impact, the educators using the tech tools in their classrooms have to be <em>excited</em> about the tech they are using. If the educators aren’t enthusiastic, the chances are a lot larger that the students won’t be either. In a <a href="https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279">previous piece I’ve written</a>, I asked a question: if educators are uncomfortable with the materials they are teaching, how can young students gain a firm grasp on the material as well? I’ll push this question further: how can we get educators who aren’t super comfortable with tech to be <em>excited</em> about learning and using it? Can we craft a learning environment or program that <em>teaches and sparks interest</em> in technology to adults who previously have not had much exposure? These questions are difficult to answer, but are important to consider.
 
-<!-- medium-image:1*DghweSb87jErBEdkDOrfsA.jpeg alt-decision:review-required -->
+<!-- medium-image:1*DghweSb87jErBEdkDOrfsA.jpeg alt-decision:meaningful -->
 
-![](/blog-media/a9cdda3cf0dd48ab8b7ed869964809576eb47f7da7d89cf68f5b139221ffc731.jpg)
+![Workshop participants attach copper tape and LEDs to circuit-sticker activity sheets.](/blog-media/a9cdda3cf0dd48ab8b7ed869964809576eb47f7da7d89cf68f5b139221ffc731.jpg)
 
 <!-- medium-image:1*X6UtLmVmW5xyR4R4sXG4Kw.jpeg alt-decision:meaningful -->
 

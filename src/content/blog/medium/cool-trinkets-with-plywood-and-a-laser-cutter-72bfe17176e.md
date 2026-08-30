@@ -24,7 +24,7 @@ tags:
   - name: Tinkering
     slug: tinkering
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/91d15ad1b117d46afe29573f14f04f5020a427bd4cac72c21d3d9c1f5e5bc37d.jpg
 heroAlt: A little magnet, with other little magnets in the background stuck on the metal frame beside the stairs.
 heroAltDecision: meaningful

@@ -24,10 +24,10 @@ tags:
   - name: Rpa Tools
     slug: rpa-tools
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/d1b75d217a6788fda238232d562619251fd055c053d5795967813dd681c3f736.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Robotic arms processing sheets of paper on a conveyor
+heroAltDecision: meaningful
 provenance:
   mediumId: 97f9da08d818
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 21
   imageCount: 1
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:1*QEGA4G4r-C1iRS_lEChFMA.png alt-decision:review-required -->
+<!-- medium-image:1*QEGA4G4r-C1iRS_lEChFMA.png alt-decision:meaningful -->
 
-![](/blog-media/d1b75d217a6788fda238232d562619251fd055c053d5795967813dd681c3f736.png)
+![Robotic arms processing sheets of paper on a conveyor](/blog-media/d1b75d217a6788fda238232d562619251fd055c053d5795967813dd681c3f736.png)
 
 Imagine you’re a regional manager of a large multinational corporation. At a recent business conference, you hear about a new technology capable of completing manual data entry at 20 to 30 times the speed of your average employee!
 

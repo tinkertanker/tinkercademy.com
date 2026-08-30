@@ -22,7 +22,7 @@ tags:
   - name: Students
     slug: students
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/eb0badb250ca5b607cde87dab85e59dfb36a8187bbfa6b13f8f919a376762385.jpg
 heroAlt: A heart from TKRobot
 heroAltDecision: meaningful
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 81
   imageCount: 21
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ## Re-interning at Tinkertanker
@@ -227,9 +227,9 @@ Using Voiceflow, I managed to make a custom Alexa skill integrated with Google S
 
 As a fan of practically all things related to 3D modelling, it should be understandable why researching Augmented Reality (AR) would be so enticing.
 
-<!-- medium-image:1*apkfxv9NX2mau06--pfdtA.png alt-decision:review-required -->
+<!-- medium-image:1*apkfxv9NX2mau06--pfdtA.png alt-decision:meaningful -->
 
-![](/blog-media/8c4a0f71c8bac109d8a304653d217eb4aa72858a8fdbe0b79c9d99f37949d22e.png)
+![A-Frame homepage describing its framework for building 3D, augmented-reality and virtual-reality experiences.](/blog-media/8c4a0f71c8bac109d8a304653d217eb4aa72858a8fdbe0b79c9d99f37949d22e.png)
 
 > <a href="https://aframe.io/">A-Frame</a> is a web framework for building virtual reality (VR) experiences.
 

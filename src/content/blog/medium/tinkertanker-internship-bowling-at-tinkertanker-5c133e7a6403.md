@@ -24,7 +24,7 @@ tags:
   - name: Machine Learning Training
     slug: machine-learning-training
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/4410ffb01d2d99f0fdc992f6762b488d4ecbb1d7c250e3f6e89b5a622dd39445.png
 heroAlt: Example image of output from a diffusion model Jupyter Notebook shown to students
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 29
   imageCount: 7
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Mark, a self-starter and aspiring software engineer, joined us over a 12-week period as a teaching and curriculum design intern. Although his internship stint was short, he took it upon himself to learn as much as he could and blew us away with his adaptability and courage. We enjoyed your unwavering spirit, and we wish you the best of luck, Mark!</em>
@@ -79,9 +79,9 @@ At the end of the event, there was a competition where students had to showcase 
 
 Some of the other interns and I made some example programs to showcase to students the ability of frameworks like Streamlit, an open-source Python framework used for convenient machine-learning web apps. We got the chance to play around with the limited access OpenAI GPT-4 model (which Tinkertanker had access to).
 
-<!-- medium-image:1*34LwYI9M8ScZTzva6Fp9NQ.png alt-decision:review-required -->
+<!-- medium-image:1*34LwYI9M8ScZTzva6Fp9NQ.png alt-decision:meaningful -->
 
-![](/blog-media/ad8c836147ab5e25e9522eba1cd0229b08aa25b72f8c609263b195931ac19b3c.png)
+![Streamlit app recommending songs from the query “love story taylor swift pop”](/blog-media/ad8c836147ab5e25e9522eba1cd0229b08aa25b72f8c609263b195931ac19b3c.png)
 
 <!-- medium-image:1*c54Vwy7wsiChzSshNZ_k_g.png alt-decision:meaningful -->
 

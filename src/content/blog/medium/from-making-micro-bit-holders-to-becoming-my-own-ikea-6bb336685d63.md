@@ -24,7 +24,7 @@ tags:
   - name: Room Decor
     slug: room-decor
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/214bf7d90a1d24f34a6571d657a2781b73ccec2f1946ad30de0671b1a9dcabfe.jpg
 heroAlt: I made both a taller and shorter version of the portable stand!
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 30
   imageCount: 12
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ## From making micro:bit holders to becoming my own IKEA
@@ -83,9 +83,9 @@ After a little bit of assembly with the screws, the micro:bit display stand was 
 
 The second micro:bit stand I had in mind would be portable, perhaps to assist with organisation for micro:bit classes. This design would require the use of the acrylic bender.
 
-<!-- medium-image:1*xIxru6sKrugcrfNUjndkSw.png alt-decision:review-required -->
+<!-- medium-image:1*xIxru6sKrugcrfNUjndkSw.png alt-decision:meaningful -->
 
-![](/blog-media/b5f8bcea425d2d99d73319a1c9b0758918881618027cc4716082f55e0ae71b3a.png)
+![Vector cutting template for a rounded acrylic micro:bit holder with side grooves](/blog-media/b5f8bcea425d2d99d73319a1c9b0758918881618027cc4716082f55e0ae71b3a.png)
 
 The extra width for the groove on the left would be to make space for the protrusion on the underside of the micro:bit. After printing, the acrylic piece would be bent such that the grooves on the two sides line up for the micro:bit to fit inside. The two A and B buttons on the micro:bit would protrude outside the stand, allowing the micro:bits to fit nicely.
 

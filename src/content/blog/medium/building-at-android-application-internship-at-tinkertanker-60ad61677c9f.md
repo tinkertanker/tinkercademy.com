@@ -20,7 +20,7 @@ tags:
   - name: Microbit
     slug: microbit
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/67ccd90fdc34914671cf50bd546f5255c06b65dec34ba576c5f2a3daeb4261fd.jpg
 heroAlt: The final product, listed on the Play Store! Those screenshots are out of date, though.
 heroAltDecision: meaningful

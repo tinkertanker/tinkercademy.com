@@ -14,10 +14,10 @@ publishedAt: 2021-07-14T03:02:41.182Z
 updatedAt: 2022-01-06T06:47:27.568Z
 tags: []
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/86ff294f832a5307afd256a555f86c72210562054752eb92742ff2e27cf61e4d.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Students in yellow shirts work on laptops while an instructor presents an ESP-NOW device-network diagram.
+heroAltDecision: meaningful
 provenance:
   mediumId: c46ad5cbfda6
   publicationId: ca1fc9543b6f
@@ -26,12 +26,12 @@ migration:
   paragraphCount: 17
   imageCount: 1
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:1*YR_VzLaFRfGPXuhYDlq8WQ.png alt-decision:review-required -->
+<!-- medium-image:1*YR_VzLaFRfGPXuhYDlq8WQ.png alt-decision:meaningful -->
 
-![](/blog-media/86ff294f832a5307afd256a555f86c72210562054752eb92742ff2e27cf61e4d.png)
+![Students in yellow shirts work on laptops while an instructor presents an ESP-NOW device-network diagram.](/blog-media/86ff294f832a5307afd256a555f86c72210562054752eb92742ff2e27cf61e4d.png)
 
 > “<em>This Youth Month, we want to let our youth know that all Singaporeans are committed to journeying with and empowering them to write the next chapter for Singapore.</em>
 

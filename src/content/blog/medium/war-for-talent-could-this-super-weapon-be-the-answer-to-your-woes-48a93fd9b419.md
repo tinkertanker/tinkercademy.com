@@ -24,10 +24,10 @@ tags:
   - name: Youth Development
     slug: youth-development
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/ebb0705cc1fa49ded9ea84efaf87f09da843f8077d08df07926e5047bdd9e33d.jpg
 heroAlt: ""
-heroAltDecision: review-required
+heroAltDecision: decorative
 provenance:
   mediumId: 48a93fd9b419
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 30
   imageCount: 4
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 ## <strong>War for Talent — Could This Super Weapon Be the Answer to Your Woes?</strong>
 
-<!-- medium-image:0*DBIz1MEmFlctXB2G alt-decision:review-required -->
+<!-- medium-image:0*DBIz1MEmFlctXB2G alt-decision:decorative -->
 
 ![](/blog-media/ebb0705cc1fa49ded9ea84efaf87f09da843f8077d08df07926e5047bdd9e33d.jpg)
 
@@ -57,9 +57,9 @@ Many large companies are simply chucking large sums of money into their talent a
 
 The Defence Science &amp; Technology Agency (DSTA) is a top-notch technology organisation that drives innovation and delivers state-of-the-art capabilities to the defence force in Singapore.
 
-<!-- medium-image:0*Fo9vZdNvGuPc4eQh alt-decision:review-required -->
+<!-- medium-image:0*Fo9vZdNvGuPc4eQh alt-decision:meaningful -->
 
-![](/blog-media/3d4b0d7697d4fb4e717795f5f5933df9ec99e037b20b1d0df7d1b74546452271.png)
+![Defence Science & Technology Agency logo](/blog-media/3d4b0d7697d4fb4e717795f5f5933df9ec99e037b20b1d0df7d1b74546452271.png)
 
 Over the years, they’ve noticed that hiring tech talent has become increasingly challenging. To combat this problem, they asked themselves — Why not nurture and discover our own first-class tech talent?
 

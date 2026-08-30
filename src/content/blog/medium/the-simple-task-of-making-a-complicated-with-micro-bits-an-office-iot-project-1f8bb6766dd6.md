@@ -22,7 +22,7 @@ tags:
   - name: IoT
     slug: iot
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/26f5e2a4eae5cc3575bd95d2b99122c397771deffeade9acdb0d14b67ce56f94.png
 heroAlt: Simple, eh?
 heroAltDecision: meaningful

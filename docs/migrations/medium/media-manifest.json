@@ -4,7 +4,7 @@
     "assets": 395,
     "placements": 397,
     "animatedAssets": 34,
-    "altReviewRequired": 134
+    "altReviewRequired": 0
   },
   "assets": [
     {
@@ -63,9 +63,11 @@
           "sourceWidth": 360,
           "sourceHeight": 480,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Transparent Ring:bit robot car with an exposed circuit board and LED matrix beside a laptop.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -94,9 +96,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1067,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Human hand reaching toward a robotic hand",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -218,9 +222,11 @@
           "sourceWidth": 1287,
           "sourceHeight": 1600,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Orange Meow:bit handheld console running a pixel-art game with a heart counter.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -249,9 +255,11 @@
           "sourceWidth": 306,
           "sourceHeight": 752,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "AR scene tracking a pink cat-shaped hat above a moving user's head, with a forest background and pixel-art cats in front.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -404,9 +412,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 844,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Papa Bucks screens showing expenses, monthly goals and spending by category",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -621,9 +631,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 898,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Round-cut diamond held in tweezers against a dark background.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -652,9 +664,11 @@
           "sourceWidth": 1280,
           "sourceHeight": 720,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Microcontroller wired to an ultrasonic distance sensor and battery pack on a worktable.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -714,9 +728,11 @@
           "sourceWidth": 1024,
           "sourceHeight": 1024,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "A school of fish swimming in clear blue ocean water, viewed from below.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -776,9 +792,11 @@
           "sourceWidth": 1631,
           "sourceHeight": 917,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Two gold 3D-printed models, a cartoon mouse and a small tugboat, displayed on a wooden shelf.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -807,9 +825,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1308,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "MakeCode program that detects increased micro:bit light levels and broadcasts a radio signal.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -838,9 +858,11 @@
           "sourceWidth": 1024,
           "sourceHeight": 1024,
           "isFeatured": false,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -993,9 +1015,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Colourful game pawns arranged along connected lines",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -1210,9 +1234,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": true,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -1396,9 +1422,11 @@
           "sourceWidth": 1400,
           "sourceHeight": 1050,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Close-up of green and orange programming code on a dark screen",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -1520,9 +1548,11 @@
           "sourceWidth": 1220,
           "sourceHeight": 868,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Meta Spark object panel with Plane selected and ready to insert.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -1551,9 +1581,11 @@
           "sourceWidth": 279,
           "sourceHeight": 140,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Defence Science & Technology Agency logo",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -1582,9 +1614,11 @@
           "sourceWidth": 1220,
           "sourceHeight": 864,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Meta Spark object panel with Face Tracker selected and the Insert button highlighted.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -1768,9 +1802,11 @@
           "sourceWidth": 450,
           "sourceHeight": 338,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Micro:bit electronics kit open beside a laptop and project materials",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2047,9 +2083,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Illustration of a digital certificate secured by fingerprint authentication and a padlock.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2140,9 +2178,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Rows of yellow smiley-face tokens representing human emotion and empathy.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -2264,9 +2304,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 834,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "CounseLink screens for counselling bookings, happiness tracking and student check-ins",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2512,9 +2554,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "‘Reducing the Gender Gap in Tech’ event graphic featuring speaker Goh Aik Hong.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2543,9 +2587,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 569,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Meta Spark Camera inspector with Person segmentation assigned to a segmentation-mask texture.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2574,9 +2620,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 283,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Coding curriculum and education",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -2605,9 +2653,11 @@
           "sourceWidth": 621,
           "sourceHeight": 441,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cartoon figure pointing beside the words “that’s where you’re wrong kiddo”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2667,9 +2717,11 @@
           "sourceWidth": 480,
           "sourceHeight": 368,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Animating Images demo: a phone finds an illustration on a laptop screen, then displays tracked AR content over it.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2760,9 +2812,11 @@
           "sourceWidth": 224,
           "sourceHeight": 480,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Fruit Catcher AR game with fruit moving around a user's tracked face toward a basket below their chin.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2853,9 +2907,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1048,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "A hand guides a toy aeroplane across a chalk world map",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2915,9 +2971,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 902,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Children activate wall-mounted targets inside the cardboard spaceship game.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -2946,9 +3004,11 @@
           "sourceWidth": 1278,
           "sourceHeight": 958,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cardboard spaceship control room with panels and a “Launch Spaceship” sign",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -3039,9 +3099,11 @@
           "sourceWidth": 1599,
           "sourceHeight": 1200,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Two people assemble cardboard target boxes with taped flaps around the light sensors.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -3070,9 +3132,11 @@
           "sourceWidth": 653,
           "sourceHeight": 270,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Front and back of a micro:bit labelled with its buttons, LEDs, ports and edge pins",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -3287,9 +3351,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 834,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "CO2Green screens for tracking a carbon footprint and scanning a meal’s emissions",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -3318,9 +3384,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 900,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Traffic reflected in a car’s side-view mirror on a highway at dusk",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -3721,9 +3789,11 @@
           "sourceWidth": 475,
           "sourceHeight": 380,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Twenty embroidered fabric designs including flowers, spirals, hearts and names",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -3752,9 +3822,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1200,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Humanoid robot standing before a glowing network of connected lines",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4000,9 +4072,11 @@
           "sourceWidth": 1599,
           "sourceHeight": 1200,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cardboard spaceship installation with an open doorway and child-height activity table",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4155,9 +4229,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 281,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Other projects",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -4527,9 +4603,11 @@
           "sourceWidth": 1200,
           "sourceHeight": 1600,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Participant examining a spiral-bound tactile map beside a tablet",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4558,9 +4636,11 @@
           "sourceWidth": 1023,
           "sourceHeight": 332,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Completed migration CSV with Bitbucket and GitHub repository names, organisations, descriptions, privacy and archive columns.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4651,9 +4731,11 @@
           "sourceWidth": 5508,
           "sourceHeight": 3672,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "ChatGPT homepage with the prompt “What is the best image generator?”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4682,9 +4764,11 @@
           "sourceWidth": 1902,
           "sourceHeight": 1156,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Projected competition scoreboard with mostly green completed challenge cells",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4713,9 +4797,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1200,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cardboard box filled with clear acrylic tubes and white end pieces",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4868,9 +4954,11 @@
           "sourceWidth": 1480,
           "sourceHeight": 1248,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "I2C OLED showing “Loading: 100%” and a full progress bar",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4930,9 +5018,11 @@
           "sourceWidth": 1122,
           "sourceHeight": 1384,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Streamlit app recommending songs from the query “love story taylor swift pop”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -4992,9 +5082,11 @@
           "sourceWidth": 1588,
           "sourceHeight": 1000,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cut paper automata parts laid out before assembly",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5023,9 +5115,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "DonkeyCar controller board and wiring inside the 3D-printed chassis",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5054,9 +5148,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1200,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Flexible circuit and wires fitted inside a transparent tube for testing",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5147,9 +5243,11 @@
           "sourceWidth": 241,
           "sourceHeight": 237,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Pandas Series of 5,394 rows, each with the value 1",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5519,9 +5617,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1081,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Meta Spark Studio start screen with the Sharing Effect project option highlighted.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5581,9 +5681,11 @@
           "sourceWidth": 3264,
           "sourceHeight": 2448,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "A child holds a cardboard-tube creation fitted with colourful littleBits components during a workshop.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5767,9 +5869,11 @@
           "sourceWidth": 2558,
           "sourceHeight": 1212,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Let’s Chat running on laptop and phone screens, captioned “Self-hosted chat for small teams”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5860,9 +5964,11 @@
           "sourceWidth": 311,
           "sourceHeight": 43,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Checks report no NaN values in the teacher-name or rubric fields",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -5922,9 +6028,11 @@
           "sourceWidth": 2474,
           "sourceHeight": 996,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Students code on laptops during a P-TECH lesson, using repl.it and printed handouts.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6015,9 +6123,11 @@
           "sourceWidth": 1920,
           "sourceHeight": 908,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "A-Frame homepage describing its framework for building 3D, augmented-reality and virtual-reality experiences.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6077,9 +6187,11 @@
           "sourceWidth": 3264,
           "sourceHeight": 2448,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Children assemble wired electronic projects at tables while adults assist.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6108,9 +6220,11 @@
           "sourceWidth": 551,
           "sourceHeight": 362,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Material inspector showing the background texture bg assigned to bgMat.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6139,9 +6253,11 @@
           "sourceWidth": 322,
           "sourceHeight": 770,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "AR preview with a pink cartoon cat hat aligned over the user's head.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6201,9 +6317,11 @@
           "sourceWidth": 549,
           "sourceHeight": 287,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Texture Type menu with Texture Sequence highlighted for the selected animation frames.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6263,9 +6381,11 @@
           "sourceWidth": 797,
           "sourceHeight": 367,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Headerless repository CSV with columns for repository name, organisation, description and privacy status.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6418,9 +6538,11 @@
           "sourceWidth": 1920,
           "sourceHeight": 941,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Flask blog demo showing dog posts with images and a Download File button.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6449,9 +6571,11 @@
           "sourceWidth": 1778,
           "sourceHeight": 1000,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "LittleBits battery, proximity sensor and motor connected to a paper automaton",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6635,9 +6759,11 @@
           "sourceWidth": 814,
           "sourceHeight": 610,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Python for Business course graphic with the Python logo and the code print(\"Hello, world!\").",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6759,9 +6885,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Blue-lit Supertrees beneath a starry night sky in Singapore",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6852,9 +6980,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Workshop participants attach copper tape and LEDs to circuit-sticker activity sheets.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6883,9 +7013,11 @@
           "sourceWidth": 1460,
           "sourceHeight": 650,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Pandas table of numeric ratings across eight teacher-feedback questions",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6976,9 +7108,11 @@
           "sourceWidth": 2988,
           "sourceHeight": 4442,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Hand-built cardboard electronics prototype assembled with folded tabs, cut slots, blue tape and exposed wiring.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7069,9 +7203,11 @@
           "sourceWidth": 4160,
           "sourceHeight": 3120,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Suspended grid of cyan lights glowing in disco mode over the exhibit",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7131,9 +7267,11 @@
           "sourceWidth": 1778,
           "sourceHeight": 1000,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Automata parts being cut from cardboard in a laser cutter",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7224,9 +7362,11 @@
           "sourceWidth": 553,
           "sourceHeight": 356,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Material inspector showing the catHat texture assigned to catHatMat.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7286,9 +7426,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Child watches a Bee-Bot travel across a large illustrated grid mat during the workshop.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7348,9 +7490,11 @@
           "sourceWidth": 2150,
           "sourceHeight": 1044,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "A hand writes notes while working through the cryptography challenge",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7379,9 +7523,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Servo driver beside the Raspberry Pi, connected with jumper wires",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7410,9 +7556,11 @@
           "sourceWidth": 443,
           "sourceHeight": 634,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Assets panel with all 12 extracted cat animation frames selected.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7441,9 +7589,11 @@
           "sourceWidth": 1196,
           "sourceHeight": 796,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Meta Spark object panel with Rectangle selected and ready to insert as a 2D surface.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7472,9 +7622,11 @@
           "sourceWidth": 456,
           "sourceHeight": 559,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Teaching Group columns filled mostly with NaN, with one group value in a row",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7503,9 +7655,11 @@
           "sourceWidth": 994,
           "sourceHeight": 1358,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Participant-built profile webpage about Joko Widodo, with a portrait, biography, interests and education sections.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7534,9 +7688,11 @@
           "sourceWidth": 2726,
           "sourceHeight": 2044,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Printed circuit activity sheets for “Bunny and Puppy’s Electrifying Adventure”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7596,9 +7752,11 @@
           "sourceWidth": 1469,
           "sourceHeight": 857,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Jupyter notebook for Swift Accelerator grading, loading selection-test responses from a CSV file with Pandas.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7658,9 +7816,11 @@
           "sourceWidth": 1344,
           "sourceHeight": 768,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Letterboard with the nonsensical, misspelled definition: ‘String — The Wrong Oder.’",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7689,9 +7849,11 @@
           "sourceWidth": 2880,
           "sourceHeight": 1402,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Generative Art with Python lesson cover beside a handout explaining Pillow image operations.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7782,9 +7944,11 @@
           "sourceWidth": 549,
           "sourceHeight": 365,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Inspector for the bgObj rectangle with bgMat assigned in the Materials section.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7875,9 +8039,11 @@
           "sourceWidth": 591,
           "sourceHeight": 500,
           "isFeatured": false,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7968,9 +8134,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Child and adult sit together beside a Bee-Bot on an activity mat marked ‘Start.’",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8092,9 +8260,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Completed DonkeyCar with exposed electronics and a power bank zip-tied on top",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8123,9 +8293,11 @@
           "sourceWidth": 550,
           "sourceHeight": 364,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Inspector for the cat3Obj rectangle with cat3Mat assigned in the Materials section.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8433,9 +8605,11 @@
           "sourceWidth": 1600,
           "sourceHeight": 1066,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Child and adult colour worksheets together beside a handmade Bee-Bot outfit.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8619,9 +8793,11 @@
           "sourceWidth": 545,
           "sourceHeight": 356,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Material inspector showing the cat3Anim animation sequence assigned to cat3Mat.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8774,9 +8950,11 @@
           "sourceWidth": 5184,
           "sourceHeight": 3456,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Wired micro:bits displaying red LED patterns on a laptop running MakeCode blocks for the tank game.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8805,9 +8983,11 @@
           "sourceWidth": 722,
           "sourceHeight": 934,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cover of “The Tinkerer’s Guide to the Micro:Bit Galaxy”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8836,9 +9016,11 @@
           "sourceWidth": 1504,
           "sourceHeight": 738,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Postman showing a successful GET request to a blog API and a JSON list of posts.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9037,9 +9219,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Tinkertanker office wall mural, shelves of toys and a black sofa.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -9130,9 +9314,11 @@
           "sourceWidth": 1426,
           "sourceHeight": 248,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Pandas table with Name of Teacher and several duplicate Teaching Group columns",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9161,9 +9347,11 @@
           "sourceWidth": 1080,
           "sourceHeight": 1080,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Purple flower stalk rising among broad green leaves",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9223,9 +9411,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Participants testing wired wheel assemblies beside a micro:bit and laptop",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9316,9 +9506,11 @@
           "sourceWidth": 578,
           "sourceHeight": 357,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "CSV grouped by teacher and teaching group, with a count for each group",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9409,9 +9601,11 @@
           "sourceWidth": 939,
           "sourceHeight": 643,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Linux terminal showing Canvas LMS Docker setup before the script was interrupted",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9471,9 +9665,11 @@
           "sourceWidth": 800,
           "sourceHeight": 429,
           "isFeatured": false,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9595,9 +9791,11 @@
           "sourceWidth": 1024,
           "sourceHeight": 1024,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Robotic arms processing sheets of paper on a conveyor",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10060,9 +10258,11 @@
           "sourceWidth": 1024,
           "sourceHeight": 1003,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Red conductive thread stitched around blue fabric on a white cylinder",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10184,9 +10384,11 @@
           "sourceWidth": 549,
           "sourceHeight": 418,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "cat3Anim settings using the cat3 texture for a looping 12-frame animation at 8 FPS.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10215,9 +10417,11 @@
           "sourceWidth": 319,
           "sourceHeight": 764,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "AR preview combining a forest background, pink cat hat and pixel-art cats in the foreground.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10339,9 +10543,11 @@
           "sourceWidth": 1190,
           "sourceHeight": 798,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Meta Spark object panel with Canvas selected and ready to insert.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10370,9 +10576,11 @@
           "sourceWidth": 2880,
           "sourceHeight": 508,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Introduction",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -10401,9 +10609,11 @@
           "sourceWidth": 1626,
           "sourceHeight": 408,
           "isFeatured": true,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         },
         {
           "storyId": "6237608a433",
@@ -10416,9 +10626,11 @@
           "sourceWidth": 1626,
           "sourceHeight": 408,
           "isFeatured": true,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10447,9 +10659,11 @@
           "sourceWidth": 2880,
           "sourceHeight": 504,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Conclusion",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -10571,9 +10785,11 @@
           "sourceWidth": 3024,
           "sourceHeight": 4032,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Workshop teams working around a crowded table of laptops and building materials",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10602,9 +10818,11 @@
           "sourceWidth": 2300,
           "sourceHeight": 1292,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Cryptanalysis challenge slide with three encrypted tasks worth 2, 3 and 5 points",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10695,9 +10913,11 @@
           "sourceWidth": 1024,
           "sourceHeight": 1003,
           "isFeatured": true,
-          "decision": "review-required",
+          "decision": "decorative",
           "alt": "",
-          "source": null
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10881,9 +11101,11 @@
           "sourceWidth": 2664,
           "sourceHeight": 2664,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Tree-lined Singapore street outside a white multi-storey building",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10912,9 +11134,11 @@
           "sourceWidth": 1001,
           "sourceHeight": 1001,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Four-wire I2C connector labelled GND, VCC, SCL and SDA",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11005,9 +11229,11 @@
           "sourceWidth": 5472,
           "sourceHeight": 3648,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Homemade PVC-pipe gun with exposed electronics aimed at sensor-equipped cardboard aliens.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11067,9 +11293,11 @@
           "sourceWidth": 1910,
           "sourceHeight": 371,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Flask web app home page for compiling Swift Accelerator exit-survey data by lesson and student.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11098,9 +11326,11 @@
           "sourceWidth": 253,
           "sourceHeight": 253,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Remote-controlled robots converge on a ball and reposition during a tabletop football match",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11129,9 +11359,11 @@
           "sourceWidth": 1344,
           "sourceHeight": 768,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Illustration of workers from varied professions raising their hands before analytics dashboards.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11160,9 +11392,11 @@
           "sourceWidth": 3024,
           "sourceHeight": 4032,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Wide-angle camera and ribbon cable mounted on the DonkeyCar chassis",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11253,9 +11487,11 @@
           "sourceWidth": 792,
           "sourceHeight": 339,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "A winding path connects “UX” to “Marketing”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11377,9 +11613,11 @@
           "sourceWidth": 3024,
           "sourceHeight": 4032,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Participants assembling littleBits CloudBit circuits among wires and tools",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11439,9 +11677,11 @@
           "sourceWidth": 361,
           "sourceHeight": 357,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Google Colab Files panel with responses.csv uploaded",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11532,9 +11772,11 @@
           "sourceWidth": 3840,
           "sourceHeight": 2046,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Vector cutting template for a rounded acrylic micro:bit holder with side grooves",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11563,9 +11805,11 @@
           "sourceWidth": 430,
           "sourceHeight": 253,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "“One does not simply test in production” meme",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11625,9 +11869,11 @@
           "sourceWidth": 2880,
           "sourceHeight": 504,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Tinkertanker mascot beside the words “Let’s Get Hacking!”",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -11656,9 +11902,11 @@
           "sourceWidth": 1920,
           "sourceHeight": 806,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "GPA Calculator result showing a grade of 66 from five weighted scores.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11718,9 +11966,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Rows of small cylindrical lights projecting multicoloured beams during workshop testing",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11749,9 +11999,11 @@
           "sourceWidth": 552,
           "sourceHeight": 426,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Inspector for the catHatObj plane with catHatMat assigned in the Materials section.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11842,9 +12094,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Raspberry Pi mounted on the white DonkeyCar chassis",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11873,9 +12127,11 @@
           "sourceWidth": 41,
           "sourceHeight": 30,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Python set output containing only the value 1",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11966,9 +12222,11 @@
           "sourceWidth": 1280,
           "sourceHeight": 960,
           "isFeatured": true,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Students in yellow shirts work on laptops while an instructor presents an ESP-NOW device-network diagram.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -12028,9 +12286,11 @@
           "sourceWidth": 779,
           "sourceHeight": 121,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Laser-cut panel outline with two narrow notches for joining the acrylic structure.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -12090,9 +12350,11 @@
           "sourceWidth": 557,
           "sourceHeight": 249,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Transformations panel showing the cat-hat plane's position, scale and rotation values.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -12183,9 +12445,11 @@
           "sourceWidth": 3008,
           "sourceHeight": 2000,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Child operates the improvised electronic gun, with exposed wires and red tape around its frame.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -12214,9 +12478,11 @@
           "sourceWidth": 2880,
           "sourceHeight": 506,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Marketing — design and copywriting",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review; independently checked against the image and story context."
         }
       ]
     },
@@ -12276,9 +12542,11 @@
           "sourceWidth": 4032,
           "sourceHeight": 3024,
           "isFeatured": false,
-          "decision": "review-required",
-          "alt": "",
-          "source": null
+          "decision": "meaningful",
+          "alt": "Singapore Flyer and city skyline reflected in a waterfront pond at night",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     }

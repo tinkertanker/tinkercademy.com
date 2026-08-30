@@ -14,10 +14,10 @@ publishedAt: 2021-07-26T01:48:44.478Z
 updatedAt: 2022-01-06T03:37:17.079Z
 tags: []
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/d2ccb7165ce387a589eb611e057a60392643fee808ce96bef71e33227d237834.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Printed circuit activity sheets for “Bunny and Puppy’s Electrifying Adventure”
+heroAltDecision: meaningful
 provenance:
   mediumId: 20f1a8b455db
   publicationId: ca1fc9543b6f
@@ -26,7 +26,7 @@ migration:
   paragraphCount: 26
   imageCount: 1
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>An entry from Nadya, now at the National University of Singapore, who interned with us a couple of years ago, detailing her foray into creating a lesson around a Circuit Scribe pen. Sorry we took so long to publish this, and thanks Nadya!</em>
@@ -75,8 +75,8 @@ As with Tinkercademy’s other courses, activities can be scaled to different co
 
 In order to make it possible for children to take these activity sheets home without having to buy the Circuit Scribe Basic Kit, I opted for lower-cost alternatives for the materials used. Making the activity sheet independent of the Kit meant that I swapped the Circuit Scribe Modules (such as the LED and power modules) for <a href="https://gethacking.com/collections/chibitronics">Chibitronics circuit stickers</a> and button batteries.
 
-<!-- medium-image:1*Fyg3_LLsP3b1XjK5a4Halg.jpeg alt-decision:review-required -->
+<!-- medium-image:1*Fyg3_LLsP3b1XjK5a4Halg.jpeg alt-decision:meaningful -->
 
-![](/blog-media/d2ccb7165ce387a589eb611e057a60392643fee808ce96bef71e33227d237834.jpg)
+![Printed circuit activity sheets for “Bunny and Puppy’s Electrifying Adventure”](/blog-media/d2ccb7165ce387a589eb611e057a60392643fee808ce96bef71e33227d237834.jpg)
 
 Often, creativity is seen as “Think out of the box!” and “The sky’s the limit!”, but I realised limitations (eg. budget constraints) and specific aims can actually serve to enhance creativity rather than be a hindering restriction. The specificity of the needs of the target audience (kids learning about circuits) allowed me to have a clear goal of what I should be creating, such that I questioned each step in the process against how the target group would receive and react to my product. Of course, I’m not sure how useful it actually was after being released, but it was a fun experience for me drafting, getting feedback, and editing my project!

@@ -24,10 +24,10 @@ tags:
   - name: Programming For Kids
     slug: programming-for-kids
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/602c3a8ec0ab16f4d0c5d207142a02ed5cbff62b2b3ebdff266e02c0a35d438a.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: A hand guides a toy aeroplane across a chalk world map
+heroAltDecision: meaningful
 provenance:
   mediumId: 5349788a9785
   publicationId: ca1fc9543b6f
@@ -36,14 +36,14 @@ migration:
   paragraphCount: 26
   imageCount: 6
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 ## <strong>Coding without Computers — The Untold Power of CS Unplugged</strong>
 
-<!-- medium-image:0*QcsfcQ_rFEtwNQCW alt-decision:review-required -->
+<!-- medium-image:0*QcsfcQ_rFEtwNQCW alt-decision:meaningful -->
 
-![](/blog-media/602c3a8ec0ab16f4d0c5d207142a02ed5cbff62b2b3ebdff266e02c0a35d438a.jpg)
+![A hand guides a toy aeroplane across a chalk world map](/blog-media/602c3a8ec0ab16f4d0c5d207142a02ed5cbff62b2b3ebdff266e02c0a35d438a.jpg)
 
 Most of us conflate computer science (CS) and computers as a single unified concept. We cannot imagine learning computer science concepts without a computer. It’s like learning about chemistry without mixing chemicals in the laboratory. But of course, there is more to chemistry than understanding what happens when chemical A is mixed with chemical B. Chemists learn about the structure of the atom without ever being able to see one, and physicists study wormholes, even though no one has ever discovered one. Similarly, there is a lot of CS knowledge that doesn’t need hands-on time with a computer, and a lot of this knowledge is interesting and instructive in many different fields. The CS Unplugged project exists precisely to address the knowledge we would otherwise overlook while being distracted by a computer.
 

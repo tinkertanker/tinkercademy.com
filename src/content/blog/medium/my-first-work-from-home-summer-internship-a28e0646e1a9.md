@@ -14,7 +14,7 @@ publishedAt: 2020-09-14T14:11:59.547Z
 updatedAt: 2021-12-15T22:58:30.326Z
 tags: []
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/db718d972acab45c4339166cd0bc58485f25e35ea01038afc781e8d609c0c8ed.png
 heroAlt: Snapshot of the “Ice-Breaker” on Let’s Get Hacking. This game can be a single or multi-player game, but its original purpose is for you to play this game with a friend you just met, in order to “break” the ice with them.
 heroAltDecision: meaningful
@@ -26,7 +26,7 @@ migration:
   paragraphCount: 21
   imageCount: 7
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 <em>Jia Hui from the National University of Singapore reflects on her summer 2020 internship, right when COVID-19 hit and Singapore went into its Circuit Breaker.</em>
@@ -55,9 +55,9 @@ These tutorials are mainly coded in Microsoft MakeCode, or MicroPython for games
 
 Besides working on Let’s Get Hacking tutorials, I also had fun when working on a product review comparing the different versions of the Ring:bit Car.
 
-<!-- medium-image:0*_BqMG10vICZGW4hw alt-decision:review-required -->
+<!-- medium-image:0*_BqMG10vICZGW4hw alt-decision:meaningful -->
 
-![](/blog-media/89e533de68ad9ae12d47b70f5fa56c40b2feac3f0bf888acc8673a19932e34fc.jpg)
+![Transparent Ring:bit robot car with an exposed circuit board and LED matrix beside a laptop.](/blog-media/89e533de68ad9ae12d47b70f5fa56c40b2feac3f0bf888acc8673a19932e34fc.jpg)
 
 <!-- medium-image:0*5nwAp-3cTPGaV3uv alt-decision:meaningful -->
 
@@ -79,9 +79,9 @@ This was an experience that I am truly thankful for, as it not only allowed me t
 
 With the Covid-19 situation and circuit breaker measures coinciding with the whole period of my internship, I didn’t have much of an opportunity to drop by the office, much less tinker with the equipment and tools in the office. I really wanted to drop by the office at least once before the end of my internship. Hence, when Jee Soo needed help with the packing of kits, I grabbed the chance to do so and that was the first, and only time I went to the office. Besides packing the kits, I was also tasked to work on a few simple tutorials using Basic:bits for Tampines Sec. Below are some snapshots of one of the projects.
 
-<!-- medium-image:0*8HeIY5uNYgB-54qW alt-decision:review-required -->
+<!-- medium-image:0*8HeIY5uNYgB-54qW alt-decision:meaningful -->
 
-![](/blog-media/6aaa3b7669396c8ba58aa14831726d0b977037af41aeb2e2bca115c31e55675b.jpg)
+![Microcontroller wired to an ultrasonic distance sensor and battery pack on a worktable.](/blog-media/6aaa3b7669396c8ba58aa14831726d0b977037af41aeb2e2bca115c31e55675b.jpg)
 
 <!-- medium-image:0*hliOHmlFTv2jLv7U alt-decision:meaningful -->
 

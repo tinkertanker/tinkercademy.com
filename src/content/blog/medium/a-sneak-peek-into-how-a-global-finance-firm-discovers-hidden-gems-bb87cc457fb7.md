@@ -24,10 +24,10 @@ tags:
   - name: Tech Talent
     slug: tech-talent
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/a0ec08d2904645a48ef06181127f5f0ce41bfe13d665f6bac2fd710a672d3eca.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Round-cut diamond held in tweezers against a dark background.
+heroAltDecision: meaningful
 provenance:
   mediumId: bb87cc457fb7
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 47
   imageCount: 5
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:0*7wvE7k7uRz6ZmcEP alt-decision:review-required -->
+<!-- medium-image:0*7wvE7k7uRz6ZmcEP alt-decision:meaningful -->
 
-![](/blog-media/a0ec08d2904645a48ef06181127f5f0ce41bfe13d665f6bac2fd710a672d3eca.png)
+![Round-cut diamond held in tweezers against a dark background.](/blog-media/a0ec08d2904645a48ef06181127f5f0ce41bfe13d665f6bac2fd710a672d3eca.png)
 
 Have you ever stepped into a jewellery store and taken a good look at a diamond? Chances are, you haven’t unless you’ve been shopping for a proposal.
 
@@ -91,9 +91,9 @@ Following this exercise, we continued to dive deeper into the foundation of HTML
 
 Once again, we were impressed by the technical proficiency of a handful of our participants. Not only did they explore the use of basic HTML tags such as headers and images, but they also went above and beyond to add GIFs, embed YouTube videos and more! (see below).
 
-<!-- medium-image:1*fXbhebMgVIXI_dqKMBMzbQ.png alt-decision:review-required -->
+<!-- medium-image:1*fXbhebMgVIXI_dqKMBMzbQ.png alt-decision:meaningful -->
 
-![](/blog-media/52f6977e19f938aab0740e6d345aca16e7431404b77296ae48b792cc869f577f.png)
+![Participant-built profile webpage about Joko Widodo, with a portrait, biography, interests and education sections.](/blog-media/52f6977e19f938aab0740e6d345aca16e7431404b77296ae48b792cc869f577f.png)
 
 <!-- medium-image:1*LYAAqBeb4KsMTpEwv-yCBQ.png alt-decision:meaningful -->
 

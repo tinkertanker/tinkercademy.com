@@ -24,10 +24,10 @@ tags:
   - name: Computer Science
     slug: computer-science
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/5bc392e11a92bf69be45e7fd547a1e4a81d561ff2f45f932a9a6b4963911a981.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Tinkertanker office wall mural, shelves of toys and a black sofa.
+heroAltDecision: meaningful
 provenance:
   mediumId: 9502027c731b
   publicationId: ca1fc9543b6f
@@ -36,14 +36,14 @@ migration:
   paragraphCount: 59
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: In early 2018, Daniel called us, looking for something to do after completing his high school education in Singapore. We were a bit confused about what to do with this affable New Zealander, but after we hosted him as a sit-in student for a few months, we invited him to join us as a full-fledged intern. He came in without any programming experience, and by the time he left, he was off to study Computer Science at the University of Waikato. Here’s his remarkable story.</em>
 
-<!-- medium-image:1*n3ru1i117_wxZe6nc1VOPw.jpeg alt-decision:review-required -->
+<!-- medium-image:1*n3ru1i117_wxZe6nc1VOPw.jpeg alt-decision:meaningful -->
 
-![](/blog-media/5bc392e11a92bf69be45e7fd547a1e4a81d561ff2f45f932a9a6b4963911a981.jpg)
+![Tinkertanker office wall mural, shelves of toys and a black sofa.](/blog-media/5bc392e11a92bf69be45e7fd547a1e4a81d561ff2f45f932a9a6b4963911a981.jpg)
 
 ## Beginning
 

@@ -22,10 +22,10 @@ tags:
   - name: Remote Control
     slug: remote-control
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/73b885a0a22bce70a9aecc17a6b874513add232e4bf6996138716b950f892716.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Completed DonkeyCar with exposed electronics and a power bank zip-tied on top
+heroAltDecision: meaningful
 provenance:
   mediumId: da888446956a
   publicationId: ca1fc9543b6f
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 40
   imageCount: 6
   embedCount: 0
-  altReviewRequired: 5
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Kevin Steven is a Computer Science undergraduate at the Nanyang Technological University (</em><em><a href="http://www.ntu.edu.sg">NTU</a></em><em>) who interned with us over the summer of 2018. We asked him to make a DonkeyCar, and catalogue his experience. In this post, he writes about his progress, challenges, and solutions.</em>
@@ -77,35 +77,35 @@ The first thing I did was to screw the 3D printed parts together (they come as t
 
 Next, I attached the Raspberry Pi to the chassis. Remember to prepare your micro SD card (it came with flashed DonkeyCar image, but you may need to prep for SSH and the like) and mount it before the next step, as it will be tricky to put in the micro SD card after the mounting the servo driver.
 
-<!-- medium-image:1*YjPC8cm7Y11vkfzDEN5EGA.jpeg alt-decision:review-required -->
+<!-- medium-image:1*YjPC8cm7Y11vkfzDEN5EGA.jpeg alt-decision:meaningful -->
 
-![](/blog-media/7d8ab6ec0607aa7ee27041ffb5aa1ce8a59fc931ce2188bf8a90478ac536ed2a.jpg)
+![Raspberry Pi mounted on the white DonkeyCar chassis](/blog-media/7d8ab6ec0607aa7ee27041ffb5aa1ce8a59fc931ce2188bf8a90478ac536ed2a.jpg)
 
 Next, I mounted the servo driver next to the Raspberry Pi. Ensure that the jumper wires are connected correctly (see the <a href="http://docs.donkeycar.com/guide/build_hardware/#step-4-connect-servo-shield-to-raspberry-pi">docs</a> for in-depth assembly instructions).
 
-<!-- medium-image:1*fjcWwrarkoyUCrznBJvDOQ.jpeg alt-decision:review-required -->
+<!-- medium-image:1*fjcWwrarkoyUCrznBJvDOQ.jpeg alt-decision:meaningful -->
 
-![](/blog-media/ec6ae05fc00d722ca5a0686d136f003dcc6e6ae77c7d5e90e451b256f9615258.jpg)
+![Servo driver beside the Raspberry Pi, connected with jumper wires](/blog-media/ec6ae05fc00d722ca5a0686d136f003dcc6e6ae77c7d5e90e451b256f9615258.jpg)
 
 Next, I mounted the wide-angle camera. Note that the cable should be connected in the correct orientation. The camera has adjustable focal length which can be changed by rotating the lens. (Remember to take out the camera cover when in use!)
 
-<!-- medium-image:1*wDq-K9C-6D8iRd1ZIRJMVQ.jpeg alt-decision:review-required -->
+<!-- medium-image:1*wDq-K9C-6D8iRd1ZIRJMVQ.jpeg alt-decision:meaningful -->
 
-![](/blog-media/3a32c82c35b769bd2687e7e32cbb8ea320c8bb6f8fa732b2725faac207f16406.jpg)
+![Wide-angle camera and ribbon cable mounted on the DonkeyCar chassis](/blog-media/3a32c82c35b769bd2687e7e32cbb8ea320c8bb6f8fa732b2725faac207f16406.jpg)
 
 Next, I assembled the 3D chassis to the body of the car. Note that the shorter 3-pin wire is from the ESC which controls the throttle and connected to pin 0. While the longer 3-pin wire is from the servo which controls the steering and connected to pin 1.
 
 <em>Note</em>: The pin number does not have to be followed strictly. If you decide to change the pins, you have to update the code in <code>config.py</code>.
 
-<!-- medium-image:1*44jl_Mxh6GqpeBojOxviBg.jpeg alt-decision:review-required -->
+<!-- medium-image:1*44jl_Mxh6GqpeBojOxviBg.jpeg alt-decision:meaningful -->
 
-![](/blog-media/5c1d2f6e8a9533519b83caf12c780f7ee2d4a5982bd894647cd32b3ee3a6bb26.jpg)
+![DonkeyCar controller board and wiring inside the 3D-printed chassis](/blog-media/5c1d2f6e8a9533519b83caf12c780f7ee2d4a5982bd894647cd32b3ee3a6bb26.jpg)
 
 This is my final product. I did not assemble the 5V converter, as I faced some issues with it, and have to wait for a replacement from the seller. Hence, the temporary, not-so-glam zip-tied power bank to power the Raspberry Pi:
 
-<!-- medium-image:1*iPXWPvpmue96wClYOzXPbg.jpeg alt-decision:review-required -->
+<!-- medium-image:1*iPXWPvpmue96wClYOzXPbg.jpeg alt-decision:meaningful -->
 
-![](/blog-media/73b885a0a22bce70a9aecc17a6b874513add232e4bf6996138716b950f892716.jpg)
+![Completed DonkeyCar with exposed electronics and a power bank zip-tied on top](/blog-media/73b885a0a22bce70a9aecc17a6b874513add232e4bf6996138716b950f892716.jpg)
 
 ## Driving the DonkeyCar
 

@@ -24,10 +24,10 @@ tags:
   - name: Learning And Development
     slug: learning-and-development
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: organisation-owned
 heroImage: /blog-media/9bebee3b10b8cd14c3dcbaf8803aa4dac7897f58b6b1d2472bd09f44787a6574.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Colourful game pawns arranged along connected lines
+heroAltDecision: meaningful
 provenance:
   mediumId: 2396cb612805
   publicationId: ca1fc9543b6f
@@ -36,12 +36,12 @@ migration:
   paragraphCount: 30
   imageCount: 4
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
-<!-- medium-image:0*bFoEIAfKqFtuan8A alt-decision:review-required -->
+<!-- medium-image:0*bFoEIAfKqFtuan8A alt-decision:meaningful -->
 
-![](/blog-media/9bebee3b10b8cd14c3dcbaf8803aa4dac7897f58b6b1d2472bd09f44787a6574.jpg)
+![Colourful game pawns arranged along connected lines](/blog-media/9bebee3b10b8cd14c3dcbaf8803aa4dac7897f58b6b1d2472bd09f44787a6574.jpg)
 
 As the world becomes increasingly dependent on technology, the need for a workforce proficient in an environment augmented with artificial intelligence (AI) is growing at an unprecedented rate. According to the World Economic Forum (WEF), AI and other advanced technologies will create 97 million jobs across 26 countries by 2025. The ability to understand and utilise AI is now no longer a luxury, but a necessity for anyone looking to stay competitive in the job market. So, how do we teach AI to the next generation of business and industry leaders?
 

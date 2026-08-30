@@ -24,7 +24,7 @@ tags:
   - name: Lms Software
     slug: lms-software
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/17285d5d6523e6ca64519a31f512ec2f98440783b531d757fbd8d6174fdb78ab.png
 heroAlt: A screenshot of our application
 heroAltDecision: meaningful

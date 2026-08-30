@@ -24,7 +24,7 @@ tags:
   - name: Technology
     slug: technology
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/6ba828f3e66dd52f22b4a655334cd9b7a9b10ce523b442a3846f71fd267077e9.jpg
 heroAlt: A paper version of TKrobot, our mascot. We squished him once accidentally, and he’s been mad at us since.
 heroAltDecision: meaningful

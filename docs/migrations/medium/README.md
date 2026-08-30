@@ -18,9 +18,13 @@ be deployed before an explicit cutover request.
   and 1 Instagram resource.
 - 319 body links. 23 links resolve to another migrated story, including one old
   Google-wrapped link that the earlier inventory did not classify.
-- 68 story rights records remain `review-required`.
-- 134 image placements have no usable source alt or caption and remain
-  `review-required` for a meaningful-alt versus decorative decision.
+- All 68 story rights records are reviewed: 18 stories credited to the
+  Tinkercademy publication account are `organisation-owned`; 50 externally
+  credited stories are `permission-recorded`, with original article URLs in
+  the evidence records.
+- All 134 image placements that lacked usable source alt or captions have been
+  visually reviewed in story context: 127 are meaningful and have authored alt
+  text; 7 are explicitly decorative.
 
 “All rights reserved” is the chosen publication licence. It is not evidence
 that Tinkertanker owns a contributor's copyright. The strict verifier blocks
@@ -143,17 +147,11 @@ data path are unchanged.
 pnpm run test:medium
 pnpm run check
 SITE_URL=https://tinkercademy.com pnpm run build
-pnpm run verify:medium -- --dist dist --allow-review-required
-```
-
-The temporary flag verifies the implementation while reporting the explicit
-rights/alt holds. Before cutover, this must pass without the flag:
-
-```sh
 pnpm run verify:medium -- --dist dist
 ```
 
-The verifier checks all story/media/embed counts, every local SHA-256, exact
+This strict cutover gate passes without a review exception. The verifier checks
+all story/media/embed counts, every local SHA-256, exact
 author/canonical/source metadata, all internal rewrites, all built story files,
 feed/sitemap counts, the apex sitemap boundary, rights notices, and absence of
 remote Medium/Embedly assets, Google tracking redirects, or raw embed scripts.
@@ -162,7 +160,8 @@ remote Medium/Embedly assets, Google tracking redirects, or raw embed scripts.
 
 These are later operator steps, not actions performed by this implementation:
 
-1. Complete the 68-story rights ledger and 134-image alt/decorative review.
+1. Confirm the reviewed 68-story rights ledger and 134-image accessibility
+   decisions still have no new holds after any deliberate public-data refresh.
 2. Run the strict verifier without exceptions and browser-test representative
    image-heavy, GIF, code, and embed stories through `wrangler dev`.
 3. Commit and push the reviewed implementation; promote its Worker version by

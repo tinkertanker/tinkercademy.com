@@ -22,10 +22,10 @@ tags:
   - name: Makers
     slug: makers
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/23e0eb87fea648ccb0d2f471aef5a35fb23bd20be4044b361793f38ca451b706.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Rows of small cylindrical lights projecting multicoloured beams during workshop testing
+heroAltDecision: meaningful
 provenance:
   mediumId: fdcbe7a89015
   publicationId: ca1fc9543b6f
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 25
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 1
+  altReviewRequired: 0
 ---
 
 <em>Journey to the Venice Biennale, representing Singapore in the best light possible.</em>
@@ -69,9 +69,9 @@ Nevertheless, the CE mark requirements of the project teams in Venice throw a sp
 
 Instead, we source for CE marked, ready-made solutions. But for such a custom-built project as this, it’s nearly impossible… until the light sabres appear.
 
-<!-- medium-image:1*y4AbRTqvRBH1eW58W_4-KQ.jpeg alt-decision:review-required -->
+<!-- medium-image:1*y4AbRTqvRBH1eW58W_4-KQ.jpeg alt-decision:meaningful -->
 
-![](/blog-media/23e0eb87fea648ccb0d2f471aef5a35fb23bd20be4044b361793f38ca451b706.jpg)
+![Rows of small cylindrical lights projecting multicoloured beams during workshop testing](/blog-media/23e0eb87fea648ccb0d2f471aef5a35fb23bd20be4044b361793f38ca451b706.jpg)
 
 ### Light Sabres
 

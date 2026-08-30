@@ -24,7 +24,7 @@ tags:
   - name: Internships
     slug: internships
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/6d0db7cfed7242b28425794fa433e33123ac6726849c230bff82a05387871f07.png
 heroAlt: Laptop/keyboard/iPad holder.
 heroAltDecision: meaningful
@@ -36,7 +36,7 @@ migration:
   paragraphCount: 48
   imageCount: 8
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Hongyi interned with us in February and March in 2019. She’d just finished her A-levels, and will be starting her undergraduate studies later this year. Here’s her contribution to our blog:</em>
@@ -45,7 +45,7 @@ I had my first experience laser-cutting some weeks ago. It was pretty sweet. Las
 
 Here are some of the essential to-know’s for my fellow first-time laser cutters!
 
-<!-- medium-image:1*HAT0ZldTJltajBucOvr2FA.jpeg alt-decision:review-required -->
+<!-- medium-image:1*HAT0ZldTJltajBucOvr2FA.jpeg alt-decision:decorative -->
 
 ![](/blog-media/ea07f41f8a3f052253200e41c55efae1c79729f47a885231f2bb92cc279d2774.jpg)
 
@@ -110,9 +110,9 @@ Before removing your cut material, it is adviseable to gently knock on the mater
 
 For my first laser cutting project, I was making a laptop/keyboard/iPad holder. This was created by fixing many acrylic plates together to create a 3D structure.
 
-<!-- medium-image:1*yYYj2dD__DDUHFDvx31lRg.png alt-decision:review-required -->
+<!-- medium-image:1*yYYj2dD__DDUHFDvx31lRg.png alt-decision:meaningful -->
 
-![](/blog-media/a6ed0e6c3ca45fb01cac250b6b3b1437a03f4f0b2bcad6fc74d1818897115877.png)
+![Laser-cut panel outline with two narrow notches for joining the acrylic structure.](/blog-media/a6ed0e6c3ca45fb01cac250b6b3b1437a03f4f0b2bcad6fc74d1818897115877.png)
 
 <!-- medium-image:1*1vLiy3ViGtrES-lynjyXrA.png alt-decision:meaningful -->
 

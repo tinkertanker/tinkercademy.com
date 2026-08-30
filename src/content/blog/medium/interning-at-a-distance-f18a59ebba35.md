@@ -22,10 +22,10 @@ tags:
   - name: Microbit
     slug: microbit
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/f7b9edc2c1e0c689ae6aac11e4d5580fef52b48946a84e64af82816848957744.jpg
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Micro:bit electronics kit open beside a laptop and project materials
+heroAltDecision: meaningful
 provenance:
   mediumId: f18a59ebba35
   publicationId: ca1fc9543b6f
@@ -34,7 +34,7 @@ migration:
   paragraphCount: 15
   imageCount: 3
   embedCount: 0
-  altReviewRequired: 2
+  altReviewRequired: 0
 ---
 
 ## Interning at a Distance
@@ -47,9 +47,9 @@ I was still excited for this opportunity, but I worried that remote working cond
 
 Tinkertanker was well-prepared when it came to virtual onboarding. I learned about the company’s routine procedures and communication platforms during orientation, and I was able to virtually meet the entire company by the end of my first day. I connected with other interns via group bonding activities, and I was assured that I could ask anyone in the company if I had any questions.
 
-<!-- medium-image:0*hAefFH782gf_5nIe alt-decision:review-required -->
+<!-- medium-image:0*hAefFH782gf_5nIe alt-decision:meaningful -->
 
-![](/blog-media/f7b9edc2c1e0c689ae6aac11e4d5580fef52b48946a84e64af82816848957744.jpg)
+![Micro:bit electronics kit open beside a laptop and project materials](/blog-media/f7b9edc2c1e0c689ae6aac11e4d5580fef52b48946a84e64af82816848957744.jpg)
 
 Tinkertanker mailed me some of the company’s products, specifically some of the kits used to build projects and curriculum around the BBC micro:bit. I was tasked with writing a parts library for the components included in these kits. The goal was to create an online resource where micro:bit users could learn how to integrate external parts without having to sift through overly complicated technical jargon. This would hopefully ease the learning curve and improve the user experience of working with the micro:bit.
 
@@ -65,9 +65,9 @@ Each video consisted of a brief description and a concise demonstration. In maki
 
 I had a goal of learning at least one new skill during this internship. I was afraid that there wouldn’t be as many learning opportunities given the remote circumstances. However, there were so many online courses available to Tinkertanker employees. Even though I wasn’t required to pick up a new programming language for my assignments, I was still able to learn HTML and CSS this summer with the resources provided. I was encouraged to take advantage of these classes and learn as much as possible.
 
-<!-- medium-image:1*MctvT0g1PIaqmMxidJRD8Q.png alt-decision:review-required -->
+<!-- medium-image:1*MctvT0g1PIaqmMxidJRD8Q.png alt-decision:meaningful -->
 
-![](/blog-media/670f39bfa55a5ed598d8ab4bb9287f19a1c01d44d5297d4a231e1ba29ed1ed70.png)
+![Cover of “The Tinkerer’s Guide to the Micro:Bit Galaxy”](/blog-media/670f39bfa55a5ed598d8ab4bb9287f19a1c01d44d5297d4a231e1ba29ed1ed70.png)
 
 As the release of the company’s new book<a href="https://gethacking.com/collections/microbit/products/the-tinkerers-guide-to-the-micro-bit-galaxy"> </a><a href="https://gethacking.com/collections/microbit/products/the-tinkerers-guide-to-the-micro-bit-galaxy"><em>The Tinkerer’s Guide to the Micro:Bit Galaxy</em></a><em> </em>approached, Akmal asked me to help plan the book launch. I began researching book marketing strategies and platforms to host virtual events. Given COVID-19, the launch certainly needed to be held online. I had never organized a book launch before, and I knew that putting together a virtual event would require lots of planning and coordination. Fortunately, I was able to see an online book launch in action as Difference Engine was holding their launch for their comic book <em>The Makers Club: Game on!</em>
 

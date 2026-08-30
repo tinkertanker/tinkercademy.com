@@ -23,10 +23,10 @@ tags:
   - name: Coding
     slug: coding
 license: All rights reserved
-rightsStatus: review-required
+rightsStatus: permission-recorded
 heroImage: /blog-media/4a320281735a7be954a78276dc13d768b53d4371d37ee97ca955828343ea2b79.png
-heroAlt: ""
-heroAltDecision: review-required
+heroAlt: Postman showing a successful GET request to a blog API and a JSON list of posts.
+heroAltDecision: meaningful
 provenance:
   mediumId: 2864058381f2
   publicationId: ca1fc9543b6f
@@ -35,7 +35,7 @@ migration:
   paragraphCount: 35
   imageCount: 6
   embedCount: 0
-  altReviewRequired: 6
+  altReviewRequired: 0
 ---
 
 <em>Editor’s note: Junwei joined us in January to learn about programming—he had been accepted to a Data Science programme at NUS, and was fairly new to coding. We passed him our notes and slides, got him to sit in (and help out with) a lesson, and took him on as an intern shortly after. Problem is, we didn’t have much data science problems to solve, so Junwei had to learn some more. Here’s his story.</em>
@@ -61,9 +61,9 @@ With these skills, I worked on the following projects for Tinkertanker’s educa
 
 Helping as an assistant for the <em>Python for Business</em> course allowed me to become more familiar with the basics of Python libraries like pandas and matplotlib for data analysis and visualisation. My role was to help answer questions and troubleshoot issues in the class during the lesson. It was a good way to apply the things I learned, ensuring that I will remember and fully understand.
 
-<!-- medium-image:1*cYTn-eblKRZkv_BFnrZg9w.png alt-decision:review-required -->
+<!-- medium-image:1*cYTn-eblKRZkv_BFnrZg9w.png alt-decision:meaningful -->
 
-![](/blog-media/765e0468f18e4114906fee78064f602c715df94595b7e2b6fd524515ab0ef9a8.png)
+![Python for Business course graphic with the Python logo and the code print("Hello, world!").](/blog-media/765e0468f18e4114906fee78064f602c715df94595b7e2b6fd524515ab0ef9a8.png)
 
 ### Web and Mobile Certification Curriculum
 
@@ -73,17 +73,17 @@ Before starting on this project, I had to learn SQL, HTML, CSS, and Flask. Tinke
 
 These projects required me to create the apps that students had to learn, which allowed me to combine and apply all that I learned.
 
-<!-- medium-image:1*mDuXDrUwT5HFMRk50Ugnng.png alt-decision:review-required -->
+<!-- medium-image:1*mDuXDrUwT5HFMRk50Ugnng.png alt-decision:meaningful -->
 
-![](/blog-media/4a320281735a7be954a78276dc13d768b53d4371d37ee97ca955828343ea2b79.png)
+![Postman showing a successful GET request to a blog API and a JSON list of posts.](/blog-media/4a320281735a7be954a78276dc13d768b53d4371d37ee97ca955828343ea2b79.png)
 
 ### Swift Accelerator Grading Script
 
 For this, I helped to edit and update the script to this year’s selection test. The script was written in Python, with the Pandas library, in Jupyter Notebook. The goal was to score each individual student and return some statistics of the test using the test responses on a CSV file. This required some sorting and cleaning of the data. I was also tasked to add comments to the code to better allow the use of the script in future years. Doing this project was a good way to allow me to further apply what I had learned on Python and Pandas.
 
-<!-- medium-image:1*gHoPLKWYQ6FDK7hVmHeeMA.png alt-decision:review-required -->
+<!-- medium-image:1*gHoPLKWYQ6FDK7hVmHeeMA.png alt-decision:meaningful -->
 
-![](/blog-media/c0c380c31ff5f87422112751522782e0538fa86a7b42cec1ef4a32d96cce7fe5.png)
+![Jupyter notebook for Swift Accelerator grading, loading selection-test responses from a CSV file with Pandas.](/blog-media/c0c380c31ff5f87422112751522782e0538fa86a7b42cec1ef4a32d96cce7fe5.png)
 
 ### Flask Web App for Wufoo Class surveys
 
@@ -93,20 +93,20 @@ This project, which you can see on <a href="https://glitch.com/~ttswiftexitsurve
 
 I used Flask to create the web app, and had to create an API and database as well as using a little bit of the Pandas library. Like the other projects I worked on, this allowed me to consolidate and use the different things I learned and apply them to create a working web app with actual real-life utility for the instructors.
 
-<!-- medium-image:1*W-FxTVx8whXi5y0uCwvmcQ.png alt-decision:review-required -->
+<!-- medium-image:1*W-FxTVx8whXi5y0uCwvmcQ.png alt-decision:meaningful -->
 
-![](/blog-media/cdb215d67b3b6238fa4e14580003812d4769d7900011bf4bdec16c20ed560a2d.png)
+![Flask web app home page for compiling Swift Accelerator exit-survey data by lesson and student.](/blog-media/cdb215d67b3b6238fa4e14580003812d4769d7900011bf4bdec16c20ed560a2d.png)
 
 ### Demo Apps for Flask Teacher Training
 
 This consisted of 2 demo apps, a <a href="https://tt-h2-gpa-calculator.glitch.me/">GPA Calculator app</a> and a <a href="https://tt-h2-flask-blog.glitch.me/">blog app</a>. These were great for practice—the GPA calculator is a simple web app that allows the user to key in scores and weightages of their tests, returning them the final score; the blog app was another simple app that allowed users to upload posts containing pictures and documents to be shown on a page like a blog.
 
-<!-- medium-image:1*XY91qV0a21FcApTlmMR7fg.png alt-decision:review-required -->
+<!-- medium-image:1*XY91qV0a21FcApTlmMR7fg.png alt-decision:meaningful -->
 
-![](/blog-media/6ef5c120ef4425402f8ef3710f292b11bf3c4728b2b42fe398e810bf5bcb2086.png)
+![GPA Calculator result showing a grade of 66 from five weighted scores.](/blog-media/6ef5c120ef4425402f8ef3710f292b11bf3c4728b2b42fe398e810bf5bcb2086.png)
 
-<!-- medium-image:1*CaGZywnV_IMlBBwjVJSsWg.png alt-decision:review-required -->
+<!-- medium-image:1*CaGZywnV_IMlBBwjVJSsWg.png alt-decision:meaningful -->
 
-![](/blog-media/c83604786b252ca28c8751ffb8f0dc6d0171b04c3aaa3f27a8db259d3cc78a54.png)
+![Flask blog demo showing dog posts with images and a Download File button.](/blog-media/c83604786b252ca28c8751ffb8f0dc6d0171b04c3aaa3f27a8db259d3cc78a54.png)
 
 The 5 months I spent at Tinkertanker has been amazing. I am thankful for the guidance of all the staff and the opportunity to learn and to apply programming.
