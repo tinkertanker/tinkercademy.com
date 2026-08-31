@@ -22,6 +22,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/22e4d4940fc050daf03b212d4a2fcd31fa567cb88c9799815500d9a56360486a.jpg
+heroImageWidth: 2518
+heroImageHeight: 1374
 heroAlt: Lots of fabulous examples on Pinterest !
 heroAltDecision: meaningful
 provenance:
@@ -36,87 +38,88 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-I have always been fascinated with the idea of <strong>Automata</strong>. A quick Pinterest search will yield you countless amazing examples of these, made out of wood, paper, metal and more…
+<ArticleLegacyBlock as="p" html={"I have always been fascinated with the idea of <strong>Automata</strong>. A quick Pinterest search will yield you countless amazing examples of these, made out of wood, paper, metal and more…"} />
 
 {/* medium-image:1*z7f7tj5e-7iIDtJYCS_oVw.jpeg alt-decision:meaningful */}
 
-![Lots of fabulous examples on Pinterest !](/blog-media/22e4d4940fc050daf03b212d4a2fcd31fa567cb88c9799815500d9a56360486a.jpg)
+<img src="/blog-media/22e4d4940fc050daf03b212d4a2fcd31fa567cb88c9799815500d9a56360486a.jpg" alt="Lots of fabulous examples on Pinterest !" width="2518" height="1374" loading="lazy" decoding="async" />
 
-<em>Lots of fabulous examples on Pinterest !</em>
+<ArticleLegacyBlock as="p" html={"<em>Lots of fabulous examples on Pinterest !</em>"} className="medium-image-caption" />
 
-Automaton (singular form of Automata), is defined as:
+<ArticleLegacyBlock as="p" html={"Automaton (singular form of Automata), is defined as:"} />
 
-> a machine which performs a range of functions according to a <a href="https://www.google.com/search?sca_esv=571184275&amp;rlz=1C5CHFA_enSG849SG849&amp;sxsrf=AM9HkKmCPwKO0aQJ0axcMun_WABKw70egQ:1696564491326&amp;q=predetermined&amp;si=ALGXSlaUkho42PFSQFYO6kO7MTs2CZ00ykMDQ55kCs7Z4wvGdRjcM7qksW2pfRuQ7Aqrj3-INt1pPnHDWUvDo_gHlk338RBhXA34gt0RSD7Drayh4ULeHOE%3D&amp;expnd=1">predetermined</a> set of <a href="https://www.google.com/search?sca_esv=571184275&amp;rlz=1C5CHFA_enSG849SG849&amp;sxsrf=AM9HkKmCPwKO0aQJ0axcMun_WABKw70egQ:1696564491326&amp;q=coded&amp;si=ALGXSlanL1aSLkbkKVKYTZ8siJOemkI4LUCj6R_yIRc7yhxfn_3WHDb2mZ1aJtMgLalSSmeaPaOGrTtB6cqhocR0DFjY3E5NDw%3D%3D&amp;expnd=1">coded</a> instructions
+<ArticleLegacyBlock as="blockquote" html={"a machine which performs a range of functions according to a <a href=\"https://www.google.com/search?sca_esv=571184275&amp;rlz=1C5CHFA_enSG849SG849&amp;sxsrf=AM9HkKmCPwKO0aQJ0axcMun_WABKw70egQ:1696564491326&amp;q=predetermined&amp;si=ALGXSlaUkho42PFSQFYO6kO7MTs2CZ00ykMDQ55kCs7Z4wvGdRjcM7qksW2pfRuQ7Aqrj3-INt1pPnHDWUvDo_gHlk338RBhXA34gt0RSD7Drayh4ULeHOE%3D&amp;expnd=1\">predetermined</a> set of <a href=\"https://www.google.com/search?sca_esv=571184275&amp;rlz=1C5CHFA_enSG849SG849&amp;sxsrf=AM9HkKmCPwKO0aQJ0axcMun_WABKw70egQ:1696564491326&amp;q=coded&amp;si=ALGXSlanL1aSLkbkKVKYTZ8siJOemkI4LUCj6R_yIRc7yhxfn_3WHDb2mZ1aJtMgLalSSmeaPaOGrTtB6cqhocR0DFjY3E5NDw%3D%3D&amp;expnd=1\">coded</a> instructions"} />
 
-Once upon a time, I came across Keisuke San’s fabulous book: <strong><em><a href="https://www.amazon.com/Karakuri-Make-Mechanical-Paper-Models/dp/0312566697">Karakuri: How to make mechanical paper models that move</a></em></strong>, and was instantly inspired to create some for myself!
+<ArticleLegacyBlock as="p" html={"Once upon a time, I came across Keisuke San’s fabulous book: <strong><em><a href=\"https://www.amazon.com/Karakuri-Make-Mechanical-Paper-Models/dp/0312566697\">Karakuri: How to make mechanical paper models that move</a></em></strong>, and was instantly inspired to create some for myself!"} />
 
 {/* medium-image:1*VtSeygfCvIT6jFC5iyXDOg.jpeg alt-decision:meaningful */}
 
-![Grab a copy if you can, you won’t regret it!](/blog-media/1bf1f2ae4f24c11259a62e6616e62c83b25adc708209fa793d024d52f6d7e92c.jpg)
+<img src="/blog-media/1bf1f2ae4f24c11259a62e6616e62c83b25adc708209fa793d024d52f6d7e92c.jpg" alt="Grab a copy if you can, you won’t regret it!" width="1000" height="713" loading="lazy" decoding="async" />
 
-<em>Grab a copy if you can, you won’t regret it!</em>
+<ArticleLegacyBlock as="p" html={"<em>Grab a copy if you can, you won’t regret it!</em>"} className="medium-image-caption" />
 
-The book goes through the fundamentals of different kinds of mechanisms, like cams or cranks, and how to utilise them to create motion. Then the book progresses on to combine these with animal models to create living, breathing automata!
+<ArticleLegacyBlock as="p" html={"The book goes through the fundamentals of different kinds of mechanisms, like cams or cranks, and how to utilise them to create motion. Then the book progresses on to combine these with animal models to create living, breathing automata!"} />
 
-Armed with my newfound knowledge, I recreated these mechanisms in my favourite vector package, Illustrator. My Cricut machine helped me ‘cut’ out these shapes perfectly without breaking a sweat (and blood)!
+<ArticleLegacyBlock as="p" html={"Armed with my newfound knowledge, I recreated these mechanisms in my favourite vector package, Illustrator. My Cricut machine helped me ‘cut’ out these shapes perfectly without breaking a sweat (and blood)!"} />
 
 {/* medium-image:1*r0Vg9ozpOuLV-7Y85-rLkA.jpeg alt-decision:meaningful */}
 
-![All cut out and ready to go!](/blog-media/146e6cc4c7756101ca19fb19ae20e4de338828a856079b7dd1181f24589a3690.jpg)
+<img src="/blog-media/146e6cc4c7756101ca19fb19ae20e4de338828a856079b7dd1181f24589a3690.jpg" alt="All cut out and ready to go!" width="1879" height="1000" loading="lazy" decoding="async" />
 
-<em>All cut out and ready to go!</em>
+<ArticleLegacyBlock as="p" html={"<em>All cut out and ready to go!</em>"} className="medium-image-caption" />
 
 {/* medium-image:1*3aq6owI_iG1c6TX3afJEYw.jpeg alt-decision:meaningful */}
 
-![Cut paper automata parts laid out before assembly](/blog-media/b458418bb3950ffc83a1edd309cc02539fe890332e8d9503a4e6a9580e87b8bb.jpg)
+<img src="/blog-media/b458418bb3950ffc83a1edd309cc02539fe890332e8d9503a4e6a9580e87b8bb.jpg" alt="Cut paper automata parts laid out before assembly" width="1588" height="1000" loading="lazy" decoding="async" />
 
 {/* medium-image:1*5Z_3x7ycMII_M0dIF83A4g.jpeg alt-decision:meaningful */}
 
-![Gluing up the individual components, then assembly!](/blog-media/e4afb72457074f4bb319e5accd8b47e7feb8ed783aced4c0bebd88a00580563f.jpg)
+<img src="/blog-media/e4afb72457074f4bb319e5accd8b47e7feb8ed783aced4c0bebd88a00580563f.jpg" alt="Gluing up the individual components, then assembly!" width="999" height="1000" loading="lazy" decoding="async" />
 
-<em>Gluing up the individual components, then assembly!</em>
+<ArticleLegacyBlock as="p" html={"<em>Gluing up the individual components, then assembly!</em>"} className="medium-image-caption" />
 
-The gluing up was straightforward; just use regular crafting glue and then allow some time for the glue to dry… The sequence of assembly is also important to make sure that parts can be put together. Don’t ask me how I know :)
+<ArticleLegacyBlock as="p" html={"The gluing up was straightforward; just use regular crafting glue and then allow some time for the glue to dry… The sequence of assembly is also important to make sure that parts can be put together. Don’t ask me how I know :)"} />
 
-Blessed with a laser cutter in the office, I designed and made myself a mount to attach a motor, so that we can use it to ‘drive’ the automata. You’ll see what I mean in a moment…
+<ArticleLegacyBlock as="p" html={"Blessed with a laser cutter in the office, I designed and made myself a mount to attach a motor, so that we can use it to ‘drive’ the automata. You’ll see what I mean in a moment…"} />
 
 {/* medium-image:1*eqPNRQQgC0Pk7NUkxB0d4A.jpeg alt-decision:meaningful */}
 
-![Automata parts being cut from cardboard in a laser cutter](/blog-media/a6acf1226f1a17bcf9b1475bc1e160d944b9ddaeb9d40fa5d8a5360b90fb1e88.jpg)
+<img src="/blog-media/a6acf1226f1a17bcf9b1475bc1e160d944b9ddaeb9d40fa5d8a5360b90fb1e88.jpg" alt="Automata parts being cut from cardboard in a laser cutter" width="1778" height="1000" loading="lazy" decoding="async" />
 
 {/* medium-image:1*hXsRXkO4_ykscbolS-ik7g.jpeg alt-decision:meaningful */}
 
-![Cutting the parts to make a motor mount!](/blog-media/fdeea1a9d8a7e4e701e63657aed874a881fc7be7a71ea8cc9ba90b4f3e611fea.jpg)
+<img src="/blog-media/fdeea1a9d8a7e4e701e63657aed874a881fc7be7a71ea8cc9ba90b4f3e611fea.jpg" alt="Cutting the parts to make a motor mount!" width="1802" height="1000" loading="lazy" decoding="async" />
 
-<em>Cutting the parts to make a motor mount!</em>
+<ArticleLegacyBlock as="p" html={"<em>Cutting the parts to make a motor mount!</em>"} className="medium-image-caption" />
 
-To make my automata move on its own, I decided to make use of the plethora of <a href="https://gethacking.com/collections/littlebits">LittleBits that we had in our shop</a>. They were dead simple to setup, and simply works without fuss! The proximity sensor was thrown in to allow me(or anyone else), to activate the automata on demand.
+<ArticleLegacyBlock as="p" html={"To make my automata move on its own, I decided to make use of the plethora of <a href=\"https://gethacking.com/collections/littlebits\">LittleBits that we had in our shop</a>. They were dead simple to setup, and simply works without fuss! The proximity sensor was thrown in to allow me(or anyone else), to activate the automata on demand."} />
 
 {/* medium-image:1*Ci6EXcpCdY17CYSw9qSziA.jpeg alt-decision:meaningful */}
 
-![LittleBits battery, proximity sensor and motor connected to a paper automaton](/blog-media/d086392a94219f4b242667258da82f72e251353d32a68400235cda068b9a38cc.jpg)
+<img src="/blog-media/d086392a94219f4b242667258da82f72e251353d32a68400235cda068b9a38cc.jpg" alt="LittleBits battery, proximity sensor and motor connected to a paper automaton" width="1778" height="1000" loading="lazy" decoding="async" />
 
-In the book, many different mechanisms were introduced, so I tried my hand at replicating a few of them as well. Below are some of the fruits of my labor:
+<ArticleLegacyBlock as="p" html={"In the book, many different mechanisms were introduced, so I tried my hand at replicating a few of them as well. Below are some of the fruits of my labor:"} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/mIaue98vEEY"} title={"Embedded media"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/mIaue98vEEY"} title={"Embedded media"} description={""} captionHtml={""} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/jyCCE7J83eM"} title={"Embedded media"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/jyCCE7J83eM"} title={"Embedded media"} description={""} captionHtml={""} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/CTx8zuaeM6Q"} title={"Embedded media"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/CTx8zuaeM6Q"} title={"Embedded media"} description={""} captionHtml={""} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/tTfl-2uXIa4"} title={"Crank lever mechanism"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/tTfl-2uXIa4"} title={"Crank lever mechanism"} description={""} captionHtml={""} />
 
-With the mechanisms and LittleBits set up and ready to go, it was time to get creative! I won’t bore you with the details of how I do arts and crafts, but here are some of my beloved creations:
+<ArticleLegacyBlock as="p" html={"With the mechanisms and LittleBits set up and ready to go, it was time to get creative! I won’t bore you with the details of how I do arts and crafts, but here are some of my beloved creations:"} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/bogIXiHuaPU"} title={"automata excavator"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/bogIXiHuaPU"} title={"automata excavator"} description={""} captionHtml={"An excavator!"} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/Vdl9lTqIyXg"} title={"pirate ship"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/Vdl9lTqIyXg"} title={"pirate ship"} description={""} captionHtml={"Brace yourself!"} />
 
-Of course, you’re not limited to just LittleBits. For the automaton below, I tinkered a bit, and combined Micro:bit with LittleBits to incorporate some simple coding to my automata; it only moves when it senses a presence, and stops after some time.
+<ArticleLegacyBlock as="p" html={"Of course, you’re not limited to just LittleBits. For the automaton below, I tinkered a bit, and combined Micro:bit with LittleBits to incorporate some simple coding to my automata; it only moves when it senses a presence, and stops after some time."} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/Zgs7llg84dM"} title={"Microbit + LittleBits = Automata"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/Zgs7llg84dM"} title={"Microbit + LittleBits = Automata"} description={""} captionHtml={"Italian Chef at your service!"} />
 
-Now that you have seen what’s possible, it’s your turn to venture out and create your very own automata. Be sure to grab <a href="https://gethacking.com/products/tinkercademy-littlebits-starter-kit">some of these LittleBits parts</a> as well to make your creations come alive and respond to the world around them!
+<ArticleLegacyBlock as="p" html={"Now that you have seen what’s possible, it’s your turn to venture out and create your very own automata. Be sure to grab <a href=\"https://gethacking.com/products/tinkercademy-littlebits-starter-kit\">some of these LittleBits parts</a> as well to make your creations come alive and respond to the world around them!"} />
 
-Have fun and stay creative!
+<ArticleLegacyBlock as="p" html={"Have fun and stay creative!"} />

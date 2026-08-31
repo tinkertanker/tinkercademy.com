@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/380a30ba3204268ea0e85e953a404a80d4bbe4c400c8493ee5cc23ac099001b0.png
+heroImageWidth: 1200
+heroImageHeight: 979
 heroAlt: The logo for AndroidX Test
 heroAltDecision: meaningful
 provenance:
@@ -40,221 +42,212 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-<em><a href="http://blog.tinkercademy.com">Editor’s note</a></em><em>: Zhao Wei interned with us from January to March 2019, before beginning his Full-Time National Service obligations. He worked on an impressive variety of software and hardware projects, including web apps, chatbots, native apps, and more. Here, he goes into a deep dive on what he learned about Android UI testing:</em>
+<ArticleLegacyBlock as="p" html={"<em><a href=\"http://blog.tinkercademy.com\">Editor’s note</a></em><em>: Zhao Wei interned with us from January to March 2019, before beginning his Full-Time National Service obligations. He worked on an impressive variety of software and hardware projects, including web apps, chatbots, native apps, and more. Here, he goes into a deep dive on what he learned about Android UI testing:</em>"} />
 
-The Android team and community advocates testing. This includes unit, integration, and UI testing.
+<ArticleLegacyBlock as="p" html={"The Android team and community advocates testing. This includes unit, integration, and UI testing."} />
 
 {/* medium-image:1*xQRZhzYbKvU8VfMDnyhWQQ.png alt-decision:meaningful */}
 
-![“One does not simply test in production” meme](/blog-media/a9e6d72f9862647cda265bb2f013a68018b0cb211dc5d89a6cbf0711bbff5fe8.png)
+<img src="/blog-media/a9e6d72f9862647cda265bb2f013a68018b0cb211dc5d89a6cbf0711bbff5fe8.png" alt="“One does not simply test in production” meme" width="430" height="253" loading="lazy" decoding="async" />
 
-I’ll focus on <strong>UI testing</strong> for this post.
+<ArticleLegacyBlock as="p" html={"I’ll focus on <strong>UI testing</strong> for this post."} />
 
-Testing brings about several benefits to the app development process:
+<ArticleLegacyBlock as="p" html={"Testing brings about several benefits to the app development process:"} />
 
-1. Acts as a specification for the app’s behaviour
-2. Verifies that the app behaves according to the specification
-3. Gives confidence that any changes made during development do not break existing functionality
+<ArticleLegacyBlock as="ol" items={["Acts as a specification for the app’s behaviour","Verifies that the app behaves according to the specification","Gives confidence that any changes made during development do not break existing functionality"]} />
 
-The last point is especially important to apps undergoing major refactors and redesigns. <a href="https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms">Get Hacking Android</a> is no exception.
+<ArticleLegacyBlock as="p" html={"The last point is especially important to apps undergoing major refactors and redesigns. <a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\">Get Hacking Android</a> is no exception."} />
 
-## The Initial State of Get Hacking Android
+<ArticleLegacyBlock as="h2" html={"The Initial State of Get Hacking Android"} />
 
-> <a href="https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms">Get Hacking - Digital Maker - Apps on Google Play</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\"><strong>Get Hacking - Digital Maker - Apps on Google Play</strong></a><a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\"><br /></a><a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\"><em>Get Hacking with the micro:bit! Browse our collection of electronics projects, powered by the micro:bit, and start your…</em></a><a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\">play.google.com</a>"} className="article-link-card" />
 
-Get Hacking Android is an app that showcases <a href="https://microbit.org/">micro:bit</a> and maker projects. Tinkertanker released a first version over a year ago on the Play Store, but without any UI tests for the app. This meant that functionality could break during development without anyone noticing. (Unfortunately, some of these bugs <em>did</em> actually slip into production.)
+<ArticleLegacyBlock as="p" html={"Get Hacking Android is an app that showcases <a href=\"https://microbit.org/\">micro:bit</a> and maker projects. Tinkertanker released a first version over a year ago on the Play Store, but without any UI tests for the app. This meant that functionality could break during development without anyone noticing. (Unfortunately, some of these bugs <em>did</em> actually slip into production.)"} />
 
-The app is also undergoing a major redesign, and this impacts many areas of the code base. Breakages are likely to happen.
+<ArticleLegacyBlock as="p" html={"The app is also undergoing a major redesign, and this impacts many areas of the code base. Breakages are likely to happen."} />
 
-Writing UI tests can help avoid these issues. I’ve written some and documented what I’ve learnt below. This includes some of the patterns I’ve followed and the pitfalls I’ve encountered.
+<ArticleLegacyBlock as="p" html={"Writing UI tests can help avoid these issues. I’ve written some and documented what I’ve learnt below. This includes some of the patterns I’ve followed and the pitfalls I’ve encountered."} />
 
-## Preparing to Test
+<ArticleLegacyBlock as="h2" html={"Preparing to Test"} />
 
-Before writing any tests, I set up the dependencies needed for testing. These include the Espresso and AndroidX Test libraries.
+<ArticleLegacyBlock as="p" html={"Before writing any tests, I set up the dependencies needed for testing. These include the Espresso and AndroidX Test libraries."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/42f8fe03a3c450c7877a980e39f11598"} title={"UI Testing the Get Hacking Android App"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/42f8fe03a3c450c7877a980e39f11598"} title={"UI Testing the Get Hacking Android App"} description={"UI Testing the Get Hacking Android App. GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"The Espresso and AndroidX Test dependencies used in Get Hacking Android"} />
 
-### What Is Espresso?
+<ArticleLegacyBlock as="h3" html={"What Is Espresso?"} />
 
-<a href="https://developer.android.com/training/testing/espresso">Espresso</a> is a UI testing library for Android. It provides APIs for writing idiomatic actions and assertions on the UI.
+<ArticleLegacyBlock as="p" html={"<a href=\"https://developer.android.com/training/testing/espresso\">Espresso</a> is a UI testing library for Android. It provides APIs for writing idiomatic actions and assertions on the UI."} />
 
 {/* medium-image:1*Yenm3nPIxBQTHBs1fUzaUQ.png alt-decision:meaningful */}
 
-![The logo for Espresso](/blog-media/9e04de4a292e02a7724d7b35438f58804e6c97faa5f02425494e62c8ed785a85.png)
+<img src="/blog-media/9e04de4a292e02a7724d7b35438f58804e6c97faa5f02425494e62c8ed785a85.png" alt="The logo for Espresso" width="590" height="710" loading="lazy" decoding="async" />
 
-<em>The logo for Espresso</em>
+<ArticleLegacyBlock as="p" html={"<em>The logo for Espresso</em>"} className="medium-image-caption" />
 
-Tests written with Espresso are concise and readable.
+<ArticleLegacyBlock as="p" html={"Tests written with Espresso are concise and readable."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/a61bfe2f5bd05690fb48829040aa5608"} title={"UI Testing the Get Hacking Android App"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/a61bfe2f5bd05690fb48829040aa5608"} title={"UI Testing the Get Hacking Android App"} description={"UI Testing the Get Hacking Android App. GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"Look how natural Espresso code feels"} />
 
-### What Is AndroidX Test?
+<ArticleLegacyBlock as="h3" html={"What Is AndroidX Test?"} />
 
-<a href="https://developer.android.com/training/testing/set-up-project">AndroidX Test</a> is a set of libraries to ease testing on Android. It provides test harnesses and utilities that make writing tests simpler.
+<ArticleLegacyBlock as="p" html={"<a href=\"https://developer.android.com/training/testing/set-up-project\">AndroidX Test</a> is a set of libraries to ease testing on Android. It provides test harnesses and utilities that make writing tests simpler."} />
 
 {/* medium-image:1*yfho5jJ7_G5Kgqw2H0YD5w.png alt-decision:meaningful */}
 
-![The logo for AndroidX Test](/blog-media/380a30ba3204268ea0e85e953a404a80d4bbe4c400c8493ee5cc23ac099001b0.png)
+<img src="/blog-media/380a30ba3204268ea0e85e953a404a80d4bbe4c400c8493ee5cc23ac099001b0.png" alt="The logo for AndroidX Test" width="1200" height="979" loading="lazy" decoding="async" />
 
-<em>The logo for AndroidX Test</em>
+<ArticleLegacyBlock as="p" html={"<em>The logo for AndroidX Test</em>"} className="medium-image-caption" />
 
-The <a href="https://junit.org/junit4/">JUnit</a> and <a href="https://google.github.io/truth/">Truth</a> extensions provide methods for fluent assertions. These exist under the <code>androidx.test.ext</code> namespace.
+<ArticleLegacyBlock as="p" html={"The <a href=\"https://junit.org/junit4/\">JUnit</a> and <a href=\"https://google.github.io/truth/\">Truth</a> extensions provide methods for fluent assertions. These exist under the <code>androidx.test.ext</code> namespace."} />
 
-<a href="https://developer.android.com/training/testing/junit-runner">AndroidJUnitRunner</a> makes it possible to run JUnit-style tests on Android devices. It exists under the <code>androidx.test:runner</code> namespace.
+<ArticleLegacyBlock as="p" html={"<a href=\"https://developer.android.com/training/testing/junit-runner\">AndroidJUnitRunner</a> makes it possible to run JUnit-style tests on Android devices. It exists under the <code>androidx.test:runner</code> namespace."} />
 
-<a href="https://developer.android.com/training/testing/junit-runner#using-android-test-orchestrator">Android Test Orchestrator</a> enhances test reliability by running tests in separate <a href="https://developer.android.com/reference/android/app/Instrumentation.html">Instrumentation</a> instances. Some of my tests were flaky and failed without it. It exists under the <code>androidx.test:orchestrator</code> namespace.
+<ArticleLegacyBlock as="p" html={"<a href=\"https://developer.android.com/training/testing/junit-runner#using-android-test-orchestrator\">Android Test Orchestrator</a> enhances test reliability by running tests in separate <a href=\"https://developer.android.com/reference/android/app/Instrumentation.html\">Instrumentation</a> instances. Some of my tests were flaky and failed without it. It exists under the <code>androidx.test:orchestrator</code> namespace."} />
 
-## Understanding the Android Test File Structure
+<ArticleLegacyBlock as="h2" html={"Understanding the Android Test File Structure"} />
 
-There are a few common rules to writing UI tests:
+<ArticleLegacyBlock as="p" html={"There are a few common rules to writing UI tests:"} />
 
-- Store all on-device UI tests in the <code>androidTest</code> directory.
-- Store each test class in the same subdirectory under <code>androidTest</code> as the class under test.
-- Give each test class the same name as the class under test, but suffixed with the word <strong>Test</strong>.
+<ArticleLegacyBlock as="ul" items={["Store all on-device UI tests in the <code>androidTest</code> directory.","Store each test class in the same subdirectory under <code>androidTest</code> as the class under test.","Give each test class the same name as the class under test, but suffixed with the word <strong>Test</strong>."]} />
 
-> Side note: Store off-device UI and unit tests in the <code>test</code> directory instead.
+<ArticleLegacyBlock as="blockquote" html={"Side note: Store off-device UI and unit tests in the <code>test</code> directory instead."} />
 
-Here’s an example.
+<ArticleLegacyBlock as="p" html={"Here’s an example."} />
 
-I want to test an <strong>ExampleActivity</strong> class. I store it in <code>app/src/main/java/com/example/example-app/ExampleActivity.java</code>.
+<ArticleLegacyBlock as="p" html={"I want to test an <strong>ExampleActivity</strong> class. I store it in <code>app/src/main/java/com/example/example-app/ExampleActivity.java</code>."} />
 
-In this case, I should name my test class <strong>ExampleActivityTest</strong>. I should also store it in <code>app/src/androidTest/java/com/example/example-app/ExampleActivityTest.java</code>.
+<ArticleLegacyBlock as="p" html={"In this case, I should name my test class <strong>ExampleActivityTest</strong>. I should also store it in <code>app/src/androidTest/java/com/example/example-app/ExampleActivityTest.java</code>."} />
 
-## Writing My First Test Class
+<ArticleLegacyBlock as="h2" html={"Writing My First Test Class"} />
 
-To get started, I first wrote a test class for a simple Activity in the app: IntroductionActivity.
+<ArticleLegacyBlock as="p" html={"To get started, I first wrote a test class for a simple Activity in the app: IntroductionActivity."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/e67dd86b8e9f37fe40505e8629c7a4b3"} title={"UI Testing the Get Hacking Android App"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/e67dd86b8e9f37fe40505e8629c7a4b3"} title={"UI Testing the Get Hacking Android App"} description={"UI Testing the Get Hacking Android App. GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"The IntroductionActivity test class"} />
 
-There’s a bunch of different things going on at first glance. Let’s walk through each part in more detail.
+<ArticleLegacyBlock as="p" html={"There’s a bunch of different things going on at first glance. Let’s walk through each part in more detail."} />
 
-### Using ActivityScenario and ActivityScenarioRule
+<ArticleLegacyBlock as="h3" html={"Using ActivityScenario and ActivityScenarioRule"} />
 
-<a href="https://developer.android.com/guide/components/activities/testing">ActivityScenario</a> is essential to testing Activities on Android. It manages the state and lifecycle events for the Activity under test. This eases Activity behaviour testing.
+<ArticleLegacyBlock as="p" html={"<a href=\"https://developer.android.com/guide/components/activities/testing\">ActivityScenario</a> is essential to testing Activities on Android. It manages the state and lifecycle events for the Activity under test. This eases Activity behaviour testing."} />
 
-<a href="https://developer.android.com/reference/androidx/test/ext/junit/rules/ActivityScenarioRule">ActivityScenarioRule</a> builds upon ActivityScenario. It launches an ActivityScenario before each test and cleans up after each test.
+<ArticleLegacyBlock as="p" html={"<a href=\"https://developer.android.com/reference/androidx/test/ext/junit/rules/ActivityScenarioRule\">ActivityScenarioRule</a> builds upon ActivityScenario. It launches an ActivityScenario before each test and cleans up after each test."} />
 
-For IntroductionActivityTest, I used ActivityScenarioRule to launch IntroductionActivity before each test.
+<ArticleLegacyBlock as="p" html={"For IntroductionActivityTest, I used ActivityScenarioRule to launch IntroductionActivity before each test."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/7190092bf4172412373e4b578dd78d8f"} title={"IntroductionActivityTest.java"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/7190092bf4172412373e4b578dd78d8f"} title={"IntroductionActivityTest.java"} description={"GitHub Gist: instantly share code, notes, and snippets."} captionHtml={""} />
 
-## Writing My First Test Case
+<ArticleLegacyBlock as="h2" html={"Writing My First Test Case"} />
 
-The IntroductionActivity displays a TextView with introductory text and a Button.
+<ArticleLegacyBlock as="p" html={"The IntroductionActivity displays a TextView with introductory text and a Button."} />
 
-The first test verifies that the app displays these two views:
+<ArticleLegacyBlock as="p" html={"The first test verifies that the app displays these two views:"} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/c18c75d0c8d8dcc3de44d8322d70e6ac"} title={"IntroductionActivityTest.java"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/c18c75d0c8d8dcc3de44d8322d70e6ac"} title={"IntroductionActivityTest.java"} description={"GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"The first test case for IntroductionActivityTest"} />
 
-I used Espresso APIs here. They may be unfamiliar if you haven’t written UI tests before, but the intent of the code should be clear.
+<ArticleLegacyBlock as="p" html={"I used Espresso APIs here. They may be unfamiliar if you haven’t written UI tests before, but the intent of the code should be clear."} />
 
-### What Are These Methods?
+<ArticleLegacyBlock as="h3" html={"What Are These Methods?"} />
 
-The Android documentation provides <a href="https://developer.android.com/training/testing/espresso/basics">a detailed explanation</a> of common Espresso APIs. For convenience, I’ll give a quick introduction to each method I used.
+<ArticleLegacyBlock as="p" html={"The Android documentation provides <a href=\"https://developer.android.com/training/testing/espresso/basics\">a detailed explanation</a> of common Espresso APIs. For convenience, I’ll give a quick introduction to each method I used."} />
 
-<code>onView()</code> matches a View given one or more ViewMatchers objects.
+<ArticleLegacyBlock as="p" html={"<code>onView()</code> matches a View given one or more ViewMatchers objects."} />
 
-<code>check()</code> checks the state of the matched View given one or more ViewAssertions objects.
+<ArticleLegacyBlock as="p" html={"<code>check()</code> checks the state of the matched View given one or more ViewAssertions objects."} />
 
-<code>matches()</code> returns a ViewAssertion object that asserts on the given ViewMatcher objects.
+<ArticleLegacyBlock as="p" html={"<code>matches()</code> returns a ViewAssertion object that asserts on the given ViewMatcher objects."} />
 
-<code>isDisplayed()</code>returns a ViewMatcher object that matches a displayed View.
+<ArticleLegacyBlock as="p" html={"<code>isDisplayed()</code>returns a ViewMatcher object that matches a displayed View."} />
 
-## Testing User Interactions
+<ArticleLegacyBlock as="h2" html={"Testing User Interactions"} />
 
-Clicking the Button in IntroductionActivity launches an Intent to start the MainActivity.
+<ArticleLegacyBlock as="p" html={"Clicking the Button in IntroductionActivity launches an Intent to start the MainActivity."} />
 
-The next test verifies this interaction.
+<ArticleLegacyBlock as="p" html={"The next test verifies this interaction."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/2646de684f0354e1f503b107dc02b059"} title={"IntroductionActivityTest.java"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/2646de684f0354e1f503b107dc02b059"} title={"IntroductionActivityTest.java"} description={"GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"The second test case for IntroductionActivityTest"} />
 
-### Naming Test Cases
+<ArticleLegacyBlock as="h3" html={"Naming Test Cases"} />
 
-I named each test case following a structured scheme. It goes like this: <strong>[action/condition]_[expected result]()</strong>.
+<ArticleLegacyBlock as="p" html={"I named each test case following a structured scheme. It goes like this: <strong>[action/condition]_[expected result]()</strong>."} />
 
-This naming scheme tells readers the intent of a test case at a glance.
+<ArticleLegacyBlock as="p" html={"This naming scheme tells readers the intent of a test case at a glance."} />
 
-In onClickButton_showsMainActivity(), onClickButton is the action and showsMainActivity<strong> </strong>is the expected result.
+<ArticleLegacyBlock as="p" html={"In onClickButton_showsMainActivity(), onClickButton is the action and showsMainActivity<strong> </strong>is the expected result."} />
 
-### Structuring Code in Test Cases
+<ArticleLegacyBlock as="h3" html={"Structuring Code in Test Cases"} />
 
-The Android team recommends structuring test code based on <a href="https://en.wikipedia.org/wiki/Given-When-Then">Given-When-Then (GWT)</a>.
+<ArticleLegacyBlock as="p" html={"The Android team recommends structuring test code based on <a href=\"https://en.wikipedia.org/wiki/Given-When-Then\">Given-When-Then (GWT)</a>."} />
 
-GWT splits code into three phases:
+<ArticleLegacyBlock as="p" html={"GWT splits code into three phases:"} />
 
-- Given: The initial state of the app.
-- When: The action to carry out. This is like the action used in naming the test case.
-- Then: The expected result. This is like the expected result used in naming the test case.
+<ArticleLegacyBlock as="ul" items={["Given: The initial state of the app.","When: The action to carry out. This is like the action used in naming the test case.","Then: The expected result. This is like the expected result used in naming the test case."]} />
 
-In onClickButton_showsMainActivity(), I separated the three parts with a newline.
+<ArticleLegacyBlock as="p" html={"In onClickButton_showsMainActivity(), I separated the three parts with a newline."} />
 
-There is no <strong>Given</strong> phase in the test.
+<ArticleLegacyBlock as="p" html={"There is no <strong>Given</strong> phase in the test."} />
 
-<code>onView(...)</code> occurs during the <strong>When </strong>phase.
+<ArticleLegacyBlock as="p" html={"<code>onView(...)</code> occurs during the <strong>When </strong>phase."} />
 
-<code>intended(...)</code> occurs during the <strong>Then</strong> phase.
+<ArticleLegacyBlock as="p" html={"<code>intended(...)</code> occurs during the <strong>Then</strong> phase."} />
 
-### Performing ViewActions
+<ArticleLegacyBlock as="h3" html={"Performing ViewActions"} />
 
-Espresso provides ViewActions that perform actions like clicks, typing, and scrolls on Views.
+<ArticleLegacyBlock as="p" html={"Espresso provides ViewActions that perform actions like clicks, typing, and scrolls on Views."} />
 
-I used <code>perform(...)</code> and <code>click()</code> to click on the Button in IntroductionActivity.
+<ArticleLegacyBlock as="p" html={"I used <code>perform(...)</code> and <code>click()</code> to click on the Button in IntroductionActivity."} />
 
-### Verifying Intents
+<ArticleLegacyBlock as="h3" html={"Verifying Intents"} />
 
-To verify that the app launches the correct Intent when clicking the Button, the test has to do two things:
+<ArticleLegacyBlock as="p" html={"To verify that the app launches the correct Intent when clicking the Button, the test has to do two things:"} />
 
-1. Capture the launched Intent
-2. Check that the Intent has the MainActivity as the component
+<ArticleLegacyBlock as="ol" items={["Capture the launched Intent","Check that the Intent has the MainActivity as the component"]} />
 
-First, I used the <a href="https://developer.android.com/training/testing/espresso/intents">Espresso-Intents</a> extension to capture Intents. It lives in the <code>androidx.test.espresso:espresso-intents</code> dependency.
+<ArticleLegacyBlock as="p" html={"First, I used the <a href=\"https://developer.android.com/training/testing/espresso/intents\">Espresso-Intents</a> extension to capture Intents. It lives in the <code>androidx.test.espresso:espresso-intents</code> dependency."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/93fb07bbb00fd8f73a0b67a9ec57ed48"} title={"IntroductionActivityTest.java"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/93fb07bbb00fd8f73a0b67a9ec57ed48"} title={"IntroductionActivityTest.java"} description={"GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"The pre-test and post-test hooks for IntroductionActivityTest"} />
 
-I set up pre-test and post-test hooks using the <a href="http://junit.sourceforge.net/javadoc/org/junit/Before.html">Before</a> and <a href="http://junit.sourceforge.net/javadoc/org/junit/After.html">After</a> JUnit annotations.
+<ArticleLegacyBlock as="p" html={"I set up pre-test and post-test hooks using the <a href=\"http://junit.sourceforge.net/javadoc/org/junit/Before.html\">Before</a> and <a href=\"http://junit.sourceforge.net/javadoc/org/junit/After.html\">After</a> JUnit annotations."} />
 
-The pre-test hook initialises the Intent captor to capture launched Intents.
+<ArticleLegacyBlock as="p" html={"The pre-test hook initialises the Intent captor to capture launched Intents."} />
 
-The post-test hook releases the Intent captor for garbage collection.
+<ArticleLegacyBlock as="p" html={"The post-test hook releases the Intent captor for garbage collection."} />
 
-> Note: An <a href="https://developer.android.com/reference/android/support/test/espresso/intent/rule/IntentsTestRule">IntentsTestRule</a> can automate initialisation and release for each test.
+<ArticleLegacyBlock as="blockquote" html={"Note: An <a href=\"https://developer.android.com/reference/android/support/test/espresso/intent/rule/IntentsTestRule\">IntentsTestRule</a> can automate initialisation and release for each test."} />
 
-> But IntentsTestRule also launches the Activity under test. This conflicts with the ActivityScenarioRule that I’ve set up.
+<ArticleLegacyBlock as="blockquote" html={"But IntentsTestRule also launches the Activity under test. This conflicts with the ActivityScenarioRule that I’ve set up."} />
 
-Next, I used the <code>intended()</code> and <code>hasComponent()</code> methods to verify the captured Intent.
+<ArticleLegacyBlock as="p" html={"Next, I used the <code>intended()</code> and <code>hasComponent()</code> methods to verify the captured Intent."} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/2646de684f0354e1f503b107dc02b059"} title={"IntroductionActivityTest.java"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/zwliew/2646de684f0354e1f503b107dc02b059"} title={"IntroductionActivityTest.java"} description={"GitHub Gist: instantly share code, notes, and snippets."} captionHtml={"The test case verifies the Intent on line 7"} />
 
-And there you have it! <code>onClickButton_showsMainActivity()</code> verifies that the app launches the MainActivity after clicking on the Button.
+<ArticleLegacyBlock as="p" html={"And there you have it! <code>onClickButton_showsMainActivity()</code> verifies that the app launches the MainActivity after clicking on the Button."} />
 
-## What’s Next?
+<ArticleLegacyBlock as="h2" html={"What’s Next?"} />
 
-I’ve walked through the process of writing my first UI test class for Get Hacking Android. I’ve documented common patterns like test naming schemes and file structure. I’ve introduced Espresso APIs used for handling Activities, Intents, and Views.
+<ArticleLegacyBlock as="p" html={"I’ve walked through the process of writing my first UI test class for Get Hacking Android. I’ve documented common patterns like test naming schemes and file structure. I’ve introduced Espresso APIs used for handling Activities, Intents, and Views."} />
 
-But that isn’t all.
+<ArticleLegacyBlock as="p" html={"But that isn’t all."} />
 
-Get Hacking Android uses <a href="https://developer.android.com/reference/android/support/v4/app/Fragment.html">Fragments</a> for navigating between pages. It also performs network operations with <a href="https://square.github.io/retrofit/">Retrofit</a> to fetch data from a backend.
+<ArticleLegacyBlock as="p" html={"Get Hacking Android uses <a href=\"https://developer.android.com/reference/android/support/v4/app/Fragment.html\">Fragments</a> for navigating between pages. It also performs network operations with <a href=\"https://square.github.io/retrofit/\">Retrofit</a> to fetch data from a backend."} />
 
-Possibly in another article, I’ll explain testing Fragments with <a href="https://developer.android.com/reference/android/support/v4/app/FragmentTransaction.html">FragmentTransactions</a> within ActivityScenarios. I’ll also explain waiting on network operations with <a href="https://developer.android.com/training/testing/espresso/idling-resource">Espresso idling resources</a>.
+<ArticleLegacyBlock as="p" html={"Possibly in another article, I’ll explain testing Fragments with <a href=\"https://developer.android.com/reference/android/support/v4/app/FragmentTransaction.html\">FragmentTransactions</a> within ActivityScenarios. I’ll also explain waiting on network operations with <a href=\"https://developer.android.com/training/testing/espresso/idling-resource\">Espresso idling resources</a>."} />
 
-> Note: I used FragmentTransactions instead of the new <a href="https://developer.android.com/training/basics/fragments/testing">FragmentScenario</a> API. This is because Get Hacking Android has yet to migrate to AndroidX Fragments.
+<ArticleLegacyBlock as="blockquote" html={"Note: I used FragmentTransactions instead of the new <a href=\"https://developer.android.com/training/basics/fragments/testing\">FragmentScenario</a> API. This is because Get Hacking Android has yet to migrate to AndroidX Fragments."} />
 
-> If you use AndroidX Fragments, you should check out FragmentScenarios instead.
+<ArticleLegacyBlock as="blockquote" html={"If you use AndroidX Fragments, you should check out FragmentScenarios instead."} />
 
-I may also explain testing authentication and user inputs using <a href="https://android-developers.googleblog.com/2015/12/leveraging-product-flavors-in-android.html">different product flavours</a>.
+<ArticleLegacyBlock as="p" html={"I may also explain testing authentication and user inputs using <a href=\"https://android-developers.googleblog.com/2015/12/leveraging-product-flavors-in-android.html\">different product flavours</a>."} />
 
-## Further Reading
+<ArticleLegacyBlock as="h2" html={"Further Reading"} />
 
-Here are some of the articles and talks I watched before starting on Android testing:
+<ArticleLegacyBlock as="p" html={"Here are some of the articles and talks I watched before starting on Android testing:"} />
 
-- <a href="https://developer.android.com/training/testing">Android Developers guide on Android testing</a>
-- <a href="https://www.youtube.com/watch?v=wYMIadv9iF8&amp;t=940s">Google I/O 2018 talk on writing unified tests with AndroidX Test</a>
-- <a href="https://www.youtube.com/watch?v=pK7W5npkhho&amp;t=527s">Google I/O 2017 talk on test-driven development on Android</a>
-- <a href="https://android-developers.googleblog.com/2015/12/leveraging-product-flavors-in-android.html">Android Developers blog post on using different product flavours for testing</a>
+<ArticleLegacyBlock as="ul" items={["<a href=\"https://developer.android.com/training/testing\">Android Developers guide on Android testing</a>","<a href=\"https://www.youtube.com/watch?v=wYMIadv9iF8&amp;t=940s\">Google I/O 2018 talk on writing unified tests with AndroidX Test</a>","<a href=\"https://www.youtube.com/watch?v=pK7W5npkhho&amp;t=527s\">Google I/O 2017 talk on test-driven development on Android</a>","<a href=\"https://android-developers.googleblog.com/2015/12/leveraging-product-flavors-in-android.html\">Android Developers blog post on using different product flavours for testing</a>"]} />
 
-## To end off, here’s a tweet by Guillermo Rauch
+<ArticleLegacyBlock as="h2" html={"To end off, here’s a tweet by Guillermo Rauch"} />
 
-<ArticleEmbed provider="twitter" href={"https://twitter.com/rauchg/status/807626710350839808"} title={"Guillermo Rauch on Twitter: \"Write tests. Not too many. Mostly integration. / Twitter\""} />
+<ArticleEmbed provider="twitter" href={"https://twitter.com/rauchg/status/807626710350839808"} title={"Guillermo Rauch on Twitter: \"Write tests. Not too many. Mostly integration. / Twitter\""} description={"Write tests. Not too many. Mostly integration."} captionHtml={"UI tests are still important though."} />
 
-<em><a href="http://blog.tinkercademy.com">Editor’s note</a></em><em>: Zhao Wei impressed us early on with his technical know-how, his willingness to learn, and his sheer speed in getting things done. As a result, he’s contributed to myriad projects during his internship, such as developing the above Android app, creating a couple of very useful Slack bots, helping build some Swift Playgrounds notebooks for our micro:bit courses, creating demo web apps for our classes, and much more. If you’re here looking for a testimonial for Zhao Wei, and this hasn’t impressed you sufficiently, </em><em><a href="mailto:hello@tinkercademy.com">email us</a></em><em> for more enthusiastic praise.</em>
+<ArticleLegacyBlock as="p" html={"<em><a href=\"http://blog.tinkercademy.com\">Editor’s note</a></em><em>: Zhao Wei impressed us early on with his technical know-how, his willingness to learn, and his sheer speed in getting things done. As a result, he’s contributed to myriad projects during his internship, such as developing the above Android app, creating a couple of very useful Slack bots, helping build some Swift Playgrounds notebooks for our micro:bit courses, creating demo web apps for our classes, and much more. If you’re here looking for a testimonial for Zhao Wei, and this hasn’t impressed you sufficiently, </em><em><a href=\"mailto:hello@tinkercademy.com\">email us</a></em><em> for more enthusiastic praise.</em>"} />

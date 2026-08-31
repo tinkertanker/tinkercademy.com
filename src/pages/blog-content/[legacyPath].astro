@@ -2,8 +2,9 @@
 // The Worker serves this build route at the unchanged legacy story path.
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
+import BlogNav from '../../components/articles/BlogNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
-import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, formatBlogDate } from '../../lib/blog';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogHref, formatBlogDate } from '../../lib/blog';
 
 export async function getStaticPaths() {
 	return (await getCollection('blog')).map((story) => ({
@@ -48,19 +49,22 @@ const articleSchema = {
 	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
 	structuredData={articleSchema}
 >
+	<BlogNav />
 	<article class="blog-article">
-		<header class="blog-article__header shell">
-			<p class="blog-article__home"><a href={`${BLOG_ORIGIN}/`}>{BLOG_TITLE}</a></p>
-			<h1>{story.data.title}</h1>
-			{story.data.subtitle && <p class="blog-article__subtitle">{story.data.subtitle}</p>}
-			<p class="blog-article__byline">
-				By
-				{story.data.author.profileUrl ? (
-					<a href={story.data.author.profileUrl} rel="author">{story.data.author.name}</a>
-				) : story.data.author.name}
-				<span aria-hidden="true"> · </span>
-				<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
-			</p>
+		<header class="blog-article__header">
+			<div class="shell blog-article__header-inner">
+				<p class="blog-article__eyebrow"><a href={blogHref('/')}>Build Log story</a></p>
+				<h1>{story.data.title}</h1>
+				{story.data.subtitle && <p class="blog-article__subtitle">{story.data.subtitle}</p>}
+				<p class="blog-article__byline">
+					<span>By </span>
+					{story.data.author.profileUrl ? (
+						<a href={story.data.author.profileUrl} rel="author">{story.data.author.name}</a>
+					) : story.data.author.name}
+					<span aria-hidden="true"> · </span>
+					<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+				</p>
+			</div>
 		</header>
 
 		<div class="blog-article__body prose shell">
@@ -68,9 +72,14 @@ const articleSchema = {
 		</div>
 
 		<footer class="blog-article__footer shell">
+			{story.data.tags.length > 0 && (
+				<ul class="blog-article__tags" aria-label="Topics">
+					{story.data.tags.map((tag) => <li>{tag.name}</li>)}
+				</ul>
+			)}
 			<p><strong>{story.data.license}.</strong> Copyright ownership remains with the credited author or other applicable rights holder.</p>
 			{story.data.sourceMediumUrl && (
-				<p><a href={story.data.sourceMediumUrl} rel="alternate">View the original article on Medium</a>.</p>
+				<p class="blog-article__source"><strong>Source:</strong> <a href={story.data.sourceMediumUrl} rel="alternate">{story.data.title} on Medium</a></p>
 			)}
 		</footer>
 	</article>
@@ -78,16 +87,21 @@ const articleSchema = {
 
 <style>
 	.blog-article__header {
-		max-width: 52rem;
-		padding-top: 3.5rem;
-		padding-bottom: 2rem;
+		background: linear-gradient(145deg, #fff7f3, #f7ede9);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
-	.blog-article__home {
+	.blog-article__header-inner {
+		max-width: 52rem;
+		padding-top: 3.5rem;
+		padding-bottom: 3rem;
+	}
+
+	.blog-article__eyebrow {
 		margin: 0 0 1.25rem;
 		font-size: 0.85rem;
-		font-weight: 500;
-		letter-spacing: 0.04em;
+		font-weight: 600;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		color: var(--accent-dark);
 	}
@@ -113,7 +127,7 @@ const articleSchema = {
 	}
 
 	.blog-article__byline a,
-	.blog-article__home a,
+	.blog-article__eyebrow a,
 	.blog-article__footer a {
 		color: var(--accent-dark);
 		text-underline-offset: 0.18em;
@@ -149,6 +163,22 @@ const articleSchema = {
 		border-radius: 0.5rem;
 	}
 
+	.blog-article__body :global(.article-link-card) {
+		display: block;
+		margin: 1.75rem 0;
+		padding: 1.1rem 1.2rem;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		border-radius: 0.75rem;
+		background: #fffaf7;
+		line-height: 1.5;
+	}
+
+	.blog-article__body :global(.article-link-card a) {
+		color: var(--text);
+		text-decoration-color: var(--accent-dark);
+		text-underline-offset: 0.2em;
+	}
+
 	.blog-article__body :global(blockquote) {
 		margin: 1.5rem 0;
 		padding-left: 1rem;
@@ -179,5 +209,27 @@ const articleSchema = {
 		border-top: 1px solid rgba(0, 0, 0, 0.12);
 		font-size: 0.9rem;
 		color: rgb(75, 75, 75);
+	}
+
+	.blog-article__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0 0 1.5rem;
+		padding: 0;
+		list-style: none;
+	}
+
+	.blog-article__tags li {
+		padding: 0.35rem 0.7rem;
+		border-radius: 999px;
+		background: rgba(189, 58, 52, 0.09);
+		color: var(--accent-dark);
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+
+	.blog-article__source {
+		margin-top: 1.25rem;
 	}
 </style>

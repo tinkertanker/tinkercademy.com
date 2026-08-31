@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: organisation-owned
 heroImage: /blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png
+heroImageWidth: 1600
+heroImageHeight: 1066
 heroAlt: Illustration of a digital certificate secured by fingerprint authentication and a padlock.
 heroAltDecision: meaningful
 provenance:
@@ -41,56 +43,56 @@ migration:
 
 <!-- medium-image:0*jCWabjyMj1bkYTZx alt-decision:meaningful -->
 
-![Illustration of a digital certificate secured by fingerprint authentication and a padlock.](/blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png)
+<img src="/blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png" alt="Illustration of a digital certificate secured by fingerprint authentication and a padlock." width="1600" height="1066" loading="lazy" decoding="async" />
 
-Do you recall the very first time you attended a workshop or training course? Can you remember what you learnt? Or who your instructor was?
+<p>Do you recall the very first time you attended a workshop or training course? Can you remember what you learnt? Or who your instructor was?</p>
 
-Chances are, you’ve long forgotten about the very first course or workshop you attended years ago. And the same can be said about the many courses that you’ve taken since.
+<p>Chances are, you’ve long forgotten about the very first course or workshop you attended years ago. And the same can be said about the many courses that you’ve taken since.</p>
 
-At best, you’d probably only remember a handful of courses you attended — that is if they occurred within the past 3 years.
+<p>At best, you’d probably only remember a handful of courses you attended — that is if they occurred within the past 3 years.</p>
 
-## <strong>Challenge</strong>
+<h2><strong>Challenge</strong></h2>
 
-As a training provider for professionals, we’ve noticed this disturbing trend for some time now. Year by year, our corporate clients would send hundreds of employees for training in various domains spanning programming, cybersecurity, UI/UX and more.
+<p>As a training provider for professionals, we’ve noticed this disturbing trend for some time now. Year by year, our corporate clients would send hundreds of employees for training in various domains spanning programming, cybersecurity, UI/UX and more.</p>
 
-Yet, after every training, paper or digitised PDF certificates would be brought home only to be stored in a file or hard drive — often left there untouched for years until requested by employers or potential recruiters.
+<p>Yet, after every training, paper or digitised PDF certificates would be brought home only to be stored in a file or hard drive — often left there untouched for years until requested by employers or potential recruiters.</p>
 
-With millions of training certificates issued annually nationwide, we wondered, “Could we extract more value from these certificates?”
+<p>With millions of training certificates issued annually nationwide, we wondered, “Could we extract more value from these certificates?”</p>
 
-## <strong>Solution</strong>
+<h2><strong>Solution</strong></h2>
 
-Indeed we can! After months of brainstorming, research, and countless discussions, we eventually decided to collaborate with <a href="https://www.affinidi.com/">Temasek-founded Affinidi</a> and tap on its digital wallet, <a href="https://academy.affinidi.com/what-is-affinidis-digital-wallet-1c2a52b4d13f">Ceal</a>, as it presented a perfect solution to our needs.
+<p>Indeed we can! After months of brainstorming, research, and countless discussions, we eventually decided to collaborate with <a href="https://www.affinidi.com/">Temasek-founded Affinidi</a> and tap on its digital wallet, <a href="https://academy.affinidi.com/what-is-affinidis-digital-wallet-1c2a52b4d13f">Ceal</a>, as it presented a perfect solution to our needs.</p>
 
 <!-- medium-image:0*Sv2H0ZAzlqCv2RJ5 alt-decision:meaningful -->
 
-![Tinkercademy co-founder, Akmal (left) shaking hands with Varsha, General manager of Affinidi (right).](/blog-media/b8cc80207c00ec409c45273f451e03acb229d57a9a71b6c6a82bd73576031bde.jpg)
+<img src="/blog-media/b8cc80207c00ec409c45273f451e03acb229d57a9a71b6c6a82bd73576031bde.jpg" alt="Tinkercademy co-founder, Akmal (left) shaking hands with Varsha, General manager of Affinidi (right)." width="1280" height="960" loading="lazy" decoding="async" />
 
-<em>Tinkercademy co-founder, Akmal (left) shaking hands with Varsha, General manager of Affinidi (right).</em>
+<p class="medium-image-caption"><em>Tinkercademy co-founder, Akmal (left) shaking hands with Varsha, General manager of Affinidi (right).</em></p>
 
-### What is Ceal?
+<h3>What is Ceal?</h3>
 
-Ceal is a proprietary mobile application that removes the need for paper certificates. Instead, using blockchain technology, it stores certificates as digital verifiable credentials (VCs) that can be accessed anywhere from a smartphone.
+<p>Ceal is a proprietary mobile application that removes the need for paper certificates. Instead, using blockchain technology, it stores certificates as digital verifiable credentials (VCs) that can be accessed anywhere from a smartphone.</p>
 
 <!-- medium-image:0*VHUxdzx5wRTRqJo8 alt-decision:meaningful -->
 
-![Source: Affinidi](/blog-media/4e2f5fad6634be1d56d5316960651d128046b676d5f52467f12b5d957cce50a5.png)
+<img src="/blog-media/4e2f5fad6634be1d56d5316960651d128046b676d5f52467f12b5d957cce50a5.png" alt="Source: Affinidi" width="1566" height="1600" loading="lazy" decoding="async" />
 
-<em>Source: Affinidi</em>
+<p class="medium-image-caption"><em>Source: Affinidi</em></p>
 
-### Why Ceal?
+<h3>Why Ceal?</h3>
 
-Remember how you couldn’t recall your very first training? Now imagine if you had Ceal, you could safe keep all of these valuable certificates in a single location.
+<p>Remember how you couldn’t recall your very first training? Now imagine if you had Ceal, you could safe keep all of these valuable certificates in a single location.</p>
 
-But why is this important? Tracking your lifetime’s worth of training allows you to pinpoint milestones in your professional growth.
+<p>But why is this important? Tracking your lifetime’s worth of training allows you to pinpoint milestones in your professional growth.</p>
 
-You’ll have more data than ever to evaluate your performance year after year and to identify potential gaps in training. You could share these insights with your supervisors to ask for additional training to fill these gaps.
+<p>You’ll have more data than ever to evaluate your performance year after year and to identify potential gaps in training. You could share these insights with your supervisors to ask for additional training to fill these gaps.</p>
 
-Having a repository of certificates acts as a huge database that is constantly updated. And the analytics that you could carry out using all this data can be very beneficial for long-term planning.
+<p>Having a repository of certificates acts as a huge database that is constantly updated. And the analytics that you could carry out using all this data can be very beneficial for long-term planning.</p>
 
-## <strong>Outcomes</strong>
+<h2><strong>Outcomes</strong></h2>
 
-Ultimately, this collaboration with Affinidi is guaranteed to ensure better training outcomes for our adult learners and their companies.
+<p>Ultimately, this collaboration with Affinidi is guaranteed to ensure better training outcomes for our adult learners and their companies.</p>
 
-As learners collect certificates and store them in real-time on their Ceal wallets, they will be able to monitor their course completion rates and each training’s effectiveness. This can offer valuable insights for learning and development teams and guide necessary changes to training curriculums to improve learners’ post-training performance.
+<p>As learners collect certificates and store them in real-time on their Ceal wallets, they will be able to monitor their course completion rates and each training’s effectiveness. This can offer valuable insights for learning and development teams and guide necessary changes to training curriculums to improve learners’ post-training performance.</p>
 
-Furthermore, by offering managers detailed information about training across the company, Ceal is expected to encourage more consistent scheduling of training that will improve team performance and productivity. A win-win for everyone involved!
+<p>Furthermore, by offering managers detailed information about training across the company, Ceal is expected to encourage more consistent scheduling of training that will improve team performance and productivity. A win-win for everyone involved!</p>

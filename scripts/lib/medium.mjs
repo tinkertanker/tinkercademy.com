@@ -85,6 +85,8 @@ export function normaliseMediumStory(raw) {
 
 export function rewriteInternalStoryHref(href, pathsById) {
 	if (!href) return null;
+	if (/^source:https?:\/\//iu.test(href)) href = href.slice('source:'.length);
+	if (/^https?:\/\/get hacking\.com(?:\/|$)/iu.test(href)) href = href.replace('get hacking.com', 'gethacking.com');
 	for (const [id, legacyPath] of pathsById) {
 		if (href.includes(id)) return buildCanonicalUrl(legacyPath);
 	}

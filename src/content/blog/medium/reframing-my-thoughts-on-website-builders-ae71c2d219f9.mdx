@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/bbc0b8466b0612e25a1bad09a4435fcbfb02be51d94de71f84527126b1ecfe0b.jpg
+heroImageWidth: 1600
+heroImageHeight: 900
 heroAlt: Framer Workspaces
 heroAltDecision: meaningful
 provenance:
@@ -40,101 +42,102 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
 {/* medium-image:0*qd606i1y4J6v3R9D alt-decision:meaningful */}
 
-![Framer Workspaces](/blog-media/bbc0b8466b0612e25a1bad09a4435fcbfb02be51d94de71f84527126b1ecfe0b.jpg)
+<img src="/blog-media/bbc0b8466b0612e25a1bad09a4435fcbfb02be51d94de71f84527126b1ecfe0b.jpg" alt="Framer Workspaces" width="1600" height="900" loading="lazy" decoding="async" />
 
-<em>Framer Workspaces</em>
+<ArticleLegacyBlock as="p" html={"<em>Framer Workspaces</em>"} className="medium-image-caption" />
 
-<em>Editor’s Note: Yun Xuan joined us as an intern over this recent summer break. She tirelessly worked on various projects, notably web development in Framer. Through her internship, she gleaned various insights which she has happily agreed to share with us below! Thank you Yun Xuan for your intriguing write-up!</em>
+<ArticleLegacyBlock as="p" html={"<em>Editor’s Note: Yun Xuan joined us as an intern over this recent summer break. She tirelessly worked on various projects, notably web development in Framer. Through her internship, she gleaned various insights which she has happily agreed to share with us below! Thank you Yun Xuan for your intriguing write-up!</em>"} />
 
-Recently, I joined Tinkertanker as an intern and as part of my role I spent a half-dozen hours daily prodding and poking around at a spectacular website builder — ‘Framer’.
+<ArticleLegacyBlock as="p" html={"Recently, I joined Tinkertanker as an intern and as part of my role I spent a half-dozen hours daily prodding and poking around at a spectacular website builder — ‘Framer’."} />
 
-I know what you’re all thinking. Ughh, not another website builder. We’ve heard way too much about ground-breaking, effortless website builders already. Wix, Squarespace, Webflow, GoDaddy…
+<ArticleLegacyBlock as="p" html={"I know what you’re all thinking. Ughh, not another website builder. We’ve heard way too much about ground-breaking, effortless website builders already. Wix, Squarespace, Webflow, GoDaddy…"} />
 
-But before you roll your eyes, I beg you to spare me two minutes. Framer isn’t just another flashy website builder. There’s a lot more to it than its plain ol’ name suggests. So read on and be amazed!
+<ArticleLegacyBlock as="p" html={"But before you roll your eyes, I beg you to spare me two minutes. Framer isn’t just another flashy website builder. There’s a lot more to it than its plain ol’ name suggests. So read on and be amazed!"} />
 
-## 3 Mind-Blowing ‘Framer’ Features
+<ArticleLegacyBlock as="h2" html={"3 Mind-Blowing ‘Framer’ Features"} />
 
-### Captivating Animations
+<ArticleLegacyBlock as="h3" html={"Captivating Animations"} />
 
-For starters, website builders typically have limited animation capabilities. You’re usually stuck with simple “fade in, fade out” or “slide in” animations. Think olden day Powerpoint animations — boring! However, Framer is different.
+<ArticleLegacyBlock as="p" html={"For starters, website builders typically have limited animation capabilities. You’re usually stuck with simple “fade in, fade out” or “slide in” animations. Think olden day Powerpoint animations — boring! However, Framer is different."} />
 
-Imagine animating a button to transform a page into something completely new and striking. With Framer, this can be done without any qualms. Such <strong>unique animations</strong> are a sure-fire way to attract your audiences’ attention and keep them glued to your website for longer! See for yourself ⬇️
+<ArticleLegacyBlock as="p" html={"Imagine animating a button to transform a page into something completely new and striking. With Framer, this can be done without any qualms. Such <strong>unique animations</strong> are a sure-fire way to attract your audiences’ attention and keep them glued to your website for longer! See for yourself ⬇️"} />
 
-<ArticleEmbed provider="giphy" href={"https://media.giphy.com/media/RWA5uK03lxK51Sa9cw/giphy.gif"} title={"- Find & Share on GIPHY"} />
+<ArticleEmbed provider="giphy" href={"https://media.giphy.com/media/RWA5uK03lxK51Sa9cw/giphy.gif"} title={"- Find & Share on GIPHY"} description={"GIPHY is the platform that animates your world. Find the GIFs, Clips, and Stickers that make your conversations more positive, more expressive, and more you."} captionHtml={"An example of how buttons can be animated on Framer by <a href=\"https://dribbble.com/shots/4037556-Framer-Path-Animations#\">Benjamin den Boer</a>"} />
 
-### Superior AI Functionality
+<ArticleLegacyBlock as="h3" html={"Superior AI Functionality"} />
 
-With in-built AI features, Framer <strong>auto-generates</strong> content such as <strong>headlines, product descriptions and other website copy</strong> according to the context of your design. Such suggestions saved me loads of time and effort, accelerating the entire process of web development — and I’m sure it will do the same for you too!
+<ArticleLegacyBlock as="p" html={"With in-built AI features, Framer <strong>auto-generates</strong> content such as <strong>headlines, product descriptions and other website copy</strong> according to the context of your design. Such suggestions saved me loads of time and effort, accelerating the entire process of web development — and I’m sure it will do the same for you too!"} />
 
-But what I really cherished the most was how Framer’s AI can analyse your design and offer suggestions for layout, colour scheme and typography. I personally enjoyed the ability to choose between different colour schemes, and be able to preview them instantly, which made the design process more efficient and fun.
+<ArticleLegacyBlock as="p" html={"But what I really cherished the most was how Framer’s AI can analyse your design and offer suggestions for layout, colour scheme and typography. I personally enjoyed the ability to choose between different colour schemes, and be able to preview them instantly, which made the design process more efficient and fun."} />
 
-<ArticleEmbed provider="giphy" href={"https://media.giphy.com/media/xzLHqo0ya6iBUI2SVo/giphy.gif"} title={"- Find & Share on GIPHY"} />
+<ArticleEmbed provider="giphy" href={"https://media.giphy.com/media/xzLHqo0ya6iBUI2SVo/giphy.gif"} title={"- Find & Share on GIPHY"} description={"GIPHY is the platform that animates your world. Find the GIFs, Clips, and Stickers that make your conversations more positive, more expressive, and more you."} captionHtml={"An illustration of AI-generated colour palettes by <a href=\"https://www.gitsulgroup.com/blog/the-coolest-new-tool-for-ai-generated-color-palettes\">Alexandra Lustig</a>"} />
 
-### Streamlined Content Management System (CMS)
+<ArticleLegacyBlock as="h3" html={"Streamlined Content Management System (CMS)"} />
 
-Another completely bafflingly great part about Framer is its CMS. Simply building a CMS table allows you to have a million and one possible ways of presenting the exact same content. You can choose from: Grid, Gallery, Masonry, Split-Screen, Parallax Scrolling Layouts and so much more!
+<ArticleLegacyBlock as="p" html={"Another completely bafflingly great part about Framer is its CMS. Simply building a CMS table allows you to have a million and one possible ways of presenting the exact same content. You can choose from: Grid, Gallery, Masonry, Split-Screen, Parallax Scrolling Layouts and so much more!"} />
 
-<ArticleEmbed provider="giphy" href={"https://media.giphy.com/media/OmVFeu5NIJtkB0E0jg/giphy.gif"} title={"- Find & Share on GIPHY"} />
+<ArticleEmbed provider="giphy" href={"https://media.giphy.com/media/OmVFeu5NIJtkB0E0jg/giphy.gif"} title={"- Find & Share on GIPHY"} description={"GIPHY is the platform that animates your world. Find the GIFs, Clips, and Stickers that make your conversations more positive, more expressive, and more you."} captionHtml={"An example of Parallax Scrolling Layout by <a href=\"https://dribbble.com/shots/3942790-Parallax-Page-Scrolling-Exploration-with-Framer\">Shuli Liu</a>"} />
 
-As you can probably tell by now, Framer is designer-centric. For all web developers who struggle to get your web page to look professional, elegant and functional — Framer is the way to go.
+<ArticleLegacyBlock as="p" html={"As you can probably tell by now, Framer is designer-centric. For all web developers who struggle to get your web page to look professional, elegant and functional — Framer is the way to go."} />
 
-## How Does ‘Framer’ Work?
+<ArticleLegacyBlock as="h2" html={"How Does ‘Framer’ Work?"} />
 
-Now I know you’ve heard this already; multiple times. You simply drag-and-drop the components you want into Framer to build your website, just like you would on design platforms such as Figma or Sketch. Framer is as simple as it gets.
+<ArticleLegacyBlock as="p" html={"Now I know you’ve heard this already; multiple times. You simply drag-and-drop the components you want into Framer to build your website, just like you would on design platforms such as Figma or Sketch. Framer is as simple as it gets."} />
 
-Web development on Framer is a piece of cake and if you’re familiar with Figma, that’s a bonus because Framer shares a very similar layout and workflow to Figma, making it that much more easier to grasp.
+<ArticleLegacyBlock as="p" html={"Web development on Framer is a piece of cake and if you’re familiar with Figma, that’s a bonus because Framer shares a very similar layout and workflow to Figma, making it that much more easier to grasp."} />
 
-Whilst Framer is intuitive and user-friendly, it has many functionalities which can overload beginner developers. Hence, make sure to start with the basic and gain a strong grasp of them before leaping into advanced animations, interactivity, dynamism, etc.
+<ArticleLegacyBlock as="p" html={"Whilst Framer is intuitive and user-friendly, it has many functionalities which can overload beginner developers. Hence, make sure to start with the basic and gain a strong grasp of them before leaping into advanced animations, interactivity, dynamism, etc."} />
 
-## How I Used ‘Framer’?
+<ArticleLegacyBlock as="h2" html={"How I Used ‘Framer’?"} />
 
-During my internship, I worked on Framer for various projects. With Framer, I created a handful of websites and demos and took a crack at the different functionalities Framer had to offer. My main project was working on the Tinkertanker corporate website.
+<ArticleLegacyBlock as="p" html={"During my internship, I worked on Framer for various projects. With Framer, I created a handful of websites and demos and took a crack at the different functionalities Framer had to offer. My main project was working on the Tinkertanker corporate website."} />
 
 {/* medium-image:0*TlgbwloDfo9qIIij alt-decision:meaningful */}
 
-![A screenshot of what I stared at most of the time in the office](/blog-media/f3eae64a0289ee6fb335baee0077ba1e60ad3db79c615568ff0eaa81023de86d.png)
+<img src="/blog-media/f3eae64a0289ee6fb335baee0077ba1e60ad3db79c615568ff0eaa81023de86d.png" alt="A screenshot of what I stared at most of the time in the office" width="1600" height="772" loading="lazy" decoding="async" />
 
-<em>A screenshot of what I stared at most of the time in the office</em>
+<ArticleLegacyBlock as="p" html={"<em><em>A screenshot of what I stared at most of the time in the office</em></em>"} className="medium-image-caption" />
 
-I successfully created new pages, reworked the CMS, fixed dynamic layouts, ported over old site content, and so much more. After working with Framer extensively over a period of three months, I definitely feel that it has a strong appeal.
+<ArticleLegacyBlock as="p" html={"I successfully created new pages, reworked the CMS, fixed dynamic layouts, ported over old site content, and so much more. After working with Framer extensively over a period of three months, I definitely feel that it has a strong appeal."} />
 
-It’s a tool I’d recommend trying out for those who have worked with other existing web builders, especially those who have worked with Figma before. I found that Framer was relatively intuitive to pick up and can easily be used to create powerful, yet aesthetic websites quickly (e.g. blogs, portfolio websites).
+<ArticleLegacyBlock as="p" html={"It’s a tool I’d recommend trying out for those who have worked with other existing web builders, especially those who have worked with Figma before. I found that Framer was relatively intuitive to pick up and can easily be used to create powerful, yet aesthetic websites quickly (e.g. blogs, portfolio websites)."} />
 
-In addition to Framer’s numerous tutorials and guides online, Framer is constantly pushing out new updates. Hence, I’d most certainly keep an eye out for what else Framer has in store for the future. And of course, I’m looking forward to making use of Framer again in future projects!
+<ArticleLegacyBlock as="p" html={"In addition to Framer’s numerous tutorials and guides online, Framer is constantly pushing out new updates. Hence, I’d most certainly keep an eye out for what else Framer has in store for the future. And of course, I’m looking forward to making use of Framer again in future projects!"} />
 
-## Parting Thoughts
+<ArticleLegacyBlock as="h2" html={"Parting Thoughts"} />
 
-Web design might seem intimidating if you’re not a designer or developer, but now you know the secret! All you’ve got to do is: Use Framer.
+<ArticleLegacyBlock as="p" html={"Web design might seem intimidating if you’re not a designer or developer, but now you know the secret! All you’ve got to do is: Use Framer."} />
 
-If you’ve enjoyed reading this, please give me a clap and share it with your friends. Of course, feel free to leave a comment too!
+<ArticleLegacyBlock as="p" html={"If you’ve enjoyed reading this, please give me a clap and share it with your friends. Of course, feel free to leave a comment too!"} />
 
-## Other Lessons from my Internship
+<ArticleLegacyBlock as="h2" html={"Other Lessons from my Internship"} />
 
-Aside from Framer, I also got a chance to work on many other non-website related projects. Feel free to read on to see what else I was up to during my internship at Tinkertanker ;)
+<ArticleLegacyBlock as="p" html={"Aside from Framer, I also got a chance to work on many other non-website related projects. Feel free to read on to see what else I was up to during my internship at Tinkertanker ;)"} />
 
-### Others: Trying Out New Things — Teaching
+<ArticleLegacyBlock as="h3" html={"Others: Trying Out New Things — Teaching"} />
 
-Stepping into the role of the educator in a classroom was both exciting and pretty nerve-wracking. Having mostly been on the student side of the classroom, being a trainer/assistant felt new and a bit surreal. It was amusing to observe students attempting to hide their distractions when I walked by, a scene that brought back memories of my own school days and definitely made me feel nostalgic about the times I did the same.
+<ArticleLegacyBlock as="p" html={"Stepping into the role of the educator in a classroom was both exciting and pretty nerve-wracking. Having mostly been on the student side of the classroom, being a trainer/assistant felt new and a bit surreal. It was amusing to observe students attempting to hide their distractions when I walked by, a scene that brought back memories of my own school days and definitely made me feel nostalgic about the times I did the same."} />
 
-Observing seasoned trainers and occasionally taking on the main trainer role myself definitely gave me a newfound respect for the effort and expertise that goes into teaching. It made me re-appreciate the work my past teachers put into making learning enjoyable, while having to manage the classroom and covering the curriculum. They have shown me that teaching was not just about imparting knowledge, but also about engaging students, keeping them motivated, and creating an environment conducive to learning. This experience has made me value the dedication and skill required to be an effective educator.
+<ArticleLegacyBlock as="p" html={"Observing seasoned trainers and occasionally taking on the main trainer role myself definitely gave me a newfound respect for the effort and expertise that goes into teaching. It made me re-appreciate the work my past teachers put into making learning enjoyable, while having to manage the classroom and covering the curriculum. They have shown me that teaching was not just about imparting knowledge, but also about engaging students, keeping them motivated, and creating an environment conducive to learning. This experience has made me value the dedication and skill required to be an effective educator."} />
 
 {/* medium-image:1*D6_YjUqf4XBdeRFAcD6JmQ.jpeg alt-decision:meaningful */}
 
-![Tello Drone flying and coding at Kebun Bahru CC Family Day & Passionarts Festival 2024](/blog-media/04d408bef594369a819831e6f5ed0640cac750dcc7d9c3c322f8c7ebd525bf00.jpg)
+<img src="/blog-media/04d408bef594369a819831e6f5ed0640cac750dcc7d9c3c322f8c7ebd525bf00.jpg" alt="Tello Drone flying and coding at Kebun Bahru CC Family Day &amp; Passionarts Festival 2024" width="3024" height="2673" loading="lazy" decoding="async" />
 
-<em>Tello Drone flying and coding at Kebun Bahru CC Family Day &amp; Passionarts Festival 2024</em>
+<ArticleLegacyBlock as="p" html={"<em><em>Tello Drone flying and coding at Kebun Bahru CC Family Day &amp; Passionarts Festival 2024</em></em>"} className="medium-image-caption" />
 
-### Others: Creating Content with Unity + Spline &amp; More Teaching!
+<ArticleLegacyBlock as="h3" html={"Others: Creating Content with Unity + Spline &amp; More Teaching!"} />
 
-Though I used Framer for the main projects I worked on during my internship, I had the opportunity to explore and work on a variety of different things. I utilised some of my existing knowledge of Unity along with new stuff I had to pick up along the way to draft some educational content. I also experimented with Spline, which was an interesting 3D design tool for use in websites. Furthermore, as mentioned previously I had the chance to assist in numerous classes, ranging from primary and secondary schools to corporate training sessions and public events. Occasionally, I was tasked to take on the role of the main trainer as well, which was both a challenging and rewarding experience. This exposure helped me develop a deeper appreciation for the intricacies of teaching and the efforts of seasoned educators.
+<ArticleLegacyBlock as="p" html={"Though I used Framer for the main projects I worked on during my internship, I had the opportunity to explore and work on a variety of different things. I utilised some of my existing knowledge of Unity along with new stuff I had to pick up along the way to draft some educational content. I also experimented with Spline, which was an interesting 3D design tool for use in websites. Furthermore, as mentioned previously I had the chance to assist in numerous classes, ranging from primary and secondary schools to corporate training sessions and public events. Occasionally, I was tasked to take on the role of the main trainer as well, which was both a challenging and rewarding experience. This exposure helped me develop a deeper appreciation for the intricacies of teaching and the efforts of seasoned educators."} />
 
-Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible.
+<ArticleLegacyBlock as="p" html={"Overall, all these experiences have made my internship a thoroughly enjoyable and educational experience. I believe it provided me with a diverse set of skills and insights that I will carry forward in my professional journey. I am very grateful to everyone who helped make this enriching experience possible."} />
 
 {/* medium-image:0*E7UrTLmTOUQJPzTz alt-decision:meaningful */}
 
-![TKrobot I modelled in Spline](/blog-media/16b79d63b24362607af36f4ae86f03c759c96526988c837fb584aa5f72a2f2e2.jpg)
+<img src="/blog-media/16b79d63b24362607af36f4ae86f03c759c96526988c837fb584aa5f72a2f2e2.jpg" alt="TKrobot I modelled in Spline" width="1600" height="1277" loading="lazy" decoding="async" />
 
-<em>TKrobot I modelled in Spline</em>
+<ArticleLegacyBlock as="p" html={"<em><em>TKrobot I modelled in Spline</em></em>"} className="medium-image-caption" />

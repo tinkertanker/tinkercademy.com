@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/05fc5d3728700df8aea4a15c4df48d7f76f52495cd6a271da8640226746928ba.png
+heroImageWidth: 797
+heroImageHeight: 367
 heroAlt: Headerless repository CSV with columns for repository name, organisation, description and privacy status.
 heroAltDecision: meaningful
 provenance:
@@ -40,76 +42,70 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-### Scripts for the lazy, the tinkerers, and the lazy tinkerers
+<ArticleLegacyBlock as="h3" html={"Scripts for the lazy, the tinkerers, and the lazy tinkerers"} />
 
-In April, <a href="http://github.com">GitHub</a> released new pricing plans that looked awfully affordable… and by affordable, we really mean <em>free</em>, because we don’t yet need the features on the new paid plans. As <a href="http://bitbucket.org">Bitbucket</a> users since 2013, we have long been envious of the larger selection of integrations available to GitHub users. So with the new plans, coupled with cost-cutting pressure from COVID-19, this seemed like a great time to switch.
+<ArticleLegacyBlock as="p" html={"In April, <a href=\"http://github.com\">GitHub</a> released new pricing plans that looked awfully affordable… and by affordable, we really mean <em>free</em>, because we don’t yet need the features on the new paid plans. As <a href=\"http://bitbucket.org\">Bitbucket</a> users since 2013, we have long been envious of the larger selection of integrations available to GitHub users. So with the new plans, coupled with cost-cutting pressure from COVID-19, this seemed like a great time to switch."} />
 
-We chose Bitbucket early on because their plans allowed for unlimited repositories. As programmers who didn’t like cleaning up our messes, you can imagine, we have collected <em>many</em> repositories over the last 8 years—175, to be exact. Far too many to move by hand! Encouraged by a helpful 2018 post and script from Continuum titled “<a href="https://blog.continuum.cl/moving-all-your-bitbucket-repositories-to-github-373e80fd4022">Moving all your Bitbucket Repositories to GitHub</a>”, we figured that wouldn’t be a blocker.
+<ArticleLegacyBlock as="p" html={"We chose Bitbucket early on because their plans allowed for unlimited repositories. As programmers who didn’t like cleaning up our messes, you can imagine, we have collected <em>many</em> repositories over the last 8 years—175, to be exact. Far too many to move by hand! Encouraged by a helpful 2018 post and script from Continuum titled “<a href=\"https://blog.continuum.cl/moving-all-your-bitbucket-repositories-to-github-373e80fd4022\">Moving all your Bitbucket Repositories to GitHub</a>”, we figured that wouldn’t be a blocker."} />
 
-Unfortunately, in the two years that passed, Bitbucket has since deprecated their version 1.0 API and we had to tweak things more than a little. And while modifying the code, we figured we would take the chance to tidy up our repositories by splitting them into different organisations, renaming them, providing better descriptions, and even archiving some of them right after migration. After finishing all this, we thought we should share this for anyone considering a similar move!
+<ArticleLegacyBlock as="p" html={"Unfortunately, in the two years that passed, Bitbucket has since deprecated their version 1.0 API and we had to tweak things more than a little. And while modifying the code, we figured we would take the chance to tidy up our repositories by splitting them into different organisations, renaming them, providing better descriptions, and even archiving some of them right after migration. After finishing all this, we thought we should share this for anyone considering a similar move!"} />
 
-So here’s our process for migrating all our repositories from Bitbucket to GitHub in 2020. We assume you already have your SSH keys set up for your Bitbucket and GitHub accounts.
+<ArticleLegacyBlock as="p" html={"So here’s our process for migrating all our repositories from Bitbucket to GitHub in 2020. We assume you already have your SSH keys set up for your Bitbucket and GitHub accounts."} />
 
-## Step 1: Extract a CSV list of all your Bitbucket repositories
+<ArticleLegacyBlock as="h2" html={"Step 1: Extract a CSV list of all your Bitbucket repositories"} />
 
-Download the bash script <code>list-bitbucket-repositories.sh</code> from <a href="https://github.com/Tinkertanker/bitbucket-github-migration/blob/master/list-bitbucket-repositories.sh">https://github.com/tinkertanker/bitbucket-github-migration</a>:
+<ArticleLegacyBlock as="p" html={"Download the bash script <code>list-bitbucket-repositories.sh</code> from <a href=\"https://github.com/Tinkertanker/bitbucket-github-migration/blob/master/list-bitbucket-repositories.sh\">https://github.com/tinkertanker/bitbucket-github-migration</a>:"} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/nioq/5ada9a4def86fee89abd41fa4b1e3f3b"} title={"Generate a CSV list of all Bitbucket repositories you have access to. From https://github.com/Tinkertanker/bitbucket-github-migration"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/nioq/5ada9a4def86fee89abd41fa4b1e3f3b"} title={"Generate a CSV list of all Bitbucket repositories you have access to. From https://github.com/Tinkertanker/bitbucket-github-migration"} description={"You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session."} captionHtml={"From <a href=\"https://github.com/tinkertanker/bitbucket-github-migration\">https://github.com/tinkertanker/bitbucket-github-migration</a>"} />
 
-… then run it, fill in your username and password (perfectly safe, it just goes to Bitbucket—take a look at the source code, and at our footnote at the end of this article), and save the output to a CSV file, say <code>bb_repositories.csv</code>. You can choose any other name for the output file, of course.
+<ArticleLegacyBlock as="p" html={"… then run it, fill in your username and password (perfectly safe, it just goes to Bitbucket—take a look at the source code, and at our footnote at the end of this article), and save the output to a CSV file, say <code>bb_repositories.csv</code>. You can choose any other name for the output file, of course."} />
 
 ```text
 $ bash list-bitbucket-repositories.sh > bb_repositories.csv
 ```
 
-This gives you a CSV list of all the repositories you have access to, regardless of organisation. Open this up in your favourite spreadsheet app and you should get something like this:
+<ArticleLegacyBlock as="p" html={"This gives you a CSV list of all the repositories you have access to, regardless of organisation. Open this up in your favourite spreadsheet app and you should get something like this:"} />
 
 {/* medium-image:1*bRgBqM_1KAIDEeDyIB8gTQ.png alt-decision:meaningful */}
 
-![Headerless repository CSV with columns for repository name, organisation, description and privacy status.](/blog-media/05fc5d3728700df8aea4a15c4df48d7f76f52495cd6a271da8640226746928ba.png)
+<img src="/blog-media/05fc5d3728700df8aea4a15c4df48d7f76f52495cd6a271da8640226746928ba.png" alt="Headerless repository CSV with columns for repository name, organisation, description and privacy status." width="797" height="367" loading="lazy" decoding="async" />
 
-## Step 2: Add headers and columns to prepare for migration, and take this chance to tidy up your repositories
+<ArticleLegacyBlock as="h2" html={"Step 2: Add headers and columns to prepare for migration, and take this chance to tidy up your repositories"} />
 
-1. Add headers to the CSV that got generated in the previous step [BB Repo Name, BB Org, Description, Private]
-2. Add some columns so specify where in GitHub to send your repositories to, as well as whether to archive your repository after uploading. The final CSV field order should be [BB Repo, BB Org, <strong>GH Repo</strong>, <strong>GH Org</strong>, Description, Private, <strong>Archive</strong>]
-3. Share this list with your teammates and take this chance to reorganise stuff and mark old repositories for archival. GitHub doesn’t have the same concept of Projects that Bitbucket does for organising repositories, but you <em>can</em> at least filter repositories on your dashboard by with the search query <code>archived:false</code>. Remove rows for repositories you don’t want to migrate too, of course.
+<ArticleLegacyBlock as="ol" items={["Add headers to the CSV that got generated in the previous step [BB Repo Name, BB Org, Description, Private]","Add some columns so specify where in GitHub to send your repositories to, as well as whether to archive your repository after uploading. The final CSV field order should be [BB Repo, BB Org, <strong>GH Repo</strong>, <strong>GH Org</strong>, Description, Private, <strong>Archive</strong>]","Share this list with your teammates and take this chance to reorganise stuff and mark old repositories for archival. GitHub doesn’t have the same concept of Projects that Bitbucket does for organising repositories, but you <em>can</em> at least filter repositories on your dashboard by with the search query <code>archived:false</code>. Remove rows for repositories you don’t want to migrate too, of course."]} />
 
-<strong>Note: Don’t put any commas in </strong><strong><em>any</em></strong><strong> of the fields, </strong><strong><em>not even the descriptions</em></strong><strong>, or the script in Step 3 will get confused.</strong>
+<ArticleLegacyBlock as="p" html={"<strong>Note: Don’t put any commas in </strong><strong><em>any</em></strong><strong> of the fields, </strong><strong><em>not even the descriptions</em></strong><strong>, or the script in Step 3 will get confused.</strong>"} />
 
-Here’s what your CSV should look like when you’re ready:
+<ArticleLegacyBlock as="p" html={"Here’s what your CSV should look like when you’re ready:"} />
 
 {/* medium-image:1*-R6FpBU2W3uqA3Awy9R0yw.png alt-decision:meaningful */}
 
-![Completed migration CSV with Bitbucket and GitHub repository names, organisations, descriptions, privacy and archive columns.](/blog-media/6e2c25ab7e88af6ea29c9a4b696b57ad2d1f369e45449684cedf11ecb2229eda.png)
+<img src="/blog-media/6e2c25ab7e88af6ea29c9a4b696b57ad2d1f369e45449684cedf11ecb2229eda.png" alt="Completed migration CSV with Bitbucket and GitHub repository names, organisations, descriptions, privacy and archive columns." width="1023" height="332" loading="lazy" decoding="async" />
 
-Export or download your spreadsheet as a CSV file.
+<ArticleLegacyBlock as="p" html={"Export or download your spreadsheet as a CSV file."} />
 
-## Step 3: Actually migrate your repositories
+<ArticleLegacyBlock as="h2" html={"Step 3: Actually migrate your repositories"} />
 
-Download the bash script <code>migrate-repositories-to-github.sh</code> from <a href="https://github.com/Tinkertanker/bitbucket-github-migration/blob/master/list-bitbucket-repositories.sh">https://github.com/tinkertanker/bitbucket-github-migration</a>:
+<ArticleLegacyBlock as="p" html={"Download the bash script <code>migrate-repositories-to-github.sh</code> from <a href=\"https://github.com/Tinkertanker/bitbucket-github-migration/blob/master/list-bitbucket-repositories.sh\">https://github.com/tinkertanker/bitbucket-github-migration</a>:"} />
 
-<ArticleEmbed provider="github-gist" href={"https://gist.github.com/nioq/796b15ba19df49bf51ce2ac83b13308e"} title={"Migrate Bitbucket repositories to GitHub based on CSV list. From https://github.com/Tinkertanker/bitbucket-github-migration"} />
+<ArticleEmbed provider="github-gist" href={"https://gist.github.com/nioq/796b15ba19df49bf51ce2ac83b13308e"} title={"Migrate Bitbucket repositories to GitHub based on CSV list. From https://github.com/Tinkertanker/bitbucket-github-migration"} description={"You can't perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session."} captionHtml={"From <a href=\"https://github.com/tinkertanker/bitbucket-github-migration\">https://github.com/tinkertanker/bitbucket-github-migration</a>"} />
 
-… then run it with your CSV file, say <code>repository_mapping.csv</code>, from Step 2 as the argument:
+<ArticleLegacyBlock as="p" html={"… then run it with your CSV file, say <code>repository_mapping.csv</code>, from Step 2 as the argument:"} />
 
 ```text
 $ bash migrate-repositories-to-github.sh repository_mapping.csv
 ```
 
-And it’ll go chugging along. Watch out for some possible errors:
+<ArticleLegacyBlock as="p" html={"And it’ll go chugging along. Watch out for some possible errors:"} />
 
-1. Did you remember to remove all commas from your CSV? This method of parsing CSV really doesn’t do well with commas. If you see <code>&quot;message&quot;: &quot;Problems parsing JSON&quot;</code> somewhere in your output, you probably left a comma in one of your descriptions.
-2. If you had any files larger than &gt;100MB in your Bitbucket respository, you’ll see <code>remote: error: GH001: Large files detected</code>—these repositories will have to be moved manually. We haven’t figured out the best way to remove the large files without rewriting git history yet.
-3. Don’t forget to check the repositories that were created in GitHub and see that they match and are not empty. Empty repositories won’t have a language detected. You can use <a href="https://help.github.com/en/github/searching-for-information-on-github/understanding-the-search-syntax">search queries</a> to filter repositories in GitHub, e.g. the query<code>created:&gt;2020-05-29T15:00:00+08:00</code>would show only repositories created after 3pm on 29 May 2020, in timezone UTC+8.
+<ArticleLegacyBlock as="ol" items={["Did you remember to remove all commas from your CSV? This method of parsing CSV really doesn’t do well with commas. If you see <code>&quot;message&quot;: &quot;Problems parsing JSON&quot;</code> somewhere in your output, you probably left a comma in one of your descriptions.","If you had any files larger than &gt;100MB in your Bitbucket respository, you’ll see <code>remote: error: GH001: Large files detected</code>—these repositories will have to be moved manually. We haven’t figured out the best way to remove the large files without rewriting git history yet.","Don’t forget to check the repositories that were created in GitHub and see that they match and are not empty. Empty repositories won’t have a language detected. You can use <a href=\"https://help.github.com/en/github/searching-for-information-on-github/understanding-the-search-syntax\">search queries</a> to filter repositories in GitHub, e.g. the query<code>created:&gt;2020-05-29T15:00:00+08:00</code>would show only repositories created after 3pm on 29 May 2020, in timezone UTC+8."]} />
 
-And you’re done! If you have any suggestions or fixes, please send us an issue or pull request over at the <a href="https://github.com/tinkertanker/bitbucket-github-migration">GitHub repo</a>. Happy migrating!
+<ArticleLegacyBlock as="p" html={"And you’re done! If you have any suggestions or fixes, please send us an issue or pull request over at the <a href=\"https://github.com/tinkertanker/bitbucket-github-migration\">GitHub repo</a>. Happy migrating!"} />
 
-For migrating issues (as in, migrating the issues that were raised on your repo, not issues about migrating), we’re happy to report that this handy script still works and appears to be actively maintained (but of course, all migrated issues will be “opened” by the user doing the migration): <a href="https://github.com/jeffwidman/bitbucket-issue-migration">https://github.com/jeffwidman/bitbucket-issue-migration</a>
+<ArticleLegacyBlock as="p" html={"For migrating issues (as in, migrating the issues that were raised on your repo, not issues about migrating), we’re happy to report that this handy script still works and appears to be actively maintained (but of course, all migrated issues will be “opened” by the user doing the migration): <a href=\"https://github.com/jeffwidman/bitbucket-issue-migration\">https://github.com/jeffwidman/bitbucket-issue-migration</a>"} />
 
-Script implementation notes for the bash-curious!
+<ArticleLegacyBlock as="p" html={"Script implementation notes for the bash-curious!"} />
 
-1. For both scripts, we use <code>read -p</code> to prompt for usernames and passwords. The alternate approach of providing credentials on the command line, whether as an argument or by setting an environment variable, leaks your passwords to your bash history.
-2. <code>tail -n +2</code>, in Line 2 of the migrate script, skips the header row from the CSV file.
-3. <code>tr -d &#39;\r&#39;</code>, also in Line 2 of the migrate script, converts the line endings from DOS/Windows to Unix (and does nothing if the file is already using Unix line endings) — Google Sheets saves CSV files with DOS line endings.
-4. <code>IFS=,</code>, <em>still</em> in Line 2 of the migrate script, sets the internal file separator to commas. If you absolutely absolutely need to have commas in your descriptions you could probably use <code>IFS=$&#39;\t&#39;</code> instead and export your spreadsheet as TSV.
+<ArticleLegacyBlock as="ol" items={["For both scripts, we use <code>read -p</code> to prompt for usernames and passwords. The alternate approach of providing credentials on the command line, whether as an argument or by setting an environment variable, leaks your passwords to your bash history.","<code>tail -n +2</code>, in Line 2 of the migrate script, skips the header row from the CSV file.","<code>tr -d &#39;\\r&#39;</code>, also in Line 2 of the migrate script, converts the line endings from DOS/Windows to Unix (and does nothing if the file is already using Unix line endings) — Google Sheets saves CSV files with DOS line endings.","<code>IFS=,</code>, <em>still</em> in Line 2 of the migrate script, sets the internal file separator to commas. If you absolutely absolutely need to have commas in your descriptions you could probably use <code>IFS=$&#39;\\t&#39;</code> instead and export your spreadsheet as TSV."]} />

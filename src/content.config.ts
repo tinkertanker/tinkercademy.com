@@ -54,6 +54,8 @@ const blog = defineCollection({
 		license: z.literal('All rights reserved'),
 		rightsStatus: z.enum(['review-required', 'permission-recorded', 'organisation-owned', 'author-owned']),
 		heroImage: z.string().startsWith('/blog-media/').optional(),
+		heroImageWidth: z.number().int().positive().optional(),
+		heroImageHeight: z.number().int().positive().optional(),
 		heroAlt: z.string().optional(),
 		heroAltDecision: z.enum(['meaningful', 'decorative', 'review-required']).optional(),
 		provenance: z.object({

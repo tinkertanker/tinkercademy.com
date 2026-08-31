@@ -1,7 +1,8 @@
 ---
 // The Worker uses this as the nearest static 404 within the blog namespace.
+import BlogNav from '../../components/articles/BlogNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
-import { BLOG_ORIGIN, BLOG_TITLE } from '../../lib/blog';
+import { BLOG_ORIGIN, BLOG_TITLE, blogHref } from '../../lib/blog';
 ---
 
 <ContentLayout
@@ -12,9 +13,10 @@ import { BLOG_ORIGIN, BLOG_TITLE } from '../../lib/blog';
 	internalLinkOrigin="https://tinkercademy.com"
 	showSearch={false}
 >
+	<BlogNav />
 	<section class="not-found shell">
 		<h1>Story not found</h1>
-		<p><a href={`${BLOG_ORIGIN}/`}>Browse all Build Log stories</a>.</p>
+		<p><a href={blogHref('/')}>Browse all Build Log stories</a>.</p>
 	</section>
 </ContentLayout>
 

@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: organisation-owned
 heroImage: /blog-media/a0ec08d2904645a48ef06181127f5f0ce41bfe13d665f6bac2fd710a672d3eca.png
+heroImageWidth: 1600
+heroImageHeight: 898
 heroAlt: Round-cut diamond held in tweezers against a dark background.
 heroAltDecision: meaningful
 provenance:
@@ -41,108 +43,108 @@ migration:
 
 <!-- medium-image:0*7wvE7k7uRz6ZmcEP alt-decision:meaningful -->
 
-![Round-cut diamond held in tweezers against a dark background.](/blog-media/a0ec08d2904645a48ef06181127f5f0ce41bfe13d665f6bac2fd710a672d3eca.png)
+<img src="/blog-media/a0ec08d2904645a48ef06181127f5f0ce41bfe13d665f6bac2fd710a672d3eca.png" alt="Round-cut diamond held in tweezers against a dark background." width="1600" height="898" loading="lazy" decoding="async" />
 
-Have you ever stepped into a jewellery store and taken a good look at a diamond? Chances are, you haven’t unless you’ve been shopping for a proposal.
+<p>Have you ever stepped into a jewellery store and taken a good look at a diamond? Chances are, you haven’t unless you’ve been shopping for a proposal.</p>
 
-But whether you’re a diamond lover or not, diamonds are among the most coveted gems in the world. And naturally so. It takes years and a dedicated team of geologists to discover diamonds, let alone quality ones. Regardless, upon sighting, diamonds tend to bring a sense of excitement.
+<p>But whether you’re a diamond lover or not, diamonds are among the most coveted gems in the world. And naturally so. It takes years and a dedicated team of geologists to discover diamonds, let alone quality ones. Regardless, upon sighting, diamonds tend to bring a sense of excitement.</p>
 
-You might be wondering, “Hmmm, but what do diamonds have to do with me?”
+<p>You might be wondering, “Hmmm, but what do diamonds have to do with me?”</p>
 
-At work, your employees are akin to diamonds. They may come to work each day, complete their tasks and go home without uttering a word. But dig deeper and you might notice that these same individuals are working tirelessly away, often under the radar, going the extra mile to help a customer solve a problem or perhaps assist a fellow colleague in dire need of help. Imagine if you could tap into the full potential of such employees.
+<p>At work, your employees are akin to diamonds. They may come to work each day, complete their tasks and go home without uttering a word. But dig deeper and you might notice that these same individuals are working tirelessly away, often under the radar, going the extra mile to help a customer solve a problem or perhaps assist a fellow colleague in dire need of help. Imagine if you could tap into the full potential of such employees.</p>
 
-What if instead of looking for talent outside, you could unearth rare gems from amongst your very own team members? According to the <a href="https://www.benefitnews.com/opinion/how-to-upskill-employees">Society for Human Resource Management</a>, you’d then have saved your organisation $4,129 in hiring costs. Not to mention weeks of onboarding, training and lost productivity!
+<p>What if instead of looking for talent outside, you could unearth rare gems from amongst your very own team members? According to the <a href="https://www.benefitnews.com/opinion/how-to-upskill-employees">Society for Human Resource Management</a>, you’d then have saved your organisation $4,129 in hiring costs. Not to mention weeks of onboarding, training and lost productivity!</p>
 
-So how do you find these diamonds or hidden gems? Read on to discover an all-encompassing yet simple strategy you can use to mine for hidden gems within your organisation.
+<p>So how do you find these diamonds or hidden gems? Read on to discover an all-encompassing yet simple strategy you can use to mine for hidden gems within your organisation.</p>
 
-## <strong>Challenge</strong>
+<h2><strong>Challenge</strong></h2>
 
-In Q1 of 2022, PhillipCapital, an integrated Asian Financial House with a global presence, reached out to us about their initiative to equip their non-IT employees with programming skills as part of their Learn and Hack journey.
+<p>In Q1 of 2022, PhillipCapital, an integrated Asian Financial House with a global presence, reached out to us about their initiative to equip their non-IT employees with programming skills as part of their Learn and Hack journey.</p>
 
-“Over the past year, we’ve been working with many developers to build our platforms and digital services,” Carina Seah, the Learning and Development Manager said.
+<p>“Over the past year, we’ve been working with many developers to build our platforms and digital services,” Carina Seah, the Learning and Development Manager said.</p>
 
-She continued, “Our Chairman has been emphasising the importance of having all our employees possess basic coding knowledge. This year, he wishes to take this further and encourage digitalisation. And we are looking for high-potential employees to lead this change.”
+<p>She continued, “Our Chairman has been emphasising the importance of having all our employees possess basic coding knowledge. This year, he wishes to take this further and encourage digitalisation. And we are looking for high-potential employees to lead this change.”</p>
 
-Our client wanted to identify hidden gems within the organisation that could propel the company to greater heights.
+<p>Our client wanted to identify hidden gems within the organisation that could propel the company to greater heights.</p>
 
-With that in mind, we set out to curate a robust training programme; one that would help us sieve out the diamonds and prime them for more challenging future projects.
+<p>With that in mind, we set out to curate a robust training programme; one that would help us sieve out the diamonds and prime them for more challenging future projects.</p>
 
-## <strong>Solution</strong>
+<h2><strong>Solution</strong></h2>
 
-We proposed a web development course as it offered numerous opportunities for assessing employees on various technical and soft skills characteristic of high potential employees.
+<p>We proposed a web development course as it offered numerous opportunities for assessing employees on various technical and soft skills characteristic of high potential employees.</p>
 
-While our primary goal was to identify talented individuals, we also aimed to provide a strong foundation in web technologies (HTML, CSS and JavaScript) to all participants.
+<p>While our primary goal was to identify talented individuals, we also aimed to provide a strong foundation in web technologies (HTML, CSS and JavaScript) to all participants.</p>
 
-### Introducing HTML
+<h3>Introducing HTML</h3>
 
-We kicked off our training programme with a birds-eye view into the structure and workings of the Internet and the World Wide Web. Soon after, participants proceeded to hack* websites to practise their newly acquired skills.
+<p>We kicked off our training programme with a birds-eye view into the structure and workings of the Internet and the World Wide Web. Soon after, participants proceeded to hack* websites to practise their newly acquired skills.</p>
 
-Below is an amusing example from one of our participants:
+<p>Below is an amusing example from one of our participants:</p>
 
 <!-- medium-image:0*caqhKPif44xWRnMy alt-decision:meaningful -->
 
-![None of the participants hacked any website. These were changes made locally on their own browsers.](/blog-media/593c5c39c9d835aa24c138bc2199695e59f86560acf7073094a18ab0c788f384.png)
+<img src="/blog-media/593c5c39c9d835aa24c138bc2199695e59f86560acf7073094a18ab0c788f384.png" alt="None of the participants hacked any website. These were changes made locally on their own browsers." width="1005" height="639" loading="lazy" decoding="async" />
 
-<em>None of the participants hacked any website. These were changes made locally on their own browsers.</em>
+<p class="medium-image-caption"><em>None of the participants hacked any website. These were changes made locally on their own browsers.</em></p>
 
-Unsurprisingly, this exercise allowed us to identify a few hidden gems among our participants. These select few individuals displayed an intense desire and <strong>motivation to learn</strong>. And in doing so, they were able to quickly extract and modify various HTML elements of a website without much guidance!
+<p>Unsurprisingly, this exercise allowed us to identify a few hidden gems among our participants. These select few individuals displayed an intense desire and <strong>motivation to learn</strong>. And in doing so, they were able to quickly extract and modify various HTML elements of a website without much guidance!</p>
 
-Following this exercise, we continued to dive deeper into the foundation of HTML tags and crafted our own profile pages for a person of our choice.
+<p>Following this exercise, we continued to dive deeper into the foundation of HTML tags and crafted our own profile pages for a person of our choice.</p>
 
-Once again, we were impressed by the technical proficiency of a handful of our participants. Not only did they explore the use of basic HTML tags such as headers and images, but they also went above and beyond to add GIFs, embed YouTube videos and more! (see below).
+<p>Once again, we were impressed by the technical proficiency of a handful of our participants. Not only did they explore the use of basic HTML tags such as headers and images, but they also went above and beyond to add GIFs, embed YouTube videos and more! (see below).</p>
 
 <!-- medium-image:1*fXbhebMgVIXI_dqKMBMzbQ.png alt-decision:meaningful -->
 
-![Participant-built profile webpage about Joko Widodo, with a portrait, biography, interests and education sections.](/blog-media/52f6977e19f938aab0740e6d345aca16e7431404b77296ae48b792cc869f577f.png)
+<img src="/blog-media/52f6977e19f938aab0740e6d345aca16e7431404b77296ae48b792cc869f577f.png" alt="Participant-built profile webpage about Joko Widodo, with a portrait, biography, interests and education sections." width="994" height="1358" loading="lazy" decoding="async" />
 
 <!-- medium-image:1*LYAAqBeb4KsMTpEwv-yCBQ.png alt-decision:meaningful -->
 
-![Examples of profile pages created by the participants](/blog-media/44ca4cb636d32c038659767fde06950925ad28c9634cae1a39403707afe2afef.png)
+<img src="/blog-media/44ca4cb636d32c038659767fde06950925ad28c9634cae1a39403707afe2afef.png" alt="Examples of profile pages created by the participants" width="816" height="1360" loading="lazy" decoding="async" />
 
-<em>Examples of profile pages created by the participants</em>
+<p class="medium-image-caption"><em>Examples of profile pages created by the participants</em></p>
 
-Notwithstanding, there was, of course, a handful of stragglers who couldn’t keep up not so much due to their lack of ability but more so because they had no prior coding experience.
+<p>Notwithstanding, there was, of course, a handful of stragglers who couldn’t keep up not so much due to their lack of ability but more so because they had no prior coding experience.</p>
 
-For them, we offered differentiated instructions. Advanced learners were tasked to build fully-functional HTML pages whereas beginners new to HTML were guided along via targeted hands-on challenges.
+<p>For them, we offered differentiated instructions. Advanced learners were tasked to build fully-functional HTML pages whereas beginners new to HTML were guided along via targeted hands-on challenges.</p>
 
-### Exploring CSS
+<h3>Exploring CSS</h3>
 
-After HTML, it was time to delve into CSS — a nifty language used to dress average-looking websites fabulously.
+<p>After HTML, it was time to delve into CSS — a nifty language used to dress average-looking websites fabulously.</p>
 
-Since we had already identified the hidden gems in the organisation, it was now necessary to observe these individuals’ <strong>emotional intelligence</strong>. As future leaders, it was essential for them to have strong communication and people skills.
+<p>Since we had already identified the hidden gems in the organisation, it was now necessary to observe these individuals’ <strong>emotional intelligence</strong>. As future leaders, it was essential for them to have strong communication and people skills.</p>
 
-As such, we proposed a team challenge — to beautify a website using CSS customisation features.
+<p>As such, we proposed a team challenge — to beautify a website using CSS customisation features.</p>
 
-To our surprise, not only did many of the top performers exhibit strong camaraderie, but many other participants also proactively sought help and built upon each other’s ideas.
+<p>To our surprise, not only did many of the top performers exhibit strong camaraderie, but many other participants also proactively sought help and built upon each other’s ideas.</p>
 
-Most importantly, the individuals we selected also showed a keen interest in stretching themselves further. They rallied their teams together to Google for possible refinements while keeping track of time.
+<p>Most importantly, the individuals we selected also showed a keen interest in stretching themselves further. They rallied their teams together to Google for possible refinements while keeping track of time.</p>
 
-### Diving Into JavaScript
+<h3>Diving Into JavaScript</h3>
 
-With HTML and CSS completed, we were left with the last web technology of the course — JavaScript. As it turned out, this programming language afforded the perfect means to identify individuals with a <strong>relentless drive</strong>.
+<p>With HTML and CSS completed, we were left with the last web technology of the course — JavaScript. As it turned out, this programming language afforded the perfect means to identify individuals with a <strong>relentless drive</strong>.</p>
 
-With its complex syntax and advanced interactivity capabilities, JavaScript threw many of our participants into a state of disarray. Despite this, a handful was able to persevere through the challenges and emerge victorious.
+<p>With its complex syntax and advanced interactivity capabilities, JavaScript threw many of our participants into a state of disarray. Despite this, a handful was able to persevere through the challenges and emerge victorious.</p>
 
-Some of the key takeaways from this segment were alerts and prompts, buttons, text inputs, functions, and the manipulation of the Document Object Model (DOM). Participants were also introduced to JS libraries such as Chart.js that they could tap on to quickly enhance a web page’s functionality.
+<p>Some of the key takeaways from this segment were alerts and prompts, buttons, text inputs, functions, and the manipulation of the Document Object Model (DOM). Participants were also introduced to JS libraries such as Chart.js that they could tap on to quickly enhance a web page’s functionality.</p>
 
 <!-- medium-image:0*qUzWekN29gwyKDmv alt-decision:meaningful -->
 
-![Akmal (front left) teaching participants JavaScript and providing examples for them to follow.](/blog-media/ab3caf8d0862bf09bf146c6bd93768917c57e23f5fa428e2ad1af8ea8e94ea87.jpg)
+<img src="/blog-media/ab3caf8d0862bf09bf146c6bd93768917c57e23f5fa428e2ad1af8ea8e94ea87.jpg" alt="Akmal (front left) teaching participants JavaScript and providing examples for them to follow." width="1280" height="960" loading="lazy" decoding="async" />
 
-<em>Akmal (front left) teaching participants JavaScript and providing examples for them to follow.</em>
+<p class="medium-image-caption"><em>Akmal (front left) teaching participants JavaScript and providing examples for them to follow.</em></p>
 
-Before we ended the programme, we decided to throw in a final challenge. This time around, the challenge was focused on a work-based scenario. Participants had to create their own custom forms to collect important information from their customers.
+<p>Before we ended the programme, we decided to throw in a final challenge. This time around, the challenge was focused on a work-based scenario. Participants had to create their own custom forms to collect important information from their customers.</p>
 
-As the culmination of the 3-day training, this challenge was undoubtedly gruelling in every way and form.
+<p>As the culmination of the 3-day training, this challenge was undoubtedly gruelling in every way and form.</p>
 
-However, despite the heightened complexity, many teams rose to the occasion. We watched in awe as they tenaciously applied all that they learned to this work-related challenge.
+<p>However, despite the heightened complexity, many teams rose to the occasion. We watched in awe as they tenaciously applied all that they learned to this work-related challenge.</p>
 
-## <strong>Outcomes</strong>
+<h2><strong>Outcomes</strong></h2>
 
-Indeed by the end of this intensive training course, we were amazed by many participants, most of whom had never coded in their life but displayed so much learning agility and resilience in stepping out of their comfort zones.
+<p>Indeed by the end of this intensive training course, we were amazed by many participants, most of whom had never coded in their life but displayed so much learning agility and resilience in stepping out of their comfort zones.</p>
 
-Although we didn’t turn anyone into professional web developers (impossible with a short course), we noticed that many were nonetheless eager to continue their learning and development journey. In fact, many participants mentioned that the course had opened their eyes to the ease of picking up new skills!
+<p>Although we didn’t turn anyone into professional web developers (impossible with a short course), we noticed that many were nonetheless eager to continue their learning and development journey. In fact, many participants mentioned that the course had opened their eyes to the ease of picking up new skills!</p>
 
-We were assured that our course met all our goals — finding the hidden gems as well as equipping all our participants with adequate web development skills and a learner’s mindset that would serve them favourably in future projects, regardless of the job roles or positions they held.
+<p>We were assured that our course met all our goals — finding the hidden gems as well as equipping all our participants with adequate web development skills and a learner’s mindset that would serve them favourably in future projects, regardless of the job roles or positions they held.</p>
 
-Are you eager to discover the hidden gems within your organisation? Or are you perhaps interested in developing your workforce for the digital future? Reach out to us at <a href="mailto:hello@tk.sg">hello@tk.sg</a> and we’ll be glad to design a programme for you!
+<p>Are you eager to discover the hidden gems within your organisation? Or are you perhaps interested in developing your workforce for the digital future? Reach out to us at <a href="mailto:hello@tk.sg">hello@tk.sg</a> and we’ll be glad to design a programme for you!</p>

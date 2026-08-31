@@ -1,11 +1,13 @@
 ---
 // The Worker maps blog.tinkercademy.com/ to this isolated build route.
+import BlogNav from '../../components/articles/BlogNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import {
 	BLOG_DESCRIPTION,
 	BLOG_FEED_URL,
 	BLOG_ORIGIN,
 	BLOG_TITLE,
+	blogHref,
 	formatBlogDate,
 	getBlogStories,
 	getBlogYears,
@@ -32,34 +34,52 @@ const blogSchema = {
 	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
 	structuredData={blogSchema}
 >
+	<BlogNav active="stories" />
 	<header class="blog-hero">
-		<div class="shell">
-			<p class="eyebrow">Tinkercademy</p>
+		<div class="shell blog-hero__inner">
+			<p class="blog-hero__eyebrow">Ideas, experiments, and lessons</p>
 			<h1>{BLOG_TITLE}</h1>
 			<p>{BLOG_DESCRIPTION}</p>
-			<nav aria-label="Article archives">
-				<span>Archive:</span>
-				{years.map((year) => <a href={`${BLOG_ORIGIN}/archive/${year}/`}>{year}</a>)}
-				<a href={BLOG_FEED_URL}>RSS</a>
-			</nav>
+			<p class="blog-hero__count">{stories.length} stories · {years.at(-1)}–{years[0]}</p>
 		</div>
 	</header>
 
 	<section class="blog-list shell" aria-labelledby="all-stories">
-		<h2 id="all-stories">All stories</h2>
+		<div class="blog-list__header">
+			<div>
+				<p class="blog-list__eyebrow">From the archive</p>
+				<h2 id="all-stories">All stories</h2>
+			</div>
+			<nav id="archives" class="blog-list__archives" aria-label="Article archives">
+				<span>Browse by year</span>
+				<div>
+					{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
+				</div>
+			</nav>
+		</div>
 		<ul>
 			{stories.map((story) => (
 				<li>
-					<a class="story-card" href={story.data.canonicalUrl}>
+					<a class="story-card" href={blogHref(`/${story.data.legacyPath}`)}>
 						{story.data.heroImage && (
-							<img src={story.data.heroImage} alt="" loading="lazy" decoding="async" />
+							<img
+								src={story.data.heroImage}
+								alt=""
+								width={story.data.heroImageWidth}
+								height={story.data.heroImageHeight}
+								loading="lazy"
+								decoding="async"
+							/>
 						)}
-						<span class="story-card__copy">
-							<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
-							<strong>{story.data.title}</strong>
-							<span>{story.data.author.name}</span>
+						<div class="story-card__copy">
+							<span class="story-card__meta">
+								<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+								{story.data.tags[0] && <span>{story.data.tags[0].name}</span>}
+							</span>
+							<h3>{story.data.title}</h3>
 							{story.data.subtitle && <span class="story-card__summary">{story.data.subtitle}</span>}
-						</span>
+							<span class="story-card__author">By {story.data.author.name}</span>
+						</div>
 					</a>
 				</li>
 			))}
@@ -69,50 +89,111 @@ const blogSchema = {
 
 <style>
 	.blog-hero {
-		padding: 4rem 0 3rem;
-		background: linear-gradient(135deg, #342c68, #251e51);
-		color: #fff;
+		padding: clamp(4rem, 8vw, 7rem) 0;
+		background:
+			radial-gradient(circle at 83% 18%, rgba(240, 93, 87, 0.18), transparent 30%),
+			linear-gradient(145deg, #fff8f4, #f3e9e4);
+		color: var(--text);
+	}
+
+	.blog-hero__inner {
+		max-width: 64rem;
+		margin-left: max(0.75rem, calc((100vw - 1160px) / 2));
+		margin-right: auto;
 	}
 
 	.blog-hero h1 {
 		max-width: 18ch;
 		margin: 0;
 		font-family: var(--heading);
-		font-size: var(--page-title-font-size);
-		line-height: 1;
+		font-size: clamp(2.6rem, 7vw, 5.4rem);
+		line-height: 0.98;
+		letter-spacing: -0.045em;
 	}
 
-	.blog-hero p:not(.eyebrow) {
+	.blog-hero p:not(.blog-hero__eyebrow, .blog-hero__count) {
 		max-width: 60ch;
-		margin: 1rem 0;
+		margin: 1.25rem 0;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
 	}
 
-	.blog-hero nav {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.4rem 0.9rem;
-		font-size: 0.9rem;
+	.blog-hero__eyebrow,
+	.blog-list__eyebrow {
+		margin: 0 0 0.85rem;
+		color: var(--accent-dark);
+		font-size: 0.82rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 
-	.blog-hero nav a {
-		text-decoration: underline;
-		text-underline-offset: 0.2em;
+	.blog-hero__count {
+		margin: 1.5rem 0 0;
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.82rem;
+		color: rgb(90, 75, 70);
 	}
 
 	.blog-list {
-		padding-top: 2.5rem;
-		padding-bottom: 4rem;
+		padding-top: clamp(3rem, 6vw, 5rem);
+		padding-bottom: clamp(4rem, 7vw, 6rem);
+	}
+
+	.blog-list__header {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.blog-list h2 {
+		margin: 0;
 		font-family: var(--heading);
-		font-size: 2rem;
+		font-size: clamp(2rem, 4vw, 3rem);
+		line-height: 1;
+	}
+
+	.blog-list__archives {
+		max-width: 27rem;
+		text-align: right;
+	}
+
+	.blog-list__archives > span {
+		display: block;
+		margin-bottom: 0.55rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: rgb(85, 85, 85);
+	}
+
+	.blog-list__archives div {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 0.45rem;
+	}
+
+	.blog-list__archives a {
+		padding: 0.35rem 0.65rem;
+		border: 1px solid rgba(189, 58, 52, 0.25);
+		border-radius: 999px;
+		color: var(--accent-dark);
+		font-size: 0.8rem;
+		text-decoration: none;
+	}
+
+	.blog-list__archives a:hover,
+	.blog-list__archives a:focus-visible {
+		border-color: var(--accent-dark);
+		background: rgba(189, 58, 52, 0.07);
 	}
 
 	.blog-list ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
-		gap: 1.25rem;
+		gap: clamp(1rem, 2.2vw, 1.6rem);
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -123,10 +204,20 @@ const blogSchema = {
 		grid-template-rows: auto 1fr;
 		height: 100%;
 		overflow: hidden;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-radius: 0.9rem;
+		border: 1px solid rgba(0, 0, 0, 0.11);
+		border-radius: 1rem;
 		background: #fff;
 		text-decoration: none;
+		box-shadow: 0 0.6rem 1.8rem rgba(55, 35, 25, 0.05);
+		transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+	}
+
+	.story-card:hover,
+	.story-card:focus-visible {
+		border-color: rgba(189, 58, 52, 0.5);
+		box-shadow: 0 1rem 2.4rem rgba(55, 35, 25, 0.1);
+		transform: translateY(-0.2rem);
+		outline: none;
 	}
 
 	.story-card img {
@@ -139,18 +230,29 @@ const blogSchema = {
 		display: flex;
 		flex-direction: column;
 		gap: 0.45rem;
-		padding: 1.1rem;
+		padding: 1.15rem 1.2rem 1.3rem;
 	}
 
-	.story-card time,
-	.story-card__copy > span:not(.story-card__summary) {
+	.story-card__meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
 		font-size: 0.82rem;
 		color: rgb(95, 95, 95);
 	}
 
-	.story-card strong {
+	.story-card__meta > span {
+		color: var(--accent-dark);
+		font-weight: 500;
+		text-align: right;
+	}
+
+	.story-card h3 {
+		margin: 0.15rem 0 0;
 		font-family: var(--heading);
 		font-size: 1.2rem;
+		font-weight: 600;
 		line-height: 1.25;
 	}
 
@@ -162,5 +264,27 @@ const blogSchema = {
 		font-size: 0.9rem;
 		line-height: 1.45;
 		color: rgb(75, 75, 75);
+	}
+
+	.story-card__author {
+		margin-top: auto;
+		padding-top: 0.25rem;
+		font-size: 0.82rem;
+		color: rgb(85, 85, 85);
+	}
+
+	@media (max-width: 720px) {
+		.blog-list__header {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+		.blog-list__archives {
+			text-align: left;
+		}
+
+		.blog-list__archives div {
+			justify-content: flex-start;
+		}
 	}
 </style>

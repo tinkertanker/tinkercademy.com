@@ -1,7 +1,13 @@
 ---
 type Provider = 'youtube' | 'github-gist' | 'giphy' | 'twitter' | 'instagram' | 'external-link';
 
-const { provider, href, title } = Astro.props as { provider: Provider; href: string; title: string };
+const { provider, href, title, description, captionHtml } = Astro.props as {
+	provider: Provider;
+	href: string;
+	title: string;
+	description?: string;
+	captionHtml?: string;
+};
 const url = new URL(href);
 const host = url.hostname.toLowerCase().replace(/^www\./, '');
 const providerHosts: Record<Exclude<Provider, 'external-link'>, (host: string) => boolean> = {
@@ -29,12 +35,14 @@ const providerLabels: Record<Provider, string> = {
 <aside class="article-embed" data-provider={provider}>
 	<p class="article-embed__label">Embedded media</p>
 	<p class="article-embed__title">{title}</p>
+	{description && <p class="article-embed__description">{description}</p>}
 	<p class="article-embed__privacy">
 		This archived article does not load third-party embed scripts automatically.
 	</p>
 	<a href={href} target="_blank" rel="noopener noreferrer">
 		View the {providerLabels[provider]} on its original site
 	</a>
+	{captionHtml && <p class="article-embed__caption" set:html={captionHtml} />}
 </aside>
 
 <style>
@@ -65,9 +73,17 @@ const providerLabels: Record<Provider, string> = {
 		font-weight: 500;
 	}
 
+	.article-embed__description,
 	.article-embed__privacy {
 		font-size: 0.9rem;
 		color: rgb(90, 90, 90);
+	}
+
+	.article-embed__caption {
+		margin-top: 1rem !important;
+		font-size: 0.9rem;
+		font-style: italic;
+		color: rgb(75, 75, 75);
 	}
 
 	.article-embed a {

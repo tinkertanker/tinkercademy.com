@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: organisation-owned
 heroImage: /blog-media/8a3b3115a54943e8793012f81706b5e73dc1c628919f06b9ce72095a81897486.png
+heroImageWidth: 1400
+heroImageHeight: 1050
 heroAlt: A littleBits-powered car created by one of the DBS teams.
 heroAltDecision: meaningful
 provenance:
@@ -40,53 +42,54 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
 {/* medium-image:0*PoG76tFUU5vLlEAR alt-decision:meaningful */}
 
-![A littleBits-powered car created by one of the DBS teams.](/blog-media/8a3b3115a54943e8793012f81706b5e73dc1c628919f06b9ce72095a81897486.png)
+<img src="/blog-media/8a3b3115a54943e8793012f81706b5e73dc1c628919f06b9ce72095a81897486.png" alt="A littleBits-powered car created by one of the DBS teams." width="1400" height="1050" loading="lazy" decoding="async" />
 
-<em>A littleBits-powered car created by one of the DBS teams.</em>
+<ArticleLegacyBlock as="p" html={"<em>A littleBits-powered car created by one of the DBS teams.</em>"} className="medium-image-caption" />
 
-## <strong>Challenge</strong>
+<ArticleLegacyBlock as="h2" html={"<strong>Challenge</strong>"} />
 
-A multinational bank, well known for its drive of digitally transforming the future of banking, identified a need to bolster its workforce’s digital skills. They wanted to introduce employees to emerging and higher-order technologies such as the Internet of Things (IoT), electronics prototyping and Data Science, to encourage the discovery of new ways to incorporate these technologies into the organisation from the ground up.
+<ArticleLegacyBlock as="p" html={"A multinational bank, well known for its drive of digitally transforming the future of banking, identified a need to bolster its workforce’s digital skills. They wanted to introduce employees to emerging and higher-order technologies such as the Internet of Things (IoT), electronics prototyping and Data Science, to encourage the discovery of new ways to incorporate these technologies into the organisation from the ground up."} />
 
-## <strong>Solution</strong>
+<ArticleLegacyBlock as="h2" html={"<strong>Solution</strong>"} />
 
-We designed a day-long competition combining software-based and hardware-based challenges, creating an engaging and unique opportunity for employees to tap on and encourage their innate curiosity towards technology.
+<ArticleLegacyBlock as="p" html={"We designed a day-long competition combining software-based and hardware-based challenges, creating an engaging and unique opportunity for employees to tap on and encourage their innate curiosity towards technology."} />
 
-### Briefing and Training
+<ArticleLegacyBlock as="h3" html={"Briefing and Training"} />
 
-Before the start of the competition, over 60 participants went through a short 2.5-hour briefing and training on the hardware and software that they’d be using. This equipped all of them with basic knowledge to use as a starting point.
+<ArticleLegacyBlock as="p" html={"Before the start of the competition, over 60 participants went through a short 2.5-hour briefing and training on the hardware and software that they’d be using. This equipped all of them with basic knowledge to use as a starting point."} />
 
-### Software Challenges
+<ArticleLegacyBlock as="h3" html={"Software Challenges"} />
 
-True to their reputation, many teams were digitally-savvy and quickly completed the clustering and plotting data science challenges. In essence, they were required to correctly identify the species of a large group of plants using biological data such as plant height and leaf width. After which, they would have to represent them in graphical form as scatter plots.
+<ArticleLegacyBlock as="p" html={"True to their reputation, many teams were digitally-savvy and quickly completed the clustering and plotting data science challenges. In essence, they were required to correctly identify the species of a large group of plants using biological data such as plant height and leaf width. After which, they would have to represent them in graphical form as scatter plots."} />
 
-Upon successful completion of the above, participants subsequently braved the Reddit and Twitter API challenges we presented. For both these challenges, they needed to make use of APIs to scrape data from the respective social platforms. Counting every mention of the word “Internet” from a subreddit or gathering tweets containing the hashtag “#ndp2017” were just 2 examples of the type of programming that participants were involved in.
+<ArticleLegacyBlock as="p" html={"Upon successful completion of the above, participants subsequently braved the Reddit and Twitter API challenges we presented. For both these challenges, they needed to make use of APIs to scrape data from the respective social platforms. Counting every mention of the word “Internet” from a subreddit or gathering tweets containing the hashtag “#ndp2017” were just 2 examples of the type of programming that participants were involved in."} />
 
-Of course, there were some teams who had no prior data analysis experience in R or Python, but nonetheless, they managed to acquire the needed knowledge on their own and actively solved these challenges!
+<ArticleLegacyBlock as="p" html={"Of course, there were some teams who had no prior data analysis experience in R or Python, but nonetheless, they managed to acquire the needed knowledge on their own and actively solved these challenges!"} />
 
-### Hardware Challenges
+<ArticleLegacyBlock as="h3" html={"Hardware Challenges"} />
 
-After the exacting software challenges, teams were thrilled to move on to the hardware challenges. One such challenge used littleBits, an electronics prototyping platform that enables users to build functional electronics projects. Teams were tasked to build automated line-following cars using littleBits components.
+<ArticleLegacyBlock as="p" html={"After the exacting software challenges, teams were thrilled to move on to the hardware challenges. One such challenge used littleBits, an electronics prototyping platform that enables users to build functional electronics projects. Teams were tasked to build automated line-following cars using littleBits components."} />
 
 {/* medium-image:0*jeZTSHZJdEzIrdIg alt-decision:meaningful */}
 
-![littleBits are swappable, magnetically-connected electronics building blocks — like “LEGO for electronics”. These colour-coded blocks can be used to prototype, gather feedback and build real-world solutions.](/blog-media/f7072d1dddc6ad588fd9cb86c5288f33f70c02a3c87d5504fdee39dce907fc16.jpg)
+<img src="/blog-media/f7072d1dddc6ad588fd9cb86c5288f33f70c02a3c87d5504fdee39dce907fc16.jpg" alt="littleBits are swappable, magnetically-connected electronics building blocks — like “LEGO for electronics”. These colour-coded blocks can be used to prototype, gather feedback and build real-world solutions." width="970" height="300" loading="lazy" decoding="async" />
 
-<em>littleBits are swappable, magnetically-connected electronics building blocks — like “LEGO for electronics”. These colour-coded blocks can be used to prototype, gather feedback and build real-world solutions.</em>
+<ArticleLegacyBlock as="p" html={"<em>littleBits are swappable, magnetically-connected electronics building blocks — like “LEGO for electronics”. These colour-coded blocks can be used to prototype, gather feedback and build real-world solutions.</em>"} className="medium-image-caption" />
 
-Here is one team’s attempt:
+<ArticleLegacyBlock as="p" html={"Here is one team’s attempt:"} />
 
-<ArticleEmbed provider="youtube" href={"https://www.youtube.com/watch?v=rqga7kO8RrU&feature=emb_logo"} title={"LittleBits Line-Following Bot"} />
+<ArticleEmbed provider="youtube" href={"https://www.youtube.com/watch?v=rqga7kO8RrU&feature=emb_logo"} title={"LittleBits Line-Following Bot"} description={"A line-following littleBits car created by a team in one of our tech competitions! This one might not have been as fast as others, but it made it to the end! Based off the original creation by Yoobin's Family (https://littlebits.cc/projects/simple-line-follower)."} captionHtml={""} />
 
-In another hardware challenge, they built a remote-controlled (RC) car using the micro:bit, a popular and easy-to-use microcontroller. This involved setting up a Bluetooth connection between a keypad and the wheels of their RC car. The finished cars were assessed based on whether they could make it through a maze.
+<ArticleLegacyBlock as="p" html={"In another hardware challenge, they built a remote-controlled (RC) car using the micro:bit, a popular and easy-to-use microcontroller. This involved setting up a Bluetooth connection between a keypad and the wheels of their RC car. The finished cars were assessed based on whether they could make it through a maze."} />
 
-<ArticleEmbed provider="youtube" href={"https://www.youtube.com/watch?time_continue=15&v=Wc6TJs81_Zw&feature=emb_logo"} title={"Micro:bit Bluetooth RC Car"} />
+<ArticleEmbed provider="youtube" href={"https://www.youtube.com/watch?time_continue=15&v=Wc6TJs81_Zw&feature=emb_logo"} title={"Micro:bit Bluetooth RC Car"} description={"A simple car built using Micro:bit. This was a bit challenging as an alkaline battery powered micro:bit only has enough power for one servo at a time, so you can tell one wheel to go forward, or tell the other wheel to go forward, but not both at the same time!"} captionHtml={""} />
 
-## <strong>Outcomes</strong>
+<ArticleLegacyBlock as="h2" html={"<strong>Outcomes</strong>"} />
 
-All in all, every participant thoroughly enjoyed themselves while learning about new technologies. While they would not use the new technologies in their work immediately, this memorable event was sure to trigger inspiration down the road. The competition also inspired camaraderie amongst team members as they learnt from one another, and tapped on one another’s creativity, to solve and build stunning creations.
+<ArticleLegacyBlock as="p" html={"All in all, every participant thoroughly enjoyed themselves while learning about new technologies. While they would not use the new technologies in their work immediately, this memorable event was sure to trigger inspiration down the road. The competition also inspired camaraderie amongst team members as they learnt from one another, and tapped on one another’s creativity, to solve and build stunning creations."} />
 
-If you’re looking to organise a similar competition for your organisation, reach out to us at <a href="http://hello@tk.sg">hello@tk.sg</a> and we’ll be glad to help!
+<ArticleLegacyBlock as="p" html={"If you’re looking to organise a similar competition for your organisation, reach out to us at <a href=\"http://hello@tk.sg\">hello@tk.sg</a> and we’ll be glad to help!"} />

@@ -104,6 +104,14 @@ test('rewrites known Medium story links to preserved blog-host canonicals', () =
 		'https://example.com/reference',
 	);
 	assert.equal(
+		rewriteInternalStoryHref('source:https://example.com/image-credit', pathsById),
+		'https://example.com/image-credit',
+	);
+	assert.equal(
+		rewriteInternalStoryHref('http://get hacking.com', pathsById),
+		'http://gethacking.com',
+	);
+	assert.equal(
 		rewriteInternalStoryHref(
 			'https://encrypted.google.com/url?sa=t&url=https%3A%2F%2Fgethacking.com%2Fcollections%2Fmicro-bit&usg=tracker',
 			pathsById,

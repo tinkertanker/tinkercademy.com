@@ -1,7 +1,8 @@
 ---
 // The Worker removes /blog-content from the public blog-host URL.
+import BlogNav from '../../../components/articles/BlogNav.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
-import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, formatBlogDate, getBlogStories, getBlogYears, type BlogStory } from '../../../lib/blog';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogHref, formatBlogDate, getBlogStories, getBlogYears, type BlogStory } from '../../../lib/blog';
 
 export async function getStaticPaths() {
 	const stories = await getBlogStories();
@@ -23,14 +24,15 @@ const canonical = `${BLOG_ORIGIN}/archive/${year}/`;
 	showSearch={false}
 	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
 >
+	<BlogNav active="archives" />
 	<section class="archive shell">
-		<p><a href={`${BLOG_ORIGIN}/`}>← All stories</a></p>
+		<p><a href={blogHref('/')}>← All stories</a></p>
 		<h1>{year} archive</h1>
 		<ul>
 			{stories.map((story) => (
 				<li>
 					<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
-					<a href={story.data.canonicalUrl}>{story.data.title}</a>
+					<a href={blogHref(`/${story.data.legacyPath}`)}>{story.data.title}</a>
 					<span>{story.data.author.name}</span>
 				</li>
 			))}

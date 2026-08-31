@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/55e166109cf41cc30917a5dec20958c4abbfde79f7cd1663016449de5677b6e8.jpg
+heroImageWidth: 4032
+heroImageHeight: 3024
 heroAlt: Capacitive touch ‘buttons’ to reduce mechanical wear
 heroAltDecision: meaningful
 provenance:
@@ -40,133 +42,134 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-It’s already two months after Maker Faire, and we’re finally ready to talk about it! Perhaps it took us this long to recover from the madness.
+<ArticleLegacyBlock as="p" html={"It’s already two months after Maker Faire, and we’re finally ready to talk about it! Perhaps it took us this long to recover from the madness."} />
 
-<a href="http://makerfairesingapore.com">Maker Faire Singapore</a>’s 6th iteration was held at the Singapore Science Centre, and we decided to one-up the 3 escape rooms we made for 2016, and build a cardboard arcade (inspired by <a href="http://cainesarcade.com/">Caine Monroy</a>—yes, 5 years late, but inspiration never grows old!).
+<ArticleLegacyBlock as="p" html={"<a href=\"http://makerfairesingapore.com\">Maker Faire Singapore</a>’s 6th iteration was held at the Singapore Science Centre, and we decided to one-up the 3 escape rooms we made for 2016, and build a cardboard arcade (inspired by <a href=\"http://cainesarcade.com/\">Caine Monroy</a>—yes, 5 years late, but inspiration never grows old!)."} />
 
 {/* medium-image:1*JueQBix7EO7z2C3nrFSr4A.jpeg alt-decision:meaningful */}
 
-![6 different games, 1000 different headaches](/blog-media/43d745fdd26d3175be1e2f72d400b248d5ead7b50b50762e365644f25e148e19.jpg)
+<img src="/blog-media/43d745fdd26d3175be1e2f72d400b248d5ead7b50b50762e365644f25e148e19.jpg" alt="6 different games, 1000 different headaches" width="14880" height="3798" loading="lazy" decoding="async" />
 
-<em>6 different games, 1000 different headaches</em>
+<ArticleLegacyBlock as="p" html={"<em>6 different games, 1000 different headaches</em>"} className="medium-image-caption" />
 
-> <em>“I thought we said last year never to do this again”</em>
+<ArticleLegacyBlock as="blockquote" html={"<em>“I thought we said last year never to do this again”</em>"} />
 
-In 2 months, we churned out 6 different games, a life-size dismantle-able Tardis, an arcade credit system, and chugged through too much cardboard and coffee to count. Weekends and weeknights were burned and ever so often you’d hear someone lament ‘<em>I thought we said last year never to do this again</em>’.
+<ArticleLegacyBlock as="p" html={"In 2 months, we churned out 6 different games, a life-size dismantle-able Tardis, an arcade credit system, and chugged through too much cardboard and coffee to count. Weekends and weeknights were burned and ever so often you’d hear someone lament ‘<em>I thought we said last year never to do this again</em>’."} />
 
-However, making for Maker Faire (or any event for that matter) has a mysterious pull—you come up with a crazy idea, start working on the crazy idea, sign yourself up for a showcase deadline, and realise that your crazy idea will never be done in time for the deadline… but you’re an arm and a leg deep in it already and hey, sunk cost! So you keep sinking more in.
+<ArticleLegacyBlock as="p" html={"However, making for Maker Faire (or any event for that matter) has a mysterious pull—you come up with a crazy idea, start working on the crazy idea, sign yourself up for a showcase deadline, and realise that your crazy idea will never be done in time for the deadline… but you’re an arm and a leg deep in it already and hey, sunk cost! So you keep sinking more in."} />
 
-But when it’s all over, you rise to the surface again, or get washed up to shore, (whatever floats your analogous boat <code>;)</code>), and realise that you’re still alive. Rosy retrospection kicks in, and you finally are able to talk about your experience. Maybe it takes a month, but here we are, and here’s what we did for Maker Faire SG 2017: <strong>Tinkerbot’s Arcade of Many Bits</strong>.
+<ArticleLegacyBlock as="p" html={"But when it’s all over, you rise to the surface again, or get washed up to shore, (whatever floats your analogous boat <code>;)</code>), and realise that you’re still alive. Rosy retrospection kicks in, and you finally are able to talk about your experience. Maybe it takes a month, but here we are, and here’s what we did for Maker Faire SG 2017: <strong>Tinkerbot’s Arcade of Many Bits</strong>."} />
 
-(We tried calling it <strong>Tinkerbot&#39;s Arcade of Many Bits Over Up Rolling In Nice Exciting Stuff</strong>, for <strong>TAMBOURINES</strong>, but that… was a bit much.)
+<ArticleLegacyBlock as="p" html={"(We tried calling it <strong>Tinkerbot&#39;s Arcade of Many Bits Over Up Rolling In Nice Exciting Stuff</strong>, for <strong>TAMBOURINES</strong>, but that… was a bit much.)"} />
 
-<ArticleEmbed provider="youtube" href={"https://www.youtube.com/watch?v=Nig4d9zpMtU"} title={"Tinkercademy at Maker Faire 2017"} />
+<ArticleEmbed provider="youtube" href={"https://www.youtube.com/watch?v=Nig4d9zpMtU"} title={"Tinkercademy at Maker Faire 2017"} description={"It's Tinkerbot's Arcade of Many Bits! Featuring all manners of home-made Arduino and Micro:bit based inventions: a racing game, a rhythm game, a shooter, Flappy Bird, lights puzzle, and even a TARDIS!"} captionHtml={"Tinkercademy’s Arcade of Many Bits"} />
 
-<strong>A pipe gun first person shooter:</strong>
+<ArticleLegacyBlock as="p" html={"<strong>A pipe gun first person shooter:</strong>"} />
 
 {/* medium-image:1*Snc1giSqFbrdQcUCfxxMGQ.jpeg alt-decision:meaningful */}
 
-![Training the next generation of sniper pros](/blog-media/21a3a930ce5f8c4d271548ce2b57ae1281d35a8cebdda6e2099f34945c007b2a.jpg)
+<img src="/blog-media/21a3a930ce5f8c4d271548ce2b57ae1281d35a8cebdda6e2099f34945c007b2a.jpg" alt="Training the next generation of sniper pros" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>Training the next generation of sniper pros</em>
+<ArticleLegacyBlock as="p" html={"<em>Training the next generation of sniper pros</em>"} className="medium-image-caption" />
 
-Infrared remotes, lasers and a whole bunch of micro:bits, PVC pipes, cans, black cardboard, free stock-photo prints, and artfully flicked paint make one of the most polished looking games in our arcade.
+<ArticleLegacyBlock as="p" html={"Infrared remotes, lasers and a whole bunch of micro:bits, PVC pipes, cans, black cardboard, free stock-photo prints, and artfully flicked paint make one of the most polished looking games in our arcade."} />
 
 {/* medium-image:1*4RM087wzODfhyGoQUGEXQA.jpeg alt-decision:meaningful */}
 
-![Lookie those cute aliens! Lookie that tiny OLED showing you your score in font size 2!](/blog-media/ff26810b7cc5143986ba6b64caec6b617196284c78dec7c53b5dd6d968fd1505.jpg)
+<img src="/blog-media/ff26810b7cc5143986ba6b64caec6b617196284c78dec7c53b5dd6d968fd1505.jpg" alt="Lookie those cute aliens! Lookie that tiny OLED showing you your score in font size 2!" width="3024" height="4032" loading="lazy" decoding="async" />
 
-<em>Lookie those cute aliens! Lookie that tiny OLED showing you your score in font size 2!</em>
+<ArticleLegacyBlock as="p" html={"<em>Lookie those cute aliens! Lookie that tiny OLED showing you your score in font size 2!</em>"} className="medium-image-caption" />
 
-<strong>An impossible Bishi-Bashi puzzle game:</strong>
+<ArticleLegacyBlock as="p" html={"<strong>An impossible Bishi-Bashi puzzle game:</strong>"} />
 
 {/* medium-image:1*XIN2vOKTA2GgE0sjF9VbJA.jpeg alt-decision:meaningful */}
 
-![whack whack whack — buttons that are actually fake security cameras](/blog-media/ef936b09178199e0c1aa8bd18a322bf571c8fac8a780506ddd2ad4e15efce9c8.jpg)
+<img src="/blog-media/ef936b09178199e0c1aa8bd18a322bf571c8fac8a780506ddd2ad4e15efce9c8.jpg" alt="whack whack whack — buttons that are actually fake security cameras" width="2000" height="3008" loading="lazy" decoding="async" />
 
-<em>whack whack whack — buttons that are actually fake security cameras</em>
+<ArticleLegacyBlock as="p" html={"<em>whack whack whack — buttons that are actually fake security cameras</em>"} className="medium-image-caption" />
 
-Because we are finally established enough to have an archive of past projects, we revived what was once titled <code>flipgame01</code>, <code>gameoflife</code>, and <code>lifearcade</code> in different lives, tweaked it to different levels of difficulty, and added a time-out in 5 minutes to get a new entry for the arcade.
+<ArticleLegacyBlock as="p" html={"Because we are finally established enough to have an archive of past projects, we revived what was once titled <code>flipgame01</code>, <code>gameoflife</code>, and <code>lifearcade</code> in different lives, tweaked it to different levels of difficulty, and added a time-out in 5 minutes to get a new entry for the arcade."} />
 
-<strong>A confused Maimai singing DDR songs:</strong>
+<ArticleLegacyBlock as="p" html={"<strong>A confused Maimai singing DDR songs:</strong>"} />
 
 {/* medium-image:1*O4nsuikYEktvwGBSxQ2DVQ.jpeg alt-decision:meaningful */}
 
-![Capacitive touch ‘buttons’ to reduce mechanical wear](/blog-media/55e166109cf41cc30917a5dec20958c4abbfde79f7cd1663016449de5677b6e8.jpg)
+<img src="/blog-media/55e166109cf41cc30917a5dec20958c4abbfde79f7cd1663016449de5677b6e8.jpg" alt="Capacitive touch ‘buttons’ to reduce mechanical wear" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>Capacitive touch ‘buttons’ to reduce mechanical wear</em>
+<ArticleLegacyBlock as="p" html={"<em>Capacitive touch ‘buttons’ to reduce mechanical wear</em>"} className="medium-image-caption" />
 
-No arcade is complete without a rhythm game but arrows and rectangular screens are so last decade. So with the total experience of one video on YouTube, I decide to make a circular Maimai look-alike. But of course, tribute where tribute is due — DDR, the original arcade crowd puller, lives on in this cardboard soundtrack.
+<ArticleLegacyBlock as="p" html={"No arcade is complete without a rhythm game but arrows and rectangular screens are so last decade. So with the total experience of one video on YouTube, I decide to make a circular Maimai look-alike. But of course, tribute where tribute is due — DDR, the original arcade crowd puller, lives on in this cardboard soundtrack."} />
 
-<strong>Flappy Bird carousel (extremely popular on </strong><strong><a href="https://twitter.com/tinkercademy/status/888620365240389633">Twitter</a></strong><strong>!):</strong>
+<ArticleLegacyBlock as="p" html={"<strong>Flappy Bird carousel (extremely popular on </strong><strong><a href=\"https://twitter.com/tinkercademy/status/888620365240389633\">Twitter</a></strong><strong>!):</strong>"} />
 
 {/* medium-image:1*R1b0RQtmDx4xYYDy3mJtyg.jpeg alt-decision:meaningful */}
 
-![round and round and round and round — flappy bird considers the meaning of life](/blog-media/2480952e5246a9eb5e21b72613482488f87a6d91ed78e660420cc8d0a2e7cdee.jpg)
+<img src="/blog-media/2480952e5246a9eb5e21b72613482488f87a6d91ed78e660420cc8d0a2e7cdee.jpg" alt="round and round and round and round — flappy bird considers the meaning of life" width="4608" height="3456" loading="lazy" decoding="async" />
 
-<em>round and round and round and round — flappy bird considers the meaning of life</em>
+<ArticleLegacyBlock as="p" html={"<em>round and round and round and round — flappy bird considers the meaning of life</em>"} className="medium-image-caption" />
 
-<ArticleEmbed provider="twitter" href={"https://twitter.com/tinkercademy/status/888620365240389633"} title={"Tinkercademy on Twitter"} />
+<ArticleEmbed provider="twitter" href={"https://twitter.com/tinkercademy/status/888620365240389633"} title={"Tinkercademy on Twitter"} description={"It's our home-made #microbit Flappy Bird at the #sgmakerfaire arcade! Join us at the Annexe. https://t.co/8m8IrMXjMg"} captionHtml={"You know you got a winner when you trend on Twitter!"} />
 
-This micro:bit powered re-invention of the runaway hit phone game gave our intern Wei Heng so much trouble and maybe some grey hairs. But internet celebrity is priceless.
+<ArticleLegacyBlock as="p" html={"This micro:bit powered re-invention of the runaway hit phone game gave our intern Wei Heng so much trouble and maybe some grey hairs. But internet celebrity is priceless."} />
 
 {/* medium-image:1*Ai8YcpXvSf9ln-qkrUdDpg.jpeg alt-decision:meaningful */}
 
-![one button, one bird, endless entertainment](/blog-media/07ff8cc53c53e643935cfe5b85dd62c2fdf4e95fa5ef33bf0524326a48a156ee.jpg)
+<img src="/blog-media/07ff8cc53c53e643935cfe5b85dd62c2fdf4e95fa5ef33bf0524326a48a156ee.jpg" alt="one button, one bird, endless entertainment" width="3024" height="4032" loading="lazy" decoding="async" />
 
-<em>one button, one bird, endless entertainment</em>
+<ArticleLegacyBlock as="p" html={"<em>one button, one bird, endless entertainment</em>"} className="medium-image-caption" />
 
-<strong>A toddler-height racing game whose score would overflow once past 10,000:</strong>
+<ArticleLegacyBlock as="p" html={"<strong>A toddler-height racing game whose score would overflow once past 10,000:</strong>"} />
 
 {/* medium-image:1*ltZq97LF3MEeJ9zIfIbRfw.jpeg alt-decision:meaningful */}
 
-![A child looking comfortable](/blog-media/6ee7950dd56a81b8bb8de5edd4d81769554cac15b6b6846ad7ae784942c68a27.jpg)
+<img src="/blog-media/6ee7950dd56a81b8bb8de5edd4d81769554cac15b6b6846ad7ae784942c68a27.jpg" alt="A child looking comfortable" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>A child looking comfortable</em>
+<ArticleLegacyBlock as="p" html={"<em>A child looking comfortable</em>"} className="medium-image-caption" />
 
 {/* medium-image:1*bMzHIT7FuNHVrzFG6iW8cw.jpeg alt-decision:meaningful */}
 
-![An adult looking cramped](/blog-media/0624fc2a96f3abc343833dbc3f708c402fd99660bdb3915c4d79dbd35d925072.jpg)
+<img src="/blog-media/0624fc2a96f3abc343833dbc3f708c402fd99660bdb3915c4d79dbd35d925072.jpg" alt="An adult looking cramped" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>An adult looking cramped</em>
+<ArticleLegacyBlock as="p" html={"<em>An adult looking cramped</em>"} className="medium-image-caption" />
 
-Somehow, this LeMans-inspired game manages to make use of both Arduino and micro:bit, off-the-shelf parts, and cobbled-together scraps, and was not just a see-how-long-you-survive on the track, but also definitely an endurance test in engineering for our NUS School of Computing interns Alex and Derrick.
+<ArticleLegacyBlock as="p" html={"Somehow, this LeMans-inspired game manages to make use of both Arduino and micro:bit, off-the-shelf parts, and cobbled-together scraps, and was not just a see-how-long-you-survive on the track, but also definitely an endurance test in engineering for our NUS School of Computing interns Alex and Derrick."} />
 
 {/* medium-image:1*cV-Jj2FWztCDskv0ZapGiA.jpeg alt-decision:meaningful */}
 
-![Long-suffering trouble-shooting](/blog-media/699f6460e01fb653a0892b73dbe73c2336896a9581ef7b3dfd07aa78076d7584.jpg)
+<img src="/blog-media/699f6460e01fb653a0892b73dbe73c2336896a9581ef7b3dfd07aa78076d7584.jpg" alt="Long-suffering trouble-shooting" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>Long-suffering trouble-shooting</em>
+<ArticleLegacyBlock as="p" html={"<em>Long-suffering trouble-shooting</em>"} className="medium-image-caption" />
 
-<strong>Keep Talking and Nobody Explodes — Tardis Edition:</strong>
+<ArticleLegacyBlock as="p" html={"<strong>Keep Talking and Nobody Explodes — Tardis Edition:</strong>"} />
 
 {/* medium-image:1*h7QOKJqN0oJA1GaAATuO0A.jpeg alt-decision:meaningful */}
 
-![Use an actual phone to communicate with your bomb expert outside the phone booth](/blog-media/5a4f0855515007078bb68bdae43e156d324b48507d9a7643c0e071ff1e5d093e.jpg)
+<img src="/blog-media/5a4f0855515007078bb68bdae43e156d324b48507d9a7643c0e071ff1e5d093e.jpg" alt="Use an actual phone to communicate with your bomb expert outside the phone booth" width="3024" height="4032" loading="lazy" decoding="async" />
 
-<em>Use an actual phone to communicate with your bomb expert outside the phone booth</em>
+<ArticleLegacyBlock as="p" html={"<em>Use an actual phone to communicate with your bomb expert outside the phone booth</em>"} className="medium-image-caption" />
 
-So many people worked on this — the interns had been playing and introducing KTANE to the office, and getting it to be <em>real life</em> was so exciting that they wanted to craft every single puzzle module the video game had. I think they achieved a fair number (9 working).
+<ArticleLegacyBlock as="p" html={"So many people worked on this — the interns had been playing and introducing KTANE to the office, and getting it to be <em>real life</em> was so exciting that they wanted to craft every single puzzle module the video game had. I think they achieved a fair number (9 working)."} />
 
-The TARDIS was so impressive, we literally got marriage proposals in exchange for it. Luckily, one of the Tardis craftsmen is still available. DM us for more info.
+<ArticleLegacyBlock as="p" html={"The TARDIS was so impressive, we literally got marriage proposals in exchange for it. Luckily, one of the Tardis craftsmen is still available. DM us for more info."} />
 
-<strong>An Arcade Auntie Booth:</strong>
+<ArticleLegacyBlock as="p" html={"<strong>An Arcade Auntie Booth:</strong>"} />
 
 {/* medium-image:1*GI3nrpQ5TvV8g0DOo-AjRA.jpeg alt-decision:meaningful */}
 
-![Arcade Auntie giving out credits for free](/blog-media/8d2a832ab73bd95ac9b7c79090544e014173a2648a95fc2d2080ceb829ec75ab.jpg)
+<img src="/blog-media/8d2a832ab73bd95ac9b7c79090544e014173a2648a95fc2d2080ceb829ec75ab.jpg" alt="Arcade Auntie giving out credits for free" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>Arcade Auntie giving out credits for free</em>
+<ArticleLegacyBlock as="p" html={"<em>Arcade Auntie giving out credits for free</em>"} className="medium-image-caption" />
 
-Every arcade has that auntie that sits behind the counter changing your cash for shiny tokens, or topping up the credit in your Timezone card. We couldn’t let you miss out on that essential experience, and of course we had to make it even cooler.
+<ArticleLegacyBlock as="p" html={"Every arcade has that auntie that sits behind the counter changing your cash for shiny tokens, or topping up the credit in your Timezone card. We couldn’t let you miss out on that essential experience, and of course we had to make it even cooler."} />
 
-<a href="http://guestday.com/">GuestDay</a> to the rescue with personalised cards pre-loaded with 6 credits, come back to the counter for more. All free.
+<ArticleLegacyBlock as="p" html={"<a href=\"http://guestday.com/\">GuestDay</a> to the rescue with personalised cards pre-loaded with 6 credits, come back to the counter for more. All free."} />
 
 {/* medium-image:1*jXcZlbU2wLwxo38B0UjepA.jpeg alt-decision:meaningful */}
 
-![So cool you can model with them](/blog-media/051f7888b240b63c5444d4049c4a50732e307943fc7c66e8aef397b9bb535232.jpg)
+<img src="/blog-media/051f7888b240b63c5444d4049c4a50732e307943fc7c66e8aef397b9bb535232.jpg" alt="So cool you can model with them" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>So cool you can model with them</em>
+<ArticleLegacyBlock as="p" html={"<em>So cool you can model with them</em>"} className="medium-image-caption" />
 
-You may have noticed that many of the games were headed by an intern or two, many from our local computing schools, and some waiting to enter university. It was great to see them struggle through known <em>and</em> unknown unknowns, because we saw how they didn’t quit. Even when things broke down during transportation, and they had to spend half of Maker Faire Day 1 under public pressure to fix games, they persisted. Even when electrical bits burned up at 4am on Friday, they still made it on time to Maker Faire 4 hours later. We couldn’t be prouder of what they’ve achieved. Look out for each intern’s post coming up on how and what they did for Maker Faire!
+<ArticleLegacyBlock as="p" html={"You may have noticed that many of the games were headed by an intern or two, many from our local computing schools, and some waiting to enter university. It was great to see them struggle through known <em>and</em> unknown unknowns, because we saw how they didn’t quit. Even when things broke down during transportation, and they had to spend half of Maker Faire Day 1 under public pressure to fix games, they persisted. Even when electrical bits burned up at 4am on Friday, they still made it on time to Maker Faire 4 hours later. We couldn’t be prouder of what they’ve achieved. Look out for each intern’s post coming up on how and what they did for Maker Faire!"} />

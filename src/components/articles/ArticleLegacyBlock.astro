@@ -1,0 +1,20 @@
+---
+type Element = 'p' | 'h2' | 'h3' | 'blockquote' | 'aside' | 'ul' | 'ol';
+
+const { as, html = '', items = [], className } = Astro.props as {
+	as: Element;
+	html?: string;
+	items?: string[];
+	className?: string;
+};
+const Tag = as;
+const isList = as === 'ul' || as === 'ol';
+---
+
+{isList ? (
+	<Tag class={className}>
+		{items.map((item) => <li set:html={item} />)}
+	</Tag>
+) : (
+	<Tag class={className} set:html={html} />
+)}

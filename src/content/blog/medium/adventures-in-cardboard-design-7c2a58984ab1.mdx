@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/d3af1788db11b1a86240d5eb96ce0d8a4aa3ac7b4a1ebc3f0986809d04292371.jpg
+heroImageWidth: 2415
+heroImageHeight: 3900
 heroAlt: press fit, straps and wire connector-based interlocking
 heroAltDecision: meaningful
 provenance:
@@ -40,103 +42,104 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-<em>Yixue is a multi-talented intern, who came to us as a third year undergraduate from the School of Arts, Design, and Media at the Nanyang Technological University. Apart from sharing all kinds of experience from having worked in the media industry, he’s been an amazing help in helping to bring our book kit—on the </em><em><a href="http://book.tk.sg">Tinkerer’s Guide to the micro:bit Galaxy</a></em><em> — to life using electronics, maker tools, and cardboard.</em>
+<ArticleLegacyBlock as="p" html={"<em>Yixue is a multi-talented intern, who came to us as a third year undergraduate from the School of Arts, Design, and Media at the Nanyang Technological University. Apart from sharing all kinds of experience from having worked in the media industry, he’s been an amazing help in helping to bring our book kit—on the </em><em><a href=\"http://book.tk.sg\">Tinkerer’s Guide to the micro:bit Galaxy</a></em><em> — to life using electronics, maker tools, and cardboard.</em>"} />
 
-As a third year undergrad over at NTU ADM, I have enrolled in a 10 week internship over at Tinkertanker, and very gladly so. With an interest in electronics and woodworking, my foray into cardboard design has been interesting during this short stint, and have most definitely become part of my arsenal of tools in future projects..
+<ArticleLegacyBlock as="p" html={"As a third year undergrad over at NTU ADM, I have enrolled in a 10 week internship over at Tinkertanker, and very gladly so. With an interest in electronics and woodworking, my foray into cardboard design has been interesting during this short stint, and have most definitely become part of my arsenal of tools in future projects.."} />
 
-Technology-focused classes using modern micro-controllers like Arduino and Microbit are common place and essential in today’s STEAM-focused curriculums, but the supporting ‘construction’ around such projects require a decent level amount of basic engineering and building skills.
+<ArticleLegacyBlock as="p" html={"Technology-focused classes using modern micro-controllers like Arduino and Microbit are common place and essential in today’s STEAM-focused curriculums, but the supporting ‘construction’ around such projects require a decent level amount of basic engineering and building skills."} />
 
-Thus, my main focus during this 10-week stint is to help kickstart and develop a set of cardboard designs. Hopefully this alleviates time spent on crafting, thus dedicating more focus and time to the technology aspect.
+<ArticleLegacyBlock as="p" html={"Thus, my main focus during this 10-week stint is to help kickstart and develop a set of cardboard designs. Hopefully this alleviates time spent on crafting, thus dedicating more focus and time to the technology aspect."} />
 
-Cardboard is chosen as the main medium due to low cost, flexibility and availability.
+<ArticleLegacyBlock as="p" html={"Cardboard is chosen as the main medium due to low cost, flexibility and availability."} />
 
 {/* medium-image:1*-Bxuga0xklC02dkmbCd21A.jpeg alt-decision:meaningful */}
 
-![Dimensionally accurate(enough for cardboard) model of Microbit + GVS board assembly](/blog-media/1128f8ffe574bd5b78473625a8c2a6e69bf6466dcad83c1c37c716744285513e.jpg)
+<img src="/blog-media/1128f8ffe574bd5b78473625a8c2a6e69bf6466dcad83c1c37c716744285513e.jpg" alt="Dimensionally accurate(enough for cardboard) model of Microbit + GVS board assembly" width="1428" height="1002" loading="lazy" decoding="async" />
 
-<em>Dimensionally accurate(enough for cardboard) model of Microbit + GVS board assembly</em>
+<ArticleLegacyBlock as="p" html={"<em>Dimensionally accurate(enough for cardboard) model of Microbit + GVS board assembly</em>"} className="medium-image-caption" />
 
-While familiarising myself with the in-house laser-cutter and other power tools, I also spent considerable time modelling (in CAD) 3D representations of electronic components. This was an integral part of the process as it allows me to position everything accurately in 3d space and create corresponding cardboard models that can integrate well with the electronic components. The software’s sheet metal module was utilised in designing 3d cardboard models, before unfolding and converting them into flat vectors.
+<ArticleLegacyBlock as="p" html={"While familiarising myself with the in-house laser-cutter and other power tools, I also spent considerable time modelling (in CAD) 3D representations of electronic components. This was an integral part of the process as it allows me to position everything accurately in 3d space and create corresponding cardboard models that can integrate well with the electronic components. The software’s sheet metal module was utilised in designing 3d cardboard models, before unfolding and converting them into flat vectors."} />
 
 {/* medium-image:1*_DAaZFdRBANGhozxHvocxA.jpeg alt-decision:meaningful */}
 
-![Early design of lightsaber project; the 3d model can be unfolded into flat vectors](/blog-media/e3f022d2d4410e9905b0d385d4f75028e0f89bdba7e9dffcd7d9abb8b1521a6c.jpg)
+<img src="/blog-media/e3f022d2d4410e9905b0d385d4f75028e0f89bdba7e9dffcd7d9abb8b1521a6c.jpg" alt="Early design of lightsaber project; the 3d model can be unfolded into flat vectors" width="3508" height="2480" loading="lazy" decoding="async" />
 
-<em>Early design of lightsaber project; the 3d model can be unfolded into flat vectors</em>
+<ArticleLegacyBlock as="p" html={"<em>Early design of lightsaber project; the 3d model can be unfolded into flat vectors</em>"} className="medium-image-caption" />
 
-The cardboard designs were a great exercise in how to create mechanisms and structures from a 2d surface, which is actually a great skill to have, especially for my future work as an interactive artist. I was also lucky enough to work with a local cardboard specialist, <a href="http://butternmilk.com">Bartholomew Ting</a>, who has been very helpful in terms of sharing knowledge, ideas and resources.
+<ArticleLegacyBlock as="p" html={"The cardboard designs were a great exercise in how to create mechanisms and structures from a 2d surface, which is actually a great skill to have, especially for my future work as an interactive artist. I was also lucky enough to work with a local cardboard specialist, <a href=\"http://butternmilk.com\">Bartholomew Ting</a>, who has been very helpful in terms of sharing knowledge, ideas and resources."} />
 
 {/* medium-image:1*vX4G_0_tEBFFsvSVF3uhNA.jpeg alt-decision:meaningful */}
 
-![Very first lightsaber design that was way too big, hard to fold and many other things…](/blog-media/c4f49cf65234bb6433067eb5f72d29fbc885ccfd19877887b3e42c7439461739.jpg)
+<img src="/blog-media/c4f49cf65234bb6433067eb5f72d29fbc885ccfd19877887b3e42c7439461739.jpg" alt="Very first lightsaber design that was way too big, hard to fold and many other things…" width="812" height="1442" loading="lazy" decoding="async" />
 
-<em>Very first lightsaber design that was way too big, hard to fold and many other things…</em>
+<ArticleLegacyBlock as="p" html={"<em>Very first lightsaber design that was way too big, hard to fold and many other things…</em>"} className="medium-image-caption" />
 
-Cardboard designs possess its own set of language and expression, as well as subtleties in engineering terms, like the way it folds, how much tolerance to allocate, how much does the die stamping process affect the final product and how to account for that etc.
+<ArticleLegacyBlock as="p" html={"Cardboard designs possess its own set of language and expression, as well as subtleties in engineering terms, like the way it folds, how much tolerance to allocate, how much does the die stamping process affect the final product and how to account for that etc."} />
 
-The first few weeks were mostly me getting comfortable in working with cardboard. That said, I am still learning new aspects of the medium through every week/iteration. Having access to a laser-cutter was definitely a godsend in this highly iterative process .
+<ArticleLegacyBlock as="p" html={"The first few weeks were mostly me getting comfortable in working with cardboard. That said, I am still learning new aspects of the medium through every week/iteration. Having access to a laser-cutter was definitely a godsend in this highly iterative process ."} />
 
-There were also quite a few real-world restrictions when it comes to designing for mass production, and that was something I did not realise until Bart went through my initial designs and gave much welcomed feedback. There are well-established, time-tested ways of designing hinges, connectors etc. So it would be prudent for me to consult and use these as starting points, rather than trying to ‘innovate’, ‘experiment’, or ‘re-invent the wheel’.
+<ArticleLegacyBlock as="p" html={"There were also quite a few real-world restrictions when it comes to designing for mass production, and that was something I did not realise until Bart went through my initial designs and gave much welcomed feedback. There are well-established, time-tested ways of designing hinges, connectors etc. So it would be prudent for me to consult and use these as starting points, rather than trying to ‘innovate’, ‘experiment’, or ‘re-invent the wheel’."} />
 
-On hindsight, I think I should have probably anticipated this and asked the relevant questions to give myself better working parameters, to save time and effort.
+<ArticleLegacyBlock as="p" html={"On hindsight, I think I should have probably anticipated this and asked the relevant questions to give myself better working parameters, to save time and effort."} />
 
 {/* medium-image:1*dYaKKirH9TEnmVmQzrcYbQ.jpeg alt-decision:meaningful */}
 
-![Hand-built cardboard electronics prototype assembled with folded tabs, cut slots, blue tape and exposed wiring.](/blog-media/cda5cd62c1c7d59077421963e38e683d357ec5fe1729f5a7b49876f74f19ff09.jpg)
+<img src="/blog-media/cda5cd62c1c7d59077421963e38e683d357ec5fe1729f5a7b49876f74f19ff09.jpg" alt="Hand-built cardboard electronics prototype assembled with folded tabs, cut slots, blue tape and exposed wiring." width="2988" height="4442" loading="lazy" decoding="async" />
 
 {/* medium-image:1*t8jeQBlAOu3jy9gXlxRpMw.jpeg alt-decision:meaningful */}
 
-![Left: Blue tape is not the answer. Right: Impossible-to-connect tiny joints.](/blog-media/68c52997b9dd67ac44a80a35d7b352871d7d8d35d9d93928cd845add803663e0.jpg)
+<img src="/blog-media/68c52997b9dd67ac44a80a35d7b352871d7d8d35d9d93928cd845add803663e0.jpg" alt="Left: Blue tape is not the answer. Right: Impossible-to-connect tiny joints." width="2988" height="3850" loading="lazy" decoding="async" />
 
-<em>Left: Blue tape is not the answer. Right: Impossible-to-connect tiny joints.</em>
+<ArticleLegacyBlock as="p" html={"<em>Left: Blue tape is not the answer. Right: Impossible-to-connect tiny joints.</em>"} className="medium-image-caption" />
 
-I have also since refined my process of coming up with designs; the rough shapes, dimensions and how the folds work are all detailed out in CAD, and vector software is used for locking in the fairly intricate and repetitive fold designs. It didn’t make sense to apply absolutely everything in CAD as vector software was more well-suited for 2d-centric manipulations.
+<ArticleLegacyBlock as="p" html={"I have also since refined my process of coming up with designs; the rough shapes, dimensions and how the folds work are all detailed out in CAD, and vector software is used for locking in the fairly intricate and repetitive fold designs. It didn’t make sense to apply absolutely everything in CAD as vector software was more well-suited for 2d-centric manipulations."} />
 
-There were also a few simple techniques I picked up along the way, like the idea of designing slightly smaller holes to allow for press fit applications, eliminating all-together the need for additional design of straps or supports, which is crucial if designing for everything to fit into an A4 form factor.
+<ArticleLegacyBlock as="p" html={"There were also a few simple techniques I picked up along the way, like the idea of designing slightly smaller holes to allow for press fit applications, eliminating all-together the need for additional design of straps or supports, which is crucial if designing for everything to fit into an A4 form factor."} />
 
 {/* medium-image:1*iUq7y76YQ1FRHEVxZ7asNw.jpeg alt-decision:meaningful */}
 
-![press fit, straps and wire connector-based interlocking](/blog-media/d3af1788db11b1a86240d5eb96ce0d8a4aa3ac7b4a1ebc3f0986809d04292371.jpg)
+<img src="/blog-media/d3af1788db11b1a86240d5eb96ce0d8a4aa3ac7b4a1ebc3f0986809d04292371.jpg" alt="press fit, straps and wire connector-based interlocking" width="2415" height="3900" loading="lazy" decoding="async" />
 
-<em>press fit, straps and wire connector-based interlocking</em>
+<ArticleLegacyBlock as="p" html={"<em>press fit, straps and wire connector-based interlocking</em>"} className="medium-image-caption" />
 
 {/* medium-image:1*0IIZPmGK4uU__qqcAGO0kg.jpeg alt-decision:meaningful */}
 
-![a second design that is robust enough for handling](/blog-media/8185d7d379e7ade9afbf0b73f317bb68d73a687dd472cf6963b400050b6898cc.jpg)
+<img src="/blog-media/8185d7d379e7ade9afbf0b73f317bb68d73a687dd472cf6963b400050b6898cc.jpg" alt="a second design that is robust enough for handling" width="2988" height="5312" loading="lazy" decoding="async" />
 
-<em>a second design that is robust enough for handling</em>
+<ArticleLegacyBlock as="p" html={"<em>a second design that is robust enough for handling</em>"} className="medium-image-caption" />
 
-A cardboard design wouldn’t be complete without decent instructions, and I produced two assembly videos to experiment and get used to the process of tutorial making.
+<ArticleLegacyBlock as="p" html={"A cardboard design wouldn’t be complete without decent instructions, and I produced two assembly videos to experiment and get used to the process of tutorial making."} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/jL50DEiZi0I"} title={"lightsaber assembly demo 1"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/jL50DEiZi0I"} title={"lightsaber assembly demo 1"} description={""} captionHtml={"Lightsaber assembly video"} />
 
-Making these was quite an interesting experience, as I consume many online tutorials but haven’t really made any before. Stopping to reflect what difficulties a participant would face when assembling these was critical in determining what I need to show explicitly or slow down accordingly for clarity. And it was definitely an exercise in simplification as well.
+<ArticleLegacyBlock as="p" html={"Making these was quite an interesting experience, as I consume many online tutorials but haven’t really made any before. Stopping to reflect what difficulties a participant would face when assembling these was critical in determining what I need to show explicitly or slow down accordingly for clarity. And it was definitely an exercise in simplification as well."} />
 
-As the last week drew close, I also started to prepare some instructional manuals. As a team, we have decided to adopt IKEA’s approach, using isometric and simplified illustrations. As I have constructed the models and components in 3d, it was quite a breeze(took considerable time still) using these to create the visual materials needed.
+<ArticleLegacyBlock as="p" html={"As the last week drew close, I also started to prepare some instructional manuals. As a team, we have decided to adopt IKEA’s approach, using isometric and simplified illustrations. As I have constructed the models and components in 3d, it was quite a breeze(took considerable time still) using these to create the visual materials needed."} />
 
 {/* medium-image:1*v2U3NixVtdMnP6rsIybBiw.png alt-decision:meaningful */}
 
-![Lightsaber instruction manual](/blog-media/4103566d92aa5b97bfbe572ad39aca5910ffa0fab278bb28a3ddc10b366fd9b4.png)
+<img src="/blog-media/4103566d92aa5b97bfbe572ad39aca5910ffa0fab278bb28a3ddc10b366fd9b4.png" alt="Lightsaber instruction manual" width="1755" height="1241" loading="lazy" decoding="async" />
 
-<em>Lightsaber instruction manual</em>
+<ArticleLegacyBlock as="p" html={"<em>Lightsaber instruction manual</em>"} className="medium-image-caption" />
 
 {/* medium-image:1*8Zl1zRapJduutViCpuZ7NQ.jpeg alt-decision:meaningful */}
 
-![‘Final’ lightsaber design](/blog-media/3a09ce064c7897fbd6d0c4e55e19ae8b4cf837133f1150924a834fd729972a0b.jpg)
+<img src="/blog-media/3a09ce064c7897fbd6d0c4e55e19ae8b4cf837133f1150924a834fd729972a0b.jpg" alt="‘Final’ lightsaber design" width="2802" height="2986" loading="lazy" decoding="async" />
 
-<em>‘Final’ lightsaber design</em>
+<ArticleLegacyBlock as="p" html={"<em>‘Final’ lightsaber design</em>"} className="medium-image-caption" />
 
-At the end of week 10, most of the designs have been completed, but there is still some way to go before they can be mass produced. There is much play-testing to be done, and probably a couple of iterations before we can go ahead and have die cuts produced. Hopefully I will continue to work on these to bring them to the finish line in time to come.
+<ArticleLegacyBlock as="p" html={"At the end of week 10, most of the designs have been completed, but there is still some way to go before they can be mass produced. There is much play-testing to be done, and probably a couple of iterations before we can go ahead and have die cuts produced. Hopefully I will continue to work on these to bring them to the finish line in time to come."} />
 
 {/* medium-image:1*EJFnR9A2vcrC7SuNUJfaNg.png alt-decision:meaningful */}
 
-![Carpark gantry project](/blog-media/da65cd5c266c8ba051f2268572b194f3ea2d44c4ce06d689baa1154f48a42697.png)
+<img src="/blog-media/da65cd5c266c8ba051f2268572b194f3ea2d44c4ce06d689baa1154f48a42697.png" alt="Carpark gantry project" width="1242" height="1755" loading="lazy" decoding="async" />
 
-<em>Carpark gantry project</em>
+<ArticleLegacyBlock as="p" html={"<em>Carpark gantry project</em>"} className="medium-image-caption" />
 
 {/* medium-image:1*z0ip7BepC_pcx_mI6cDpgg.png alt-decision:meaningful */}
 
-![Surveyor wheel project](/blog-media/ca41893871b9af22160c0566b1171a2d96f6e4855e345a11099f617e22abec7f.png)
+<img src="/blog-media/ca41893871b9af22160c0566b1171a2d96f6e4855e345a11099f617e22abec7f.png" alt="Surveyor wheel project" width="1754" height="1241" loading="lazy" decoding="async" />
 
-<em>Surveyor wheel project</em>
+<ArticleLegacyBlock as="p" html={"<em>Surveyor wheel project</em>"} className="medium-image-caption" />

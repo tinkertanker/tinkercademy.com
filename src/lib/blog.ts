@@ -5,6 +5,8 @@ export const BLOG_TITLE = 'Tinkercademy Build Log';
 export const BLOG_DESCRIPTION = 'The inventions, prototypes, lessons, and company we are building at Tinkercademy.';
 export const BLOG_FEED_URL = `${BLOG_ORIGIN}/feed`;
 
+const previewBasePath = import.meta.env.BLOG_PREVIEW_BASE_PATH?.trim().replace(/\/$/u, '') || '';
+
 export type BlogStory = CollectionEntry<'blog'>;
 
 export async function getBlogStories(): Promise<BlogStory[]> {
@@ -24,4 +26,11 @@ export function formatBlogDate(date: Date): string {
 		year: 'numeric',
 		timeZone: 'UTC',
 	}).format(date);
+}
+
+export function blogHref(pathname = '/'): string {
+	if (!previewBasePath) return new URL(pathname, BLOG_ORIGIN).toString();
+	if (pathname === '/feed') return `${previewBasePath}/feed.xml`;
+	const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
+	return path === '/' ? `${previewBasePath}/` : `${previewBasePath}${path}`;
 }

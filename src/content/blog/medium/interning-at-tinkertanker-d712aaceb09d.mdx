@@ -24,6 +24,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/6b12cbeb1da5de9637127384c843061c4a0725a9b885957824cbe3f3f0e803c8.jpg
+heroImageWidth: 2400
+heroImageHeight: 911
 heroAlt: Intern farewell dinner 2017
 heroAltDecision: meaningful
 provenance:
@@ -38,86 +40,76 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-### An info packet for 2017–2018
+<ArticleLegacyBlock as="h3" html={"An info packet for 2017–2018"} />
 
-Hello! We take on interns. Here’s some information on that.
+<ArticleLegacyBlock as="p" html={"Hello! We take on interns. Here’s some information on that."} />
 
-### What do interns do?
+<ArticleLegacyBlock as="h3" html={"What do interns do?"} />
 
-We’re a small company of curious, easily-distracted folks. What this means is that someone will say, <em>“hey, lets build this!”</em>, and we’ll all go, <em>“that’s awesome let’s do itttt!”</em>, and we’ll all get to work, forget about our day jobs, and the company will run out of money.
+<ArticleLegacyBlock as="p" html={"We’re a small company of curious, easily-distracted folks. What this means is that someone will say, <em>“hey, lets build this!”</em>, and we’ll all go, <em>“that’s awesome let’s do itttt!”</em>, and we’ll all get to work, forget about our day jobs, and the company will run out of money."} />
 
-### That… didn’t answer the question at all.
+<ArticleLegacyBlock as="h3" html={"That… didn’t answer the question at all."} />
 
-Oh, umm, right. We hire interns to try and fill in these gaps: awesome little projects that everyone wants to get done. These can be(and often are) technical in nature; some are essential to the company, some are very nice-to-haves, some are probably completely unnecessary but still <em>totally awesome</em>. Like micro:bit Flappy Bird:
+<ArticleLegacyBlock as="p" html={"Oh, umm, right. We hire interns to try and fill in these gaps: awesome little projects that everyone wants to get done. These can be(and often are) technical in nature; some are essential to the company, some are very nice-to-haves, some are probably completely unnecessary but still <em>totally awesome</em>. Like micro:bit Flappy Bird:"} />
 
-<ArticleEmbed provider="twitter" href={"https://twitter.com/tinkercademy/status/888620365240389633"} title={"Tinkercademy on Twitter"} />
+<ArticleEmbed provider="twitter" href={"https://twitter.com/tinkercademy/status/888620365240389633"} title={"Tinkercademy on Twitter"} description={"It's our home-made #microbit Flappy Bird at the #sgmakerfaire arcade! Join us at the Annexe. https://t.co/8m8IrMXjMg"} captionHtml={"Look at those retweets and hearts!!!! 😍"} />
 
-Here’s the slate of potential intern projects for 2018:
+<ArticleLegacyBlock as="p" html={"Here’s the slate of potential intern projects for 2018:"} />
 
-- Software development for one of our ongoing projects: <a href="http://guestday.com">GuestDay</a>, <a href="http://icphoto.tinkertanker.com">IC Photo</a>, or our Digital Maker app. These tend to be on Rails, iOS, and Android. (We know, we know, we’ve given IC Photo Android to 5 different interns by now, we promise not to make anyone else do it again.)
-- Software development or design work for internal tools for Tinkercademy or GuestDay: an instructor allocation tool (Google Sheets+JavaScript, being migrated to Python+Django), an in-class chat tool (Node), a QR code PDF generator (Rails), a custom email sender for events (Rails), an internal inventory system (Rails, probably). Some of these are very close to done; some will need a bit of re-working; some need a fresh touch of paint (HTML, CSS, UI/UX).
-- Helping young coders develop and design educational games for very young kids. Read more about this <a href="http://appcompetition.tk.sg">here</a>.
-- Curriculum development for <a href="http://tinkercademy.com">Tinkercademy</a>: touching up and testing existing curriculum, research for new curriculum. (Somewhere out there, Colin knows way more about data science than he needs for probably all of his undergraduate studies.)
-- Front-end and design updates for our websites: <a href="http://tinkertanker.com">Tinkertanker</a>, <a href="http://tinkercademy.com">Tinkercademy</a>, <a href="http://guestday.com">GuestDay</a>, <a href="http://gethacking.com">Get Hacking</a>. HTML, CSS, JavaScript, PHP for WordPress plugins.
-- Exploratory future projects, e.g. our Input-Output “IoT programming language”.
+<ArticleLegacyBlock as="ul" items={["Software development for one of our ongoing projects: <a href=\"http://guestday.com\">GuestDay</a>, <a href=\"http://icphoto.tinkertanker.com\">IC Photo</a>, or our Digital Maker app. These tend to be on Rails, iOS, and Android. (We know, we know, we’ve given IC Photo Android to 5 different interns by now, we promise not to make anyone else do it again.)","Software development or design work for internal tools for Tinkercademy or GuestDay: an instructor allocation tool (Google Sheets+JavaScript, being migrated to Python+Django), an in-class chat tool (Node), a QR code PDF generator (Rails), a custom email sender for events (Rails), an internal inventory system (Rails, probably). Some of these are very close to done; some will need a bit of re-working; some need a fresh touch of paint (HTML, CSS, UI/UX).","Helping young coders develop and design educational games for very young kids. Read more about this <a href=\"http://appcompetition.tk.sg\">here</a>.","Curriculum development for <a href=\"http://tinkercademy.com\">Tinkercademy</a>: touching up and testing existing curriculum, research for new curriculum. (Somewhere out there, Colin knows way more about data science than he needs for probably all of his undergraduate studies.)","Front-end and design updates for our websites: <a href=\"http://tinkertanker.com\">Tinkertanker</a>, <a href=\"http://tinkercademy.com\">Tinkercademy</a>, <a href=\"http://guestday.com\">GuestDay</a>, <a href=\"http://gethacking.com\">Get Hacking</a>. HTML, CSS, JavaScript, PHP for WordPress plugins.","Exploratory future projects, e.g. our Input-Output “IoT programming language”."]} />
 
-We may also ask you to help out as an assistant instructor in classes, if you’re interested in teaching. If you’re studying in Singapore, we could probably also use your help as a freelance instructor later on. We teach classes on iOS, Android, React Native, Web (HTML, CSS, JS, Node, Rails), Unity, Arduino, data science (Python), cyber-security, robotics, and more.
+<ArticleLegacyBlock as="p" html={"We may also ask you to help out as an assistant instructor in classes, if you’re interested in teaching. If you’re studying in Singapore, we could probably also use your help as a freelance instructor later on. We teach classes on iOS, Android, React Native, Web (HTML, CSS, JS, Node, Rails), Unity, Arduino, data science (Python), cyber-security, robotics, and more."} />
 
-### What qualifications do interns need?
+<ArticleLegacyBlock as="h3" html={"What qualifications do interns need?"} />
 
-We generally hire folks who know how to code, but we do appreciate help in other areas, if you can put up with us. For 2018, we’re looking for:
+<ArticleLegacyBlock as="p" html={"We generally hire folks who know how to code, but we do appreciate help in other areas, if you can put up with us. For 2018, we’re looking for:"} />
 
-- <strong>Software engineering interns</strong>. You can code, on any platform, and have built something of your own, outside of school projects.
-- <strong>Teaching interns</strong>. You can code, on any platform; you speak well; you can empathise with beginning programmers, or explain intro concepts things really well.
-- <strong>Marketing interns</strong>. You know a bit of coding, and are willing to learn; you can write proper Englishes sentencings, unlike us.
+<ArticleLegacyBlock as="ul" items={["<strong>Software engineering interns</strong>. You can code, on any platform, and have built something of your own, outside of school projects.","<strong>Teaching interns</strong>. You can code, on any platform; you speak well; you can empathise with beginning programmers, or explain intro concepts things really well.","<strong>Marketing interns</strong>. You know a bit of coding, and are willing to learn; you can write proper Englishes sentencings, unlike us."]} />
 
-We ask that interns can commit at least 2 months of time to the internship; 3 or more would be great! This is to allow time to finish a substantial project, or realise that things are going nowhere and we should try something else.
+<ArticleLegacyBlock as="p" html={"We ask that interns can commit at least 2 months of time to the internship; 3 or more would be great! This is to allow time to finish a substantial project, or realise that things are going nowhere and we should try something else."} />
 
-### What else should interns know about you weirdos?
+<ArticleLegacyBlock as="h3" html={"What else should interns know about you weirdos?"} />
 
-These:
+<ArticleLegacyBlock as="p" html={"These:"} />
 
-- <strong>Where</strong>: The office is near Tai Seng MRT, Circle line, near Paya Lebar. You can look up <a href="https://goo.gl/maps/A3pbSCvVtcK2">Tinkertanker on Google Maps</a>. There are various Michelin-starred restaurants nearby, and hipster cafés, if those are your thing.
-- <strong>When</strong>, as in<strong> </strong>office hours: Usually 9 to 6 on weekdays, but we’re flexible on actual hours, as some of our folks come in at 12 and leave at 9, and others work on weekends. We don’t encourage remote work for interns, but e.g. if you’re helping out at a class near your home at 2pm, feel free to skip the 1-hour commute to the office in the morning.
-- <strong>Stack</strong>: We communicate on Slack (i.e. as few internal emails as possible), use Google for email/calendaring/online docs, Asana for task tracking, LastPass for password sharing.
-- <strong>Equipment</strong>: Most of us use Macs, but we can tolerate Windows if you can get your way around a command line. We have a whole workshop area with a laser cutter, saws, 3D printers, circuit printers, and wood you can saw for fun. You can also play with the toys we sell on <a href="http://gethacking.com">Get Hacking</a>.
-- <strong>Food</strong>: There’s a pantry, with a larger-than-necessary fridge. Sometimes, cake shows up inside, and we eat it without asking too many questions. We generally don’t find sawdust or solder in our food. <em>Generally</em>.
+<ArticleLegacyBlock as="ul" items={["<strong>Where</strong>: The office is near Tai Seng MRT, Circle line, near Paya Lebar. You can look up <a href=\"https://goo.gl/maps/A3pbSCvVtcK2\">Tinkertanker on Google Maps</a>. There are various Michelin-starred restaurants nearby, and hipster cafés, if those are your thing.","<strong>When</strong>, as in<strong> </strong>office hours: Usually 9 to 6 on weekdays, but we’re flexible on actual hours, as some of our folks come in at 12 and leave at 9, and others work on weekends. We don’t encourage remote work for interns, but e.g. if you’re helping out at a class near your home at 2pm, feel free to skip the 1-hour commute to the office in the morning.","<strong>Stack</strong>: We communicate on Slack (i.e. as few internal emails as possible), use Google for email/calendaring/online docs, Asana for task tracking, LastPass for password sharing.","<strong>Equipment</strong>: Most of us use Macs, but we can tolerate Windows if you can get your way around a command line. We have a whole workshop area with a laser cutter, saws, 3D printers, circuit printers, and wood you can saw for fun. You can also play with the toys we sell on <a href=\"http://gethacking.com\">Get Hacking</a>.","<strong>Food</strong>: There’s a pantry, with a larger-than-necessary fridge. Sometimes, cake shows up inside, and we eat it without asking too many questions. We generally don’t find sawdust or solder in our food. <em>Generally</em>."]} />
 
-### What do people say about their time with you?
+<ArticleLegacyBlock as="h3" html={"What do people say about their time with you?"} />
 
-Unedited:
+<ArticleLegacyBlock as="p" html={"Unedited:"} />
 
-> There’s just about too many things too awesome to list. Learnt many, many things like Laser cutting, 3D printing, hardware basics — soldering, wiring and Arduino-ing; Things I’ve never touched before in school. Developing software and curriculum was awesome too, and it’s an experience you’ll never have as a hobbyist developer.
+<ArticleLegacyBlock as="blockquote" html={"There’s just about too many things too awesome to list. Learnt many, many things like Laser cutting, 3D printing, hardware basics — soldering, wiring and Arduino-ing; Things I’ve never touched before in school. Developing software and curriculum was awesome too, and it’s an experience you’ll never have as a hobbyist developer."} />
 
-> Building things is a rewarding experience in itself. The apps I built from scratch, the hardware projects we put together, the curriculum that I had a chance to write. These are all rewarding experiences that I would otherwise never have a chance to do by myself.
+<ArticleLegacyBlock as="blockquote" html={"Building things is a rewarding experience in itself. The apps I built from scratch, the hardware projects we put together, the curriculum that I had a chance to write. These are all rewarding experiences that I would otherwise never have a chance to do by myself."} />
 
-> Learning and experience is probably the one thing interns would look for, but I have to say, there are LOTS of things that are more awesome than playing around with all the crazy tools!
+<ArticleLegacyBlock as="blockquote" html={"Learning and experience is probably the one thing interns would look for, but I have to say, there are LOTS of things that are more awesome than playing around with all the crazy tools!"} />
 
-> People is perhaps the best thing(?) I had. Everyone is knowledgeable in their own fields and extremely approachable. Anything you’re unsure of is just a shoutout across the office away. As with most start-ups, there’s no clear rank or superiority at all. Everyone is an awesome colleague and friend. Working everyday is really a joy, and I can see that from everyone. We all come into work because we want to, not because we have to.
+<ArticleLegacyBlock as="blockquote" html={"People is perhaps the best thing(?) I had. Everyone is knowledgeable in their own fields and extremely approachable. Anything you’re unsure of is just a shoutout across the office away. As with most start-ups, there’s no clear rank or superiority at all. Everyone is an awesome colleague and friend. Working everyday is really a joy, and I can see that from everyone. We all come into work because we want to, not because we have to."} />
 
-> The pantry is awesome too, and it’s always stocked with great food and drinks. Nothing like Google, but nothing short of an awesome pantry. Oh, and Oolong tea always runs out.
+<ArticleLegacyBlock as="blockquote" html={"The pantry is awesome too, and it’s always stocked with great food and drinks. Nothing like Google, but nothing short of an awesome pantry. Oh, and Oolong tea always runs out."} />
 
-> Even at the very very least, if you don’t want any of the above, I think the internship allows you to get a glimpse on how the industry works, and whether you think Computing (or whichever related fields you’re studying) is a good fit for you and your future career. For the guys too, why not spend these 6–8 months after ORD, get a bit of pocket money, yet still enjoy yourself thoroughly, before Uni starts?
+<ArticleLegacyBlock as="blockquote" html={"Even at the very very least, if you don’t want any of the above, I think the internship allows you to get a glimpse on how the industry works, and whether you think Computing (or whichever related fields you’re studying) is a good fit for you and your future career. For the guys too, why not spend these 6–8 months after ORD, get a bit of pocket money, yet still enjoy yourself thoroughly, before Uni starts?"} />
 
-(That was just one fellow.)
+<ArticleLegacyBlock as="p" html={"(That was just one fellow.)"} />
 
-> My 5 months at TT were nothing short of awesome — I got to learn and experience a lot, ranging from bashing my head on the desk writing embedded C for RTOS to teaching NA/NT classes which was really eye-opening for me. Everyone in the office is super approachable when it comes to sharing knowledge and reliable and working together on projects together has been a delight (even the frustrating work-until-10pm-the-day-before ones). Overall, I’d totally do it again, and I’m kinda sad I only got to stay 5 months!
+<ArticleLegacyBlock as="blockquote" html={"My 5 months at TT were nothing short of awesome — I got to learn and experience a lot, ranging from bashing my head on the desk writing embedded C for RTOS to teaching NA/NT classes which was really eye-opening for me. Everyone in the office is super approachable when it comes to sharing knowledge and reliable and working together on projects together has been a delight (even the frustrating work-until-10pm-the-day-before ones). Overall, I’d totally do it again, and I’m kinda sad I only got to stay 5 months!"} />
 
-One more:
+<ArticleLegacyBlock as="p" html={"One more:"} />
 
-> I would tell future interns that this is the perfect place to intern if you like trying out new things/building cannons that shoots out confetti/teaching kids how to code and more. But its definitely not a place for the faint-hearted.
+<ArticleLegacyBlock as="blockquote" html={"I would tell future interns that this is the perfect place to intern if you like trying out new things/building cannons that shoots out confetti/teaching kids how to code and more. But its definitely not a place for the faint-hearted."} />
 
-And, of course:
+<ArticleLegacyBlock as="p" html={"And, of course:"} />
 
-> I did stuff for them and got money. 5/7 would recommend doing stuff for them.
+<ArticleLegacyBlock as="blockquote" html={"I did stuff for them and got money. 5/7 would recommend doing stuff for them."} />
 
 {/* medium-image:1*qnq3vn_x4p17Iy3vzBdpkg.jpeg alt-decision:meaningful */}
 
-![Intern farewell dinner 2017](/blog-media/6b12cbeb1da5de9637127384c843061c4a0725a9b885957824cbe3f3f0e803c8.jpg)
+<img src="/blog-media/6b12cbeb1da5de9637127384c843061c4a0725a9b885957824cbe3f3f0e803c8.jpg" alt="Intern farewell dinner 2017" width="2400" height="911" loading="lazy" decoding="async" />
 
-<em>Intern farewell dinner 2017</em>
+<ArticleLegacyBlock as="p" html={"<em>Intern farewell dinner 2017</em>"} className="medium-image-caption" />
 
-### That’s it!
+<ArticleLegacyBlock as="h3" html={"That’s it!"} />
 
-Interested? <a href="mailto:hello@tinkertanker.com">Get in touch</a>.
+<ArticleLegacyBlock as="p" html={"Interested? <a href=\"mailto:hello@tinkertanker.com\">Get in touch</a>."} />

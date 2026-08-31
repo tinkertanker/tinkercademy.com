@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/ad0a6430ac4ee24040dd48dd5aeea096f7000ee58141adf7a9d9c8271fd9e187.jpg
+heroImageWidth: 1600
+heroImageHeight: 900
 heroAlt: “Prototype” light stick with an external battery case. Not my finest work…
 heroAltDecision: meaningful
 provenance:
@@ -39,47 +41,51 @@ migration:
   altReviewRequired: 0
 ---
 
-<em><strong>Editor’s note</strong></em><em>: Read </em><em><a href="https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015">Part 1</a></em><em> and </em><em><a href="https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb">Part 2</a></em><em> first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale, </em><em><a href="http://nomorefreespace.com">No More Free Space</a></em><em>, a project we undertook in collaboration with the Singapore University of Technology &amp; Design.</em>
+<p><em><strong>Editor’s note</strong></em><em>: Read </em><em><a href="https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015">Part 1</a></em><em> and </em><em><a href="https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb">Part 2</a></em><em> first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale, </em><em><a href="http://nomorefreespace.com">No More Free Space</a></em><em>, a project we undertook in collaboration with the Singapore University of Technology &amp; Design.</em></p>
 
-<em>Also editor’s note: Taking over on this story is Melvin, a brilliant young intern who’s starting out at the Nanyang Technological University in the fall of 2018. Read more on what he did for this project:</em>
+<p><em>Also editor’s note: Taking over on this story is Melvin, a brilliant young intern who’s starting out at the Nanyang Technological University in the fall of 2018. Read more on what he did for this project:</em></p>
 
-In March 2018, I had the opportunity to join <a href="http://tinkertanker.com">Tinkertanker</a>, an edutech startup (or so I thought), as an intern. Expecting to attend classes or write tutorials, I was quickly tasked to do R&amp;D by testing various sensors for “Light Sticks” for the Singapore pavilion for an bi-annual architecture exhibition, the Venice Biennale.
+<p>In March 2018, I had the opportunity to join <a href="http://tinkertanker.com">Tinkertanker</a>, an edutech startup (or so I thought), as an intern. Expecting to attend classes or write tutorials, I was quickly tasked to do R&amp;D by testing various sensors for “Light Sticks” for the Singapore pavilion for an bi-annual architecture exhibition, the Venice Biennale.</p>
 
-This year’s exhibition required 2 types of lights, a computer controlled light panel that would display sequences, and small light sticks that that would respond to the exhibit goers presence. Tinkertanker was contracted to design, manufacture, and program these lights.
+<p>This year’s exhibition required 2 types of lights, a computer controlled light panel that would display sequences, and small light sticks that that would respond to the exhibit goers presence. Tinkertanker was contracted to design, manufacture, and program these lights.</p>
 
-The candidate sensors ranged from simple PIRs (passive infrared receivers), to complex laser range-finders. Even though I’d done electronics as a hobby, this was the my first time really digging deep into the data sheets and testing components meticulously. I had to figure out the electrical characteristics—operating voltage, pinouts—and functional characteristics, e.g. time-out period, and determine which sensor to use.
+<p>The candidate sensors ranged from simple PIRs (passive infrared receivers), to complex laser range-finders. Even though I’d done electronics as a hobby, this was the my first time really digging deep into the data sheets and testing components meticulously. I had to figure out the electrical characteristics—operating voltage, pinouts—and functional characteristics, e.g. time-out period, and determine which sensor to use.</p>
 
 <!-- medium-image:1*6BjZSDJHEHJjZSIqJ_a9yA.png alt-decision:meaningful -->
 
-![Some of the sensors tested. Note to future self: Check polarity…unless you want to breathe in magic smoke and destroy half of the samples you were given to test.. ahem.](/blog-media/056c3c46010f1e67e00ff5d1b697cdae847180639cbfa03a71763f713be1c117.png)
+<img src="/blog-media/056c3c46010f1e67e00ff5d1b697cdae847180639cbfa03a71763f713be1c117.png" alt="Some of the sensors tested. Note to future self: Check polarity…unless you want to breathe in magic smoke and destroy half of the samples you were given to test.. ahem." width="1042" height="655" loading="lazy" decoding="async" />
 
-<em>Some of the sensors tested. Note to future self: Check polarity…unless you want to breathe in magic smoke and destroy half of the samples you were given to test.. ahem.</em>
+<p class="medium-image-caption"><em>Some of the sensors tested.<strong> </strong>Note to future self: Check polarity…unless you want to breathe in magic smoke and destroy half of the samples you were given to test.. ahem<strong>.</strong></em></p>
 
-Surprisingly, the PIR from Aliexpress—the most affordable one!—won the sensor shootout due to the following reasons:
+<p>Surprisingly, the PIR from Aliexpress—the most affordable one!—won the sensor shootout due to the following reasons:</p>
 
-1. It was a standalone unit, so there was no need for an active element (such as infrared LEDs, lasers) at some other part of the structure or light stick;
-2. Its size was perfect for the acrylic housing; and
-3. It had the best time-out period, which was neither too slow or too fast.
+<ol>
+<li>It was a standalone unit, so there was no need for an active element (such as infrared LEDs, lasers) at some other part of the structure or light stick;</li>
+<li>Its size was perfect for the acrylic housing; and</li>
+<li>It had the best time-out period, which was neither too slow or too fast.</li>
+</ol>
 
-## Making the Light Stick Prototype
+<h2>Making the Light Stick Prototype</h2>
 
-I thought making the light sticks were going to be a piece of cake. Just some batteries, LEDs and sensors, right? Furthermore, the acrylic tube we decided to use was a perfect fit for the AAA batteries and PIR sensors. It seemed like I didn’t have to do much. We just needed 2 wires along the length of the light stick:
+<p>I thought making the light sticks were going to be a piece of cake. Just some batteries, LEDs and sensors, right? Furthermore, the acrylic tube we decided to use was a perfect fit for the AAA batteries and PIR sensors. It seemed like I didn’t have to do much. We just needed 2 wires along the length of the light stick:</p>
 
-1. A wire to connect the –ve terminal of the batteries to the the ground pin of the sensor
-2. A wire to connect the signal pin on the PIR to the –ve pin of the LED.
+<ol>
+<li>A wire to connect the –ve terminal of the batteries to the the ground pin of the sensor</li>
+<li>A wire to connect the signal pin on the PIR to the –ve pin of the LED.</li>
+</ol>
 
 <!-- medium-image:1*L30kMamSax-lEiMPI_SQvw.jpeg alt-decision:meaningful -->
 
-![Building a ship in a bottle is hard! Source.](/blog-media/f6dd282a56018707e8a74c3e3224b3310414fe9e01ddeb33347685e707059bbb.jpg)
+<img src="/blog-media/f6dd282a56018707e8a74c3e3224b3310414fe9e01ddeb33347685e707059bbb.jpg" alt="Building a ship in a bottle is hard! Source." width="516" height="344" loading="lazy" decoding="async" />
 
-<em>Building a ship in a bottle is hard! Source.</em>
+<p class="medium-image-caption"><em>Building a ship in a bottle is hard!<strong> </strong><a href="http://www.instructables.com/id/Building-A-Ship-In-A-Bottle/">Source</a>.</em></p>
 
-However, I soon found out that making these light sticks was like building a ship in a bottle. Since it was such a tight fit, it was surprisingly difficult to keep the wiring flush with the acrylic tube. A little force would fray the wires or rip out the solder parts. After spending a whole day making a single slick prototype, I decided to make the frankenstein of a light stick pictured below.
+<p>However, I soon found out that making these light sticks was like building a ship in a bottle. Since it was such a tight fit, it was surprisingly difficult to keep the wiring flush with the acrylic tube. A little force would fray the wires or rip out the solder parts. After spending a whole day making a single slick prototype, I decided to make the frankenstein of a light stick pictured below.</p>
 
 <!-- medium-image:0*zetPGtD4g-8secSJ alt-decision:meaningful -->
 
-![“Prototype” light stick with an external battery case. Not my finest work…](/blog-media/ad0a6430ac4ee24040dd48dd5aeea096f7000ee58141adf7a9d9c8271fd9e187.jpg)
+<img src="/blog-media/ad0a6430ac4ee24040dd48dd5aeea096f7000ee58141adf7a9d9c8271fd9e187.jpg" alt="“Prototype” light stick with an external battery case. Not my finest work…" width="1600" height="900" loading="lazy" decoding="async" />
 
-<em>“Prototype” light stick with an external battery case. Not my finest work…</em>
+<p class="medium-image-caption"><em>“Prototype” light stick with an external battery case. Not my finest work…</em></p>
 
-Since it was much easier to manufacture, we could make multiple sticks to test if the lights “followed” the user, the critical function we needed to test anyway. After which, I switched to developing the light panels while the light sticks would be completed by Sarah and Steven (Spoiler alert: it turned out awesome in the end — read about it in the <a href="https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7">next post</a>!).
+<p>Since it was much easier to manufacture, we could make multiple sticks to test if the lights “followed” the user, the critical function we needed to test anyway. After which, I switched to developing the light panels while the light sticks would be completed by Sarah and Steven (Spoiler alert: it turned out awesome in the end — read about it in the <a href="https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7">next post</a>!).</p>

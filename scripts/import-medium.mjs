@@ -13,7 +13,6 @@ import {
 	classifyEmbedProvider,
 	normaliseMediumStory,
 	renderInlineHtml,
-	rewriteInternalStoryHref,
 	sha256,
 } from './lib/medium.mjs';
 import {
@@ -196,8 +195,12 @@ function imageAltDecision(paragraph) {
 	return { decision: 'review-required', alt: '', source: null };
 }
 
-function escapeMarkdownImageAlt(value) {
-	return value.replaceAll('\\', '\\\\').replaceAll('[', '\\[').replaceAll(']', '\\]');
+function escapeHtmlAttribute(value) {
+	return String(value)
+		.replaceAll('&', '&amp;')
+		.replaceAll('"', '&quot;')
+		.replaceAll('<', '&lt;')
+		.replaceAll('>', '&gt;');
 }
 
 function escapeCodeFence(text) {
@@ -205,16 +208,18 @@ function escapeCodeFence(text) {
 	return '`'.repeat(Math.max(3, longest + 1));
 }
 
-function quoteMarkdown(value) {
-	return value.split('\n').map((line) => `> ${line}`).join('\n');
-}
-
-function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions }) {
+function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions, usesMdx }) {
 	const blocks = [];
 	const altDecisions = [];
 	let embedCount = 0;
 	let skippedTitle = false;
 	let index = 0;
+	const block = (as, html, className = null) => usesMdx
+		? `<ArticleLegacyBlock as="${as}" html={${JSON.stringify(html)}}${className ? ` className="${className}"` : ''} />`
+		: `<${as}${className ? ` class="${className}"` : ''}>${html}</${as}>`;
+	const listBlock = (as, items) => usesMdx
+		? `<ArticleLegacyBlock as="${as}" items={${JSON.stringify(items)}} />`
+		: `<${as}>\n${items.map((item) => `<li>${item}</li>`).join('\n')}\n</${as}>`;
 
 	while (index < story.paragraphs.length) {
 		const paragraph = story.paragraphs[index];
@@ -230,19 +235,20 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 			const type = paragraph.type;
 			const items = [];
 			while (index < story.paragraphs.length && story.paragraphs[index].type === type) {
-				items.push(`${type === 9 ? '-' : `${items.length + 1}.`} ${renderInlineHtml(story.paragraphs[index], pathsById, usersById)}`);
+				items.push(renderInlineHtml(story.paragraphs[index], pathsById, usersById));
 				index += 1;
 			}
-			blocks.push(items.join('\n'));
+			const listTag = type === 9 ? 'ul' : 'ol';
+			blocks.push(listBlock(listTag, items));
 			continue;
 		}
 
 		switch (paragraph.type) {
 			case 1:
-				blocks.push(inline());
+				blocks.push(block('p', inline()));
 				break;
 			case 3:
-				blocks.push(`## ${inline()}`);
+				blocks.push(block('h2', inline()));
 				break;
 			case 4: {
 				const asset = assetsById.get(paragraph.metadata?.id);
@@ -265,16 +271,16 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 					: `<!-- medium-image:${paragraph.metadata.id} alt-decision:${alt.decision} -->`;
 				const lines = [
 					imageComment,
-					`![${escapeMarkdownImageAlt(alt.alt)}](${asset.localPath})`,
+					`<img src="${asset.localPath}" alt="${escapeHtmlAttribute(alt.alt)}" width="${asset.width}" height="${asset.height}" loading="lazy" decoding="async" />`,
 				];
-				if (paragraph.text?.trim()) lines.push(`<em>${renderInlineHtml({ text: paragraph.text, markups: [] }, pathsById)}</em>`);
-				if (alt.credit) lines.push(`<em>Credit: ${renderInlineHtml({ text: alt.credit, markups: [] }, pathsById)}</em>`);
+				if (paragraph.text?.trim()) lines.push(block('p', `<em>${renderInlineHtml(paragraph, pathsById, usersById)}</em>`, 'medium-image-caption'));
+				if (alt.credit) lines.push(block('p', `<em>Credit: ${renderInlineHtml({ text: alt.credit, markups: [] }, pathsById)}</em>`, 'medium-image-credit'));
 				blocks.push(lines.join('\n\n'));
 				break;
 			}
 			case 6:
 			case 7:
-				blocks.push(quoteMarkdown(inline()));
+				blocks.push(block('blockquote', inline()));
 				break;
 			case 8: {
 				const fence = escapeCodeFence(paragraph.text || '');
@@ -287,16 +293,14 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 				const media = mediaById.get(resourceId);
 				if (!media) throw new Error(`No cached embed metadata for ${resourceId}`);
 				embedCount += 1;
-				blocks.push(`<ArticleEmbed provider="${media.provider}" href={${JSON.stringify(media.href)}} title={${JSON.stringify(media.title || paragraph.text || 'Embedded media')}} />`);
+				blocks.push(`<ArticleEmbed provider="${media.provider}" href={${JSON.stringify(media.href)}} title={${JSON.stringify(media.title || 'Embedded media')}} description={${JSON.stringify(media.description)}} captionHtml={${JSON.stringify(renderInlineHtml(paragraph, pathsById, usersById))}} />`);
 				break;
 			}
 			case 13:
-				blocks.push(`### ${inline()}`);
+				blocks.push(block('h3', inline()));
 				break;
 			case 14: {
-				const href = rewriteInternalStoryHref(paragraph.mixtapeMetadata?.href, pathsById);
-				const title = paragraph.text?.split('\n')[0] || href;
-				blocks.push(quoteMarkdown(`<a href="${href}">${title}</a>`));
+				blocks.push(block('aside', inline(), 'article-link-card'));
 				break;
 			}
 			default:
@@ -364,7 +368,8 @@ async function main() {
 	let renderedParagraphs = 0;
 
 	for (const story of stories) {
-		const rendered = renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions });
+		const usesMdx = story.embeds.length > 0;
+		const rendered = renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions, usesMdx });
 		altReviewRequired += rendered.altDecisions.filter(({ decision }) => decision === 'review-required').length;
 		const rightsStatus = applyRightsReview(story.rightsStatus, reviewDecisions.rights[story.legacyPath]);
 		if (rightsStatus === 'review-required') rightsReviewRequired += 1;
@@ -393,6 +398,8 @@ async function main() {
 			license: story.license,
 			rightsStatus,
 			heroImage: featuredAsset?.localPath,
+			heroImageWidth: featuredAsset?.width,
+			heroImageHeight: featuredAsset?.height,
 			heroAlt: featuredDecision?.alt,
 			heroAltDecision: featuredDecision?.decision,
 			provenance: {
@@ -407,8 +414,9 @@ async function main() {
 				altReviewRequired: rendered.altDecisions.filter(({ decision }) => decision === 'review-required').length,
 			},
 		};
-		const usesMdx = rendered.embedCount > 0;
-		const importLine = usesMdx ? "\nimport ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';\n" : '';
+		const importLine = usesMdx
+			? "\nimport ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';\nimport ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';\n"
+			: '';
 		const contents = `${yamlFrontmatter(frontmatter)}${importLine}\n${rendered.body.trim()}\n`;
 		const filename = `${story.legacyPath}.${usesMdx ? 'mdx' : 'md'}`;
 		contentFiles.push({ filename, contents });

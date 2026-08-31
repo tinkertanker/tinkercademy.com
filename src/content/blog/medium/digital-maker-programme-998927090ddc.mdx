@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/2497d86a45cd1128646fa260ed6fe85025da059c77a72d5e443ec52d37b50fac.jpg
+heroImageWidth: 2900
+heroImageHeight: 1226
 heroAlt: One of our first micro:bit-powered robots, which has since wandered into some corner of the office. We’ll find you one day, kiddo!
 heroAltDecision: meaningful
 provenance:
@@ -40,57 +42,58 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-### Behind the scenes of the Digital Maker Programme
+<ArticleLegacyBlock as="h3" html={"Behind the scenes of the Digital Maker Programme"} />
 
 {/* medium-image:1*jW_bDqPoTk8MpBTmCE7SWw.jpeg alt-decision:meaningful */}
 
-![One of our first micro:bit-powered robots, which has since wandered into some corner of the office. We’ll find you one day, kiddo!](/blog-media/2497d86a45cd1128646fa260ed6fe85025da059c77a72d5e443ec52d37b50fac.jpg)
+<img src="/blog-media/2497d86a45cd1128646fa260ed6fe85025da059c77a72d5e443ec52d37b50fac.jpg" alt="One of our first micro:bit-powered robots, which has since wandered into some corner of the office. We’ll find you one day, kiddo!" width="2900" height="1226" loading="lazy" decoding="async" />
 
-<em>One of our first micro:bit-powered robots, which has since wandered into some corner of the office. We’ll find you one day, kiddo!</em>
+<ArticleLegacyBlock as="p" html={"<em>One of our first micro:bit-powered robots, which has since wandered into some corner of the office. We’ll find you one day, kiddo!</em>"} className="medium-image-caption" />
 
-Since the beginning of the year, we’ve been working with the Infocomm Media Development Authority of Singapore to launch the <a href="http://www.digitalmaker.sg">Digital Maker Programme</a>. The programme aims to take thousands of BBC micro:bits, fling them at anyone with a pulse, and see what awesome things people come up with. (We might have paraphrased a little here.)
+<ArticleLegacyBlock as="p" html={"Since the beginning of the year, we’ve been working with the Infocomm Media Development Authority of Singapore to launch the <a href=\"http://www.digitalmaker.sg\">Digital Maker Programme</a>. The programme aims to take thousands of BBC micro:bits, fling them at anyone with a pulse, and see what awesome things people come up with. (We might have paraphrased a little here.)"} />
 
-In all seriousness, we do feel very strongly about the programme, and care deeply about what it’s actually<em> </em>trying to achieve, which is to introduce a new, meaningful kind of creative digital literacy in the public. It’s the feeling that learners get when they start coding and tinkering—of empowerment, of <em>“hey, I can do this!”</em>, of wanting to make something of their own—that spurs them to go on to learn more and <a href="http://www.instructables.com/id/Homemade-Arcade-Cabinet/">spend hundreds of hours making ridiculous home-made arcade cabinets</a>.
+<ArticleLegacyBlock as="p" html={"In all seriousness, we do feel very strongly about the programme, and care deeply about what it’s actually<em> </em>trying to achieve, which is to introduce a new, meaningful kind of creative digital literacy in the public. It’s the feeling that learners get when they start coding and tinkering—of empowerment, of <em>“hey, I can do this!”</em>, of wanting to make something of their own—that spurs them to go on to learn more and <a href=\"http://www.instructables.com/id/Homemade-Arcade-Cabinet/\">spend hundreds of hours making ridiculous home-made arcade cabinets</a>."} />
 
-We’ve spent the better part of this year up to our knees in micro:bits and electronic parts, and we’d like to take some time to share what we’re doing for this programme.
+<ArticleLegacyBlock as="p" html={"We’ve spent the better part of this year up to our knees in micro:bits and electronic parts, and we’d like to take some time to share what we’re doing for this programme."} />
 
-First, we’ve created our very own <a href="https://gethacking.com/collections/micro-bit">micro:bit kits</a> for our classes and for sale to the public. We developed a custom Breakout Board, in collaboration with <a href="https://sciencescope.uk/">ScienceScope UK</a>, to make connecting external components (affordable Octopus bricks) a breeze for beginners and experienced tinkerers, and we’re building custom kits for all age groups and experience levels. Links below go to our <a href="http://tinkercademy.com">Tinkercademy</a> micro:bit info page, and our <a href="http://gethacking.com">Get Hacking</a> micro:bit store.
+<ArticleLegacyBlock as="p" html={"First, we’ve created our very own <a href=\"https://gethacking.com/collections/micro-bit\">micro:bit kits</a> for our classes and for sale to the public. We developed a custom Breakout Board, in collaboration with <a href=\"https://sciencescope.uk/\">ScienceScope UK</a>, to make connecting external components (affordable Octopus bricks) a breeze for beginners and experienced tinkerers, and we’re building custom kits for all age groups and experience levels. Links below go to our <a href=\"http://tinkercademy.com\">Tinkercademy</a> micro:bit info page, and our <a href=\"http://gethacking.com\">Get Hacking</a> micro:bit store."} />
 
-> <a href="http://tinkercademy.com/microbit">Tinkercademy micro:bit info page</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"http://tinkercademy.com/microbit\"><strong>Tinkercademy micro:bit info page</strong></a><a href=\"http://tinkercademy.com/microbit\"><br /></a><a href=\"http://tinkercademy.com/microbit\"><em>We developed our very own Breakout Board and kit for the micro:bit. Find out how to use the kit, and read about our projects here! </em></a><a href=\"http://tinkercademy.com/microbit\">tinkercademy.com</a>"} className="article-link-card" />
 
-> <a href="https://gethacking.com/collections/microbit">Get Hacking with the Tinkercademy microbit collection</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"https://gethacking.com/collections/microbit\"><strong>Get Hacking with the Tinkercademy microbit collection</strong></a><a href=\"https://gethacking.com/collections/microbit\"><br /></a><a href=\"https://gethacking.com/collections/microbit\"><em>Become Digital Makers with our microbit kits and components!</em></a><a href=\"https://gethacking.com/collections/microbit\">gethacking.com</a>"} className="article-link-card" />
 
-Second, we’re bringing the micro:bit, intro coding, electronics prototyping, and digital making into classrooms, with classes for students through the <a href="https://tinkercademy.com/programmes/code-for-fun/">Code for Fun</a> programme, and for teachers through Microsoft Singapore.
+<ArticleLegacyBlock as="p" html={"Second, we’re bringing the micro:bit, intro coding, electronics prototyping, and digital making into classrooms, with classes for students through the <a href=\"https://tinkercademy.com/programmes/code-for-fun/\">Code for Fun</a> programme, and for teachers through Microsoft Singapore."} />
 
-<ArticleEmbed provider="instagram" href={"https://www.instagram.com/p/BUxrB2NgtSW/?taken-by=tinkercademy"} title={"Sorting a mess of parts at @digitalmakersg #microbit teacher training this week. So many parts! Thanks to all the teachers who joined us, Microsoft for hosting, and IMDA for organising."} />
+<ArticleEmbed provider="instagram" href={"https://www.instagram.com/p/BUxrB2NgtSW/?taken-by=tinkercademy"} title={"Sorting a mess of parts at @digitalmakersg #microbit teacher training this week. So many parts! Thanks to all the teachers who joined us, Microsoft for hosting, and IMDA for organising."} description={"12 Likes, 1 Comments - Tinkercademy (@tinkercademy) on Instagram: \"Sorting a mess of parts at @digitalmakersg #microbit teacher training this week. So many parts!...\""} captionHtml={""} />
 
-Third, we’re bringing interactive micro:bit projects to community events such as <a href="http://www.techsaturday.sg">Tech Saturday</a>, <a href="http://nationalmuseum.sg/programmes/programme-list/childrens-season-at-the-national-museum-2017">Children’s Season at the National Museum</a>, and <a href="http://makerfairesingapore.com/">Singapore Maker Faire 2017</a>. You may have seen the programmable robots and air cannons—come by Science Centre on 22 &amp; 23 July for Maker Faire to see a digital maker extravaganza.
+<ArticleLegacyBlock as="p" html={"Third, we’re bringing interactive micro:bit projects to community events such as <a href=\"http://www.techsaturday.sg\">Tech Saturday</a>, <a href=\"http://nationalmuseum.sg/programmes/programme-list/childrens-season-at-the-national-museum-2017\">Children’s Season at the National Museum</a>, and <a href=\"http://makerfairesingapore.com/\">Singapore Maker Faire 2017</a>. You may have seen the programmable robots and air cannons—come by Science Centre on 22 &amp; 23 July for Maker Faire to see a digital maker extravaganza."} />
 
 {/* medium-image:1*5-a8TyUL4cGD_leVUJXStw.jpeg alt-decision:meaningful */}
 
-![“How old are you? 3 years old? Maybe you can’t code this yet, but here, hold this soldering iron…”](/blog-media/b47fe7162b02231b94143769762569b85b5811d6587e89d6a4f8678e6d01c50c.jpg)
+<img src="/blog-media/b47fe7162b02231b94143769762569b85b5811d6587e89d6a4f8678e6d01c50c.jpg" alt="“How old are you? 3 years old? Maybe you can’t code this yet, but here, hold this soldering iron…”" width="2933" height="1781" loading="lazy" decoding="async" />
 
-<em>“How old are you? 3 years old? Maybe you can’t code this yet, but here, hold this soldering iron…”</em>
+<ArticleLegacyBlock as="p" html={"<em>“How old are you? 3 years old? Maybe you can’t code this yet, but here, hold this soldering iron…”</em>"} className="medium-image-caption" />
 
-Fourth, we’ve written, and are refining, iOS and Android apps for our micro:bit tutorials. You can download them to try—please send us your feedback!
+<ArticleLegacyBlock as="p" html={"Fourth, we’ve written, and are refining, iOS and Android apps for our micro:bit tutorials. You can download them to try—please send us your feedback!"} />
 
-> <a href="https://itunes.apple.com/sg/app/get-hacking-on-electronics-with-micro-bit/id1214152554?mt=8">Get Hacking on electronics with micro:bit on the App Store</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"https://itunes.apple.com/sg/app/get-hacking-on-electronics-with-micro-bit/id1214152554?mt=8\"><strong>Get Hacking on electronics with micro:bit on the App Store</strong></a><a href=\"https://itunes.apple.com/sg/app/get-hacking-on-electronics-with-micro-bit/id1214152554?mt=8\"><br /></a><a href=\"https://itunes.apple.com/sg/app/get-hacking-on-electronics-with-micro-bit/id1214152554?mt=8\"><em>Read reviews, compare customer ratings, see screenshots and learn more about Get Hacking on electronics with micro:bit…</em></a><a href=\"https://itunes.apple.com/sg/app/get-hacking-on-electronics-with-micro-bit/id1214152554?mt=8\">itunes.apple.com</a>"} className="article-link-card" />
 
-> <a href="https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms">Get Hacking - Android Apps on Google Play</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\"><strong>Get Hacking - Android Apps on Google Play</strong></a><a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\"><br /></a><a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\"><em>Get Hacking with the micro:bit!</em></a><a href=\"https://play.google.com/store/apps/details?id=com.tinkertanker.tanjinyi.androidmicrobitcms\">play.google.com</a>"} className="article-link-card" />
 
-Finally, our most ambitious project to date: <strong>we’re writing a new block-based programming language for makers</strong>. Here’s the premise: <em>You shouldn’t have to know how to code to make simple input-output devices using micro-controllers like Arduino or micro:bit. Why can’t you just fit an input with an output, and have things work as expected?</em> Soon, with our new language, you’ll be able to. (We hope. Fingers crossed!)
+<ArticleLegacyBlock as="p" html={"Finally, our most ambitious project to date: <strong>we’re writing a new block-based programming language for makers</strong>. Here’s the premise: <em>You shouldn’t have to know how to code to make simple input-output devices using micro-controllers like Arduino or micro:bit. Why can’t you just fit an input with an output, and have things work as expected?</em> Soon, with our new language, you’ll be able to. (We hope. Fingers crossed!)"} />
 
-(Also, this is the project we alluded to in our <a href="https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1">first post</a>, where the technology stack is “a healthy mix of C++, JavaScript, and staring at one another suspiciously”.)
+<ArticleLegacyBlock as="p" html={"(Also, this is the project we alluded to in our <a href=\"https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1\">first post</a>, where the technology stack is “a healthy mix of C++, JavaScript, and staring at one another suspiciously”.)"} />
 
-In closing, here’s the quote we provided for IMDA’s press release. We normally write these up two minutes before the deadline, then hope nobody notices we sent unintelligible garblish, but this one actually sums up our goals for this programme:
+<ArticleLegacyBlock as="p" html={"In closing, here’s the quote we provided for IMDA’s press release. We normally write these up two minutes before the deadline, then hope nobody notices we sent unintelligible garblish, but this one actually sums up our goals for this programme:"} />
 
-> We love tinkering with technology and like to share this joy with others. Through conducting coding and electronics classes over the past 6 years, we have met many kids and adults who were really excited about making with technology, but wish they didn’t have to <strong>first</strong> wrap their head around coding. The Digital Maker programme and the micro:bit present a unique opportunity for us to create a set of tools that addresses this by allowing coders and non-coders alike to get down to digital making right away.
+<ArticleLegacyBlock as="blockquote" html={"We love tinkering with technology and like to share this joy with others. Through conducting coding and electronics classes over the past 6 years, we have met many kids and adults who were really excited about making with technology, but wish they didn’t have to <strong>first</strong> wrap their head around coding. The Digital Maker programme and the micro:bit present a unique opportunity for us to create a set of tools that addresses this by allowing coders and non-coders alike to get down to digital making right away."} />
 
-So that’s what we’ve been up to lately. Questions? Comments? Suggestions? Puzzled glances? Please get in touch at <a href="mailto:hello@tinkertanker.com">hello@tinkertanker.com</a>! We check our email when we aren’t lost in a pile of parts, or trying to put out fires from the laser cutter.
+<ArticleLegacyBlock as="p" html={"So that’s what we’ve been up to lately. Questions? Comments? Suggestions? Puzzled glances? Please get in touch at <a href=\"mailto:hello@tinkertanker.com\">hello@tinkertanker.com</a>! We check our email when we aren’t lost in a pile of parts, or trying to put out fires from the laser cutter."} />
 
 {/* medium-image:1*TV8NnnfmkAMUiNlN9OTxwA.jpeg alt-decision:meaningful */}
 
-![The micro:bit with Breakout Board and a… fan you control using two glasses of water, maybe? We dunno ¯\\_(ツ)_/¯](/blog-media/7c17feac160ab4bf7c3e24f5eb72ad01c8384e3b82ce4e6d8dfacecd87bcea64.jpg)
+<img src="/blog-media/7c17feac160ab4bf7c3e24f5eb72ad01c8384e3b82ce4e6d8dfacecd87bcea64.jpg" alt="The micro:bit with Breakout Board and a… fan you control using two glasses of water, maybe? We dunno ¯\_(ツ)_/¯" width="1380" height="631" loading="lazy" decoding="async" />
 
-<em>The micro:bit with Breakout Board and a… fan you control using two glasses of water, maybe? We dunno ¯\_(ツ)_/¯</em>
+<ArticleLegacyBlock as="p" html={"<em>The micro:bit with Breakout Board and a… fan you control using two glasses of water, maybe? We dunno ¯\\_(ツ)_/¯</em>"} className="medium-image-caption" />

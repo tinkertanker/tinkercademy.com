@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: organisation-owned
 heroImage: /blog-media/37dc8e72b73b9b45e47af97b6b4870ae17f524dd9fde238da099cbe96ae28f0c.gif
+heroImageWidth: 640
+heroImageHeight: 360
 heroAlt: Simple 2D Platformer game made by our students
 heroAltDecision: meaningful
 provenance:
@@ -41,80 +43,80 @@ migration:
 
 <!-- medium-image:1*Wl6wISZQxZdf8xiCbt-kMQ.gif alt-decision:meaningful -->
 
-![Simple 2D Platformer game made by our students](/blog-media/37dc8e72b73b9b45e47af97b6b4870ae17f524dd9fde238da099cbe96ae28f0c.gif)
+<img src="/blog-media/37dc8e72b73b9b45e47af97b6b4870ae17f524dd9fde238da099cbe96ae28f0c.gif" alt="Simple 2D Platformer game made by our students" width="640" height="360" loading="lazy" decoding="async" />
 
-<em>Simple 2D Platformer game made by our students</em>
+<p class="medium-image-caption"><em>Simple 2D Platformer game made by our students</em></p>
 
-Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks’ School, carrying laptops, water bottles and an eager mind for learning a new, much-coveted skill — <strong>Game Development in Unity</strong>. It was finally time for our <strong>(Tinkercademy’s) Unity Bootcamp</strong>.
+<p>Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks’ School, carrying laptops, water bottles and an eager mind for learning a new, much-coveted skill — <strong>Game Development in Unity</strong>. It was finally time for our <strong>(Tinkercademy’s) Unity Bootcamp</strong>.</p>
 
-For those who have not heard of <a href="https://unity.com/">Unity</a> before, Unity is a powerful game development engine that enables users to build immersive and interactive 2D and 3D games, virtual realities (VR), augmented realities (AR), and much much more….
+<p>For those who have not heard of <a href="https://unity.com/">Unity</a> before, Unity is a powerful game development engine that enables users to build immersive and interactive 2D and 3D games, virtual realities (VR), augmented realities (AR), and much much more….</p>
 
-We’ve been teaching Unity to teenagers for over a decade now. As you can probably guess, getting easily-distracted teenagers to learn coding through video game creation has turned out to be a game-changer (pun intended).
+<p>We’ve been teaching Unity to teenagers for over a decade now. As you can probably guess, getting easily-distracted teenagers to learn coding through video game creation has turned out to be a game-changer (pun intended).</p>
 
-Usually, our Unity course stretches across months. This time around, however, we decided to teach the essentials of Unity in just 5 days — lo and behold, our Unity Bootcamp was born.
+<p>Usually, our Unity course stretches across months. This time around, however, we decided to teach the essentials of Unity in just 5 days — lo and behold, our Unity Bootcamp was born.</p>
 
-Hailing from various schools, including St Joseph’s Institution, Dunearn Secondary School, Temasek Junior College, and many more, each teenager arrived for our bootcamp at the computer labs of St Patrick’s School.
+<p>Hailing from various schools, including St Joseph’s Institution, Dunearn Secondary School, Temasek Junior College, and many more, each teenager arrived for our bootcamp at the computer labs of St Patrick’s School.</p>
 
-## At the beginning
+<h2>At the beginning</h2>
 
-The goal was simple: Get students making with Unity so that they’re confident enough to make whatever they wanted.
+<p>The goal was simple: Get students making with Unity so that they’re confident enough to make whatever they wanted.</p>
 
-Before the bootcamp began, we asked the teenagers seated around us about their reasons for joining the camp.
+<p>Before the bootcamp began, we asked the teenagers seated around us about their reasons for joining the camp.</p>
 
-“I’m a gamer. So, I was curious about how games are made,” a teenager from Temasek Junior College admitted, who was seated next to her two pals from the same school.
+<p>“I’m a gamer. So, I was curious about how games are made,” a teenager from Temasek Junior College admitted, who was seated next to her two pals from the same school.</p>
 
-We received many of such responses making it clear that the room was filled with avid fans of video games! However, for some, this wasn’t the only reason they had chosen to forego a week of their school holidays.
+<p>We received many of such responses making it clear that the room was filled with avid fans of video games! However, for some, this wasn’t the only reason they had chosen to forego a week of their school holidays.</p>
 
-For instance, the response we received from a St. Joseph’s Institution student left us astounded, amused, and amazed.
+<p>For instance, the response we received from a St. Joseph’s Institution student left us astounded, amused, and amazed.</p>
 
-“I’ve been dabbling with Python for a while now. I joined this bootcamp to … gather more skills…” he chuckled as he opened up the Unity Game Engine and proceeded to tinker with the various interface controls.
+<p>“I’ve been dabbling with Python for a while now. I joined this bootcamp to … gather more skills…” he chuckled as he opened up the Unity Game Engine and proceeded to tinker with the various interface controls.</p>
 
-## Game Development Woes
+<h2>Game Development Woes</h2>
 
-The next few hours flew by as we introduced our eager students to a range of concepts from tilesheets, to C# scripting and coding various characters and events.
+<p>The next few hours flew by as we introduced our eager students to a range of concepts from tilesheets, to C# scripting and coding various characters and events.</p>
 
-Unsurprisingly, the first few hours saw our students struggle immensely as they attempted to grasp all the new knowledge that was being shared.
+<p>Unsurprisingly, the first few hours saw our students struggle immensely as they attempted to grasp all the new knowledge that was being shared.</p>
 
-## C# Programming
+<h2>C# Programming</h2>
 
-The major hurdle turned out to be C# programming and debugging C# coding errors. Students who had no prior programming experience initially grappled with defining variables and functions.
+<p>The major hurdle turned out to be C# programming and debugging C# coding errors. Students who had no prior programming experience initially grappled with defining variables and functions.</p>
 
-Meanwhile, other more advanced students were frustrated by the sheer complexity of C# syntax compared with other coding languages.
+<p>Meanwhile, other more advanced students were frustrated by the sheer complexity of C# syntax compared with other coding languages.</p>
 
-As aptly explained by a student from Dunearn Secondary: “Compared to Python and other coding languages, there’s no auto suggest in C#. So it’s easy to make mistakes. But, I feel C# is quite similar to C++.”
+<p>As aptly explained by a student from Dunearn Secondary: “Compared to Python and other coding languages, there’s no auto suggest in C#. So it’s easy to make mistakes. But, I feel C# is quite similar to C++.”</p>
 
-It seemed as though many students much preferred Python over C#: “Python is the easiest coding language to learn. I’ve made school projects using 3 lines of Python code. Coding Unity games with C# though, requires a lot more lines of code. It’s a lot more complicated…”
+<p>It seemed as though many students much preferred Python over C#: “Python is the easiest coding language to learn. I’ve made school projects using 3 lines of Python code. Coding Unity games with C# though, requires a lot more lines of code. It’s a lot more complicated…”</p>
 
-Despite these slight hindrances, every student strove to persist. Whether it was referring to the slides given to them, asking our expert Tinkercademy instructors, or searching on Google or Unity, they managed to find the programming fixes they needed.
+<p>Despite these slight hindrances, every student strove to persist. Whether it was referring to the slides given to them, asking our expert Tinkercademy instructors, or searching on Google or Unity, they managed to find the programming fixes they needed.</p>
 
-## Unity Interface
+<h2>Unity Interface</h2>
 
-Besides C# programming, the teenagers in our bootcamp also faced other stumbling blocks too.
+<p>Besides C# programming, the teenagers in our bootcamp also faced other stumbling blocks too.</p>
 
-“Look at this panel. If you forget to uncheck this box, your game just wouldn’t work,” a teen from St Margaret’s Secondary lamented as she pointed at the side panel on the Unity interface.
+<p>“Look at this panel. If you forget to uncheck this box, your game just wouldn’t work,” a teen from St Margaret’s Secondary lamented as she pointed at the side panel on the Unity interface.</p>
 
-Scrolling up and down, clicking from dropdown lists, checking and unchecking boxes, there were almost a million different choices to decide when making a game.
+<p>Scrolling up and down, clicking from dropdown lists, checking and unchecking boxes, there were almost a million different choices to decide when making a game.</p>
 
-The problem compounds if multiple tabs are introduced: “You need a tab for every game element. One for your hero’s movements, one for your villain’s movements, one for your hero’s death, one for your hero to score points…” an Edgefield Secondary student pointed out.
+<p>The problem compounds if multiple tabs are introduced: “You need a tab for every game element. One for your hero’s movements, one for your villain’s movements, one for your hero’s death, one for your hero to score points…” an Edgefield Secondary student pointed out.</p>
 
-Thankfully, over the course of the five days, the teenagers finally familiarised themselves with the Unity Game engine. Many managed to build 2D platformer games, First-person shooter (FPS) games, Visual Novels (VN), 3D worlds and even escape rooms!
+<p>Thankfully, over the course of the five days, the teenagers finally familiarised themselves with the Unity Game engine. Many managed to build 2D platformer games, First-person shooter (FPS) games, Visual Novels (VN), 3D worlds and even escape rooms!</p>
 
 <!-- medium-image:1*-1h0KXTBw5Wt5a-tPgxZvg.jpeg alt-decision:meaningful -->
 
-![Stills from four of our student’s games! (We tried to showcase more, but were restricted by the limited space)](/blog-media/b0bbf3d27d20672db19446f06ab5b3bd3b82e296a56ba6e1039741040c6edea3.jpg)
+<img src="/blog-media/b0bbf3d27d20672db19446f06ab5b3bd3b82e296a56ba6e1039741040c6edea3.jpg" alt="Stills from four of our student’s games! (We tried to showcase more, but were restricted by the limited space)" width="659" height="368" loading="lazy" decoding="async" />
 
-<em>Stills from four of our student’s games! (We tried to showcase more, but were restricted by the limited space)</em>
+<p class="medium-image-caption"><em>Stills from four of our student’s games! (We tried to showcase more, but were restricted by the limited space)</em></p>
 
-## The Last Day
+<h2>The Last Day</h2>
 
-On the last and final day of the bootcamp, walking around the computer lab was a feast for the eyes and ears. All around, every teenager’s laptop screen glowed in different colours, each emitting shrill beeps, familiar gaming sound effects or the latest radio jams. Each student had made a game they were proud of.
+<p>On the last and final day of the bootcamp, walking around the computer lab was a feast for the eyes and ears. All around, every teenager’s laptop screen glowed in different colours, each emitting shrill beeps, familiar gaming sound effects or the latest radio jams. Each student had made a game they were proud of.</p>
 
-Many were eager to go home to put their newfound game development skills to the test. “I’m fairly confident that I’ll be able to create a game on my own but I won’t publish it due to copyright issues because the ideas I have for my next games are based on existing games,” a student opened up to us, leaving us pleased that our lessons had left an imprint on these young minds.
+<p>Many were eager to go home to put their newfound game development skills to the test. “I’m fairly confident that I’ll be able to create a game on my own but I won’t publish it due to copyright issues because the ideas I have for my next games are based on existing games,” a student opened up to us, leaving us pleased that our lessons had left an imprint on these young minds.</p>
 
-At that moment, another student joined our conversation. “I enjoyed myself coding different parts of a game. Seeing how a game’s made and the challenges and tricks involved… I’m not gonna forget this.”
+<p>At that moment, another student joined our conversation. “I enjoyed myself coding different parts of a game. Seeing how a game’s made and the challenges and tricks involved… I’m not gonna forget this.”</p>
 
-## Eager to Learn Unity?
+<h2>Eager to Learn Unity?</h2>
 
-Whether you’re a student, working adult or retiree, learning Unity is not only highly stimulating but also extremely rewarding. Today, Unity offers instant, real-time rendering of images, animations and scenes. You could create your own 2D and 3D games, virtual realities, or even animation films. By learning how to create in Unity, the possibilities for creating are endless.
+<p>Whether you’re a student, working adult or retiree, learning Unity is not only highly stimulating but also extremely rewarding. Today, Unity offers instant, real-time rendering of images, animations and scenes. You could create your own 2D and 3D games, virtual realities, or even animation films. By learning how to create in Unity, the possibilities for creating are endless.</p>
 
-So what do you think? Are you ready to learn this skill too? Then, feel free to drop us an email at hello@tk.sg and we’ll get you started!
+<p>So what do you think? Are you ready to learn this skill too? Then, feel free to drop us an email at hello@tk.sg and we’ll get you started!</p>

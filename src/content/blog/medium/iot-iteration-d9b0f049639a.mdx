@@ -26,6 +26,8 @@ tags:
 license: All rights reserved
 rightsStatus: permission-recorded
 heroImage: /blog-media/acfc2bb47c902450f22c120db018acf8ac91ecef212736f38ae6748eb59430c2.jpg
+heroImageWidth: 3024
+heroImageHeight: 4032
 heroAlt: Workshop teams working around a crowded table of laptops and building materials
 heroAltDecision: meaningful
 provenance:
@@ -40,141 +42,142 @@ migration:
 ---
 
 import ArticleEmbed from '../../../components/articles/ArticleEmbed.astro';
+import ArticleLegacyBlock from '../../../components/articles/ArticleLegacyBlock.astro';
 
-### An introduction to one of our most intricate workshops for corporate techies
+<ArticleLegacyBlock as="h3" html={"An introduction to one of our most intricate workshops for corporate techies"} />
 
-One of the most fun workshops we conduct is a tech competition, aimed at folks who already have some programming or technology background. The theme and scope of the competition may vary, but participants are always divided into groups, to compete against one another to solve technological challenges the fastest.
+<ArticleLegacyBlock as="p" html={"One of the most fun workshops we conduct is a tech competition, aimed at folks who already have some programming or technology background. The theme and scope of the competition may vary, but participants are always divided into groups, to compete against one another to solve technological challenges the fastest."} />
 
-Earlier this year, we started devising this particular workshop. The specifications were a bit daunting— 2 hours, 120+ participants, no hardware on site (meaning we needed to bring computers, monitors, peripherals), with a Rube-Goldberg theme that would culminate with having participants build and fire off a DIY wooden &amp; PVC catapult. We tapped on our library of toys and curriculum, to include topics such as cryptography, robotics, IoT data collection, electronics, logic gates, API usage, Raspberry Pi, and that aforementioned catapult (which had to be remotely triggered).
+<ArticleLegacyBlock as="p" html={"Earlier this year, we started devising this particular workshop. The specifications were a bit daunting— 2 hours, 120+ participants, no hardware on site (meaning we needed to bring computers, monitors, peripherals), with a Rube-Goldberg theme that would culminate with having participants build and fire off a DIY wooden &amp; PVC catapult. We tapped on our library of toys and curriculum, to include topics such as cryptography, robotics, IoT data collection, electronics, logic gates, API usage, Raspberry Pi, and that aforementioned catapult (which had to be remotely triggered)."} />
 
 {/* medium-image:1*uffbVUc4BZlvsJQ2frQAVQ.jpeg alt-decision:meaningful */}
 
-![Workshop teams working around a crowded table of laptops and building materials](/blog-media/acfc2bb47c902450f22c120db018acf8ac91ecef212736f38ae6748eb59430c2.jpg)
+<img src="/blog-media/acfc2bb47c902450f22c120db018acf8ac91ecef212736f38ae6748eb59430c2.jpg" alt="Workshop teams working around a crowded table of laptops and building materials" width="3024" height="4032" loading="lazy" decoding="async" />
 
 {/* medium-image:1*X0MC9-fqqiVbxyo6i_DDUg.jpeg alt-decision:meaningful */}
 
-![Participants assembling littleBits CloudBit circuits among wires and tools](/blog-media/75f6c9513f7709437b4f0460ed93791b8c0c26695d40964082b3bbcb7a7bfea2.jpg)
+<img src="/blog-media/75f6c9513f7709437b4f0460ed93791b8c0c26695d40964082b3bbcb7a7bfea2.jpg" alt="Participants assembling littleBits CloudBit circuits among wires and tools" width="3024" height="4032" loading="lazy" decoding="async" />
 
 {/* medium-image:1*vVKZOHWafHL-Qng5Na0CWw.jpeg alt-decision:meaningful */}
 
-![Chaos! (And lots of fun! Hopefully.)](/blog-media/848e14a4bf9f643f6fa6ede5eae95021d2d0a0ca8f2bd623988bc6c306559495.jpg)
+<img src="/blog-media/848e14a4bf9f643f6fa6ede5eae95021d2d0a0ca8f2bd623988bc6c306559495.jpg" alt="Chaos! (And lots of fun! Hopefully.)" width="3024" height="4032" loading="lazy" decoding="async" />
 
-<em>Chaos! (And lots of fun! Hopefully.)</em>
+<ArticleLegacyBlock as="p" html={"<em>Chaos! (And lots of fun! Hopefully.)</em>"} className="medium-image-caption" />
 
-The result: due to hardware limitations (we just didn’t have enough monitors for the coding challenges), the groups weren’t always able to tackle the challenges in parallel. Another problem was how the groups were supposed to each use a <a href="https://shop.littlebits.cc/products/cloudbit">littleBits cloudbit</a>, but they had no way to identify which cloudbit wifi was their own without them being labelled prior. Thankfully, a lot of the participants had a great time, but, oh boy, that was a logistics nightmare.
+<ArticleLegacyBlock as="p" html={"The result: due to hardware limitations (we just didn’t have enough monitors for the coding challenges), the groups weren’t always able to tackle the challenges in parallel. Another problem was how the groups were supposed to each use a <a href=\"https://shop.littlebits.cc/products/cloudbit\">littleBits cloudbit</a>, but they had no way to identify which cloudbit wifi was their own without them being labelled prior. Thankfully, a lot of the participants had a great time, but, oh boy, that was a logistics nightmare."} />
 
-## <strong>Back to the Drawing Board</strong>
+<ArticleLegacyBlock as="h2" html={"<strong>Back to the Drawing Board</strong>"} />
 
-One of the participants from that previous challenge saw the potential of the workshop, and asked us to develop a full-day competition around a similar theme. Looking back at it, despite the numerous issues that cropped up, we had managed to come up with a design that participants found engaging and unique, and which really tapped on their innate competitive drive.
+<ArticleLegacyBlock as="p" html={"One of the participants from that previous challenge saw the potential of the workshop, and asked us to develop a full-day competition around a similar theme. Looking back at it, despite the numerous issues that cropped up, we had managed to come up with a design that participants found engaging and unique, and which really tapped on their innate competitive drive."} />
 
-Come this new workshop, the specs were a bit different: 8 teams, 60+ people, and 7 hours of classroom time. And this time, we aimed to combine even more things in our <a href="http://gethacking.com">arsenal of gadgets and toys</a>: littleBits, micro:bit, Strawbees, Python/R data analysis, APIs, IFTTT, with an overarching theme of IoT. Simple, right?
+<ArticleLegacyBlock as="p" html={"Come this new workshop, the specs were a bit different: 8 teams, 60+ people, and 7 hours of classroom time. And this time, we aimed to combine even more things in our <a href=\"http://gethacking.com\">arsenal of gadgets and toys</a>: littleBits, micro:bit, Strawbees, Python/R data analysis, APIs, IFTTT, with an overarching theme of IoT. Simple, right?"} />
 
-Learning from that previous experience was incredibly important in designing this new IoT challenge. With a few tweaks on version 1.0, we thought we could deliver a really engaging competition. Most importantly, we added a 2.5 hour briefing period at the start of the day, where we could introduce them to the hardware and software that they’d be using.
+<ArticleLegacyBlock as="p" html={"Learning from that previous experience was incredibly important in designing this new IoT challenge. With a few tweaks on version 1.0, we thought we could deliver a really engaging competition. Most importantly, we added a 2.5 hour briefing period at the start of the day, where we could introduce them to the hardware and software that they’d be using."} />
 
 {/* medium-image:1*LTHlIPXx8WDOViKRjtkJ5w.jpeg alt-decision:meaningful */}
 
-![The calm before the storm!](/blog-media/14dfae9255437fb5d302066b9484ccc033af90e4f9f36482194ec3b7a35b9e1c.jpg)
+<img src="/blog-media/14dfae9255437fb5d302066b9484ccc033af90e4f9f36482194ec3b7a35b9e1c.jpg" alt="The calm before the storm!" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>The calm before the storm!</em>
+<ArticleLegacyBlock as="p" html={"<em>The calm before the storm!</em>"} className="medium-image-caption" />
 
-Participants would still need to go beyond the basic intro that we provided them, but they’d have basic knowledge and a starting point so they didn’t end up flailing about in the dark. Second, trying to supply hardware to so many people was a big issue during the first iteration, so instead, we required them to bring laptops and hosted a <a href="http://jupyter.org">Jupyter</a> server for them to complete data analysis challenges rather than using the Raspberry Pi and all the peripherals. No more need to worry about transporting monitors, keyboards, and mice! Likewise, we (sadly) removed the catapult challenge. While it was really, really awesome (thanks to our intern Shao Hong for creating it!), it was just too difficult to bring down hardware supplies and tools for so many people.
+<ArticleLegacyBlock as="p" html={"Participants would still need to go beyond the basic intro that we provided them, but they’d have basic knowledge and a starting point so they didn’t end up flailing about in the dark. Second, trying to supply hardware to so many people was a big issue during the first iteration, so instead, we required them to bring laptops and hosted a <a href=\"http://jupyter.org\">Jupyter</a> server for them to complete data analysis challenges rather than using the Raspberry Pi and all the peripherals. No more need to worry about transporting monitors, keyboards, and mice! Likewise, we (sadly) removed the catapult challenge. While it was really, really awesome (thanks to our intern Shao Hong for creating it!), it was just too difficult to bring down hardware supplies and tools for so many people."} />
 
 {/* medium-image:1*_C8PGE1fbtDDc-UDwCmNZg.jpeg alt-decision:meaningful */}
 
-![Catapults were awesome, but sadly had to be removed :(](/blog-media/0c9f974efd8760061ec1fd6fcc17fe8fb70bf57a798e593c48167b6754bff8f7.jpg)
+<img src="/blog-media/0c9f974efd8760061ec1fd6fcc17fe8fb70bf57a798e593c48167b6754bff8f7.jpg" alt="Catapults were awesome, but sadly had to be removed :(" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>Catapults were awesome, but sadly had to be removed :(</em>
+<ArticleLegacyBlock as="p" html={"<em>Catapults were awesome, but sadly had to be removed :(</em>"} className="medium-image-caption" />
 
-Finally, we needed to add some challenges to account for the longer competition length. We had been doing a <a href="https://blog.tinkercademy.com/digital-maker-programme-998927090ddc">lot of work with the micro:bit</a> as it’s currently being introduced to the Singapore schools, so we added in a challenge to build a micro:bit bluetooth RC car to simulate an IoT data collection device. Likewise, cryptography is an important aspect of IoT security, so one of our interns (thanks Wei Heng!) was able to develop three devious crypto challenges. Finally, we had a very challenging littleBits hardware challenge to add as well.
+<ArticleLegacyBlock as="p" html={"Finally, we needed to add some challenges to account for the longer competition length. We had been doing a <a href=\"https://blog.tinkercademy.com/digital-maker-programme-998927090ddc\">lot of work with the micro:bit</a> as it’s currently being introduced to the Singapore schools, so we added in a challenge to build a micro:bit bluetooth RC car to simulate an IoT data collection device. Likewise, cryptography is an important aspect of IoT security, so one of our interns (thanks Wei Heng!) was able to develop three devious crypto challenges. Finally, we had a very challenging littleBits hardware challenge to add as well."} />
 
-Also, two of our interns (thanks Sam &amp; Si Jie!) had previously designed a server to display a real-time scoreboard. And this was the perfect time to dust it off. Thankfully, Si Jie was free to recover and adapt the code <em>(…at 1 am the night before…sorry!</em>).
+<ArticleLegacyBlock as="p" html={"Also, two of our interns (thanks Sam &amp; Si Jie!) had previously designed a server to display a real-time scoreboard. And this was the perfect time to dust it off. Thankfully, Si Jie was free to recover and adapt the code <em>(…at 1 am the night before…sorry!</em>)."} />
 
 {/* medium-image:1*okgeV3cEIgP8cP9KL1n02Q.jpeg alt-decision:meaningful */}
 
-![The brains behind the operation, our interns Wei Heng (left) and Si Jie (right)](/blog-media/2a8b9a46b3fb237613dc231544f6c3a2822a555be9b38208037ba05c36f2f33a.jpg)
+<img src="/blog-media/2a8b9a46b3fb237613dc231544f6c3a2822a555be9b38208037ba05c36f2f33a.jpg" alt="The brains behind the operation, our interns Wei Heng (left) and Si Jie (right)" width="4032" height="3024" loading="lazy" decoding="async" />
 
-<em>The brains behind the operation, our interns Wei Heng (left) and Si Jie (right)</em>
+<ArticleLegacyBlock as="p" html={"<em>The brains behind the operation, our interns Wei Heng (left) and Si Jie (right)</em>"} className="medium-image-caption" />
 
-What was the final list of challenges? Three crypto challenges, two API challenges using Reddit and Twitter, two data analysis challenges on clustering and visualisation, a micro:bit car challenge, a littleBits line-following bot challenge, and a Strawbees hardware challenge.
+<ArticleLegacyBlock as="p" html={"What was the final list of challenges? Three crypto challenges, two API challenges using Reddit and Twitter, two data analysis challenges on clustering and visualisation, a micro:bit car challenge, a littleBits line-following bot challenge, and a Strawbees hardware challenge."} />
 
-## <strong>The Competition</strong>
+<ArticleLegacyBlock as="h2" html={"<strong>The Competition</strong>"} />
 
 {/* medium-image:1*cnbTM1rAZMa3RkqX85xGyA.jpeg alt-decision:meaningful */}
 
-![So it begins…](/blog-media/f31f167a4f7eb7e324f93901f206a54878b0077cf5c2848ff8e0cc227f461f77.jpg)
+<img src="/blog-media/f31f167a4f7eb7e324f93901f206a54878b0077cf5c2848ff8e0cc227f461f77.jpg" alt="So it begins…" width="11964" height="3628" loading="lazy" decoding="async" />
 
-<em>So it begins…</em>
+<ArticleLegacyBlock as="p" html={"<em>So it begins…</em>"} className="medium-image-caption" />
 
-Wow these guys were <em>fast</em>. Some participants had prior data analysis experience in R, but others simply taught themselves on the spot to solve our Clustering and Plotting data science challenges. Many Reddit and Twitter API challenges were completed right away. The most interesting were the hardware challenges:
+<ArticleLegacyBlock as="p" html={"Wow these guys were <em>fast</em>. Some participants had prior data analysis experience in R, but others simply taught themselves on the spot to solve our Clustering and Plotting data science challenges. Many Reddit and Twitter API challenges were completed right away. The most interesting were the hardware challenges:"} />
 
-### littleBits Line-Following Bot
+<ArticleLegacyBlock as="h3" html={"littleBits Line-Following Bot"} />
 
-I’ve also never seen better littleBits cars — they completed our track in record time! This automated line-following car was a project that we’d done at littleBits workshops in the past, and it was always very challenging for participants. We provide example tutorials, first done by littleBits user Yoobin and her family:
+<ArticleLegacyBlock as="p" html={"I’ve also never seen better littleBits cars — they completed our track in record time! This automated line-following car was a project that we’d done at littleBits workshops in the past, and it was always very challenging for participants. We provide example tutorials, first done by littleBits user Yoobin and her family:"} />
 
-> <a href="https://littlebits.cc/projects/simple-line-follower">Simple Line Follower: a littleBits Project by Yoobin's Family</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"https://littlebits.cc/projects/simple-line-follower\"><strong>Simple Line Follower: a littleBits Project by Yoobin&#39;s Family</strong></a><a href=\"https://littlebits.cc/projects/simple-line-follower\"><br /></a><a href=\"https://littlebits.cc/projects/simple-line-follower\"><em>This Line Follower is made of Littlebits + Box Paper. No Micro controller, No Programming Language. Only LittleBits …</em></a><a href=\"https://littlebits.cc/projects/simple-line-follower\">littlebits.cc</a>"} className="article-link-card" />
 
-… and later adapted by Rory and Sean at littleBits:
+<ArticleLegacyBlock as="p" html={"… and later adapted by Rory and Sean at littleBits:"} />
 
-> <a href="https://littlebits.cc/projects/snack-robot">Line Following Snack Serving Robot: a littleBits Project by rory_littleBits</a>
+<ArticleLegacyBlock as="aside" html={"<a href=\"https://littlebits.cc/projects/snack-robot\"><strong>Line Following Snack Serving Robot: a littleBits Project by rory_littleBits</strong></a><a href=\"https://littlebits.cc/projects/snack-robot\"><br /></a><a href=\"https://littlebits.cc/projects/snack-robot\"><em>A robot built with littleBits that follows a drawn line and serves treats from the snack bowl mounted on top. How it…</em></a><a href=\"https://littlebits.cc/projects/snack-robot\">littlebits.cc</a>"} className="article-link-card" />
 
-But even then, it’s usually quite difficult to implement! These participants figured out that key to successfully navigating our track was to give the car “wings” and attach light sensors on each wing, to maximise the width between the light sensors and give the car more flexibility when turning.
+<ArticleLegacyBlock as="p" html={"But even then, it’s usually quite difficult to implement! These participants figured out that key to successfully navigating our track was to give the car “wings” and attach light sensors on each wing, to maximise the width between the light sensors and give the car more flexibility when turning."} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/4f8qtKFY0M4"} title={"LittleBits Line-Following Bot"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/4f8qtKFY0M4"} title={"LittleBits Line-Following Bot"} description={"A line-following littleBits car created by a team in one of our tech competitions! This one was impressively fast. Sadly this video is not of a successful attempt (the car veers off course at the last turn), but they completed the track on a later attempt in record time!"} captionHtml={"Some were really fast! Sadly this attempt wasn’t successful, but they later completed the course in record time."} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/rqga7kO8RrU"} title={"LittleBits Line-Following Bot"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/rqga7kO8RrU"} title={"LittleBits Line-Following Bot"} description={"A line-following littleBits car created by a team in one of our tech competitions! This one might not have been as fast as others, but it made it to the end! Based off the original creation by Yoobin's Family (https://littlebits.cc/projects/simple-line-follower)."} captionHtml={"Some were not so fast…but still made it!"} />
 
-### <strong>Micro:bit Bluetooth RC Car</strong>
+<ArticleLegacyBlock as="h3" html={"<strong>Micro:bit Bluetooth RC Car</strong>"} />
 
-We also challenged participants to build remote-controlled cars using the micro:bit! Using <a href="http://makecode.microbit.org">MakeCode</a> and our <a href="https://tinkercademy.com/tutorials/make-a-microbit-car/">Krazy Kar tutorial</a>, groups needed to set up a bluetooth connection and control continuous servos (i.e. the wheels) with a keypad.
+<ArticleLegacyBlock as="p" html={"We also challenged participants to build remote-controlled cars using the micro:bit! Using <a href=\"http://makecode.microbit.org\">MakeCode</a> and our <a href=\"https://tinkercademy.com/tutorials/make-a-microbit-car/\">Krazy Kar tutorial</a>, groups needed to set up a bluetooth connection and control continuous servos (i.e. the wheels) with a keypad."} />
 
 {/* medium-image:1*nUy5Bip9JKt6MvvaeeY5tQ.jpeg alt-decision:meaningful */}
 
-![Participants testing wired wheel assemblies beside a micro:bit and laptop](/blog-media/8029f2724bfd597cdf3c352eb5d6799e2df1b8cf03d2b8548db73a7bbbdf2d74.jpg)
+<img src="/blog-media/8029f2724bfd597cdf3c352eb5d6799e2df1b8cf03d2b8548db73a7bbbdf2d74.jpg" alt="Participants testing wired wheel assemblies beside a micro:bit and laptop" width="4032" height="3024" loading="lazy" decoding="async" />
 
 {/* medium-image:1*ROw-NExlFYHdOevF5vaMPg.jpeg alt-decision:meaningful */}
 
-![Building micro:bit cars using continuous servos and a 5 button ADKeypad.](/blog-media/0e6e3dde8d6e583ea976781c9e8ac44b9667125a6dce4138868e47e8d22198cf.jpg)
+<img src="/blog-media/0e6e3dde8d6e583ea976781c9e8ac44b9667125a6dce4138868e47e8d22198cf.jpg" alt="Building micro:bit cars using continuous servos and a 5 button ADKeypad." width="3024" height="4032" loading="lazy" decoding="async" />
 
-<em>Building micro:bit cars using continuous servos and a 5 button ADKeypad.</em>
+<ArticleLegacyBlock as="p" html={"<em>Building micro:bit cars using continuous servos and a 5 button ADKeypad.</em>"} className="medium-image-caption" />
 
-After building the car, groups had to navigate a cardboard maze as quickly as possible. This is easier than it sounds, as an alkaline battery powered micro:bit only has enough power for one servo at a time, so you can tell one wheel to go forward, or tell the other wheel to go forward, but not both at the same time!
+<ArticleLegacyBlock as="p" html={"After building the car, groups had to navigate a cardboard maze as quickly as possible. This is easier than it sounds, as an alkaline battery powered micro:bit only has enough power for one servo at a time, so you can tell one wheel to go forward, or tell the other wheel to go forward, but not both at the same time!"} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/Wc6TJs81_Zw"} title={"Micro:bit Bluetooth RC Car"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/Wc6TJs81_Zw"} title={"Micro:bit Bluetooth RC Car"} description={"A simple car built using Micro:bit. This was a bit challenging as an alkaline battery powered micro:bit only has enough power for one servo at a time, so you can tell one wheel to go forward, or tell the other wheel to go forward, but not both at the same time!"} captionHtml={"Might not be the smoothest ride…"} />
 
-### <strong>Strawbees Longest Ping-Pong-Ball Track</strong>
+<ArticleLegacyBlock as="h3" html={"<strong>Strawbees Longest Ping-Pong-Ball Track</strong>"} />
 
-We supplied teams with a cardboard box and a bunch of <a href="https://gethacking.com/products/strawbees-maker-kit">Strawbees</a> materials. Strawbees, if you haven’t heard of them before, allows you to attach straws together to create sculptures, prototypes, or anything else in your imagination. In this case, we weren’t focused on art, but rather performance.
+<ArticleLegacyBlock as="p" html={"We supplied teams with a cardboard box and a bunch of <a href=\"https://gethacking.com/products/strawbees-maker-kit\">Strawbees</a> materials. Strawbees, if you haven’t heard of them before, allows you to attach straws together to create sculptures, prototypes, or anything else in your imagination. In this case, we weren’t focused on art, but rather performance."} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/rN6lnLaQyjA"} title={"Strawbees & Cardboard Box Ping-Pong Ball Track"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/rN6lnLaQyjA"} title={"Strawbees & Cardboard Box Ping-Pong Ball Track"} description={"The goal of this challenge was to design the longest possible ping-pong ball track. Groups only had a short amount of time to get a working track, and needed to initialise the ping-pong ball using a littleBits cloudbit (either by fan, servo, or another bit) and end the track by depositing the ping-pong ball in a plastic cup."} captionHtml={"Success!"} />
 
-The goal of this challenge was to design the longest possible ping-pong ball track. Groups only had a short amount of time to get a working track, and needed to initialise the ping-pong ball using a littleBits cloudbit (either by fan, servo, or another bit) and end the track by depositing the ping-pong ball in a plastic cup.
+<ArticleLegacyBlock as="p" html={"The goal of this challenge was to design the longest possible ping-pong ball track. Groups only had a short amount of time to get a working track, and needed to initialise the ping-pong ball using a littleBits cloudbit (either by fan, servo, or another bit) and end the track by depositing the ping-pong ball in a plastic cup."} />
 
-### <strong>Crypto Challenges</strong>
+<ArticleLegacyBlock as="h3" html={"<strong>Crypto Challenges</strong>"} />
 
-It would be remiss of me if I didn’t mention the hardest challenge of the event, which ended up being the final crypto challenge.
+<ArticleLegacyBlock as="p" html={"It would be remiss of me if I didn’t mention the hardest challenge of the event, which ended up being the final crypto challenge."} />
 
 {/* medium-image:1*uKdzLrnnabc4t9cpmpTFmg.png alt-decision:meaningful */}
 
-![Cryptanalysis challenge slide with three encrypted tasks worth 2, 3 and 5 points](/blog-media/45e5d3a413b292c295c2d53891b63a6c33b63bac6192cad77090a608b111f72c.png)
+<img src="/blog-media/45e5d3a413b292c295c2d53891b63a6c33b63bac6192cad77090a608b111f72c.png" alt="Cryptanalysis challenge slide with three encrypted tasks worth 2, 3 and 5 points" width="2300" height="1292" loading="lazy" decoding="async" />
 
 {/* medium-image:1*FJ0MJ9YRVEwJKtmYze7doQ.jpeg alt-decision:meaningful */}
 
-![A hand writes notes while working through the cryptography challenge](/blog-media/1ec5074cd923bd287dfc9f414c7fcf841ba8c7cc8bffd8e80ce38347729c7fe9.jpg)
+<img src="/blog-media/1ec5074cd923bd287dfc9f414c7fcf841ba8c7cc8bffd8e80ce38347729c7fe9.jpg" alt="A hand writes notes while working through the cryptography challenge" width="2150" height="1044" loading="lazy" decoding="async" />
 
-I don’t want to give away the answer, but when it was finally revealed to the participants, there was a lot of facepalming over the plaintext (this event took place two days after National Day, so we decided to wish Singapore a Happy Birthday!).
+<ArticleLegacyBlock as="p" html={"I don’t want to give away the answer, but when it was finally revealed to the participants, there was a lot of facepalming over the plaintext (this event took place two days after National Day, so we decided to wish Singapore a Happy Birthday!)."} />
 
-## <strong>The Final Countdown</strong>
+<ArticleLegacyBlock as="h2" html={"<strong>The Final Countdown</strong>"} />
 
-The last 5 minutes of the competition was a scramble. Despite our pleas to the contrary, many groups queued up for last minute timings from our judges. When the dust cleared, the overall scoreboard was surprisingly green; groups had successfully completed most of the challenges presented, and two groups had tied for first place!
+<ArticleLegacyBlock as="p" html={"The last 5 minutes of the competition was a scramble. Despite our pleas to the contrary, many groups queued up for last minute timings from our judges. When the dust cleared, the overall scoreboard was surprisingly green; groups had successfully completed most of the challenges presented, and two groups had tied for first place!"} />
 
 {/* medium-image:1*0JOhfSW6uAnuMHSY7IOlZw.jpeg alt-decision:meaningful */}
 
-![Projected competition scoreboard with mostly green completed challenge cells](/blog-media/37261bb30e6563ac187f5b4209b1201d1853a0f8088ba08f04b6486a52d5d389.jpg)
+<img src="/blog-media/37261bb30e6563ac187f5b4209b1201d1853a0f8088ba08f04b6486a52d5d389.jpg" alt="Projected competition scoreboard with mostly green completed challenge cells" width="1902" height="1156" loading="lazy" decoding="async" />
 
-Huge thanks to Leong Hwee who contacted us to run this competition and congrats to Groups 2 &amp; 8!
+<ArticleLegacyBlock as="p" html={"Huge thanks to Leong Hwee who contacted us to run this competition and congrats to Groups 2 &amp; 8!"} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/L2EThiF_8R4"} title={"IoT Competition Compilation 1"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/L2EThiF_8R4"} title={"IoT Competition Compilation 1"} description={"Tinkercademy's IoT Competition"} captionHtml={""} />
 
-<ArticleEmbed provider="youtube" href={"https://youtu.be/gfWXmgSqJkY"} title={"IoT Competition Compilation 2"} />
+<ArticleEmbed provider="youtube" href={"https://youtu.be/gfWXmgSqJkY"} title={"IoT Competition Compilation 2"} description={"Tinkercademy's IoT Competition"} captionHtml={""} />
 
-<em>Editor’s Note: Thanks, Mike! We conduct a variety of fun and educational corporate workshops for beginners </em>and<em> experienced techies, focusing on having participants create with technology. Please get in touch at </em><em><a href="mailto:hello@tinkercademy.com">hello@tinkercademy.com</a></em><em> if you’d like to run one of these for your company or department!</em>
+<ArticleLegacyBlock as="p" html={"<em>Editor’s Note: Thanks, Mike! We conduct a variety of fun and educational corporate workshops for beginners </em>and<em> experienced techies, focusing on having participants create with technology. Please get in touch at </em><em><a href=\"mailto:hello@tinkercademy.com\">hello@tinkercademy.com</a></em><em> if you’d like to run one of these for your company or department!</em>"} />
