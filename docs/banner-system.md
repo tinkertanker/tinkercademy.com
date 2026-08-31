@@ -282,11 +282,9 @@ reproduces all 45 webps byte-identically, `pnpm run build` passes.
 
 Remaining work, in order:
 
-1. **Programme wiring** — 29 `heroImage:` swaps in
-   `src/content/programmes/*.md` to `/images/banners/<slug>.webp`. Banners
-   exist for every slug (two long certificate slugs map via the same names —
-   scene ids match filenames, not the short ids in hero-image-review.json).
-   Await the user's review verdict before or after wiring — their call.
+1. ~~Programme wiring~~ — DONE 28 Aug (user approved): all 29 programmes
+   serve `/images/banners/<slug>.webp`; verified in built output. Every hero
+   on the site except home is now on the system.
 2. **Popular-course tiles** — `HOME_POPULAR_COURSE_ICONS` in site-media.js
    still points at white-logo-on-black tiles (lovable/chatgpt/react-native).
 3. **Asset retirement** — `public/images/generated/hero-review/` holds ~44
