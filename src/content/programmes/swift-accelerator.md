@@ -2,7 +2,7 @@
 title: "Swift Accelerator"
 subtitle: "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
 duration: "8 months"
-heroImage: "/images/pzZfgIklaSw80TJTGemWvQyrCLo.png"
+heroImage: "/images/banners/swift-accelerator.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]

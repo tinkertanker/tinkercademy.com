@@ -1,7 +1,7 @@
 ---
 title: "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making"
 subtitle: "Run for SMU Academy’s Industry Practice Master of Digital Economy"
-heroImage: "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp"
+heroImage: "/images/banners/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["iot"]
 platformIds: ["esp32"]

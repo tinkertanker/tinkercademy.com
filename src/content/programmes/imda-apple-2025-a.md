@@ -2,7 +2,7 @@
 title: "App Prototyping with Keynote and Swift Playgrounds"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
 duration: "26 hours"
-heroImage: "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp"
+heroImage: "/images/banners/imda-apple-2025-a.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["uiux", "cs"]
 platformIds: ["swift", "keynote"]

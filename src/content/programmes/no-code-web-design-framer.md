@@ -2,7 +2,7 @@
 title: "No-code Web Design (Framer)"
 subtitle: "An introductory course on building websites using Framer."
 duration: "2 days"
-heroImage: "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp"
+heroImage: "/images/banners/no-code-web-design-framer.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["uiux"]
 platformIds: ["framer"]

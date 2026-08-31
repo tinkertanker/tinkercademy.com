@@ -2,7 +2,7 @@
 title: "Digital Maker: Create with 3D Printing and IOT"
 subtitle: "14 - 15 January 2025"
 duration: "2 days"
-heroImage: "/images/generated/hero-review/iotmaker/cdx_001.webp"
+heroImage: "/images/banners/iotmaker.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["making", "iot"]
 platformIds: ["3d-printing", "m5stack"]
