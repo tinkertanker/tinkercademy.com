@@ -1,5 +1,14 @@
 # Banner unification review — August 2026
 
+> **Status (28 Aug): largely EXECUTED on branch `claude/banners-review-unify-7q9qp7`.**
+> The recommendation below was accepted and built: deterministic compositor
+> ([banner-system.md](./banner-system.md)), 45 scenes covering every placement,
+> 33-prop minted library, faded photo backdrops on 41 scenes. Live so far: 12
+> non-home static pages + 3 flagship cards. Still open: programme frontmatter
+> wiring (29 files), popular-course tiles, retiring old assets, deploy. The
+> user's running review happens on the artifact review board (link in the
+> project memory / handoff section of banner-system.md).
+
 Audit of every hero/banner image live on tinkercademy.com (13 static pages, 29 programme pages, 3 flagship cards, 3 popular-course tiles), plus a recommendation for unifying them. Companion to [hero-image-brief.md](./hero-image-brief.md), which documents how the current images were produced.
 
 ## TL;DR

@@ -1,5 +1,15 @@
 # Tinkercademy Hero Image Brief — Round 2
 
+> **⚠️ SUPERSEDED (Aug 2026).** Hero/banner production moved to the
+> deterministic illustrated compositor — see [banner-system.md](./banner-system.md)
+> and [banner-unification-review.md](./banner-unification-review.md). In
+> particular, the round-1 verdict below to "drop sticker style as a hero
+> family" was REVERSED: built sticker scenes are now the primary hero system,
+> live on every static page except home. This file remains as the historical
+> record of the photo-generation rounds and their prompt-time pitfalls, which
+> still apply if AI photos are ever generated again (e.g. new faded-backdrop
+> sources).
+
 This is the active brief for any agent regenerating tinkercademy.com hero / flagship / programme images.
 
 It supersedes the round-1 prompt envelope baked into `scripts/gen-hero-batch.sh`. The round-1 candidates live under `public/images/generated/hero-review/<id>/v2_*.jpg` and `v3_*.jpg` and stay on disk for comparison, but **do not reuse the round-1 prompt envelope**.

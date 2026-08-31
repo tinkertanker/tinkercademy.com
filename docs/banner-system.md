@@ -61,9 +61,9 @@ programme, `hero_image` in `src/data/pages/static-pages.json` for a static page.
 Prefer a named `layout` over hand-tuned coordinates — templates keep the
 catalogue consistent and snap grounded devices to the baseline automatically:
 
-- `"layout": "hero"` — the classic: big mascot centre-right, grounded device
-  far right, bubble upper-left, optional small foreground item. Slots are
-  assigned to non-background props in spec order.
+- `"layout": "hero"` — mascot rightmost (x 0.84), grounded device in the
+  middle band, bubble above. Slots are assigned to non-background props in
+  spec order.
 - `"layout": "trio"` — bottom-right arrangement in three descending sizes:
   large floating window, medium window in front, big mascot (`h` 0.5)
   grounded at the right edge *behind* the work. This is the corporate
@@ -77,10 +77,11 @@ Freeform x/y still works for scenes that need something bespoke.
 1. **Headline zone stays clean.** The third of the canvas named by
    `headlineSide` contains nothing but background (sparkles allowed). The
    generator warns when anything intrudes — don't ship a scene that warns.
-2. **One baseline.** The scene grounds at y ≈ 0.82. Mascot: set
-   `y = 0.82 − h/2`. Grounded props get a ground shadow automatically; put
-   their origin so their bottom lands on the baseline (laptop origin *is* its
-   base: `y: 0.8`). Only bubbles, browser windows, and sparkles float.
+2. **One baseline.** The scene grounds at y = 0.76 (lifted twice from 0.82
+   at the user's request — feet must stay visible under wide-viewport band
+   crops). Mascot: `y = 0.76 − h/2`. Sticker props take `"ground": true`;
+   grounded vector props snap via BOTTOM_OFFSET; shadows are automatic. Only
+   bubbles (y ≈ 0.29) and floating windows sit above the baseline.
 3. **The mascot is the rightmost element.** Content (device, props) occupies
    the middle band (~x 0.45–0.75); the robot stands at x ≈ 0.84 engaging with
    it — pointing, saluting, reacting. Poses that point off-canvas get
@@ -91,8 +92,9 @@ Freeform x/y still works for scenes that need something bespoke.
    that identify the course (prefer a minted object over a second screen —
    the library exists so scenes don't read as generic screen icons). At most
    one bubble. If a prop doesn't help a stranger guess the course, cut it.
-5. **Mascot scale** `h` between 0.55 and 0.66. Wide poses (fingerguns,
-   jumping-for-joy) need smaller `h`; narrow poses (handraise) larger.
+5. **Mascot scale** `h` between 0.40 and 0.50 (trio 0.44) — the robot reads
+   as a companion at ~55–60% of the cropped band, never the whole banner.
+   Wide poses need the smaller end; narrow poses the larger.
 6. **Vary adjacent placements.** Cards that sit next to each other in a listing
    should differ in pose *and* silhouette (a floating window vs a big
    micro:bit vs a bubble cluster), not just accent.
@@ -119,7 +121,7 @@ are designed for that contract natively:
 
 Three registers, same system — pick per audience, don't invent new styles:
 
-1. **Full mascot** (`h` 0.55–0.66) — schools, community, homepage.
+1. **Full mascot** (`h` 0.40–0.50) — schools, community pages.
 2. **Trio** (`"layout": "trio"`) — professional/corporate: big mascot
    grounded at the right edge behind two windows of descending size. The
    tiny-cameo experiment read worse than a properly sized robot — keep the
@@ -127,11 +129,12 @@ Three registers, same system — pick per audience, don't invent new styles:
 3. **No mascot** — most formal contexts: window collage plus `diamond` /
    `face` icons at low opacity as the only brand cues.
 
-For corporate placements a **faded-photo backdrop** also works: set
-`"photo": {"src": "<retired cdx hero path>", "darken": 0.4, "sat": 0.22}` on a
-dark scene — the photo becomes heavily darkened environmental texture under
-the gradient tint, with the illustration system on top. Real-world grounding
-without an AI photo as centrepiece.
+**Faded-photo backdrops are now standard on nearly every scene** (41/45):
+`"photo": {"src": ..., "darken": 0.4, "sat": 0.25, "tint": 0.78}` — the photo
+reads as a room, clearly behind the illustration. Source priority (audited
+25 Aug against `hero-image-review.json` `currentImage`): real photo first,
+else the page's own original, else the best retired AI candidate. Never fade
+in abstract art thinking it's a photo — check the file.
 
 ## Mascot handling (automatic)
 
@@ -259,3 +262,45 @@ baseline (preferred over hand-computing `y` from the image aspect).
 
 The 33-prop library gives every current programme an identifying object; see
 the README table for the prop → course mapping.
+
+## Handoff state (28 Aug 2026)
+
+Everything lives on branch `claude/banners-review-unify-7q9qp7` (not merged to
+main; nothing deployed). Running visual record + interactive review board:
+artifact `2ba05eaf-4bd2-467c-88b4-2c7d27c4a25e` on claude.ai (comment boxes per
+banner collect into a copyable "Banner feedback:" prompt of `- <scene-id>:
+comment` lines; apply each line to its scene). Full decision log: the project
+memory file `banner-unification-project.md` in the user's Claude memory dir.
+
+**Live now:** all 12 non-home static pages (`static-pages.json` +
+schools/contact-us/[slug] template patches) and the 3 homepage flagship cards
+(`HOME_FLAGSHIP_IMAGES` in `src/lib/site-media.js`). **Home is deliberately
+untouched — do not swap it without the user's say-so.**
+
+**Verified at handoff:** clean tree, `node scripts/banner/generate-banners.mjs`
+reproduces all 45 webps byte-identically, `pnpm run build` passes.
+
+Remaining work, in order:
+
+1. **Programme wiring** — 29 `heroImage:` swaps in
+   `src/content/programmes/*.md` to `/images/banners/<slug>.webp`. Banners
+   exist for every slug (two long certificate slugs map via the same names —
+   scene ids match filenames, not the short ids in hero-image-review.json).
+   Await the user's review verdict before or after wiring — their call.
+2. **Popular-course tiles** — `HOME_POPULAR_COURSE_ICONS` in site-media.js
+   still points at white-logo-on-black tiles (lovable/chatgpt/react-native).
+3. **Asset retirement** — `public/images/generated/hero-review/` holds ~44
+   dirs of AI-photo candidates. Many now serve as faded backdrops
+   (`scene.photo.src`) — check `banner-scenes.json` before deleting anything.
+4. **Merge + deploy** — push to main auto-uploads a Worker version; follow
+   `.claude/skills/deploy/SKILL.md` to promote; smoke-test afterwards.
+5. Nice-to-haves: light variants for on-white card grids; real photos for
+   showcase/events; run `tkrobot-illustrations` (tkrobot-stickers repo, merged)
+   on tutorial content.
+
+Judgement calls already settled by the user — do not relitigate: dark scenes
+everywhere (both hero templates overlay white text); mascot rightmost at h
+0.40–0.50, baseline 0.76; no sparkles/emanata; no skyline; faded photo
+backdrops at darken 0.4 / sat 0.25 / tint 0.78 with real photos preferred over
+AI ones; flagship cards centred; no faces on props; never redraw the mascot as
+vectors.
