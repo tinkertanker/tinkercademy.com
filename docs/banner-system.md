@@ -298,9 +298,106 @@ Remaining work, in order:
    showcase/events; run `tkrobot-illustrations` (tkrobot-stickers repo, merged)
    on tutorial content.
 
-Judgement calls already settled by the user — do not relitigate: dark scenes
-everywhere (both hero templates overlay white text); mascot rightmost at h
-0.40–0.50, baseline 0.76; no sparkles/emanata; no skyline; faded photo
-backdrops at darken 0.4 / sat 0.25 / tint 0.78 with real photos preferred over
-AI ones; flagship cards centred; no faces on props; never redraw the mascot as
-vectors.
+## What the user wants (distilled from all review input, 11–28 Aug)
+
+The user (YJ) reviewed every round personally and in detail. These are the
+principles behind their decisions — internalise them before proposing changes,
+because a proposal that violates one of these will be rejected regardless of
+craft.
+
+### 1. Authenticity is the highest value
+
+Every brand element must be the real thing or clearly honest about what it is.
+
+- The mascot is only ever the **real sticker PNGs** from the locked pack.
+  Vector redrawings of its anatomy (robohead, glasses) were rejected on
+  sight: *"they should be / be derived from the actual graphics — isn't
+  there a face in the stickerlib?"* The `face` prop is that answer.
+- Tool identity comes from **official marks**: simple-icons for tools, the
+  actual swiftinsg/branding lockup for Swift Accelerator (icon-only after
+  review). Never invent or fake a logo; never render fake text on screens.
+- **Real photos beat AI photos, always.** The real office photo is *"worth
+  keeping"* explicitly because it is real; each page keeps **its own**
+  original backdrop where one exists (YJ personally caught tinker-x and
+  courses-schools losing theirs and asked *"are you doing this properly?"* —
+  provenance gets audited, not assumed). AI photos are acceptable only as
+  faded environmental texture, never as subject: *"not awful, I just don't
+  want them to be the main centrepiece."*
+- **Course accuracy matters at prop level**: a bee-bot on a micro:bit course
+  and a cardboard build on the web-dev event page were both flagged
+  *"irrelevant here"*. The prop must be the thing the course actually
+  teaches.
+- Only one character exists. A cardboard-robot prop was vetoed: *"good
+  concept, we already have a bot."* No faces on props.
+
+### 2. The robot is the brand, not the show
+
+- Present on nearly every banner, but as a **companion, not the subject**:
+  rightmost element, h 0.40–0.50. The ~90%-of-band version was "too huge";
+  the tiny corner cameo also failed (*"the larger tkrobot worked a bit
+  better"*). Feet always visible.
+- Clean silhouette: no emanata, no motion marks, no sparkles, no floating
+  shapes (*"lose the extra shapes and symbols that show up outside"*).
+  Separation comes from the glow/halo, not decoration.
+- Corporate keeps the mascot (*"I'm not against having the mascot in
+  corporate"*) — smaller, behind the work, paired with the less-cartoony
+  props (app windows, brand diamond), no bubbles.
+
+### 3. System over samples
+
+The first ask was *"repeatable and consistent, and future agents can prompt
+for them"* — operability matters as much as any single image.
+
+- Deterministic composition; named layout templates and the scene formula
+  (*"one robot, one screen, one (or more) props — that'd be pretty cool"*)
+  over freeform placement (*"some kind of fixed or at least sensible
+  arrangement"*).
+- A **combinable** library, not accumulated one-offs: screens × devices
+  mix-and-match was explicitly requested; bubble glyphs use open-source
+  icons because YJ asked *"are there open source icons we can use instead of
+  making up our own?"*.
+- Uniform page-band heights — YJ spotted the inconsistency across three
+  pages from screenshots alone.
+- Everything flat 2D: when new props drifted three-quarter/3D (*"I worry
+  these are more 3d and the original ones are more 2d"*) they were re-minted;
+  flatness is baked into the mint prompt.
+
+### 4. Taste: dark, textured, restrained, breathing
+
+- Dark grounds designed for white overlay text; gradients, spotlights and
+  subtle texture were requested, not tolerated.
+- Restraint and spacing: fewer props, spread apart (schools' two items were
+  *"just a bit too close together"*); generous whitespace; feet on a
+  consistent baseline. Decorative motifs without meaning lose — the
+  Singapore skyline was tried and fully retired (*"lose it overall"*).
+- YJ tunes in **small notches** (two separate ~24px lifts, *"a bit more
+  visible"* on photos). Keep parameters one-number adjustable and expect
+  follow-up nudges rather than big-bang changes.
+
+### 5. How YJ works with an agent
+
+- Reviews **visually and in situ** — wants banners on the real built pages,
+  not only as image files. Ship page screenshots with changes.
+- Gives batch feedback as terse per-item lines; the review-board artifact
+  exists to collect them (`- scene-id: comment`). Apply each line precisely,
+  regenerate, refresh the board.
+- Grants proactive licence (*"go ahead and proactively create"*) for
+  execution within settled principles — but audits results in detail and
+  expects gaps admitted and fixed, not defended.
+- Wants decisions **committed as guidance** so future agents inherit them;
+  reusable capabilities live where other projects can use them (the
+  illustration skill went to the sticker repo at YJ's suggestion, so that
+  repo *"can help us generate these"*).
+- The homepage is explicitly out of scope: *"Don't touch home, I think we
+  can keep that one."*
+
+### Settled parameters (do not relitigate)
+
+Dark scenes everywhere (both hero templates overlay white text) · mascot
+rightmost at h 0.40–0.50, trio 0.44 · baseline 0.76 · bubbles ≈ y 0.29 ·
+band height clamp(420px, 56vh, 580px) · faded backdrops darken 0.4 / sat
+0.25 / tint 0.78, source priority real photo → page original → AI candidate ·
+flagship cards centred (headlineSide "none") · no sparkles, no emanata, no
+skyline · Lucide for glyphs, simple-icons for logos · mint prompts strictly
+flat, no faces on props, never redraw the mascot as vectors · Tinker X runs
+left toward maker tools, no rocket.
