@@ -32,7 +32,7 @@ const canonical = `${BLOG_ORIGIN}/archive/${year}/`;
 			{stories.map((story) => (
 				<li>
 					<time datetime={blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision)}>{formatBlogDate(story.data.publishedAt, story.data.publishedAtPrecision)}</time>
-					<a href={blogHref(`/${story.data.legacyPath}`)}>{story.data.title}</a>
+					<a href={blogHref(`/${story.data.legacyPath}/`)}>{story.data.title}</a>
 					<span>{story.data.author.name}</span>
 				</li>
 			))}

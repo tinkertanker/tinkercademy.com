@@ -58,7 +58,7 @@ const blogSchema = {
 		<ul>
 			{stories.map((story) => (
 				<li>
-					<a class="story-card" href={blogHref(`/${story.data.legacyPath}`)}>
+					<a class="story-card" href={blogHref(`/${story.data.legacyPath}/`)}>
 						{story.data.heroImage && (
 							<img
 								src={story.data.heroImage}
