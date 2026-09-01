@@ -196,7 +196,14 @@ export function parseMediumRss(xml, options = {}) {
 		const rssPublishedAt = asIsoDate(item.find('pubDate').first().text(), 'pubDate');
 		const rssUpdatedAt = asIsoDate(item.find('atom\\:updated').first().text(), 'atom:updated');
 		const override = options.storyOverrides?.[id] ?? {};
-		const publishedAt = override.publishedAt ?? rssUpdatedAt;
+		const publishedAt = override.publishedAt ? asIsoDate(override.publishedAt, 'publishedAt override') : rssUpdatedAt;
+		const publishedAtPrecision = override.publishedAtPrecision;
+		if (publishedAtPrecision && publishedAtPrecision !== 'month') {
+			throw new Error(`Unsupported RSS publication-date precision for ${id}`);
+		}
+		if (publishedAtPrecision === 'month' && !publishedAt.endsWith('-01T00:00:00.000Z')) {
+			throw new Error(`Month-precision RSS publication date must use the first UTC day for ${id}`);
+		}
 		const paragraphs = applyTextReplacements(
 			parseBody(item.find('content\\:encoded').first().text()),
 			override.textReplacements,
@@ -216,6 +223,7 @@ export function parseMediumRss(xml, options = {}) {
 			sourceCreator,
 			createdAt: publishedAt,
 			publishedAt,
+			...(publishedAtPrecision ? { publishedAtPrecision } : {}),
 			latestPublishedAt: publishedAt,
 			updatedAt: rssUpdatedAt,
 			rssPublishedAt,

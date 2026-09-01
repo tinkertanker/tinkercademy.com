@@ -410,6 +410,7 @@ async function main() {
 			sourceMediumUrl: story.sourceMediumUrl,
 			author: story.author,
 			publishedAt: story.publishedAt,
+			publishedAtPrecision: story.publishedAtPrecision,
 			updatedAt: story.updatedAt,
 			tags: story.tags,
 			license: story.license,

@@ -52,8 +52,11 @@ stories, embed metadata, and the exact public publication RSS response used for
 the four newer stories. RSS source overrides (including the user-confirmed
 Claire Phay attribution, her editorial title and brand-casing corrections, and
 the original 2024 date of Marcuschen's story) are audited in
-`rss-source-overrides.json`. These caches are not normal build inputs after
-import. Other `scripts/_artifacts/` outputs remain ignored.
+`rss-source-overrides.json`. Chavonz's August 2025 and Tan Boon Leong's April
+2025 fallback dates retain month precision in the content schema and visible
+date labels; the first UTC day is used internally for deterministic sorting and
+feed compatibility. These caches are not normal build inputs after import.
+Other `scripts/_artifacts/` outputs remain ignored.
 
 ## Reproduce the inventory and import
 

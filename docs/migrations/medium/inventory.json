@@ -9865,55 +9865,6 @@
       ]
     },
     {
-      "id": "2071b60a462b",
-      "legacyPath": "my-summer-internship-with-tinkertanker-2071b60a462b",
-      "title": "My Summer Internship with Tinkertanker",
-      "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b",
-      "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b",
-      "author": {
-        "id": "dbe490e80fa7",
-        "name": "chavonz",
-        "handle": "chavonzfoo05",
-        "profileUrl": "https://medium.com/@chavonzfoo05"
-      },
-      "createdAt": "2026-09-01T04:07:38.098Z",
-      "publishedAt": "2026-09-01T04:07:38.098Z",
-      "latestPublishedAt": "2026-09-01T04:07:38.098Z",
-      "updatedAt": "2026-09-01T04:07:38.098Z",
-      "tags": [],
-      "wordCount": 586,
-      "readingTime": 2.211320754716981,
-      "mediumLicenseCode": null,
-      "license": "All rights reserved",
-      "rightsStatus": "review-required",
-      "source": {
-        "kind": "medium-rss",
-        "url": "https://medium.com/feed/tinkertanker",
-        "creator": "chavonz",
-        "rssPublishedAt": "2026-09-01T04:07:38.000Z",
-        "rssUpdatedAt": "2026-09-01T04:07:38.098Z"
-      },
-      "sourceSha256": "9497da1c534c18bb20949d86b06a2fccff69fbf8337fb58b457c73c986e246a8",
-      "paragraphCount": 16,
-      "paragraphTypes": {
-        "1": 11,
-        "4": 1,
-        "13": 4
-      },
-      "images": [
-        {
-          "paragraph": 3,
-          "id": "1*BnGSZUhQooklX9uj_kKkXg.png",
-          "caption": "A snapshot of the website I worked on!",
-          "sourceAlt": "",
-          "isFeatured": true
-        }
-      ],
-      "embeds": [],
-      "links": []
-    },
-    {
       "id": "9b7eae9a5c17",
       "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
       "title": "Internship Reflections: A Multitude of New Experiences",
@@ -9926,9 +9877,10 @@
         "handle": "boonleongleon",
         "profileUrl": "https://medium.com/@boonleongleon"
       },
-      "createdAt": "2026-09-01T04:07:45.265Z",
-      "publishedAt": "2026-09-01T04:07:45.265Z",
-      "latestPublishedAt": "2026-09-01T04:07:45.265Z",
+      "createdAt": "2025-04-01T00:00:00.000Z",
+      "publishedAt": "2025-04-01T00:00:00.000Z",
+      "publishedAtPrecision": "month",
+      "latestPublishedAt": "2025-04-01T00:00:00.000Z",
       "updatedAt": "2026-09-01T04:07:45.265Z",
       "tags": [],
       "wordCount": 1063,
@@ -10065,6 +10017,56 @@
           "description": ""
         }
       ],
+      "links": []
+    },
+    {
+      "id": "2071b60a462b",
+      "legacyPath": "my-summer-internship-with-tinkertanker-2071b60a462b",
+      "title": "My Summer Internship with Tinkertanker",
+      "subtitle": "",
+      "canonicalUrl": "https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "author": {
+        "id": "dbe490e80fa7",
+        "name": "chavonz",
+        "handle": "chavonzfoo05",
+        "profileUrl": "https://medium.com/@chavonzfoo05"
+      },
+      "createdAt": "2025-08-01T00:00:00.000Z",
+      "publishedAt": "2025-08-01T00:00:00.000Z",
+      "publishedAtPrecision": "month",
+      "latestPublishedAt": "2025-08-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T04:07:38.098Z",
+      "tags": [],
+      "wordCount": 586,
+      "readingTime": 2.211320754716981,
+      "mediumLicenseCode": null,
+      "license": "All rights reserved",
+      "rightsStatus": "review-required",
+      "source": {
+        "kind": "medium-rss",
+        "url": "https://medium.com/feed/tinkertanker",
+        "creator": "chavonz",
+        "rssPublishedAt": "2026-09-01T04:07:38.000Z",
+        "rssUpdatedAt": "2026-09-01T04:07:38.098Z"
+      },
+      "sourceSha256": "9497da1c534c18bb20949d86b06a2fccff69fbf8337fb58b457c73c986e246a8",
+      "paragraphCount": 16,
+      "paragraphTypes": {
+        "1": 11,
+        "4": 1,
+        "13": 4
+      },
+      "images": [
+        {
+          "paragraph": 3,
+          "id": "1*BnGSZUhQooklX9uj_kKkXg.png",
+          "caption": "A snapshot of the website I worked on!",
+          "sourceAlt": "",
+          "isFeatured": true
+        }
+      ],
+      "embeds": [],
       "links": []
     },
     {

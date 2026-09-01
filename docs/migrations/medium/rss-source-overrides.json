@@ -22,7 +22,9 @@
         "handle": "boonleongleon",
         "profileUrl": "https://medium.com/@boonleongleon"
       },
-      "basis": "Public Medium story byline and author-profile link."
+      "publishedAt": "2025-04-01T00:00:00.000Z",
+      "publishedAtPrecision": "month",
+      "basis": "Public Medium story byline and author-profile link. Medium's public author feed, current structured page data, and public web archives did not expose an earlier exact date; they only reported the 1 September 2026 publication event. The user supplied April 2025 as the fallback original publication month, normalized internally to the first UTC day while retaining month precision for display."
     },
     "2071b60a462b": {
       "author": {
@@ -31,7 +33,9 @@
         "handle": "chavonzfoo05",
         "profileUrl": "https://medium.com/@chavonzfoo05"
       },
-      "basis": "Public Medium story byline and author-profile link."
+      "publishedAt": "2025-08-01T00:00:00.000Z",
+      "publishedAtPrecision": "month",
+      "basis": "Public Medium story byline and author-profile link. Medium's public author feed, current structured page data, and public web archives did not expose an earlier exact date; they only reported the 1 September 2026 publication event. The user supplied August 2025 as the fallback original publication month, normalized internally to the first UTC day while retaining month precision for display."
     },
     "8b39f2ce987e": {
       "author": {

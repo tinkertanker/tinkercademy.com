@@ -277,6 +277,7 @@ async function main() {
 			author: story.author,
 			createdAt: story.createdAt,
 			publishedAt: story.publishedAt,
+			...(story.publishedAtPrecision ? { publishedAtPrecision: story.publishedAtPrecision } : {}),
 			latestPublishedAt: story.latestPublishedAt,
 			updatedAt: story.updatedAt,
 			tags: story.tags,

@@ -9,7 +9,8 @@ author:
   name: chavonz
   handle: chavonzfoo05
   profileUrl: https://medium.com/@chavonzfoo05
-publishedAt: 2026-09-01T04:07:38.098Z
+publishedAt: 2025-08-01T00:00:00.000Z
+publishedAtPrecision: month
 updatedAt: 2026-09-01T04:07:38.098Z
 tags: []
 license: All rights reserved

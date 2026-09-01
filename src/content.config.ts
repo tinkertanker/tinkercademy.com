@@ -49,6 +49,7 @@ const blog = defineCollection({
 			profileUrl: z.url().optional(),
 		}),
 		publishedAt: z.coerce.date(),
+		publishedAtPrecision: z.literal('month').optional(),
 		updatedAt: z.coerce.date().optional(),
 		tags: z.array(z.object({ name: z.string().min(1), slug: z.string().min(1) })).default([]),
 		license: z.literal('All rights reserved'),

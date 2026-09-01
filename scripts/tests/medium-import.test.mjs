@@ -165,6 +165,8 @@ test('normalises public RSS stories without trackers or Embedly wrappers', () =>
 		storyOverrides: {
 			abc123def456: {
 				title: 'A clearer story title',
+				publishedAt: '2025-08-01T00:00:00.000Z',
+				publishedAtPrecision: 'month',
 				textReplacements: [{ from: 'Text', to: 'Copy' }],
 				author: { name: 'Exact Author', handle: 'OddHandle' },
 			},
@@ -174,6 +176,8 @@ test('normalises public RSS stories without trackers or Embedly wrappers', () =>
 	assert.equal(story.id, 'abc123def456');
 	assert.equal(story.legacyPath, 'a-new-story-abc123def456');
 	assert.equal(story.title, 'A clearer story title');
+	assert.equal(story.publishedAt, '2025-08-01T00:00:00.000Z');
+	assert.equal(story.publishedAtPrecision, 'month');
 	assert.equal(story.author.name, 'Exact Author');
 	assert.equal(story.sourceCreator, 'OddHandle');
 	assert.deepEqual(story.paragraphs.map(({ type }) => type), [1, 13, 4, 11]);

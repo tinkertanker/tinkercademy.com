@@ -4,7 +4,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 import BlogNav from '../../components/articles/BlogNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
-import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogHref, formatBlogDate } from '../../lib/blog';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogDateTime, blogHref, formatBlogDate } from '../../lib/blog';
 
 export async function getStaticPaths() {
 	return (await getCollection('blog')).map((story) => ({
@@ -24,7 +24,7 @@ const articleSchema = {
 	description: story.data.description,
 	url: story.data.canonicalUrl,
 	mainEntityOfPage: story.data.canonicalUrl,
-	datePublished: story.data.publishedAt.toISOString(),
+	datePublished: blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision),
 	dateModified: modifiedAt.toISOString(),
 	author: {
 		'@type': 'Person',
@@ -62,7 +62,7 @@ const articleSchema = {
 						<a href={story.data.author.profileUrl} rel="author">{story.data.author.name}</a>
 					) : story.data.author.name}
 					<span aria-hidden="true"> · </span>
-					<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+					<time datetime={blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision)}>{formatBlogDate(story.data.publishedAt, story.data.publishedAtPrecision)}</time>
 				</p>
 			</div>
 		</header>

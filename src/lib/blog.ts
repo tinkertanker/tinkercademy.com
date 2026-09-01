@@ -19,13 +19,17 @@ export function getBlogYears(stories: BlogStory[]): number[] {
 	return [...new Set(stories.map((story) => story.data.publishedAt.getUTCFullYear()))].sort((a, b) => b - a);
 }
 
-export function formatBlogDate(date: Date): string {
+export function formatBlogDate(date: Date, precision?: 'month'): string {
 	return new Intl.DateTimeFormat('en-GB', {
-		day: 'numeric',
+		...(precision === 'month' ? {} : { day: 'numeric' }),
 		month: 'long',
 		year: 'numeric',
 		timeZone: 'UTC',
 	}).format(date);
+}
+
+export function blogDateTime(date: Date, precision?: 'month'): string {
+	return precision === 'month' ? date.toISOString().slice(0, 7) : date.toISOString();
 }
 
 export function blogHref(pathname = '/'): string {

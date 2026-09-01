@@ -6,6 +6,7 @@ import {
 	BLOG_FEED_URL,
 	BLOG_ORIGIN,
 	BLOG_TITLE,
+	blogDateTime,
 	blogHref,
 	formatBlogDate,
 	getBlogStories,
@@ -70,7 +71,7 @@ const blogSchema = {
 						)}
 						<div class="story-card__copy">
 							<span class="story-card__meta">
-								<time datetime={story.data.publishedAt.toISOString()}>{formatBlogDate(story.data.publishedAt)}</time>
+								<time datetime={blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision)}>{formatBlogDate(story.data.publishedAt, story.data.publishedAtPrecision)}</time>
 								{story.data.tags[0] && <span>{story.data.tags[0].name}</span>}
 							</span>
 							<h3>{story.data.title}</h3>

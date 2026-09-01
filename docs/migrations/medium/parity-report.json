@@ -998,20 +998,6 @@
       "unsafeLinksExcluded": 0
     },
     {
-      "legacyPath": "my-summer-internship-with-tinkertanker-2071b60a462b",
-      "title": "My Summer Internship with Tinkertanker",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b",
-      "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b",
-      "author": "chavonz",
-      "status": "pass",
-      "paragraphs": 16,
-      "textParagraphsChecked": 16,
-      "images": 1,
-      "embeds": 0,
-      "links": 0,
-      "unsafeLinksExcluded": 0
-    },
-    {
       "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
       "title": "Internship Reflections: A Multitude of New Experiences",
       "canonicalUrl": "https://blog.tinkercademy.com/internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
@@ -1022,6 +1008,20 @@
       "textParagraphsChecked": 22,
       "images": 14,
       "embeds": 1,
+      "links": 0,
+      "unsafeLinksExcluded": 0
+    },
+    {
+      "legacyPath": "my-summer-internship-with-tinkertanker-2071b60a462b",
+      "title": "My Summer Internship with Tinkertanker",
+      "canonicalUrl": "https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "author": "chavonz",
+      "status": "pass",
+      "paragraphs": 16,
+      "textParagraphsChecked": 16,
+      "images": 1,
+      "embeds": 0,
       "links": 0,
       "unsafeLinksExcluded": 0
     },

@@ -75,6 +75,19 @@ function compactVisibleText(value) {
 	return String(value ?? '').replace(/[\s\u200b\ufeff]+/gu, '');
 }
 
+function storyDateTime(story) {
+	return story.publishedAtPrecision === 'month' ? story.publishedAt.slice(0, 7) : story.publishedAt;
+}
+
+function storyDateLabel(story) {
+	return new Intl.DateTimeFormat('en-GB', {
+		...(story.publishedAtPrecision === 'month' ? {} : { day: 'numeric' }),
+		month: 'long',
+		year: 'numeric',
+		timeZone: 'UTC',
+	}).format(new Date(story.publishedAt));
+}
+
 function safeAuditedHref(value) {
 	try {
 		return ['http:', 'https:', 'mailto:', 'tel:'].includes(new URL(value, BLOG_ORIGIN).protocol) ? value : null;
@@ -155,6 +168,7 @@ async function verifySource(options) {
 		expect(data.author?.id === story.author.id && data.author?.name === story.author.name, `Author drift for ${story.legacyPath}`, errors);
 		expect(data.title === story.title && (data.subtitle || '') === story.subtitle, `Title or subtitle drift for ${story.legacyPath}`, errors);
 		expect(data.publishedAt === story.publishedAt && data.updatedAt === story.updatedAt, `Publication date drift for ${story.legacyPath}`, errors);
+		expect(data.publishedAtPrecision === story.publishedAtPrecision, `Publication date precision drift for ${story.legacyPath}`, errors);
 		expect(JSON.stringify(data.tags) === JSON.stringify(story.tags), `Tag drift for ${story.legacyPath}`, errors);
 		expect(data.license === 'All rights reserved', `Wrong licence for ${story.legacyPath}`, errors);
 		expect(data.provenance?.sourceSha256 === story.sourceSha256, `Source hash drift for ${story.legacyPath}`, errors);
@@ -304,7 +318,8 @@ async function verifyDist(dist, inventory, errors) {
 			expect($('link[rel="canonical"]').attr('href') === story.canonicalUrl, `Built canonical is wrong for ${story.legacyPath}`, errors);
 			expect($('.blog-article__header h1').text().trim() === story.title, `Built title is wrong for ${story.legacyPath}`, errors);
 			expect($('.blog-article__byline').text().replace(/\s+/gu, ' ').trim().startsWith(`By ${story.author.name} ·`), `Visible top byline is wrong for ${story.legacyPath}`, errors);
-			expect($('.blog-article__byline time').attr('datetime') === story.publishedAt, `Visible publication date is wrong for ${story.legacyPath}`, errors);
+			expect($('.blog-article__byline time').attr('datetime') === storyDateTime(story), `Visible publication datetime is wrong for ${story.legacyPath}`, errors);
+			expect($('.blog-article__byline time').text().trim() === storyDateLabel(story), `Visible publication date label is wrong for ${story.legacyPath}`, errors);
 		if (story.author.profileUrl) {
 			expect($('.blog-article__byline a[rel="author"]').text().trim() === story.author.name, `Linked author name is wrong for ${story.legacyPath}`, errors);
 			expect($('.blog-article__byline a[rel="author"]').attr('href') === story.author.profileUrl, `Author profile URL is wrong for ${story.legacyPath}`, errors);
