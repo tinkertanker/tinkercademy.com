@@ -7,6 +7,7 @@ import ContentLayout from '../layouts/ContentLayout.astro';
 import { blogHref, blogStoryPath, formatBlogDate, getBlogStories } from '../lib/blog';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
+import { openSourceTools } from '../lib/open-source';
 
 const page = getStaticPage('/showcase');
 if (!page) return Astro.redirect('/404');
@@ -88,6 +89,8 @@ const blogArticles = (await getBlogStories()).slice(0, 10).map((story) => {
 		featureImage: story.data.heroImage,
 	};
 });
+
+const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 ---
 
 <ContentLayout
@@ -154,6 +157,41 @@ const blogArticles = (await getBlogStories()).slice(0, 10).map((story) => {
 	</section>
 
 	<section class="sc-section sc-section--muted">
+		<div class="shell">
+			<h2 class="sc-section__heading">Open source, built by us</h2>
+			<p class="sc-section__lead">
+				Small, practical tools we built for real work, then shared for anyone to use.
+				<a href="/open-source/">Explore every project</a>.
+			</p>
+			<div class="sc-projects">
+				{featuredOpenSourceTools.map((tool) => (
+					<article class="sc-project-card">
+						<div class="sc-project-card__media">
+							{tool.image && <img src={tool.image} alt="" loading="lazy" />}
+						</div>
+						<div class="sc-project-card__body">
+							<h3 class="sc-project-card__name">
+								<a href={tool.primaryHref} target="_blank" rel="noopener">{tool.name}</a>
+							</h3>
+							<p class="sc-project-card__tagline">{tool.tagline}</p>
+							<ul class="sc-project-card__tags" aria-label={`${tool.name} details`}>
+								<li class="sc-project-card__tag sc-project-card__tag--platform">{tool.platform}</li>
+								<li class="sc-project-card__tag">{tool.builtWith}</li>
+								<li class="sc-project-card__tag">{tool.access}</li>
+							</ul>
+						</div>
+						<footer class="sc-project-card__footer">
+							<a href={tool.primaryHref} target="_blank" rel="noopener">
+								{tool.primaryLabel} ↗
+							</a>
+						</footer>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<section class="sc-section">
 		<div class="shell">
 			<h2 class="sc-section__heading">Our Interns</h2>
 			<p class="sc-section__lead">
@@ -339,6 +377,140 @@ const blogArticles = (await getBlogStories()).slice(0, 10).map((story) => {
 		color: rgb(110, 110, 110);
 		margin: 0 0 2rem;
 		max-width: 60rem;
+	}
+
+	.sc-section__lead a {
+		color: var(--accent-dark);
+		font-weight: 500;
+		text-underline-offset: 3px;
+	}
+
+	.sc-projects {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.sc-project-card {
+		display: flex;
+		min-width: 0;
+		flex-direction: column;
+		overflow: hidden;
+		border: 1px solid rgb(229, 229, 229);
+		border-radius: 14px;
+		background: #fff;
+		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease,
+			border-color 0.3s ease;
+	}
+
+	.sc-project-card:hover {
+		transform: translateY(-4px);
+		border-color: rgb(240, 93, 87);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+	}
+
+	.sc-project-card__media {
+		display: block;
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+		border-bottom: 1px solid rgb(235, 235, 235);
+		background: rgb(245, 245, 245);
+	}
+
+	.sc-project-card__media img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top center;
+		transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.sc-project-card:hover .sc-project-card__media img {
+		transform: scale(1.04);
+	}
+
+	.sc-project-card__body {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		gap: 0.55rem;
+		padding: 1.1rem 1.1rem 0.75rem;
+	}
+
+	.sc-project-card__name {
+		margin: 0;
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		font-size: 1.22rem;
+		font-weight: 500;
+		line-height: 1.15;
+		letter-spacing: -0.025em;
+	}
+
+	.sc-project-card__name a {
+		color: rgb(23, 23, 23);
+		text-decoration: none;
+	}
+
+	.sc-project-card__tagline {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		line-height: 1.45;
+		color: rgb(90, 90, 90);
+	}
+
+	.sc-project-card__tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin: auto 0 0;
+		padding: 0.7rem 0 0;
+		list-style: none;
+	}
+
+	.sc-project-card__tag {
+		padding: 0.25rem 0.5rem;
+		border-radius: 6px;
+		background: #f3f3f3;
+		color: rgb(95, 95, 95);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.66rem;
+	}
+
+	.sc-project-card__tag--platform {
+		background: rgba(240, 93, 87, 0.1);
+		color: var(--accent-dark);
+	}
+
+	.sc-project-card__footer {
+		padding: 0 1.1rem 1.1rem;
+	}
+
+	.sc-project-card__footer a {
+		color: var(--accent-dark);
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.sc-project-card__footer a:hover,
+	.sc-project-card__name a:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+
+	@media (max-width: 999px) {
+		.sc-projects {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 599px) {
+		.sc-projects {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.sc-spotlight__inner {
