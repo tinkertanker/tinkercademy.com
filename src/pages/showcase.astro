@@ -4,6 +4,7 @@
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { blogHref, blogStoryPath, formatBlogDate, getBlogStories } from '../lib/blog';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
 
@@ -75,98 +76,18 @@ const internTestimonials = [
 const jiaChenQuote =
 	'Meet Jia Chen, a young visionary from Singapore whose journey into the world of technology began with childhood exploration and the transformative power of mobile apps. Inspired by the seamless fusion of science and technology, Jia Chen embarked on a swift learning curve, mastering the Swift programming language and unveiling his debut iOS app on the App Store at a remarkably young age. An Information Technology diploma graduate from Ngee Ann Polytechnic, Jia Chen\'s creative process is seamlessly integrated into the Apple ecosystem, from sketching app designs on iPad to bringing them to life with Xcode on Mac. With six apps already gracing the App Store and two Swift Student Challenge triumphs under his belt, Jia Chen epitomises the next generation of creators and innovators.';
 
-const blogArticles = [
-	{
-		title: 'Reframing my thoughts on website builders',
-		link: '/blog/2024/reframing-my-thoughts-on-website-builders/',
-		author: 'nyx',
-		date: 'Jul 30, 2024',
-		excerpt:
-			"Recently, I joined Tinkertanker as an intern and as part of my role I spent a half-dozen hours daily prodding and poking around at a spectacular website builder - 'Framer'.",
-		featureImage: '/blog-media/bbc0b8466b0612e25a1bad09a4435fcbfb02be51d94de71f84527126b1ecfe0b.jpg',
-	},
-	{
-		title: 'Now That AI Can Generate Code, Should the Everyday Student Stop Learning How to Code?',
-		link: '/blog/2024/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code/',
-		author: 'Tinkercademy',
-		date: 'May 8, 2024',
-		excerpt:
-			"Picture this: a world where coding is as effortless as conversing in English, where programming becomes akin to a casual chat with computers. According to Jensen Huang, CEO of NVIDIA, this isn't a mere fantasy, it will soon be a reality for us all - thanks to AI.",
-		featureImage: '/blog-media/330a8bb214ed43be57f0db7c7d132097b59906e2a97a52c4181ddc8a32bd08d7.jpg',
-	},
-	{
-		title: 'Orange v/s PyCaret v/s Scikit: A Comparison of Beginner Machine Learning Libraries',
-		link: '/blog/2024/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries/',
-		author: 'ng mh',
-		date: 'Mar 22, 2024',
-		excerpt:
-			'TLDR: A discussion on which of these 3 Data Science/Machine Learning libraries you should pick for your next data science / machine learning project.',
-		featureImage: '/blog-media/1f1671f5d2e1801d9da94a59c88fc4426264007c2751fc120fcf55e11dbe1ace.png',
-	},
-	{
-		title: 'What is it like to build games on Unity?',
-		link: '/blog/2024/what-is-it-like-to-build-games-on-unity/',
-		author: 'Tinkercademy',
-		date: 'Feb 2, 2024',
-		excerpt:
-			"Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks' School, carrying laptops, water bottles and an eager mind for learning a new, much-coveted skill - Game Development in Unity.",
-		featureImage: '/blog-media/37dc8e72b73b9b45e47af97b6b4870ae17f524dd9fde238da099cbe96ae28f0c.gif',
-	},
-	{
-		title: 'What We Learnt from our Latest Sew & Code Camp',
-		link: '/blog/2024/what-we-learnt-from-our-latest-sew-and-code-camp/',
-		author: 'Tinkercademy',
-		date: 'Feb 2, 2024',
-		excerpt:
-			'During the recent December holidays, we organised a unique coding camp - one that had a distinctly different flavour from our regular camps. Compared to those, this camp was a hybrid of coding and sewing.',
-		featureImage: '/blog-media/d480c299cc5fcb6d95d3b764fff2f2353095c5cc3deb98331741e7dc6b4868eb.jpg',
-	},
-	{
-		title: 'Having fun with Automata and LittleBits!',
-		link: '/blog/2023/having-fun-with-automata-and-littlebits/',
-		author: 'Toh yixue',
-		date: 'Nov 20, 2023',
-		excerpt:
-			'I have always been fascinated with the idea of Automata. A quick Pinterest search will yield you countless amazing examples of these, made out of wood, paper, metal and more...',
-		featureImage: '/blog-media/22e4d4940fc050daf03b212d4a2fcd31fa567cb88c9799815500d9a56360486a.jpg',
-	},
-	{
-		title: 'Using Python and Pandas to generate useful reports out of CSV files, part 2',
-		link: '/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2/',
-		author: 'Ong Yi Shen',
-		date: 'Oct 13, 2023',
-		excerpt:
-			'Continuing with part 1, I will continue to use the cleaned data from the CSV to create a more detailed report, this time I want to create a report for each individual teacher, with aggregated statistics for each teaching group.',
-		featureImage: '/blog-media/f5d737e7c6d3cdd53c1d005b46461edb51c3d398b7028ed0ace7b37691da0f88.png',
-	},
-	{
-		title: 'Using Python and Pandas to generate useful reports out of CSV files, part 1',
-		link: '/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/',
-		author: 'Ong Yi Shen',
-		date: 'Oct 10, 2023',
-		excerpt:
-			'Below, Ong Yi Shen, our intern from Nanyang Technological University (NTU) tackles this task as he uses a variety of Python tricks to clean, analyse and report data obtained from CSV files.',
-		featureImage: '/blog-media/f5d737e7c6d3cdd53c1d005b46461edb51c3d398b7028ed0ace7b37691da0f88.png',
-	},
-	{
-		title: 'Tinkertanker Internship: Bowling at Tinkertanker',
-		link: '/blog/2023/tinkertanker-internship-bowling-at-tinkertanker/',
-		author: 'Mark',
-		date: 'Oct 6, 2023',
-		excerpt:
-			'Do you ever pour boiling soup into a cup and think to yourself, "Wow, this is taking really long to cool, if only my liquid was in a container of greater diameter, giving it more exposed surface area to lose heat from?"',
-		featureImage: '/blog-media/4410ffb01d2d99f0fdc992f6762b488d4ecbb1d7c250e3f6e89b5a622dd39445.png',
-	},
-	{
-		title: 'Internship Reflection: A dive into many new things',
-		link: '/blog/2023/internship-reflection-a-dive-into-many-new-things/',
-		author: 'Enric Tan',
-		date: 'Oct 2, 2023',
-		excerpt:
-			'In my summer break as a year 1 student at NTU, I decided to take an internship with Tinkertanker to expose myself to more coding languages and learn more about Computer Sciences.',
-		featureImage: '/blog-media/427ab4a3ad28fe54b8e9dc239ffc5781bc9f1ca4bfb70c90720e9c8deff1afa6.png',
-	},
-];
+const blogArticles = (await getBlogStories()).slice(0, 10).map((story) => {
+	const excerpt = [story.data.subtitle, story.data.description]
+		.find((value) => value && value.trim() !== story.data.title.trim());
+	return {
+		title: story.data.title,
+		link: blogHref(blogStoryPath(story)),
+		author: story.data.author.name,
+		date: formatBlogDate(story.data.publishedAt, story.data.publishedAtPrecision),
+		excerpt,
+		featureImage: story.data.heroImage,
+	};
+});
 ---
 
 <ContentLayout
@@ -206,16 +127,18 @@ const blogArticles = [
 						tabindex={i >= blogArticles.length ? -1 : undefined}
 					>
 						<div class="sc-carousel__media">
-							<img
-								class="sc-carousel__img"
-								src={article.featureImage}
-								alt=""
-								loading="lazy"
-							/>
+							{article.featureImage && (
+								<img
+									class="sc-carousel__img"
+									src={article.featureImage}
+									alt=""
+									loading="lazy"
+								/>
+							)}
 						</div>
 						<div class="sc-carousel__body">
 							<p class="sc-carousel__title">{article.title}</p>
-							<p class="sc-carousel__excerpt">{article.excerpt}</p>
+							{article.excerpt && <p class="sc-carousel__excerpt">{article.excerpt}</p>}
 							<div class="sc-carousel__meta">
 								<span class="sc-carousel__byline">
 									{article.author} · {article.date}
