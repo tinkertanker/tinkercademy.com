@@ -1,6 +1,5 @@
 ---
 // The Worker maps blog.tinkercademy.com/ to this isolated build route.
-import BlogNav from '../../components/articles/BlogNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import {
 	BLOG_DESCRIPTION,
@@ -34,20 +33,24 @@ const blogSchema = {
 	alternateFeed={{ title: `${BLOG_TITLE} RSS feed`, href: BLOG_FEED_URL }}
 	structuredData={blogSchema}
 >
-	<BlogNav active="stories" />
 	<header class="blog-hero">
 		<div class="shell blog-hero__inner">
-			<p class="blog-hero__eyebrow">Ideas, experiments, and lessons</p>
 			<h1>{BLOG_TITLE}</h1>
 			<p>{BLOG_DESCRIPTION}</p>
-			<p class="blog-hero__count">{stories.length} stories · {years.at(-1)}–{years[0]}</p>
+			<div class="blog-hero__footer">
+				<p class="blog-hero__count">{stories.length} stories · {years.at(-1)}–{years[0]}</p>
+				<nav class="blog-hero__nav" aria-label="Build Log">
+					<a href={blogHref('/')} aria-current="page">All stories</a>
+					<a href={blogHref('/#archives')}>Archives</a>
+					<a href={blogHref('/feed')}>RSS</a>
+				</nav>
+			</div>
 		</div>
 	</header>
 
 	<section class="blog-list shell" aria-labelledby="all-stories">
 		<div class="blog-list__header">
 			<div>
-				<p class="blog-list__eyebrow">From the archive</p>
 				<h2 id="all-stories">All stories</h2>
 			</div>
 			<nav id="archives" class="blog-list__archives" aria-label="Article archives">
@@ -89,17 +92,11 @@ const blogSchema = {
 
 <style>
 	.blog-hero {
-		padding: clamp(4rem, 8vw, 7rem) 0;
+		padding: clamp(4rem, 8vw, 7rem) 0 clamp(2.5rem, 4vw, 4rem);
 		background:
 			radial-gradient(circle at 83% 18%, rgba(240, 93, 87, 0.18), transparent 30%),
 			linear-gradient(145deg, #fff8f4, #f3e9e4);
 		color: var(--text);
-	}
-
-	.blog-hero__inner {
-		max-width: 64rem;
-		margin-left: max(0.75rem, calc((100vw - 1160px) / 2));
-		margin-right: auto;
 	}
 
 	.blog-hero h1 {
@@ -111,28 +108,48 @@ const blogSchema = {
 		letter-spacing: -0.045em;
 	}
 
-	.blog-hero p:not(.blog-hero__eyebrow, .blog-hero__count) {
+	.blog-hero p:not(.blog-hero__count) {
 		max-width: 60ch;
 		margin: 1.25rem 0;
 		font-size: var(--lead-font-size);
 		line-height: var(--lead-line-height);
 	}
 
-	.blog-hero__eyebrow,
-	.blog-list__eyebrow {
-		margin: 0 0 0.85rem;
-		color: var(--accent-dark);
-		font-size: 0.82rem;
-		font-weight: 600;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
+	.blog-hero__footer {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: 2rem;
+		margin-top: clamp(2.5rem, 6vw, 5rem);
 	}
 
 	.blog-hero__count {
-		margin: 1.5rem 0 0;
+		margin: 0;
 		font-family: 'Fragment Mono', monospace;
 		font-size: 0.82rem;
 		color: rgb(90, 75, 70);
+	}
+
+	.blog-hero__nav {
+		display: flex;
+		align-items: center;
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+		font-size: 0.92rem;
+		font-weight: 600;
+	}
+
+	.blog-hero__nav a {
+		color: var(--text);
+		text-decoration: none;
+	}
+
+	.blog-hero__nav a:hover,
+	.blog-hero__nav a:focus-visible,
+	.blog-hero__nav a[aria-current='page'] {
+		color: var(--accent-dark);
+		text-decoration: underline;
+		text-decoration-thickness: 0.12em;
+		text-underline-offset: 0.3em;
 	}
 
 	.blog-list {
@@ -275,6 +292,12 @@ const blogSchema = {
 	}
 
 	@media (max-width: 720px) {
+		.blog-hero__footer {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+
 		.blog-list__header {
 			align-items: flex-start;
 			flex-direction: column;
