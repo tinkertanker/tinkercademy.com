@@ -1,8 +1,8 @@
 {
   "version": 1,
   "summary": {
-    "assets": 395,
-    "placements": 397,
+    "assets": 413,
+    "placements": 415,
     "animatedAssets": 34,
     "altReviewRequired": 0
   },
@@ -4930,6 +4930,35 @@
       ]
     },
     {
+      "sourceImageId": "1*26WIabsZprycyGOmMTa1JQ.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*26WIabsZprycyGOmMTa1JQ.png",
+      "localPath": "/blog-media/48e989db1165ce6476915b6667bdb4cb9dbf68f09b353ec7b3ff6b0f025b9b50.png",
+      "sha256": "48e989db1165ce6476915b6667bdb4cb9dbf68f09b353ec7b3ff6b0f025b9b50",
+      "mimeType": "image/png",
+      "bytes": 252220,
+      "width": 1919,
+      "height": 1021,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 6,
+          "imageId": "1*26WIabsZprycyGOmMTa1JQ.png",
+          "reviewKey": "9b7eae9a5c17:6:1*26WIabsZprycyGOmMTa1JQ.png",
+          "caption": "We demonstrated the use of Copilot AI in developing games during the bootcamp.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Visual Studio Code with GitHub Copilot guiding the implementation of a Unity player-health indicator in HealthPlayer.cs.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*2WlAbLaTSwI2eYELF9PPug.png",
       "sourceUrl": "https://miro.medium.com/v2/1*2WlAbLaTSwI2eYELF9PPug.png",
       "localPath": "/blog-media/f9e265b292750c53ce75d0a419af1d14fde99342ce87e1dde739ce0607c384f8.png",
@@ -5157,6 +5186,64 @@
       ]
     },
     {
+      "sourceImageId": "1*4fKSRASntFSa2BSh0MXf8A.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*4fKSRASntFSa2BSh0MXf8A.png",
+      "localPath": "/blog-media/57bf1e73cf540bebed606a45ea3e6b23f137bfebe44f87d77990901950e3b910.png",
+      "sha256": "57bf1e73cf540bebed606a45ea3e6b23f137bfebe44f87d77990901950e3b910",
+      "mimeType": "image/png",
+      "bytes": 4774,
+      "width": 298,
+      "height": 189,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "cb94bd7d0272",
+          "legacyPath": "looking-back-at-my-time-in-tinkertanker-cb94bd7d0272",
+          "paragraph": 19,
+          "imageId": "1*4fKSRASntFSa2BSh0MXf8A.png",
+          "reviewKey": "cb94bd7d0272:19:1*4fKSRASntFSa2BSh0MXf8A.png",
+          "caption": "Flappy bird game!",
+          "sourceAlt": "",
+          "isFeatured": true,
+          "decision": "meaningful",
+          "alt": "Flappy Bird game screen with a blue bird flying between green pipes and “Fly in: 1” displayed above.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*4NcPOV74HuuEQ752tDHb1g.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*4NcPOV74HuuEQ752tDHb1g.png",
+      "localPath": "/blog-media/7af0c0ee46e9ce195d7842a5a1637497eee6c3f198ec12fbdd53c164b5b501fc.png",
+      "sha256": "7af0c0ee46e9ce195d7842a5a1637497eee6c3f198ec12fbdd53c164b5b501fc",
+      "mimeType": "image/png",
+      "bytes": 143147,
+      "width": 1891,
+      "height": 825,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 11,
+          "imageId": "1*4NcPOV74HuuEQ752tDHb1g.png",
+          "reviewKey": "9b7eae9a5c17:11:1*4NcPOV74HuuEQ752tDHb1g.png",
+          "caption": "",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Redesigned booking edit page with a table of school session dates, times, instructors, and edit or delete actions.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*4Nqh2rj1gSHuME2SGTEo7w.jpeg",
       "sourceUrl": "https://miro.medium.com/v2/1*4Nqh2rj1gSHuME2SGTEo7w.jpeg",
       "localPath": "/blog-media/b40b524de6b9d2834593371d1d77bd2d1d20092a0285e3bda874b7ad41b167fe.jpg",
@@ -5372,6 +5459,35 @@
           "decision": "meaningful",
           "alt": "An image of the Bernina 535",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*5yo8NcEEOvw7c3M7mEFABw.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*5yo8NcEEOvw7c3M7mEFABw.png",
+      "localPath": "/blog-media/1aa76a3ed441353e331d6fd95f48f138b8774afd2dedd34096a93aca3d9b09d9.png",
+      "sha256": "1aa76a3ed441353e331d6fd95f48f138b8774afd2dedd34096a93aca3d9b09d9",
+      "mimeType": "image/png",
+      "bytes": 149945,
+      "width": 1890,
+      "height": 820,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 10,
+          "imageId": "1*5yo8NcEEOvw7c3M7mEFABw.png",
+          "reviewKey": "9b7eae9a5c17:10:1*5yo8NcEEOvw7c3M7mEFABw.png",
+          "caption": "The new Bookings page (at this point the API was still in the midst of being set up)",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Redesigned Bookings page with navigation, search, class tabs, a dated booking list, pagination, filters and add controls.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -6357,6 +6473,35 @@
       ]
     },
     {
+      "sourceImageId": "1*BnGSZUhQooklX9uj_kKkXg.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*BnGSZUhQooklX9uj_kKkXg.png",
+      "localPath": "/blog-media/bf1c44e6d23f463ecd7aed76ac4dc2d738b62e9437802d82c297c2f8f6eeab21.png",
+      "sha256": "bf1c44e6d23f463ecd7aed76ac4dc2d738b62e9437802d82c297c2f8f6eeab21",
+      "mimeType": "image/png",
+      "bytes": 410634,
+      "width": 2878,
+      "height": 1550,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "2071b60a462b",
+          "legacyPath": "my-summer-internship-with-tinkertanker-2071b60a462b",
+          "paragraph": 3,
+          "imageId": "1*BnGSZUhQooklX9uj_kKkXg.png",
+          "reviewKey": "2071b60a462b:3:1*BnGSZUhQooklX9uj_kKkXg.png",
+          "caption": "A snapshot of the website I worked on!",
+          "sourceAlt": "",
+          "isFeatured": true,
+          "decision": "meaningful",
+          "alt": "Student-management landing page promoting “Use IoT for Classroom”, with login controls, a teacher illustration and connected classroom devices.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*bRgBqM_1KAIDEeDyIB8gTQ.png",
       "sourceUrl": "https://miro.medium.com/v2/1*bRgBqM_1KAIDEeDyIB8gTQ.png",
       "localPath": "/blog-media/05fc5d3728700df8aea4a15c4df48d7f76f52495cd6a271da8640226746928ba.png",
@@ -6448,6 +6593,35 @@
           "decision": "meaningful",
           "alt": "Spammy, Spammy, Ham",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*C4TKqINCaXOYpFXZ1Ui7og.jpeg",
+      "sourceUrl": "https://miro.medium.com/v2/1*C4TKqINCaXOYpFXZ1Ui7og.jpeg",
+      "localPath": "/blog-media/316457f2d259220aa87c284674682410d835379e6d9883d17e4f1fdc9cc73d4c.jpg",
+      "sha256": "316457f2d259220aa87c284674682410d835379e6d9883d17e4f1fdc9cc73d4c",
+      "mimeType": "image/jpeg",
+      "bytes": 308919,
+      "width": 1920,
+      "height": 1080,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 21,
+          "imageId": "1*C4TKqINCaXOYpFXZ1Ui7og.jpeg",
+          "reviewKey": "9b7eae9a5c17:21:1*C4TKqINCaXOYpFXZ1Ui7og.jpeg",
+          "caption": "A photo of me at DSTA BrainHack 2025.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Person in glasses standing at the blue-lit DSTA BrainHack 2025 entrance between science-fiction character displays.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -7276,6 +7450,35 @@
       ]
     },
     {
+      "sourceImageId": "1*ErvKABjFuKf0tcC-ZPQ-CQ.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*ErvKABjFuKf0tcC-ZPQ-CQ.png",
+      "localPath": "/blog-media/8dfc88b9107e0e4ce8a98cbbce8e5b042a0ac8e98a68e8ede5e7452aa95f6a21.png",
+      "sha256": "8dfc88b9107e0e4ce8a98cbbce8e5b042a0ac8e98a68e8ede5e7452aa95f6a21",
+      "mimeType": "image/png",
+      "bytes": 90167,
+      "width": 1894,
+      "height": 826,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 9,
+          "imageId": "1*ErvKABjFuKf0tcC-ZPQ-CQ.png",
+          "reviewKey": "9b7eae9a5c17:9:1*ErvKABjFuKf0tcC-ZPQ-CQ.png",
+          "caption": "The old Bookings page.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Old Bookings page with six orange rows listing dates, schools, programmes, times, session counts and invoice statuses.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*ERwoXmDwBfM0oBr5R6fU3w.png",
       "sourceUrl": "https://miro.medium.com/v2/1*ERwoXmDwBfM0oBr5R6fU3w.png",
       "localPath": "/blog-media/014af73d77971d22598d9129dd06b0a6b49ac01ebaadcdc1e682265f460eb886.png",
@@ -7334,6 +7537,35 @@
           "decision": "meaningful",
           "alt": "Check out all the micro:bits powering each of the aliens!",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*exBs5xRwyLsS48uCpFcvgg.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*exBs5xRwyLsS48uCpFcvgg.png",
+      "localPath": "/blog-media/5b58167649457dbe925b9dc6ea42cb62c24dcc96b246062fc3682566456418d1.png",
+      "sha256": "5b58167649457dbe925b9dc6ea42cb62c24dcc96b246062fc3682566456418d1",
+      "mimeType": "image/png",
+      "bytes": 181608,
+      "width": 1913,
+      "height": 820,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 23,
+          "imageId": "1*exBs5xRwyLsS48uCpFcvgg.png",
+          "reviewKey": "9b7eae9a5c17:23:1*exBs5xRwyLsS48uCpFcvgg.png",
+          "caption": "Developing a Flappy Bird Game using Phaser.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "VS Code showing Phaser Flappy Bird code beside a blue game preview with Play, Score and Exit buttons and console output.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -8205,6 +8437,35 @@
       ]
     },
     {
+      "sourceImageId": "1*i8njz9iPSO_u5REgiMY0nA.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*i8njz9iPSO_u5REgiMY0nA.png",
+      "localPath": "/blog-media/444cbf5877529cce819b8c1a3d6f159e8553759f6ed102bd03baf8d854dc8ada.png",
+      "sha256": "444cbf5877529cce819b8c1a3d6f159e8553759f6ed102bd03baf8d854dc8ada",
+      "mimeType": "image/png",
+      "bytes": 59613,
+      "width": 1896,
+      "height": 823,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 16,
+          "imageId": "1*i8njz9iPSO_u5REgiMY0nA.png",
+          "reviewKey": "9b7eae9a5c17:16:1*i8njz9iPSO_u5REgiMY0nA.png",
+          "caption": "The old Add Booking page.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Old Add Booking page with session timing and location fields beside instructor, type and rate controls.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*I9totIL1E8L8sYapFe9OTw.png",
       "sourceUrl": "https://miro.medium.com/v2/1*I9totIL1E8L8sYapFe9OTw.png",
       "localPath": "/blog-media/30e74ae71641055f004c0120837a0b9f3bb0d3aae3165c9fc2c4bbd792b95c93.png",
@@ -8232,6 +8493,35 @@
           "decision": "meaningful",
           "alt": "Custom image generator using OpenAI API and Streamlit",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*IK0KGyMsnTKRAZNpyIdSxA.jpeg",
+      "sourceUrl": "https://miro.medium.com/v2/1*IK0KGyMsnTKRAZNpyIdSxA.jpeg",
+      "localPath": "/blog-media/fc22dcb1bdadea0822c1af5d37defbfaf648277de712e8909fd2df40180c3ef6.jpg",
+      "sha256": "fc22dcb1bdadea0822c1af5d37defbfaf648277de712e8909fd2df40180c3ef6",
+      "mimeType": "image/jpeg",
+      "bytes": 12516,
+      "width": 496,
+      "height": 156,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 5,
+          "imageId": "1*IK0KGyMsnTKRAZNpyIdSxA.jpeg",
+          "reviewKey": "9b7eae9a5c17:5:1*IK0KGyMsnTKRAZNpyIdSxA.jpeg",
+          "caption": "We had the opportunity to assist in Copilot AI Bootcamp 2025 at St Patrick’s School.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Banner for the 2025 Copilot AI Bootcamp, hosted by Tinkercademy and the Infocomm Media Development Authority.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9482,6 +9772,35 @@
       ]
     },
     {
+      "sourceImageId": "1*ofmfEVdtLVo-JZh7BPnMlA.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*ofmfEVdtLVo-JZh7BPnMlA.png",
+      "localPath": "/blog-media/3689082464a7628695647a3b40432bb0d0e639d8fb4419efbd03f9a929abb641.png",
+      "sha256": "3689082464a7628695647a3b40432bb0d0e639d8fb4419efbd03f9a929abb641",
+      "mimeType": "image/png",
+      "bytes": 6307,
+      "width": 638,
+      "height": 64,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 14,
+          "imageId": "1*ofmfEVdtLVo-JZh7BPnMlA.png",
+          "reviewKey": "9b7eae9a5c17:14:1*ofmfEVdtLVo-JZh7BPnMlA.png",
+          "caption": "Claude, 2025",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Claude terminal paused on “Pleading…” after 14 seconds and 3.1 thousand tokens.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*OJg6GxjRRYGGyc5uGpSb-Q.png",
       "sourceUrl": "https://miro.medium.com/v2/1*OJg6GxjRRYGGyc5uGpSb-Q.png",
       "localPath": "/blog-media/3c2ff802b75959e2eed3bf7d20fd6573acbc2baf28c456c2df08314e5a824372.png",
@@ -9610,6 +9929,35 @@
       ]
     },
     {
+      "sourceImageId": "1*pc-C_FO62piQjupVCNp0eQ.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*pc-C_FO62piQjupVCNp0eQ.png",
+      "localPath": "/blog-media/e08672b4117d7f1386c648909f75956e0f5495d635154a9b92edc94b9939d903.png",
+      "sha256": "e08672b4117d7f1386c648909f75956e0f5495d635154a9b92edc94b9939d903",
+      "mimeType": "image/png",
+      "bytes": 96838,
+      "width": 1028,
+      "height": 935,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "8b39f2ce987e",
+          "legacyPath": "intern-in-tinkertanker-8b39f2ce987e",
+          "paragraph": 17,
+          "imageId": "1*pc-C_FO62piQjupVCNp0eQ.png",
+          "reviewKey": "8b39f2ce987e:17:1*pc-C_FO62piQjupVCNp0eQ.png",
+          "caption": "Moving forward, we aim to keep the data neater instead of just presenting it as-is.",
+          "sourceAlt": "",
+          "isFeatured": true,
+          "decision": "meaningful",
+          "alt": "Summarize Lesson app showing Robotics inputs and generated lesson outcomes, course overview and benefits as loosely formatted text.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*pHDcqwguFOKYaZapezwAsw.gif",
       "sourceUrl": "https://miro.medium.com/v2/1*pHDcqwguFOKYaZapezwAsw.gif",
       "localPath": "/blog-media/dc223b969ab3bebda6d40562d0bca5b7859244a9be9f64a6a826b2163c00625e.gif",
@@ -9637,6 +9985,35 @@
           "decision": "meaningful",
           "alt": "Strawbotics starter kit",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*PKAJmzu3vRHY5G2OCIyLtA.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*PKAJmzu3vRHY5G2OCIyLtA.png",
+      "localPath": "/blog-media/d67cfb5833534e8c12af11356d455a62502ce1f558708b8fbe7de49338778978.png",
+      "sha256": "d67cfb5833534e8c12af11356d455a62502ce1f558708b8fbe7de49338778978",
+      "mimeType": "image/png",
+      "bytes": 147377,
+      "width": 1893,
+      "height": 824,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 18,
+          "imageId": "1*PKAJmzu3vRHY5G2OCIyLtA.png",
+          "reviewKey": "9b7eae9a5c17:18:1*PKAJmzu3vRHY5G2OCIyLtA.png",
+          "caption": "The new Add Booking page, with a new pairing-calendar click function.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Redesigned Add Booking page with pairing cards and a three-month scheduling calendar for September to November 2025.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -9732,6 +10109,35 @@
           "decision": "meaningful",
           "alt": "Writing and brain vs logic analyser. No contest. Source; source.",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*Q4NMit2eyfKCqIJ6U7pBlA.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*Q4NMit2eyfKCqIJ6U7pBlA.png",
+      "localPath": "/blog-media/02075d04dad30929f4dd84059e622d2c54b2a4c9c28f2962b97506cc69f4ba5a.png",
+      "sha256": "02075d04dad30929f4dd84059e622d2c54b2a4c9c28f2962b97506cc69f4ba5a",
+      "mimeType": "image/png",
+      "bytes": 157314,
+      "width": 485,
+      "height": 830,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 19,
+          "imageId": "1*Q4NMit2eyfKCqIJ6U7pBlA.png",
+          "reviewKey": "9b7eae9a5c17:19:1*Q4NMit2eyfKCqIJ6U7pBlA.png",
+          "caption": "The new landing page.",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "PEAR landing page with illustrated pears, a “Welcome to Pear” heading and a Google sign-in button.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10013,6 +10419,35 @@
           "decision": "meaningful",
           "alt": "round and round and round and round — flappy bird considers the meaning of life",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*R38QD_c0tPjl3QeY4oMgpg.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*R38QD_c0tPjl3QeY4oMgpg.png",
+      "localPath": "/blog-media/7d3f5f488e5d06c89751a15947c8ee712bb9fe963995e2b776aa3114a899ea00.png",
+      "sha256": "7d3f5f488e5d06c89751a15947c8ee712bb9fe963995e2b776aa3114a899ea00",
+      "mimeType": "image/png",
+      "bytes": 34939,
+      "width": 913,
+      "height": 735,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "8b39f2ce987e",
+          "legacyPath": "intern-in-tinkertanker-8b39f2ce987e",
+          "paragraph": 20,
+          "imageId": "1*R38QD_c0tPjl3QeY4oMgpg.png",
+          "reviewKey": "8b39f2ce987e:20:1*R38QD_c0tPjl3QeY4oMgpg.png",
+          "caption": "",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Query interface with Robotics selected, a question field and a generated course summary introducing robotics.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -10953,6 +11388,35 @@
       ]
     },
     {
+      "sourceImageId": "1*v3JYl7EKmKQhame0EzU_BA.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*v3JYl7EKmKQhame0EzU_BA.png",
+      "localPath": "/blog-media/36a35e061bfa80cc0df970dedae30c50d87d478faa7fa9eed876604d96b3d52e.png",
+      "sha256": "36a35e061bfa80cc0df970dedae30c50d87d478faa7fa9eed876604d96b3d52e",
+      "mimeType": "image/png",
+      "bytes": 391579,
+      "width": 1080,
+      "height": 607,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 3,
+          "imageId": "1*v3JYl7EKmKQhame0EzU_BA.png",
+          "reviewKey": "9b7eae9a5c17:3:1*v3JYl7EKmKQhame0EzU_BA.png",
+          "caption": "Developing a Visual Novel in Unity with C#.",
+          "sourceAlt": "",
+          "isFeatured": true,
+          "decision": "meaningful",
+          "alt": "Unity Editor showing a visual-novel scene with two characters, a dialogue box, name and text placeholders, and playback controls.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
       "sourceImageId": "1*V6tkb6e4sk0VT3iMBUYe2g.jpeg",
       "sourceUrl": "https://miro.medium.com/v2/1*V6tkb6e4sk0VT3iMBUYe2g.jpeg",
       "localPath": "/blog-media/5ac149f616d9b603388ce84bdc8d16514e52d6a556734886faac012f9df2057f.jpg",
@@ -10980,6 +11444,35 @@
           "decision": "meaningful",
           "alt": "A 6cm-by-6cm mini display shelf I made!",
           "source": "caption"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*vc5bjWS7PvbDR7DwdKLaEA.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*vc5bjWS7PvbDR7DwdKLaEA.png",
+      "localPath": "/blog-media/3c4918c1d95c8974005f03ef2e832d373855347d624c68f47ddce0c2b03b89ab.png",
+      "sha256": "3c4918c1d95c8974005f03ef2e832d373855347d624c68f47ddce0c2b03b89ab",
+      "mimeType": "image/png",
+      "bytes": 265533,
+      "width": 694,
+      "height": 510,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 13,
+          "imageId": "1*vc5bjWS7PvbDR7DwdKLaEA.png",
+          "reviewKey": "9b7eae9a5c17:13:1*vc5bjWS7PvbDR7DwdKLaEA.png",
+          "caption": "",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Discord post reading “This is us now” above an “Old man yells at Claude” parody newspaper image.",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
         }
       ]
     },
@@ -11615,6 +12108,35 @@
           "isFeatured": false,
           "decision": "meaningful",
           "alt": "Participants assembling littleBits CloudBit circuits among wires and tools",
+          "source": "editorial-review",
+          "credit": "",
+          "notes": "AI-assisted visual review in story context"
+        }
+      ]
+    },
+    {
+      "sourceImageId": "1*x2A7lRzhL2b7z1nxO7_Eng.png",
+      "sourceUrl": "https://miro.medium.com/v2/1*x2A7lRzhL2b7z1nxO7_Eng.png",
+      "localPath": "/blog-media/e86a04bbf1fb460766e99dc31ea975bdb4c062d32a5f45ec81ed415483f7f8fb.png",
+      "sha256": "e86a04bbf1fb460766e99dc31ea975bdb4c062d32a5f45ec81ed415483f7f8fb",
+      "mimeType": "image/png",
+      "bytes": 89407,
+      "width": 1891,
+      "height": 820,
+      "animated": false,
+      "frames": 1,
+      "placements": [
+        {
+          "storyId": "9b7eae9a5c17",
+          "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+          "paragraph": 17,
+          "imageId": "1*x2A7lRzhL2b7z1nxO7_Eng.png",
+          "reviewKey": "9b7eae9a5c17:17:1*x2A7lRzhL2b7z1nxO7_Eng.png",
+          "caption": "",
+          "sourceAlt": "",
+          "isFeatured": false,
+          "decision": "meaningful",
+          "alt": "Redesigned Add Booking page with booking details, timing and instructor-pairing sections, a Return button and save control.",
           "source": "editorial-review",
           "credit": "",
           "notes": "AI-assisted visual review in story context"

@@ -9,22 +9,23 @@ be deployed before an explicit cutover request.
 
 ## Current baseline
 
-- 68 public stories and 36 exactly attributed authors.
-- 397 body-image placements from 395 Medium image IDs.
-- 394 physical local files because two source IDs resolve to identical bytes.
+- 72 public stories and 40 exactly attributed authors.
+- 415 body-image placements from 413 Medium image IDs.
+- 412 physical local files because two source IDs resolve to identical bytes.
 - 34 animated local assets; animation is preserved.
-- 41 rich-media placements from 39 resources, represented by privacy-conscious
-  typed fallback components: 23 YouTube, 9 GitHub Gist, 4 Giphy, 2 X/Twitter,
+- 42 rich-media placements from 40 resources, represented by privacy-conscious
+  typed fallback components: 24 YouTube, 9 GitHub Gist, 4 Giphy, 2 X/Twitter,
   and 1 Instagram resource.
-- 319 body links. 23 links resolve to another migrated story, including one old
+- 320 body links. 23 links resolve to another migrated story, including one old
   Google-wrapped link that the earlier inventory did not classify.
-- All 68 story rights records are reviewed: 18 stories credited to the
-  Tinkercademy publication account are `organisation-owned`; 50 externally
+- All 72 story rights records are reviewed: 18 stories credited to the
+  Tinkercademy publication account are `organisation-owned`; 54 externally
   credited stories are `permission-recorded`, with original article URLs in
   the evidence records.
-- All 134 image placements that lacked usable source alt or captions have been
-  visually reviewed in story context: 127 are meaningful and have authored alt
-  text; 7 are explicitly decorative.
+- 152 image placements have been visually reviewed in story context: 145 are
+  meaningful and have authored alt text; 7 are explicitly decorative. This
+  includes all 18 images in the four RSS-sourced stories, not only the four that
+  lacked usable captions.
 
 “All rights reserved” is the chosen publication licence. It is not evidence
 that Tinkertanker owns a contributor's copyright. The strict verifier blocks
@@ -44,17 +45,23 @@ cutover until the rights and accessibility holds are resolved.
 - `src/content/blog/medium/`: generated Markdown/MDX.
 - `public/blog-media/`: locally stored source bytes, named by SHA-256.
 
-The reviewed raw public JSON baseline is committed under
+The reviewed public source baseline is committed under
 `scripts/_artifacts/medium/raw/`, so a fresh checkout can reproduce the import
-without Medium access. It contains public story bodies and embed metadata but
-is not a normal build input after import. Other `scripts/_artifacts/` outputs
-remain ignored.
+without Medium access. It contains public Medium JSON for the original 68
+stories, embed metadata, and the exact public publication RSS response used for
+the four newer stories. RSS source overrides (including the user-confirmed
+Claire Phay attribution and the original 2024 date of Marcuschen's story) are
+audited in `rss-source-overrides.json`. These caches are not normal build inputs
+after import. Other `scripts/_artifacts/` outputs remain ignored.
 
 ## Reproduce the inventory and import
 
-Online inventory refresh uses public, unauthenticated endpoints and writes the
-ignored cache. Medium may return a Cloudflare challenge; never work around that
-with account cookies. Retain the reviewed public cache and run offline instead.
+Online inventory refresh fetches the public, unauthenticated publication RSS,
+caches it, and discovers stories not already present in the inventory. Existing
+public JSON snapshots remain the higher-fidelity source for the original 68
+stories. Medium's JSON endpoint may return a Cloudflare challenge; never work
+around that with account cookies. Retain the reviewed public cache and run
+offline instead.
 
 ```sh
 # Public refresh when Medium permits unauthenticated requests
@@ -69,7 +76,7 @@ pnpm run inventory:medium -- --offline --dry-run
 pnpm run import:medium -- --offline --dry-run
 ```
 
-The inventory command fails if the reviewed 68/397/395/41/39 baseline drifts
+The inventory command fails if the reviewed 72/415/413/42/40 baseline drifts
 unless an operator deliberately supplies `--allow-count-change` and reviews the
 new public records.
 
@@ -82,8 +89,8 @@ the next import overwrites them. Use the repository-local review application:
 pnpm run review:medium
 ```
 
-It serves a private review UI (port 4174 by default) for all 68 story rights
-records and 397 image placements, defaulting to the 134 unresolved images. It
+It serves a private review UI (port 4174 by default) for all 72 story rights
+records and 415 image placements, defaulting to unresolved images. It
 shows local thumbnails, source captions and alt, nearby story text, exact
 attribution, and original Medium links. Completed decisions require a reviewer
 name; rights decisions require an evidence reference. Bulk-by-author and
@@ -160,7 +167,7 @@ remote Medium/Embedly assets, Google tracking redirects, or raw embed scripts.
 
 These are later operator steps, not actions performed by this implementation:
 
-1. Confirm the reviewed 68-story rights ledger and 134-image accessibility
+1. Confirm the reviewed 72-story rights ledger and 152-image accessibility
    decisions still have no new holds after any deliberate public-data refresh.
 2. Run the strict verifier without exceptions and browser-test representative
    image-heavy, GIF, code, and embed stories through `wrangler dev`.
@@ -175,7 +182,7 @@ These are later operator steps, not actions performed by this implementation:
    add the custom domain `blog.tinkercademy.com`. Resolve the existing Medium DNS
    record only as part of that approved operation. The desired two-domain
    configuration is recorded in `wrangler.blog-cutover.jsonc`.
-7. Verify root, all 68 exact story URLs, trailing-slash normalization, archives,
+7. Verify root, all 72 exact story URLs, trailing-slash normalization, archives,
    feed, both sitemap aliases, robots, assets, and unknown 404 behavior. Confirm
    query strings survive story requests and archive redirects.
 8. Submit `https://blog.tinkercademy.com/sitemap.xml` and update owned links.

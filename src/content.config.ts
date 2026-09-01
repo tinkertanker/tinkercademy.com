@@ -62,6 +62,9 @@ const blog = defineCollection({
 			mediumId: z.string().min(1),
 			publicationId: z.string().min(1),
 			sourceSha256: z.string().regex(/^[a-f0-9]{64}$/),
+			sourceKind: z.enum(['medium-json', 'medium-rss']).optional(),
+			sourceUrl: z.url().optional(),
+			sourceCreator: z.string().min(1).optional(),
 		}).optional(),
 		migration: z.object({
 			paragraphCount: z.number().int().nonnegative(),

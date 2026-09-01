@@ -9,6 +9,7 @@ import { load } from 'cheerio';
 import YAML from 'yaml';
 
 import { placementKey, validateReviewDecisions } from './lib/medium-review.mjs';
+import { readMediumRssStoryCache } from './lib/medium-rss.mjs';
 
 const SCRIPTS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.dirname(SCRIPTS_DIR);
@@ -17,6 +18,9 @@ const MEDIA_MANIFEST_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'med
 const EMBED_MANIFEST_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'embed-manifest.json');
 const REVIEW_DECISIONS_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'review-decisions.json');
 const RAW_STORIES_DIR = path.join(ROOT, 'scripts', '_artifacts', 'medium', 'raw', 'stories');
+const RSS_CACHE_PATH = path.join(ROOT, 'scripts', '_artifacts', 'medium', 'raw', 'rss', 'publication.xml');
+const RSS_STORIES_DIR = path.join(ROOT, 'scripts', '_artifacts', 'medium', 'raw', 'rss', 'stories');
+const RSS_OVERRIDES_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'rss-source-overrides.json');
 const CONTENT_DIR = path.join(ROOT, 'src', 'content', 'blog', 'medium');
 const PUBLIC_DIR = path.join(ROOT, 'public');
 const BLOG_ORIGIN = 'https://blog.tinkercademy.com';
@@ -83,8 +87,8 @@ function sourceContainsHref(bodyHrefs, body, href) {
 	return bodyHrefs.includes(href) || body.includes(href) || body.includes(href.replaceAll('&', '&amp;'));
 }
 
-function sourceTextParagraphs(raw, story) {
-	const paragraphs = raw?.payload?.value?.content?.bodyModel?.paragraphs ?? [];
+function sourceTextParagraphs(source, story) {
+	const paragraphs = source?.paragraphs ?? source?.payload?.value?.content?.bodyModel?.paragraphs ?? [];
 	let skippedTitle = false;
 	return paragraphs.flatMap((paragraph, index) => {
 		if (!skippedTitle && paragraph.type === 3 && paragraph.text?.trim() === story.title.trim()) {
@@ -114,16 +118,14 @@ async function verifySource(options) {
 	}
 	for (const placements of placementsByStory.values()) placements.sort((a, b) => a.paragraph - b.paragraph);
 
-	expect(inventory.summary.stories === 68, `Expected 68 inventory stories; found ${inventory.summary.stories}`, errors);
-	expect(inventory.summary.imagePlacements === 397, `Expected 397 image placements; found ${inventory.summary.imagePlacements}`, errors);
-	expect(inventory.summary.uniqueImages === 395, `Expected 395 unique source images; found ${inventory.summary.uniqueImages}`, errors);
-	expect(inventory.summary.embedPlacements === 41, `Expected 41 embed placements; found ${inventory.summary.embedPlacements}`, errors);
-	expect(inventory.summary.uniqueEmbeds === 39, `Expected 39 unique embeds; found ${inventory.summary.uniqueEmbeds}`, errors);
-	expect(contentNames.length === 68, `Expected 68 imported content files; found ${contentNames.length}`, errors);
-	expect(mediaManifest.assets.length === 395, `Expected 395 asset records; found ${mediaManifest.assets.length}`, errors);
-	expect(mediaManifest.summary.placements === 397, `Expected 397 asset placements; found ${mediaManifest.summary.placements}`, errors);
-	expect(embedManifest.resources.length === 39, `Expected 39 embed resources; found ${embedManifest.resources.length}`, errors);
-	expect(embedManifest.placements.length === 41, `Expected 41 embed placements; found ${embedManifest.placements.length}`, errors);
+	for (const [key, expected] of Object.entries(inventory.expectedBaseline ?? {})) {
+		expect(inventory.summary[key] === expected, `Expected ${expected} ${key}; found ${inventory.summary[key]}`, errors);
+	}
+	expect(contentNames.length === inventory.summary.stories, `Expected ${inventory.summary.stories} imported content files; found ${contentNames.length}`, errors);
+	expect(mediaManifest.assets.length === inventory.summary.uniqueImages, `Expected ${inventory.summary.uniqueImages} asset records; found ${mediaManifest.assets.length}`, errors);
+	expect(mediaManifest.summary.placements === inventory.summary.imagePlacements, `Expected ${inventory.summary.imagePlacements} asset placements; found ${mediaManifest.summary.placements}`, errors);
+	expect(embedManifest.resources.length === inventory.summary.uniqueEmbeds, `Expected ${inventory.summary.uniqueEmbeds} embed resources; found ${embedManifest.resources.length}`, errors);
+	expect(embedManifest.placements.length === inventory.summary.embedPlacements, `Expected ${inventory.summary.embedPlacements} embed placements; found ${embedManifest.placements.length}`, errors);
 	for (const legacyPath of Object.keys(reviewDecisions.rights)) {
 		expect(inventoryPaths.has(legacyPath), `Rights review contains unknown story ${legacyPath}`, errors);
 	}
@@ -156,6 +158,11 @@ async function verifySource(options) {
 		expect(JSON.stringify(data.tags) === JSON.stringify(story.tags), `Tag drift for ${story.legacyPath}`, errors);
 		expect(data.license === 'All rights reserved', `Wrong licence for ${story.legacyPath}`, errors);
 		expect(data.provenance?.sourceSha256 === story.sourceSha256, `Source hash drift for ${story.legacyPath}`, errors);
+		if (story.source?.kind === 'medium-rss') {
+			expect(data.provenance?.sourceKind === story.source.kind, `RSS source kind drift for ${story.legacyPath}`, errors);
+			expect(data.provenance?.sourceUrl === story.source.url, `RSS source URL drift for ${story.legacyPath}`, errors);
+			expect(data.provenance?.sourceCreator === story.source.creator, `RSS source creator drift for ${story.legacyPath}`, errors);
+		}
 		expect(data.migration?.paragraphCount === story.paragraphCount, `Paragraph count drift for ${story.legacyPath}`, errors);
 		expect(data.migration?.imageCount === story.images.length, `Image count drift for ${story.legacyPath}`, errors);
 		expect(data.migration?.embedCount === story.embeds.length, `Embed count drift for ${story.legacyPath}`, errors);
@@ -199,8 +206,8 @@ async function verifySource(options) {
 			}
 		}
 	}
-	expect(bodyImagePlacements === 397, `Expected 397 local body image references; found ${bodyImagePlacements}`, errors);
-	expect(bodyEmbedPlacements === 41, `Expected 41 typed embed placements; found ${bodyEmbedPlacements}`, errors);
+	expect(bodyImagePlacements === inventory.summary.imagePlacements, `Expected ${inventory.summary.imagePlacements} local body image references; found ${bodyImagePlacements}`, errors);
+	expect(bodyEmbedPlacements === inventory.summary.embedPlacements, `Expected ${inventory.summary.embedPlacements} typed embed placements; found ${bodyEmbedPlacements}`, errors);
 
 	const localPaths = new Set();
 	const placementKeys = new Set();
@@ -256,7 +263,16 @@ async function verifySource(options) {
 }
 
 async function verifyDist(dist, inventory, errors) {
-	const mediaManifest = await readJson(MEDIA_MANIFEST_PATH);
+	const [mediaManifest, rssOverrides] = await Promise.all([
+		readJson(MEDIA_MANIFEST_PATH),
+		readJson(RSS_OVERRIDES_PATH),
+	]);
+	const rssStories = await readMediumRssStoryCache({
+		feedFile: RSS_CACHE_PATH,
+		storiesDir: RSS_STORIES_DIR,
+		storyOverrides: rssOverrides.stories,
+	});
+	const rssById = new Map(rssStories.map((story) => [story.id, story]));
 	const placementsByStory = new Map();
 	for (const asset of mediaManifest.assets) {
 		for (const placement of asset.placements) {
@@ -276,10 +292,11 @@ async function verifyDist(dist, inventory, errors) {
 		let checkedTextParagraphs = 0;
 		let unsafeLinks = 0;
 		try {
-			const [html, raw] = await Promise.all([
-				readFile(file, 'utf8'),
-				readJson(path.join(RAW_STORIES_DIR, `${story.id}.json`)),
-			]);
+			const html = await readFile(file, 'utf8');
+			const source = story.source?.kind === 'medium-rss'
+				? rssById.get(story.id)
+				: await readJson(path.join(RAW_STORIES_DIR, `${story.id}.json`));
+			if (!source) throw new Error(`Missing source for ${story.id}`);
 			const $ = load(html);
 			const $body = $('.blog-article__body');
 			const expectedPlacements = placementsByStory.get(story.legacyPath) ?? [];
@@ -301,7 +318,7 @@ async function verifyDist(dist, inventory, errors) {
 
 		const bodyText = compactVisibleText($body.text());
 		let bodyCursor = 0;
-		const sourceTexts = sourceTextParagraphs(raw, story);
+		const sourceTexts = sourceTextParagraphs(source, story);
 		for (const paragraph of sourceTexts) {
 			const expectedText = compactVisibleText(paragraph.text);
 			const next = bodyText.indexOf(expectedText, bodyCursor);
@@ -368,13 +385,15 @@ async function verifyDist(dist, inventory, errors) {
 
 	const homepage = await readFile(path.join(dist, 'blog-content', 'index.html'), 'utf8');
 	const $homepage = load(homepage);
-	expect($homepage('.story-card').length === 68, 'Built blog homepage does not list all 68 stories', errors);
+	expect($homepage('.story-card').length === inventory.summary.stories, `Built blog homepage does not list all ${inventory.summary.stories} stories`, errors);
 	for (const story of inventory.stories) {
 		expect($homepage(`.story-card[href="${story.canonicalUrl}"]`).length === 1, `Blog homepage missing or duplicates ${story.legacyPath}`, errors);
 	}
 	expect($homepage('nav[aria-label="Build Log"]').length === 1, 'Built blog homepage is missing the Build Log menu', errors);
 	const sitemap = await readFile(path.join(dist, 'blog-content', 'sitemap.xml'), 'utf8');
-	expect(countMatches(sitemap, /<url>/gu) === 76, 'Blog sitemap must contain root, 7 archives, and 68 stories', errors);
+	const archiveYears = new Set(inventory.stories.map(({ publishedAt }) => new Date(publishedAt).getUTCFullYear()));
+	const expectedSitemapEntries = 1 + archiveYears.size + inventory.summary.stories;
+	expect(countMatches(sitemap, /<url>/gu) === expectedSitemapEntries, `Blog sitemap must contain root, ${archiveYears.size} archives, and ${inventory.summary.stories} stories`, errors);
 	for (const story of inventory.stories) {
 		expect(countMatches(sitemap, new RegExp(`<loc>${story.canonicalUrl.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&')}</loc>`, 'gu')) === 1, `Blog sitemap missing or duplicates ${story.legacyPath}`, errors);
 	}

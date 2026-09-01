@@ -18,10 +18,21 @@
     "profileUrl": "https://medium.com/@angjiahui"
   },
   {
+    "id": "dbe490e80fa7",
+    "name": "chavonz",
+    "handle": "chavonzfoo05",
+    "profileUrl": "https://medium.com/@chavonzfoo05"
+  },
+  {
     "id": "7242e265dacf",
     "name": "Chua Yu Hao",
     "handle": "yuhaochua99",
     "profileUrl": "https://medium.com/@yuhaochua99"
+  },
+  {
+    "id": "rss-1110912fd37c",
+    "name": "Claire Phay",
+    "handle": null
   },
   {
     "id": "e90f8d566e75",
@@ -82,6 +93,12 @@
     "name": "Low Junwei",
     "handle": "lowjunwei99",
     "profileUrl": "https://medium.com/@lowjunwei99"
+  },
+  {
+    "id": "rss-6ca62e9247d1",
+    "name": "Marcuschen",
+    "handle": "marcuschen05",
+    "profileUrl": "https://medium.com/@marcuschen05"
   },
   {
     "id": "3dc8d124c7aa",
@@ -166,6 +183,12 @@
     "name": "T Ho",
     "handle": "timhotim2",
     "profileUrl": "https://medium.com/@timhotim2"
+  },
+  {
+    "id": "de11432c5299",
+    "name": "Tan Boon Leong",
+    "handle": "boonleongleon",
+    "profileUrl": "https://medium.com/@boonleongleon"
   },
   {
     "id": "ce4862734951",

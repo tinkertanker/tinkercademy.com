@@ -408,6 +408,30 @@
       "basis": "User confirmed republication permission was obtained from the credited external author; original article: https://medium.com/tinkertanker/whats-a-tinkertanker-200bae67e8f1",
       "reviewer": "yjsoon (user-confirmed)",
       "reviewedAt": "2026-08-30T09:46:16.000Z"
+    },
+    "looking-back-at-my-time-in-tinkertanker-cb94bd7d0272": {
+      "status": "permission-recorded",
+      "basis": "User confirmed republication permission was obtained from the credited external author; original article: https://medium.com/tinkertanker/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272",
+      "reviewer": "yjsoon (user-confirmed)",
+      "reviewedAt": "2026-08-30T09:46:16.000Z"
+    },
+    "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17": {
+      "status": "permission-recorded",
+      "basis": "User confirmed republication permission was obtained from the credited external author; original article: https://medium.com/tinkertanker/internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+      "reviewer": "yjsoon (user-confirmed)",
+      "reviewedAt": "2026-08-30T09:46:16.000Z"
+    },
+    "my-summer-internship-with-tinkertanker-2071b60a462b": {
+      "status": "permission-recorded",
+      "basis": "User confirmed republication permission was obtained from the credited external author; original article: https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "reviewer": "yjsoon (user-confirmed)",
+      "reviewedAt": "2026-08-30T09:46:16.000Z"
+    },
+    "intern-in-tinkertanker-8b39f2ce987e": {
+      "status": "permission-recorded",
+      "basis": "User confirmed republication permission was obtained from the credited external author; original article: https://medium.com/tinkertanker/intern-in-tinkertanker-8b39f2ce987e",
+      "reviewer": "yjsoon (user-confirmed)",
+      "reviewedAt": "2026-08-30T09:46:16.000Z"
     }
   },
   "images": {
@@ -1482,6 +1506,150 @@
       "notes": "AI-assisted visual review; independently checked against the image and story context.",
       "reviewer": "Amp visual review (user-directed)",
       "reviewedAt": "2026-08-30T09:54:26.000Z"
+    },
+    "2071b60a462b:3:1*BnGSZUhQooklX9uj_kKkXg.png": {
+      "decision": "meaningful",
+      "alt": "Student-management landing page promoting “Use IoT for Classroom”, with login controls, a teacher illustration and connected classroom devices.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "8b39f2ce987e:17:1*pc-C_FO62piQjupVCNp0eQ.png": {
+      "decision": "meaningful",
+      "alt": "Summarize Lesson app showing Robotics inputs and generated lesson outcomes, course overview and benefits as loosely formatted text.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "8b39f2ce987e:20:1*R38QD_c0tPjl3QeY4oMgpg.png": {
+      "decision": "meaningful",
+      "alt": "Query interface with Robotics selected, a question field and a generated course summary introducing robotics.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:3:1*v3JYl7EKmKQhame0EzU_BA.png": {
+      "decision": "meaningful",
+      "alt": "Unity Editor showing a visual-novel scene with two characters, a dialogue box, name and text placeholders, and playback controls.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:5:1*IK0KGyMsnTKRAZNpyIdSxA.jpeg": {
+      "decision": "meaningful",
+      "alt": "Banner for the 2025 Copilot AI Bootcamp, hosted by Tinkercademy and the Infocomm Media Development Authority.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:6:1*26WIabsZprycyGOmMTa1JQ.png": {
+      "decision": "meaningful",
+      "alt": "Visual Studio Code with GitHub Copilot guiding the implementation of a Unity player-health indicator in HealthPlayer.cs.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:9:1*ErvKABjFuKf0tcC-ZPQ-CQ.png": {
+      "decision": "meaningful",
+      "alt": "Old Bookings page with six orange rows listing dates, schools, programmes, times, session counts and invoice statuses.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:10:1*5yo8NcEEOvw7c3M7mEFABw.png": {
+      "decision": "meaningful",
+      "alt": "Redesigned Bookings page with navigation, search, class tabs, a dated booking list, pagination, filters and add controls.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:11:1*4NcPOV74HuuEQ752tDHb1g.png": {
+      "decision": "meaningful",
+      "alt": "Redesigned booking edit page with a table of school session dates, times, instructors, and edit or delete actions.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:13:1*vc5bjWS7PvbDR7DwdKLaEA.png": {
+      "decision": "meaningful",
+      "alt": "Discord post reading “This is us now” above an “Old man yells at Claude” parody newspaper image.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:14:1*ofmfEVdtLVo-JZh7BPnMlA.png": {
+      "decision": "meaningful",
+      "alt": "Claude terminal paused on “Pleading…” after 14 seconds and 3.1 thousand tokens.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:16:1*i8njz9iPSO_u5REgiMY0nA.png": {
+      "decision": "meaningful",
+      "alt": "Old Add Booking page with session timing and location fields beside instructor, type and rate controls.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:17:1*x2A7lRzhL2b7z1nxO7_Eng.png": {
+      "decision": "meaningful",
+      "alt": "Redesigned Add Booking page with booking details, timing and instructor-pairing sections, a Return button and save control.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:18:1*PKAJmzu3vRHY5G2OCIyLtA.png": {
+      "decision": "meaningful",
+      "alt": "Redesigned Add Booking page with pairing cards and a three-month scheduling calendar for September to November 2025.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:19:1*Q4NMit2eyfKCqIJ6U7pBlA.png": {
+      "decision": "meaningful",
+      "alt": "PEAR landing page with illustrated pears, a “Welcome to Pear” heading and a Google sign-in button.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:21:1*C4TKqINCaXOYpFXZ1Ui7og.jpeg": {
+      "decision": "meaningful",
+      "alt": "Person in glasses standing at the blue-lit DSTA BrainHack 2025 entrance between science-fiction character displays.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "9b7eae9a5c17:23:1*exBs5xRwyLsS48uCpFcvgg.png": {
+      "decision": "meaningful",
+      "alt": "VS Code showing Phaser Flappy Bird code beside a blue game preview with Play, Score and Exit buttons and console output.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
+    },
+    "cb94bd7d0272:19:1*4fKSRASntFSa2BSh0MXf8A.png": {
+      "decision": "meaningful",
+      "alt": "Flappy Bird game screen with a blue bird flying between green pipes and “Fly in: 1” displayed above.",
+      "credit": "",
+      "notes": "AI-assisted visual review in story context",
+      "reviewer": "Amp visual review (user-directed)",
+      "reviewedAt": "2026-09-01T04:56:36.392Z"
     }
   }
 }

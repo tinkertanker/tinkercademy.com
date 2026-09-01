@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "stories": {
+    "cb94bd7d0272": {
+      "author": {
+        "name": "Claire Phay",
+        "handle": null
+      },
+      "basis": "The user confirmed that the Medium RSS creator name Twasacarrot is Claire Phay. The source creator string remains in inventory provenance."
+    },
+    "9b7eae9a5c17": {
+      "author": {
+        "id": "de11432c5299",
+        "name": "Tan Boon Leong",
+        "handle": "boonleongleon",
+        "profileUrl": "https://medium.com/@boonleongleon"
+      },
+      "basis": "Public Medium story byline and author-profile link."
+    },
+    "2071b60a462b": {
+      "author": {
+        "id": "dbe490e80fa7",
+        "name": "chavonz",
+        "handle": "chavonzfoo05",
+        "profileUrl": "https://medium.com/@chavonzfoo05"
+      },
+      "basis": "Public Medium story byline and author-profile link."
+    },
+    "8b39f2ce987e": {
+      "author": {
+        "name": "Marcuschen",
+        "handle": "marcuschen05",
+        "profileUrl": "https://medium.com/@marcuschen05"
+      },
+      "publishedAt": "2024-07-30T04:35:41.853Z",
+      "basis": "Public Medium story byline shows Jul 30, 2024 and links to @marcuschen05; the cached RSS atom:updated timestamp supplies the exact instant. The 2026 RSS pubDate reflects addition to the publication, not first publication."
+    }
+  }
+}

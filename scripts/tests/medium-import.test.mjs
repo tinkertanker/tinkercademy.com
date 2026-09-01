@@ -9,6 +9,7 @@ import {
 	renderInlineHtml,
 	rewriteInternalStoryHref,
 } from '../lib/medium.mjs';
+import { parseMediumRss } from '../lib/medium-rss.mjs';
 import {
 	applyImageReview,
 	applyRightsReview,
@@ -139,6 +140,46 @@ test('classifies only allowlisted embed providers', () => {
 	assert.equal(classifyEmbedProvider('https://gist.github.com/example/123'), 'github-gist');
 	assert.equal(classifyEmbedProvider('https://twitter.com/example/status/1'), 'twitter');
 	assert.equal(classifyEmbedProvider('https://unknown.invalid/item'), 'external-link');
+});
+
+test('normalises public RSS stories without trackers or Embedly wrappers', () => {
+	const rss = `<?xml version="1.0" encoding="UTF-8"?>
+		<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+			<channel><item>
+				<title>A new story</title>
+				<link>https://blog.tinkercademy.com/a-new-story-abc123def456?source=rss</link>
+				<guid>https://medium.com/p/abc123def456</guid>
+				<dc:creator>OddHandle</dc:creator>
+				<pubDate>Tue, 01 Sep 2026 04:08:01 GMT</pubDate>
+				<atom:updated>2026-09-01T04:08:00.078Z</atom:updated>
+				<content:encoded><![CDATA[
+					<p>Text with <strong>emphasis</strong> and <a href="https://example.com">a link</a>.</p>
+					<h3>A heading</h3>
+					<figure><img alt="" src="https://cdn-images-1.medium.com/max/1024/1*example.png" /><figcaption>A useful caption</figcaption></figure>
+					<iframe src="https://cdn.embedly.com/widgets/media.html?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dexample" width="640" height="480"></iframe>
+					<img src="https://medium.com/_/stat?event=post.clientViewed&amp;postId=abc123def456" width="1" height="1" alt="">
+					<hr><p>A new story was originally published in Tinkercademy Build Log on Medium.</p>
+				]]></content:encoded>
+			</item></channel></rss>`;
+	const [story] = parseMediumRss(rss, {
+		storyOverrides: {
+			abc123def456: { author: { name: 'Exact Author', handle: 'OddHandle' } },
+		},
+	});
+
+	assert.equal(story.id, 'abc123def456');
+	assert.equal(story.legacyPath, 'a-new-story-abc123def456');
+	assert.equal(story.author.name, 'Exact Author');
+	assert.equal(story.sourceCreator, 'OddHandle');
+	assert.deepEqual(story.paragraphs.map(({ type }) => type), [1, 13, 4, 11]);
+	assert.equal(story.paragraphs[0].text, 'Text with emphasis and a link.');
+	assert.deepEqual(story.paragraphs[0].markups, [
+		{ type: 1, start: 10, end: 18 },
+		{ type: 3, start: 23, end: 29, href: 'https://example.com' },
+	]);
+	assert.equal(story.paragraphs[2].metadata.id, '1*example.png');
+	assert.equal(story.paragraphs[2].text, 'A useful caption');
+	assert.equal(story.paragraphs[3].iframe.href, 'https://www.youtube.com/watch?v=example');
 });
 
 test('builds stable review keys and accepts an unresolved review ledger', () => {

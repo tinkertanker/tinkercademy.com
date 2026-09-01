@@ -12,12 +12,15 @@ import {
 	rewriteInternalStoryHref,
 	sha256,
 } from './lib/medium.mjs';
+import { parseMediumRss, readMediumRssStoryCache } from './lib/medium-rss.mjs';
 
 const SCRIPTS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.dirname(SCRIPTS_DIR);
 const DEFAULT_INVENTORY = path.join(ROOT, 'docs', 'migrations', 'medium', 'inventory.json');
 const DEFAULT_CACHE = path.join(SCRIPTS_DIR, '_artifacts', 'medium', 'raw');
-const EXPECTED = Object.freeze({ stories: 68, imagePlacements: 397, uniqueImages: 395, embedPlacements: 41, uniqueEmbeds: 39 });
+const DEFAULT_RSS_OVERRIDES = path.join(ROOT, 'docs', 'migrations', 'medium', 'rss-source-overrides.json');
+const EXPECTED = Object.freeze({ stories: 72, imagePlacements: 415, uniqueImages: 413, embedPlacements: 42, uniqueEmbeds: 40 });
+const RSS_URL = 'https://medium.com/feed/tinkertanker';
 
 function parseArgs(argv) {
 	const options = {
@@ -57,6 +60,7 @@ function storySeeds(value) {
 	return records.map((story) => ({
 		id: story.id,
 		legacyPath: story.legacyPath ?? story.uniqueSlug ?? story.slug,
+		sourceKind: story.source?.kind ?? 'medium-json',
 	}));
 }
 
@@ -76,10 +80,48 @@ async function fetchPublicJson(url) {
 
 async function loadStoryRaw(seed, options) {
 	const file = path.join(options.cacheDir, 'stories', `${seed.id}.json`);
-	if (options.offline) return { raw: await readJson(file), file };
+	try {
+		return { raw: await readJson(file), file };
+	} catch (error) {
+		if (options.offline || error?.code !== 'ENOENT') throw error;
+	}
 	const raw = await fetchPublicJson(`https://medium.com/tinkertanker/${seed.legacyPath}?format=json`);
 	if (!options.dryRun) await writeJson(file, raw);
 	return { raw, file };
+}
+
+async function loadRssStories(options) {
+	const feedFile = path.join(options.cacheDir, 'rss', 'publication.xml');
+	const storiesDir = path.join(options.cacheDir, 'rss', 'stories');
+	const overrides = await readJson(DEFAULT_RSS_OVERRIDES);
+	if (overrides.version !== 1 || !overrides.stories) throw new Error('Invalid RSS source overrides');
+	if (options.offline) {
+		return readMediumRssStoryCache({ feedFile, storiesDir, storyOverrides: overrides.stories });
+	}
+	const response = await fetch(RSS_URL, {
+		headers: { 'User-Agent': 'TinkercademyMediumMigration/1.0 (+https://tinkercademy.com)' },
+		redirect: 'follow',
+	});
+	if (!response.ok) throw new Error(`${RSS_URL} returned ${response.status}; rerun with --offline`);
+	const xml = await response.text();
+	const current = parseMediumRss(xml, { storyOverrides: overrides.stories });
+	if (!options.dryRun) {
+		await mkdir(storiesDir, { recursive: true });
+		await writeFile(feedFile, xml);
+		for (const story of current) {
+			await writeJson(path.join(storiesDir, `${story.id}.json`), {
+				version: 1,
+				sourceKind: 'medium-rss',
+				sourceUrl: RSS_URL,
+				feedSha256: sha256(xml),
+				itemSha256: story.sourceItemSha256,
+				itemXml: story.sourceItemXml,
+			});
+		}
+		return readMediumRssStoryCache({ feedFile, storiesDir, storyOverrides: overrides.stories });
+	}
+	const cached = await readMediumRssStoryCache({ feedFile, storiesDir, storyOverrides: overrides.stories });
+	return [...new Map([...cached, ...current].map((story) => [story.id, story])).values()];
 }
 
 async function loadMediaRaw(id, options) {
@@ -134,6 +176,7 @@ function extractEmbedSeeds(paragraphs) {
 			caption: paragraph.text || '',
 			width: paragraph.iframe.iframeWidth ?? null,
 			height: paragraph.iframe.iframeHeight ?? null,
+			...(paragraph.iframe.href ? { href: paragraph.iframe.href } : {}),
 		}];
 	});
 }
@@ -162,6 +205,15 @@ function assertCounts(summary, allowCountChange) {
 async function main() {
 	const options = parseArgs(process.argv.slice(2));
 	const seeds = storySeeds(await readJson(options.seed));
+	const rssStories = await loadRssStories(options);
+	const rssById = new Map(rssStories.map((story) => [story.id, story]));
+	const seededIds = new Set(seeds.map(({ id }) => id));
+	for (const story of rssStories) {
+		if (!seededIds.has(story.id)) {
+			seeds.push({ id: story.id, legacyPath: story.legacyPath, sourceKind: 'medium-rss' });
+			seededIds.add(story.id);
+		}
+	}
 	const uniqueIds = new Set(seeds.map(({ id }) => id));
 	const uniquePaths = new Set(seeds.map(({ legacyPath }) => legacyPath));
 	if (uniqueIds.size !== seeds.length || uniquePaths.size !== seeds.length) {
@@ -171,22 +223,43 @@ async function main() {
 
 	const loaded = [];
 	for (const seed of seeds) {
-		const { raw } = await loadStoryRaw(seed, options);
-		const rawText = JSON.stringify(raw);
-		const story = normaliseMediumStory(raw);
+		let story;
+		let rawText;
+		if (seed.sourceKind === 'medium-rss') {
+			story = rssById.get(seed.id);
+			if (!story) throw new Error(`RSS no longer contains cached story ${seed.id}`);
+			rawText = story.sourceItemXml;
+		} else {
+			const { raw } = await loadStoryRaw(seed, options);
+			rawText = JSON.stringify(raw);
+			story = normaliseMediumStory(raw);
+		}
 		if (story.id !== seed.id || story.legacyPath !== seed.legacyPath) {
 			throw new Error(`Seed drift for ${seed.id}`);
 		}
-		loaded.push({ raw, rawText, story });
+		loaded.push({ rawText, story, sourceKind: seed.sourceKind });
 	}
 
-	const embedIds = new Set(loaded.flatMap(({ story }) => extractEmbedSeeds(story.paragraphs).map((embed) => embed.mediaResourceId)));
+	const embedSeeds = new Map();
+	for (const { story } of loaded) {
+		for (const embed of extractEmbedSeeds(story.paragraphs)) {
+			if (!embedSeeds.has(embed.mediaResourceId)) embedSeeds.set(embed.mediaResourceId, embed);
+		}
+	}
 	const mediaById = new Map();
-	for (const id of [...embedIds].sort()) {
-		mediaById.set(id, normaliseMedia(await loadMediaRaw(id, options), id));
+	for (const [id, embed] of [...embedSeeds].sort(([a], [b]) => a.localeCompare(b))) {
+		mediaById.set(id, embed.href ? {
+			id,
+			provider: classifyEmbedProvider(embed.href),
+			href: embed.href,
+			title: '',
+			description: '',
+			width: embed.width,
+			height: embed.height,
+		} : normaliseMedia(await loadMediaRaw(id, options), id));
 	}
 
-	const stories = loaded.map(({ rawText, story }) => {
+	const stories = loaded.map(({ rawText, story, sourceKind }) => {
 		const images = extractImages(story.paragraphs);
 		const embeds = extractEmbedSeeds(story.paragraphs).map((embed) => ({ ...embed, ...mediaById.get(embed.mediaResourceId) }));
 		const paragraphTypes = Object.fromEntries(
@@ -212,6 +285,12 @@ async function main() {
 			mediumLicenseCode: story.mediumLicenseCode,
 			license: story.license,
 			rightsStatus: story.rightsStatus,
+			...(sourceKind === 'medium-rss' ? { source: {
+				kind: sourceKind,
+				url: story.sourceUrl,
+				...(story.sourceCreator ? { creator: story.sourceCreator } : {}),
+				...('rssPublishedAt' in story ? { rssPublishedAt: story.rssPublishedAt, rssUpdatedAt: story.rssUpdatedAt } : {}),
+			} } : {}),
 			sourceSha256: sha256(rawText),
 			paragraphCount: story.paragraphs.length,
 			paragraphTypes,

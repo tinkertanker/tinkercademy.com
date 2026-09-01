@@ -10,11 +10,11 @@ import YAML from 'yaml';
 
 import {
 	MEDIUM_PUBLICATION_ID,
-	classifyEmbedProvider,
 	normaliseMediumStory,
 	renderInlineHtml,
 	sha256,
 } from './lib/medium.mjs';
+import { readMediumRssStoryCache } from './lib/medium-rss.mjs';
 import {
 	applyImageReview,
 	applyRightsReview,
@@ -33,6 +33,9 @@ const DEFAULT_MEDIA_MANIFEST = path.join(ROOT, 'docs', 'migrations', 'medium', '
 const DEFAULT_EMBED_MANIFEST = path.join(ROOT, 'docs', 'migrations', 'medium', 'embed-manifest.json');
 const DEFAULT_AUTHORS = path.join(ROOT, 'src', 'data', 'blog-authors.json');
 const DEFAULT_REVIEW_DECISIONS = path.join(ROOT, 'docs', 'migrations', 'medium', 'review-decisions.json');
+const DEFAULT_RSS_CACHE = path.join(DEFAULT_CACHE, 'rss', 'publication.xml');
+const DEFAULT_RSS_STORIES = path.join(DEFAULT_CACHE, 'rss', 'stories');
+const DEFAULT_RSS_OVERRIDES = path.join(ROOT, 'docs', 'migrations', 'medium', 'rss-source-overrides.json');
 
 function parseArgs(argv) {
 	const options = {
@@ -317,46 +320,60 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 	};
 }
 
-function normaliseMediaRaw(raw, id) {
-	const value = raw?.payload?.value;
-	if (!value || value.mediaResourceId !== id) throw new Error(`Invalid media resource ${id}`);
-	return {
-		id,
-		provider: classifyEmbedProvider(value.href),
-		href: value.href,
-		title: value.title || '',
-		description: value.description || '',
-		width: value.iframeWidth ?? null,
-		height: value.iframeHeight ?? null,
-	};
-}
-
 async function main() {
 	const options = parseArgs(process.argv.slice(2));
-	const [inventory, reviewDecisions] = await Promise.all([
+	const [inventory, reviewDecisions, rssOverrides] = await Promise.all([
 		readJson(options.inventory),
 		loadReviewDecisions(options.reviewDecisions),
+		readJson(DEFAULT_RSS_OVERRIDES),
 	]);
-	if (inventory.publication?.id !== MEDIUM_PUBLICATION_ID || inventory.summary?.stories !== 68) {
-		throw new Error('Inventory is not the reviewed 68-story Tinkercademy baseline');
+	if (inventory.publication?.id !== MEDIUM_PUBLICATION_ID) {
+		throw new Error('Inventory is not the Tinkercademy Medium publication');
+	}
+	for (const [key, expected] of Object.entries(inventory.expectedBaseline ?? {})) {
+		if (inventory.summary?.[key] !== expected) throw new Error(`Inventory baseline drift for ${key}`);
 	}
 
-	const rawById = new Map();
+	const rssStories = await readMediumRssStoryCache({
+		feedFile: DEFAULT_RSS_CACHE,
+		storiesDir: DEFAULT_RSS_STORIES,
+		storyOverrides: rssOverrides.stories,
+	});
+	const rssById = new Map(rssStories.map((story) => [story.id, story]));
+	const stories = [];
 	for (const record of inventory.stories) {
-		const file = path.join(options.cacheDir, 'stories', `${record.id}.json`);
-		const text = await readFile(file, 'utf8');
-		const raw = JSON.parse(text);
-		if (sha256(JSON.stringify(raw)) !== record.sourceSha256) throw new Error(`Source hash drift for ${record.id}`);
-		rawById.set(record.id, raw);
+		let source;
+		let sourceText;
+		if (record.source?.kind === 'medium-rss') {
+			source = rssById.get(record.id);
+			if (!source) throw new Error(`Cached RSS is missing ${record.id}`);
+			sourceText = source.sourceItemXml;
+		} else {
+			const raw = await readJson(path.join(options.cacheDir, 'stories', `${record.id}.json`));
+			sourceText = JSON.stringify(raw);
+			source = normaliseMediumStory(raw);
+		}
+		if (sha256(sourceText) !== record.sourceSha256) throw new Error(`Source hash drift for ${record.id}`);
+		stories.push({ ...record, ...source });
 	}
-	const stories = inventory.stories.map((record) => ({ ...record, ...normaliseMediumStory(rawById.get(record.id)) }));
 	const pathsById = new Map(stories.map((story) => [story.id, story.legacyPath]));
 	const usersById = new Map(stories.map((story) => [story.author.id, story.author]));
 
-	const mediaIds = [...new Set(stories.flatMap((story) => story.embeds.map(({ mediaResourceId }) => mediaResourceId)))].sort();
 	const mediaById = new Map();
-	for (const id of mediaIds) {
-		mediaById.set(id, normaliseMediaRaw(await readJson(path.join(options.cacheDir, 'media', `${id}.json`)), id));
+	for (const story of stories) {
+		for (const embed of story.embeds) {
+			const existing = mediaById.get(embed.mediaResourceId);
+			if (existing && existing.href !== embed.href) throw new Error(`Embed metadata drift for ${embed.mediaResourceId}`);
+			mediaById.set(embed.mediaResourceId, {
+				id: embed.mediaResourceId,
+				provider: embed.provider,
+				href: embed.href,
+				title: embed.title || '',
+				description: embed.description || '',
+				width: embed.width ?? null,
+				height: embed.height ?? null,
+			});
+		}
 	}
 
 	const assetsById = await resolveAssets(stories, options);
@@ -406,6 +423,11 @@ async function main() {
 				mediumId: story.id,
 				publicationId: MEDIUM_PUBLICATION_ID,
 				sourceSha256: story.sourceSha256,
+				...(story.source?.kind === 'medium-rss' ? {
+					sourceKind: story.source.kind,
+					sourceUrl: story.source.url,
+					sourceCreator: story.source.creator,
+				} : {}),
 			},
 			migration: {
 				paragraphCount: story.paragraphs.length,
@@ -429,7 +451,7 @@ async function main() {
 	const authors = [...new Map(stories.map(({ author }) => [author.id, author])).values()].sort((a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
 	const embedManifest = {
 		version: 1,
-		resources: [...mediaById.values()],
+		resources: [...mediaById.values()].sort((a, b) => a.id.localeCompare(b.id)),
 		placements: embedPlacements,
 	};
 	const mediaManifest = {
