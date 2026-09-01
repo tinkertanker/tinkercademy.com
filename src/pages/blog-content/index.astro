@@ -54,7 +54,6 @@ const blogSchema = {
 				<h2 id="all-stories">All stories</h2>
 			</div>
 			<nav id="archives" class="blog-list__archives" aria-label="Article archives">
-				<span>Browse by year</span>
 				<div>
 					{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
 				</div>
@@ -175,14 +174,6 @@ const blogSchema = {
 	.blog-list__archives {
 		max-width: 27rem;
 		text-align: right;
-	}
-
-	.blog-list__archives > span {
-		display: block;
-		margin-bottom: 0.55rem;
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: rgb(85, 85, 85);
 	}
 
 	.blog-list__archives div {
