@@ -48,11 +48,8 @@ const blogSchema = {
 		</div>
 	</header>
 
-	<section class="blog-list shell" aria-labelledby="all-stories">
+	<section class="blog-list shell" aria-label="Stories">
 		<div class="blog-list__header">
-			<div>
-				<h2 id="all-stories">All stories</h2>
-			</div>
 			<nav id="archives" class="blog-list__archives" aria-label="Article archives">
 				<div>
 					{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
@@ -164,15 +161,9 @@ const blogSchema = {
 		margin-bottom: 2rem;
 	}
 
-	.blog-list h2 {
-		margin: 0;
-		font-family: var(--heading);
-		font-size: clamp(2rem, 4vw, 3rem);
-		line-height: 1;
-	}
-
 	.blog-list__archives {
 		max-width: 27rem;
+		margin-left: auto;
 		text-align: right;
 	}
 
@@ -295,6 +286,7 @@ const blogSchema = {
 		}
 
 		.blog-list__archives {
+			margin-left: 0;
 			text-align: left;
 		}
 
