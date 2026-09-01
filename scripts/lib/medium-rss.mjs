@@ -149,6 +149,23 @@ function parseBody(html) {
 	return paragraphs;
 }
 
+function applyTextReplacements(paragraphs, replacements = []) {
+	for (const replacement of replacements) {
+		if (!replacement?.from || typeof replacement.to !== 'string') {
+			throw new Error('RSS text replacements require non-empty from and string to values');
+		}
+		if (replacement.from.length !== replacement.to.length) {
+			throw new Error(`RSS text replacement must preserve inline markup offsets: ${replacement.from}`);
+		}
+	}
+	return paragraphs.map((paragraph) => ({
+		...paragraph,
+		...(typeof paragraph.text === 'string' ? {
+			text: replacements.reduce((text, replacement) => text.replaceAll(replacement.from, replacement.to), paragraph.text),
+		} : {}),
+	}));
+}
+
 function authorFor(item, override = {}) {
 	const sourceCreator = item.sourceCreator.trim();
 	const handle = Object.hasOwn(override.author ?? {}, 'handle')
@@ -180,9 +197,13 @@ export function parseMediumRss(xml, options = {}) {
 		const rssUpdatedAt = asIsoDate(item.find('atom\\:updated').first().text(), 'atom:updated');
 		const override = options.storyOverrides?.[id] ?? {};
 		const publishedAt = override.publishedAt ?? rssUpdatedAt;
-		const paragraphs = parseBody(item.find('content\\:encoded').first().text());
+		const paragraphs = applyTextReplacements(
+			parseBody(item.find('content\\:encoded').first().text()),
+			override.textReplacements,
+		);
 		const words = paragraphs.reduce((total, paragraph) => total + (paragraph.text?.trim().split(/\s+/u).filter(Boolean).length ?? 0), 0);
-		const title = item.find('title').first().text().trim();
+		const title = override.title ?? item.find('title').first().text().trim();
+		if (!title.trim()) throw new Error(`RSS story ${id} has an empty title`);
 		const sourceItemXml = $.html(element);
 		return {
 			id,

@@ -163,16 +163,21 @@ test('normalises public RSS stories without trackers or Embedly wrappers', () =>
 			</item></channel></rss>`;
 	const [story] = parseMediumRss(rss, {
 		storyOverrides: {
-			abc123def456: { author: { name: 'Exact Author', handle: 'OddHandle' } },
+			abc123def456: {
+				title: 'A clearer story title',
+				textReplacements: [{ from: 'Text', to: 'Copy' }],
+				author: { name: 'Exact Author', handle: 'OddHandle' },
+			},
 		},
 	});
 
 	assert.equal(story.id, 'abc123def456');
 	assert.equal(story.legacyPath, 'a-new-story-abc123def456');
+	assert.equal(story.title, 'A clearer story title');
 	assert.equal(story.author.name, 'Exact Author');
 	assert.equal(story.sourceCreator, 'OddHandle');
 	assert.deepEqual(story.paragraphs.map(({ type }) => type), [1, 13, 4, 11]);
-	assert.equal(story.paragraphs[0].text, 'Text with emphasis and a link.');
+	assert.equal(story.paragraphs[0].text, 'Copy with emphasis and a link.');
 	assert.deepEqual(story.paragraphs[0].markups, [
 		{ type: 1, start: 10, end: 18 },
 		{ type: 3, start: 23, end: 29, href: 'https://example.com' },

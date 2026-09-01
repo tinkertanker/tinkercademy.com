@@ -1,6 +1,6 @@
 ---
-title: Looking back at My Time in TinkerTanker
-description: Looking back at My Time in TinkerTanker
+title: "Learning, Building and Teaching: My Tinkertanker Internship"
+description: "Learning, Building and Teaching: My Tinkertanker Internship"
 legacyPath: looking-back-at-my-time-in-tinkertanker-cb94bd7d0272
 canonicalUrl: https://blog.tinkercademy.com/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272
 sourceMediumUrl: https://medium.com/tinkertanker/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272
@@ -32,17 +32,17 @@ migration:
   altReviewRequired: 0
 ---
 
-<p>From May to July, I had the opportunity to intern at TinkerTanker. The internship allowed me to learn about many different areas from web development and game development to AI workflows, curriculum design, and teaching students of all ages.</p>
+<p>From May to July, I had the opportunity to intern at Tinkertanker. The internship allowed me to learn about many different areas from web development and game development to AI workflows, curriculum design, and teaching students of all ages.</p>
 
 <p>It was an experience that not only strengthened my technical skills but also changed the way I think about AI, education, and the future of software development.</p>
 
 <h3>Curriculum Development: Teaching Students to Vibe Code the Right Way</h3>
 
-<p>I worked on revising some of TinkerTanker’s curriculum to better align with the rise of agentic AI and vibe coding.</p>
+<p>I worked on revising some of Tinkertanker’s curriculum to better align with the rise of agentic AI and vibe coding.</p>
 
 <p>Today, AI has made programming more accessible than ever. With tools like ChatGPT and AI coding agents, anyone can generate an application simply by describing what they want. Because of this, people may believe that coding skills are no longer necessary.</p>
 
-<p>However, my time at TinkerTanker has shown me that effective vibe coding is a skill in itself.</p>
+<p>However, my time at Tinkertanker has shown me that effective vibe coding is a skill in itself.</p>
 
 <p>The quality of the final product is no longer determined solely by how well you can write code, but increasingly determined by how well you work with AI. Skills such as prompt engineering, planning before implementation, debugging AI-generated code, understanding AI limitations, and knowing how to iterate on prompts all play a huge role in producing higher quality end products.</p>
 
@@ -116,4 +116,4 @@ migration:
 
 <p>Whether it was redesigning curricula, learning web and game development, exploring AI agents, or teaching students in the classroom, every project pushed me to grow in different ways. More importantly, this internship showed me that learning doesn’t stop once you know how to code. In today’s world, success increasingly comes from knowing how to learn continuously, communicate effectively, and work alongside AI rather than against it.</p>
 
-<p>I’d like to thank everyone at TinkerTanker for giving me the opportunity to contribute, learn, and grow. Over these three months, I not only developed stronger technical skills but also gained greater confidence as both a learner and an educator. I’m excited to carry these experiences forward into my future studies and career, and I’m looking forward to seeing how both AI and education continue to evolve in the years ahead.</p>
+<p>I’d like to thank everyone at Tinkertanker for giving me the opportunity to contribute, learn, and grow. Over these three months, I not only developed stronger technical skills but also gained greater confidence as both a learner and an educator. I’m excited to carry these experiences forward into my future studies and career, and I’m looking forward to seeing how both AI and education continue to evolve in the years ahead.</p>

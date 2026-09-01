@@ -50,9 +50,10 @@ The reviewed public source baseline is committed under
 without Medium access. It contains public Medium JSON for the original 68
 stories, embed metadata, and the exact public publication RSS response used for
 the four newer stories. RSS source overrides (including the user-confirmed
-Claire Phay attribution and the original 2024 date of Marcuschen's story) are
-audited in `rss-source-overrides.json`. These caches are not normal build inputs
-after import. Other `scripts/_artifacts/` outputs remain ignored.
+Claire Phay attribution, her editorial title and brand-casing corrections, and
+the original 2024 date of Marcuschen's story) are audited in
+`rss-source-overrides.json`. These caches are not normal build inputs after
+import. Other `scripts/_artifacts/` outputs remain ignored.
 
 ## Reproduce the inventory and import
 
