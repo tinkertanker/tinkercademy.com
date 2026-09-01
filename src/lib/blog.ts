@@ -2,7 +2,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 export const BLOG_ORIGIN = 'https://blog.tinkercademy.com';
 export const BLOG_TITLE = 'Tinkercademy Build Log';
-export const BLOG_DESCRIPTION = 'The inventions, prototypes, lessons, and company we are building at Tinkercademy.';
+export const BLOG_DESCRIPTION = 'The company we build, by the company we build with.';
 export const BLOG_FEED_URL = `${BLOG_ORIGIN}/feed`;
 
 const previewBasePath = import.meta.env.BLOG_PREVIEW_BASE_PATH?.trim().replace(/\/$/u, '') || '';
