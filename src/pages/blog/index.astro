@@ -46,9 +46,12 @@ const blogSchema = {
 						<a href={blogHref('/#archives')}>Archives</a>
 						<a href={BLOG_FEED_URL}>RSS</a>
 					</nav>
-					<nav id="archives" class="blog-hero__years" aria-label="Article archives">
-						{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
-					</nav>
+					<div class="blog-hero__year-select">
+						<select id="archives" aria-label="Select archive year" data-blog-year-select>
+							<option value="" selected disabled>Year</option>
+							{years.map((year) => <option value={blogHref(`/archive/${year}/`)}>{year}</option>)}
+						</select>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -84,6 +87,13 @@ const blogSchema = {
 		</ul>
 	</section>
 </ContentLayout>
+
+<script>
+	document.querySelector<HTMLSelectElement>('[data-blog-year-select]')?.addEventListener('change', (event) => {
+		const select = event.currentTarget as HTMLSelectElement;
+		if (select.value) window.location.assign(select.value);
+	});
+</script>
 
 <style>
 	.blog-hero {
@@ -153,26 +163,44 @@ const blogSchema = {
 		text-underline-offset: 0.3em;
 	}
 
-	.blog-hero__years {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 0.45rem;
+	.blog-hero__year-select {
+		position: relative;
+		color: var(--accent-dark);
 	}
 
-	.blog-hero__years a {
-		padding: 0.35rem 0.65rem;
+	.blog-hero__year-select::after {
+		position: absolute;
+		top: 50%;
+		right: 0.9rem;
+		width: 0.45rem;
+		height: 0.45rem;
+		border-right: 2px solid currentColor;
+		border-bottom: 2px solid currentColor;
+		content: '';
+		pointer-events: none;
+		transform: translateY(-70%) rotate(45deg);
+	}
+
+	.blog-hero__year-select select {
+		min-width: 7.5rem;
+		padding: 0.55rem 2.4rem 0.55rem 0.9rem;
 		border: 1px solid rgba(189, 58, 52, 0.25);
 		border-radius: 999px;
+		appearance: none;
+		background: rgba(255, 255, 255, 0.45);
 		color: var(--accent-dark);
-		font-size: 0.8rem;
-		text-decoration: none;
+		font: inherit;
+		font-size: 0.85rem;
+		font-weight: 600;
+		cursor: pointer;
 	}
 
-	.blog-hero__years a:hover,
-	.blog-hero__years a:focus-visible {
+	.blog-hero__year-select select:hover,
+	.blog-hero__year-select select:focus-visible {
 		border-color: var(--accent-dark);
-		background: rgba(189, 58, 52, 0.07);
+		background: rgba(255, 255, 255, 0.75);
+		outline: 2px solid transparent;
+		box-shadow: 0 0 0 3px rgba(189, 58, 52, 0.12);
 	}
 
 	.blog-list {
@@ -276,9 +304,5 @@ const blogSchema = {
 			justify-items: start;
 		}
 
-		.blog-hero__years {
-			max-width: 15rem;
-			justify-content: flex-start;
-		}
 	}
 </style>
