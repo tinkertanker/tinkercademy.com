@@ -39,23 +39,21 @@ const blogSchema = {
 			<p>{BLOG_DESCRIPTION}</p>
 			<div class="blog-hero__footer">
 				<p class="blog-hero__count">{stories.length} stories · {years.at(-1)}–{years[0]}</p>
-				<nav class="blog-hero__nav" aria-label="Build Log">
-					<a href={blogHref('/')} aria-current="page">All stories</a>
-					<a href={blogHref('/#archives')}>Archives</a>
-					<a href={blogHref('/feed')}>RSS</a>
-				</nav>
+				<div class="blog-hero__controls">
+					<nav class="blog-hero__nav" aria-label="Build Log">
+						<a href={blogHref('/')} aria-current="page">All stories</a>
+						<a href={blogHref('/#archives')}>Archives</a>
+						<a href={blogHref('/feed')}>RSS</a>
+					</nav>
+					<nav id="archives" class="blog-hero__years" aria-label="Article archives">
+						{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
+					</nav>
+				</div>
 			</div>
 		</div>
 	</header>
 
 	<section class="blog-list shell" aria-label="Stories">
-		<div class="blog-list__header">
-			<nav id="archives" class="blog-list__archives" aria-label="Article archives">
-				<div>
-					{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
-				</div>
-			</nav>
-		</div>
 		<ul>
 			{stories.map((story) => (
 				<li>
@@ -126,6 +124,12 @@ const blogSchema = {
 		color: rgb(90, 75, 70);
 	}
 
+	.blog-hero__controls {
+		display: grid;
+		justify-items: end;
+		gap: 1rem;
+	}
+
 	.blog-hero__nav {
 		display: flex;
 		align-items: center;
@@ -148,33 +152,14 @@ const blogSchema = {
 		text-underline-offset: 0.3em;
 	}
 
-	.blog-list {
-		padding-top: clamp(3rem, 6vw, 5rem);
-		padding-bottom: clamp(4rem, 7vw, 6rem);
-	}
-
-	.blog-list__header {
-		display: flex;
-		align-items: end;
-		justify-content: space-between;
-		gap: 2rem;
-		margin-bottom: 2rem;
-	}
-
-	.blog-list__archives {
-		max-width: 27rem;
-		margin-left: auto;
-		text-align: right;
-	}
-
-	.blog-list__archives div {
+	.blog-hero__years {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		gap: 0.45rem;
 	}
 
-	.blog-list__archives a {
+	.blog-hero__years a {
 		padding: 0.35rem 0.65rem;
 		border: 1px solid rgba(189, 58, 52, 0.25);
 		border-radius: 999px;
@@ -183,10 +168,15 @@ const blogSchema = {
 		text-decoration: none;
 	}
 
-	.blog-list__archives a:hover,
-	.blog-list__archives a:focus-visible {
+	.blog-hero__years a:hover,
+	.blog-hero__years a:focus-visible {
 		border-color: var(--accent-dark);
 		background: rgba(189, 58, 52, 0.07);
+	}
+
+	.blog-list {
+		padding-top: clamp(3rem, 6vw, 5rem);
+		padding-bottom: clamp(4rem, 7vw, 6rem);
 	}
 
 	.blog-list ul {
@@ -280,17 +270,13 @@ const blogSchema = {
 			gap: 1.25rem;
 		}
 
-		.blog-list__header {
-			align-items: flex-start;
-			flex-direction: column;
+		.blog-hero__controls {
+			width: 100%;
+			justify-items: start;
 		}
 
-		.blog-list__archives {
-			margin-left: 0;
-			text-align: left;
-		}
-
-		.blog-list__archives div {
+		.blog-hero__years {
+			max-width: 15rem;
 			justify-content: flex-start;
 		}
 	}
