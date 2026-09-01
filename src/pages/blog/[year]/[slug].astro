@@ -1,14 +1,13 @@
 ---
-// The Worker serves this build route at the unchanged legacy story path.
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
-import BlogNav from '../../components/articles/BlogNav.astro';
-import ContentLayout from '../../layouts/ContentLayout.astro';
-import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogDateTime, blogHref, formatBlogDate } from '../../lib/blog';
+import BlogNav from '../../../components/articles/BlogNav.astro';
+import ContentLayout from '../../../layouts/ContentLayout.astro';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, SITE_ORIGIN, blogDateTime, blogHref, formatBlogDate } from '../../../lib/blog';
 
 export async function getStaticPaths() {
 	return (await getCollection('blog')).map((story) => ({
-		params: { legacyPath: story.data.legacyPath },
+		params: { year: String(story.data.publishedAt.getUTCFullYear()), slug: story.data.slug },
 		props: { story },
 	}));
 }
@@ -16,7 +15,7 @@ export async function getStaticPaths() {
 const { story } = Astro.props as { story: CollectionEntry<'blog'> };
 const { Content } = await render(story);
 const modifiedAt = story.data.updatedAt ?? story.data.publishedAt;
-const absoluteImage = story.data.heroImage ? new URL(story.data.heroImage, BLOG_ORIGIN).toString() : undefined;
+const absoluteImage = story.data.heroImage ? new URL(story.data.heroImage, SITE_ORIGIN).toString() : undefined;
 const articleSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'BlogPosting',

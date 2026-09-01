@@ -1,5 +1,6 @@
-// Prepared configuration only. Do not deploy this file until the Medium
-// custom-domain detachment and blog cutover have been explicitly approved.
+// Prepared redirect-cutover configuration only. Do not deploy this file until
+// the Medium custom-domain detachment has been explicitly approved. Canonical
+// blog pages are served by the normal apex route in wrangler.jsonc.
 {
 	"name": "tinkercademy-dot-com",
 	"main": "./worker.mjs",

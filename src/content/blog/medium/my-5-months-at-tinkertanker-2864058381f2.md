@@ -1,8 +1,9 @@
 ---
 title: A Python-focused internship
 description: A Python-focused internship
+slug: a-python-focused-internship
 legacyPath: my-5-months-at-tinkertanker-2864058381f2
-canonicalUrl: https://blog.tinkercademy.com/my-5-months-at-tinkertanker-2864058381f2
+canonicalUrl: https://tinkercademy.com/blog/2020/a-python-focused-internship/
 sourceMediumUrl: https://medium.com/tinkertanker/my-5-months-at-tinkertanker-2864058381f2
 author:
   id: ae7dae1e63a6

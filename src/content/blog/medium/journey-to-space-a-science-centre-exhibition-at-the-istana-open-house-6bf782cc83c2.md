@@ -2,8 +2,9 @@
 title: "Journey to Space: A Science Centre Exhibition at the Istana Open House"
 subtitle: Using Littlebits, Micro:bits and cardboard for an interactive game
 description: Using Littlebits, Micro:bits and cardboard for an interactive game
+slug: journey-to-space-a-science-centre-exhibition-at-the-istana-open-house
 legacyPath: journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2
-canonicalUrl: https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2
+canonicalUrl: https://tinkercademy.com/blog/2019/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house/
 sourceMediumUrl: https://medium.com/tinkertanker/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2
 author:
   id: a69be92c33e8

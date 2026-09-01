@@ -2,8 +2,9 @@
 title: Coding without Computers — The Untold Power of CS Unplugged
 subtitle: We often cannot imagine learning computer science concepts without a computer. But low and behold, we have the powerful CS Unplugged!
 description: We often cannot imagine learning computer science concepts without a computer. But low and behold, we have the powerful CS Unplugged!
+slug: coding-without-computers-the-untold-power-of-cs-unplugged
 legacyPath: coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785
-canonicalUrl: https://blog.tinkercademy.com/coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785
+canonicalUrl: https://tinkercademy.com/blog/2023/coding-without-computers-the-untold-power-of-cs-unplugged/
 sourceMediumUrl: https://medium.com/tinkertanker/coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785
 author:
   id: be2990b8a35

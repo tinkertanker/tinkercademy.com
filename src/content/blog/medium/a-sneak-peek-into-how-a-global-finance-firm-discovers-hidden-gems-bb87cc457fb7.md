@@ -2,8 +2,9 @@
 title: A Sneak Peek Into How A Global Finance Firm Discovers Hidden Gems
 subtitle: Have you ever wondered how much raw talent you could unearth from your own team? Well, it isn’t a difficult task, if you’re up for it.
 description: Have you ever wondered how much raw talent you could unearth from your own team? Well, it isn’t a difficult task, if you’re up for it.
+slug: a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems
 legacyPath: a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7
-canonicalUrl: https://blog.tinkercademy.com/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7
+canonicalUrl: https://tinkercademy.com/blog/2023/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems/
 sourceMediumUrl: https://medium.com/tinkertanker/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7
 author:
   id: be2990b8a35

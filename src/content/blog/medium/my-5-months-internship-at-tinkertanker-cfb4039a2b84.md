@@ -2,8 +2,9 @@
 title: Learning and Building a Web Curriculum
 subtitle: A 2020 internship report
 description: A 2020 internship report
+slug: learning-and-building-a-web-curriculum
 legacyPath: my-5-months-internship-at-tinkertanker-cfb4039a2b84
-canonicalUrl: https://blog.tinkercademy.com/my-5-months-internship-at-tinkertanker-cfb4039a2b84
+canonicalUrl: https://tinkercademy.com/blog/2020/learning-and-building-a-web-curriculum/
 sourceMediumUrl: https://medium.com/tinkertanker/my-5-months-internship-at-tinkertanker-cfb4039a2b84
 author:
   id: 7242e265dacf

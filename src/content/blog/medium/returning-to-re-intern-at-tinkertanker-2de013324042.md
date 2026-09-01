@@ -2,8 +2,9 @@
 title: Returning to Re-intern at Tinkertanker
 subtitle: Mireille joined us over the Christmas season, and made a whole bunch of things!
 description: Mireille joined us over the Christmas season, and made a whole bunch of things!
+slug: returning-to-re-intern-at-tinkertanker
 legacyPath: returning-to-re-intern-at-tinkertanker-2de013324042
-canonicalUrl: https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042
+canonicalUrl: https://tinkercademy.com/blog/2021/returning-to-re-intern-at-tinkertanker/
 sourceMediumUrl: https://medium.com/tinkertanker/returning-to-re-intern-at-tinkertanker-2de013324042
 author:
   id: 8066005c0c15

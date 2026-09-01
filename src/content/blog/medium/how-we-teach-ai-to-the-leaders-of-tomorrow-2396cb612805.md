@@ -2,8 +2,9 @@
 title: How We Teach AI To The Leaders of Tomorrow
 subtitle: The ability to work with AI is now no longer a luxury, but a necessity for anyone looking to stay competitive. So how do we teach AI?
 description: The ability to work with AI is now no longer a luxury, but a necessity for anyone looking to stay competitive. So how do we teach AI?
+slug: how-we-teach-ai-to-the-leaders-of-tomorrow
 legacyPath: how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805
-canonicalUrl: https://blog.tinkercademy.com/how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805
+canonicalUrl: https://tinkercademy.com/blog/2023/how-we-teach-ai-to-the-leaders-of-tomorrow/
 sourceMediumUrl: https://medium.com/tinkertanker/how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805
 author:
   id: be2990b8a35

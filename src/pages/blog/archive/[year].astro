@@ -1,8 +1,7 @@
 ---
-// The Worker removes /blog-content from the public blog-host URL.
 import BlogNav from '../../../components/articles/BlogNav.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
-import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogDateTime, blogHref, formatBlogDate, getBlogStories, getBlogYears, type BlogStory } from '../../../lib/blog';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, blogDateTime, blogHref, blogStoryPath, formatBlogDate, getBlogStories, getBlogYears, type BlogStory } from '../../../lib/blog';
 
 export async function getStaticPaths() {
 	const stories = await getBlogStories();
@@ -32,7 +31,7 @@ const canonical = `${BLOG_ORIGIN}/archive/${year}/`;
 			{stories.map((story) => (
 				<li>
 					<time datetime={blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision)}>{formatBlogDate(story.data.publishedAt, story.data.publishedAtPrecision)}</time>
-					<a href={blogHref(`/${story.data.legacyPath}/`)}>{story.data.title}</a>
+					<a href={blogHref(blogStoryPath(story))}>{story.data.title}</a>
 					<span>{story.data.author.name}</span>
 				</li>
 			))}

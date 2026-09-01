@@ -1,5 +1,4 @@
 ---
-// The Worker maps blog.tinkercademy.com/ to this isolated build route.
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import {
 	BLOG_DESCRIPTION,
@@ -8,6 +7,7 @@ import {
 	BLOG_TITLE,
 	blogDateTime,
 	blogHref,
+	blogStoryPath,
 	formatBlogDate,
 	getBlogStories,
 	getBlogYears,
@@ -44,7 +44,7 @@ const blogSchema = {
 					<nav class="blog-hero__nav" aria-label="Build Log">
 						<a href={blogHref('/')} aria-current="page">All stories</a>
 						<a href={blogHref('/#archives')}>Archives</a>
-						<a href={blogHref('/feed')}>RSS</a>
+						<a href={BLOG_FEED_URL}>RSS</a>
 					</nav>
 					<nav id="archives" class="blog-hero__years" aria-label="Article archives">
 						{years.map((year) => <a href={blogHref(`/archive/${year}/`)}>{year}</a>)}
@@ -58,7 +58,7 @@ const blogSchema = {
 		<ul>
 			{stories.map((story) => (
 				<li>
-					<a class="story-card" href={blogHref(`/${story.data.legacyPath}/`)}>
+					<a class="story-card" href={blogHref(blogStoryPath(story))}>
 						{story.data.heroImage && (
 							<img
 								src={story.data.heroImage}

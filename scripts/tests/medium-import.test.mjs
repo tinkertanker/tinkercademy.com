@@ -3,11 +3,13 @@ import test from 'node:test';
 
 import {
 	BLOG_ORIGIN,
+	LEGACY_BLOG_ORIGIN,
 	buildCanonicalUrl,
 	classifyEmbedProvider,
 	normaliseMediumStory,
 	renderInlineHtml,
 	rewriteInternalStoryHref,
+	slugifyStoryTitle,
 } from '../lib/medium.mjs';
 import { parseMediumRss } from '../lib/medium-rss.mjs';
 import {
@@ -27,7 +29,7 @@ const rawStory = {
 			uniqueSlug: 'a-test-story-abc123def456',
 			creatorId: 'author123',
 			homeCollectionId: 'ca1fc9543b6f',
-			canonicalUrl: `${BLOG_ORIGIN}/a-test-story-abc123def456`,
+			canonicalUrl: `${LEGACY_BLOG_ORIGIN}/a-test-story-abc123def456`,
 			createdAt: 1_499_999_999_000,
 			firstPublishedAt: 1_500_000_000_000,
 			latestPublishedAt: 1_500_000_001_000,
@@ -58,11 +60,13 @@ const rawStory = {
 	},
 };
 
-test('normalises the public Medium record without changing attribution or legacy routing', () => {
+test('normalises the public Medium record while preserving legacy provenance', () => {
 	const story = normaliseMediumStory(rawStory);
 	assert.equal(story.id, 'abc123def456');
 	assert.equal(story.legacyPath, 'a-test-story-abc123def456');
-	assert.equal(story.canonicalUrl, `${BLOG_ORIGIN}/a-test-story-abc123def456`);
+	assert.equal(story.legacyUrl, `${LEGACY_BLOG_ORIGIN}/a-test-story-abc123def456`);
+	assert.equal(story.slug, 'a-test-story');
+	assert.equal(story.canonicalUrl, `${BLOG_ORIGIN}/2017/a-test-story/`);
 	assert.equal(story.sourceMediumUrl, 'https://medium.com/tinkertanker/a-test-story-abc123def456');
 	assert.deepEqual(story.author, {
 		id: 'author123',
@@ -84,38 +88,39 @@ test('rejects records that are not public stories in the expected publication', 
 	assert.throws(() => normaliseMediumStory(wrongCanonical), /canonical/i);
 });
 
-test('builds exact no-trailing-slash blog canonicals', () => {
+test('builds stable year-and-clean-slug blog canonicals', () => {
+	assert.equal(slugifyStoryTitle('From Vue.js to micro:bit: Twelve Weeks Building EdTech'), 'from-vue-js-to-micro-bit-twelve-weeks-building-edtech');
 	assert.equal(
-		buildCanonicalUrl('a-test-story-abc123def456'),
-		'https://blog.tinkercademy.com/a-test-story-abc123def456',
+		buildCanonicalUrl('2025-08-01T00:00:00.000Z', 'from-vue-js-to-micro-bit-twelve-weeks-building-edtech'),
+		'https://tinkercademy.com/blog/2025/from-vue-js-to-micro-bit-twelve-weeks-building-edtech/',
 	);
 });
 
-test('rewrites known Medium story links to preserved blog-host canonicals', () => {
-	const pathsById = new Map([['200bae67e8f1', 'whats-a-tinkertanker-200bae67e8f1']]);
+test('rewrites known Medium story links to apex blog canonicals', () => {
+	const destinationsById = new Map([['200bae67e8f1', 'https://tinkercademy.com/blog/2017/whats-a-tinkertanker/']]);
 	assert.equal(
 		rewriteInternalStoryHref(
 			'https://medium.com/tinkertanker/old-title-200bae67e8f1?source=post_page',
-			pathsById,
+			destinationsById,
 		),
-		'https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1',
+		'https://tinkercademy.com/blog/2017/whats-a-tinkertanker/',
 	);
 	assert.equal(
-		rewriteInternalStoryHref('https://example.com/reference', pathsById),
+		rewriteInternalStoryHref('https://example.com/reference', destinationsById),
 		'https://example.com/reference',
 	);
 	assert.equal(
-		rewriteInternalStoryHref('source:https://example.com/image-credit', pathsById),
+		rewriteInternalStoryHref('source:https://example.com/image-credit', destinationsById),
 		'https://example.com/image-credit',
 	);
 	assert.equal(
-		rewriteInternalStoryHref('http://get hacking.com', pathsById),
+		rewriteInternalStoryHref('http://get hacking.com', destinationsById),
 		'http://gethacking.com',
 	);
 	assert.equal(
 		rewriteInternalStoryHref(
 			'https://encrypted.google.com/url?sa=t&url=https%3A%2F%2Fgethacking.com%2Fcollections%2Fmicro-bit&usg=tracker',
-			pathsById,
+			destinationsById,
 		),
 		'https://gethacking.com/collections/micro-bit',
 	);

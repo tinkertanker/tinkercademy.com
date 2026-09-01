@@ -211,7 +211,7 @@ function escapeCodeFence(text) {
 	return '`'.repeat(Math.max(3, longest + 1));
 }
 
-function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions, usesMdx }) {
+function renderStoryBody({ story, assetsById, mediaById, destinationsById, usersById, reviewDecisions, usesMdx }) {
 	const blocks = [];
 	const altDecisions = [];
 	let embedCount = 0;
@@ -226,7 +226,7 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 
 	while (index < story.paragraphs.length) {
 		const paragraph = story.paragraphs[index];
-		const inline = () => renderInlineHtml(paragraph, pathsById, usersById);
+		const inline = () => renderInlineHtml(paragraph, destinationsById, usersById);
 
 		if (paragraph.type === 3 && !skippedTitle && paragraph.text.trim() === story.title.trim()) {
 			skippedTitle = true;
@@ -238,7 +238,7 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 			const type = paragraph.type;
 			const items = [];
 			while (index < story.paragraphs.length && story.paragraphs[index].type === type) {
-				items.push(renderInlineHtml(story.paragraphs[index], pathsById, usersById));
+				items.push(renderInlineHtml(story.paragraphs[index], destinationsById, usersById));
 				index += 1;
 			}
 			const listTag = type === 9 ? 'ul' : 'ol';
@@ -276,8 +276,8 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 					imageComment,
 					`<img src="${asset.localPath}" alt="${escapeHtmlAttribute(alt.alt)}" width="${asset.width}" height="${asset.height}" loading="lazy" decoding="async" />`,
 				];
-				if (paragraph.text?.trim()) lines.push(block('p', `<em>${renderInlineHtml(paragraph, pathsById, usersById)}</em>`, 'medium-image-caption'));
-				if (alt.credit) lines.push(block('p', `<em>Credit: ${renderInlineHtml({ text: alt.credit, markups: [] }, pathsById)}</em>`, 'medium-image-credit'));
+				if (paragraph.text?.trim()) lines.push(block('p', `<em>${renderInlineHtml(paragraph, destinationsById, usersById)}</em>`, 'medium-image-caption'));
+				if (alt.credit) lines.push(block('p', `<em>Credit: ${renderInlineHtml({ text: alt.credit, markups: [] }, destinationsById)}</em>`, 'medium-image-credit'));
 				blocks.push(lines.join('\n\n'));
 				break;
 			}
@@ -296,7 +296,7 @@ function renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, r
 				const media = mediaById.get(resourceId);
 				if (!media) throw new Error(`No cached embed metadata for ${resourceId}`);
 				embedCount += 1;
-				blocks.push(`<ArticleEmbed provider="${media.provider}" href={${JSON.stringify(media.href)}} title={${JSON.stringify(media.title || 'Embedded media')}} description={${JSON.stringify(media.description)}} captionHtml={${JSON.stringify(renderInlineHtml(paragraph, pathsById, usersById))}} />`);
+				blocks.push(`<ArticleEmbed provider="${media.provider}" href={${JSON.stringify(media.href)}} title={${JSON.stringify(media.title || 'Embedded media')}} description={${JSON.stringify(media.description)}} captionHtml={${JSON.stringify(renderInlineHtml(paragraph, destinationsById, usersById))}} />`);
 				break;
 			}
 			case 13:
@@ -354,9 +354,9 @@ async function main() {
 			source = normaliseMediumStory(raw);
 		}
 		if (sha256(sourceText) !== record.sourceSha256) throw new Error(`Source hash drift for ${record.id}`);
-		stories.push({ ...record, ...source });
+		stories.push({ ...source, ...record });
 	}
-	const pathsById = new Map(stories.map((story) => [story.id, story.legacyPath]));
+	const destinationsById = new Map(stories.map((story) => [story.id, story.canonicalUrl]));
 	const usersById = new Map(stories.map((story) => [story.author.id, story.author]));
 
 	const mediaById = new Map();
@@ -386,7 +386,7 @@ async function main() {
 
 	for (const story of stories) {
 		const usesMdx = story.embeds.length > 0;
-		const rendered = renderStoryBody({ story, assetsById, mediaById, pathsById, usersById, reviewDecisions, usesMdx });
+		const rendered = renderStoryBody({ story, assetsById, mediaById, destinationsById, usersById, reviewDecisions, usesMdx });
 		altReviewRequired += rendered.altDecisions.filter(({ decision }) => decision === 'review-required').length;
 		const rightsStatus = applyRightsReview(story.rightsStatus, reviewDecisions.rights[story.legacyPath]);
 		if (rightsStatus === 'review-required') rightsReviewRequired += 1;
@@ -405,6 +405,7 @@ async function main() {
 			title: story.title,
 			subtitle: story.subtitle || undefined,
 			description: (story.subtitle || story.title).slice(0, 300),
+			slug: story.slug,
 			legacyPath: story.legacyPath,
 			canonicalUrl: story.canonicalUrl,
 			sourceMediumUrl: story.sourceMediumUrl,

@@ -12,7 +12,7 @@ function assetEnvironment() {
 				async fetch(request) {
 					const pathname = new URL(request.url).pathname;
 					requestedPaths.push(pathname);
-					if (pathname === '/blog-content/404/') return new Response('<h1>Story not found</h1>');
+					if (pathname === '/blog/404/') return new Response('<h1>Story not found</h1>');
 					return new Response('missing', { status: 404 });
 				},
 			},
@@ -20,13 +20,13 @@ function assetEnvironment() {
 	};
 }
 
-test('serves the blog-specific 404 page for unknown story and nested paths', async () => {
-	for (const pathname of ['/unknown-story', '/unknown/nested/path']) {
+test('serves the blog-specific 404 page for unknown apex blog paths', async () => {
+	for (const pathname of ['/blog/unknown-story/', '/blog/unknown/nested/path/']) {
 		const { env, requestedPaths } = assetEnvironment();
-		const response = await worker.fetch(new Request(`https://blog.tinkercademy.com${pathname}`), env);
+		const response = await worker.fetch(new Request(`https://tinkercademy.com${pathname}`), env);
 		assert.equal(response.status, 404);
 		assert.match(await response.text(), /Story not found/);
-		assert.equal(requestedPaths.at(-1), '/blog-content/404/');
+		assert.equal(requestedPaths.at(-1), '/blog/404/');
 	}
 });
 

@@ -1,8 +1,9 @@
 ---
 title: "Internship report: Unity amidst the chaos"
 description: "Internship report: Unity amidst the chaos"
+slug: internship-report-unity-amidst-the-chaos
 legacyPath: unity-amidst-the-chaos-60af069670e
-canonicalUrl: https://blog.tinkercademy.com/unity-amidst-the-chaos-60af069670e
+canonicalUrl: https://tinkercademy.com/blog/2020/internship-report-unity-amidst-the-chaos/
 sourceMediumUrl: https://medium.com/tinkertanker/unity-amidst-the-chaos-60af069670e
 author:
   id: 972eca1ef085

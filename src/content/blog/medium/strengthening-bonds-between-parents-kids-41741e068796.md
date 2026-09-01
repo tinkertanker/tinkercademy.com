@@ -2,8 +2,9 @@
 title: Strengthening Bonds between Parents & Kids
 subtitle: Countless studies prove that pro-family policies improve employee satisfaction and productivity. Here’s how your company can take action too
 description: Countless studies prove that pro-family policies improve employee satisfaction and productivity. Here’s how your company can take action too
+slug: strengthening-bonds-between-parents-and-kids
 legacyPath: strengthening-bonds-between-parents-kids-41741e068796
-canonicalUrl: https://blog.tinkercademy.com/strengthening-bonds-between-parents-kids-41741e068796
+canonicalUrl: https://tinkercademy.com/blog/2023/strengthening-bonds-between-parents-and-kids/
 sourceMediumUrl: https://medium.com/tinkertanker/strengthening-bonds-between-parents-kids-41741e068796
 author:
   id: be2990b8a35

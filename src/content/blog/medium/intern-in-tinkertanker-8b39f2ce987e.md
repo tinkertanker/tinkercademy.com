@@ -1,8 +1,9 @@
 ---
 title: "Building a Summarisation App: My Summer Internship at Tinkertanker"
 description: "Building a Summarisation App: My Summer Internship at Tinkertanker"
+slug: building-a-summarisation-app-my-summer-internship-at-tinkertanker
 legacyPath: intern-in-tinkertanker-8b39f2ce987e
-canonicalUrl: https://blog.tinkercademy.com/intern-in-tinkertanker-8b39f2ce987e
+canonicalUrl: https://tinkercademy.com/blog/2024/building-a-summarisation-app-my-summer-internship-at-tinkertanker/
 sourceMediumUrl: https://medium.com/tinkertanker/intern-in-tinkertanker-8b39f2ce987e
 author:
   id: rss-6ca62e9247d1

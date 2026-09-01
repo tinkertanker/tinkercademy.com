@@ -1,15 +1,37 @@
 import { createHash } from 'node:crypto';
 
-export const BLOG_ORIGIN = 'https://blog.tinkercademy.com';
+export const BLOG_ORIGIN = 'https://tinkercademy.com/blog';
+export const LEGACY_BLOG_ORIGIN = 'https://blog.tinkercademy.com';
 export const MEDIUM_PUBLICATION_ID = 'ca1fc9543b6f';
 export const MEDIUM_PUBLICATION_SLUG = 'tinkertanker';
 export const PUBLICATION_LICENSE = 'All rights reserved';
 
-export function buildCanonicalUrl(legacyPath) {
+const STORY_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
+
+export function slugifyStoryTitle(title) {
+	const slug = String(title)
+		.normalize('NFKD')
+		.replace(/\p{Mark}/gu, '')
+		.toLowerCase()
+		.replace(/&/gu, ' and ')
+		.replace(/[’']/gu, '')
+		.replace(/[^a-z0-9]+/gu, '-')
+		.replace(/^-+|-+$/gu, '');
+	if (!slug) throw new Error(`Story title does not produce a usable slug: ${title}`);
+	return slug;
+}
+
+export function buildCanonicalUrl(publishedAt, slug) {
+	if (!STORY_SLUG_PATTERN.test(slug)) throw new Error(`Invalid blog story slug: ${slug}`);
+	const year = new Date(asIsoDate(publishedAt, 'publishedAt')).getUTCFullYear();
+	return `${BLOG_ORIGIN}/${year}/${slug}/`;
+}
+
+export function buildLegacyBlogUrl(legacyPath) {
 	if (!legacyPath || legacyPath.startsWith('/') || legacyPath.endsWith('/')) {
 		throw new Error(`Invalid legacy story path: ${legacyPath}`);
 	}
-	return `${BLOG_ORIGIN}/${legacyPath}`;
+	return `${LEGACY_BLOG_ORIGIN}/${legacyPath}`;
 }
 
 export function buildSourceMediumUrl(legacyPath) {
@@ -43,8 +65,8 @@ export function normaliseMediumStory(raw) {
 	}
 
 	const legacyPath = value.uniqueSlug;
-	const canonicalUrl = buildCanonicalUrl(legacyPath);
-	if (value.canonicalUrl !== canonicalUrl || value.webCanonicalUrl && value.webCanonicalUrl !== canonicalUrl) {
+	const legacyUrl = buildLegacyBlogUrl(legacyPath);
+	if (value.canonicalUrl !== legacyUrl || value.webCanonicalUrl && value.webCanonicalUrl !== legacyUrl) {
 		throw new Error(`Story ${value.id ?? '<unknown>'} canonical does not match its legacy URL`);
 	}
 	if (!legacyPath.endsWith(value.id)) {
@@ -54,13 +76,17 @@ export function normaliseMediumStory(raw) {
 	const user = raw.payload.references?.User?.[value.creatorId] ?? value.displayAuthor;
 	if (!user?.name) throw new Error(`Story ${value.id} has no resolvable author`);
 	const handle = user.username || null;
+	const publishedAt = asIsoDate(value.firstPublishedAt, 'firstPublishedAt');
+	const slug = slugifyStoryTitle(value.title);
 
 	return {
 		id: value.id,
 		title: value.title,
 		subtitle: value.content?.subtitle || value.virtuals?.subtitle || '',
 		legacyPath,
-		canonicalUrl,
+		legacyUrl,
+		slug,
+		canonicalUrl: buildCanonicalUrl(publishedAt, slug),
 		sourceMediumUrl: buildSourceMediumUrl(legacyPath),
 		author: {
 			id: value.creatorId,
@@ -69,7 +95,7 @@ export function normaliseMediumStory(raw) {
 			profileUrl: handle ? `https://medium.com/@${handle}` : buildSourceMediumUrl(legacyPath),
 		},
 		createdAt: asIsoDate(value.createdAt, 'createdAt'),
-		publishedAt: asIsoDate(value.firstPublishedAt, 'firstPublishedAt'),
+		publishedAt,
 		latestPublishedAt: asIsoDate(value.latestPublishedAt, 'latestPublishedAt'),
 		updatedAt: asIsoDate(value.updatedAt, 'updatedAt'),
 		tags: (value.virtuals?.tags ?? []).map((tag) => ({ name: tag.name, slug: tag.slug })),
@@ -83,12 +109,12 @@ export function normaliseMediumStory(raw) {
 	};
 }
 
-export function rewriteInternalStoryHref(href, pathsById) {
+export function rewriteInternalStoryHref(href, destinationsById) {
 	if (!href) return null;
 	if (/^source:https?:\/\//iu.test(href)) href = href.slice('source:'.length);
 	if (/^https?:\/\/get hacking\.com(?:\/|$)/iu.test(href)) href = href.replace('get hacking.com', 'gethacking.com');
-	for (const [id, legacyPath] of pathsById) {
-		if (href.includes(id)) return buildCanonicalUrl(legacyPath);
+	for (const [id, destination] of destinationsById) {
+		if (href.includes(id)) return destination;
 	}
 	try {
 		const url = new URL(href);
@@ -121,7 +147,7 @@ function safeHref(value) {
 	}
 }
 
-function markupTags(markup, pathsById, usersById) {
+function markupTags(markup, destinationsById, usersById) {
 	if (markup.type === 1) return ['<strong>', '</strong>'];
 	if (markup.type === 2) return ['<em>', '</em>'];
 	if (markup.type === 10) return ['<code>', '</code>'];
@@ -129,11 +155,11 @@ function markupTags(markup, pathsById, usersById) {
 
 	const mentionedUser = markup.userId ? usersById?.get(markup.userId) : null;
 	const sourceHref = markup.href || (mentionedUser?.handle ? `https://medium.com/@${mentionedUser.handle}` : null);
-	const href = safeHref(rewriteInternalStoryHref(sourceHref, pathsById));
+	const href = safeHref(rewriteInternalStoryHref(sourceHref, destinationsById));
 	return href ? [`<a href="${escapeHtml(href)}">`, '</a>'] : ['', ''];
 }
 
-export function renderInlineHtml(paragraph, pathsById, usersById = new Map()) {
+export function renderInlineHtml(paragraph, destinationsById, usersById = new Map()) {
 	const text = String(paragraph.text ?? '');
 	const markups = (paragraph.markups ?? []).filter((markup) =>
 		Number.isInteger(markup.start) && Number.isInteger(markup.end) && markup.start < markup.end,
@@ -149,7 +175,7 @@ export function renderInlineHtml(paragraph, pathsById, usersById = new Map()) {
 		const active = markups
 			.filter((markup) => markup.start <= start && markup.end >= end)
 			.sort((a, b) => a.start - b.start || b.end - a.end || a.type - b.type);
-		const tags = active.map((markup) => markupTags(markup, pathsById, usersById));
+		const tags = active.map((markup) => markupTags(markup, destinationsById, usersById));
 		result += tags.map(([open]) => open).join('');
 		result += escapeHtml(text.slice(start, end)).replaceAll('\n', '<br />');
 		result += tags.reverse().map(([, close]) => close).join('');

@@ -2,8 +2,9 @@
 title: Unveiling the Top AI-Based Apps Made by Regular Teens
 subtitle: In today’s digital age, teenagers are not only avid users of technology but also creators and innovators. With rising advancements in…
 description: In today’s digital age, teenagers are not only avid users of technology but also creators and innovators. With rising advancements in…
+slug: unveiling-the-top-ai-based-apps-made-by-regular-teens
 legacyPath: unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82
-canonicalUrl: https://blog.tinkercademy.com/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82
+canonicalUrl: https://tinkercademy.com/blog/2023/unveiling-the-top-ai-based-apps-made-by-regular-teens/
 sourceMediumUrl: https://medium.com/tinkertanker/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82
 author:
   id: be2990b8a35

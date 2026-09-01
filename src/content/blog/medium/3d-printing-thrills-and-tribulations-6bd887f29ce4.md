@@ -2,8 +2,9 @@
 title: "3D Printing: Thrills and Tribulations"
 subtitle: Introduction
 description: Introduction
+slug: 3d-printing-thrills-and-tribulations
 legacyPath: 3d-printing-thrills-and-tribulations-6bd887f29ce4
-canonicalUrl: https://blog.tinkercademy.com/3d-printing-thrills-and-tribulations-6bd887f29ce4
+canonicalUrl: https://tinkercademy.com/blog/2021/3d-printing-thrills-and-tribulations/
 sourceMediumUrl: https://medium.com/tinkertanker/3d-printing-thrills-and-tribulations-6bd887f29ce4
 author:
   id: 8066005c0c15
@@ -35,7 +36,7 @@ migration:
   altReviewRequired: 0
 ---
 
-<p><em>Editor’s note: Here’s Mireille’s second blog post, this one detailing her 3D printing adventures! You can read </em><em><a href="https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042">her first post here</a></em><em>.</em></p>
+<p><em>Editor’s note: Here’s Mireille’s second blog post, this one detailing her 3D printing adventures! You can read </em><em><a href="https://tinkercademy.com/blog/2021/returning-to-re-intern-at-tinkertanker/">her first post here</a></em><em>.</em></p>
 
 <h2>Introduction</h2>
 

@@ -2,8 +2,9 @@
 title: Laser Cutting for Dummies
 subtitle: I had my first experience laser-cutting some weeks ago. It was pretty sweet. Laser cutting can be quite daunting for a first-timer. Is…
 description: I had my first experience laser-cutting some weeks ago. It was pretty sweet. Laser cutting can be quite daunting for a first-timer. Is…
+slug: laser-cutting-for-dummies
 legacyPath: laser-cutting-for-dummies-f1dd156acaeb
-canonicalUrl: https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb
+canonicalUrl: https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/
 sourceMediumUrl: https://medium.com/tinkertanker/laser-cutting-for-dummies-f1dd156acaeb
 author:
   id: d52a615b26a

@@ -2,8 +2,9 @@
 title: War for Talent — Could This Super Weapon Be the Answer to Your Woes?
 subtitle: The tech talent war is not a new problem. In fact, it’s been going on for more than a decade. Here’s what your team can do to win this war.
 description: The tech talent war is not a new problem. In fact, it’s been going on for more than a decade. Here’s what your team can do to win this war.
+slug: war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes
 legacyPath: war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419
-canonicalUrl: https://blog.tinkercademy.com/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419
+canonicalUrl: https://tinkercademy.com/blog/2023/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes/
 sourceMediumUrl: https://medium.com/tinkertanker/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419
 author:
   id: be2990b8a35

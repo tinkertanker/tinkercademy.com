@@ -1,8 +1,9 @@
 ---
 title: "Learning, Building, and Teaching: My Tinkertanker Internship"
 description: "Learning, Building, and Teaching: My Tinkertanker Internship"
+slug: learning-building-and-teaching-my-tinkertanker-internship
 legacyPath: looking-back-at-my-time-in-tinkertanker-cb94bd7d0272
-canonicalUrl: https://blog.tinkercademy.com/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272
+canonicalUrl: https://tinkercademy.com/blog/2026/learning-building-and-teaching-my-tinkertanker-internship/
 sourceMediumUrl: https://medium.com/tinkertanker/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272
 author:
   id: rss-1110912fd37c

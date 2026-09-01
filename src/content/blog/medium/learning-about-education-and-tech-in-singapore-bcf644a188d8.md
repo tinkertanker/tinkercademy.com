@@ -2,8 +2,9 @@
 title: Learning About Education and Tech in Singapore
 subtitle: Attending the Early Childhood Conference and a Digital Marketing Workshop
 description: Attending the Early Childhood Conference and a Digital Marketing Workshop
+slug: learning-about-education-and-tech-in-singapore
 legacyPath: learning-about-education-and-tech-in-singapore-bcf644a188d8
-canonicalUrl: https://blog.tinkercademy.com/learning-about-education-and-tech-in-singapore-bcf644a188d8
+canonicalUrl: https://tinkercademy.com/blog/2017/learning-about-education-and-tech-in-singapore/
 sourceMediumUrl: https://medium.com/tinkertanker/learning-about-education-and-tech-in-singapore-bcf644a188d8
 author:
   id: bbfeeddeacc3
@@ -55,7 +56,7 @@ migration:
 
 <p class="medium-image-caption"><em>PlayMaker workshop at the Early Childhood Conference</em></p>
 
-<p>Helping to facilitate the workshop allowed me to interact with a fairly large population of early childhood educators. It was interesting to see their reactions to the circuit stickers activity. Some took to it very quickly and were really interested in the whole idea of it. Others were not so enthusiastic or were confused about how the circuit stickers worked. It’s become fairly clear to me that in order for a program like PlayMaker to deliver the most impact, the educators using the tech tools in their classrooms have to be <em>excited</em> about the tech they are using. If the educators aren’t enthusiastic, the chances are a lot larger that the students won’t be either. In a <a href="https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279">previous piece I’ve written</a>, I asked a question: if educators are uncomfortable with the materials they are teaching, how can young students gain a firm grasp on the material as well? I’ll push this question further: how can we get educators who aren’t super comfortable with tech to be <em>excited</em> about learning and using it? Can we craft a learning environment or program that <em>teaches and sparks interest</em> in technology to adults who previously have not had much exposure? These questions are difficult to answer, but are important to consider.</p>
+<p>Helping to facilitate the workshop allowed me to interact with a fairly large population of early childhood educators. It was interesting to see their reactions to the circuit stickers activity. Some took to it very quickly and were really interested in the whole idea of it. Others were not so enthusiastic or were confused about how the circuit stickers worked. It’s become fairly clear to me that in order for a program like PlayMaker to deliver the most impact, the educators using the tech tools in their classrooms have to be <em>excited</em> about the tech they are using. If the educators aren’t enthusiastic, the chances are a lot larger that the students won’t be either. In a <a href="https://tinkercademy.com/blog/2017/early-childhood-computer-science-education/">previous piece I’ve written</a>, I asked a question: if educators are uncomfortable with the materials they are teaching, how can young students gain a firm grasp on the material as well? I’ll push this question further: how can we get educators who aren’t super comfortable with tech to be <em>excited</em> about learning and using it? Can we craft a learning environment or program that <em>teaches and sparks interest</em> in technology to adults who previously have not had much exposure? These questions are difficult to answer, but are important to consider.</p>
 
 <!-- medium-image:1*DghweSb87jErBEdkDOrfsA.jpeg alt-decision:meaningful -->
 

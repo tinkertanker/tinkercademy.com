@@ -1,8 +1,9 @@
 ---
 title: "Internship report: Unity forever"
 description: "Internship report: Unity forever"
+slug: internship-report-unity-forever
 legacyPath: unity-forever-b4d13d370775
-canonicalUrl: https://blog.tinkercademy.com/unity-forever-b4d13d370775
+canonicalUrl: https://tinkercademy.com/blog/2020/internship-report-unity-forever/
 sourceMediumUrl: https://medium.com/tinkertanker/unity-forever-b4d13d370775
 author:
   id: 25d6b9d0da4

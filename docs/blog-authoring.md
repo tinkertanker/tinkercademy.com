@@ -1,21 +1,22 @@
 # Build Log authoring
 
-The Build Log is an Astro content collection served at
-`https://blog.tinkercademy.com`. New work is authored in this repository; Medium
-is not a publishing dependency.
+The Build Log is an Astro content collection served under
+`https://tinkercademy.com/blog/`. New work is authored in this repository;
+Medium is not a publishing dependency.
 
 ## Add a story
 
-Create `src/content/blog/authored/<slug>.md`. The filename is for repository
-organisation; `legacyPath` is the public URL segment and must be unique.
+Create `src/content/blog/authored/<slug>.md`. The public URL is
+`/blog/<publication-year>/<slug>/`. Choose the slug once and keep it stable even
+if the headline later changes; the content schema rejects canonical drift.
 
 ```md
 ---
 title: A practical story title
 subtitle: A short optional introduction
 description: A specific search and social description.
-legacyPath: a-practical-story-title
-canonicalUrl: https://blog.tinkercademy.com/a-practical-story-title
+slug: a-practical-story-title
+canonicalUrl: https://tinkercademy.com/blog/2026/a-practical-story-title/
 author:
   id: jane-example
   name: Jane Example

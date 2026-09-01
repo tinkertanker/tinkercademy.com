@@ -2,8 +2,9 @@
 title: Cool Trinkets with Plywood and a Laser Cutter
 subtitle: As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about…
 description: As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about…
+slug: cool-trinkets-with-plywood-and-a-laser-cutter
 legacyPath: cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e
-canonicalUrl: https://blog.tinkercademy.com/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e
+canonicalUrl: https://tinkercademy.com/blog/2020/cool-trinkets-with-plywood-and-a-laser-cutter/
 sourceMediumUrl: https://medium.com/tinkertanker/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e
 author:
   id: 9f7e170c7ded
@@ -43,9 +44,9 @@ migration:
 
 <p><em>Editor’s note: We… forgot to publish this article from Nadya last year (sorry!). Nadya joined us to help with marketing, and ended up learning and doing a lot of digital making with our laser cutter—here’s her story.</em></p>
 
-<p>As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about my experience doing an <a href="https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2">interactive game using the microbit</a>, which also involved the use of the laser cutter for cardboard.) I was intrigued by the paper cutting machine, the shrink-wrap machine, the 3D printer… and even the sticker label machine, but what I ended up going back to most was the laser cutter.</p>
+<p>As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about my experience doing an <a href="https://tinkercademy.com/blog/2019/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house/">interactive game using the microbit</a>, which also involved the use of the laser cutter for cardboard.) I was intrigued by the paper cutting machine, the shrink-wrap machine, the 3D printer… and even the sticker label machine, but what I ended up going back to most was the laser cutter.</p>
 
-<p>The office uses a Full Spectrum laser cutter, which requires the RetinaEngrave driver installed. It accepts svg (scaled vector graphic) files, which I used Adobe Illustrator to convert my files to. You can also <a href="https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb">use Inkscape</a>, a free software, if you don’t have Adobe. (Check out <a href="https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb">Hongyi’s</a> and <a href="https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63">Ruochen’s</a> posts for more laser-cutting related projects.)</p>
+<p>The office uses a Full Spectrum laser cutter, which requires the RetinaEngrave driver installed. It accepts svg (scaled vector graphic) files, which I used Adobe Illustrator to convert my files to. You can also <a href="https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/">use Inkscape</a>, a free software, if you don’t have Adobe. (Check out <a href="https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/">Hongyi’s</a> and <a href="https://tinkercademy.com/blog/2019/from-making-micro-bit-holders-to-becoming-my-own-ikea/">Ruochen’s</a> posts for more laser-cutting related projects.)</p>
 
 <p>The laser cutter offers 2 settings: raster engraving and vector cutting. What’s the difference?</p>
 
@@ -85,7 +86,7 @@ migration:
 
 <p class="medium-image-caption"><em>Not super big, but clear enough. I stuck it on our glass door using Daiso’s transparent adhesive tack.</em></p>
 
-<p>In addition to plywood, I also cut acrylic. In general, the material is thicker and harder to cut through, which means a higher power and lower speed is needed. This <strong>‘launch spaceship’ sign</strong> is from our <a href="https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2">Istana Open House</a> project. The cutting was not ideal either, since the laser did not cut through the material (and we had already moved the acrylic away from its original position). Salvaging the sign took a lot of brute strength and a penknife, as well as a metal file and sandpaper. The transparent/ translucent acrylic sign was to be lit up using an LED strip. You can see it in action <a href="https://www.instagram.com/p/Bw31vdynENP/">here on Instagram</a>, in the video taken during our setup.</p>
+<p>In addition to plywood, I also cut acrylic. In general, the material is thicker and harder to cut through, which means a higher power and lower speed is needed. This <strong>‘launch spaceship’ sign</strong> is from our <a href="https://tinkercademy.com/blog/2019/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house/">Istana Open House</a> project. The cutting was not ideal either, since the laser did not cut through the material (and we had already moved the acrylic away from its original position). Salvaging the sign took a lot of brute strength and a penknife, as well as a metal file and sandpaper. The transparent/ translucent acrylic sign was to be lit up using an LED strip. You can see it in action <a href="https://www.instagram.com/p/Bw31vdynENP/">here on Instagram</a>, in the video taken during our setup.</p>
 
 <!-- medium-image:1*6hCaRqHeT-WnsdejqVm1eA.jpeg alt-decision:meaningful -->
 
@@ -93,4 +94,4 @@ migration:
 
 <p class="medium-image-caption"><em>Acrylic, with protective layer of paper still on.</em></p>
 
-<p>Clearly, I enjoyed my time playing around with the laser cutter, and cutting out all the different versions of the company logos. For more art and craft I did at this edu-tech company (oh the irony), read about <a href="https://blog.tinkercademy.com/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35">my experience with the paper cutter</a> or doing up a kids’ activity booklet.</p>
+<p>Clearly, I enjoyed my time playing around with the laser cutter, and cutting out all the different versions of the company logos. For more art and craft I did at this edu-tech company (oh the irony), read about <a href="https://tinkercademy.com/blog/2019/scanning-and-cutting-to-make-a-diorama/">my experience with the paper cutter</a> or doing up a kids’ activity booklet.</p>

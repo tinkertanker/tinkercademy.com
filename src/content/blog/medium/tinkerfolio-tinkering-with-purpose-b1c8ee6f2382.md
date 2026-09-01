@@ -2,8 +2,9 @@
 title: "Tinkerfolio: Tinkering with Purpose"
 subtitle: This blog is written by Natasha, Sheryl, and Marcus, three inquisitive Year 3 Computing students from the National University of Singapore…
 description: This blog is written by Natasha, Sheryl, and Marcus, three inquisitive Year 3 Computing students from the National University of Singapore…
+slug: tinkerfolio-tinkering-with-purpose
 legacyPath: tinkerfolio-tinkering-with-purpose-b1c8ee6f2382
-canonicalUrl: https://blog.tinkercademy.com/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382
+canonicalUrl: https://tinkercademy.com/blog/2023/tinkerfolio-tinkering-with-purpose/
 sourceMediumUrl: https://medium.com/tinkertanker/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382
 author:
   id: 16c1fdab6742

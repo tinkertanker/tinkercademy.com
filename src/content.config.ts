@@ -39,7 +39,8 @@ const blog = defineCollection({
 		title: z.string().min(1),
 		subtitle: z.string().min(1).optional(),
 		description: z.string().min(1),
-		legacyPath: z.string().regex(/^[^/]+$/, 'Blog story paths must be one segment without slashes'),
+		slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'Blog story slugs use lowercase words separated by hyphens'),
+		legacyPath: z.string().regex(/^[^/]+$/, 'Legacy blog paths must be one segment without slashes').optional(),
 		canonicalUrl: z.url(),
 		sourceMediumUrl: z.url().optional(),
 		author: z.object({
@@ -74,7 +75,8 @@ const blog = defineCollection({
 			altReviewRequired: z.number().int().nonnegative(),
 		}).optional(),
 	}).superRefine((article, context) => {
-		const expectedCanonical = `https://blog.tinkercademy.com/${article.legacyPath}`;
+		const year = article.publishedAt.getUTCFullYear();
+		const expectedCanonical = `https://tinkercademy.com/blog/${year}/${article.slug}/`;
 		if (article.canonicalUrl !== expectedCanonical) {
 			context.addIssue({
 				code: 'custom',

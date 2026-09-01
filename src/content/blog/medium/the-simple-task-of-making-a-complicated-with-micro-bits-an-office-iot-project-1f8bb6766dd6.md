@@ -2,8 +2,9 @@
 title: Smart Office with a Micro:bit Hub
 subtitle: The simple task of making a complicated project with micro:bit
 description: The simple task of making a complicated project with micro:bit
+slug: smart-office-with-a-micro-bit-hub
 legacyPath: the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6
-canonicalUrl: https://blog.tinkercademy.com/the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6
+canonicalUrl: https://tinkercademy.com/blog/2018/smart-office-with-a-micro-bit-hub/
 sourceMediumUrl: https://medium.com/tinkertanker/the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6
 author:
   id: a63e87036a77

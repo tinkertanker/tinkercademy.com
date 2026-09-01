@@ -4,12 +4,14 @@ import path from 'node:path';
 import { load } from 'cheerio';
 
 import {
-	BLOG_ORIGIN,
+	LEGACY_BLOG_ORIGIN,
 	MEDIUM_PUBLICATION_ID,
 	PUBLICATION_LICENSE,
 	buildCanonicalUrl,
+	buildLegacyBlogUrl,
 	buildSourceMediumUrl,
 	sha256,
+	slugifyStoryTitle,
 } from './medium.mjs';
 
 const RSS_SOURCE_URL = 'https://medium.com/feed/tinkertanker';
@@ -189,7 +191,7 @@ export function parseMediumRss(xml, options = {}) {
 		const id = guid.match(/\/p\/([a-f0-9]+)$/u)?.[1];
 		if (!id) throw new Error(`Invalid Medium RSS story GUID: ${guid}`);
 		const link = new URL(item.find('link').first().text().trim());
-		if (link.origin !== BLOG_ORIGIN) throw new Error(`RSS story ${id} has an unexpected origin`);
+		if (link.origin !== LEGACY_BLOG_ORIGIN) throw new Error(`RSS story ${id} has an unexpected origin`);
 		const legacyPath = link.pathname.replace(/^\//u, '').replace(/\/$/u, '');
 		if (!legacyPath.endsWith(id)) throw new Error(`RSS story ${id} has an invalid legacy path`);
 		const sourceCreator = item.find('dc\\:creator').first().text().trim();
@@ -211,13 +213,16 @@ export function parseMediumRss(xml, options = {}) {
 		const words = paragraphs.reduce((total, paragraph) => total + (paragraph.text?.trim().split(/\s+/u).filter(Boolean).length ?? 0), 0);
 		const title = override.title ?? item.find('title').first().text().trim();
 		if (!title.trim()) throw new Error(`RSS story ${id} has an empty title`);
+		const slug = slugifyStoryTitle(title);
 		const sourceItemXml = $.html(element);
 		return {
 			id,
 			title,
 			subtitle: '',
 			legacyPath,
-			canonicalUrl: buildCanonicalUrl(legacyPath),
+			legacyUrl: buildLegacyBlogUrl(legacyPath),
+			slug,
+			canonicalUrl: buildCanonicalUrl(publishedAt, slug),
 			sourceMediumUrl: buildSourceMediumUrl(legacyPath),
 			author: authorFor({ sourceCreator }, override),
 			sourceCreator,

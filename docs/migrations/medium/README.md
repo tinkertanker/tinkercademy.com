@@ -1,7 +1,8 @@
 # Medium Build Log migration
 
 This directory is the reviewable source of truth for moving the public
-Tinkercademy Build Log from Medium while preserving every story URL.
+Tinkercademy Build Log from Medium to `tinkercademy.com/blog/`, with a permanent
+redirect from every historical story URL.
 
 No committed configuration attaches `blog.tinkercademy.com` to the Worker.
 `wrangler.blog-cutover.jsonc` records the approved end-state shape but must not
@@ -39,6 +40,8 @@ cutover until the rights and accessibility holds are resolved.
   SHA-256 hashes, byte counts, animation/frame metadata, captions, source alt,
   and per-placement alt decisions.
 - `embed-manifest.json`: allowlisted provider metadata and all placements.
+- `src/data/blog-legacy-redirects.json`: the generated one-to-one mapping from
+  all 72 historical Medium paths to their apex year-and-slug destinations.
 - `review-decisions.json`: human rights and image accessibility decisions,
   evidence references, reviewer names, timestamps, credits, and internal notes.
 - `src/data/blog-authors.json`: exact public Medium attribution records.
@@ -129,28 +132,34 @@ pnpm run verify:medium -- --dist dist --allow-review-required
 Leave the temporary verifier flag in place until all legitimate holds are
 resolved. The strict command without that flag remains the cutover gate.
 
-## Host-aware output
+## Routes and permanent legacy redirects
 
-Astro builds blog pages into the private static namespace `dist/blog-content/`.
-`worker.mjs` is the only host-routing boundary:
+Astro builds the canonical publication directly under `dist/blog/`:
 
-| Incoming blog URL | Worker asset/action |
+| Canonical URL | Output |
 |---|---|
-| `/` | `/blog-content/` |
-| `/<legacy-slug-and-Medium-ID>` | `/blog-content/<legacy>/` (200; browser URL unchanged) |
-| `/<legacy>/` | 308 to the exact no-trailing-slash story URL |
-| `/archive/<year>/` | `/blog-content/archive/<year>/` |
-| `/feed` and `/feed/` | `/blog-content/feed.xml` |
-| `/sitemap.xml` and `/sitemap/sitemap.xml` | `/blog-content/sitemap.xml` |
-| `/robots.txt` | `/blog-content/robots.txt` |
-| `/all?year=<year>` | 308 to `/archive/<year>/`, preserving other query fields |
-| `/about`, `/followers`, `/tagged/*` | 308 to `/` |
-| `/blog-media/*`, shared fonts/images/icons | existing static asset path |
-| unknown nested path | 404 |
+| `/blog/` | complete story grid and year selector |
+| `/blog/<year>/<clean-slug>/` | story page |
+| `/blog/archive/<year>/` | year archive |
+| `/blog/feed.xml` | latest 20 stories |
+| `/blog/sitemap.xml` | publication root, archives, and all stories |
 
-Requests to `tinkercademy.com/blog-content/*` return 404. The apex sitemap excludes
-the private namespace. The two existing apex `/articles/...` pages and their
-data path are unchanged.
+The story slug is generated from the reviewed headline on first inventory and
+then persisted. A later headline edit does not silently change the permalink.
+The publication year and clean slug are collision-checked across all 72 stories.
+Medium IDs remain in provenance and `legacyPath`, not in canonical URLs.
+
+`worker.mjs` uses `src/data/blog-legacy-redirects.json` when the old host is
+eventually attached. Both trailing-slash forms of every exact historical story
+path receive a 308 to the same apex canonical URL, preserving query strings.
+Legacy root, archive, feed, sitemap, robots, and asset URLs also redirect to
+their apex equivalents. Unknown legacy paths and unknown `/blog/` paths return
+the Build Log 404. Requests to the retired `/blog-content/*` implementation
+namespace return 404.
+
+The dedicated blog sitemap owns `/blog/` URLs, so the general Astro sitemap
+excludes that subtree and root `robots.txt` advertises both sitemap files. The
+two existing apex `/articles/...` pages and their data path are unchanged.
 
 ## Verification gates
 
@@ -164,8 +173,9 @@ pnpm run verify:medium -- --dist dist
 This strict cutover gate passes without a review exception. The verifier checks
 all story/media/embed counts, every local SHA-256, exact
 author/canonical/source metadata, all internal rewrites, all built story files,
-feed/sitemap counts, the apex sitemap boundary, rights notices, and absence of
-remote Medium/Embedly assets, Google tracking redirects, or raw embed scripts.
+all 72 generated legacy redirects, feed/sitemap counts, the sitemap ownership
+boundary, rights notices, and absence of remote Medium/Embedly assets, Google
+tracking redirects, or raw embed scripts.
 
 ## Cutover — not yet authorised
 
@@ -176,7 +186,8 @@ These are later operator steps, not actions performed by this implementation:
 2. Run the strict verifier without exceptions and browser-test representative
    image-heavy, GIF, code, and embed stories through `wrangler dev`.
 3. Commit and push the reviewed implementation; promote its Worker version by
-   the repository's normal `v*` tag workflow. Verify the apex is unchanged.
+   the repository's normal `v*` tag workflow. Verify `/blog/`, representative
+   story URLs, archives, feed, sitemap, and the two unchanged `/articles/` pages.
 4. Capture the live Medium feed, sitemap, publication settings, and analytics
    baseline. Keep the Medium publication and stories intact.
 5. In a user-operated Medium browser session, explicitly remove/disconnect the
@@ -186,16 +197,18 @@ These are later operator steps, not actions performed by this implementation:
    add the custom domain `blog.tinkercademy.com`. Resolve the existing Medium DNS
    record only as part of that approved operation. The desired two-domain
    configuration is recorded in `wrangler.blog-cutover.jsonc`.
-7. Verify root, all 72 exact story URLs, trailing-slash normalization, archives,
-   feed, both sitemap aliases, robots, assets, and unknown 404 behavior. Confirm
-   query strings survive story requests and archive redirects.
-8. Submit `https://blog.tinkercademy.com/sitemap.xml` and update owned links.
-   Medium canonical changes, if desired, must be made by each story author only
-   after the new URL returns 200.
+7. Verify all 72 historical story URLs return one 308 hop to their expected
+   `https://tinkercademy.com/blog/<year>/<clean-slug>/` destination. Verify old
+   root, archives, feed, sitemap aliases, robots, assets, unknown 404 behavior,
+   and query-string preservation.
+8. Submit `https://tinkercademy.com/blog/sitemap.xml`. Medium canonical changes,
+   if desired, must be made by each story author only after the apex URL returns
+   200.
 
 Rollback during launch: remove the Worker custom-domain route and restore the
-recorded Medium DNS/custom-domain state. Because Medium says re-verification can
-take up to three days, also prepare a Cloudflare 302 fallback from
-`blog.tinkercademy.com/<path>` to
+recorded Medium DNS/custom-domain state. The apex `/blog/` copy can remain
+available while DNS rolls back. Because Medium says re-verification can take up
+to three days, also prepare a Cloudflare 302 fallback from each historical
+`blog.tinkercademy.com/<path>` to its original
 `https://medium.com/tinkertanker/<path>` before cutover. Do not delete or edit
 the Medium copies during the rollback window.

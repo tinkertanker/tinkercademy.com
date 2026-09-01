@@ -2,8 +2,9 @@
 title: Coding in The Dark — Pioneering Tools for Blind Programmers
 subtitle: About one in every 100 programmers is blind. How do they read and type code with low or no sight? Read on to find some handy yet fun tools!
 description: About one in every 100 programmers is blind. How do they read and type code with low or no sight? Read on to find some handy yet fun tools!
+slug: coding-in-the-dark-pioneering-tools-for-blind-programmers
 legacyPath: coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16
-canonicalUrl: https://blog.tinkercademy.com/coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16
+canonicalUrl: https://tinkercademy.com/blog/2023/coding-in-the-dark-pioneering-tools-for-blind-programmers/
 sourceMediumUrl: https://medium.com/tinkertanker/coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16
 author:
   id: be2990b8a35

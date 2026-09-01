@@ -2,8 +2,9 @@
 title: Early Childhood Computer Science Education
 subtitle: Observations from Working with Early Childhood Classrooms in the U.S. and Singapore
 description: Observations from Working with Early Childhood Classrooms in the U.S. and Singapore
+slug: early-childhood-computer-science-education
 legacyPath: musings-on-computer-science-education-3140d82a279
-canonicalUrl: https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279
+canonicalUrl: https://tinkercademy.com/blog/2017/early-childhood-computer-science-education/
 sourceMediumUrl: https://medium.com/tinkertanker/musings-on-computer-science-education-3140d82a279
 author:
   id: bbfeeddeacc3

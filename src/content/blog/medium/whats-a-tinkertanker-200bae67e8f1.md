@@ -2,8 +2,9 @@
 title: What’s a Tinkertanker
 subtitle: We started Tinkertanker in 2011, and haven’t written much about the company and what we do. As a result, we now regularly get emails from…
 description: We started Tinkertanker in 2011, and haven’t written much about the company and what we do. As a result, we now regularly get emails from…
+slug: whats-a-tinkertanker
 legacyPath: whats-a-tinkertanker-200bae67e8f1
-canonicalUrl: https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1
+canonicalUrl: https://tinkercademy.com/blog/2017/whats-a-tinkertanker/
 sourceMediumUrl: https://medium.com/tinkertanker/whats-a-tinkertanker-200bae67e8f1
 author:
   id: c212834ca3da

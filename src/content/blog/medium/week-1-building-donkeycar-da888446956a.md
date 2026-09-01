@@ -2,8 +2,9 @@
 title: "Building DonkeyCar: Week 1"
 subtitle: "Editor’s note: Kevin Steven is a Computer Science undergraduate at the Nanyang Technological University (NTU) who interned with us over the…"
 description: "Editor’s note: Kevin Steven is a Computer Science undergraduate at the Nanyang Technological University (NTU) who interned with us over the…"
+slug: building-donkeycar-week-1
 legacyPath: week-1-building-donkeycar-da888446956a
-canonicalUrl: https://blog.tinkercademy.com/week-1-building-donkeycar-da888446956a
+canonicalUrl: https://tinkercademy.com/blog/2018/building-donkeycar-week-1/
 sourceMediumUrl: https://medium.com/tinkertanker/week-1-building-donkeycar-da888446956a
 author:
   id: 74b29ffc4654

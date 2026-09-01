@@ -1,4 +1,3 @@
-// Served as /feed on blog.tinkercademy.com by worker.mjs.
 import rss from '@astrojs/rss';
 
 import { BLOG_DESCRIPTION, BLOG_ORIGIN, BLOG_TITLE, getBlogStories } from '../../lib/blog';
@@ -8,7 +7,7 @@ export async function GET() {
 	return rss({
 		title: BLOG_TITLE,
 		description: BLOG_DESCRIPTION,
-		site: BLOG_ORIGIN,
+		site: `${BLOG_ORIGIN}/`,
 		items: stories.map((story) => ({
 			title: story.data.title,
 			description: story.data.description,

@@ -2,8 +2,9 @@
 title: Interning at a distance
 subtitle: Amelia Chan from CMU shares her remote internship experience.
 description: Amelia Chan from CMU shares her remote internship experience.
+slug: interning-at-a-distance
 legacyPath: interning-at-a-distance-f18a59ebba35
-canonicalUrl: https://blog.tinkercademy.com/interning-at-a-distance-f18a59ebba35
+canonicalUrl: https://tinkercademy.com/blog/2020/interning-at-a-distance/
 sourceMediumUrl: https://medium.com/tinkertanker/interning-at-a-distance-f18a59ebba35
 author:
   id: e21e4ba9db18

@@ -2,8 +2,9 @@
 title: "Tinkertanker Internship: Bowling at Tinkertanker"
 subtitle: "Editor’s note: Mark, a self-starter and aspiring software engineer, joined us over a 12-week period as a teaching and curriculum design…"
 description: "Editor’s note: Mark, a self-starter and aspiring software engineer, joined us over a 12-week period as a teaching and curriculum design…"
+slug: tinkertanker-internship-bowling-at-tinkertanker
 legacyPath: tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403
-canonicalUrl: https://blog.tinkercademy.com/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403
+canonicalUrl: https://tinkercademy.com/blog/2023/tinkertanker-internship-bowling-at-tinkertanker/
 sourceMediumUrl: https://medium.com/tinkertanker/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403
 author:
   id: 3dc8d124c7aa

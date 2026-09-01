@@ -2,8 +2,9 @@
 title: Deep Dive into the I2C OLED
 subtitle: In case you don’t know, the I2C OLED is a small digital display which is useful for electronics projects. I wrote a Micro:Bit library to…
 description: In case you don’t know, the I2C OLED is a small digital display which is useful for electronics projects. I wrote a Micro:Bit library to…
+slug: deep-dive-into-the-i2c-oled
 legacyPath: deep-dive-into-the-i2c-oled-413fee46ada1
-canonicalUrl: https://blog.tinkercademy.com/deep-dive-into-the-i2c-oled-413fee46ada1
+canonicalUrl: https://tinkercademy.com/blog/2019/deep-dive-into-the-i2c-oled/
 sourceMediumUrl: https://medium.com/tinkertanker/deep-dive-into-the-i2c-oled-413fee46ada1
 author:
   id: b2851d2f0e0b

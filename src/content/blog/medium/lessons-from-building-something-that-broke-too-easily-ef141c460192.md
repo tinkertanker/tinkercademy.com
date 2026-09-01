@@ -2,8 +2,9 @@
 title: Lessons from building something that broke too easily
 subtitle: "Intern report: Building a micro:bit Space Shooter arcade game"
 description: "Intern report: Building a micro:bit Space Shooter arcade game"
+slug: lessons-from-building-something-that-broke-too-easily
 legacyPath: lessons-from-building-something-that-broke-too-easily-ef141c460192
-canonicalUrl: https://blog.tinkercademy.com/lessons-from-building-something-that-broke-too-easily-ef141c460192
+canonicalUrl: https://tinkercademy.com/blog/2017/lessons-from-building-something-that-broke-too-easily/
 sourceMediumUrl: https://medium.com/tinkertanker/lessons-from-building-something-that-broke-too-easily-ef141c460192
 author:
   id: 6a8c365fa83c
@@ -43,7 +44,7 @@ migration:
 
 <p><em><a href="http://blog.tinkercademy.com">Editor’s Note</a></em><em>, because your Editor likes making Notes: Joelle interned with us in 2017, and did a variety of projects: teaching classes, writing scripts that improved our productivity a couple thousandfold, making a micro:bit-powered confetti launcher for some reason, and doing R&amp;D on making Scratch work with the micro:bit. Here’s what she made for Maker Faire 2017…</em></p>
 
-<p>Maker Faire 2017 Singapore was a blast! I had so much fun building/crafting/making a cardboard arcade game, as part of <a href="https://blog.tinkercademy.com/making-it-to-maker-faire-singapore-2017-3b89d8165da">Tinkercademy’s Arcade of Many Bits</a>. My contribution was a space-themed shooting arcade, called <em>Space Shooters</em>.</p>
+<p>Maker Faire 2017 Singapore was a blast! I had so much fun building/crafting/making a cardboard arcade game, as part of <a href="https://tinkercademy.com/blog/2017/making-it-to-maker-faire-singapore-2017/">Tinkercademy’s Arcade of Many Bits</a>. My contribution was a space-themed shooting arcade, called <em>Space Shooters</em>.</p>
 
 <p>The game comprises a home-made PVC-pipe gun, which fires off an IR signal to various cardboard aliens. Each of these—the gun, the aliens—is connected to a micro:bit, which drives the various functions (sending IR, receiving IR, as well as various lights and displays).</p>
 

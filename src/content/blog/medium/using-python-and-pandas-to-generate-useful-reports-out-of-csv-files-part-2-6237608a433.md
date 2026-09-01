@@ -2,8 +2,9 @@
 title: Using Python and Pandas to generate useful reports out of CSV files, part 2
 subtitle: "Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post here."
 description: "Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post here."
+slug: using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2
 legacyPath: using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433
-canonicalUrl: https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433
+canonicalUrl: https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2/
 sourceMediumUrl: https://medium.com/tinkertanker/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433
 author:
   id: 444f1363f2e7
@@ -41,7 +42,7 @@ migration:
   altReviewRequired: 0
 ---
 
-<p><em>Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post </em><em><a href="https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382">here</a></em><em>.</em></p>
+<p><em>Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post </em><em><a href="https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/">here</a></em><em>.</em></p>
 
 <!-- medium-image:1*u1uv_VXeIXWsOSgJWCtjvg.png alt-decision:decorative -->
 

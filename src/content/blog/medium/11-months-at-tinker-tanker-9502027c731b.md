@@ -2,8 +2,9 @@
 title: 11 Months Interning at Tinkertanker
 subtitle: by Daniel Shepherd from New Zealand
 description: by Daniel Shepherd from New Zealand
+slug: 11-months-interning-at-tinkertanker
 legacyPath: 11-months-at-tinker-tanker-9502027c731b
-canonicalUrl: https://blog.tinkercademy.com/11-months-at-tinker-tanker-9502027c731b
+canonicalUrl: https://tinkercademy.com/blog/2019/11-months-interning-at-tinkertanker/
 sourceMediumUrl: https://medium.com/tinkertanker/11-months-at-tinker-tanker-9502027c731b
 author:
   id: e90f8d566e75
@@ -59,7 +60,7 @@ migration:
 
 <h2>Digital Maker Competition</h2>
 
-<p>We ran a competition with schools in Singapore to design and build controllers, using <a href="http://microbit.org">micro:bit</a>s, for a game built in Unity and based off Unity’s “Tanks Tutorial” that we called Tank Tinkerer. (More on the game and competition in <a href="https://blog.tinkercademy.com/tank-tinkerer-a-micro-bit-competition-9302dff1f136">this blog post</a>.)</p>
+<p>We ran a competition with schools in Singapore to design and build controllers, using <a href="http://microbit.org">micro:bit</a>s, for a game built in Unity and based off Unity’s “Tanks Tutorial” that we called Tank Tinkerer. (More on the game and competition in <a href="https://tinkercademy.com/blog/2018/tank-tinkerer-a-micro-bit-competition/">this blog post</a>.)</p>
 
 <!-- medium-image:1*8A3f2yYM28BETmS-j-X0pw.png alt-decision:meaningful -->
 

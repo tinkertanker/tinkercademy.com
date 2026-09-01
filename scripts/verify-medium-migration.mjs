@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { load } from 'cheerio';
 import YAML from 'yaml';
 
+import { BLOG_ORIGIN, buildCanonicalUrl } from './lib/medium.mjs';
 import { placementKey, validateReviewDecisions } from './lib/medium-review.mjs';
 import { readMediumRssStoryCache } from './lib/medium-rss.mjs';
 
@@ -17,13 +18,13 @@ const INVENTORY_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'inventor
 const MEDIA_MANIFEST_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'media-manifest.json');
 const EMBED_MANIFEST_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'embed-manifest.json');
 const REVIEW_DECISIONS_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'review-decisions.json');
+const LEGACY_REDIRECTS_PATH = path.join(ROOT, 'src', 'data', 'blog-legacy-redirects.json');
 const RAW_STORIES_DIR = path.join(ROOT, 'scripts', '_artifacts', 'medium', 'raw', 'stories');
 const RSS_CACHE_PATH = path.join(ROOT, 'scripts', '_artifacts', 'medium', 'raw', 'rss', 'publication.xml');
 const RSS_STORIES_DIR = path.join(ROOT, 'scripts', '_artifacts', 'medium', 'raw', 'rss', 'stories');
 const RSS_OVERRIDES_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'rss-source-overrides.json');
 const CONTENT_DIR = path.join(ROOT, 'src', 'content', 'blog', 'medium');
 const PUBLIC_DIR = path.join(ROOT, 'public');
-const BLOG_ORIGIN = 'https://blog.tinkercademy.com';
 const REMOTE_ASSET_PATTERN = /(?:miro\.medium\.com|cdn-images-\d+\.medium\.com|i\.embed\.ly|cdn\.embedly\.com)/iu;
 const TRACKING_REDIRECT_PATTERN = /https?:\/\/(?:[^/]+\.)?google\.com\/url\?/iu;
 
@@ -118,6 +119,7 @@ async function verifySource(options) {
 	const inventory = await readJson(INVENTORY_PATH);
 	const mediaManifest = await readJson(MEDIA_MANIFEST_PATH);
 	const embedManifest = await readJson(EMBED_MANIFEST_PATH);
+	const legacyRedirects = await readJson(LEGACY_REDIRECTS_PATH);
 	const reviewDecisions = validateReviewDecisions(await readJson(REVIEW_DECISIONS_PATH));
 	const contentNames = (await readdir(CONTENT_DIR)).filter((name) => /\.mdx?$/u.test(name)).sort();
 	const contentByPath = new Map();
@@ -139,6 +141,7 @@ async function verifySource(options) {
 	expect(mediaManifest.summary.placements === inventory.summary.imagePlacements, `Expected ${inventory.summary.imagePlacements} asset placements; found ${mediaManifest.summary.placements}`, errors);
 	expect(embedManifest.resources.length === inventory.summary.uniqueEmbeds, `Expected ${inventory.summary.uniqueEmbeds} embed resources; found ${embedManifest.resources.length}`, errors);
 	expect(embedManifest.placements.length === inventory.summary.embedPlacements, `Expected ${inventory.summary.embedPlacements} embed placements; found ${embedManifest.placements.length}`, errors);
+	expect(Object.keys(legacyRedirects.redirects ?? {}).length === inventory.summary.stories, `Expected ${inventory.summary.stories} legacy redirects`, errors);
 	for (const legacyPath of Object.keys(reviewDecisions.rights)) {
 		expect(inventoryPaths.has(legacyPath), `Rights review contains unknown story ${legacyPath}`, errors);
 	}
@@ -162,8 +165,11 @@ async function verifySource(options) {
 		expect(Boolean(content), `Missing content file for ${story.legacyPath}`, errors);
 		if (!content) continue;
 		const { data, body } = content;
-		expect(data.canonicalUrl === `${BLOG_ORIGIN}/${story.legacyPath}`, `Wrong canonical for ${story.legacyPath}`, errors);
+		expect(data.slug === story.slug, `Slug drift for ${story.legacyPath}`, errors);
+		expect(data.legacyPath === story.legacyPath, `Legacy path drift for ${story.legacyPath}`, errors);
+		expect(data.canonicalUrl === buildCanonicalUrl(story.publishedAt, story.slug), `Wrong canonical for ${story.legacyPath}`, errors);
 		expect(data.canonicalUrl === story.canonicalUrl, `Canonical drift for ${story.legacyPath}`, errors);
+		expect(legacyRedirects.redirects?.[story.legacyPath] === new URL(story.canonicalUrl).pathname, `Legacy redirect drift for ${story.legacyPath}`, errors);
 		expect(data.sourceMediumUrl === story.sourceMediumUrl, `Medium source URL drift for ${story.legacyPath}`, errors);
 		expect(data.author?.id === story.author.id && data.author?.name === story.author.name, `Author drift for ${story.legacyPath}`, errors);
 		expect(data.title === story.title && (data.subtitle || '') === story.subtitle, `Title or subtitle drift for ${story.legacyPath}`, errors);
@@ -302,7 +308,7 @@ async function verifyDist(dist, inventory, errors) {
 	let safeLinksVerified = 0;
 	for (const story of inventory.stories) {
 		const storyErrorStart = errors.length;
-		const file = path.join(dist, 'blog-content', story.legacyPath, 'index.html');
+		const file = path.join(dist, 'blog', story.publishedAt.slice(0, 4), story.slug, 'index.html');
 		let checkedTextParagraphs = 0;
 		let unsafeLinks = 0;
 		try {
@@ -398,24 +404,24 @@ async function verifyDist(dist, inventory, errors) {
 		});
 	}
 
-	const homepage = await readFile(path.join(dist, 'blog-content', 'index.html'), 'utf8');
+	const homepage = await readFile(path.join(dist, 'blog', 'index.html'), 'utf8');
 	const $homepage = load(homepage);
 	expect($homepage('.story-card').length === inventory.summary.stories, `Built blog homepage does not list all ${inventory.summary.stories} stories`, errors);
 	for (const story of inventory.stories) {
-		expect($homepage(`.story-card[href="${story.canonicalUrl}"]`).length === 1, `Blog homepage missing or duplicates ${story.legacyPath}`, errors);
+		expect($homepage(`.story-card[href="${new URL(story.canonicalUrl).pathname}"]`).length === 1, `Blog homepage missing or duplicates ${story.legacyPath}`, errors);
 	}
 	expect($homepage('nav[aria-label="Build Log"]').length === 1, 'Built blog homepage is missing the Build Log menu', errors);
-	const sitemap = await readFile(path.join(dist, 'blog-content', 'sitemap.xml'), 'utf8');
+	const sitemap = await readFile(path.join(dist, 'blog', 'sitemap.xml'), 'utf8');
 	const archiveYears = new Set(inventory.stories.map(({ publishedAt }) => new Date(publishedAt).getUTCFullYear()));
 	const expectedSitemapEntries = 1 + archiveYears.size + inventory.summary.stories;
 	expect(countMatches(sitemap, /<url>/gu) === expectedSitemapEntries, `Blog sitemap must contain root, ${archiveYears.size} archives, and ${inventory.summary.stories} stories`, errors);
 	for (const story of inventory.stories) {
 		expect(countMatches(sitemap, new RegExp(`<loc>${story.canonicalUrl.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&')}</loc>`, 'gu')) === 1, `Blog sitemap missing or duplicates ${story.legacyPath}`, errors);
 	}
-	const feed = await readFile(path.join(dist, 'blog-content', 'feed.xml'), 'utf8');
+	const feed = await readFile(path.join(dist, 'blog', 'feed.xml'), 'utf8');
 	expect(countMatches(feed, /<item>/gu) === 20, 'Blog feed must contain the latest 20 stories', errors);
 	const apexSitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-	expect(!apexSitemap.includes('/blog-content/'), 'Apex sitemap exposes the hidden blog namespace', errors);
+	expect(!apexSitemap.includes('/blog/'), 'Apex sitemap duplicates URLs owned by the dedicated blog sitemap', errors);
 
 	return {
 		version: 1,

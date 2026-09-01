@@ -1,4 +1,3 @@
-// Served as /sitemap.xml on blog.tinkercademy.com by worker.mjs.
 import { BLOG_ORIGIN, getBlogStories, getBlogYears } from '../../lib/blog';
 
 function xmlEscape(value: string): string {

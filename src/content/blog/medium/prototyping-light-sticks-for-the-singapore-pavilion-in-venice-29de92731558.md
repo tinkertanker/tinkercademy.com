@@ -2,8 +2,9 @@
 title: "Viennale Annals III: Prototyping Light Sticks"
 subtitle: "Editor’s note: Read Part 1 and Part 2 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…"
 description: "Editor’s note: Read Part 1 and Part 2 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…"
+slug: viennale-annals-iii-prototyping-light-sticks
 legacyPath: prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558
-canonicalUrl: https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558
+canonicalUrl: https://tinkercademy.com/blog/2018/viennale-annals-iii-prototyping-light-sticks/
 sourceMediumUrl: https://medium.com/tinkertanker/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558
 author:
   id: e3592718b554
@@ -41,7 +42,7 @@ migration:
   altReviewRequired: 0
 ---
 
-<p><em><strong>Editor’s note</strong></em><em>: Read </em><em><a href="https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015">Part 1</a></em><em> and </em><em><a href="https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb">Part 2</a></em><em> first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale, </em><em><a href="http://nomorefreespace.com">No More Free Space</a></em><em>, a project we undertook in collaboration with the Singapore University of Technology &amp; Design.</em></p>
+<p><em><strong>Editor’s note</strong></em><em>: Read </em><em><a href="https://tinkercademy.com/blog/2018/viennale-annals-i/">Part 1</a></em><em> and </em><em><a href="https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/">Part 2</a></em><em> first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale, </em><em><a href="http://nomorefreespace.com">No More Free Space</a></em><em>, a project we undertook in collaboration with the Singapore University of Technology &amp; Design.</em></p>
 
 <p><em>Also editor’s note: Taking over on this story is Melvin, a brilliant young intern who’s starting out at the Nanyang Technological University in the fall of 2018. Read more on what he did for this project:</em></p>
 
@@ -88,4 +89,4 @@ migration:
 
 <p class="medium-image-caption"><em>“Prototype” light stick with an external battery case. Not my finest work…</em></p>
 
-<p>Since it was much easier to manufacture, we could make multiple sticks to test if the lights “followed” the user, the critical function we needed to test anyway. After which, I switched to developing the light panels while the light sticks would be completed by Sarah and Steven (Spoiler alert: it turned out awesome in the end — read about it in the <a href="https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7">next post</a>!).</p>
+<p>Since it was much easier to manufacture, we could make multiple sticks to test if the lights “followed” the user, the critical function we needed to test anyway. After which, I switched to developing the light panels while the light sticks would be completed by Sarah and Steven (Spoiler alert: it turned out awesome in the end — read about it in the <a href="https://tinkercademy.com/blog/2018/viennale-annals-iv-in-depth-light-remote-electronics/">next post</a>!).</p>

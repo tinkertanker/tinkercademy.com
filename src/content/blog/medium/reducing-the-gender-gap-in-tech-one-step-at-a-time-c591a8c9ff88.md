@@ -2,8 +2,9 @@
 title: Reducing the Gender Gap in Tech, One Step At a Time
 subtitle: The gender gap in tech is narrowing, but not nearly as fast as it should be. Read on to see how Lenovo SG tackles this troubling imbalance.
 description: The gender gap in tech is narrowing, but not nearly as fast as it should be. Read on to see how Lenovo SG tackles this troubling imbalance.
+slug: reducing-the-gender-gap-in-tech-one-step-at-a-time
 legacyPath: reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88
-canonicalUrl: https://blog.tinkercademy.com/reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88
+canonicalUrl: https://tinkercademy.com/blog/2023/reducing-the-gender-gap-in-tech-one-step-at-a-time/
 sourceMediumUrl: https://medium.com/tinkertanker/reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88
 author:
   id: be2990b8a35

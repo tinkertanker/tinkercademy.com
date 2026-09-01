@@ -2,8 +2,9 @@
 title: A Step-by-Step Guide to Building Personalised AR Experiences
 subtitle: Step aside, ChatGPT, there’s a new player in town, and it’s about to propel us light-years ahead, blurring the lines between the real and…
 description: Step aside, ChatGPT, there’s a new player in town, and it’s about to propel us light-years ahead, blurring the lines between the real and…
+slug: a-step-by-step-guide-to-building-personalised-ar-experiences
 legacyPath: a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4
-canonicalUrl: https://blog.tinkercademy.com/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4
+canonicalUrl: https://tinkercademy.com/blog/2023/a-step-by-step-guide-to-building-personalised-ar-experiences/
 sourceMediumUrl: https://medium.com/tinkertanker/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4
 author:
   id: be2990b8a35

@@ -1,5 +1,5 @@
 ---
-import { BLOG_TITLE, blogHref } from '../../lib/blog';
+import { BLOG_FEED_URL, BLOG_TITLE, blogHref } from '../../lib/blog';
 
 const { active = null } = Astro.props as { active?: 'stories' | 'archives' | null };
 ---
@@ -10,7 +10,7 @@ const { active = null } = Astro.props as { active?: 'stories' | 'archives' | nul
 		<div class="blog-nav__links">
 			<a href={blogHref('/')} aria-current={active === 'stories' ? 'page' : undefined}>All stories</a>
 			<a href={blogHref('/#archives')} aria-current={active === 'archives' ? 'page' : undefined}>Archives</a>
-			<a href={blogHref('/feed')}>RSS</a>
+			<a href={BLOG_FEED_URL}>RSS</a>
 		</div>
 	</div>
 </nav>

@@ -26,7 +26,7 @@
   {
     "id": "blog",
     "platform": "blog",
-    "label": "blog.tinkercademy.com",
-    "url": "https://blog.tinkercademy.com/"
+    "label": "tinkercademy.com/blog",
+    "url": "https://tinkercademy.com/blog/"
   }
 ]

@@ -2,8 +2,9 @@
 title: "Internship Reflection: A dive into many new things"
 subtitle: "Editor’s note: Enric Tan is currently pursuing a Computer Science degree at the Nanyang Technological University (NTU). He interned with us…"
 description: "Editor’s note: Enric Tan is currently pursuing a Computer Science degree at the Nanyang Technological University (NTU). He interned with us…"
+slug: internship-reflection-a-dive-into-many-new-things
 legacyPath: internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c
-canonicalUrl: https://blog.tinkercademy.com/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c
+canonicalUrl: https://tinkercademy.com/blog/2023/internship-reflection-a-dive-into-many-new-things/
 sourceMediumUrl: https://medium.com/tinkertanker/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c
 author:
   id: 4968d6c44279

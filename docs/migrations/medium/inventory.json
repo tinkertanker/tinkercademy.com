@@ -27,9 +27,11 @@
     {
       "id": "200bae67e8f1",
       "legacyPath": "whats-a-tinkertanker-200bae67e8f1",
+      "legacyUrl": "https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1",
+      "slug": "whats-a-tinkertanker",
       "title": "What’s a Tinkertanker",
       "subtitle": "We started Tinkertanker in 2011, and haven’t written much about the company and what we do. As a result, we now regularly get emails from…",
-      "canonicalUrl": "https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/whats-a-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/whats-a-tinkertanker-200bae67e8f1",
       "author": {
         "id": "c212834ca3da",
@@ -135,9 +137,11 @@
     {
       "id": "998927090ddc",
       "legacyPath": "digital-maker-programme-998927090ddc",
+      "legacyUrl": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc",
+      "slug": "getting-singapore-making-with-the-micro-bit",
       "title": "Getting Singapore making with the micro:bit",
       "subtitle": "Behind the scenes of the Digital Maker Programme",
-      "canonicalUrl": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/getting-singapore-making-with-the-micro-bit/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/digital-maker-programme-998927090ddc",
       "author": {
         "id": "c212834ca3da",
@@ -318,7 +322,7 @@
         {
           "paragraph": 17,
           "sourceHref": "https://encrypted.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjty_2P-tbUAhUXR48KHdVdAh4QFgglMAA&url=https%3A%2F%2Fmedium.com%2Ftinkertanker%2Fwhats-a-tinkertanker-200bae67e8f1&usg=AFQjCNHS7aqLIG5PVyxF5SZsw5beuHt57g",
-          "href": "https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1",
+          "href": "https://tinkercademy.com/blog/2017/whats-a-tinkertanker/",
           "internalStoryId": "200bae67e8f1"
         },
         {
@@ -332,9 +336,11 @@
     {
       "id": "596469f1b20f",
       "legacyPath": "hello-singapore-596469f1b20f",
+      "legacyUrl": "https://blog.tinkercademy.com/hello-singapore-596469f1b20f",
+      "slug": "hello-singapore",
       "title": "Hello Singapore",
       "subtitle": "Rambling Into The Next Adventure",
-      "canonicalUrl": "https://blog.tinkercademy.com/hello-singapore-596469f1b20f",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/hello-singapore/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/hello-singapore-596469f1b20f",
       "author": {
         "id": "bbfeeddeacc3",
@@ -423,9 +429,11 @@
     {
       "id": "745b4785c81a",
       "legacyPath": "my-summer-internship-at-tinker-tanker-745b4785c81a",
+      "legacyUrl": "https://blog.tinkercademy.com/my-summer-internship-at-tinker-tanker-745b4785c81a",
+      "slug": "chattering-in-the-classroom",
       "title": "Chattering in the Classroom",
       "subtitle": "Intern report: Building an in-class chat app for Tinkercademy",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-summer-internship-at-tinker-tanker-745b4785c81a",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/chattering-in-the-classroom/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-at-tinker-tanker-745b4785c81a",
       "author": {
         "id": "b8f07f459eb1",
@@ -540,9 +548,11 @@
     {
       "id": "3140d82a279",
       "legacyPath": "musings-on-computer-science-education-3140d82a279",
+      "legacyUrl": "https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279",
+      "slug": "early-childhood-computer-science-education",
       "title": "Early Childhood Computer Science Education",
       "subtitle": "Observations from Working with Early Childhood Classrooms in the U.S. and Singapore",
-      "canonicalUrl": "https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/early-childhood-computer-science-education/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/musings-on-computer-science-education-3140d82a279",
       "author": {
         "id": "bbfeeddeacc3",
@@ -641,9 +651,11 @@
     {
       "id": "3b89d8165da",
       "legacyPath": "making-it-to-maker-faire-singapore-2017-3b89d8165da",
+      "legacyUrl": "https://blog.tinkercademy.com/making-it-to-maker-faire-singapore-2017-3b89d8165da",
+      "slug": "making-it-to-maker-faire-singapore-2017",
       "title": "Making it to Maker Faire Singapore 2017",
       "subtitle": "It’s already two months after Maker Faire, and we’re finally ready to talk about it! Perhaps it took us this long to recover from the…",
-      "canonicalUrl": "https://blog.tinkercademy.com/making-it-to-maker-faire-singapore-2017-3b89d8165da",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/making-it-to-maker-faire-singapore-2017/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/making-it-to-maker-faire-singapore-2017-3b89d8165da",
       "author": {
         "id": "8a14237911ae",
@@ -866,9 +878,11 @@
     {
       "id": "60ad61677c9f",
       "legacyPath": "building-at-android-application-internship-at-tinkertanker-60ad61677c9f",
+      "legacyUrl": "https://blog.tinkercademy.com/building-at-android-application-internship-at-tinkertanker-60ad61677c9f",
+      "slug": "building-the-get-hacking-android-app",
       "title": "Building the Get Hacking Android app",
       "subtitle": "Intern report: Building Tinkertanker’s first Android app",
-      "canonicalUrl": "https://blog.tinkercademy.com/building-at-android-application-internship-at-tinkertanker-60ad61677c9f",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/building-the-get-hacking-android-app/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/building-at-android-application-internship-at-tinkertanker-60ad61677c9f",
       "author": {
         "id": "ce4862734951",
@@ -968,9 +982,11 @@
     {
       "id": "ef141c460192",
       "legacyPath": "lessons-from-building-something-that-broke-too-easily-ef141c460192",
+      "legacyUrl": "https://blog.tinkercademy.com/lessons-from-building-something-that-broke-too-easily-ef141c460192",
+      "slug": "lessons-from-building-something-that-broke-too-easily",
       "title": "Lessons from building something that broke too easily",
       "subtitle": "Intern report: Building a micro:bit Space Shooter arcade game",
-      "canonicalUrl": "https://blog.tinkercademy.com/lessons-from-building-something-that-broke-too-easily-ef141c460192",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/lessons-from-building-something-that-broke-too-easily/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/lessons-from-building-something-that-broke-too-easily-ef141c460192",
       "author": {
         "id": "6a8c365fa83c",
@@ -1053,7 +1069,7 @@
         {
           "paragraph": 3,
           "sourceHref": "https://blog.tinkercademy.com/making-it-to-maker-faire-singapore-2017-3b89d8165da?source=collection_home---2------0----------------",
-          "href": "https://blog.tinkercademy.com/making-it-to-maker-faire-singapore-2017-3b89d8165da",
+          "href": "https://tinkercademy.com/blog/2017/making-it-to-maker-faire-singapore-2017/",
           "internalStoryId": "3b89d8165da"
         },
         {
@@ -1067,9 +1083,11 @@
     {
       "id": "51170d4aeefb",
       "legacyPath": "bringing-a-ux-perspective-to-marketing-51170d4aeefb",
+      "legacyUrl": "https://blog.tinkercademy.com/bringing-a-ux-perspective-to-marketing-51170d4aeefb",
+      "slug": "bringing-a-ux-perspective-to-marketing",
       "title": "Bringing a UX Perspective to Marketing",
       "subtitle": "Learnings From 2 Months Into My Job at Tinkertanker",
-      "canonicalUrl": "https://blog.tinkercademy.com/bringing-a-ux-perspective-to-marketing-51170d4aeefb",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/bringing-a-ux-perspective-to-marketing/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/bringing-a-ux-perspective-to-marketing-51170d4aeefb",
       "author": {
         "id": "bbfeeddeacc3",
@@ -1125,9 +1143,11 @@
     {
       "id": "d9b0f049639a",
       "legacyPath": "iot-iteration-d9b0f049639a",
+      "legacyUrl": "https://blog.tinkercademy.com/iot-iteration-d9b0f049639a",
+      "slug": "designing-and-iterating-an-iot-workshop",
       "title": "Designing and iterating an IoT workshop",
       "subtitle": "An introduction to one of our most intricate workshops for corporate techies",
-      "canonicalUrl": "https://blog.tinkercademy.com/iot-iteration-d9b0f049639a",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/designing-and-iterating-an-iot-workshop/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/iot-iteration-d9b0f049639a",
       "author": {
         "id": "e6ed374dd29c",
@@ -1382,7 +1402,7 @@
         {
           "paragraph": 15,
           "sourceHref": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc?source=collection_home---4------8----------------",
-          "href": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc",
+          "href": "https://tinkercademy.com/blog/2017/getting-singapore-making-with-the-micro-bit/",
           "internalStoryId": "998927090ddc"
         },
         {
@@ -1426,9 +1446,11 @@
     {
       "id": "bcf644a188d8",
       "legacyPath": "learning-about-education-and-tech-in-singapore-bcf644a188d8",
+      "legacyUrl": "https://blog.tinkercademy.com/learning-about-education-and-tech-in-singapore-bcf644a188d8",
+      "slug": "learning-about-education-and-tech-in-singapore",
       "title": "Learning About Education and Tech in Singapore",
       "subtitle": "Attending the Early Childhood Conference and a Digital Marketing Workshop",
-      "canonicalUrl": "https://blog.tinkercademy.com/learning-about-education-and-tech-in-singapore-bcf644a188d8",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/learning-about-education-and-tech-in-singapore/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/learning-about-education-and-tech-in-singapore-bcf644a188d8",
       "author": {
         "id": "bbfeeddeacc3",
@@ -1519,7 +1541,7 @@
         {
           "paragraph": 6,
           "sourceHref": "https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279",
-          "href": "https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279",
+          "href": "https://tinkercademy.com/blog/2017/early-childhood-computer-science-education/",
           "internalStoryId": "3140d82a279"
         },
         {
@@ -1545,9 +1567,11 @@
     {
       "id": "9bd92cc92982",
       "legacyPath": "learning-from-teaching-9bd92cc92982",
+      "legacyUrl": "https://blog.tinkercademy.com/learning-from-teaching-9bd92cc92982",
+      "slug": "learning-from-teaching",
       "title": "Learning From Teaching",
       "subtitle": "Intern report: Marketing for littleBits",
-      "canonicalUrl": "https://blog.tinkercademy.com/learning-from-teaching-9bd92cc92982",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/learning-from-teaching/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/learning-from-teaching-9bd92cc92982",
       "author": {
         "id": "abec9222e85d",
@@ -1646,9 +1670,11 @@
     {
       "id": "37484e189112",
       "legacyPath": "the-bittersweet-end-of-a-great-adventure-37484e189112",
+      "legacyUrl": "https://blog.tinkercademy.com/the-bittersweet-end-of-a-great-adventure-37484e189112",
+      "slug": "the-bittersweet-end-of-a-great-adventure",
       "title": "The Bittersweet End of a Great Adventure",
       "subtitle": "Reflections on Working in Singapore",
-      "canonicalUrl": "https://blog.tinkercademy.com/the-bittersweet-end-of-a-great-adventure-37484e189112",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/the-bittersweet-end-of-a-great-adventure/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/the-bittersweet-end-of-a-great-adventure-37484e189112",
       "author": {
         "id": "bbfeeddeacc3",
@@ -1757,9 +1783,11 @@
     {
       "id": "d712aaceb09d",
       "legacyPath": "interning-at-tinkertanker-d712aaceb09d",
+      "legacyUrl": "https://blog.tinkercademy.com/interning-at-tinkertanker-d712aaceb09d",
+      "slug": "interning-at-tinkertanker",
       "title": "Interning at Tinkertanker",
       "subtitle": "An info packet for 2017–2018",
-      "canonicalUrl": "https://blog.tinkercademy.com/interning-at-tinkertanker-d712aaceb09d",
+      "canonicalUrl": "https://tinkercademy.com/blog/2017/interning-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/interning-at-tinkertanker-d712aaceb09d",
       "author": {
         "id": "c212834ca3da",
@@ -1902,9 +1930,11 @@
     {
       "id": "9302dff1f136",
       "legacyPath": "tank-tinkerer-a-micro-bit-competition-9302dff1f136",
+      "legacyUrl": "https://blog.tinkercademy.com/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
+      "slug": "tank-tinkerer-a-micro-bit-competition",
       "title": "Tank Tinkerer: A Micro:bit Competition",
       "subtitle": "National Infocomm Digital Making Challenge 2018 (Senior Category)",
-      "canonicalUrl": "https://blog.tinkercademy.com/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/tank-tinkerer-a-micro-bit-competition/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
       "author": {
         "id": "c212834ca3da",
@@ -2016,7 +2046,7 @@
         {
           "paragraph": 5,
           "sourceHref": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc?source=collection_home---4------13----------------",
-          "href": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc",
+          "href": "https://tinkercademy.com/blog/2017/getting-singapore-making-with-the-micro-bit/",
           "internalStoryId": "998927090ddc"
         },
         {
@@ -2114,9 +2144,11 @@
     {
       "id": "fdcbe7a89015",
       "legacyPath": "viennale-annals-i-fdcbe7a89015",
+      "legacyUrl": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
+      "slug": "viennale-annals-i",
       "title": "Viennale Annals I",
       "subtitle": "Journey to the Venice Biennale, representing Singapore in the best light possible.",
-      "canonicalUrl": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-i/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/viennale-annals-i-fdcbe7a89015",
       "author": {
         "id": "8a14237911ae",
@@ -2219,9 +2251,11 @@
     {
       "id": "76e66944bcdb",
       "legacyPath": "viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
+      "legacyUrl": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
+      "slug": "viennale-annals-ii-light-sticks-for-days",
       "title": "Viennale Annals II: Light Sticks for Days",
       "subtitle": "Part 2 of our journey to the Venice Biennale. Read Part 1 first to avoid spoilers.",
-      "canonicalUrl": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
       "author": {
         "id": "8a14237911ae",
@@ -2339,7 +2373,7 @@
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
-          "href": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-i/",
           "internalStoryId": "fdcbe7a89015"
         },
         {
@@ -2365,9 +2399,11 @@
     {
       "id": "da888446956a",
       "legacyPath": "week-1-building-donkeycar-da888446956a",
+      "legacyUrl": "https://blog.tinkercademy.com/week-1-building-donkeycar-da888446956a",
+      "slug": "building-donkeycar-week-1",
       "title": "Building DonkeyCar: Week 1",
       "subtitle": "Editor’s note: Kevin Steven is a Computer Science undergraduate at the Nanyang Technological University (NTU) who interned with us over the…",
-      "canonicalUrl": "https://blog.tinkercademy.com/week-1-building-donkeycar-da888446956a",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/building-donkeycar-week-1/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/week-1-building-donkeycar-da888446956a",
       "author": {
         "id": "74b29ffc4654",
@@ -2516,9 +2552,11 @@
     {
       "id": "29de92731558",
       "legacyPath": "prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
+      "legacyUrl": "https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
+      "slug": "viennale-annals-iii-prototyping-light-sticks",
       "title": "Viennale Annals III: Prototyping Light Sticks",
       "subtitle": "Editor’s note: Read Part 1 and Part 2 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…",
-      "canonicalUrl": "https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-iii-prototyping-light-sticks/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
       "author": {
         "id": "e3592718b554",
@@ -2599,13 +2637,13 @@
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015?source=collection_home---4------1----------------",
-          "href": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-i/",
           "internalStoryId": "fdcbe7a89015"
         },
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
-          "href": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/",
           "internalStoryId": "76e66944bcdb"
         },
         {
@@ -2629,7 +2667,7 @@
         {
           "paragraph": 18,
           "sourceHref": "https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
-          "href": "https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-iv-in-depth-light-remote-electronics/",
           "internalStoryId": "a6b721038fe7"
         }
       ]
@@ -2637,9 +2675,11 @@
     {
       "id": "a6b721038fe7",
       "legacyPath": "viennale-annals-iv-light-panel-electronics-a6b721038fe7",
+      "legacyUrl": "https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
+      "slug": "viennale-annals-iv-in-depth-light-remote-electronics",
       "title": "Viennale Annals IV: In-Depth Light Remote Electronics",
       "subtitle": "Editor’s note: Read Parts 1, 2, and 3 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…",
-      "canonicalUrl": "https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-iv-in-depth-light-remote-electronics/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
       "author": {
         "id": "e3592718b554",
@@ -2839,19 +2879,19 @@
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
-          "href": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-i/",
           "internalStoryId": "fdcbe7a89015"
         },
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
-          "href": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/",
           "internalStoryId": "76e66944bcdb"
         },
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
-          "href": "https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
+          "href": "https://tinkercademy.com/blog/2018/viennale-annals-iii-prototyping-light-sticks/",
           "internalStoryId": "29de92731558"
         },
         {
@@ -2895,9 +2935,11 @@
     {
       "id": "1f8bb6766dd6",
       "legacyPath": "the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6",
+      "legacyUrl": "https://blog.tinkercademy.com/the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6",
+      "slug": "smart-office-with-a-micro-bit-hub",
       "title": "Smart Office with a Micro:bit Hub",
       "subtitle": "The simple task of making a complicated project with micro:bit",
-      "canonicalUrl": "https://blog.tinkercademy.com/the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6",
+      "canonicalUrl": "https://tinkercademy.com/blog/2018/smart-office-with-a-micro-bit-hub/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/the-simple-task-of-making-a-complicated-with-micro-bits-an-office-iot-project-1f8bb6766dd6",
       "author": {
         "id": "a63e87036a77",
@@ -3041,9 +3083,11 @@
     {
       "id": "9502027c731b",
       "legacyPath": "11-months-at-tinker-tanker-9502027c731b",
+      "legacyUrl": "https://blog.tinkercademy.com/11-months-at-tinker-tanker-9502027c731b",
+      "slug": "11-months-interning-at-tinkertanker",
       "title": "11 Months Interning at Tinkertanker",
       "subtitle": "by Daniel Shepherd from New Zealand",
-      "canonicalUrl": "https://blog.tinkercademy.com/11-months-at-tinker-tanker-9502027c731b",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/11-months-interning-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/11-months-at-tinker-tanker-9502027c731b",
       "author": {
         "id": "e90f8d566e75",
@@ -3142,7 +3186,7 @@
         {
           "paragraph": 9,
           "sourceHref": "https://blog.tinkercademy.com/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
-          "href": "https://blog.tinkercademy.com/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
+          "href": "https://tinkercademy.com/blog/2018/tank-tinkerer-a-micro-bit-competition/",
           "internalStoryId": "9302dff1f136"
         },
         {
@@ -3168,9 +3212,11 @@
     {
       "id": "f1dd156acaeb",
       "legacyPath": "laser-cutting-for-dummies-f1dd156acaeb",
+      "legacyUrl": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
+      "slug": "laser-cutting-for-dummies",
       "title": "Laser Cutting for Dummies",
       "subtitle": "I had my first experience laser-cutting some weeks ago. It was pretty sweet. Laser cutting can be quite daunting for a first-timer. Is…",
-      "canonicalUrl": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/laser-cutting-for-dummies-f1dd156acaeb",
       "author": {
         "id": "d52a615b26a",
@@ -3347,9 +3393,11 @@
     {
       "id": "7111309adeb9",
       "legacyPath": "how-i-wrote-ui-tests-for-the-get-hacking-android-app-7111309adeb9",
+      "legacyUrl": "https://blog.tinkercademy.com/how-i-wrote-ui-tests-for-the-get-hacking-android-app-7111309adeb9",
+      "slug": "how-i-wrote-ui-tests-for-the-get-hacking-android-app",
       "title": "How I Wrote UI Tests for the Get Hacking Android App",
       "subtitle": "The Android team and community advocates testing. This includes unit, integration, and UI testing.",
-      "canonicalUrl": "https://blog.tinkercademy.com/how-i-wrote-ui-tests-for-the-get-hacking-android-app-7111309adeb9",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/how-i-wrote-ui-tests-for-the-get-hacking-android-app/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/how-i-wrote-ui-tests-for-the-get-hacking-android-app-7111309adeb9",
       "author": {
         "id": "e63192b2a668",
@@ -3732,9 +3780,11 @@
     {
       "id": "6bf782cc83c2",
       "legacyPath": "journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
+      "legacyUrl": "https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
+      "slug": "journey-to-space-a-science-centre-exhibition-at-the-istana-open-house",
       "title": "Journey to Space: A Science Centre Exhibition at the Istana Open House",
       "subtitle": "Using Littlebits, Micro:bits and cardboard for an interactive game",
-      "canonicalUrl": "https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
       "author": {
         "id": "a69be92c33e8",
@@ -3866,9 +3916,11 @@
     {
       "id": "413fee46ada1",
       "legacyPath": "deep-dive-into-the-i2c-oled-413fee46ada1",
+      "legacyUrl": "https://blog.tinkercademy.com/deep-dive-into-the-i2c-oled-413fee46ada1",
+      "slug": "deep-dive-into-the-i2c-oled",
       "title": "Deep Dive into the I2C OLED",
       "subtitle": "In case you don’t know, the I2C OLED is a small digital display which is useful for electronics projects. I wrote a Micro:Bit library to…",
-      "canonicalUrl": "https://blog.tinkercademy.com/deep-dive-into-the-i2c-oled-413fee46ada1",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/deep-dive-into-the-i2c-oled/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/deep-dive-into-the-i2c-oled-413fee46ada1",
       "author": {
         "id": "b2851d2f0e0b",
@@ -3992,9 +4044,11 @@
     {
       "id": "ebf9258d8a35",
       "legacyPath": "scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
+      "legacyUrl": "https://blog.tinkercademy.com/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
+      "slug": "scanning-and-cutting-to-make-a-diorama",
       "title": "Scanning and Cutting to make a diorama",
       "subtitle": "Editor’s note: Nadya joined us as a marketing intern earlier this year. Despite coming in with little tech or coding experience, she…",
-      "canonicalUrl": "https://blog.tinkercademy.com/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/scanning-and-cutting-to-make-a-diorama/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
       "author": {
         "id": "9f7e170c7ded",
@@ -4095,9 +4149,11 @@
     {
       "id": "6bb336685d63",
       "legacyPath": "from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
+      "legacyUrl": "https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
+      "slug": "from-making-micro-bit-holders-to-becoming-my-own-ikea",
       "title": "From making micro:bit holders to becoming my own Ikea",
       "subtitle": "My journey interning at Tinkertanker was short but filled with many memorable learning experiences and lessons. From assisting in…",
-      "canonicalUrl": "https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
+      "canonicalUrl": "https://tinkercademy.com/blog/2019/from-making-micro-bit-holders-to-becoming-my-own-ikea/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
       "author": {
         "id": "f7e0df9b3a5e",
@@ -4270,7 +4326,7 @@
         {
           "paragraph": 4,
           "sourceHref": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
-          "href": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
+          "href": "https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/",
           "internalStoryId": "f1dd156acaeb"
         },
         {
@@ -4290,9 +4346,11 @@
     {
       "id": "72bfe17176e",
       "legacyPath": "cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e",
+      "legacyUrl": "https://blog.tinkercademy.com/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e",
+      "slug": "cool-trinkets-with-plywood-and-a-laser-cutter",
       "title": "Cool Trinkets with Plywood and a Laser Cutter",
       "subtitle": "As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about…",
-      "canonicalUrl": "https://blog.tinkercademy.com/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/cool-trinkets-with-plywood-and-a-laser-cutter/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e",
       "author": {
         "id": "9f7e170c7ded",
@@ -4390,31 +4448,31 @@
         {
           "paragraph": 2,
           "sourceHref": "https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
-          "href": "https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
+          "href": "https://tinkercademy.com/blog/2019/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house/",
           "internalStoryId": "6bf782cc83c2"
         },
         {
           "paragraph": 3,
           "sourceHref": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
-          "href": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
+          "href": "https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/",
           "internalStoryId": "f1dd156acaeb"
         },
         {
           "paragraph": 3,
           "sourceHref": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
-          "href": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
+          "href": "https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/",
           "internalStoryId": "f1dd156acaeb"
         },
         {
           "paragraph": 3,
           "sourceHref": "https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
-          "href": "https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
+          "href": "https://tinkercademy.com/blog/2019/from-making-micro-bit-holders-to-becoming-my-own-ikea/",
           "internalStoryId": "6bb336685d63"
         },
         {
           "paragraph": 15,
           "sourceHref": "https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
-          "href": "https://blog.tinkercademy.com/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house-6bf782cc83c2",
+          "href": "https://tinkercademy.com/blog/2019/journey-to-space-a-science-centre-exhibition-at-the-istana-open-house/",
           "internalStoryId": "6bf782cc83c2"
         },
         {
@@ -4426,7 +4484,7 @@
         {
           "paragraph": 17,
           "sourceHref": "https://blog.tinkercademy.com/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
-          "href": "https://blog.tinkercademy.com/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
+          "href": "https://tinkercademy.com/blog/2019/scanning-and-cutting-to-make-a-diorama/",
           "internalStoryId": "ebf9258d8a35"
         }
       ]
@@ -4434,9 +4492,11 @@
     {
       "id": "cfb4039a2b84",
       "legacyPath": "my-5-months-internship-at-tinkertanker-cfb4039a2b84",
+      "legacyUrl": "https://blog.tinkercademy.com/my-5-months-internship-at-tinkertanker-cfb4039a2b84",
+      "slug": "learning-and-building-a-web-curriculum",
       "title": "Learning and Building a Web Curriculum",
       "subtitle": "A 2020 internship report",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-5-months-internship-at-tinkertanker-cfb4039a2b84",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/learning-and-building-a-web-curriculum/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-5-months-internship-at-tinkertanker-cfb4039a2b84",
       "author": {
         "id": "7242e265dacf",
@@ -4575,9 +4635,11 @@
     {
       "id": "2864058381f2",
       "legacyPath": "my-5-months-at-tinkertanker-2864058381f2",
+      "legacyUrl": "https://blog.tinkercademy.com/my-5-months-at-tinkertanker-2864058381f2",
+      "slug": "a-python-focused-internship",
       "title": "A Python-focused internship",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-5-months-at-tinkertanker-2864058381f2",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/a-python-focused-internship/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-5-months-at-tinkertanker-2864058381f2",
       "author": {
         "id": "ae7dae1e63a6",
@@ -4742,9 +4804,11 @@
     {
       "id": "29ee52406580",
       "legacyPath": "automated-migration-from-bitbucket-to-github-in-2020-29ee52406580",
+      "legacyUrl": "https://blog.tinkercademy.com/automated-migration-from-bitbucket-to-github-in-2020-29ee52406580",
+      "slug": "semi-automated-migration-from-bitbucket-to-github-2020-edition",
       "title": "Semi-automated migration from Bitbucket to GitHub: 2020 edition",
       "subtitle": "Scripts for the lazy, the tinkerers, and the lazy tinkerers",
-      "canonicalUrl": "https://blog.tinkercademy.com/automated-migration-from-bitbucket-to-github-in-2020-29ee52406580",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/semi-automated-migration-from-bitbucket-to-github-2020-edition/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/automated-migration-from-bitbucket-to-github-in-2020-29ee52406580",
       "author": {
         "id": "68db149b8d01",
@@ -4906,9 +4970,11 @@
     {
       "id": "60af069670e",
       "legacyPath": "unity-amidst-the-chaos-60af069670e",
+      "legacyUrl": "https://blog.tinkercademy.com/unity-amidst-the-chaos-60af069670e",
+      "slug": "internship-report-unity-amidst-the-chaos",
       "title": "Internship report: Unity amidst the chaos",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/unity-amidst-the-chaos-60af069670e",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/internship-report-unity-amidst-the-chaos/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/unity-amidst-the-chaos-60af069670e",
       "author": {
         "id": "972eca1ef085",
@@ -5000,9 +5066,11 @@
     {
       "id": "b4d13d370775",
       "legacyPath": "unity-forever-b4d13d370775",
+      "legacyUrl": "https://blog.tinkercademy.com/unity-forever-b4d13d370775",
+      "slug": "internship-report-unity-forever",
       "title": "Internship report: Unity forever",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/unity-forever-b4d13d370775",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/internship-report-unity-forever/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/unity-forever-b4d13d370775",
       "author": {
         "id": "25d6b9d0da4",
@@ -5116,9 +5184,11 @@
     {
       "id": "ad2843e0e567",
       "legacyPath": "my-exciting-fulfilling-internship-at-tinkertanker-ad2843e0e567",
+      "legacyUrl": "https://blog.tinkercademy.com/my-exciting-fulfilling-internship-at-tinkertanker-ad2843e0e567",
+      "slug": "my-exciting-and-fulfilling-internship-at-tinkertanker",
       "title": "My Exciting & Fulfilling Internship at Tinkertanker",
       "subtitle": "Hardware, software, curriculum, teaching, content creation, marketing, and much more!",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-exciting-fulfilling-internship-at-tinkertanker-ad2843e0e567",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/my-exciting-and-fulfilling-internship-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-exciting-fulfilling-internship-at-tinkertanker-ad2843e0e567",
       "author": {
         "id": "e8bc84d3ff66",
@@ -5554,9 +5624,11 @@
     {
       "id": "a28e0646e1a9",
       "legacyPath": "my-first-work-from-home-summer-internship-a28e0646e1a9",
+      "legacyUrl": "https://blog.tinkercademy.com/my-first-work-from-home-summer-internship-a28e0646e1a9",
+      "slug": "my-first-work-from-home-summer-internship",
       "title": "My first Work-From-Home Summer Internship",
       "subtitle": "As the enthusiastic freshman I was, I volunteered to help out for school events back in my very first winter break. I met some seniors who…",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-first-work-from-home-summer-internship-a28e0646e1a9",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/my-first-work-from-home-summer-internship/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-first-work-from-home-summer-internship-a28e0646e1a9",
       "author": {
         "id": "e885ae83644b",
@@ -5659,9 +5731,11 @@
     {
       "id": "f18a59ebba35",
       "legacyPath": "interning-at-a-distance-f18a59ebba35",
+      "legacyUrl": "https://blog.tinkercademy.com/interning-at-a-distance-f18a59ebba35",
+      "slug": "interning-at-a-distance",
       "title": "Interning at a distance",
       "subtitle": "Amelia Chan from CMU shares her remote internship experience.",
-      "canonicalUrl": "https://blog.tinkercademy.com/interning-at-a-distance-f18a59ebba35",
+      "canonicalUrl": "https://tinkercademy.com/blog/2020/interning-at-a-distance/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/interning-at-a-distance-f18a59ebba35",
       "author": {
         "id": "e21e4ba9db18",
@@ -5763,9 +5837,11 @@
     {
       "id": "2de013324042",
       "legacyPath": "returning-to-re-intern-at-tinkertanker-2de013324042",
+      "legacyUrl": "https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042",
+      "slug": "returning-to-re-intern-at-tinkertanker",
       "title": "Returning to Re-intern at Tinkertanker",
       "subtitle": "Mireille joined us over the Christmas season, and made a whole bunch of things!",
-      "canonicalUrl": "https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042",
+      "canonicalUrl": "https://tinkercademy.com/blog/2021/returning-to-re-intern-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/returning-to-re-intern-at-tinkertanker-2de013324042",
       "author": {
         "id": "8066005c0c15",
@@ -6051,9 +6127,11 @@
     {
       "id": "6bd887f29ce4",
       "legacyPath": "3d-printing-thrills-and-tribulations-6bd887f29ce4",
+      "legacyUrl": "https://blog.tinkercademy.com/3d-printing-thrills-and-tribulations-6bd887f29ce4",
+      "slug": "3d-printing-thrills-and-tribulations",
       "title": "3D Printing: Thrills and Tribulations",
       "subtitle": "Introduction",
-      "canonicalUrl": "https://blog.tinkercademy.com/3d-printing-thrills-and-tribulations-6bd887f29ce4",
+      "canonicalUrl": "https://tinkercademy.com/blog/2021/3d-printing-thrills-and-tribulations/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/3d-printing-thrills-and-tribulations-6bd887f29ce4",
       "author": {
         "id": "8066005c0c15",
@@ -6196,7 +6274,7 @@
         {
           "paragraph": 1,
           "sourceHref": "https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042?source=collection_home---2------0-----------------------",
-          "href": "https://blog.tinkercademy.com/returning-to-re-intern-at-tinkertanker-2de013324042",
+          "href": "https://tinkercademy.com/blog/2021/returning-to-re-intern-at-tinkertanker/",
           "internalStoryId": "2de013324042"
         },
         {
@@ -6216,9 +6294,11 @@
     {
       "id": "c46ad5cbfda6",
       "legacyPath": "a-youth-month-of-tinkerers-c46ad5cbfda6",
+      "legacyUrl": "https://blog.tinkercademy.com/a-youth-month-of-tinkerers-c46ad5cbfda6",
+      "slug": "a-youth-month-of-tinkerers",
       "title": "A Youth Month of Tinkerers",
       "subtitle": "“This Youth Month, we want to let our youth know that all Singaporeans are committed to journeying with and empowering them to write the…",
-      "canonicalUrl": "https://blog.tinkercademy.com/a-youth-month-of-tinkerers-c46ad5cbfda6",
+      "canonicalUrl": "https://tinkercademy.com/blog/2021/a-youth-month-of-tinkerers/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/a-youth-month-of-tinkerers-c46ad5cbfda6",
       "author": {
         "id": "c20526b798dc",
@@ -6322,9 +6402,11 @@
     {
       "id": "7c2a58984ab1",
       "legacyPath": "adventures-in-cardboard-design-7c2a58984ab1",
+      "legacyUrl": "https://blog.tinkercademy.com/adventures-in-cardboard-design-7c2a58984ab1",
+      "slug": "adventures-in-cardboard-design",
       "title": "Adventures in cardboard design",
       "subtitle": "micro:bit kit design experiences from a 10-week internship at Tinkertanker!",
-      "canonicalUrl": "https://blog.tinkercademy.com/adventures-in-cardboard-design-7c2a58984ab1",
+      "canonicalUrl": "https://tinkercademy.com/blog/2021/adventures-in-cardboard-design/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/adventures-in-cardboard-design-7c2a58984ab1",
       "author": {
         "id": "5824c1f9f454",
@@ -6504,9 +6586,11 @@
     {
       "id": "20f1a8b455db",
       "legacyPath": "curriculum-planning-at-tinkercademy-20f1a8b455db",
+      "legacyUrl": "https://blog.tinkercademy.com/curriculum-planning-at-tinkercademy-20f1a8b455db",
+      "slug": "curriculum-planning-at-tinkercademy",
       "title": "Curriculum Planning at Tinkercademy",
       "subtitle": "Many of the activities built, constructed, and written about at Tinkertanker/ Tinkercademy are physical toys and projects — documentations…",
-      "canonicalUrl": "https://blog.tinkercademy.com/curriculum-planning-at-tinkercademy-20f1a8b455db",
+      "canonicalUrl": "https://tinkercademy.com/blog/2021/curriculum-planning-at-tinkercademy/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/curriculum-planning-at-tinkercademy-20f1a8b455db",
       "author": {
         "id": "9f7e170c7ded",
@@ -6569,9 +6653,11 @@
     {
       "id": "5a7e2a3d5e78",
       "legacyPath": "designing-a-fun-filled-day-of-tech-learning-for-a-leading-bank-5a7e2a3d5e78",
+      "legacyUrl": "https://blog.tinkercademy.com/designing-a-fun-filled-day-of-tech-learning-for-a-leading-bank-5a7e2a3d5e78",
+      "slug": "designing-a-fun-filled-day-of-tech-learning-for-a-leading-bank",
       "title": "Designing a fun-filled day of tech learning for a leading bank",
       "subtitle": "Looking for an engaging and unique way to train employees and encourage their innate curiosity towards technology? Here’s a superb…",
-      "canonicalUrl": "https://blog.tinkercademy.com/designing-a-fun-filled-day-of-tech-learning-for-a-leading-bank-5a7e2a3d5e78",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/designing-a-fun-filled-day-of-tech-learning-for-a-leading-bank/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/designing-a-fun-filled-day-of-tech-learning-for-a-leading-bank-5a7e2a3d5e78",
       "author": {
         "id": "be2990b8a35",
@@ -6677,9 +6763,11 @@
     {
       "id": "41741e068796",
       "legacyPath": "strengthening-bonds-between-parents-kids-41741e068796",
+      "legacyUrl": "https://blog.tinkercademy.com/strengthening-bonds-between-parents-kids-41741e068796",
+      "slug": "strengthening-bonds-between-parents-and-kids",
       "title": "Strengthening Bonds between Parents & Kids",
       "subtitle": "Countless studies prove that pro-family policies improve employee satisfaction and productivity. Here’s how your company can take action too",
-      "canonicalUrl": "https://blog.tinkercademy.com/strengthening-bonds-between-parents-kids-41741e068796",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/strengthening-bonds-between-parents-and-kids/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/strengthening-bonds-between-parents-kids-41741e068796",
       "author": {
         "id": "be2990b8a35",
@@ -6815,9 +6903,11 @@
     {
       "id": "bb87cc457fb7",
       "legacyPath": "a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7",
+      "legacyUrl": "https://blog.tinkercademy.com/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7",
+      "slug": "a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems",
       "title": "A Sneak Peek Into How A Global Finance Firm Discovers Hidden Gems",
       "subtitle": "Have you ever wondered how much raw talent you could unearth from your own team? Well, it isn’t a difficult task, if you’re up for it.",
-      "canonicalUrl": "https://blog.tinkercademy.com/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/a-sneak-peek-into-how-a-global-finance-firm-discovers-hidden-gems-bb87cc457fb7",
       "author": {
         "id": "be2990b8a35",
@@ -6930,9 +7020,11 @@
     {
       "id": "c591a8c9ff88",
       "legacyPath": "reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88",
+      "legacyUrl": "https://blog.tinkercademy.com/reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88",
+      "slug": "reducing-the-gender-gap-in-tech-one-step-at-a-time",
       "title": "Reducing the Gender Gap in Tech, One Step At a Time",
       "subtitle": "The gender gap in tech is narrowing, but not nearly as fast as it should be. Read on to see how Lenovo SG tackles this troubling imbalance.",
-      "canonicalUrl": "https://blog.tinkercademy.com/reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/reducing-the-gender-gap-in-tech-one-step-at-a-time/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/reducing-the-gender-gap-in-tech-one-step-at-a-time-c591a8c9ff88",
       "author": {
         "id": "be2990b8a35",
@@ -7038,9 +7130,11 @@
     {
       "id": "2e937009063a",
       "legacyPath": "launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a",
+      "legacyUrl": "https://blog.tinkercademy.com/launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a",
+      "slug": "launching-a-one-stop-digital-wallet-for-our-adult-learners",
       "title": "Launching A One-Stop Digital Wallet for Our Adult Learners",
       "subtitle": "Imagine using blockchain technology to store your digital certificates on your smartphone, accessible anywhere. Introducing Ceal by Affinidi",
-      "canonicalUrl": "https://blog.tinkercademy.com/launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/launching-a-one-stop-digital-wallet-for-our-adult-learners/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a",
       "author": {
         "id": "be2990b8a35",
@@ -7135,9 +7229,11 @@
     {
       "id": "8de79b270ff9",
       "legacyPath": "why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9",
+      "legacyUrl": "https://blog.tinkercademy.com/why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9",
+      "slug": "why-we-teach-artificial-intelligence-to-non-programmers",
       "title": "Why We Teach Artificial Intelligence to Non-Programmers",
       "subtitle": "AI is becoming part and parcel of modern-day life. Whether you’re a programmer or not, understanding AI is now a necessity.",
-      "canonicalUrl": "https://blog.tinkercademy.com/why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/why-we-teach-artificial-intelligence-to-non-programmers/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9",
       "author": {
         "id": "be2990b8a35",
@@ -7244,9 +7340,11 @@
     {
       "id": "2396cb612805",
       "legacyPath": "how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805",
+      "legacyUrl": "https://blog.tinkercademy.com/how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805",
+      "slug": "how-we-teach-ai-to-the-leaders-of-tomorrow",
       "title": "How We Teach AI To The Leaders of Tomorrow",
       "subtitle": "The ability to work with AI is now no longer a luxury, but a necessity for anyone looking to stay competitive. So how do we teach AI?",
-      "canonicalUrl": "https://blog.tinkercademy.com/how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/how-we-teach-ai-to-the-leaders-of-tomorrow/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/how-we-teach-ai-to-the-leaders-of-tomorrow-2396cb612805",
       "author": {
         "id": "be2990b8a35",
@@ -7349,9 +7447,11 @@
     {
       "id": "48a93fd9b419",
       "legacyPath": "war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419",
+      "legacyUrl": "https://blog.tinkercademy.com/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419",
+      "slug": "war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes",
       "title": "War for Talent — Could This Super Weapon Be the Answer to Your Woes?",
       "subtitle": "The tech talent war is not a new problem. In fact, it’s been going on for more than a decade. Here’s what your team can do to win this war.",
-      "canonicalUrl": "https://blog.tinkercademy.com/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/war-for-talent-could-this-super-weapon-be-the-answer-to-your-woes-48a93fd9b419",
       "author": {
         "id": "be2990b8a35",
@@ -7461,9 +7561,11 @@
     {
       "id": "5349788a9785",
       "legacyPath": "coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785",
+      "legacyUrl": "https://blog.tinkercademy.com/coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785",
+      "slug": "coding-without-computers-the-untold-power-of-cs-unplugged",
       "title": "Coding without Computers — The Untold Power of CS Unplugged",
       "subtitle": "We often cannot imagine learning computer science concepts without a computer. But low and behold, we have the powerful CS Unplugged!",
-      "canonicalUrl": "https://blog.tinkercademy.com/coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/coding-without-computers-the-untold-power-of-cs-unplugged/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/coding-without-computers-the-untold-power-of-cs-unplugged-5349788a9785",
       "author": {
         "id": "be2990b8a35",
@@ -7572,9 +7674,11 @@
     {
       "id": "86321d6c8c16",
       "legacyPath": "coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16",
+      "legacyUrl": "https://blog.tinkercademy.com/coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16",
+      "slug": "coding-in-the-dark-pioneering-tools-for-blind-programmers",
       "title": "Coding in The Dark — Pioneering Tools for Blind Programmers",
       "subtitle": "About one in every 100 programmers is blind. How do they read and type code with low or no sight? Read on to find some handy yet fun tools!",
-      "canonicalUrl": "https://blog.tinkercademy.com/coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/coding-in-the-dark-pioneering-tools-for-blind-programmers/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/coding-in-the-dark-pioneering-tools-for-blind-programmers-86321d6c8c16",
       "author": {
         "id": "be2990b8a35",
@@ -7696,9 +7800,11 @@
     {
       "id": "8a281672f607",
       "legacyPath": "why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607",
+      "legacyUrl": "https://blog.tinkercademy.com/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607",
+      "slug": "why-we-encourage-our-students-to-use-chatgpt-in-class",
       "title": "Why We Encourage Our Students to Use ChatGPT in Class",
       "subtitle": "With more than 1 billion users worldwide, ChatGPT has sparked much debate about issues like academic fraud, plagiarism, and the validity of…",
-      "canonicalUrl": "https://blog.tinkercademy.com/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/why-we-encourage-our-students-to-use-chatgpt-in-class/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607",
       "author": {
         "id": "be2990b8a35",
@@ -7780,9 +7886,11 @@
     {
       "id": "97f9da08d818",
       "legacyPath": "how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818",
+      "legacyUrl": "https://blog.tinkercademy.com/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818",
+      "slug": "how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation",
       "title": "How Robotic Process Automation (RPA) Eliminates Manual Data Entry and Empowers Innovation",
       "subtitle": "Imagine you’re a regional manager of a large multinational corporation. At a recent business conference, you hear about a new technology…",
-      "canonicalUrl": "https://blog.tinkercademy.com/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818",
       "author": {
         "id": "be2990b8a35",
@@ -7847,9 +7955,11 @@
     {
       "id": "cf2a6fa11db4",
       "legacyPath": "a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4",
+      "legacyUrl": "https://blog.tinkercademy.com/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4",
+      "slug": "a-step-by-step-guide-to-building-personalised-ar-experiences",
       "title": "A Step-by-Step Guide to Building Personalised AR Experiences",
       "subtitle": "Step aside, ChatGPT, there’s a new player in town, and it’s about to propel us light-years ahead, blurring the lines between the real and…",
-      "canonicalUrl": "https://blog.tinkercademy.com/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/a-step-by-step-guide-to-building-personalised-ar-experiences/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4",
       "author": {
         "id": "be2990b8a35",
@@ -8117,9 +8227,11 @@
     {
       "id": "a696c58e8e82",
       "legacyPath": "unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82",
+      "legacyUrl": "https://blog.tinkercademy.com/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82",
+      "slug": "unveiling-the-top-ai-based-apps-made-by-regular-teens",
       "title": "Unveiling the Top AI-Based Apps Made by Regular Teens",
       "subtitle": "In today’s digital age, teenagers are not only avid users of technology but also creators and innovators. With rising advancements in…",
-      "canonicalUrl": "https://blog.tinkercademy.com/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/unveiling-the-top-ai-based-apps-made-by-regular-teens/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82",
       "author": {
         "id": "be2990b8a35",
@@ -8209,9 +8321,11 @@
     {
       "id": "51fea38d97a0",
       "legacyPath": "this-is-what-happens-when-sewing-meets-code-conductive-thread-51fea38d97a0",
+      "legacyUrl": "https://blog.tinkercademy.com/this-is-what-happens-when-sewing-meets-code-conductive-thread-51fea38d97a0",
+      "slug": "this-is-what-happens-when-sewing-meets-code-and-conductive-thread",
       "title": "This is What Happens When Sewing Meets Code & Conductive Thread",
       "subtitle": "In a rapidly evolving world, where technology interacts with almost anything and everything we can think of, it wouldn’t be hard to believe…",
-      "canonicalUrl": "https://blog.tinkercademy.com/this-is-what-happens-when-sewing-meets-code-conductive-thread-51fea38d97a0",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/this-is-what-happens-when-sewing-meets-code-and-conductive-thread/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/this-is-what-happens-when-sewing-meets-code-conductive-thread-51fea38d97a0",
       "author": {
         "id": "be2990b8a35",
@@ -8361,9 +8475,11 @@
     {
       "id": "b1c8ee6f2382",
       "legacyPath": "tinkerfolio-tinkering-with-purpose-b1c8ee6f2382",
+      "legacyUrl": "https://blog.tinkercademy.com/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382",
+      "slug": "tinkerfolio-tinkering-with-purpose",
       "title": "Tinkerfolio: Tinkering with Purpose",
       "subtitle": "This blog is written by Natasha, Sheryl, and Marcus, three inquisitive Year 3 Computing students from the National University of Singapore…",
-      "canonicalUrl": "https://blog.tinkercademy.com/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/tinkerfolio-tinkering-with-purpose/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382",
       "author": {
         "id": "16c1fdab6742",
@@ -8443,9 +8559,11 @@
     {
       "id": "7f24aadb1d1c",
       "legacyPath": "internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c",
+      "legacyUrl": "https://blog.tinkercademy.com/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c",
+      "slug": "internship-reflection-a-dive-into-many-new-things",
       "title": "Internship Reflection: A dive into many new things",
       "subtitle": "Editor’s note: Enric Tan is currently pursuing a Computer Science degree at the Nanyang Technological University (NTU). He interned with us…",
-      "canonicalUrl": "https://blog.tinkercademy.com/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/internship-reflection-a-dive-into-many-new-things/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c",
       "author": {
         "id": "4968d6c44279",
@@ -8526,9 +8644,11 @@
     {
       "id": "5c133e7a6403",
       "legacyPath": "tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403",
+      "legacyUrl": "https://blog.tinkercademy.com/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403",
+      "slug": "tinkertanker-internship-bowling-at-tinkertanker",
       "title": "Tinkertanker Internship: Bowling at Tinkertanker",
       "subtitle": "Editor’s note: Mark, a self-starter and aspiring software engineer, joined us over a 12-week period as a teaching and curriculum design…",
-      "canonicalUrl": "https://blog.tinkercademy.com/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/tinkertanker-internship-bowling-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403",
       "author": {
         "id": "3dc8d124c7aa",
@@ -8646,9 +8766,11 @@
     {
       "id": "2582307b4382",
       "legacyPath": "using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
+      "legacyUrl": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
+      "slug": "using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1",
       "title": "Using Python and Pandas to generate useful reports out of CSV files, part 1",
       "subtitle": "Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&L) survey. In this survey, students offered…",
-      "canonicalUrl": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
       "author": {
         "id": "444f1363f2e7",
@@ -8774,7 +8896,7 @@
         {
           "paragraph": 66,
           "sourceHref": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433?source=collection_home---2------5-----------------------",
-          "href": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
+          "href": "https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2/",
           "internalStoryId": "6237608a433"
         }
       ]
@@ -8782,9 +8904,11 @@
     {
       "id": "6237608a433",
       "legacyPath": "using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
+      "legacyUrl": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
+      "slug": "using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2",
       "title": "Using Python and Pandas to generate useful reports out of CSV files, part 2",
       "subtitle": "Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post here.",
-      "canonicalUrl": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
       "author": {
         "id": "444f1363f2e7",
@@ -8865,7 +8989,7 @@
         {
           "paragraph": 1,
           "sourceHref": "https://medium.com/p/2582307b4382/",
-          "href": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
+          "href": "https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/",
           "internalStoryId": "2582307b4382"
         }
       ]
@@ -8873,9 +8997,11 @@
     {
       "id": "511b955fcf81",
       "legacyPath": "having-fun-with-automata-and-littlebits-511b955fcf81",
+      "legacyUrl": "https://blog.tinkercademy.com/having-fun-with-automata-and-littlebits-511b955fcf81",
+      "slug": "having-fun-with-automata-and-littlebits",
       "title": "Having fun with Automata and LittleBits!",
       "subtitle": "I have always been fascinated with the idea of Automata. A quick Pinterest search will yield you countless amazing examples of these, made…",
-      "canonicalUrl": "https://blog.tinkercademy.com/having-fun-with-automata-and-littlebits-511b955fcf81",
+      "canonicalUrl": "https://tinkercademy.com/blog/2023/having-fun-with-automata-and-littlebits/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/having-fun-with-automata-and-littlebits-511b955fcf81",
       "author": {
         "id": "5824c1f9f454",
@@ -9111,9 +9237,11 @@
     {
       "id": "13f41ea742ca",
       "legacyPath": "what-is-it-like-to-build-games-on-unity-13f41ea742ca",
+      "legacyUrl": "https://blog.tinkercademy.com/what-is-it-like-to-build-games-on-unity-13f41ea742ca",
+      "slug": "what-is-it-like-to-build-games-on-unity",
       "title": "What is it like to build games on Unity?",
       "subtitle": "Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks’ School, carrying laptops, water…",
-      "canonicalUrl": "https://blog.tinkercademy.com/what-is-it-like-to-build-games-on-unity-13f41ea742ca",
+      "canonicalUrl": "https://tinkercademy.com/blog/2024/what-is-it-like-to-build-games-on-unity/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/what-is-it-like-to-build-games-on-unity-13f41ea742ca",
       "author": {
         "id": "be2990b8a35",
@@ -9192,9 +9320,11 @@
     {
       "id": "766d691d0db4",
       "legacyPath": "what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4",
+      "legacyUrl": "https://blog.tinkercademy.com/what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4",
+      "slug": "what-we-learnt-from-our-latest-sew-and-code-camp",
       "title": "What We Learnt from our Latest Sew & Code Camp",
       "subtitle": "During the recent December holidays, we organised a unique coding camp — one that had a distinctly different flavour from our regular…",
-      "canonicalUrl": "https://blog.tinkercademy.com/what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4",
+      "canonicalUrl": "https://tinkercademy.com/blog/2024/what-we-learnt-from-our-latest-sew-and-code-camp/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4",
       "author": {
         "id": "be2990b8a35",
@@ -9330,9 +9460,11 @@
     {
       "id": "2d79c0e43e3f",
       "legacyPath": "orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f",
+      "legacyUrl": "https://blog.tinkercademy.com/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f",
+      "slug": "orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries",
       "title": "Orange v/s PyCaret v/s Scikit: A Comparison of Beginner Machine Learning Libraries",
       "subtitle": "A summary of why you should get started with each of these top 3 ML libraries",
-      "canonicalUrl": "https://blog.tinkercademy.com/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f",
+      "canonicalUrl": "https://tinkercademy.com/blog/2024/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f",
       "author": {
         "id": "76bbf733745",
@@ -9554,9 +9686,11 @@
     {
       "id": "d1ee2226c282",
       "legacyPath": "now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282",
+      "legacyUrl": "https://blog.tinkercademy.com/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282",
+      "slug": "now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code",
       "title": "Now That AI Can Generate Code, Should the Everyday Student Stop Learning How to Code?",
       "subtitle": "Picture this: a world where coding is as effortless as conversing in English, where programming becomes akin to a casual chat with…",
-      "canonicalUrl": "https://blog.tinkercademy.com/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282",
+      "canonicalUrl": "https://tinkercademy.com/blog/2024/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282",
       "author": {
         "id": "be2990b8a35",
@@ -9660,9 +9794,11 @@
     {
       "id": "8b39f2ce987e",
       "legacyPath": "intern-in-tinkertanker-8b39f2ce987e",
+      "legacyUrl": "https://blog.tinkercademy.com/intern-in-tinkertanker-8b39f2ce987e",
+      "slug": "building-a-summarisation-app-my-summer-internship-at-tinkertanker",
       "title": "Building a Summarisation App: My Summer Internship at Tinkertanker",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/intern-in-tinkertanker-8b39f2ce987e",
+      "canonicalUrl": "https://tinkercademy.com/blog/2024/building-a-summarisation-app-my-summer-internship-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/intern-in-tinkertanker-8b39f2ce987e",
       "author": {
         "id": "rss-6ca62e9247d1",
@@ -9717,9 +9853,11 @@
     {
       "id": "ae71c2d219f9",
       "legacyPath": "reframing-my-thoughts-on-website-builders-ae71c2d219f9",
+      "legacyUrl": "https://blog.tinkercademy.com/reframing-my-thoughts-on-website-builders-ae71c2d219f9",
+      "slug": "reframing-my-thoughts-on-website-builders",
       "title": "Reframing my thoughts on website builders",
       "subtitle": "Editor’s Note: Yun Xuan joined us as an intern over this recent summer break. She tirelessly worked on various projects, notably web…",
-      "canonicalUrl": "https://blog.tinkercademy.com/reframing-my-thoughts-on-website-builders-ae71c2d219f9",
+      "canonicalUrl": "https://tinkercademy.com/blog/2024/reframing-my-thoughts-on-website-builders/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/reframing-my-thoughts-on-website-builders-ae71c2d219f9",
       "author": {
         "id": "eae4de46702b",
@@ -9867,9 +10005,11 @@
     {
       "id": "9b7eae9a5c17",
       "legacyPath": "internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+      "legacyUrl": "https://blog.tinkercademy.com/internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+      "slug": "games-claude-and-a-new-teacher-platform",
       "title": "Games, Claude, and a New Teacher Platform",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
+      "canonicalUrl": "https://tinkercademy.com/blog/2025/games-claude-and-a-new-teacher-platform/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/internship-reflections-a-multitude-of-new-experiences-9b7eae9a5c17",
       "author": {
         "id": "de11432c5299",
@@ -10022,9 +10162,11 @@
     {
       "id": "2071b60a462b",
       "legacyPath": "my-summer-internship-with-tinkertanker-2071b60a462b",
+      "legacyUrl": "https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "slug": "from-vue-js-to-micro-bit-twelve-weeks-building-edtech",
       "title": "From Vue.js to micro:bit: Twelve Weeks Building EdTech",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b",
+      "canonicalUrl": "https://tinkercademy.com/blog/2025/from-vue-js-to-micro-bit-twelve-weeks-building-edtech/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b",
       "author": {
         "id": "dbe490e80fa7",
@@ -10072,9 +10214,11 @@
     {
       "id": "cb94bd7d0272",
       "legacyPath": "looking-back-at-my-time-in-tinkertanker-cb94bd7d0272",
+      "legacyUrl": "https://blog.tinkercademy.com/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272",
+      "slug": "learning-building-and-teaching-my-tinkertanker-internship",
       "title": "Learning, Building, and Teaching: My Tinkertanker Internship",
       "subtitle": "",
-      "canonicalUrl": "https://blog.tinkercademy.com/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272",
+      "canonicalUrl": "https://tinkercademy.com/blog/2026/learning-building-and-teaching-my-tinkertanker-internship/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/looking-back-at-my-time-in-tinkertanker-cb94bd7d0272",
       "author": {
         "id": "rss-1110912fd37c",

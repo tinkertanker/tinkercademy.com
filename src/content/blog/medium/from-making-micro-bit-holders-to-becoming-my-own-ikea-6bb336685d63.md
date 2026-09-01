@@ -2,8 +2,9 @@
 title: From making micro:bit holders to becoming my own Ikea
 subtitle: My journey interning at Tinkertanker was short but filled with many memorable learning experiences and lessons. From assisting in…
 description: My journey interning at Tinkertanker was short but filled with many memorable learning experiences and lessons. From assisting in…
+slug: from-making-micro-bit-holders-to-becoming-my-own-ikea
 legacyPath: from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63
-canonicalUrl: https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63
+canonicalUrl: https://tinkercademy.com/blog/2019/from-making-micro-bit-holders-to-becoming-my-own-ikea/
 sourceMediumUrl: https://medium.com/tinkertanker/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63
 author:
   id: f7e0df9b3a5e
@@ -49,7 +50,7 @@ migration:
 
 <p>For the last week of my internship, I decided to take on creating a micro:bit holder, inspired by <a href="https://www.thingiverse.com/thing:3723328">this</a> post from Thingiverse, as well as my involvement assisting in weekly micro:bit lessons held at Bendemeer Secondary. This could potentially help in the improving the organisation of the micro:bits and USB cables both in the office as well as for external lessons.</p>
 
-<p>If you’re looking for detailed how-to on the laser cutter, I won’t be going into that since Hongyi has already posted an article on this during her time at Tinkertanker, aptly titled<em> </em><em><a href="https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb">Laser Cutting for Dummies</a></em>. Instead, I’ll be writing about my creative and learning process going from a complete newbie to designing and making my own room decor with acrylic! I’ll be using <a href="https://inkscape.org">Inkscape</a> to draw the designs, and <a href="https://laser101.fslaser.com/RetinaEngrave">RetinaEngrave</a> to cut them out with the laser cutter.</p>
+<p>If you’re looking for detailed how-to on the laser cutter, I won’t be going into that since Hongyi has already posted an article on this during her time at Tinkertanker, aptly titled<em> </em><em><a href="https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/">Laser Cutting for Dummies</a></em>. Instead, I’ll be writing about my creative and learning process going from a complete newbie to designing and making my own room decor with acrylic! I’ll be using <a href="https://inkscape.org">Inkscape</a> to draw the designs, and <a href="https://laser101.fslaser.com/RetinaEngrave">RetinaEngrave</a> to cut them out with the laser cutter.</p>
 
 <!-- medium-image:1*8Sh4HKcVW_a746fs1pw38w.jpeg alt-decision:meaningful -->
 

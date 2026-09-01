@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 import {
 	MEDIUM_PUBLICATION_ID,
+	buildCanonicalUrl,
 	classifyEmbedProvider,
 	normaliseMediumStory,
 	parseMediumJson,
@@ -17,6 +18,7 @@ import { parseMediumRss, readMediumRssStoryCache } from './lib/medium-rss.mjs';
 const SCRIPTS_DIR = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.dirname(SCRIPTS_DIR);
 const DEFAULT_INVENTORY = path.join(ROOT, 'docs', 'migrations', 'medium', 'inventory.json');
+const DEFAULT_REDIRECTS = path.join(ROOT, 'src', 'data', 'blog-legacy-redirects.json');
 const DEFAULT_CACHE = path.join(SCRIPTS_DIR, '_artifacts', 'medium', 'raw');
 const DEFAULT_RSS_OVERRIDES = path.join(ROOT, 'docs', 'migrations', 'medium', 'rss-source-overrides.json');
 const EXPECTED = Object.freeze({ stories: 72, imagePlacements: 415, uniqueImages: 413, embedPlacements: 42, uniqueEmbeds: 40 });
@@ -29,6 +31,7 @@ function parseArgs(argv) {
 		allowCountChange: false,
 		seed: DEFAULT_INVENTORY,
 		output: DEFAULT_INVENTORY,
+		redirects: DEFAULT_REDIRECTS,
 		cacheDir: DEFAULT_CACHE,
 	};
 	for (let index = 0; index < argv.length; index += 1) {
@@ -39,6 +42,7 @@ function parseArgs(argv) {
 		else if (argument === '--allow-count-change') options.allowCountChange = true;
 		else if (argument === '--seed') options.seed = path.resolve(argv[++index]);
 		else if (argument === '--output') options.output = path.resolve(argv[++index]);
+		else if (argument === '--redirects') options.redirects = path.resolve(argv[++index]);
 		else if (argument === '--cache-dir') options.cacheDir = path.resolve(argv[++index]);
 		else throw new Error(`Unknown argument: ${argument}`);
 	}
@@ -60,6 +64,7 @@ function storySeeds(value) {
 	return records.map((story) => ({
 		id: story.id,
 		legacyPath: story.legacyPath ?? story.uniqueSlug ?? story.slug,
+		slug: story.slug,
 		sourceKind: story.source?.kind ?? 'medium-json',
 	}));
 }
@@ -136,16 +141,16 @@ async function loadMediaRaw(id, options) {
 	return raw;
 }
 
-function extractLinks(paragraphs, pathsById) {
+function extractLinks(paragraphs, destinationsById) {
 	return paragraphs.flatMap((paragraph, paragraphIndex) =>
 		(paragraph.markups ?? [])
 			.filter((markup) => markup.type === 3 && markup.href)
 			.map((markup) => {
-				const internalStoryId = [...pathsById.keys()].find((id) => markup.href.includes(id)) ?? null;
+				const internalStoryId = [...destinationsById.keys()].find((id) => markup.href.includes(id)) ?? null;
 				return {
 					paragraph: paragraphIndex,
 					sourceHref: markup.href,
-					href: rewriteInternalStoryHref(markup.href, pathsById),
+					href: rewriteInternalStoryHref(markup.href, destinationsById),
 					internalStoryId,
 				};
 			}),
@@ -210,7 +215,7 @@ async function main() {
 	const seededIds = new Set(seeds.map(({ id }) => id));
 	for (const story of rssStories) {
 		if (!seededIds.has(story.id)) {
-			seeds.push({ id: story.id, legacyPath: story.legacyPath, sourceKind: 'medium-rss' });
+			seeds.push({ id: story.id, legacyPath: story.legacyPath, slug: story.slug, sourceKind: 'medium-rss' });
 			seededIds.add(story.id);
 		}
 	}
@@ -219,8 +224,6 @@ async function main() {
 	if (uniqueIds.size !== seeds.length || uniquePaths.size !== seeds.length) {
 		throw new Error('Seed contains duplicate Medium IDs or legacy paths');
 	}
-	const pathsById = new Map(seeds.map(({ id, legacyPath }) => [id, legacyPath]));
-
 	const loaded = [];
 	for (const seed of seeds) {
 		let story;
@@ -237,7 +240,16 @@ async function main() {
 		if (story.id !== seed.id || story.legacyPath !== seed.legacyPath) {
 			throw new Error(`Seed drift for ${seed.id}`);
 		}
-		loaded.push({ rawText, story, sourceKind: seed.sourceKind });
+		const slug = seed.slug ?? story.slug;
+		loaded.push({
+			rawText,
+			story: { ...story, slug, canonicalUrl: buildCanonicalUrl(story.publishedAt, slug) },
+			sourceKind: seed.sourceKind,
+		});
+	}
+	const destinationsById = new Map(loaded.map(({ story }) => [story.id, story.canonicalUrl]));
+	if (new Set(destinationsById.values()).size !== loaded.length) {
+		throw new Error('Stories contain duplicate year-and-slug canonical paths');
 	}
 
 	const embedSeeds = new Map();
@@ -270,6 +282,8 @@ async function main() {
 		return {
 			id: story.id,
 			legacyPath: story.legacyPath,
+			legacyUrl: story.legacyUrl,
+			slug: story.slug,
 			title: story.title,
 			subtitle: story.subtitle,
 			canonicalUrl: story.canonicalUrl,
@@ -297,7 +311,7 @@ async function main() {
 			paragraphTypes,
 			images,
 			embeds,
-			links: extractLinks(story.paragraphs, pathsById),
+			links: extractLinks(story.paragraphs, destinationsById),
 		};
 	}).sort((a, b) => a.publishedAt.localeCompare(b.publishedAt) || a.id.localeCompare(b.id));
 
@@ -329,7 +343,14 @@ async function main() {
 		summary,
 		stories,
 	};
-	if (!options.dryRun) await writeJson(options.output, inventory);
+	const legacyRedirects = {
+		version: 1,
+		redirects: Object.fromEntries(stories.map(({ legacyPath, canonicalUrl }) => [legacyPath, new URL(canonicalUrl).pathname])),
+	};
+	if (!options.dryRun) {
+		await writeJson(options.output, inventory);
+		await writeJson(options.redirects, legacyRedirects);
+	}
 	console.log(JSON.stringify({ output: options.dryRun ? null : options.output, offline: options.offline, ...summary }, null, 2));
 }
 

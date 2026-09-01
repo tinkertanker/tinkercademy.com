@@ -2,8 +2,9 @@
 title: "Viennale Annals II: Light Sticks for Days"
 subtitle: Part 2 of our journey to the Venice Biennale. Read Part 1 first to avoid spoilers.
 description: Part 2 of our journey to the Venice Biennale. Read Part 1 first to avoid spoilers.
+slug: viennale-annals-ii-light-sticks-for-days
 legacyPath: viennale-annals-ii-light-sticks-for-days-76e66944bcdb
-canonicalUrl: https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb
+canonicalUrl: https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/
 sourceMediumUrl: https://medium.com/tinkertanker/viennale-annals-ii-light-sticks-for-days-76e66944bcdb
 author:
   id: 8a14237911ae
@@ -41,7 +42,7 @@ migration:
   altReviewRequired: 0
 ---
 
-<p><em>Part 2 of our journey to the Venice Biennale. Read </em><em><a href="https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015">Part 1</a></em><em> first to avoid spoilers.</em></p>
+<p><em>Part 2 of our journey to the Venice Biennale. Read </em><em><a href="https://tinkercademy.com/blog/2018/viennale-annals-i/">Part 1</a></em><em> first to avoid spoilers.</em></p>
 
 <h3>Packing tubes</h3>
 

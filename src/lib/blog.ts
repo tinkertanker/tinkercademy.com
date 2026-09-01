@@ -1,11 +1,11 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-export const BLOG_ORIGIN = 'https://blog.tinkercademy.com';
+export const SITE_ORIGIN = 'https://tinkercademy.com';
+export const BLOG_PATH = '/blog';
+export const BLOG_ORIGIN = `${SITE_ORIGIN}${BLOG_PATH}`;
 export const BLOG_TITLE = 'Tinkercademy Build Log';
 export const BLOG_DESCRIPTION = 'The company we build, by the company we build with.';
-export const BLOG_FEED_URL = `${BLOG_ORIGIN}/feed`;
-
-const previewBasePath = import.meta.env.BLOG_PREVIEW_BASE_PATH?.trim().replace(/\/$/u, '') || '';
+export const BLOG_FEED_URL = `${BLOG_ORIGIN}/feed.xml`;
 
 export type BlogStory = CollectionEntry<'blog'>;
 
@@ -32,9 +32,11 @@ export function blogDateTime(date: Date, precision?: 'month'): string {
 	return precision === 'month' ? date.toISOString().slice(0, 7) : date.toISOString();
 }
 
+export function blogStoryPath(story: BlogStory): string {
+	return `/${story.data.publishedAt.getUTCFullYear()}/${story.data.slug}/`;
+}
+
 export function blogHref(pathname = '/'): string {
-	if (!previewBasePath) return new URL(pathname, BLOG_ORIGIN).toString();
-	if (pathname === '/feed') return `${previewBasePath}/feed.xml`;
 	const path = pathname.startsWith('/') ? pathname : `/${pathname}`;
-	return path === '/' ? `${previewBasePath}/` : `${previewBasePath}${path}`;
+	return `${BLOG_PATH}${path}`;
 }

@@ -1,8 +1,9 @@
 ---
 title: "From Vue.js to micro:bit: Twelve Weeks Building EdTech"
 description: "From Vue.js to micro:bit: Twelve Weeks Building EdTech"
+slug: from-vue-js-to-micro-bit-twelve-weeks-building-edtech
 legacyPath: my-summer-internship-with-tinkertanker-2071b60a462b
-canonicalUrl: https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b
+canonicalUrl: https://tinkercademy.com/blog/2025/from-vue-js-to-micro-bit-twelve-weeks-building-edtech/
 sourceMediumUrl: https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b
 author:
   id: dbe490e80fa7

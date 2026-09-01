@@ -2,8 +2,9 @@
 title: Using Python and Pandas to generate useful reports out of CSV files, part 1
 subtitle: "Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&L) survey. In this survey, students offered…"
 description: "Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&L) survey. In this survey, students offered…"
+slug: using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1
 legacyPath: using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382
-canonicalUrl: https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382
+canonicalUrl: https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/
 sourceMediumUrl: https://medium.com/tinkertanker/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382
 author:
   id: 444f1363f2e7
@@ -260,4 +261,4 @@ df.groupby(["Name of Teacher", "Teaching Group"]).count()["Timestamp"].to_frame(
 
 <img src="/blog-media/3c2ff802b75959e2eed3bf7d20fd6573acbc2baf28c456c2df08314e5a824372.png" alt="CSV grouped by teacher and teaching group, with a count for each group" width="578" height="357" loading="lazy" decoding="async" />
 
-<p>Click <a href="https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433">here</a> to continue part 2 of this article!</p>
+<p>Click <a href="https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2/">here</a> to continue part 2 of this article!</p>

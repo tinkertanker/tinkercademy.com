@@ -2,8 +2,9 @@
 title: Launching A One-Stop Digital Wallet for Our Adult Learners
 subtitle: Imagine using blockchain technology to store your digital certificates on your smartphone, accessible anywhere. Introducing Ceal by Affinidi
 description: Imagine using blockchain technology to store your digital certificates on your smartphone, accessible anywhere. Introducing Ceal by Affinidi
+slug: launching-a-one-stop-digital-wallet-for-our-adult-learners
 legacyPath: launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a
-canonicalUrl: https://blog.tinkercademy.com/launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a
+canonicalUrl: https://tinkercademy.com/blog/2023/launching-a-one-stop-digital-wallet-for-our-adult-learners/
 sourceMediumUrl: https://medium.com/tinkertanker/launching-a-one-stop-digital-wallet-for-our-adult-learners-2e937009063a
 author:
   id: be2990b8a35

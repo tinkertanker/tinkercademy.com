@@ -2,8 +2,9 @@
 title: A Youth Month of Tinkerers
 subtitle: “This Youth Month, we want to let our youth know that all Singaporeans are committed to journeying with and empowering them to write the…
 description: “This Youth Month, we want to let our youth know that all Singaporeans are committed to journeying with and empowering them to write the…
+slug: a-youth-month-of-tinkerers
 legacyPath: a-youth-month-of-tinkerers-c46ad5cbfda6
-canonicalUrl: https://blog.tinkercademy.com/a-youth-month-of-tinkerers-c46ad5cbfda6
+canonicalUrl: https://tinkercademy.com/blog/2021/a-youth-month-of-tinkerers/
 sourceMediumUrl: https://medium.com/tinkertanker/a-youth-month-of-tinkerers-c46ad5cbfda6
 author:
   id: c20526b798dc

@@ -2,8 +2,9 @@
 title: Why We Encourage Our Students to Use ChatGPT in Class
 subtitle: With more than 1 billion users worldwide, ChatGPT has sparked much debate about issues like academic fraud, plagiarism, and the validity of…
 description: With more than 1 billion users worldwide, ChatGPT has sparked much debate about issues like academic fraud, plagiarism, and the validity of…
+slug: why-we-encourage-our-students-to-use-chatgpt-in-class
 legacyPath: why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607
-canonicalUrl: https://blog.tinkercademy.com/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607
+canonicalUrl: https://tinkercademy.com/blog/2023/why-we-encourage-our-students-to-use-chatgpt-in-class/
 sourceMediumUrl: https://medium.com/tinkertanker/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607
 author:
   id: be2990b8a35

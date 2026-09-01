@@ -2,8 +2,9 @@
 title: Learning From Teaching
 subtitle: "Intern report: Marketing for littleBits"
 description: "Intern report: Marketing for littleBits"
+slug: learning-from-teaching
 legacyPath: learning-from-teaching-9bd92cc92982
-canonicalUrl: https://blog.tinkercademy.com/learning-from-teaching-9bd92cc92982
+canonicalUrl: https://tinkercademy.com/blog/2017/learning-from-teaching/
 sourceMediumUrl: https://medium.com/tinkertanker/learning-from-teaching-9bd92cc92982
 author:
   id: abec9222e85d

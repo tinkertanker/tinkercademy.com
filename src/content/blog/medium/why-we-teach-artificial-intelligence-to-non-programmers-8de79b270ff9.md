@@ -2,8 +2,9 @@
 title: Why We Teach Artificial Intelligence to Non-Programmers
 subtitle: AI is becoming part and parcel of modern-day life. Whether you’re a programmer or not, understanding AI is now a necessity.
 description: AI is becoming part and parcel of modern-day life. Whether you’re a programmer or not, understanding AI is now a necessity.
+slug: why-we-teach-artificial-intelligence-to-non-programmers
 legacyPath: why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9
-canonicalUrl: https://blog.tinkercademy.com/why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9
+canonicalUrl: https://tinkercademy.com/blog/2023/why-we-teach-artificial-intelligence-to-non-programmers/
 sourceMediumUrl: https://medium.com/tinkertanker/why-we-teach-artificial-intelligence-to-non-programmers-8de79b270ff9
 author:
   id: be2990b8a35

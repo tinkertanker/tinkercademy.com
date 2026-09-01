@@ -2,8 +2,9 @@
 title: "Orange v/s PyCaret v/s Scikit: A Comparison of Beginner Machine Learning Libraries"
 subtitle: A summary of why you should get started with each of these top 3 ML libraries
 description: A summary of why you should get started with each of these top 3 ML libraries
+slug: orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries
 legacyPath: orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f
-canonicalUrl: https://blog.tinkercademy.com/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f
+canonicalUrl: https://tinkercademy.com/blog/2024/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries/
 sourceMediumUrl: https://medium.com/tinkertanker/orange-v-s-pycaret-v-s-scikit-a-comparison-of-beginner-machine-learning-libraries-2d79c0e43e3f
 author:
   id: 76bbf733745

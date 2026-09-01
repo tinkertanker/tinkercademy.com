@@ -2,8 +2,9 @@
 title: My first Work-From-Home Summer Internship
 subtitle: As the enthusiastic freshman I was, I volunteered to help out for school events back in my very first winter break. I met some seniors who…
 description: As the enthusiastic freshman I was, I volunteered to help out for school events back in my very first winter break. I met some seniors who…
+slug: my-first-work-from-home-summer-internship
 legacyPath: my-first-work-from-home-summer-internship-a28e0646e1a9
-canonicalUrl: https://blog.tinkercademy.com/my-first-work-from-home-summer-internship-a28e0646e1a9
+canonicalUrl: https://tinkercademy.com/blog/2020/my-first-work-from-home-summer-internship/
 sourceMediumUrl: https://medium.com/tinkertanker/my-first-work-from-home-summer-internship-a28e0646e1a9
 author:
   id: e885ae83644b
