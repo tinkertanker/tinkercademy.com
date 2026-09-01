@@ -1,6 +1,6 @@
 ---
-title: My Summer Internship with Tinkertanker
-description: My Summer Internship with Tinkertanker
+title: "From Vue.js to micro:bit: Twelve Weeks Building EdTech"
+description: "From Vue.js to micro:bit: Twelve Weeks Building EdTech"
 legacyPath: my-summer-internship-with-tinkertanker-2071b60a462b
 canonicalUrl: https://blog.tinkercademy.com/my-summer-internship-with-tinkertanker-2071b60a462b
 sourceMediumUrl: https://medium.com/tinkertanker/my-summer-internship-with-tinkertanker-2071b60a462b

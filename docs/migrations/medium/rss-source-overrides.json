@@ -16,6 +16,7 @@
       "basis": "The user confirmed that the Medium RSS creator name Twasacarrot is Claire Phay. The source creator string remains in inventory provenance. The user subsequently requested a clearer editorial title and corrected Tinkertanker brand casing throughout the article."
     },
     "9b7eae9a5c17": {
+      "title": "Games, Claude and a New Teacher Platform",
       "author": {
         "id": "de11432c5299",
         "name": "Tan Boon Leong",
@@ -24,9 +25,10 @@
       },
       "publishedAt": "2025-04-01T00:00:00.000Z",
       "publishedAtPrecision": "month",
-      "basis": "Public Medium story byline and author-profile link. Medium's public author feed, current structured page data, and public web archives did not expose an earlier exact date; they only reported the 1 September 2026 publication event. The user supplied April 2025 as the fallback original publication month, normalized internally to the first UTC day while retaining month precision for display."
+      "basis": "Public Medium story byline and author-profile link. Medium's public author feed, current structured page data, and public web archives did not expose an earlier exact date; they only reported the 1 September 2026 publication event. The user supplied April 2025 as the fallback original publication month, normalized internally to the first UTC day while retaining month precision for display. The user subsequently requested a less generic editorial title grounded in the story's Unity game work, Claude-assisted development, and teacher-platform redesign."
     },
     "2071b60a462b": {
+      "title": "From Vue.js to micro:bit: Twelve Weeks Building EdTech",
       "author": {
         "id": "dbe490e80fa7",
         "name": "chavonz",
@@ -35,7 +37,7 @@
       },
       "publishedAt": "2025-08-01T00:00:00.000Z",
       "publishedAtPrecision": "month",
-      "basis": "Public Medium story byline and author-profile link. Medium's public author feed, current structured page data, and public web archives did not expose an earlier exact date; they only reported the 1 September 2026 publication event. The user supplied August 2025 as the fallback original publication month, normalized internally to the first UTC day while retaining month precision for display."
+      "basis": "Public Medium story byline and author-profile link. Medium's public author feed, current structured page data, and public web archives did not expose an earlier exact date; they only reported the 1 September 2026 publication event. The user supplied August 2025 as the fallback original publication month, normalized internally to the first UTC day while retaining month precision for display. The user subsequently requested a less generic editorial title grounded in the story's Vue.js platform work, micro:bit curriculum, and twelve-week EdTech internship."
     },
     "8b39f2ce987e": {
       "author": {
