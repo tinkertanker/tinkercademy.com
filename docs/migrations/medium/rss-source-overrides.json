@@ -2,7 +2,7 @@
   "version": 1,
   "stories": {
     "cb94bd7d0272": {
-      "title": "Learning, Building and Teaching: My Tinkertanker Internship",
+      "title": "Learning, Building, and Teaching: My Tinkertanker Internship",
       "textReplacements": [
         {
           "from": "TinkerTanker",
@@ -16,7 +16,7 @@
       "basis": "The user confirmed that the Medium RSS creator name Twasacarrot is Claire Phay. The source creator string remains in inventory provenance. The user subsequently requested a clearer editorial title and corrected Tinkertanker brand casing throughout the article."
     },
     "9b7eae9a5c17": {
-      "title": "Games, Claude and a New Teacher Platform",
+      "title": "Games, Claude, and a New Teacher Platform",
       "author": {
         "id": "de11432c5299",
         "name": "Tan Boon Leong",
