@@ -4,9 +4,11 @@ This directory is the reviewable source of truth for moving the public
 Tinkercademy Build Log from Medium to `tinkercademy.com/blog/`, with a permanent
 redirect from every historical story URL.
 
-No committed configuration attaches `blog.tinkercademy.com` to the Worker.
-`wrangler.blog-cutover.jsonc` records the approved end-state shape but must not
-be deployed before an explicit cutover request.
+`wrangler.jsonc` records the approved end state: the same production Worker owns
+both `tinkercademy.com` and `blog.tinkercademy.com`. Cloudflare treats routes and
+domains as triggers, so the normal `wrangler versions upload` and
+`wrangler versions deploy` flow does not attach the legacy hostname. That
+separate trigger change is the final, independently reversible cutover step.
 
 ## Current baseline
 
@@ -177,38 +179,49 @@ all 72 generated legacy redirects, feed/sitemap counts, the sitemap ownership
 boundary, rights notices, and absence of remote Medium/Embedly assets, Google
 tracking redirects, or raw embed scripts.
 
-## Cutover — not yet authorised
+## Production cutover
 
-These are later operator steps, not actions performed by this implementation:
+The code release and hostname move are deliberately separate. The complete,
+operator-ready sequence and rollback fields live in
+[`docs/deployment.md`](../../deployment.md#build-log-hostname-cutover). In
+summary:
 
 1. Confirm the reviewed 72-story rights ledger and 152-image accessibility
-   decisions still have no new holds after any deliberate public-data refresh.
-2. Run the strict verifier without exceptions and browser-test representative
-   image-heavy, GIF, code, and embed stories through `wrangler dev`.
-3. Commit and push the reviewed implementation; promote its Worker version by
-   the repository's normal `v*` tag workflow. Verify `/blog/`, representative
-   story URLs, archives, feed, sitemap, and the two unchanged `/articles/` pages.
-4. Capture the live Medium feed, sitemap, publication settings, and analytics
-   baseline. Keep the Medium publication and stories intact.
-5. In a user-operated Medium browser session, explicitly remove/disconnect the
-   publication custom domain or obtain Medium Support's supported sequence. Do
-   not share credentials, cookies, MFA codes, or session files.
-6. In Cloudflare Workers → `tinkercademy-dot-com` → Settings → Domains & Routes,
-   add the custom domain `blog.tinkercademy.com`. Resolve the existing Medium DNS
-   record only as part of that approved operation. The desired two-domain
-   configuration is recorded in `wrangler.blog-cutover.jsonc`.
-7. Verify all 72 historical story URLs return one 308 hop to their expected
-   `https://tinkercademy.com/blog/<year>/<clean-slug>/` destination. Verify old
-   root, archives, feed, sitemap aliases, robots, assets, unknown 404 behavior,
-   and query-string preservation.
-8. Submit `https://tinkercademy.com/blog/sitemap.xml`. Medium canonical changes,
-   if desired, must be made by each story author only after the apex URL returns
-   200.
+   decisions still have no holds. Run the strict verifier without exceptions.
+2. Before promotion, snapshot the complete active Worker deployment and prior
+   rollback version, all zone routes/domains and apex mappings, the full mutable
+   `blog` DNS payload, certificate/CAA state, and Medium custom-domain state.
+   Keep that rollback snapshot immutable. Track the intended baseline,
+   promoted, bridged, CNAME-removed, Custom-Domain-ready, and final states in a
+   separate expected-state ledger and action/result journal; stop on every
+   undeclared delta.
+3. Push the reviewed implementation and wait for its upload-only Workers Build.
+   Promote only that exact version with the normal `v*` tag workflow.
+4. Before changing the legacy hostname, run
+   `pnpm run smoke:blog -- --apex-only` to verify the canonical `/blog/`
+   homepage, all 72 stories, all 412 local files and hashes, archives, feed, and
+   sitemap. Also check the two unchanged `/articles/` pages on production.
+5. Leave the proxied Medium CNAME untouched and add the exact temporary Worker
+   Route `blog.tinkercademy.com/*`. Run the complete `pnpm run smoke:blog` gate;
+   failure removes only that route and returns traffic to Medium.
+6. Require the ledger's promoted-plus-bridge state, delete only the recorded
+   CNAME, verify that this is the sole delta, and attach the final
+   `blog.tinkercademy.com` Custom Domain while keeping the route. Require the
+   exact domain-to-Worker mapping, generated DNS, public resolution, active
+   certificate, valid HTTPS, and HTTP upgrade before continuing.
+7. Delete only the temporary route and rerun the complete smoke gate. This
+   post-route pass proves the Custom Domain rather than the bridge.
+8. Submit `https://tinkercademy.com/blog/sitemap.xml` in Search Console and
+   review Cloudflare request errors, redirect status, analytics, and 404s.
 
-Rollback during launch: remove the Worker custom-domain route and restore the
-recorded Medium DNS/custom-domain state. The apex `/blog/` copy can remain
-available while DNS rolls back. Because Medium says re-verification can take up
-to three days, also prepare a Cloudflare 302 fallback from each historical
-`blog.tinkercademy.com/<path>` to its original
-`https://medium.com/tinkertanker/<path>` before cutover. Do not delete or edit
-the Medium copies during the rollback window.
+Rollback is state-aware: remove only recorded route/domain IDs, inspect generated
+DNS cleanup, recreate the full original CNAME payload, and verify Medium before
+removing a bridge route. The generated Advanced Certificate is separate deferred
+cleanup. Roll back apex code independently by promoting the snapshotted prior
+Worker deployment.
+
+Keep Medium intact but disconnected for 30–90 days. Export the publication and
+record its administrators before eventual closure. Closing Medium may make the
+visible `medium.com/tinkertanker/...` source links unavailable, so decide whether
+to preserve them as historical destinations or supplement them with archived
+references before deleting the publication or account.

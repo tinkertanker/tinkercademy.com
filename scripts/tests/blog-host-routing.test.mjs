@@ -1,8 +1,17 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 import legacyRedirects from '../../src/data/blog-legacy-redirects.json' with { type: 'json' };
 import { planHostRequest } from '../../src/lib/blog-host-routing.js';
+
+test('the durable Worker config declares both production custom domains', async () => {
+	const config = JSON.parse(await readFile(new URL('../../wrangler.jsonc', import.meta.url), 'utf8'));
+	assert.deepEqual(config.routes, [
+		{ pattern: 'tinkercademy.com', custom_domain: true },
+		{ pattern: 'blog.tinkercademy.com', custom_domain: true },
+	]);
+});
 
 test('the generated redirect contract covers all 72 migrated story paths', () => {
 	const entries = Object.entries(legacyRedirects.redirects);

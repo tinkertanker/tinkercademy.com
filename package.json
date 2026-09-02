@@ -20,6 +20,7 @@
     "review:medium": "node scripts/review-medium-migration.mjs",
     "verify:medium": "node scripts/verify-medium-migration.mjs",
     "test:medium": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/worker-routing.test.mjs",
+    "smoke:blog": "node scripts/smoke-blog-cutover.mjs",
     "check": "astro check",
     "smoke": "node scripts/smoke-check.mjs",
     "deploy": "npx wrangler versions deploy",

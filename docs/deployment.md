@@ -10,6 +10,7 @@ is identical across builds.
 |---|---|---|---|---|
 | Staging | `webstaging.tinkercademy.com` | GitHub Pages | Push to `main` (`.github/workflows/deploy.yml`) | *(unset → default)* |
 | Production | `tinkercademy.com` | Cloudflare Workers (static assets) | Push to `main` uploads a version; a `v*` tag promotes it (`.github/workflows/promote-production.yml`) | `https://tinkercademy.com` |
+| Legacy Build Log redirects | `blog.tinkercademy.com` | Same production Worker | Temporary Worker Route, then explicit Custom Domain attachment after the apex blog is live | Same production build |
 
 ### Why two platforms?
 
@@ -124,6 +125,12 @@ upload of that commit **on `main`**, resolves its Worker version ID, and runs
 will not promote a preview-branch upload of the same SHA, and will not
 guess "the latest version" if a newer `main` push has landed.
 
+Worker versions and triggers are separate Cloudflare resources. Neither
+`wrangler versions upload` nor `wrangler versions deploy` applies changes to
+routes, Custom Domains, or cron triggers. Apply an intentional trigger change
+separately with the dashboard/API or `wrangler triggers deploy`; never replace
+the upload-only build command with `wrangler deploy`.
+
 The workflow needs a `CLOUDFLARE_API_TOKEN` repository secret: a
 **user-scoped** token from My Profile → API Tokens, with Workers Builds
 Configuration: Edit and Workers Scripts: Edit. Account-owned tokens are
@@ -179,6 +186,171 @@ under can't touch `.github/workflows/*`. One hand-edit by you is enough.)*
 For the Cloudflare Worker, add the same check as a deploy hook
 (Settings → Deploy hooks / post-build scripts) pointing at
 `https://tinkercademy.com` when convenient.
+
+## Build Log hostname cutover
+
+The canonical publication lives at `https://tinkercademy.com/blog/`. The same
+Worker accepts `blog.tinkercademy.com` only to issue permanent redirects from
+the historical Medium custom-domain URLs. `wrangler.jsonc` records the final
+two-Custom-Domain topology. Version upload and promotion do not apply that
+trigger configuration.
+
+The hostname moves in two stages. A temporary exact-host Worker Route first
+switches traffic while leaving Medium's proxied CNAME untouched. That proves the
+redirect behavior on the real hostname and rolls back by deleting one route.
+Afterward, the CNAME is replaced by the final Worker Custom Domain while the
+temporary route remains as a bridge. The route is removed only after the Custom
+Domain's DNS and certificate are independently ready.
+
+### Preflight snapshot and stop gate
+
+Before touching the `blog` hostname:
+
+1. Run the repository gates:
+
+   ```sh
+   pnpm run test:medium
+   pnpm run check
+   SITE_URL=https://tinkercademy.com pnpm run build
+   pnpm run verify:medium -- --dist dist
+   ```
+
+2. In an authenticated Cloudflare session, verify the account ID, active zone,
+   Worker name, and least-required DNS/Workers permissions. Save an uncommitted
+   timestamped rollback snapshot under `.amp/in/artifacts/` containing:
+   - the complete active Worker deployment, including every version and traffic
+     percentage, and a prior version that still exists and can be promoted;
+   - all zone Worker Routes, Worker Custom Domains, and the existing apex
+     mapping, including IDs;
+   - the full mutable `blog` DNS record payload and current ID: name, type,
+     content, proxied state, TTL, priority, settings, comment, and tags;
+   - current edge/Advanced Certificate details, effective inherited CAA answers,
+     and Medium's custom-domain state.
+3. Treat DNS restoration as semantic restoration: Cloudflare assigns the
+   recreated record a new ID. Prepare the exact restore and route/domain removal
+   actions before mutation without saving credentials in the snapshot.
+4. Stop if the account, zone, Worker, prior version, DNS record, route/domain
+   inventory, certificate/CAA state, permissions, or rollback payload is missing
+   or ambiguous. Keep this pre-promotion rollback snapshot immutable.
+5. Create a separate expected-state ledger and action/result journal. Before
+   each mutation, compare actual state field-for-field with its ledger phase:
+   - **A — before promotion:** the immutable baseline;
+   - **B — before route creation:** the exact promoted deployment at 100%, with
+     routes, domains, DNS, certificates, and apex mapping still at baseline;
+   - **C — before CNAME deletion:** phase B plus only the recorded bridge route;
+   - **D — before Custom Domain attachment:** phase C with only the snapshotted
+     CNAME absent;
+   - **E — before bridge deletion:** the promoted deployment, recorded bridge,
+     recorded Custom Domain and generated DNS, active recorded certificate, and
+     unchanged apex mapping;
+   - **F — final:** phase E with only the recorded bridge route absent.
+
+   Record each requested mutation and provider result in the journal, then prove
+   it produced only the transition declared above. Resolve newly assigned
+   version, route, domain, DNS, and certificate IDs in the ledger; never rewrite
+   the rollback snapshot. Any undeclared difference is a stop condition.
+
+### Release and verify the apex blog
+
+1. Push the reviewed `main` commit and wait for its upload-only Workers Build.
+   Record the uploaded Worker version ID and prove it belongs to that exact
+   commit, account, and `tinkercademy-dot-com` service.
+2. Tag that exact commit with a unique `v*` tag. Confirm the promotion workflow
+   deploys only the recorded version at 100% traffic.
+3. Run both production gates before changing any `blog` trigger or DNS:
+
+   ```sh
+   pnpm run smoke https://tinkercademy.com
+   pnpm run smoke:blog -- --apex-only
+   ```
+
+   The blog gate verifies all 72 canonical stories plus the bodies, byte sizes,
+   MIME types, and SHA-256 hashes of all 412 local media files. On any failure,
+   promote the snapshotted prior deployment at 100%, verify the apex, and stop.
+
+### Switch traffic with a temporary route
+
+The existing `blog` DNS record must be proxied. Leave that CNAME and Medium
+unchanged. In Workers & Pages → `tinkercademy-dot-com` → Settings → Domains &
+Routes, add only this Route:
+
+```text
+blog.tinkercademy.com/*
+```
+
+Omit a scheme so both HTTP and HTTPS match, and retain the trailing `*` so
+query-bearing URLs match. Record the created route ID and prove the route maps
+to `tinkercademy-dot-com` without changing the apex mapping. Do not put this
+temporary route in `wrangler.jsonc`; do not run `wrangler deploy` or
+`wrangler triggers deploy` during the cutover.
+
+Run the full live-host gate:
+
+```sh
+pnpm run smoke:blog
+```
+
+It verifies HTTP-to-HTTPS, both slash forms and query preservation for all 72
+legacy paths, discovery redirects, every canonical story, local media hashes,
+attribution, rights notices, forbidden remote assets, and the intentional 404.
+Also inspect Worker exceptions and 5xx responses. Any failure rolls back by
+deleting only the recorded temporary route and verifying that the untouched
+CNAME serves Medium.
+
+### Convert to the final Custom Domain
+
+1. Re-read DNS, routes, domains, deployment, certificate, and CAA state. Require
+   field-for-field agreement with ledger phase C. Confirm effective CAA permits
+   Cloudflare's current certificate authorities and that the exact rollback
+   actions are ready.
+2. In one authenticated change window, delete only the snapshotted `blog` CNAME
+   by ID, verify ledger phase D, and immediately attach
+   `blog.tinkercademy.com` as a Custom Domain of `tinkercademy-dot-com`. Keep the
+   temporary route in place. Do not change code or the apex trigger.
+3. Record the Custom Domain ID, Cloudflare-generated DNS record, and generated
+   certificate ID. If attachment fails or usable public DNS is absent for 60
+   seconds, execute DNS rollback rather than waiting interactively.
+4. Before removing the temporary route, independently prove all of these:
+   - the Cloudflare account maps exactly `blog.tinkercademy.com` to
+     `tinkercademy-dot-com`;
+   - the generated proxied DNS record exists and public DNS resolves;
+   - HTTPS presents a valid certificate for the hostname and the recorded
+     certificate is active;
+   - HTTP permanently redirects to HTTPS.
+5. A Worker Route takes precedence over a Custom Domain, so passing tests while
+   it exists does not prove the final topology. Require ledger phase E, delete
+   only the recorded bridge route by ID, then require ledger phase F and rerun
+   `pnpm run smoke:blog` in full. This second pass is the Custom Domain proof.
+
+### Rollback
+
+The hostname, bridge route, and Worker version roll back independently:
+
+- **Worker-wide regression:** promote the snapshotted prior deployment at 100%
+  and verify provider state plus apex behavior. This affects every hostname and
+  is not a substitute for hostname rollback.
+- **Bridge failure:** delete only the recorded route, confirm it is absent, and
+  verify that the unchanged CNAME serves Medium.
+- **Custom Domain conversion failure:** detach only the recorded/partial `blog`
+  Custom Domain if present; inspect rather than assume generated-DNS cleanup;
+  remove only a remaining generated `blog` record if required; recreate the
+  original CNAME from the full saved payload; and verify public DNS and TLS. Keep
+  the bridge route if the desired temporary state is Worker-via-Route. Remove it
+  only when returning users to Medium.
+- **Post-route-removal failure:** re-add the exact bridge route only when the
+  generated DNS/TLS state and Worker are known healthy; otherwise perform the
+  full hostname rollback to Medium.
+
+Cloudflare does not automatically delete the generated Advanced Certificate
+when a Custom Domain is detached. Record that residual certificate during an
+emergency rollback and remove it only in a later, separate cleanup after routing
+is stable.
+
+Keep the Medium publication/account unchanged for 30–90 days after cutover.
+Retain the rollback snapshot through that window. Monitor DNS/TLS, Worker
+exceptions and 5xx, redirect status, canonical destinations, and analytics.
+Export Medium and decide how to treat potentially dead historical source links
+before closing the publication or account.
 
 ## Cutover checklist
 

@@ -10,6 +10,7 @@
 		"run_worker_first": true
 	},
 	"routes": [
-		{ "pattern": "tinkercademy.com", "custom_domain": true }
+		{ "pattern": "tinkercademy.com", "custom_domain": true },
+		{ "pattern": "blog.tinkercademy.com", "custom_domain": true }
 	]
 }
