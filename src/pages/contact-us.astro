@@ -168,29 +168,46 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: clamp(420px, 56vh, 580px);
+		min-height: 480px;
 		overflow: clip;
-		background: #0a0a0a;
+		background: #161111;
 	}
 
 	.contact-hero__bg {
 		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center center;
+		inset: var(--hero-scene-inset);
+		width: auto;
+		height: var(--hero-scene-height);
+		max-width: none;
+		object-fit: contain;
+		object-position: right top;
+	}
+
+	@media (min-width: 810px) and (max-width: 1199px) {
+		.contact-hero__bg {
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
 	}
 
 	.contact-hero__scrim {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0.35) 0%,
-			rgba(0, 0, 0, 0.15) 40%,
-			rgba(0, 0, 0, 0.7) 100%
-		);
+		background: var(--hero-desktop-scrim);
+	}
+
+	@media (max-width: 809px) {
+		.contact-hero {
+			min-height: 420px;
+		}
+
+		.contact-hero__scrim {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+		}
 	}
 
 	.contact-hero__content {
@@ -211,7 +228,9 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		font-weight: 500;
 		line-height: 1;
 		color: #fff;
+		max-width: var(--hero-title-max-width);
 		text-wrap: balance;
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.contact-hero__subtitle {

@@ -86,7 +86,20 @@ Freeform x/y still works for scenes that need something bespoke.
    the middle band (~x 0.45–0.75); the robot stands at x ≈ 0.84 engaging with
    it — pointing, saluting, reacting. Poses that point off-canvas get
    `flip: true`. (Centred compositions are for `headlineSide: "none"` cards
-   only.) Page-hero bands share one height: `clamp(420px, 56vh, 580px)`.
+   only.) Full-width internal-page heroes use a 480px desktop height and a
+   420px mobile minimum; the homepage alone retains 640px. Unusually long
+   mobile titles may grow the band as needed. Titles may use 60vw at
+   intermediate widths; the 40vw cap is reserved for screens at least 1200px
+   wide. They use a gentle warm glow pulse; do not copy the homepage
+   highlight's sheen or lens flare. The desktop scrim stays at 55% black
+   through 50vw, then fades to fully transparent by 70vw. From 1200px, render
+   the 16:9 scene from the right at 130% of hero height rather than covering by
+   viewport width and offset it 6px downward. Mobile renders at 78% height—20%
+   smaller than the prior 97.5% treatment—and uses the mascot's x ≈ 0.84
+   placement to centre it in the open area above the title. Fade the scene's
+   top and bottom edges into the dark background. Long-title static heroes may
+   reduce the scene to 60% to preserve that separation. Intermediate widths
+   retain a centred cover crop.
 4. **The formula: one robot, one screen, one-plus props.** A scene is one
    mascot pose + one device·screen combo + one or two *physical* sticker-props
    that identify the course (prefer a minted object over a second screen —
@@ -393,7 +406,11 @@ for them"* — operability matters as much as any single image.
 
 Dark scenes everywhere (both hero templates overlay white text) · mascot
 rightmost at h 0.40–0.50, trio 0.44 · baseline 0.76 · bubbles ≈ y 0.29 ·
-band height clamp(420px, 56vh, 580px) · faded backdrops darken 0.4 / sat
+internal-page hero height 480px desktop / 420px mobile minimum · homepage
+640px · title width ≤ 60vw at 810–1199px and ≤ 40vw from 1200px, with a 4.5s
+warm glow pulse · mobile scene 78% hero height and mascot centred above title ·
+≥1200px scene 130%, right-aligned and offset 6px down · desktop scrim 55%
+through 50vw → clear at 70vw · faded backdrops darken 0.4 / sat
 0.25 / tint 0.78, source priority real photo → page original → AI candidate ·
 flagship cards centred (headlineSide "none") · no sparkles, no emanata, no
 skyline · Lucide for glyphs, simple-icons for logos · mint prompts strictly

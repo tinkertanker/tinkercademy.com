@@ -187,23 +187,46 @@ const otherTutorials = (site.tutorials ?? [])
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: clamp(420px, 56vh, 580px);
+		min-height: 480px;
 		overflow: clip;
-		background: #0a0a0a;
+		background: #161111;
 	}
 
 	.mb-hero__bg {
 		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		inset: var(--hero-scene-inset);
+		width: auto;
+		height: var(--hero-scene-height);
+		max-width: none;
+		object-fit: contain;
+		object-position: right top;
+	}
+
+	@media (min-width: 810px) and (max-width: 1199px) {
+		.mb-hero__bg {
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
 	}
 
 	.mb-hero__scrim {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.55) 100%);
+		background: var(--hero-desktop-scrim);
+	}
+
+	@media (max-width: 809px) {
+		.mb-hero {
+			min-height: 420px;
+		}
+
+		.mb-hero__scrim {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+		}
 	}
 
 	.mb-hero__content {
@@ -224,6 +247,8 @@ const otherTutorials = (site.tutorials ?? [])
 		line-height: 1;
 		color: #fff;
 		margin: 0;
+		max-width: var(--hero-title-max-width);
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.mb-hero__lead {

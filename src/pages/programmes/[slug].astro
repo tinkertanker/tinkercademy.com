@@ -53,6 +53,12 @@ const primaryAudience = programme.primaryAudience;
 const enquiryLabel = programme.signUpLabel ?? 'Enquire now';
 const primaryCtaLabel = programme.primaryCta?.label ?? enquiryLabel;
 const primaryCtaUrl = programme.primaryCta?.url ?? '#enquire';
+const certificateEyebrow = 'Certificate in Technology Foundations';
+const certificateTitlePrefix = `${certificateEyebrow}:`;
+const isTechnologyFoundationsCertificate = programme.title.startsWith(certificateTitlePrefix);
+const heroTitle = isTechnologyFoundationsCertificate
+	? programme.title.slice(certificateTitlePrefix.length).trim()
+	: programme.title;
 const typeLabel =
 	programme.courseType === 'public'
 		? 'Public'
@@ -150,12 +156,15 @@ const breadcrumbSchema = {
 				alt=""
 				loading="eager"
 				fetchpriority="high"
-				decoding="async"
+				decoding="sync"
 			/>
 		)}
 		<div class="prog-hero__overlay" />
 		<div class="prog-hero__text shell">
-			<h1 class="prog-hero__title">{programme.title}</h1>
+			{isTechnologyFoundationsCertificate && (
+				<p class="prog-hero__eyebrow">{certificateEyebrow}</p>
+			)}
+			<h1 class="prog-hero__title">{heroTitle}</h1>
 			{duration && <p class="prog-hero__duration">{duration}</p>}
 			<div class="prog-hero__actions">
 				<a class="prog-hero__cta" href={primaryCtaUrl}>{primaryCtaLabel}</a>
@@ -293,30 +302,39 @@ const breadcrumbSchema = {
 	.prog-hero {
 		position: relative;
 		width: 100%;
-		min-height: clamp(340px, 50vh, 480px);
+		min-height: 480px;
 		display: flex;
 		align-items: flex-end;
 		overflow: hidden;
+		background: #161111;
 	}
 
 	.prog-hero__bg {
 		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: var(--prog-hero-object-position, 50% 30%);
+		inset: var(--hero-scene-inset);
+		width: auto;
+		height: var(--hero-scene-height);
+		max-width: none;
+		object-fit: contain;
+		object-position: right top;
 		z-index: 0;
+	}
+
+	@media (min-width: 810px) and (max-width: 1199px) {
+		.prog-hero__bg {
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			object-position: 50% 30%;
+		}
 	}
 
 	.prog-hero__overlay {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0.35) 0%,
-			rgba(0, 0, 0, 0.55) 100%
-		);
+		background: var(--hero-desktop-scrim);
 		z-index: 1;
 	}
 
@@ -327,6 +345,17 @@ const breadcrumbSchema = {
 		padding-bottom: 48px;
 	}
 
+	.prog-hero__eyebrow {
+		margin: 0 0 0.75rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.96rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.82);
+	}
+
 	.prog-hero__title {
 		font-family: 'Lora Ampersand', 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
@@ -335,7 +364,8 @@ const breadcrumbSchema = {
 		line-height: 1.05;
 		color: #fff;
 		margin: 0;
-		max-width: 18ch;
+		max-width: var(--hero-title-max-width);
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.prog-hero__duration {
@@ -646,7 +676,11 @@ const breadcrumbSchema = {
 	/* ─── Responsive ───────────────────────────────────────── */
 	@media (max-width: 809px) {
 		.prog-hero {
-			min-height: 240px;
+			min-height: 420px;
+		}
+
+		.prog-hero__overlay {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
 		}
 
 		.prog-hero__text {

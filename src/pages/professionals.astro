@@ -140,24 +140,46 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: clamp(420px, 56vh, 580px);
+		min-height: 480px;
 		overflow: clip;
-		background: #0a0a0a;
+		background: #161111;
 	}
 
 	.aud-hero__bg {
 		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
+		inset: var(--hero-scene-inset);
+		width: auto;
+		height: var(--hero-scene-height);
+		max-width: none;
+		object-fit: contain;
+		object-position: right top;
+	}
+
+	@media (min-width: 810px) and (max-width: 1199px) {
+		.aud-hero__bg {
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
 	}
 
 	.aud-hero__scrim {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.55) 100%);
+		background: var(--hero-desktop-scrim);
+	}
+
+	@media (max-width: 809px) {
+		.aud-hero {
+			min-height: 420px;
+		}
+
+		.aud-hero__scrim {
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+		}
 	}
 
 	.aud-hero__content {
@@ -178,8 +200,9 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		line-height: 1.05;
 		color: #fff;
 		margin: 0;
-		max-width: 22ch;
+		max-width: min(22ch, var(--hero-title-max-width));
 		text-wrap: balance;
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.aud-hero__lead {
