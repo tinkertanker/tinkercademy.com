@@ -22,6 +22,8 @@
     "test:medium": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/worker-routing.test.mjs",
     "smoke:blog": "node scripts/smoke-blog-cutover.mjs",
     "check": "astro check",
+    "banners:generate": "node scripts/banner/generate-banners.mjs",
+    "banners:check": "node scripts/banner/generate-banners.mjs --check",
     "smoke": "node scripts/smoke-check.mjs",
     "deploy": "npx wrangler versions deploy",
     "deploy:list": "npx wrangler versions list"

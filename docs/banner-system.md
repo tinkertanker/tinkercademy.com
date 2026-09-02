@@ -13,9 +13,19 @@ node scripts/banner/generate-banners.mjs            # regenerate every banner
 node scripts/banner/generate-banners.mjs home       # just one scene id
 ```
 
-Outputs land in `public/images/banners/<id>.webp` (1600×900). To put a banner
-live, point the placement at that path — `heroImage:` frontmatter for a
-programme, `hero_image` in `src/data/pages/static-pages.json` for a static page.
+Each scene produces three assets:
+
+- `<id>-background.webp` — opaque 1600×900 photo/gradient/texture ground;
+- `<id>-foreground.webp` — lossless, tightly cropped alpha WebP containing
+  T Krobot and every movable scene prop; and
+- `<id>.webp` — the established 1600×900 composite for cards, metadata, and
+  consumers that have not migrated to independent layers.
+
+Intrinsic layer dimensions are written to
+`src/generated/banner-assets.json`. Point `heroImage:` frontmatter or static
+page `hero_image` at the composite path; `BannerLayers.astro` resolves the two
+independent render assets from that path. Run the generator with `--check` to
+verify that committed outputs reproduce byte-for-byte without writing files.
 
 ## How to add a banner (agent workflow)
 
@@ -55,6 +65,10 @@ programme, `hero_image` in `src/data/pages/static-pages.json` for a static page.
   mirrors it.
 - Props render in array order, **behind** the mascot; add `layer: "front"` to
   draw one in front (foreground depth, e.g. blocks at the mascot's feet).
+- The export boundary is deliberately before all props: photos, flat ground,
+  gradients, dot texture, spotlight, floor glow, and text guard stay in the
+  opaque background; back props, mascot, and front props share the movable
+  transparent foreground. Scene specs never encode page-title placement.
 
 ## Layout templates
 

@@ -3,7 +3,7 @@
 //
 // Reads scene specs from src/data/banner-scenes.json, composes each banner
 // from vendored T Krobot sticker PNGs (reference/stickers/) plus a flat SVG
-// prop library, and writes 1600x900 webp files to public/images/banners/.
+// prop library, and writes background, foreground, and composite WebPs.
 //
 // Usage:
 //   node scripts/banner/generate-banners.mjs            # all scenes
@@ -22,6 +22,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.
 const SCENES = path.join(ROOT, 'src', 'data', 'banner-scenes.json');
 const STICKERS = path.join(ROOT, 'reference', 'stickers');
 const OUT_DIR = path.join(ROOT, 'public', 'images', 'banners');
+const ASSET_MANIFEST = path.join(ROOT, 'src', 'generated', 'banner-assets.json');
 
 export const W = 1600;
 export const H = 900;
@@ -892,7 +893,7 @@ function applyLayout(scene) {
 	return out;
 }
 
-export async function renderScene(rawScene) {
+export async function renderSceneLayers(rawScene) {
 	const scene = applyLayout(rawScene);
 	validateMargin(scene);
 	const mode = scene.mode ?? 'light';
@@ -917,29 +918,90 @@ export async function renderScene(rawScene) {
 				`${img}<rect width="${W}" height="${H}" fill="url(#ground)" opacity="${scene.photo.tint ?? 0.8}"/>`);
 		}
 	}
-	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+	const sceneLayers = `${back.join('\n')}\n${mascot}\n${front.join('\n')}`;
+	const backgroundSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+		<defs>${defs}</defs>
+		${ground}
+	</svg>`;
+	const foregroundSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+		${sceneLayers}
+	</svg>`;
+	// Keep the established composite serialization stable: cards, metadata,
+	// and heroes not yet migrated to layers still consume this asset.
+	const compositeSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
 		<defs>${defs}</defs>
 		${ground}
 		${back.join('\n')}
 		${mascot}
 		${front.join('\n')}
 	</svg>`;
-	return sharp(Buffer.from(svg)).webp({ quality: 92 }).toBuffer();
+
+	const [background, foregroundResult, composite] = await Promise.all([
+		sharp(Buffer.from(backgroundSvg)).webp({ quality: 92 }).toBuffer(),
+		sharp(Buffer.from(foregroundSvg))
+			.trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 1 })
+			.webp({ lossless: true, effort: 6 })
+			.toBuffer({ resolveWithObject: true }),
+		sharp(Buffer.from(compositeSvg)).webp({ quality: 92 }).toBuffer(),
+	]);
+
+	return {
+		background,
+		foreground: foregroundResult.data,
+		foregroundWidth: foregroundResult.info.width,
+		foregroundHeight: foregroundResult.info.height,
+		composite,
+	};
+}
+
+// Retained for scripts or consumers that need the original flattened banner.
+export async function renderScene(scene) {
+	return (await renderSceneLayers(scene)).composite;
 }
 
 async function main() {
-	const only = process.argv.slice(2);
+	const args = process.argv.slice(2);
+	const check = args.includes('--check');
+	const only = args.filter((arg) => arg !== '--check');
 	const scenes = JSON.parse(fs.readFileSync(SCENES, 'utf8'));
 	fs.mkdirSync(OUT_DIR, { recursive: true });
+	const manifest = fs.existsSync(ASSET_MANIFEST)
+		? JSON.parse(fs.readFileSync(ASSET_MANIFEST, 'utf8'))
+		: { images: {} };
 	for (const scene of scenes) {
 		if (only.length && !only.includes(scene.id)) continue;
 		if (scene.accent && !ACCENTS.includes(scene.accent)) {
 			throw new Error(`${scene.id}: accent must be one of ${ACCENTS.join(', ')}`);
 		}
-		const buf = await renderScene(scene);
-		const out = path.join(OUT_DIR, `${scene.id}.webp`);
-		fs.writeFileSync(out, buf);
-		console.log(`✓ ${scene.id} → ${path.relative(ROOT, out)} (${(buf.length / 1024).toFixed(0)} KB)`);
+		const layers = await renderSceneLayers(scene);
+		const files = [
+			[`${scene.id}-background.webp`, layers.background],
+			[`${scene.id}-foreground.webp`, layers.foreground],
+			[`${scene.id}.webp`, layers.composite],
+		];
+		for (const [name, buf] of files) {
+			const out = path.join(OUT_DIR, name);
+			if (check) {
+				if (!fs.existsSync(out) || !fs.readFileSync(out).equals(buf)) {
+					throw new Error(`${path.relative(ROOT, out)} is not reproducible; regenerate banners`);
+				}
+			} else {
+				fs.writeFileSync(out, buf);
+			}
+		}
+		manifest.images[`/images/banners/${scene.id}.webp`] = {
+			background: `/images/banners/${scene.id}-background.webp`,
+			foreground: `/images/banners/${scene.id}-foreground.webp`,
+			backgroundWidth: W,
+			backgroundHeight: H,
+			foregroundWidth: layers.foregroundWidth,
+			foregroundHeight: layers.foregroundHeight,
+		};
+		console.log(`${check ? '✓ checked' : '✓'} ${scene.id} (${(layers.background.length / 1024).toFixed(0)} KB background, ${(layers.foreground.length / 1024).toFixed(0)} KB foreground)`);
+	}
+	if (!check) {
+		manifest.images = Object.fromEntries(Object.entries(manifest.images).sort(([a], [b]) => a.localeCompare(b)));
+		fs.writeFileSync(ASSET_MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);
 	}
 }
 

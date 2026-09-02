@@ -1,5 +1,6 @@
 ---
 import ContentBlocks from '../components/ContentBlocks.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import HeroMedia from '../components/HeroMedia.astro';
@@ -7,6 +8,7 @@ import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import PageHero from '../components/PageHero.astro';
 import RichContent from '../components/RichContent.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getSiteData, getNavPillsForPage } from '../lib/data.js';
 import { getClientLogoItems, getPartnerLogoItems } from '../lib/logos';
 import { getResponsiveImage } from '../lib/responsive-images.js';
@@ -68,9 +70,12 @@ const partnerLogos = page.slug === 'courses-all' ? getPartnerLogoItems(site.exte
 const clientLogos = page.slug === 'courses-all' ? getClientLogoItems(site.externalLogos) : [];
 const courseAllHeroImage = page.hero_image ?? '/images/banners/courses-all.webp';
 const courseAllHero = getResponsiveImage(courseAllHeroImage);
+const courseBanner = getBannerAsset(courseAllHeroImage);
 const courseHeroPreload =
-	page.slug === 'courses-all' && courseAllHero
-		? { src: courseAllHero.src, srcset: courseAllHero.srcset, sizes: '100vw' }
+	page.slug === 'courses-all' && courseBanner
+		? { src: courseBanner.background }
+		: page.slug === 'courses-all' && courseAllHero
+			? { src: courseAllHero.src, srcset: courseAllHero.srcset, sizes: '100vw' }
 		: null;
 const courseAllLead =
 	'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.';
@@ -145,18 +150,7 @@ const hasRichContent = contentBlocks.some(
 			{isCourseListing && (
 				<>
 					<section class="course-hero">
-						<img
-							class="course-hero__bg"
-							src={courseAllHero?.src ?? courseAllHeroImage}
-							srcset={courseAllHero?.srcset}
-							sizes={courseAllHero?.srcset ? '100vw' : undefined}
-							width={courseAllHero?.width}
-							height={courseAllHero?.height}
-							alt=""
-							loading="eager"
-							fetchpriority="high"
-							decoding="async"
-						/>
+						<BannerLayers src={courseAllHeroImage} />
 						<div class="course-hero__scrim"></div>
 						<div class="course-hero__content shell">
 							<h1 class="course-hero__title">{displayTitle}</h1>
@@ -229,27 +223,6 @@ const hasRichContent = contentBlocks.some(
 		min-height: 480px;
 		overflow: clip;
 		background: #161111;
-	}
-
-	.course-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.course-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
 	}
 
 	.course-hero__scrim {

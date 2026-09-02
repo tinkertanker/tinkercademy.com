@@ -11,9 +11,11 @@
  *   6. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getSiteData, getStaticPage } from '../lib/data.js';
 import { getCorporateClientLogoItems } from '../lib/logos';
 import { localiseFramerImage } from '../lib/media.js';
@@ -30,6 +32,7 @@ const site = getSiteData();
 const canonical = 'https://tinkercademy.com/professionals/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroBanner = getBannerAsset(heroImage);
 const heroTitle = page.hero_title ?? 'Data, Coding, IoT Tinkering, and Tech Productivity Training';
 const heroLead = page.hero_lead ?? 'Real skills for real impact.';
 
@@ -62,10 +65,11 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 	description="Expert-led technical training for working professionals in Singapore. Upskill in AI, web and mobile development, data, and digital making."
 	canonical={canonical}
 	image={heroImage}
+	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="aud-hero">
 		{heroImage && (
-			<img class="aud-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+			<BannerLayers src={heroImage} />
 		)}
 		<div class="aud-hero__scrim"></div>
 		<div class="aud-hero__content shell">
@@ -143,27 +147,6 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		min-height: 480px;
 		overflow: clip;
 		background: #161111;
-	}
-
-	.aud-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.aud-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
 	}
 
 	.aud-hero__scrim {

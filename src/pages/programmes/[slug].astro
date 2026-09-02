@@ -1,9 +1,11 @@
 ---
 import { render } from 'astro:content';
+import BannerLayers from '../../components/BannerLayers.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import ProgrammeSeriesNav from '../../components/ProgrammeSeriesNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../../lib/banner-assets';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
 import { getResponsiveImage } from '../../lib/responsive-images.js';
@@ -119,10 +121,12 @@ const seriesCourses = programme.series
 	: [];
 
 const heroResponsive = getResponsiveImage(programme.heroImage);
-const heroObjectPosition = programme.entry.data.heroObjectPosition;
-const heroPreload = heroResponsive
-	? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
-	: null;
+const heroBanner = getBannerAsset(programme.heroImage);
+const heroPreload = heroBanner
+	? { src: heroBanner.background }
+	: heroResponsive
+		? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
+		: null;
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -145,19 +149,7 @@ const breadcrumbSchema = {
 	{/* ════════ Hero: full-bleed image with dark overlay + text ════════ */}
 	<section class="prog-hero">
 		{programme.heroImage && (
-			<img
-				class="prog-hero__bg"
-				style={heroObjectPosition ? `--prog-hero-object-position: ${heroObjectPosition}` : undefined}
-				src={heroResponsive?.src ?? programme.heroImage}
-				srcset={heroResponsive?.srcset}
-				sizes={heroResponsive?.srcset ? '100vw' : undefined}
-				width={heroResponsive?.width}
-				height={heroResponsive?.height}
-				alt=""
-				loading="eager"
-				fetchpriority="high"
-				decoding="sync"
-			/>
+			<BannerLayers src={programme.heroImage} />
 		)}
 		<div class="prog-hero__overlay" />
 		<div class="prog-hero__text shell">
@@ -307,28 +299,6 @@ const breadcrumbSchema = {
 		align-items: flex-end;
 		overflow: hidden;
 		background: #161111;
-	}
-
-	.prog-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-		z-index: 0;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.prog-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: 50% 30%;
-		}
 	}
 
 	.prog-hero__overlay {
@@ -676,7 +646,7 @@ const breadcrumbSchema = {
 	/* ─── Responsive ───────────────────────────────────────── */
 	@media (max-width: 809px) {
 		.prog-hero {
-			min-height: 420px;
+			min-height: 480px;
 		}
 
 		.prog-hero__overlay {
