@@ -9,8 +9,10 @@
  *   4. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
 import { getProgrammesForSurface, toProgrammeCardData } from '../lib/programmes.ts';
@@ -21,6 +23,7 @@ if (!page) return Astro.redirect('/404');
 const canonical = 'https://tinkercademy.com/individuals/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroBanner = getBannerAsset(heroImage);
 const heroTitle = page.hero_title ?? 'Self-directed Learning Opportunities';
 const heroLead =
 	page.hero_lead ??
@@ -52,10 +55,11 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 	description="Self-directed coding, making, and AI courses for curious learners. Work through micro:bit tutorials, join Tinker X, or pick from our public programmes."
 	canonical={canonical}
 	image={heroImage}
+	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="aud-hero">
 		{heroImage && (
-			<img class="aud-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+			<BannerLayers src={heroImage} />
 		)}
 		<div class="aud-hero__scrim"></div>
 		<div class="aud-hero__content shell">
@@ -129,27 +133,6 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 		min-height: 480px;
 		overflow: clip;
 		background: #161111;
-	}
-
-	.aud-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.aud-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
 	}
 
 	.aud-hero__scrim {

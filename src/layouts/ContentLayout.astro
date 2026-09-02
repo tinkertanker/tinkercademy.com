@@ -228,8 +228,6 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		--hero-title-max-width: 100%;
 		--hero-title-glow: 0 0 1px rgba(255, 255, 255, 0.4), 0 0 18px rgba(240, 93, 87, 0.38), 0 0 36px rgba(240, 93, 87, 0.2);
 		--hero-desktop-scrim: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0) 70%);
-		--hero-scene-height: 130%;
-		--hero-scene-inset: 0 0 auto auto;
 		--meta: 'Rubik', sans-serif;
 		--text: rgb(51, 51, 51);
 
@@ -256,43 +254,6 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 	@media (min-width: 1200px) {
 		:root {
 			--hero-title-max-width: 40vw;
-		}
-
-		:is(
-			.course-hero__bg,
-			.prog-hero__bg,
-			.about-hero__bg,
-			.contact-hero__bg,
-			.aud-hero__bg,
-			.ic-hero__bg,
-			.mb-hero__bg,
-			.sc-hero__bg,
-			.tx-hero__bg
-		) {
-			transform: translateY(6px);
-		}
-	}
-
-	@media (max-width: 809px) {
-		:root {
-			--hero-scene-height: 78%;
-			--hero-scene-inset: -21% 50% auto auto;
-		}
-
-		:is(
-			.course-hero__bg,
-			.prog-hero__bg,
-			.about-hero__bg,
-			.contact-hero__bg,
-			.aud-hero__bg,
-			.ic-hero__bg,
-			.mb-hero__bg,
-			.sc-hero__bg,
-			.tx-hero__bg
-		) {
-			transform: translateX(16%);
-			-webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
-			mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 78%, transparent 100%);
 		}
 	}
 

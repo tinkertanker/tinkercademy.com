@@ -3,7 +3,9 @@
  * /about-us — layout and copy aligned with live tinkercademy.com (Framer).
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
 import { parse as parseYaml } from 'yaml';
@@ -39,6 +41,7 @@ const teamIntro =
 	'Tinkercademy comprises a team of dedicated education specialists from top universities worldwide. With our extensive training in technology, design, and educational pedagogy, combined with years of experience creating real-world apps and electronics, we bring an unparalleled breadth and depth of technology education to our classes and curriculum.';
 
 const heroBgSrc = localiseFramerImage(page.hero_image);
+const heroBanner = getBannerAsset(heroBgSrc);
 
 /* ── Load team data from YAML ── */
 interface TeamMember {
@@ -139,10 +142,11 @@ const heroTitleHtml = heroTitle
 	description="Tinkercademy is a team of coders and tinkerers teaching coding, making, and digital technology to schools, companies, and the public in Singapore."
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
+	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	{/* ═══════ 1. Hero (full-bleed image + centred type) ═════════════════ */}
 	<section class="about-hero">
-		<img class="about-hero__bg" src={heroBgSrc} alt="" loading="eager" fetchpriority="high" />
+		<BannerLayers src={heroBgSrc} />
 		<div class="about-hero__scrim"></div>
 		<div class="about-hero__content shell">
 			<h1 class="about-hero__title" set:html={heroTitleHtml} />
@@ -267,27 +271,6 @@ const heroTitleHtml = heroTitle
 		background: #161111;
 	}
 
-	.about-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.about-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center 40%;
-		}
-	}
-
 	.about-hero__scrim {
 		position: absolute;
 		inset: 0;
@@ -297,8 +280,7 @@ const heroTitleHtml = heroTitle
 	@media (max-width: 809px) {
 		.about-hero {
 			min-height: 420px;
-			--hero-scene-height: 60%;
-			--hero-scene-inset: -19% 50% auto auto;
+			--banner-foreground-mobile-width: 44vw;
 		}
 
 		.about-hero__scrim {

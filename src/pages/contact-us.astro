@@ -1,12 +1,16 @@
 ---
 import ContactForm from '../components/ContactForm.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
 
 const page = getStaticPage('/contact-us');
 if (!page) return Astro.redirect('/404');
 
 const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString();
+const heroImage = '/images/banners/contact-us.webp';
+const heroBanner = getBannerAsset(heroImage);
 
 ---
 
@@ -16,15 +20,10 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 	description="Visit, call, or email Tinkercademy at Jalan Pemimpin. We run classes, workshops, and meetings from our Singapore office — here's how to reach us."
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
+	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="contact-hero">
-		<img
-			class="contact-hero__bg"
-			src="/images/banners/contact-us.webp"
-			alt=""
-			loading="eager"
-			fetchpriority="high"
-		/>
+		<BannerLayers src={heroImage} />
 		<div class="contact-hero__scrim"></div>
 		<div class="contact-hero__content shell">
 			<h1 class="contact-hero__title">{page.hero_title ?? 'Get in touch'}</h1>
@@ -171,27 +170,6 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		min-height: 480px;
 		overflow: clip;
 		background: #161111;
-	}
-
-	.contact-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.contact-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
 	}
 
 	.contact-hero__scrim {

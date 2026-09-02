@@ -3,7 +3,9 @@
  * /microbit — Astro-native rebuild of the micro:bit tutorials landing page.
  */
 import CtaBanner from '../components/CtaBanner.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getSiteData, getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
 
@@ -14,6 +16,7 @@ const site = getSiteData();
 const canonical = 'https://tinkercademy.com/microbit/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
+const heroBanner = getBannerAsset(heroImage);
 const heroTitle = page.hero_title ?? 'micro:bit Tutorials';
 const heroLead =
 	page.hero_lead ??
@@ -50,10 +53,11 @@ const otherTutorials = (site.tutorials ?? [])
 	description="Get started with the BBC micro:bit and our Singapore-made Tinker Kit. Free step-by-step tutorials and project ideas for learners, teachers, and makers."
 	canonical={canonical}
 	image={heroImage}
+	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="mb-hero">
 		{heroImage && (
-			<img class="mb-hero__bg" src={heroImage} alt="" loading="eager" fetchpriority="high" />
+			<BannerLayers src={heroImage} />
 		)}
 		<div class="mb-hero__scrim"></div>
 		<div class="mb-hero__content shell">
@@ -192,27 +196,6 @@ const otherTutorials = (site.tutorials ?? [])
 		background: #161111;
 	}
 
-	.mb-hero__bg {
-		position: absolute;
-		inset: var(--hero-scene-inset);
-		width: auto;
-		height: var(--hero-scene-height);
-		max-width: none;
-		object-fit: contain;
-		object-position: right top;
-	}
-
-	@media (min-width: 810px) and (max-width: 1199px) {
-		.mb-hero__bg {
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			max-width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
-	}
-
 	.mb-hero__scrim {
 		position: absolute;
 		inset: 0;
@@ -222,6 +205,8 @@ const otherTutorials = (site.tutorials ?? [])
 	@media (max-width: 809px) {
 		.mb-hero {
 			min-height: 420px;
+			--banner-foreground-mobile-width: 58vw;
+			--banner-foreground-mobile-top: 0.5rem;
 		}
 
 		.mb-hero__scrim {
