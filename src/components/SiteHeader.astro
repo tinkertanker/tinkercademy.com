@@ -2,7 +2,7 @@
 import { toSiteHref } from '../lib/links.js';
 import { LOGO_BLACK, LOGO_BLACK_SIZE } from '../lib/site-media.js';
 
-type NavLink = { label: string; href: string; hasDropdown?: boolean };
+type NavLink = { label: string; href: string };
 
 const props = Astro.props as { navigation?: NavLink[]; internalLinkOrigin?: string | null; showSearch?: boolean };
 const rawNav = props.navigation ?? [];
@@ -13,12 +13,6 @@ const brandHref = internalLinkOrigin ? new URL('/', internalLinkOrigin).toString
 const searchIndexUrl = internalLinkOrigin
 	? new URL('/programme-search-index.json', internalLinkOrigin).toString()
 	: '/programme-search-index.json';
-
-/* Inject "COURSES" as first nav item with a dropdown chevron if not already present */
-const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all/', hasDropdown: true };
-const navigation: NavLink[] = rawNav.some((n) => n.label.toUpperCase() === 'COURSES')
-	? rawNav
-	: [coursesItem, ...rawNav];
 
 /* Dropdown sub-links for COURSES */
 const coursesDropdown = [
@@ -31,11 +25,26 @@ const coursesDropdown = [
 	{ label: 'Infocomm Club', href: '/infocomm-club/' },
 ];
 
+const showcaseDropdown = [
+	{ label: 'Build Log', href: '/blog/' },
+	{ label: 'Open Source', href: '/open-source/' },
+];
+
+/* Inject COURSES as the first nav item if it is not already in site settings. */
+const coursesItem: NavLink = { label: 'COURSES', href: '/courses-all/' };
+const navigation: NavLink[] = rawNav.some((n) => n.label.toUpperCase() === 'COURSES')
+	? rawNav
+	: [coursesItem, ...rawNav];
+
 const coursePaths = new Set(coursesDropdown.map((item) => normalisePath(item.href)).concat([
 	'/courses',
 	'/courses-professionals',
 	'/courses-schools',
 ]));
+const showcasePaths = new Set([
+	normalisePath('/showcase/'),
+	...showcaseDropdown.map((item) => normalisePath(item.href)),
+]);
 
 function normalisePath(href: string) {
 	return toSiteHref(href).replace(/\/$/, '') || '/';
@@ -45,12 +54,38 @@ function isExternalLink(href: string) {
 	return toSiteHref(href) === href && /^https?:\/\//.test(href);
 }
 
+function dropdownFor(link: NavLink) {
+	switch (link.label.toUpperCase()) {
+		case 'COURSES':
+			return coursesDropdown;
+		case 'SHOWCASE':
+			return showcaseDropdown;
+		default:
+			return [];
+	}
+}
+
+function pathIsCurrent(path: string) {
+	return currentPath === path || (path !== '/' && currentPath.startsWith(`${path}/`));
+}
+
 function isActiveLink(href: string) {
 	const path = normalisePath(href);
 	if (path === '/courses-all') {
-		return coursePaths.has(currentPath);
+		return [...coursePaths].some(pathIsCurrent);
 	}
-	return currentPath === path;
+	if (path === '/showcase') {
+		return [...showcasePaths].some(pathIsCurrent);
+	}
+	return pathIsCurrent(path);
+}
+
+function isCurrentPageLink(href: string) {
+	return currentPath === normalisePath(href);
+}
+
+function mobileDropdownId(link: NavLink) {
+	return `mobile-${link.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-dropdown`;
 }
 
 function toNavHref(href: string) {
@@ -88,13 +123,13 @@ function toNavHref(href: string) {
 		<nav class="nav-desktop" aria-label="Primary">
 			<ul>
 				{navigation.map((link) => (
-					<li class={link.hasDropdown ? 'has-dropdown' : ''}>
+					<li class={dropdownFor(link).length > 0 ? 'has-dropdown' : ''}>
 						<a
 							href={toNavHref(link.href)}
 							target={isExternalLink(link.href) ? '_blank' : undefined}
 							rel={isExternalLink(link.href) ? 'noopener' : undefined}
 							class:list={{ 'is-active': isActiveLink(link.href) }}
-							aria-current={isActiveLink(link.href) ? 'page' : undefined}
+							aria-current={isCurrentPageLink(link.href) ? 'page' : undefined}
 						>
 							{link.label}
 							{isExternalLink(link.href) && (
@@ -102,16 +137,24 @@ function toNavHref(href: string) {
 									<path d="M7 17L17 7M17 7H7M17 7V17"/>
 								</svg>
 							)}
-							{link.hasDropdown && (
+							{dropdownFor(link).length > 0 && (
 								<svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
 									<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 								</svg>
 							)}
 						</a>
-						{link.hasDropdown && (
+						{dropdownFor(link).length > 0 && (
 							<ul class="dropdown">
-								{coursesDropdown.map((sub) => (
-									<li><a href={toNavHref(sub.href)}>{sub.label}</a></li>
+								{dropdownFor(link).map((sub) => (
+									<li>
+										<a
+											href={toNavHref(sub.href)}
+											class:list={{ 'is-active': isActiveLink(sub.href) }}
+											aria-current={isCurrentPageLink(sub.href) ? 'page' : undefined}
+										>
+											{sub.label}
+										</a>
+									</li>
 								))}
 							</ul>
 						)}
@@ -138,21 +181,14 @@ function toNavHref(href: string) {
 	<nav class="nav-mobile" aria-label="Primary mobile" hidden>
 		<ul>
 			{navigation.map((link) => (
-				<li class={link.hasDropdown ? 'has-dropdown-mobile' : ''}>
-					{link.hasDropdown ? (
-						<button class="mobile-dropdown-toggle" type="button">
-							{link.label}
-							<svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
-								<path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</button>
-					) : (
+				<li class={dropdownFor(link).length > 0 ? 'has-dropdown-mobile' : ''}>
+					<div class="mobile-nav-row">
 						<a
 							href={toNavHref(link.href)}
 							target={isExternalLink(link.href) ? '_blank' : undefined}
 							rel={isExternalLink(link.href) ? 'noopener' : undefined}
 							class:list={{ 'is-active': isActiveLink(link.href) }}
-							aria-current={isActiveLink(link.href) ? 'page' : undefined}
+							aria-current={isCurrentPageLink(link.href) ? 'page' : undefined}
 						>
 							{link.label}
 							{isExternalLink(link.href) && (
@@ -161,11 +197,30 @@ function toNavHref(href: string) {
 								</svg>
 							)}
 						</a>
-					)}
-					{link.hasDropdown && (
-						<ul class="mobile-dropdown" hidden>
-							{coursesDropdown.map((sub) => (
-								<li><a href={toNavHref(sub.href)}>{sub.label}</a></li>
+						{dropdownFor(link).length > 0 && (
+							<button
+								class="mobile-dropdown-toggle"
+								type="button"
+								aria-label={`Toggle ${link.label.toLowerCase()} submenu`}
+								aria-expanded="false"
+								aria-controls={mobileDropdownId(link)}
+							>
+								<span class="mobile-dropdown-icon" aria-hidden="true"></span>
+							</button>
+						)}
+					</div>
+					{dropdownFor(link).length > 0 && (
+						<ul class="mobile-dropdown" id={mobileDropdownId(link)} hidden>
+							{dropdownFor(link).map((sub) => (
+								<li>
+									<a
+										href={toNavHref(sub.href)}
+										class:list={{ 'is-active': isActiveLink(sub.href) }}
+										aria-current={isCurrentPageLink(sub.href) ? 'page' : undefined}
+									>
+										{sub.label}
+									</a>
+								</li>
 							))}
 						</ul>
 					)}
@@ -413,10 +468,12 @@ function toNavHref(href: string) {
 	/* Mobile dropdown toggles */
 	document.querySelectorAll('.mobile-dropdown-toggle').forEach((btn) => {
 		btn.addEventListener('click', () => {
-			const submenu = btn.nextElementSibling;
+			const submenuId = btn.getAttribute('aria-controls');
+			const submenu = submenuId ? document.getElementById(submenuId) : null;
 			if (submenu && submenu.classList.contains('mobile-dropdown')) {
-				const isOpen = !(submenu as HTMLElement).hidden;
-				(submenu as HTMLElement).hidden = isOpen;
+				const isOpen = !submenu.hidden;
+				submenu.hidden = isOpen;
+				btn.setAttribute('aria-expanded', String(!isOpen));
 				btn.classList.toggle('is-open', !isOpen);
 			}
 		});
@@ -492,10 +549,7 @@ function toNavHref(href: string) {
 		transition: color 0.15s ease;
 	}
 
-	/* Narrow desktop band (just above the mobile breakpoint): the full-size
-	   nav + logo would otherwise overflow and wrap a long label like
-	   "OPEN SOURCE" onto two lines. Tighten the row slightly so it stays on
-	   one line without collapsing to the mobile menu. */
+	/* Tighten the full-size nav just above the mobile breakpoint. */
 	@media (min-width: 810px) and (max-width: 980px) {
 		.nav-desktop > ul {
 			gap: 0.75rem;
@@ -955,26 +1009,52 @@ function toNavHref(href: string) {
 		color: rgb(255, 89, 89);
 	}
 
-
-	/* Mobile dropdown toggle button */
-	.mobile-dropdown-toggle {
-		background: none;
-		border: none;
-		padding: 0;
-		cursor: pointer;
-		font-family: 'Rubik', sans-serif;
-		font-size: var(--nav-font-size);
-		font-weight: 400;
-		letter-spacing: 0;
-		text-transform: uppercase;
-		color: rgb(74, 74, 74);
-		display: inline-flex;
+	.mobile-nav-row {
+		display: flex;
 		align-items: center;
-		gap: 0.35rem;
+		justify-content: space-between;
+		gap: 0.75rem;
 	}
 
-	.mobile-dropdown-toggle.is-open .nav-chevron {
-		transform: rotate(180deg);
+	.mobile-nav-row > a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		gap: 0.2rem;
+	}
+
+	.mobile-dropdown-toggle {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 44px;
+		width: 44px;
+		height: 44px;
+		background: rgb(250, 250, 250);
+		border: 1px solid rgb(225, 225, 225);
+		border-radius: 8px;
+		padding: 0;
+		cursor: pointer;
+		color: rgb(74, 74, 74);
+	}
+
+	.mobile-dropdown-toggle:hover,
+	.mobile-dropdown-toggle:focus-visible {
+		border-color: rgb(255, 89, 89);
+		color: rgb(255, 89, 89);
+	}
+
+	.mobile-dropdown-icon {
+		font-size: 14px;
+		line-height: 1;
+	}
+
+	.mobile-dropdown-icon::before {
+		content: '▾';
+	}
+
+	.mobile-dropdown-toggle.is-open .mobile-dropdown-icon::before {
+		content: '▴';
 	}
 
 	.mobile-dropdown {
@@ -987,6 +1067,9 @@ function toNavHref(href: string) {
 	}
 
 	.mobile-dropdown a {
+		display: flex;
+		align-items: center;
+		min-height: 44px;
 		font-size: var(--nav-font-size);
 	}
 
