@@ -100,20 +100,22 @@ Freeform x/y still works for scenes that need something bespoke.
    the middle band (~x 0.45–0.75); the robot stands at x ≈ 0.84 engaging with
    it — pointing, saluting, reacting. Poses that point off-canvas get
    `flip: true`. (Centred compositions are for `headlineSide: "none"` cards
-   only.) Full-width internal-page heroes use a 480px desktop height and a
-   420px mobile minimum; the homepage alone retains 640px. Unusually long
-   mobile titles may grow the band as needed. Titles may use 60vw at
-   intermediate widths; the 40vw cap is reserved for screens at least 1200px
-   wide. They use a gentle warm glow pulse; do not copy the homepage
-   highlight's sheen or lens flare. The desktop scrim stays at 55% black
-   through 50vw, then fades to fully transparent by 70vw. From 1200px, render
-   the 16:9 scene from the right at 130% of hero height rather than covering by
-   viewport width and offset it 6px downward. Mobile renders at 78% height—20%
-   smaller than the prior 97.5% treatment—and uses the mascot's x ≈ 0.84
-   placement to centre it in the open area above the title. Fade the scene's
-   top and bottom edges into the dark background. Long-title static heroes may
-   reduce the scene to 60% to preserve that separation. Intermediate widths
-   retain a centred cover crop.
+   only.) Full-width internal-page heroes use a 480px desktop height; the
+   homepage alone retains 640px. On mobile, start at a 260px minimum and reserve
+   roughly 200px above the text for the foreground. Let real title, lead, and
+   action content grow the band naturally—never add a call to action merely to
+   fill vertical space, and do not use JavaScript to calculate hero height.
+   Titles may use 60vw at intermediate widths; the 40vw cap is reserved for
+   screens at least 1200px wide. They use a gentle warm glow pulse; do not copy
+   the homepage highlight's sheen or lens flare. The desktop scrim stays at 55%
+   black through 50vw, then fades to fully transparent by 70vw. The mobile
+   scrim starts nearly clear around the illustration and becomes dark beneath
+   the text. Leave at least 1.5rem between the mobile header and foreground.
+   Render the independent foreground at about 64vw and centre it above the
+   title; long-title static heroes may reduce it to about 44vw and reserve less
+   vertical space. At desktop sizes, ground the foreground at the bottom right
+   and size it from the hero rather than the viewport so zooming does not alter
+   the composition unexpectedly.
 4. **The formula: one robot, one screen, one-plus props.** A scene is one
    mascot pose + one device·screen combo + one or two *physical* sticker-props
    that identify the course (prefer a minted object over a second screen —
@@ -128,10 +130,10 @@ Freeform x/y still works for scenes that need something bespoke.
 
 ## Dark mode (`"mode": "dark"`)
 
-Listing and static pages render heroes under the site's scrim
-(`.course-hero__scrim` in `src/pages/[slug].astro`: black 68% → 8% left-to-right
-plus bottom darkening) with a **white serif headline bottom-left**. Dark scenes
-are designed for that contract natively:
+Listing and static pages render heroes under the site's responsive scrim: dark
+behind the left-aligned copy on desktop; nearly clear around the illustration
+and dark behind the lower copy on mobile. Dark scenes are designed for that
+contract natively:
 
 - Ground: accent-tinted charcoal gradient (`DARK_GROUNDS`), faint cream
   dot-grid texture, a radial **spotlight** pool behind the subject (override
@@ -420,11 +422,13 @@ for them"* — operability matters as much as any single image.
 
 Dark scenes everywhere (both hero templates overlay white text) · mascot
 rightmost at h 0.40–0.50, trio 0.44 · baseline 0.76 · bubbles ≈ y 0.29 ·
-internal-page hero height 480px desktop / 420px mobile minimum · homepage
-640px · title width ≤ 60vw at 810–1199px and ≤ 40vw from 1200px, with a 4.5s
-warm glow pulse · mobile scene 78% hero height and mascot centred above title ·
-≥1200px scene 130%, right-aligned and offset 6px down · desktop scrim 55%
-through 50vw → clear at 70vw · faded backdrops darken 0.4 / sat
+internal-page hero height 480px desktop / content-driven mobile with a 260px
+minimum and roughly 200px reserved above text · homepage 640px · title width ≤
+60vw at 810–1199px and ≤ 40vw from 1200px, with a 4.5s warm glow pulse · mobile
+foreground about 64vw and centred above title · ≥1200px foreground grounded
+bottom-right and sized from the hero · desktop scrim 55% through 50vw → clear
+at 70vw · mobile scrim near-clear at top → dark behind copy · no filler CTA or
+JavaScript height calculation · faded backdrops darken 0.4 / sat
 0.25 / tint 0.78, source priority real photo → page original → AI candidate ·
 flagship cards centred (headlineSide "none") · no sparkles, no emanata, no
 skyline · Lucide for glyphs, simple-icons for logos · mint prompts strictly

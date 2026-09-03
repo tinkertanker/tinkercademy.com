@@ -325,14 +325,15 @@ const hasRichContent = contentBlocks.some(
 
 	@media (max-width: 809px) {
 		.course-hero {
-			min-height: 420px;
+			min-height: var(--hero-mobile-min-height);
 		}
 
 		.course-hero__scrim {
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+			background: var(--hero-mobile-scrim);
 		}
 
 		.course-hero__content {
+			padding-block-start: var(--hero-mobile-content-top);
 			padding-block-end: 2.5rem;
 		}
 

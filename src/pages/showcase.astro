@@ -263,12 +263,13 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 
 	@media (max-width: 809px) {
 		.sc-hero {
-			min-height: 420px;
+			min-height: var(--hero-mobile-min-height);
+			--hero-content-padding-top: 150px;
 			--banner-foreground-mobile-width: 44vw;
 		}
 
 		.sc-hero__scrim {
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+			background: var(--hero-mobile-scrim);
 		}
 	}
 
@@ -278,7 +279,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		flex-direction: column;
 		justify-content: flex-end;
 		min-height: inherit;
-		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+		padding: var(--hero-content-padding-top, clamp(4rem, 9vw, 7rem)) 0 clamp(3rem, 5vw, 4rem);
 		gap: 1.1rem;
 	}
 

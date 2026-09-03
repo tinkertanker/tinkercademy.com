@@ -646,15 +646,15 @@ const breadcrumbSchema = {
 	/* ─── Responsive ───────────────────────────────────────── */
 	@media (max-width: 809px) {
 		.prog-hero {
-			min-height: 480px;
+			min-height: var(--hero-mobile-min-height);
 		}
 
 		.prog-hero__overlay {
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+			background: var(--hero-mobile-scrim);
 		}
 
 		.prog-hero__text {
-			padding-top: 60px;
+			padding-top: var(--hero-mobile-content-top);
 			padding-bottom: 28px;
 		}
 

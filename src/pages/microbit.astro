@@ -204,13 +204,13 @@ const otherTutorials = (site.tutorials ?? [])
 
 	@media (max-width: 809px) {
 		.mb-hero {
-			min-height: 420px;
+			min-height: var(--hero-mobile-min-height);
+			--hero-content-padding-top: 210px;
 			--banner-foreground-mobile-width: 58vw;
-			--banner-foreground-mobile-top: 0.5rem;
 		}
 
 		.mb-hero__scrim {
-			background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.72) 100%);
+			background: var(--hero-mobile-scrim);
 		}
 	}
 
@@ -220,7 +220,7 @@ const otherTutorials = (site.tutorials ?? [])
 		flex-direction: column;
 		justify-content: flex-end;
 		min-height: inherit;
-		padding: clamp(4rem, 8vw, 6rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+		padding: var(--hero-content-padding-top, clamp(4rem, 8vw, 6rem)) 0 clamp(2.5rem, 4vw, 3.5rem);
 		gap: 1rem;
 	}
 
