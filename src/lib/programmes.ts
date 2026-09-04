@@ -55,12 +55,14 @@ export type ResolvedProgramme = {
 	title: string;
 	subtitle: string;
 	duration: string;
+	courseType: 'public' | null;
 	heroImage: string;
 	cardBlurb: string;
 	weight: number;
 	homeFeaturedRank: number | null;
 	signUpLabel: string | null;
 	signUpUrl: string | null;
+	primaryCta: { label: string; url: string } | null;
 	seoTitle: string | null;
 	seoDescription: string | null;
 	audienceIds: string[];
@@ -175,13 +177,15 @@ function resolveProgramme(entry: ProgrammeEntry): ResolvedProgramme {
 		slug: entry.id,
 		title: entry.data.title,
 		subtitle: entry.data.subtitle,
-		duration: entry.data.duration,
+		duration: entry.data.duration ?? '',
+		courseType: entry.data.courseType ?? null,
 		heroImage: localiseFramerImage(entry.data.heroImage),
 		cardBlurb: entry.data.cardBlurb,
 		weight: entry.data.weight,
 		homeFeaturedRank: entry.data.homeFeaturedRank ?? null,
 		signUpLabel: entry.data.signUpLabel ?? null,
 		signUpUrl: entry.data.signUpUrl ?? null,
+		primaryCta: entry.data.primaryCta ?? null,
 		seoTitle: entry.data.seoTitle ?? null,
 		seoDescription: entry.data.seoDescription ?? null,
 		audienceIds: [...entry.data.audienceIds],
