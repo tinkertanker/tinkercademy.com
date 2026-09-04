@@ -62,19 +62,19 @@ const asset = getBannerAsset(src);
 
 	.banner-layers__foreground {
 		position: absolute;
-		bottom: calc(-1 * clamp(0px, 5vw, 72px));
+		bottom: calc(10pt - clamp(0px, 5vw, 72px));
 		right: clamp(0rem, 2vw, 2rem);
 		width: auto;
-		height: var(--banner-foreground-height, 90%);
-		max-width: min(41.6vw, 41.6rem);
+		height: var(--banner-foreground-height, 101.25%);
+		max-width: min(46.8vw, 46.8rem);
 		object-fit: contain;
 	}
 
 	@media (min-width: 810px) and (max-width: 1199px) {
 		.banner-layers__foreground {
-			bottom: -24px;
-			height: 72%;
-			max-width: 37.6vw;
+			bottom: calc(-24px + 10pt);
+			height: 81%;
+			max-width: 42.3vw;
 		}
 	}
 
