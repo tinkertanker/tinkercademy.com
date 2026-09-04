@@ -114,7 +114,7 @@ Freeform x/y still works for scenes that need something bespoke.
    Render the independent foreground at about 64vw and centre it above the
    title; long-title static heroes may reduce it to about 44vw and reserve less
    vertical space. At desktop sizes, ground the foreground at the bottom right,
-   render it at roughly 112.5% of the hero height (90% at intermediate widths),
+   render it at roughly 90% of the hero height (72% at intermediate widths),
    and size it from the hero rather than the viewport so zooming does not alter
    the composition unexpectedly. Every hero includes a short lead. Heroes that
    have no stronger task-specific action use one outlined `Email us` button;
@@ -428,7 +428,7 @@ rightmost at h 0.40–0.50, trio 0.44 · baseline 0.76 · bubbles ≈ y 0.29 ·
 internal-page hero height 480px desktop / content-driven mobile with a 260px
 minimum and roughly 200px reserved above text · homepage 640px · title width ≤
 60vw at 810–1199px and ≤ 40vw from 1200px, with a 4.5s warm glow pulse · mobile
-foreground about 64vw and centred above title · ≥1200px foreground at 112.5%
+foreground about 64vw and centred above title · ≥1200px foreground at 90%
 hero height, grounded bottom-right and sized from the hero · desktop scrim 55%
 through 50vw → clear at 70vw · mobile scrim near-clear at top → dark behind
 copy · no filler CTA or JavaScript height calculation · faded backdrops darken
