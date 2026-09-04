@@ -13,7 +13,7 @@
       "foreground": "/images/banners/advanced-agentic-coding-with-claude-code-or-codex-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 912,
+      "foregroundWidth": 632,
       "foregroundHeight": 562
     },
     "/images/banners/agentic-ai-for-digital-builders.webp": {
@@ -253,8 +253,8 @@
       "foreground": "/images/banners/microsoft-copilot-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 927,
-      "foregroundHeight": 545
+      "foregroundWidth": 640,
+      "foregroundHeight": 505
     },
     "/images/banners/no-code-machine-learning.webp": {
       "background": "/images/banners/no-code-machine-learning-background.webp",
@@ -285,16 +285,16 @@
       "foreground": "/images/banners/professional-certificate-in-web-application-development-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 885,
-      "foregroundHeight": 536
+      "foregroundWidth": 600,
+      "foregroundHeight": 505
     },
     "/images/banners/professionals.webp": {
       "background": "/images/banners/professionals-background.webp",
       "foreground": "/images/banners/professionals-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 919,
-      "foregroundHeight": 540
+      "foregroundWidth": 639,
+      "foregroundHeight": 462
     },
     "/images/banners/ri-futurecreate-maker-programme-2025.webp": {
       "background": "/images/banners/ri-futurecreate-maker-programme-2025-background.webp",
