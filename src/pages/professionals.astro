@@ -12,6 +12,7 @@
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import BannerLayers from '../components/BannerLayers.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
@@ -75,6 +76,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		<div class="aud-hero__content shell">
 			<h1 class="aud-hero__title">{heroTitle}</h1>
 			<p class="aud-hero__lead">{heroLead}</p>
+			<HeroEmailAction />
 		</div>
 	</section>
 

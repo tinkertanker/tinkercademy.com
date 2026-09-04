@@ -1,6 +1,7 @@
 ---
 import ContactForm from '../components/ContactForm.astro';
 import BannerLayers from '../components/BannerLayers.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
@@ -30,6 +31,7 @@ const heroBanner = getBannerAsset(heroImage);
 			<p class="contact-hero__subtitle">
 				We go to your school or company. Or drop by our little Bishan makerspace to 3D print, laser cut, and build something.
 			</p>
+			<HeroEmailAction />
 		</div>
 	</section>
 

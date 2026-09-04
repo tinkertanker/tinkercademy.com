@@ -3,6 +3,7 @@ import ContentBlocks from '../components/ContentBlocks.astro';
 import BannerLayers from '../components/BannerLayers.astro';
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import HeroMedia from '../components/HeroMedia.astro';
 import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import PageHero from '../components/PageHero.astro';
@@ -77,8 +78,15 @@ const courseHeroPreload =
 		: page.slug === 'courses-all' && courseAllHero
 			? { src: courseAllHero.src, srcset: courseAllHero.srcset, sizes: '100vw' }
 		: null;
-const courseAllLead =
-	'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.';
+const COURSE_PAGE_LEADS: Record<string, string> = {
+	'courses-all':
+		'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.',
+	'courses-professionals':
+		'Practical AI, software, and digital making courses for working professionals and teams.',
+	'courses-schools':
+		'Coding, AI, and digital making programmes for primary, secondary, and junior college learners.',
+};
+const coursePageLead = COURSE_PAGE_LEADS[page.slug as string];
 const courseAllHighlights = [
 	{
 		title: 'For Classrooms and Teams',
@@ -154,7 +162,8 @@ const hasRichContent = contentBlocks.some(
 						<div class="course-hero__scrim"></div>
 						<div class="course-hero__content shell">
 							<h1 class="course-hero__title">{displayTitle}</h1>
-							{page.slug === 'courses-all' && <p class="course-hero__lead">{courseAllLead}</p>}
+							<p class="course-hero__lead">{coursePageLead}</p>
+							<HeroEmailAction />
 						</div>
 					</section>
 					<LogoCarouselSection

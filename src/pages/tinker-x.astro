@@ -4,6 +4,7 @@
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import BannerLayers from '../components/BannerLayers.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
@@ -162,6 +163,7 @@ const pricingTiers = [
 			<p class="tx-hero__eyebrow">An open-ended tinkering programme</p>
 			<h1 class="tx-hero__title">{heroTitle}</h1>
 			<p class="tx-hero__lead">{heroLead}</p>
+			<HeroEmailAction />
 		</div>
 	</section>
 

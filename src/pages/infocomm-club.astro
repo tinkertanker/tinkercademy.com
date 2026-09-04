@@ -4,6 +4,7 @@
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import BannerLayers from '../components/BannerLayers.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
@@ -17,6 +18,7 @@ const canonical = 'https://tinkercademy.com/infocomm-club/';
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroBanner = getBannerAsset(heroImage);
 const heroTitle = page.hero_title ?? 'Infocomm Club Courses';
+const heroLead = 'App development, UI/UX, and digital making programmes for school Infocomm Clubs.';
 
 const appleCourses = [
 	{
@@ -74,6 +76,8 @@ const signupLinks = [
 		<div class="ic-hero__scrim"></div>
 		<div class="ic-hero__content shell">
 			<h1 class="ic-hero__title">{heroTitle}</h1>
+			<p class="ic-hero__lead">{heroLead}</p>
+			<HeroEmailAction />
 		</div>
 	</section>
 
@@ -196,6 +200,7 @@ const signupLinks = [
 		justify-content: flex-end;
 		min-height: inherit;
 		padding: var(--hero-content-padding-top, clamp(4rem, 8vw, 6rem)) 0 clamp(2.5rem, 4vw, 3.5rem);
+		gap: 0.75rem;
 	}
 
 	.ic-hero__title {
@@ -208,6 +213,15 @@ const signupLinks = [
 		margin: 0;
 		max-width: var(--hero-title-max-width);
 		text-shadow: var(--hero-title-glow);
+	}
+
+	.ic-hero__lead {
+		margin: 0;
+		max-width: 48ch;
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
+		color: rgba(255, 255, 255, 0.92);
 	}
 
 	.ic-intro {

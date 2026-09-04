@@ -4,6 +4,7 @@
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import BannerLayers from '../components/BannerLayers.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
@@ -151,6 +152,7 @@ const heroTitleHtml = heroTitle
 		<div class="about-hero__content shell">
 			<h1 class="about-hero__title" set:html={heroTitleHtml} />
 			<p class="about-hero__subtitle">{heroSubtitle}</p>
+			<HeroEmailAction />
 		</div>
 	</section>
 

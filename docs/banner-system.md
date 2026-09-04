@@ -116,7 +116,9 @@ Freeform x/y still works for scenes that need something bespoke.
    vertical space. At desktop sizes, ground the foreground at the bottom right,
    render it at roughly 112.5% of the hero height (90% at intermediate widths),
    and size it from the hero rather than the viewport so zooming does not alter
-   the composition unexpectedly.
+   the composition unexpectedly. Every hero includes a short lead. Heroes that
+   have no stronger task-specific action use one outlined `Email us` button;
+   do not invent a primary action merely to equalise the layout.
 4. **The formula: one robot, one screen, one-plus props.** A scene is one
    mascot pose + one device·screen combo + one or two *physical* sticker-props
    that identify the course (prefer a minted object over a second screen —
