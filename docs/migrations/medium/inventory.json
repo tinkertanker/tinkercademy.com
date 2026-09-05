@@ -30,7 +30,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/whats-a-tinkertanker-200bae67e8f1",
       "slug": "whats-a-tinkertanker",
       "title": "What’s a Tinkertanker",
-      "subtitle": "We started Tinkertanker in 2011, and haven’t written much about the company and what we do. As a result, we now regularly get emails from…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/whats-a-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/whats-a-tinkertanker-200bae67e8f1",
       "author": {
@@ -654,7 +654,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/making-it-to-maker-faire-singapore-2017-3b89d8165da",
       "slug": "making-it-to-maker-faire-singapore-2017",
       "title": "Making it to Maker Faire Singapore 2017",
-      "subtitle": "It’s already two months after Maker Faire, and we’re finally ready to talk about it! Perhaps it took us this long to recover from the…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/making-it-to-maker-faire-singapore-2017/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/making-it-to-maker-faire-singapore-2017-3b89d8165da",
       "author": {
@@ -2147,7 +2147,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/viennale-annals-i-fdcbe7a89015",
       "slug": "viennale-annals-i",
       "title": "Viennale Annals I",
-      "subtitle": "Journey to the Venice Biennale, representing Singapore in the best light possible.",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-i/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/viennale-annals-i-fdcbe7a89015",
       "author": {
@@ -2254,7 +2254,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
       "slug": "viennale-annals-ii-light-sticks-for-days",
       "title": "Viennale Annals II: Light Sticks for Days",
-      "subtitle": "Part 2 of our journey to the Venice Biennale. Read Part 1 first to avoid spoilers.",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/viennale-annals-ii-light-sticks-for-days-76e66944bcdb",
       "author": {
@@ -2402,7 +2402,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/week-1-building-donkeycar-da888446956a",
       "slug": "building-donkeycar-week-1",
       "title": "Building DonkeyCar: Week 1",
-      "subtitle": "Editor’s note: Kevin Steven is a Computer Science undergraduate at the Nanyang Technological University (NTU) who interned with us over the…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2018/building-donkeycar-week-1/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/week-1-building-donkeycar-da888446956a",
       "author": {
@@ -2555,7 +2555,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
       "slug": "viennale-annals-iii-prototyping-light-sticks",
       "title": "Viennale Annals III: Prototyping Light Sticks",
-      "subtitle": "Editor’s note: Read Part 1 and Part 2 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-iii-prototyping-light-sticks/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558",
       "author": {
@@ -2678,7 +2678,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
       "slug": "viennale-annals-iv-in-depth-light-remote-electronics",
       "title": "Viennale Annals IV: In-Depth Light Remote Electronics",
-      "subtitle": "Editor’s note: Read Parts 1, 2, and 3 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2018/viennale-annals-iv-in-depth-light-remote-electronics/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/viennale-annals-iv-light-panel-electronics-a6b721038fe7",
       "author": {
@@ -4047,7 +4047,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
       "slug": "scanning-and-cutting-to-make-a-diorama",
       "title": "Scanning and Cutting to make a diorama",
-      "subtitle": "Editor’s note: Nadya joined us as a marketing intern earlier this year. Despite coming in with little tech or coding experience, she…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2019/scanning-and-cutting-to-make-a-diorama/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/scanning-and-cutting-to-make-a-diorama-ebf9258d8a35",
       "author": {
@@ -7803,7 +7803,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607",
       "slug": "why-we-encourage-our-students-to-use-chatgpt-in-class",
       "title": "Why We Encourage Our Students to Use ChatGPT in Class",
-      "subtitle": "With more than 1 billion users worldwide, ChatGPT has sparked much debate about issues like academic fraud, plagiarism, and the validity of…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/why-we-encourage-our-students-to-use-chatgpt-in-class/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/why-we-encourage-our-students-to-use-chatgpt-in-class-8a281672f607",
       "author": {
@@ -7889,7 +7889,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818",
       "slug": "how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation",
       "title": "How Robotic Process Automation (RPA) Eliminates Manual Data Entry and Empowers Innovation",
-      "subtitle": "Imagine you’re a regional manager of a large multinational corporation. At a recent business conference, you hear about a new technology…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818",
       "author": {
@@ -7958,7 +7958,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4",
       "slug": "a-step-by-step-guide-to-building-personalised-ar-experiences",
       "title": "A Step-by-Step Guide to Building Personalised AR Experiences",
-      "subtitle": "Step aside, ChatGPT, there’s a new player in town, and it’s about to propel us light-years ahead, blurring the lines between the real and…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/a-step-by-step-guide-to-building-personalised-ar-experiences/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/a-step-by-step-guide-to-building-personalised-ar-experiences-cf2a6fa11db4",
       "author": {
@@ -8230,7 +8230,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82",
       "slug": "unveiling-the-top-ai-based-apps-made-by-regular-teens",
       "title": "Unveiling the Top AI-Based Apps Made by Regular Teens",
-      "subtitle": "In today’s digital age, teenagers are not only avid users of technology but also creators and innovators. With rising advancements in…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/unveiling-the-top-ai-based-apps-made-by-regular-teens/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/unveiling-the-top-ai-based-apps-made-by-regular-teens-a696c58e8e82",
       "author": {
@@ -8324,7 +8324,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/this-is-what-happens-when-sewing-meets-code-conductive-thread-51fea38d97a0",
       "slug": "this-is-what-happens-when-sewing-meets-code-and-conductive-thread",
       "title": "This is What Happens When Sewing Meets Code & Conductive Thread",
-      "subtitle": "In a rapidly evolving world, where technology interacts with almost anything and everything we can think of, it wouldn’t be hard to believe…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/this-is-what-happens-when-sewing-meets-code-and-conductive-thread/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/this-is-what-happens-when-sewing-meets-code-conductive-thread-51fea38d97a0",
       "author": {
@@ -8478,7 +8478,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382",
       "slug": "tinkerfolio-tinkering-with-purpose",
       "title": "Tinkerfolio: Tinkering with Purpose",
-      "subtitle": "This blog is written by Natasha, Sheryl, and Marcus, three inquisitive Year 3 Computing students from the National University of Singapore…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/tinkerfolio-tinkering-with-purpose/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/tinkerfolio-tinkering-with-purpose-b1c8ee6f2382",
       "author": {
@@ -8562,7 +8562,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c",
       "slug": "internship-reflection-a-dive-into-many-new-things",
       "title": "Internship Reflection: A dive into many new things",
-      "subtitle": "Editor’s note: Enric Tan is currently pursuing a Computer Science degree at the Nanyang Technological University (NTU). He interned with us…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/internship-reflection-a-dive-into-many-new-things/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/internship-reflection-a-dive-into-many-new-things-7f24aadb1d1c",
       "author": {
@@ -8647,7 +8647,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403",
       "slug": "tinkertanker-internship-bowling-at-tinkertanker",
       "title": "Tinkertanker Internship: Bowling at Tinkertanker",
-      "subtitle": "Editor’s note: Mark, a self-starter and aspiring software engineer, joined us over a 12-week period as a teaching and curriculum design…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/tinkertanker-internship-bowling-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/tinkertanker-internship-bowling-at-tinkertanker-5c133e7a6403",
       "author": {
@@ -8769,7 +8769,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
       "slug": "using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1",
       "title": "Using Python and Pandas to generate useful reports out of CSV files, part 1",
-      "subtitle": "Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&L) survey. In this survey, students offered…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382",
       "author": {
@@ -8907,7 +8907,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
       "slug": "using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2",
       "title": "Using Python and Pandas to generate useful reports out of CSV files, part 2",
-      "subtitle": "Editor’s Note: Here’s Ong Yi Shen’s second blog post, which is a continuation of his first post. You can read his first post here.",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-2-6237608a433",
       "author": {
@@ -9000,7 +9000,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/having-fun-with-automata-and-littlebits-511b955fcf81",
       "slug": "having-fun-with-automata-and-littlebits",
       "title": "Having fun with Automata and LittleBits!",
-      "subtitle": "I have always been fascinated with the idea of Automata. A quick Pinterest search will yield you countless amazing examples of these, made…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2023/having-fun-with-automata-and-littlebits/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/having-fun-with-automata-and-littlebits-511b955fcf81",
       "author": {
@@ -9240,7 +9240,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/what-is-it-like-to-build-games-on-unity-13f41ea742ca",
       "slug": "what-is-it-like-to-build-games-on-unity",
       "title": "What is it like to build games on Unity?",
-      "subtitle": "Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks’ School, carrying laptops, water…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2024/what-is-it-like-to-build-games-on-unity/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/what-is-it-like-to-build-games-on-unity-13f41ea742ca",
       "author": {
@@ -9689,7 +9689,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282",
       "slug": "now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code",
       "title": "Now That AI Can Generate Code, Should the Everyday Student Stop Learning How to Code?",
-      "subtitle": "Picture this: a world where coding is as effortless as conversing in English, where programming becomes akin to a casual chat with…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2024/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282",
       "author": {
@@ -9856,7 +9856,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/reframing-my-thoughts-on-website-builders-ae71c2d219f9",
       "slug": "reframing-my-thoughts-on-website-builders",
       "title": "Reframing my thoughts on website builders",
-      "subtitle": "Editor’s Note: Yun Xuan joined us as an intern over this recent summer break. She tirelessly worked on various projects, notably web…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2024/reframing-my-thoughts-on-website-builders/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/reframing-my-thoughts-on-website-builders-ae71c2d219f9",
       "author": {

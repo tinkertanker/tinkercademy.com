@@ -1,7 +1,6 @@
 ---
 title: What is it like to build games on Unity?
-subtitle: Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks’ School, carrying laptops, water…
-description: Between 20th to 24th November, a group of 14 to 18-year-olds, entered the computer labs of St Patricks’ School, carrying laptops, water…
+description: What is it like to build games on Unity?
 slug: what-is-it-like-to-build-games-on-unity
 legacyPath: what-is-it-like-to-build-games-on-unity-13f41ea742ca
 canonicalUrl: https://tinkercademy.com/blog/2024/what-is-it-like-to-build-games-on-unity/

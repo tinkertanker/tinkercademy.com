@@ -1,7 +1,6 @@
 ---
 title: Using Python and Pandas to generate useful reports out of CSV files, part 1
-subtitle: "Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&L) survey. In this survey, students offered…"
-description: "Editor’s Note: We were recently engaged by a school to conduct a teaching and learning (T&L) survey. In this survey, students offered…"
+description: Using Python and Pandas to generate useful reports out of CSV files, part 1
 slug: using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1
 legacyPath: using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1-2582307b4382
 canonicalUrl: https://tinkercademy.com/blog/2023/using-python-and-pandas-to-generate-useful-reports-out-of-csv-files-part-1/

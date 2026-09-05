@@ -78,6 +78,17 @@ test('normalises the public Medium record while preserving legacy provenance', (
 	assert.equal(story.license, 'All rights reserved');
 });
 
+test('discards automatic opening excerpts but retains distinct editorial summaries', () => {
+	const raw = structuredClone(rawStory);
+	raw.payload.value.content.bodyModel.paragraphs.push({ type: 1, text: 'The opening paragraph continues here.' });
+	for (const subtitle of ['The opening paragraph…', 'The opening paragraph...', 'The opening paragraph continues here.']) {
+		raw.payload.value.content.subtitle = subtitle;
+		assert.equal(normaliseMediumStory(raw).subtitle, '');
+	}
+	raw.payload.value.content.subtitle = 'A distinct editorial summary.';
+	assert.equal(normaliseMediumStory(raw).subtitle, 'A distinct editorial summary.');
+});
+
 test('rejects records that are not public stories in the expected publication', () => {
 	const wrongPublication = structuredClone(rawStory);
 	wrongPublication.payload.value.homeCollectionId = 'someone-else';

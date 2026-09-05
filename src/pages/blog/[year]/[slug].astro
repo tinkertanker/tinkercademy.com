@@ -3,7 +3,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 import BlogNav from '../../../components/articles/BlogNav.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
-import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, SITE_ORIGIN, blogDateTime, blogHref, formatBlogDate } from '../../../lib/blog';
+import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, SITE_ORIGIN, blogDateTime, formatBlogDate } from '../../../lib/blog';
 
 export async function getStaticPaths() {
 	return (await getCollection('blog')).map((story) => ({
@@ -52,7 +52,6 @@ const articleSchema = {
 	<article class="blog-article">
 		<header class="blog-article__header">
 			<div class="shell blog-article__header-inner">
-				<p class="blog-article__eyebrow"><a href={blogHref('/')}>Build Log story</a></p>
 				<h1>{story.data.title}</h1>
 				{story.data.subtitle && <p class="blog-article__subtitle">{story.data.subtitle}</p>}
 				<p class="blog-article__byline">
@@ -96,15 +95,6 @@ const articleSchema = {
 		padding-bottom: 3rem;
 	}
 
-	.blog-article__eyebrow {
-		margin: 0 0 1.25rem;
-		font-size: 0.85rem;
-		font-weight: 600;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--accent-dark);
-	}
-
 	.blog-article__header h1 {
 		margin: 0;
 		font-family: var(--heading);
@@ -113,7 +103,6 @@ const articleSchema = {
 	}
 
 	.blog-article__subtitle {
-		max-width: 60ch;
 		margin: 1rem 0;
 		font-size: var(--lead-font-size);
 		line-height: var(--lead-line-height);
@@ -126,7 +115,6 @@ const articleSchema = {
 	}
 
 	.blog-article__byline a,
-	.blog-article__eyebrow a,
 	.blog-article__footer a {
 		color: var(--accent-dark);
 		text-underline-offset: 0.18em;
@@ -141,6 +129,7 @@ const articleSchema = {
 	.blog-article__body :global(p),
 	.blog-article__body :global(li),
 	.blog-article__body :global(blockquote) {
+		max-width: none;
 		font-size: 1rem;
 		line-height: 1.7;
 	}

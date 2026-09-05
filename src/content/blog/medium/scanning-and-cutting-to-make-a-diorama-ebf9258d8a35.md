@@ -1,7 +1,6 @@
 ---
 title: Scanning and Cutting to make a diorama
-subtitle: "Editor’s note: Nadya joined us as a marketing intern earlier this year. Despite coming in with little tech or coding experience, she…"
-description: "Editor’s note: Nadya joined us as a marketing intern earlier this year. Despite coming in with little tech or coding experience, she…"
+description: Scanning and Cutting to make a diorama
 slug: scanning-and-cutting-to-make-a-diorama
 legacyPath: scanning-and-cutting-to-make-a-diorama-ebf9258d8a35
 canonicalUrl: https://tinkercademy.com/blog/2019/scanning-and-cutting-to-make-a-diorama/

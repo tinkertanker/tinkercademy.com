@@ -1,7 +1,6 @@
 ---
 title: "Viennale Annals III: Prototyping Light Sticks"
-subtitle: "Editor’s note: Read Part 1 and Part 2 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…"
-description: "Editor’s note: Read Part 1 and Part 2 first for some background on what we call “Viennale”: the Singapore Pavilion for the Venice Biennale…"
+description: "Viennale Annals III: Prototyping Light Sticks"
 slug: viennale-annals-iii-prototyping-light-sticks
 legacyPath: prototyping-light-sticks-for-the-singapore-pavilion-in-venice-29de92731558
 canonicalUrl: https://tinkercademy.com/blog/2018/viennale-annals-iii-prototyping-light-sticks/

@@ -78,11 +78,17 @@ export function normaliseMediumStory(raw) {
 	const handle = user.username || null;
 	const publishedAt = asIsoDate(value.firstPublishedAt, 'firstPublishedAt');
 	const slug = slugifyStoryTitle(value.title);
+	const paragraphs = value.content?.bodyModel?.paragraphs ?? [];
+	const candidateSubtitle = value.content?.subtitle || value.virtuals?.subtitle || '';
+	// Medium also fills subtitle with an automatic, truncated opening paragraph.
+	const summaryPrefix = candidateSubtitle.replace(/(?:…|\.{3})$/u, '').trim();
+	const openingText = paragraphs.find((paragraph) => paragraph.type === 1)?.text ?? '';
+	const subtitle = summaryPrefix && openingText.startsWith(summaryPrefix) ? '' : candidateSubtitle;
 
 	return {
 		id: value.id,
 		title: value.title,
-		subtitle: value.content?.subtitle || value.virtuals?.subtitle || '',
+		subtitle,
 		legacyPath,
 		legacyUrl,
 		slug,

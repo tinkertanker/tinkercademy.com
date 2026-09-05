@@ -1,7 +1,6 @@
 ---
 title: How Robotic Process Automation (RPA) Eliminates Manual Data Entry and Empowers Innovation
-subtitle: Imagine you’re a regional manager of a large multinational corporation. At a recent business conference, you hear about a new technology…
-description: Imagine you’re a regional manager of a large multinational corporation. At a recent business conference, you hear about a new technology…
+description: How Robotic Process Automation (RPA) Eliminates Manual Data Entry and Empowers Innovation
 slug: how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation
 legacyPath: how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation-97f9da08d818
 canonicalUrl: https://tinkercademy.com/blog/2023/how-robotic-process-automation-rpa-eliminates-manual-data-entry-and-empowers-innovation/

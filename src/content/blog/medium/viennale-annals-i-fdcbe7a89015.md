@@ -1,7 +1,6 @@
 ---
 title: Viennale Annals I
-subtitle: Journey to the Venice Biennale, representing Singapore in the best light possible.
-description: Journey to the Venice Biennale, representing Singapore in the best light possible.
+description: Viennale Annals I
 slug: viennale-annals-i
 legacyPath: viennale-annals-i-fdcbe7a89015
 canonicalUrl: https://tinkercademy.com/blog/2018/viennale-annals-i/

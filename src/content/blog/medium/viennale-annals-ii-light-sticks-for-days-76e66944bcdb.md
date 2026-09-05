@@ -1,7 +1,6 @@
 ---
 title: "Viennale Annals II: Light Sticks for Days"
-subtitle: Part 2 of our journey to the Venice Biennale. Read Part 1 first to avoid spoilers.
-description: Part 2 of our journey to the Venice Biennale. Read Part 1 first to avoid spoilers.
+description: "Viennale Annals II: Light Sticks for Days"
 slug: viennale-annals-ii-light-sticks-for-days
 legacyPath: viennale-annals-ii-light-sticks-for-days-76e66944bcdb
 canonicalUrl: https://tinkercademy.com/blog/2018/viennale-annals-ii-light-sticks-for-days/

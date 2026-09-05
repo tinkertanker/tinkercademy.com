@@ -1,7 +1,6 @@
 ---
 title: Now That AI Can Generate Code, Should the Everyday Student Stop Learning How to Code?
-subtitle: "Picture this: a world where coding is as effortless as conversing in English, where programming becomes akin to a casual chat with…"
-description: "Picture this: a world where coding is as effortless as conversing in English, where programming becomes akin to a casual chat with…"
+description: Now That AI Can Generate Code, Should the Everyday Student Stop Learning How to Code?
 slug: now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code
 legacyPath: now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code-d1ee2226c282
 canonicalUrl: https://tinkercademy.com/blog/2024/now-that-ai-can-generate-code-should-the-everyday-student-stop-learning-how-to-code/
