@@ -1229,7 +1229,7 @@
  },
  {
   "id": "no-code-machine-learning",
-  "note": "No-code ML — webcam + data.",
+  "note": "No-code ML — visual dataset-to-prediction workflow.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
@@ -1241,18 +1241,10 @@
   },
   "props": [
    {
-    "type": "webcam",
-    "x": 0.53,
-    "y": 0.64,
-    "w": 0.11,
-    "ground": true
-   },
-   {
-    "type": "laptop",
-    "screen": "sheet",
-    "x": 0.7,
-    "y": 0.74,
-    "w": 0.18
+    "type": "no-code-ml-workflow",
+    "x": 0.59,
+    "y": 0.65,
+    "w": 0.3
    }
   ],
   "photo": {

@@ -309,7 +309,7 @@ The full mint workflow, learned across rounds 1–6:
 Sticker props accept `"ground": true` to sit their bottom edge on the scene
 baseline (preferred over hand-computing `y` from the image aspect).
 
-The 33-prop library gives every current programme an identifying object; see
+The 34-prop library gives every current programme an identifying object; see
 the README table for the prop → course mapping.
 
 ## Handoff state (28 Aug 2026)

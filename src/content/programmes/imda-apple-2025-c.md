@@ -1,5 +1,5 @@
 ---
-title: "Swift Playground"
+title: "App Development on iPad with Swift Playground"
 subtitle: "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
 duration: "26 hours"
 heroImage: "/images/banners/imda-apple-2025-c.webp"
@@ -10,7 +10,7 @@ cardBlurb: "Build real iOS apps in Swift Playgrounds. Start with Swift and Swift
 weight: 65
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
-seoTitle: "Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals"
+seoTitle: "App Development on iPad with Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
 ## Course Overview

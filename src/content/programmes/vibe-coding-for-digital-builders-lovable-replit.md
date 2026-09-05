@@ -8,7 +8,7 @@ domainIds: ["ai-engineering"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
 cardBlurb: "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic…"
 weight: 99
-draft: true
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Level Up Your Vibe Coding (Lovable and Replit) - Tinkercademy: Coding and Making for Schools and Professionals"

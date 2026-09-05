@@ -8,6 +8,7 @@ domainIds: ["uiux"]
 platformIds: ["framer"]
 cardBlurb: "In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and…"
 weight: 0
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals"

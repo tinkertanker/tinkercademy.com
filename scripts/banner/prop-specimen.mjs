@@ -87,6 +87,7 @@ const ITEMS = [
 	{ label: 'doc-stack (minted)', type: 'doc-stack', w: 120 },
 	{ label: 'webcam (minted)', type: 'webcam', w: 100 },
 	{ label: 'battery-pack (minted)', type: 'battery-pack', w: 100 },
+	{ label: 'no-code-ml-workflow (minted)', type: 'no-code-ml-workflow', w: 190 },
 ];
 
 // pre-render sticker-based cells (async) into inline <image> markup

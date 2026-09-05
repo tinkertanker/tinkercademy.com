@@ -294,8 +294,8 @@
       "foreground": "/images/banners/no-code-machine-learning-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 788,
-      "foregroundHeight": 474
+      "foregroundWidth": 844,
+      "foregroundHeight": 504
     },
     "/images/banners/no-code-web-design-framer.webp": {
       "background": "/images/banners/no-code-web-design-framer-background.webp",
