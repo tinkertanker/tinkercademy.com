@@ -1,7 +1,6 @@
 ---
 title: Cool Trinkets with Plywood and a Laser Cutter
-subtitle: As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about…
-description: As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about…
+description: Cool Trinkets with Plywood and a Laser Cutter
 slug: cool-trinkets-with-plywood-and-a-laser-cutter
 legacyPath: cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e
 canonicalUrl: https://tinkercademy.com/blog/2020/cool-trinkets-with-plywood-and-a-laser-cutter/

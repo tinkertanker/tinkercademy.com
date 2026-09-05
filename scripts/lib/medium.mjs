@@ -81,9 +81,12 @@ export function normaliseMediumStory(raw) {
 	const paragraphs = value.content?.bodyModel?.paragraphs ?? [];
 	const candidateSubtitle = value.content?.subtitle || value.virtuals?.subtitle || '';
 	// Medium also fills subtitle with an automatic, truncated opening paragraph.
-	const summaryPrefix = candidateSubtitle.replace(/(?:…|\.{3})$/u, '').trim();
-	const openingText = paragraphs.find((paragraph) => paragraph.type === 1)?.text ?? '';
-	const subtitle = summaryPrefix && openingText.startsWith(summaryPrefix) ? '' : candidateSubtitle;
+	const normaliseWhitespace = (text) => text.replace(/\s+/gu, ' ').trim();
+	const summaryPrefix = normaliseWhitespace(candidateSubtitle.replace(/(?:…|\.{3})$/u, ''));
+	const isExcerpt = summaryPrefix && paragraphs.some((paragraph) =>
+		paragraph.type !== 4 && normaliseWhitespace(paragraph.text ?? '').startsWith(summaryPrefix),
+	);
+	const subtitle = isExcerpt ? '' : candidateSubtitle;
 
 	return {
 		id: value.id,

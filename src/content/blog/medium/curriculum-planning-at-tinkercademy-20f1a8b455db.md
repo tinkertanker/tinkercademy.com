@@ -1,7 +1,6 @@
 ---
 title: Curriculum Planning at Tinkercademy
-subtitle: Many of the activities built, constructed, and written about at Tinkertanker/ Tinkercademy are physical toys and projects — documentations…
-description: Many of the activities built, constructed, and written about at Tinkertanker/ Tinkercademy are physical toys and projects — documentations…
+description: Curriculum Planning at Tinkercademy
 slug: curriculum-planning-at-tinkercademy
 legacyPath: curriculum-planning-at-tinkercademy-20f1a8b455db
 canonicalUrl: https://tinkercademy.com/blog/2021/curriculum-planning-at-tinkercademy/

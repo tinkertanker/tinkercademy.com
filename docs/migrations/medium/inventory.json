@@ -140,7 +140,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/digital-maker-programme-998927090ddc",
       "slug": "getting-singapore-making-with-the-micro-bit",
       "title": "Getting Singapore making with the micro:bit",
-      "subtitle": "Behind the scenes of the Digital Maker Programme",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/getting-singapore-making-with-the-micro-bit/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/digital-maker-programme-998927090ddc",
       "author": {
@@ -339,7 +339,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/hello-singapore-596469f1b20f",
       "slug": "hello-singapore",
       "title": "Hello Singapore",
-      "subtitle": "Rambling Into The Next Adventure",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/hello-singapore/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/hello-singapore-596469f1b20f",
       "author": {
@@ -432,7 +432,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/my-summer-internship-at-tinker-tanker-745b4785c81a",
       "slug": "chattering-in-the-classroom",
       "title": "Chattering in the Classroom",
-      "subtitle": "Intern report: Building an in-class chat app for Tinkercademy",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/chattering-in-the-classroom/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-summer-internship-at-tinker-tanker-745b4785c81a",
       "author": {
@@ -551,7 +551,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/musings-on-computer-science-education-3140d82a279",
       "slug": "early-childhood-computer-science-education",
       "title": "Early Childhood Computer Science Education",
-      "subtitle": "Observations from Working with Early Childhood Classrooms in the U.S. and Singapore",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/early-childhood-computer-science-education/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/musings-on-computer-science-education-3140d82a279",
       "author": {
@@ -881,7 +881,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/building-at-android-application-internship-at-tinkertanker-60ad61677c9f",
       "slug": "building-the-get-hacking-android-app",
       "title": "Building the Get Hacking Android app",
-      "subtitle": "Intern report: Building Tinkertanker’s first Android app",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/building-the-get-hacking-android-app/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/building-at-android-application-internship-at-tinkertanker-60ad61677c9f",
       "author": {
@@ -985,7 +985,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/lessons-from-building-something-that-broke-too-easily-ef141c460192",
       "slug": "lessons-from-building-something-that-broke-too-easily",
       "title": "Lessons from building something that broke too easily",
-      "subtitle": "Intern report: Building a micro:bit Space Shooter arcade game",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/lessons-from-building-something-that-broke-too-easily/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/lessons-from-building-something-that-broke-too-easily-ef141c460192",
       "author": {
@@ -1086,7 +1086,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/bringing-a-ux-perspective-to-marketing-51170d4aeefb",
       "slug": "bringing-a-ux-perspective-to-marketing",
       "title": "Bringing a UX Perspective to Marketing",
-      "subtitle": "Learnings From 2 Months Into My Job at Tinkertanker",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/bringing-a-ux-perspective-to-marketing/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/bringing-a-ux-perspective-to-marketing-51170d4aeefb",
       "author": {
@@ -1146,7 +1146,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/iot-iteration-d9b0f049639a",
       "slug": "designing-and-iterating-an-iot-workshop",
       "title": "Designing and iterating an IoT workshop",
-      "subtitle": "An introduction to one of our most intricate workshops for corporate techies",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/designing-and-iterating-an-iot-workshop/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/iot-iteration-d9b0f049639a",
       "author": {
@@ -1449,7 +1449,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/learning-about-education-and-tech-in-singapore-bcf644a188d8",
       "slug": "learning-about-education-and-tech-in-singapore",
       "title": "Learning About Education and Tech in Singapore",
-      "subtitle": "Attending the Early Childhood Conference and a Digital Marketing Workshop",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/learning-about-education-and-tech-in-singapore/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/learning-about-education-and-tech-in-singapore-bcf644a188d8",
       "author": {
@@ -1570,7 +1570,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/learning-from-teaching-9bd92cc92982",
       "slug": "learning-from-teaching",
       "title": "Learning From Teaching",
-      "subtitle": "Intern report: Marketing for littleBits",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/learning-from-teaching/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/learning-from-teaching-9bd92cc92982",
       "author": {
@@ -1673,7 +1673,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/the-bittersweet-end-of-a-great-adventure-37484e189112",
       "slug": "the-bittersweet-end-of-a-great-adventure",
       "title": "The Bittersweet End of a Great Adventure",
-      "subtitle": "Reflections on Working in Singapore",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/the-bittersweet-end-of-a-great-adventure/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/the-bittersweet-end-of-a-great-adventure-37484e189112",
       "author": {
@@ -1786,7 +1786,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/interning-at-tinkertanker-d712aaceb09d",
       "slug": "interning-at-tinkertanker",
       "title": "Interning at Tinkertanker",
-      "subtitle": "An info packet for 2017–2018",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2017/interning-at-tinkertanker/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/interning-at-tinkertanker-d712aaceb09d",
       "author": {
@@ -1933,7 +1933,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
       "slug": "tank-tinkerer-a-micro-bit-competition",
       "title": "Tank Tinkerer: A Micro:bit Competition",
-      "subtitle": "National Infocomm Digital Making Challenge 2018 (Senior Category)",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2018/tank-tinkerer-a-micro-bit-competition/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/tank-tinkerer-a-micro-bit-competition-9302dff1f136",
       "author": {
@@ -3215,7 +3215,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/laser-cutting-for-dummies-f1dd156acaeb",
       "slug": "laser-cutting-for-dummies",
       "title": "Laser Cutting for Dummies",
-      "subtitle": "I had my first experience laser-cutting some weeks ago. It was pretty sweet. Laser cutting can be quite daunting for a first-timer. Is…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2019/laser-cutting-for-dummies/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/laser-cutting-for-dummies-f1dd156acaeb",
       "author": {
@@ -3396,7 +3396,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/how-i-wrote-ui-tests-for-the-get-hacking-android-app-7111309adeb9",
       "slug": "how-i-wrote-ui-tests-for-the-get-hacking-android-app",
       "title": "How I Wrote UI Tests for the Get Hacking Android App",
-      "subtitle": "The Android team and community advocates testing. This includes unit, integration, and UI testing.",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2019/how-i-wrote-ui-tests-for-the-get-hacking-android-app/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/how-i-wrote-ui-tests-for-the-get-hacking-android-app-7111309adeb9",
       "author": {
@@ -4152,7 +4152,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
       "slug": "from-making-micro-bit-holders-to-becoming-my-own-ikea",
       "title": "From making micro:bit holders to becoming my own Ikea",
-      "subtitle": "My journey interning at Tinkertanker was short but filled with many memorable learning experiences and lessons. From assisting in…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2019/from-making-micro-bit-holders-to-becoming-my-own-ikea/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63",
       "author": {
@@ -4349,7 +4349,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e",
       "slug": "cool-trinkets-with-plywood-and-a-laser-cutter",
       "title": "Cool Trinkets with Plywood and a Laser Cutter",
-      "subtitle": "As a non-coder in a heavily tech environment, I found myself gravitating towards the hardware and cool machines in the office. (Read about…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2020/cool-trinkets-with-plywood-and-a-laser-cutter/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/cool-trinkets-with-plywood-and-a-laser-cutter-72bfe17176e",
       "author": {
@@ -4807,7 +4807,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/automated-migration-from-bitbucket-to-github-in-2020-29ee52406580",
       "slug": "semi-automated-migration-from-bitbucket-to-github-2020-edition",
       "title": "Semi-automated migration from Bitbucket to GitHub: 2020 edition",
-      "subtitle": "Scripts for the lazy, the tinkerers, and the lazy tinkerers",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2020/semi-automated-migration-from-bitbucket-to-github-2020-edition/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/automated-migration-from-bitbucket-to-github-in-2020-29ee52406580",
       "author": {
@@ -5627,7 +5627,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/my-first-work-from-home-summer-internship-a28e0646e1a9",
       "slug": "my-first-work-from-home-summer-internship",
       "title": "My first Work-From-Home Summer Internship",
-      "subtitle": "As the enthusiastic freshman I was, I volunteered to help out for school events back in my very first winter break. I met some seniors who…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2020/my-first-work-from-home-summer-internship/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/my-first-work-from-home-summer-internship-a28e0646e1a9",
       "author": {
@@ -6130,7 +6130,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/3d-printing-thrills-and-tribulations-6bd887f29ce4",
       "slug": "3d-printing-thrills-and-tribulations",
       "title": "3D Printing: Thrills and Tribulations",
-      "subtitle": "Introduction",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2021/3d-printing-thrills-and-tribulations/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/3d-printing-thrills-and-tribulations-6bd887f29ce4",
       "author": {
@@ -6297,7 +6297,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/a-youth-month-of-tinkerers-c46ad5cbfda6",
       "slug": "a-youth-month-of-tinkerers",
       "title": "A Youth Month of Tinkerers",
-      "subtitle": "“This Youth Month, we want to let our youth know that all Singaporeans are committed to journeying with and empowering them to write the…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2021/a-youth-month-of-tinkerers/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/a-youth-month-of-tinkerers-c46ad5cbfda6",
       "author": {
@@ -6589,7 +6589,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/curriculum-planning-at-tinkercademy-20f1a8b455db",
       "slug": "curriculum-planning-at-tinkercademy",
       "title": "Curriculum Planning at Tinkercademy",
-      "subtitle": "Many of the activities built, constructed, and written about at Tinkertanker/ Tinkercademy are physical toys and projects — documentations…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2021/curriculum-planning-at-tinkercademy/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/curriculum-planning-at-tinkercademy-20f1a8b455db",
       "author": {
@@ -9323,7 +9323,7 @@
       "legacyUrl": "https://blog.tinkercademy.com/what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4",
       "slug": "what-we-learnt-from-our-latest-sew-and-code-camp",
       "title": "What We Learnt from our Latest Sew & Code Camp",
-      "subtitle": "During the recent December holidays, we organised a unique coding camp — one that had a distinctly different flavour from our regular…",
+      "subtitle": "",
       "canonicalUrl": "https://tinkercademy.com/blog/2024/what-we-learnt-from-our-latest-sew-and-code-camp/",
       "sourceMediumUrl": "https://medium.com/tinkertanker/what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4",
       "author": {

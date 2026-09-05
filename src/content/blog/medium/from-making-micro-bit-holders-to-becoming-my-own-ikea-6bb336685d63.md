@@ -1,7 +1,6 @@
 ---
 title: From making micro:bit holders to becoming my own Ikea
-subtitle: My journey interning at Tinkertanker was short but filled with many memorable learning experiences and lessons. From assisting in…
-description: My journey interning at Tinkertanker was short but filled with many memorable learning experiences and lessons. From assisting in…
+description: From making micro:bit holders to becoming my own Ikea
 slug: from-making-micro-bit-holders-to-becoming-my-own-ikea
 legacyPath: from-making-micro-bit-holders-to-becoming-my-own-ikea-6bb336685d63
 canonicalUrl: https://tinkercademy.com/blog/2019/from-making-micro-bit-holders-to-becoming-my-own-ikea/

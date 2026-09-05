@@ -1,7 +1,6 @@
 ---
 title: What We Learnt from our Latest Sew & Code Camp
-subtitle: During the recent December holidays, we organised a unique coding camp — one that had a distinctly different flavour from our regular…
-description: During the recent December holidays, we organised a unique coding camp — one that had a distinctly different flavour from our regular…
+description: What We Learnt from our Latest Sew & Code Camp
 slug: what-we-learnt-from-our-latest-sew-and-code-camp
 legacyPath: what-we-learnt-from-our-latest-sew-code-camp-766d691d0db4
 canonicalUrl: https://tinkercademy.com/blog/2024/what-we-learnt-from-our-latest-sew-and-code-camp/

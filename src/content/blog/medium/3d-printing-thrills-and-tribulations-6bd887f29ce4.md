@@ -1,7 +1,6 @@
 ---
 title: "3D Printing: Thrills and Tribulations"
-subtitle: Introduction
-description: Introduction
+description: "3D Printing: Thrills and Tribulations"
 slug: 3d-printing-thrills-and-tribulations
 legacyPath: 3d-printing-thrills-and-tribulations-6bd887f29ce4
 canonicalUrl: https://tinkercademy.com/blog/2021/3d-printing-thrills-and-tribulations/

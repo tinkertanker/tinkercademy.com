@@ -1,7 +1,6 @@
 ---
 title: Chattering in the Classroom
-subtitle: "Intern report: Building an in-class chat app for Tinkercademy"
-description: "Intern report: Building an in-class chat app for Tinkercademy"
+description: Chattering in the Classroom
 slug: chattering-in-the-classroom
 legacyPath: my-summer-internship-at-tinker-tanker-745b4785c81a
 canonicalUrl: https://tinkercademy.com/blog/2017/chattering-in-the-classroom/
