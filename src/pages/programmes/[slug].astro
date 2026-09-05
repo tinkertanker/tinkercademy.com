@@ -132,6 +132,7 @@ const seriesCourses = programme.series
 
 const heroResponsive = getResponsiveImage(programme.heroImage);
 const heroBanner = getBannerAsset(programme.heroImage);
+const heroObjectPosition = programme.entry.data.heroObjectPosition;
 const heroPreload = heroBanner
 	? { src: heroBanner.background }
 	: heroResponsive
@@ -163,9 +164,23 @@ const breadcrumbSchema = {
 			? `--prog-hero-mobile-content-top: ${professionalMobileContentTop[programme.slug]}; --banner-foreground-mobile-max-height: 214px`
 			: undefined}
 	>
-		{programme.heroImage && (
+		{heroBanner ? (
 			<BannerLayers src={programme.heroImage} />
-		)}
+		) : programme.heroImage ? (
+			<img
+				class="prog-hero__bg"
+				style={heroObjectPosition ? `--prog-hero-object-position: ${heroObjectPosition}` : undefined}
+				src={heroResponsive?.src ?? programme.heroImage}
+				srcset={heroResponsive?.srcset}
+				sizes={heroResponsive?.srcset ? '100vw' : undefined}
+				width={heroResponsive?.width}
+				height={heroResponsive?.height}
+				alt=""
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+			/>
+		) : null}
 		<div class="prog-hero__overlay" />
 		<div class="prog-hero__text shell">
 			{isTechnologyFoundationsCertificate && (
@@ -314,6 +329,16 @@ const breadcrumbSchema = {
 		align-items: flex-end;
 		overflow: hidden;
 		background: #161111;
+	}
+
+	.prog-hero__bg {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: var(--prog-hero-object-position, 50% 30%);
+		z-index: 0;
 	}
 
 	.prog-hero__overlay {
