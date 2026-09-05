@@ -84,7 +84,7 @@ export function normaliseMediumStory(raw) {
 	const normaliseWhitespace = (text) => text.replace(/\s+/gu, ' ').trim();
 	const summaryPrefix = normaliseWhitespace(candidateSubtitle.replace(/(?:…|\.{3})$/u, ''));
 	const isExcerpt = summaryPrefix && paragraphs.some((paragraph) =>
-		paragraph.type !== 4 && normaliseWhitespace(paragraph.text ?? '').startsWith(summaryPrefix),
+		paragraph.type !== 4 && paragraph.type !== 13 && normaliseWhitespace(paragraph.text ?? '').startsWith(summaryPrefix),
 	);
 	const subtitle = isExcerpt ? '' : candidateSubtitle;
 

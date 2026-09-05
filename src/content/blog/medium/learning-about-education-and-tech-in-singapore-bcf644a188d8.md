@@ -1,6 +1,7 @@
 ---
 title: Learning About Education and Tech in Singapore
-description: Learning About Education and Tech in Singapore
+subtitle: Attending the Early Childhood Conference and a Digital Marketing Workshop
+description: Attending the Early Childhood Conference and a Digital Marketing Workshop
 slug: learning-about-education-and-tech-in-singapore
 legacyPath: learning-about-education-and-tech-in-singapore-bcf644a188d8
 canonicalUrl: https://tinkercademy.com/blog/2017/learning-about-education-and-tech-in-singapore/

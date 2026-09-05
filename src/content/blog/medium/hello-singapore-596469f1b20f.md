@@ -1,6 +1,7 @@
 ---
 title: Hello Singapore
-description: Hello Singapore
+subtitle: Rambling Into The Next Adventure
+description: Rambling Into The Next Adventure
 slug: hello-singapore
 legacyPath: hello-singapore-596469f1b20f
 canonicalUrl: https://tinkercademy.com/blog/2017/hello-singapore/

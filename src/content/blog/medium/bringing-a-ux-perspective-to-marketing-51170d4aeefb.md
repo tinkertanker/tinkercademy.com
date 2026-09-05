@@ -1,6 +1,7 @@
 ---
 title: Bringing a UX Perspective to Marketing
-description: Bringing a UX Perspective to Marketing
+subtitle: Learnings From 2 Months Into My Job at Tinkertanker
+description: Learnings From 2 Months Into My Job at Tinkertanker
 slug: bringing-a-ux-perspective-to-marketing
 legacyPath: bringing-a-ux-perspective-to-marketing-51170d4aeefb
 canonicalUrl: https://tinkercademy.com/blog/2017/bringing-a-ux-perspective-to-marketing/

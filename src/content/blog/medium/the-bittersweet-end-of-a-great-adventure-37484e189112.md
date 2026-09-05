@@ -1,6 +1,7 @@
 ---
 title: The Bittersweet End of a Great Adventure
-description: The Bittersweet End of a Great Adventure
+subtitle: Reflections on Working in Singapore
+description: Reflections on Working in Singapore
 slug: the-bittersweet-end-of-a-great-adventure
 legacyPath: the-bittersweet-end-of-a-great-adventure-37484e189112
 canonicalUrl: https://tinkercademy.com/blog/2017/the-bittersweet-end-of-a-great-adventure/

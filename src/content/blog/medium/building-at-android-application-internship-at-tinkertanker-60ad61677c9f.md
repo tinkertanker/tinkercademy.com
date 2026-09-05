@@ -1,6 +1,7 @@
 ---
 title: Building the Get Hacking Android app
-description: Building the Get Hacking Android app
+subtitle: "Intern report: Building Tinkertanker’s first Android app"
+description: "Intern report: Building Tinkertanker’s first Android app"
 slug: building-the-get-hacking-android-app
 legacyPath: building-at-android-application-internship-at-tinkertanker-60ad61677c9f
 canonicalUrl: https://tinkercademy.com/blog/2017/building-the-get-hacking-android-app/

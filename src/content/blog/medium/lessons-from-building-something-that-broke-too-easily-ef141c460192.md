@@ -1,6 +1,7 @@
 ---
 title: Lessons from building something that broke too easily
-description: Lessons from building something that broke too easily
+subtitle: "Intern report: Building a micro:bit Space Shooter arcade game"
+description: "Intern report: Building a micro:bit Space Shooter arcade game"
 slug: lessons-from-building-something-that-broke-too-easily
 legacyPath: lessons-from-building-something-that-broke-too-easily-ef141c460192
 canonicalUrl: https://tinkercademy.com/blog/2017/lessons-from-building-something-that-broke-too-easily/
