@@ -207,7 +207,10 @@ The library is organised by **role**, and the roles combine:
    renders into any device via the `screen` field (`{"type": "monitor",
    "screen": "scene3d"}`). New course topic → usually a new *screen*, not a
    new device. 6 devices × 8 screens already gives ~48 combinations.
-3. **Hardware** — `microbit`, `breadboard`, `gamepad`.
+3. **Hardware** — `microbit`, `breadboard`, `microbit-circuit`, `gamepad`.
+   Use `microbit-circuit` when a connected circuit is visible: it draws one
+   complete P0 → resistor → LED → GND path and avoids decorative wires that do
+   not terminate on components.
 4. **Connectors** — `wire`: `{type: "wire", x, y, x2, y2, sag?}` draws a
    sagging cable between two scene points (croc-clip energy; ties hardware to
    devices so clusters read as one build, not scattered objects).

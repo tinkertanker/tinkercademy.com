@@ -390,6 +390,51 @@ function breadboard(w, { accent = 'red' }) {
 		<path d="M ${-w * 0.04} ${-h * 0.1} C ${w * 0.05} ${-h * 0.8}, ${w * 0.25} ${-h * 0.8}, ${w * 0.36} ${-h * 0.1}" fill="none" stroke="${PALETTE.teal}" stroke-width="${sw * 1.4}" stroke-linecap="round"/>`;
 }
 
+function microbitCircuit(w, { accent = 'red' }) {
+	const sw = stroke(w);
+	const breadboardW = w * 0.5;
+	const breadboardH = w * 0.23;
+	const breadboardX = -w * 0.24;
+	const breadboardY = w * 0.12;
+	let holes = '';
+	for (let row = 0; row < 4; row++) {
+		for (let column = 0; column < 9; column++) {
+			holes += `<circle cx="${breadboardX - breadboardW * 0.4 + column * breadboardW * 0.1}" cy="${breadboardY - breadboardH * 0.3 + row * breadboardH * 0.2}" r="${w * 0.005}" fill="${PALETTE.midgrey}"/>`;
+		}
+	}
+
+	const boardW = w * 0.44;
+	const boardX = w * 0.25;
+	const boardY = -w * 0.08;
+	const pinY = boardY + boardW * 0.32;
+	const p0X = boardX - boardW * 0.36;
+	const groundX = boardX + boardW * 0.36;
+	const cathodeX = -w * 0.22;
+	const anodeX = -w * 0.18;
+	const componentY = w * 0.14;
+	const ledBaseY = componentY - w * 0.085;
+	const resistorRight = -w * 0.06;
+	const wireWidth = sw * 0.5;
+	const resistorColor = PALETTE.orange;
+
+	return `
+		<rect x="${breadboardX - breadboardW / 2}" y="${breadboardY - breadboardH / 2}" width="${breadboardW}" height="${breadboardH}" rx="${w * 0.018}" fill="${T.screen}" stroke="${T.line}" stroke-width="${sw}"/>
+		<line x1="${breadboardX - breadboardW * 0.46}" y1="${breadboardY}" x2="${breadboardX + breadboardW * 0.46}" y2="${breadboardY}" stroke="${PALETTE.grey}" stroke-width="${sw * 0.7}"/>
+		${holes}
+		<g transform="translate(${boardX}, ${boardY})">${microbit(boardW, { accent })}</g>
+		<path d="M ${resistorRight} ${componentY} C ${-w * 0.01} ${componentY}, ${w * 0.03} ${pinY}, ${p0X} ${pinY}" fill="none" stroke="${PALETTE.orange}" stroke-width="${wireWidth}" stroke-linecap="round"/>
+		<path d="M ${cathodeX} ${componentY} C ${-w * 0.29} ${w * 0.21}, ${w * 0.12} ${w * 0.21}, ${w * 0.2} ${w * 0.14} S ${w * 0.34} ${pinY}, ${groundX} ${pinY}" fill="none" stroke="${PALETTE.ink}" stroke-width="${wireWidth}" stroke-linecap="round"/>
+		<line x1="${anodeX}" y1="${componentY}" x2="${anodeX}" y2="${ledBaseY}" stroke="${PALETTE.midgrey}" stroke-width="${sw * 0.3}"/>
+		<line x1="${cathodeX}" y1="${componentY}" x2="${cathodeX}" y2="${ledBaseY}" stroke="${PALETTE.midgrey}" stroke-width="${sw * 0.3}"/>
+		<path d="M ${-w * 0.235} ${ledBaseY} L ${-w * 0.235} ${ledBaseY - w * 0.04} A ${w * 0.035} ${w * 0.035} 0 0 1 ${-w * 0.165} ${ledBaseY - w * 0.04} L ${-w * 0.165} ${ledBaseY} Z" fill="${PALETTE[accent]}" stroke="${T.line}" stroke-width="${sw * 0.7}"/>
+		<line x1="${anodeX}" y1="${componentY}" x2="${-w * 0.165}" y2="${componentY}" stroke="${PALETTE.midgrey}" stroke-width="${sw * 0.3}"/>
+		<rect x="${-w * 0.165}" y="${componentY - w * 0.014}" width="${w * 0.085}" height="${w * 0.028}" rx="${w * 0.01}" fill="${resistorColor}" stroke="${T.line}" stroke-width="${sw * 0.65}"/>
+		<line x1="${-w * 0.08}" y1="${componentY}" x2="${resistorRight}" y2="${componentY}" stroke="${PALETTE.midgrey}" stroke-width="${sw * 0.3}"/>
+		<line x1="${-w * 0.145}" y1="${componentY - w * 0.012}" x2="${-w * 0.145}" y2="${componentY + w * 0.012}" stroke="${PALETTE.red}" stroke-width="${sw * 0.45}"/>
+		<line x1="${-w * 0.12}" y1="${componentY - w * 0.012}" x2="${-w * 0.12}" y2="${componentY + w * 0.012}" stroke="${PALETTE.paper}" stroke-width="${sw * 0.45}"/>
+		<line x1="${-w * 0.095}" y1="${componentY - w * 0.012}" x2="${-w * 0.095}" y2="${componentY + w * 0.012}" stroke="${PALETTE.red}" stroke-width="${sw * 0.45}"/>`;
+}
+
 // Connector: a sagging wire between two scene points. Spec: x,y = start,
 // x2,y2 = end (fractions); w = thickness fraction. Drawn in scene space.
 function wireSVG(p) {
@@ -563,7 +608,7 @@ function diamond(w, { accent = 'red', outline = false }) {
 
 export const PROPS = {
 	laptop, monitor, tablet, browser, terminal, phone,
-	microbit, breadboard, gamepad,
+	microbit, breadboard, 'microbit-circuit': microbitCircuit, gamepad,
 	bubble, blocks, mug, books, sticky, trophy, diamond,
 };
 
@@ -765,6 +810,7 @@ const BOTTOM_OFFSET = {
 	tablet: (w) => w * 0.665,
 	microbit: (w) => w * 0.78 * 0.42,
 	breadboard: (w) => w * 0.17,
+	'microbit-circuit': (w) => w * 0.22,
 	gamepad: (w) => w * 0.26,
 	blocks: (w) => w * 0.34,
 	mug: (w) => w * 0.55,

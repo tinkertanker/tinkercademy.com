@@ -620,33 +620,10 @@
   "headlineSide": "left",
   "props": [
    {
-    "type": "breadboard",
-    "x": 0.5,
-    "y": 0.712,
-    "w": 0.18
-   },
-   {
-    "type": "microbit",
-    "x": 0.64,
-    "y": 0.64,
-    "w": 0.12,
-    "ground": true
-   },
-   {
-    "type": "wire",
-    "x": 0.5,
-    "y": 0.64,
-    "x2": 0.64,
-    "y2": 0.66,
-    "sag": 0.09,
-    "accent": "red"
-   },
-   {
-    "type": "servo",
-    "x": 0.74,
-    "y": 0.64,
-    "w": 0.08,
-    "ground": true
+    "type": "microbit-circuit",
+    "x": 0.6,
+    "y": 0.63,
+    "w": 0.34
    }
   ],
   "stamp": {
