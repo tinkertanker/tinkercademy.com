@@ -224,16 +224,10 @@
  },
  {
   "id": "courses-professionals",
-  "note": "Professional courses — trio of dev windows.",
+  "note": "Professional courses — dev windows with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "ok",
-   "x": 0.6,
-   "y": 0.46,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "agent-cli",
@@ -249,6 +243,12 @@
    }
   ],
   "layout": "trio",
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/courses-professionals/cdx_001.webp",
    "darken": 0.4,
@@ -552,16 +552,10 @@
  },
  {
   "id": "agentic-ai-for-digital-builders",
-  "note": "Agentic AI — chat + agent terminal.",
+  "note": "Agentic AI — chat + agent terminal with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "hands-on-hips",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "laptop",
@@ -577,6 +571,12 @@
     "w": 0.15
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp",
    "darken": 0.4,
@@ -586,16 +586,10 @@
  },
  {
   "id": "build-for-mobile-with-react-native",
-  "note": "React Native — laptop wired to phone.",
+  "note": "React Native — laptop wired to phone with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "ok",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "laptop-phone",
@@ -603,16 +597,14 @@
     "y": 0.64,
     "w": 0.24,
     "ground": true
-   },
-   {
-    "type": "bubble",
-    "kind": "code",
-    "x": 0.72,
-    "y": 0.27,
-    "w": 0.085,
-    "tail": "right"
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp",
    "darken": 0.4,
@@ -622,16 +614,10 @@
  },
  {
   "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
-  "note": "IoT certificate — wired build.",
+  "note": "IoT certificate — wired build with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "orange",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "palm-open",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "breadboard",
@@ -663,6 +649,12 @@
     "ground": true
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp",
    "darken": 0.4,
@@ -672,16 +664,10 @@
  },
  {
   "id": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
-  "note": "Blockchain certificate — linked blocks.",
+  "note": "Blockchain certificate — linked blocks with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "point-left",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "blockchain",
@@ -697,6 +683,12 @@
     "w": 0.18
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/certificate-blockchain-technology/cdx_001.webp",
    "darken": 0.4,
@@ -818,16 +810,10 @@
  },
  {
   "id": "digital-making-with-micro-bit-iot",
-  "note": "Digital making — micro:bit kit.",
+  "note": "Digital making — micro:bit kit with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "orange",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "point-left",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "microbit",
@@ -844,6 +830,12 @@
     "ground": true
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/digital-making-with-micro-bit-iot/cdx_001.webp",
    "darken": 0.4,
@@ -1111,16 +1103,10 @@
  },
  {
   "id": "iotmaker",
-  "note": "IoT maker — wired micro:bit.",
+  "note": "IoT maker — wired micro:bit with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "orange",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "ok",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "microbit",
@@ -1143,16 +1129,14 @@
     "x": 0.7,
     "y": 0.712,
     "w": 0.18
-   },
-   {
-    "type": "bubble",
-    "kind": "bulb",
-    "x": 0.72,
-    "y": 0.27,
-    "w": 0.08,
-    "tail": "right"
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/iotmaker/cdx_001.webp",
    "darken": 0.4,
@@ -1162,16 +1146,10 @@
  },
  {
   "id": "knowledge-powered-ai-with-chatgpt",
-  "note": "Knowledge-powered AI — sources + chat.",
+  "note": "Knowledge-powered AI — sources + chat with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "palm-open",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "laptop",
@@ -1188,6 +1166,12 @@
     "ground": true
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp",
    "darken": 0.4,
@@ -1197,16 +1181,10 @@
  },
  {
   "id": "mastering-the-web",
-  "note": "Mastering the Web — browser + code.",
+  "note": "Mastering the Web — browser + code with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "happy",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "browser",
@@ -1224,6 +1202,12 @@
     "logo": "javascript"
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/mastering-the-web/cdx_001.webp",
    "darken": 0.4,
@@ -1303,16 +1287,10 @@
  },
  {
   "id": "no-code-web-design-framer",
-  "note": "Framer — design to site.",
+  "note": "Framer — design to site with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "heart",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "design-app",
@@ -1328,6 +1306,12 @@
     "logo": "framer"
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp",
    "darken": 0.4,
@@ -1337,16 +1321,10 @@
  },
  {
   "id": "professional-certificate-in-mobile-application-development",
-  "note": "Mobile cert — code to device.",
+  "note": "Mobile cert — code to device with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "ok",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "laptop-phone",
@@ -1362,6 +1340,12 @@
     "w": 0.15
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/professional-certificate-in-mobile-application-development/cdx_001.webp",
    "darken": 0.4,
@@ -1476,16 +1460,10 @@
  },
  {
   "id": "unityarvr",
-  "note": "Unity AR/VR — headset first.",
+  "note": "Unity AR/VR — headset first with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "gasp",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "vr-headset",
@@ -1503,6 +1481,12 @@
     "w": 0.16
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/unityarvr/cdx_001.webp",
    "darken": 0.4,
@@ -1512,32 +1496,24 @@
  },
  {
   "id": "vibe-coding-for-digital-builders",
-  "note": "Vibe coding — app builder.",
+  "note": "Vibe coding — app builder with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "yay",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "app-builder",
     "x": 0.55,
     "y": 0.39,
     "w": 0.19
-   },
-   {
-    "type": "bubble",
-    "kind": "dots",
-    "x": 0.72,
-    "y": 0.27,
-    "w": 0.085,
-    "tail": "right"
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp",
    "darken": 0.4,
@@ -1547,16 +1523,10 @@
  },
  {
   "id": "vibe-coding-for-digital-builders-lovable-replit",
-  "note": "Vibe coding (Lovable/Replit) — chat to app.",
+  "note": "Vibe coding (Lovable/Replit) — chat to app with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
-  "mascot": {
-   "pose": "point-left",
-   "x": 0.84,
-   "y": 0.54,
-   "h": 0.44
-  },
   "props": [
    {
     "type": "app-builder",
@@ -1572,6 +1542,12 @@
     "w": 0.15
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp",
    "darken": 0.4,

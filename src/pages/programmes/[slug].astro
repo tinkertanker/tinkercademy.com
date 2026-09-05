@@ -61,10 +61,15 @@ const isTechnologyFoundationsCertificate = programme.title.startsWith(certificat
 const heroTitle = isTechnologyFoundationsCertificate
 	? programme.title.slice(certificateTitlePrefix.length).trim()
 	: programme.title;
-const professionalFaceMobileContentTop: Record<string, string> = {
+const professionalMobileContentTop: Record<string, string> = {
 	'advanced-agentic-coding-with-claude-code-or-codex': '255px',
+	'mastering-the-web': '255px',
 	'microsoft-copilot': '250px',
+	'no-code-web-design-framer': '230px',
+	'professional-certificate-in-mobile-application-development': '255px',
 	'professional-certificate-in-web-application-development': '255px',
+	'vibe-coding-for-digital-builders': '240px',
+	'vibe-coding-for-digital-builders-lovable-replit': '255px',
 };
 const typeLabel =
 	programme.courseType === 'public'
@@ -154,8 +159,8 @@ const breadcrumbSchema = {
 	{/* ════════ Hero: full-bleed image with dark overlay + text ════════ */}
 	<section
 		class="prog-hero"
-		style={professionalFaceMobileContentTop[programme.slug]
-			? `--prog-hero-mobile-content-top: ${professionalFaceMobileContentTop[programme.slug]}; --banner-foreground-mobile-max-height: 214px`
+		style={professionalMobileContentTop[programme.slug]
+			? `--prog-hero-mobile-content-top: ${professionalMobileContentTop[programme.slug]}; --banner-foreground-mobile-max-height: 214px`
 			: undefined}
 	>
 		{programme.heroImage && (

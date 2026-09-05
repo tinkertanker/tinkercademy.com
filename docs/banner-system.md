@@ -168,9 +168,9 @@ Three registers, same system — pick per audience, don't invent new styles:
    heroes, give it equal bottom and right inset. On mobile, enlarge it and keep
    it at the same bottom-right anchor. Use a thin dark keyline rather than a
    glow so it stays crisp. Declare it with the scene's top-level `stamp`
-   object, not as a foreground prop. No bubbles. The `/professionals`, Agentic
-   Engineering, Microsoft Copilot, and Web Application Development scenes are
-   the reference pilots.
+   object, not as a foreground prop. No bubbles. Apply this register to
+   `/professionals`, `/courses-professionals`, and every programme selected for
+   the professional catalogue (`businesses` or `public` audience).
 3. **No character signature** — most formal partner contexts: a restrained
    task-specific window/object collage, optionally with a low-opacity
    `diamond` brand cue.
