@@ -22,7 +22,7 @@ const programmes = defineCollection({
 			.optional(),
 		audienceIds: z.array(z.enum(audienceIds)).min(1),
 		domainIds: z.array(z.enum(domainIds)).min(1),
-		platformIds: z.array(z.enum(platformIds)).min(1),
+		platformIds: z.array(z.enum(platformIds)),
 		courseType: z.enum(['public']).optional(),
 		cardBlurb: z.string().min(1),
 		weight: z.number().int(),
