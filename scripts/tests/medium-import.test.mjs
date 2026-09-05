@@ -89,6 +89,25 @@ test('discards automatic opening excerpts but retains distinct editorial summari
 	assert.equal(normaliseMediumStory(raw).subtitle, 'A distinct editorial summary.');
 });
 
+test('detects excerpts after editor introductions and normalises their whitespace', () => {
+	const raw = structuredClone(rawStory);
+	raw.payload.value.content.bodyModel.paragraphs.push(
+		{ type: 1, text: 'An introduction from the editor.' },
+		{ type: 1, text: 'My internship\u2009—\u2009a chance to learn new things.' },
+	);
+	raw.payload.value.content.subtitle = 'My internship — a chance to learn…';
+	assert.equal(normaliseMediumStory(raw).subtitle, '');
+});
+
+test('preserves authored subheadings and does not mistake image captions for excerpts', () => {
+	for (const type of [13, 4]) {
+		const raw = structuredClone(rawStory);
+		raw.payload.value.content.subtitle = 'An authored summary';
+		raw.payload.value.content.bodyModel.paragraphs.push({ type, text: 'An authored summary' });
+		assert.equal(normaliseMediumStory(raw).subtitle, 'An authored summary');
+	}
+});
+
 test('rejects records that are not public stories in the expected publication', () => {
 	const wrongPublication = structuredClone(rawStory);
 	wrongPublication.payload.value.homeCollectionId = 'someone-else';
