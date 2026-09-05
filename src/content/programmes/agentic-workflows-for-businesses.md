@@ -2,7 +2,7 @@
 title: "Agentic Workflows for Businesses"
 subtitle: "Corporate training"
 duration: "1, 2, or 3 days"
-heroImage: "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp"
+heroImage: "/images/banners/agentic-ai-for-digital-builders.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["ai-engineering"]
 platformIds: ["claude"]

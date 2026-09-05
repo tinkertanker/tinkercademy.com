@@ -2,13 +2,13 @@
 title: "Level Up Your Vibe Coding (Lovable and Replit)"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp"
+heroImage: "/images/banners/vibe-coding-for-digital-builders-lovable-replit.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai-engineering"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
 cardBlurb: "Stop writing code line-by-line. This intensive 2-day course is designed for those ready to move beyond \"AI demos\" and into the era of agentic coding. We leverage the symbiotic…"
 weight: 99
-draft: true
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Level Up Your Vibe Coding (Lovable and Replit) - Tinkercademy: Coding and Making for Schools and Professionals"

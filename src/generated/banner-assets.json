@@ -1,0 +1,418 @@
+{
+  "images": {
+    "/images/banners/about-us.webp": {
+      "background": "/images/banners/about-us-background.webp",
+      "foreground": "/images/banners/about-us-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 808,
+      "foregroundHeight": 474
+    },
+    "/images/banners/advanced-agentic-coding-with-claude-code-or-codex.webp": {
+      "background": "/images/banners/advanced-agentic-coding-with-claude-code-or-codex-background.webp",
+      "foreground": "/images/banners/advanced-agentic-coding-with-claude-code-or-codex-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 624,
+      "foregroundHeight": 562,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/agentic-ai-for-digital-builders.webp": {
+      "background": "/images/banners/agentic-ai-for-digital-builders-background.webp",
+      "foreground": "/images/banners/agentic-ai-for-digital-builders-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 559,
+      "foregroundHeight": 547,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/build-for-mobile-with-react-native.webp": {
+      "background": "/images/banners/build-for-mobile-with-react-native-background.webp",
+      "foreground": "/images/banners/build-for-mobile-with-react-native-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 384,
+      "foregroundHeight": 261,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making.webp": {
+      "background": "/images/banners/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making-background.webp",
+      "foreground": "/images/banners/certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 566,
+      "foregroundHeight": 299,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology.webp": {
+      "background": "/images/banners/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology-background.webp",
+      "foreground": "/images/banners/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 566,
+      "foregroundHeight": 386,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/code-exp-2025.webp": {
+      "background": "/images/banners/code-exp-2025-background.webp",
+      "foreground": "/images/banners/code-exp-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 982,
+      "foregroundHeight": 490
+    },
+    "/images/banners/code-for-fun-ai-workshop.webp": {
+      "background": "/images/banners/code-for-fun-ai-workshop-background.webp",
+      "foreground": "/images/banners/code-for-fun-ai-workshop-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 895,
+      "foregroundHeight": 474
+    },
+    "/images/banners/code-for-fun-baseline-workshop.webp": {
+      "background": "/images/banners/code-for-fun-baseline-workshop-background.webp",
+      "foreground": "/images/banners/code-for-fun-baseline-workshop-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 927,
+      "foregroundHeight": 474
+    },
+    "/images/banners/contact-us.webp": {
+      "background": "/images/banners/contact-us-background.webp",
+      "foreground": "/images/banners/contact-us-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 816,
+      "foregroundHeight": 528
+    },
+    "/images/banners/courses-all.webp": {
+      "background": "/images/banners/courses-all-background.webp",
+      "foreground": "/images/banners/courses-all-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 935,
+      "foregroundHeight": 441
+    },
+    "/images/banners/courses-professionals.webp": {
+      "background": "/images/banners/courses-professionals-background.webp",
+      "foreground": "/images/banners/courses-professionals-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 624,
+      "foregroundHeight": 562,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/courses-schools.webp": {
+      "background": "/images/banners/courses-schools-background.webp",
+      "foreground": "/images/banners/courses-schools-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 896,
+      "foregroundHeight": 474
+    },
+    "/images/banners/digital-making-with-micro-bit-iot.webp": {
+      "background": "/images/banners/digital-making-with-micro-bit-iot-background.webp",
+      "foreground": "/images/banners/digital-making-with-micro-bit-iot-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 480,
+      "foregroundHeight": 250,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/flagship-code-for-fun.webp": {
+      "background": "/images/banners/flagship-code-for-fun-background.webp",
+      "foreground": "/images/banners/flagship-code-for-fun-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 917,
+      "foregroundHeight": 478
+    },
+    "/images/banners/flagship-imda-learn.webp": {
+      "background": "/images/banners/flagship-imda-learn-background.webp",
+      "foreground": "/images/banners/flagship-imda-learn-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 581,
+      "foregroundHeight": 529
+    },
+    "/images/banners/flagship-swift-accelerator.webp": {
+      "background": "/images/banners/flagship-swift-accelerator-background.webp",
+      "foreground": "/images/banners/flagship-swift-accelerator-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 824,
+      "foregroundHeight": 489
+    },
+    "/images/banners/home.webp": {
+      "background": "/images/banners/home-background.webp",
+      "foreground": "/images/banners/home-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 927,
+      "foregroundHeight": 529
+    },
+    "/images/banners/imda-apple-2025-a.webp": {
+      "background": "/images/banners/imda-apple-2025-a-background.webp",
+      "foreground": "/images/banners/imda-apple-2025-a-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 927,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-apple-2025-c.webp": {
+      "background": "/images/banners/imda-apple-2025-c-background.webp",
+      "foreground": "/images/banners/imda-apple-2025-c-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 907,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-figma-2025.webp": {
+      "background": "/images/banners/imda-figma-2025-background.webp",
+      "foreground": "/images/banners/imda-figma-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 872,
+      "foregroundHeight": 525
+    },
+    "/images/banners/imda-microbit-2025.webp": {
+      "background": "/images/banners/imda-microbit-2025-background.webp",
+      "foreground": "/images/banners/imda-microbit-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 806,
+      "foregroundHeight": 527
+    },
+    "/images/banners/imda-minecraft-2025.webp": {
+      "background": "/images/banners/imda-minecraft-2025-background.webp",
+      "foreground": "/images/banners/imda-minecraft-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 823,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-phaser-2025.webp": {
+      "background": "/images/banners/imda-phaser-2025-background.webp",
+      "foreground": "/images/banners/imda-phaser-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 927,
+      "foregroundHeight": 461
+    },
+    "/images/banners/imda-unity-2025.webp": {
+      "background": "/images/banners/imda-unity-2025-background.webp",
+      "foreground": "/images/banners/imda-unity-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 903,
+      "foregroundHeight": 474
+    },
+    "/images/banners/individuals.webp": {
+      "background": "/images/banners/individuals-background.webp",
+      "foreground": "/images/banners/individuals-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 949,
+      "foregroundHeight": 526
+    },
+    "/images/banners/infocomm-club.webp": {
+      "background": "/images/banners/infocomm-club-background.webp",
+      "foreground": "/images/banners/infocomm-club-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 983,
+      "foregroundHeight": 441
+    },
+    "/images/banners/iotmaker.webp": {
+      "background": "/images/banners/iotmaker-background.webp",
+      "foreground": "/images/banners/iotmaker-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 518,
+      "foregroundHeight": 189,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/knowledge-powered-ai-with-chatgpt.webp": {
+      "background": "/images/banners/knowledge-powered-ai-with-chatgpt-background.webp",
+      "foreground": "/images/banners/knowledge-powered-ai-with-chatgpt-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 543,
+      "foregroundHeight": 242,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/mastering-the-web.webp": {
+      "background": "/images/banners/mastering-the-web-background.webp",
+      "foreground": "/images/banners/mastering-the-web-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 580,
+      "foregroundHeight": 519,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/microbit.webp": {
+      "background": "/images/banners/microbit-background.webp",
+      "foreground": "/images/banners/microbit-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 862,
+      "foregroundHeight": 527
+    },
+    "/images/banners/microsoft-copilot.webp": {
+      "background": "/images/banners/microsoft-copilot-background.webp",
+      "foreground": "/images/banners/microsoft-copilot-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 616,
+      "foregroundHeight": 505,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/no-code-machine-learning.webp": {
+      "background": "/images/banners/no-code-machine-learning-background.webp",
+      "foreground": "/images/banners/no-code-machine-learning-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 844,
+      "foregroundHeight": 504
+    },
+    "/images/banners/no-code-web-design-framer.webp": {
+      "background": "/images/banners/no-code-web-design-framer-background.webp",
+      "foreground": "/images/banners/no-code-web-design-framer-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 549,
+      "foregroundHeight": 388,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/professional-certificate-in-mobile-application-development.webp": {
+      "background": "/images/banners/professional-certificate-in-mobile-application-development-background.webp",
+      "foreground": "/images/banners/professional-certificate-in-mobile-application-development-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 584,
+      "foregroundHeight": 519,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/professional-certificate-in-web-application-development.webp": {
+      "background": "/images/banners/professional-certificate-in-web-application-development-background.webp",
+      "foreground": "/images/banners/professional-certificate-in-web-application-development-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 584,
+      "foregroundHeight": 505,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/professionals.webp": {
+      "background": "/images/banners/professionals-background.webp",
+      "foreground": "/images/banners/professionals-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 637,
+      "foregroundHeight": 462,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/ri-futurecreate-maker-programme-2025.webp": {
+      "background": "/images/banners/ri-futurecreate-maker-programme-2025-background.webp",
+      "foreground": "/images/banners/ri-futurecreate-maker-programme-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 796,
+      "foregroundHeight": 474
+    },
+    "/images/banners/schools.webp": {
+      "background": "/images/banners/schools-background.webp",
+      "foreground": "/images/banners/schools-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 967,
+      "foregroundHeight": 474
+    },
+    "/images/banners/showcase.webp": {
+      "background": "/images/banners/showcase-background.webp",
+      "foreground": "/images/banners/showcase-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 926,
+      "foregroundHeight": 476
+    },
+    "/images/banners/swift-accelerator.webp": {
+      "background": "/images/banners/swift-accelerator-background.webp",
+      "foreground": "/images/banners/swift-accelerator-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 848,
+      "foregroundHeight": 441
+    },
+    "/images/banners/tinker-x.webp": {
+      "background": "/images/banners/tinker-x-background.webp",
+      "foreground": "/images/banners/tinker-x-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 944,
+      "foregroundHeight": 474
+    },
+    "/images/banners/unityarvr.webp": {
+      "background": "/images/banners/unityarvr-background.webp",
+      "foreground": "/images/banners/unityarvr-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 509,
+      "foregroundHeight": 227,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/vibe-coding-for-digital-builders-lovable-replit.webp": {
+      "background": "/images/banners/vibe-coding-for-digital-builders-lovable-replit-background.webp",
+      "foreground": "/images/banners/vibe-coding-for-digital-builders-lovable-replit-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 549,
+      "foregroundHeight": 484,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
+    "/images/banners/vibe-coding-for-digital-builders.webp": {
+      "background": "/images/banners/vibe-coding-for-digital-builders-background.webp",
+      "foreground": "/images/banners/vibe-coding-for-digital-builders-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 304,
+      "foregroundHeight": 308,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    }
+  }
+}

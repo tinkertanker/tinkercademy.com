@@ -2,7 +2,7 @@
 title: "BrainHack CODE_EXP"
 subtitle: "May–June annually"
 duration: "4 days"
-heroImage: "/images/generated/hero-review/code-exp-2025/cdx_001.webp"
+heroImage: "/images/banners/code-exp-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ai-engineering", "appdev"]
 platformIds: ["react-native", "tensorflow"]

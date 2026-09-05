@@ -2,7 +2,7 @@
 title: "Knowledge-Powered AI with ChatGPT"
 subtitle: "Corporate training"
 duration: "½, 1, 2 days"
-heroImage: "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp"
+heroImage: "/images/banners/knowledge-powered-ai-with-chatgpt.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai-engineering"]
 platformIds: ["chatgpt"]

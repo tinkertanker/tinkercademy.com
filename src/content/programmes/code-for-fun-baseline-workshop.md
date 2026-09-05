@@ -2,7 +2,7 @@
 title: "Code For Fun Baseline Workshop"
 subtitle: "A CODE@SG initiative by IMDA and MOE."
 duration: "10 hours"
-heroImage: "/images/uB9togx2WZjo52kW3eDPGODhN8.png"
+heroImage: "/images/banners/code-for-fun-baseline-workshop.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["cs", "design-thinking"]
 platformIds: ["makecode-arcade", "python", "scratch", "bbc-micro-bit"]

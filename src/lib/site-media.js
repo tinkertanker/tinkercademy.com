@@ -113,9 +113,9 @@ export const HOME_HERO_IMAGE = {
 
 // ── Flagship programme images ─────────────────────────────────────
 export const HOME_FLAGSHIP_IMAGES = /** @type {Record<string, string>} */ ({
-	'Swift Accelerator': '/images/flagship/swift-accelerator.webp',
-	'IMDA LEARN Roadmap': '/images/generated/hero-review/imda-learn-flagship/cdx_001.webp',
-	'Code For Fun': '/images/generated/hero-review/code-for-fun-flagship/cdx_001.webp',
+	'Swift Accelerator': '/images/banners/flagship-swift-accelerator.webp',
+	'IMDA LEARN Roadmap': '/images/banners/flagship-imda-learn.webp',
+	'Code For Fun': '/images/banners/flagship-code-for-fun.webp',
 });
 
 // ── Popular course card images ────────────────────────────────────

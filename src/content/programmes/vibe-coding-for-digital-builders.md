@@ -2,7 +2,7 @@
 title: "Vibe Coding for Digital Builders"
 subtitle: "Corporate training"
 duration: "2 days"
-heroImage: "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp"
+heroImage: "/images/banners/vibe-coding-for-digital-builders.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai-engineering"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]

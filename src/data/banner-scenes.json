@@ -1,0 +1,1643 @@
+[
+ {
+  "id": "home",
+  "note": "Homepage — wave hello, block coding.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "greetings",
+   "x": 0.84,
+   "y": 0.53,
+   "h": 0.46
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21
+   },
+   {
+    "type": "blocks",
+    "x": 0.7,
+    "y": 0.712,
+    "w": 0.08,
+    "layer": "front"
+   },
+   {
+    "type": "bubble",
+    "kind": "code",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.09,
+    "tail": "right"
+   }
+  ]
+ },
+ {
+  "id": "schools",
+  "note": "Schools — pointing at the headline, Scratch laptop, micro:bit.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.5,
+    "y": 0.74,
+    "w": 0.2,
+    "logo": "scratch"
+   },
+   {
+    "type": "microbit",
+    "x": 0.72,
+    "y": 0.64,
+    "w": 0.14,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "professionals",
+  "note": "Professionals — browser + terminal with the Tinkertanker icon as a professional signature.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "browser",
+    "logo": "html5"
+   },
+   {
+    "type": "terminal",
+    "layer": "front"
+   }
+  ],
+  "layout": "trio",
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/professionals/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "individuals",
+  "note": "Individuals — self-directed coder.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "salute",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.5,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "javascript"
+   },
+   {
+    "type": "mug",
+    "x": 0.63,
+    "y": 0.711,
+    "w": 0.06
+   },
+   {
+    "type": "bubble",
+    "kind": "dots",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.085,
+    "tail": "right"
+   },
+   {
+    "type": "phone",
+    "x": 0.72,
+    "y": 0.715,
+    "w": 0.045
+   }
+  ],
+  "photo": {
+   "src": "/images/6gctHPSd4luM1PjI9WIcmXL25k.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "courses-all",
+  "note": "All courses — a bit of everything.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.84,
+   "y": 0.555,
+   "h": 0.41
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "canvas",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.22
+   },
+   {
+    "type": "handheld-console",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.1,
+    "ground": true,
+    "layer": "front"
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/showcase/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "courses-schools",
+  "note": "Schools courses — micro:bit + bee-bot.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "yay",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.18,
+    "ground": true
+   },
+   {
+    "type": "bee-bot",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.15,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/schools-code-for-fun-hero-elecfreaks-board.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "courses-professionals",
+  "note": "Professional courses — dev windows with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "agent-cli",
+    "x": 0,
+    "y": 0.05,
+    "w": 0.15
+   },
+   {
+    "type": "code-editor",
+    "x": 0,
+    "y": 0.05,
+    "w": 0.18
+   }
+  ],
+  "layout": "trio",
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/courses-professionals/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "about-us",
+  "note": "About us — heart, skyline, and the things we build with on the ground.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "heart",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "books",
+    "x": 0.5,
+    "y": 0.738,
+    "w": 0.09
+   },
+   {
+    "type": "microbit",
+    "x": 0.61,
+    "y": 0.7,
+    "w": 0.1,
+    "ground": true
+   },
+   {
+    "type": "mug",
+    "x": 0.71,
+    "y": 0.733,
+    "w": 0.05
+   }
+  ],
+  "photo": {
+   "src": "/images/contact-hero.jpg",
+   "darken": 0.44,
+   "sat": 0.3,
+   "tint": 0.76
+  }
+ },
+ {
+  "id": "showcase",
+  "note": "Showcase — proud builds.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "hands-on-hips",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "trophy",
+    "x": 0.47,
+    "y": 0.723,
+    "w": 0.11
+   },
+   {
+    "type": "marble-run",
+    "x": 0.6,
+    "y": 0.7,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "robot-buggy",
+    "x": 0.72,
+    "y": 0.7,
+    "w": 0.09,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/showcase/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "contact-us",
+  "note": "Contact — friendly chat.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "happy",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "chat-app",
+    "x": 0.55,
+    "y": 0.42,
+    "w": 0.16
+   },
+   {
+    "type": "phone",
+    "x": 0.66,
+    "y": 0.71,
+    "w": 0.05
+   },
+   {
+    "type": "mug",
+    "x": 0.73,
+    "y": 0.733,
+    "w": 0.05
+   },
+   {
+    "type": "bubble",
+    "kind": "heart",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.08,
+    "tail": "right"
+   }
+  ],
+  "photo": {
+   "src": "/images/contact-hero.jpg",
+   "darken": 0.44,
+   "sat": 0.3,
+   "tint": 0.76
+  }
+ },
+ {
+  "id": "infocomm-club",
+  "note": "Infocomm club — game dev energy.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "fingerguns",
+   "x": 0.84,
+   "y": 0.555,
+   "h": 0.41
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "game",
+    "x": 0.49,
+    "y": 0.74,
+    "w": 0.2
+   },
+   {
+    "type": "handheld-console",
+    "x": 0.65,
+    "y": 0.64,
+    "w": 0.11,
+    "ground": true
+   },
+   {
+    "type": "gamepad",
+    "x": 0.75,
+    "y": 0.739,
+    "w": 0.08
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/infocomm-club/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "microbit",
+  "note": "micro:bit tutorials — the full kit.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "handraise",
+   "x": 0.84,
+   "y": 0.515,
+   "h": 0.49
+  },
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.5,
+    "y": 0.64,
+    "w": 0.19,
+    "ground": true
+   },
+   {
+    "type": "battery-pack",
+    "x": 0.64,
+    "y": 0.64,
+    "w": 0.08,
+    "ground": true
+   },
+   {
+    "type": "croc-clips",
+    "x": 0.74,
+    "y": 0.64,
+    "w": 0.13,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/originals/microbit-page-hero.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "tinker-x",
+  "note": "Tinker X — running left toward a maker-tool spread.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "running-left",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "ultrasonic-sensor",
+    "x": 0.45,
+    "y": 0.64,
+    "w": 0.08,
+    "ground": true
+   },
+   {
+    "type": "soldering-iron",
+    "x": 0.55,
+    "y": 0.64,
+    "w": 0.1,
+    "ground": true
+   },
+   {
+    "type": "croc-clips",
+    "x": 0.66,
+    "y": 0.64,
+    "w": 0.09,
+    "ground": true
+   },
+   {
+    "type": "cardboard-house",
+    "x": 0.755,
+    "y": 0.64,
+    "w": 0.09,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/3cybNehmDehCXeBSMBiUWGpbgI.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "advanced-agentic-coding-with-claude-code-or-codex",
+  "note": "Agentic coding — agent windows with the Tinkertanker icon as a professional signature.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "agent-cli",
+    "x": 0,
+    "y": 0.05,
+    "w": 0.15
+   },
+   {
+    "type": "code-editor",
+    "x": 0,
+    "y": 0.05,
+    "w": 0.18
+   }
+  ],
+  "layout": "trio",
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "agentic-ai-for-digital-builders",
+  "note": "Agentic AI — chat + agent terminal with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "chat",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.2
+   },
+   {
+    "type": "agent-cli",
+    "x": 0.7,
+    "y": 0.3,
+    "w": 0.15
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/agentic-ai-for-digital-builders/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "build-for-mobile-with-react-native",
+  "note": "React Native — laptop wired to phone with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "laptop-phone",
+    "x": 0.55,
+    "y": 0.64,
+    "w": 0.24,
+    "ground": true
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/build-for-mobile-with-react-native/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
+  "note": "IoT certificate — wired build with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "microbit-circuit",
+    "x": 0.6,
+    "y": 0.63,
+    "w": 0.34
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/certificate-iot-creative-digital-making/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology",
+  "note": "Blockchain certificate — linked blocks with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "blockchain",
+    "x": 0.53,
+    "y": 0.39,
+    "w": 0.18
+   },
+   {
+    "type": "laptop",
+    "screen": "sheet",
+    "x": 0.7,
+    "y": 0.74,
+    "w": 0.18
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/certificate-blockchain-technology/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "code-exp-2025",
+  "note": "Code EXP — web-dev competition: code, site, trophy.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "logo": "javascript",
+    "x": 0.48,
+    "y": 0.74,
+    "w": 0.18
+   },
+   {
+    "type": "browser",
+    "logo": "html5",
+    "x": 0.63,
+    "y": 0.36,
+    "w": 0.15
+   },
+   {
+    "type": "trophy",
+    "x": 0.74,
+    "y": 0.726,
+    "w": 0.1
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/code-exp-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "code-for-fun-ai-workshop",
+  "note": "Code For Fun AI — webcam classifier.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "happy",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21
+   },
+   {
+    "type": "webcam",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.1,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "code-for-fun-baseline-workshop",
+  "note": "Code For Fun — blocks + bee-bot.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "greetings",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "blocks",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21
+   },
+   {
+    "type": "microbit",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.13,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/code-for-fun-flagship/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "digital-making-with-micro-bit-iot",
+  "note": "Digital making — micro:bit kit with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.17,
+    "ground": true
+   },
+   {
+    "type": "battery-pack",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.09,
+    "ground": true
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/digital-making-with-micro-bit-iot/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-apple-2025-a",
+  "note": "IMDA Apple A — Swift on iPad.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "yay",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "canvas",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "tablet",
+    "screen": "canvas",
+    "x": 0.7,
+    "y": 0.63,
+    "w": 0.11
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-apple-2025-c",
+  "note": "IMDA Apple C — Swift to device.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "ok",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "phone",
+    "x": 0.7,
+    "y": 0.653,
+    "w": 0.06
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-figma-2025",
+  "note": "IMDA Figma — prototype canvas.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-right",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44,
+   "flip": true
+  },
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.55,
+    "y": 0.38,
+    "w": 0.19
+   },
+   {
+    "type": "bubble",
+    "kind": "dots",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.085,
+    "tail": "right"
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-microbit-2025",
+  "note": "IMDA micro:bit — board + buggy.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "handraise",
+   "x": 0.84,
+   "y": 0.515,
+   "h": 0.49
+  },
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.18,
+    "ground": true
+   },
+   {
+    "type": "robot-buggy",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.11,
+    "ground": true
+   },
+   {
+    "type": "bubble",
+    "kind": "zap",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.08,
+    "tail": "right",
+    "accent": "orange"
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-microbit-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-minecraft-2025",
+  "note": "IMDA Minecraft — voxel world.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "gasp",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "voxel-blocks",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.17,
+    "ground": true
+   },
+   {
+    "type": "laptop",
+    "screen": "game",
+    "x": 0.7,
+    "y": 0.74,
+    "w": 0.18
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-minecraft-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-phaser-2025",
+  "note": "IMDA Phaser — 2D game dev.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "running-right",
+   "x": 0.84,
+   "y": 0.545,
+   "h": 0.43
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "game",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "javascript"
+   },
+   {
+    "type": "handheld-console",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.1,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-phaser-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-unity-2025",
+  "note": "IMDA Unity — 3D viewport.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "monitor",
+    "screen": "scene3d",
+    "logo": "unity",
+    "x": 0.53,
+    "y": 0.595,
+    "w": 0.19
+   },
+   {
+    "type": "vr-headset",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.12,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-unity-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "iotmaker",
+  "note": "IoT maker — wired micro:bit with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "microbit",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "wire",
+    "x": 0.53,
+    "y": 0.64,
+    "x2": 0.7,
+    "y2": 0.66,
+    "sag": 0.09,
+    "accent": "red"
+   },
+   {
+    "type": "breadboard",
+    "x": 0.7,
+    "y": 0.712,
+    "w": 0.18
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/iotmaker/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "knowledge-powered-ai-with-chatgpt",
+  "note": "Knowledge-powered AI — sources + chat with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "chat",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21
+   },
+   {
+    "type": "doc-stack",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.12,
+    "ground": true
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/knowledge-powered-ai-with-chatgpt/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "mastering-the-web",
+  "note": "Mastering the Web — browser + code with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "browser",
+    "x": 0.53,
+    "y": 0.32,
+    "w": 0.18,
+    "logo": "html5"
+   },
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.7,
+    "y": 0.74,
+    "w": 0.19,
+    "logo": "javascript"
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/mastering-the-web/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "microsoft-copilot",
+  "note": "Copilot — workplace spreadsheet + assistant with the Tinkertanker icon as a professional signature.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "spreadsheet-app",
+    "x": 0.59,
+    "y": 0.64,
+    "w": 0.25,
+    "ground": true
+   },
+   {
+    "type": "chat-app",
+    "x": 0.76,
+    "y": 0.4,
+    "w": 0.18,
+    "layer": "front"
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/microsoft-copilot/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "no-code-machine-learning",
+  "note": "No-code ML — visual dataset-to-prediction workflow.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "hands-on-hips",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "no-code-ml-workflow",
+    "x": 0.59,
+    "y": 0.65,
+    "w": 0.3
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/no-code-machine-learning/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "no-code-web-design-framer",
+  "note": "Framer — design to site with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.53,
+    "y": 0.36,
+    "w": 0.18
+   },
+   {
+    "type": "browser",
+    "x": 0.7,
+    "y": 0.54,
+    "w": 0.16,
+    "logo": "framer"
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "professional-certificate-in-mobile-application-development",
+  "note": "Mobile cert — code to device with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "laptop-phone",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.24,
+    "ground": true
+   },
+   {
+    "type": "code-editor",
+    "x": 0.7,
+    "y": 0.34,
+    "w": 0.15
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/professional-certificate-in-mobile-application-development/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "professional-certificate-in-web-application-development",
+  "note": "Web cert — editor + server with the Tinkertanker icon as a professional signature.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "code-editor",
+    "x": 0.6,
+    "y": 0.42,
+    "w": 0.24
+   },
+   {
+    "type": "server",
+    "x": 0.78,
+    "y": 0.64,
+    "w": 0.13,
+    "ground": true
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/professional-certificate-in-web-application-development/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "ri-futurecreate-maker-programme-2025",
+  "note": "RI FutureCreate — maker builds.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "hands-on-hips",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "marble-run",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "cardboard-house",
+    "x": 0.7,
+    "y": 0.64,
+    "w": 0.11,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/wqyxF3zF22qYEH16VE70ko2CEak.jpg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "swift-accelerator",
+  "note": "Swift Accelerator — launch.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "fingerguns",
+   "x": 0.84,
+   "y": 0.555,
+   "h": 0.41
+  },
+  "props": [
+   {
+    "type": "rocket",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.12,
+    "ground": true
+   },
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.7,
+    "y": 0.74,
+    "w": 0.18,
+    "logo": "swift"
+   }
+  ],
+  "photo": {
+   "src": "/images/HcdNlviMb6etFvqiKcJkxSLAtHQ.jpeg",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "unityarvr",
+  "note": "Unity AR/VR — headset first with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "vr-headset",
+    "x": 0.53,
+    "y": 0.64,
+    "w": 0.13,
+    "ground": true
+   },
+   {
+    "type": "monitor",
+    "screen": "scene3d",
+    "logo": "unity",
+    "x": 0.7,
+    "y": 0.62,
+    "w": 0.16
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/unityarvr/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "vibe-coding-for-digital-builders",
+  "note": "Vibe coding — app builder with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "app-builder",
+    "x": 0.55,
+    "y": 0.39,
+    "w": 0.19
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/vibe-coding-for-digital-builders/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "vibe-coding-for-digital-builders-lovable-replit",
+  "note": "Vibe coding (Lovable/Replit) — chat to app with the Tinkertanker professional stamp.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "props": [
+   {
+    "type": "app-builder",
+    "x": 0.53,
+    "y": 0.39,
+    "w": 0.19
+   },
+   {
+    "type": "laptop",
+    "screen": "chat",
+    "x": 0.7,
+    "y": 0.74,
+    "w": 0.15
+   }
+  ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
+  "photo": {
+   "src": "/images/generated/hero-review/vibe-coding-for-digital-builders-lovable-replit/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "flagship-swift-accelerator",
+  "note": "Flagship card — official SA lockup centred (swiftinsg/branding), rocket + mascot flanking.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "none",
+  "spotlight": {
+   "x": 0.5,
+   "y": 0.42,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.68,
+   "y": 0.59,
+   "h": 0.34
+  },
+  "props": [
+   {
+    "type": "image",
+    "src": "reference/logos/swift-accelerator-icon-dark.png",
+    "x": 0.5,
+    "y": 0.42,
+    "w": 0.13
+   },
+   {
+    "type": "rocket",
+    "x": 0.33,
+    "y": 0.64,
+    "w": 0.09,
+    "ground": true
+   }
+  ]
+ },
+ {
+  "id": "flagship-imda-learn",
+  "note": "Flagship card — robot in front, three windows receding behind.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "none",
+  "spotlight": {
+   "x": 0.5,
+   "y": 0.45,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "happy",
+   "x": 0.5,
+   "y": 0.53,
+   "h": 0.46
+  },
+  "props": [
+   {
+    "type": "code-editor",
+    "x": 0.66,
+    "y": 0.31,
+    "w": 0.11,
+    "opacity": 0.45
+   },
+   {
+    "type": "design-app",
+    "x": 0.57,
+    "y": 0.36,
+    "w": 0.14,
+    "opacity": 0.65
+   },
+   {
+    "type": "browser",
+    "screen": "game",
+    "x": 0.44,
+    "y": 0.42,
+    "w": 0.17,
+    "opacity": 0.9
+   }
+  ]
+ },
+ {
+  "id": "flagship-code-for-fun",
+  "note": "Flagship card — block coding + micro:bit + chatbot around a jumping mascot.",
+  "mode": "dark",
+  "accent": "orange",
+  "headlineSide": "none",
+  "spotlight": {
+   "x": 0.5,
+   "y": 0.45,
+   "r": 0.5
+  },
+  "mascot": {
+   "pose": "jumping-for-joy",
+   "x": 0.5,
+   "y": 0.52,
+   "h": 0.42
+  },
+  "props": [
+   {
+    "type": "browser",
+    "screen": "blocks",
+    "x": 0.29,
+    "y": 0.38,
+    "w": 0.16
+   },
+   {
+    "type": "chat-app",
+    "x": 0.71,
+    "y": 0.38,
+    "w": 0.14
+   },
+   {
+    "type": "microbit",
+    "x": 0.3,
+    "y": 0.64,
+    "w": 0.13,
+    "ground": true
+   }
+  ]
+ }
+]

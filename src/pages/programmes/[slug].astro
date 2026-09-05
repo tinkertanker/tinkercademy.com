@@ -1,9 +1,11 @@
 ---
 import { render } from 'astro:content';
+import BannerLayers from '../../components/BannerLayers.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import ProgrammeSeriesNav from '../../components/ProgrammeSeriesNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../../lib/banner-assets';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
 import { getResponsiveImage } from '../../lib/responsive-images.js';
@@ -53,6 +55,22 @@ const primaryAudience = programme.primaryAudience;
 const enquiryLabel = programme.signUpLabel ?? 'Enquire now';
 const primaryCtaLabel = programme.primaryCta?.label ?? enquiryLabel;
 const primaryCtaUrl = programme.primaryCta?.url ?? '#enquire';
+const certificateEyebrow = 'Certificate in Technology Foundations';
+const certificateTitlePrefix = `${certificateEyebrow}:`;
+const isTechnologyFoundationsCertificate = programme.title.startsWith(certificateTitlePrefix);
+const heroTitle = isTechnologyFoundationsCertificate
+	? programme.title.slice(certificateTitlePrefix.length).trim()
+	: programme.title;
+const professionalMobileContentTop: Record<string, string> = {
+	'agentic-engineering-with-claude-code-or-codex': '255px',
+	'mastering-the-web': '255px',
+	'microsoft-copilot': '250px',
+	'no-code-web-design-framer': '230px',
+	'professional-certificate-in-mobile-application-development': '255px',
+	'professional-certificate-in-web-application-development': '255px',
+	'vibe-coding-for-digital-builders': '240px',
+	'vibe-coding-for-digital-builders-lovable-replit': '255px',
+};
 const typeLabel =
 	programme.courseType === 'public'
 		? 'Public'
@@ -113,10 +131,13 @@ const seriesCourses = programme.series
 	: [];
 
 const heroResponsive = getResponsiveImage(programme.heroImage);
+const heroBanner = getBannerAsset(programme.heroImage);
 const heroObjectPosition = programme.entry.data.heroObjectPosition;
-const heroPreload = heroResponsive
-	? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
-	: null;
+const heroPreload = heroBanner
+	? { src: heroBanner.background }
+	: heroResponsive
+		? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
+		: null;
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -137,8 +158,15 @@ const breadcrumbSchema = {
 	preloadHero={heroPreload}
 >
 	{/* ════════ Hero: full-bleed image with dark overlay + text ════════ */}
-	<section class="prog-hero">
-		{programme.heroImage && (
+	<section
+		class="prog-hero"
+		style={professionalMobileContentTop[programme.slug]
+			? `--prog-hero-mobile-content-top: ${professionalMobileContentTop[programme.slug]}; --banner-foreground-mobile-max-height: 214px`
+			: undefined}
+	>
+		{heroBanner ? (
+			<BannerLayers src={programme.heroImage} />
+		) : programme.heroImage ? (
 			<img
 				class="prog-hero__bg"
 				style={heroObjectPosition ? `--prog-hero-object-position: ${heroObjectPosition}` : undefined}
@@ -152,10 +180,13 @@ const breadcrumbSchema = {
 				fetchpriority="high"
 				decoding="async"
 			/>
-		)}
+		) : null}
 		<div class="prog-hero__overlay" />
 		<div class="prog-hero__text shell">
-			<h1 class="prog-hero__title">{programme.title}</h1>
+			{isTechnologyFoundationsCertificate && (
+				<p class="prog-hero__eyebrow">{certificateEyebrow}</p>
+			)}
+			<h1 class="prog-hero__title">{heroTitle}</h1>
 			{duration && <p class="prog-hero__duration">{duration}</p>}
 			<div class="prog-hero__actions">
 				<a class="prog-hero__cta" href={primaryCtaUrl}>{primaryCtaLabel}</a>
@@ -293,10 +324,11 @@ const breadcrumbSchema = {
 	.prog-hero {
 		position: relative;
 		width: 100%;
-		min-height: clamp(340px, 50vh, 480px);
+		min-height: 480px;
 		display: flex;
 		align-items: flex-end;
 		overflow: hidden;
+		background: #161111;
 	}
 
 	.prog-hero__bg {
@@ -312,11 +344,7 @@ const breadcrumbSchema = {
 	.prog-hero__overlay {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0.35) 0%,
-			rgba(0, 0, 0, 0.55) 100%
-		);
+		background: var(--hero-desktop-scrim);
 		z-index: 1;
 	}
 
@@ -327,6 +355,17 @@ const breadcrumbSchema = {
 		padding-bottom: 48px;
 	}
 
+	.prog-hero__eyebrow {
+		margin: 0 0 0.75rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.96rem;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		line-height: 1.2;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.82);
+	}
+
 	.prog-hero__title {
 		font-family: 'Lora Ampersand', 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
@@ -335,7 +374,8 @@ const breadcrumbSchema = {
 		line-height: 1.05;
 		color: #fff;
 		margin: 0;
-		max-width: 18ch;
+		max-width: var(--hero-title-max-width);
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.prog-hero__duration {
@@ -646,11 +686,15 @@ const breadcrumbSchema = {
 	/* ─── Responsive ───────────────────────────────────────── */
 	@media (max-width: 809px) {
 		.prog-hero {
-			min-height: 240px;
+			min-height: var(--hero-mobile-min-height);
+		}
+
+		.prog-hero__overlay {
+			background: var(--hero-mobile-scrim);
 		}
 
 		.prog-hero__text {
-			padding-top: 60px;
+			padding-top: var(--prog-hero-mobile-content-top, var(--hero-mobile-content-top));
 			padding-bottom: 28px;
 		}
 

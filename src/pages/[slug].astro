@@ -1,12 +1,15 @@
 ---
 import ContentBlocks from '../components/ContentBlocks.astro';
+import BannerLayers from '../components/BannerLayers.astro';
 import CourseGrid from '../components/CourseGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import HeroMedia from '../components/HeroMedia.astro';
 import LogoCarouselSection from '../components/LogoCarouselSection.astro';
 import PageHero from '../components/PageHero.astro';
 import RichContent from '../components/RichContent.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getSiteData, getNavPillsForPage } from '../lib/data.js';
 import { getClientLogoItems, getPartnerLogoItems } from '../lib/logos';
 import { getResponsiveImage } from '../lib/responsive-images.js';
@@ -66,14 +69,24 @@ const navPills = isCourseListing
 const filterLabels = isCourseListing ? getProgrammeFilterLabels() : null;
 const partnerLogos = page.slug === 'courses-all' ? getPartnerLogoItems(site.externalLogos) : [];
 const clientLogos = page.slug === 'courses-all' ? getClientLogoItems(site.externalLogos) : [];
-const courseAllHeroImage = '/images/generated/hero-review/showcase/cdx_001.webp';
+const courseAllHeroImage = page.hero_image ?? '/images/banners/courses-all.webp';
 const courseAllHero = getResponsiveImage(courseAllHeroImage);
+const courseBanner = getBannerAsset(courseAllHeroImage);
 const courseHeroPreload =
-	page.slug === 'courses-all' && courseAllHero
-		? { src: courseAllHero.src, srcset: courseAllHero.srcset, sizes: '100vw' }
+	page.slug === 'courses-all' && courseBanner
+		? { src: courseBanner.background }
+		: page.slug === 'courses-all' && courseAllHero
+			? { src: courseAllHero.src, srcset: courseAllHero.srcset, sizes: '100vw' }
 		: null;
-const courseAllLead =
-	'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.';
+const COURSE_PAGE_LEADS: Record<string, string> = {
+	'courses-all':
+		'Hands-on coding, AI, app development, web, digital making, and tech productivity programmes for schools, professionals, corporate teams, and public learners.',
+	'courses-professionals':
+		'Practical AI, software, and digital making courses for working professionals and teams.',
+	'courses-schools':
+		'Coding, AI, and digital making programmes for primary, secondary, and junior college learners.',
+};
+const coursePageLead = COURSE_PAGE_LEADS[page.slug as string];
 const courseAllHighlights = [
 	{
 		title: 'For Classrooms and Teams',
@@ -142,25 +155,15 @@ const hasRichContent = contentBlocks.some(
 >
 	{isCourseListing ? (
 		<>
-			{page.slug === 'courses-all' && (
+			{isCourseListing && (
 				<>
 					<section class="course-hero">
-						<img
-							class="course-hero__bg"
-							src={courseAllHero?.src ?? courseAllHeroImage}
-							srcset={courseAllHero?.srcset}
-							sizes={courseAllHero?.srcset ? '100vw' : undefined}
-							width={courseAllHero?.width}
-							height={courseAllHero?.height}
-							alt=""
-							loading="eager"
-							fetchpriority="high"
-							decoding="async"
-						/>
+						<BannerLayers src={courseAllHeroImage} />
 						<div class="course-hero__scrim"></div>
 						<div class="course-hero__content shell">
 							<h1 class="course-hero__title">{displayTitle}</h1>
-							<p class="course-hero__lead">{courseAllLead}</p>
+							<p class="course-hero__lead">{coursePageLead}</p>
+							<HeroEmailAction />
 						</div>
 					</section>
 					<LogoCarouselSection
@@ -226,26 +229,15 @@ const hasRichContent = contentBlocks.some(
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: clamp(420px, 60vh, 620px);
+		min-height: 480px;
 		overflow: clip;
-		background: #0a0a0a;
-	}
-
-	.course-hero__bg {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
+		background: #161111;
 	}
 
 	.course-hero__scrim {
 		position: absolute;
 		inset: 0;
-		background:
-			linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.38) 46%, rgba(0, 0, 0, 0.08) 100%),
-			linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.48) 100%);
+		background: var(--hero-desktop-scrim);
 	}
 
 	.course-hero__content {
@@ -266,8 +258,9 @@ const hasRichContent = contentBlocks.some(
 		line-height: 0.95;
 		color: #fff;
 		margin: 0;
-		max-width: 10ch;
+		max-width: min(10ch, var(--hero-title-max-width));
 		text-wrap: balance;
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.course-hero__lead {
@@ -341,10 +334,15 @@ const hasRichContent = contentBlocks.some(
 
 	@media (max-width: 809px) {
 		.course-hero {
-			min-height: 520px;
+			min-height: var(--hero-mobile-min-height);
+		}
+
+		.course-hero__scrim {
+			background: var(--hero-mobile-scrim);
 		}
 
 		.course-hero__content {
+			padding-block-start: var(--hero-mobile-content-top);
 			padding-block-end: 2.5rem;
 		}
 

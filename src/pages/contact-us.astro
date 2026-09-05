@@ -1,12 +1,17 @@
 ---
 import ContactForm from '../components/ContactForm.astro';
+import BannerLayers from '../components/BannerLayers.astro';
+import HeroEmailAction from '../components/HeroEmailAction.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
 
 const page = getStaticPage('/contact-us');
 if (!page) return Astro.redirect('/404');
 
 const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString();
+const heroImage = '/images/banners/contact-us.webp';
+const heroBanner = getBannerAsset(heroImage);
 
 ---
 
@@ -16,21 +21,17 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 	description="Visit, call, or email Tinkercademy at Jalan Pemimpin. We run classes, workshops, and meetings from our Singapore office — here's how to reach us."
 	canonical={canonical}
 	image={page.hero_image ?? undefined}
+	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="contact-hero">
-		<img
-			class="contact-hero__bg"
-			src="/images/contact-hero.jpg"
-			alt=""
-			loading="eager"
-			fetchpriority="high"
-		/>
+		<BannerLayers src={heroImage} />
 		<div class="contact-hero__scrim"></div>
 		<div class="contact-hero__content shell">
 			<h1 class="contact-hero__title">{page.hero_title ?? 'Get in touch'}</h1>
 			<p class="contact-hero__subtitle">
 				We go to your school or company. Or drop by our little Bishan makerspace to 3D print, laser cut, and build something.
 			</p>
+			<HeroEmailAction />
 		</div>
 	</section>
 
@@ -168,29 +169,26 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: clamp(440px, 58vh, 620px);
+		min-height: 480px;
 		overflow: clip;
-		background: #0a0a0a;
-	}
-
-	.contact-hero__bg {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center center;
+		background: #161111;
 	}
 
 	.contact-hero__scrim {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0.35) 0%,
-			rgba(0, 0, 0, 0.15) 40%,
-			rgba(0, 0, 0, 0.7) 100%
-		);
+		background: var(--hero-desktop-scrim);
+	}
+
+	@media (max-width: 809px) {
+		.contact-hero {
+			min-height: var(--hero-mobile-min-height);
+			--hero-content-padding-top: var(--hero-mobile-content-top);
+		}
+
+		.contact-hero__scrim {
+			background: var(--hero-mobile-scrim);
+		}
 	}
 
 	.contact-hero__content {
@@ -199,7 +197,7 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		flex-direction: column;
 		justify-content: flex-end;
 		min-height: inherit;
-		padding: clamp(4rem, 9vw, 7rem) 0 clamp(3rem, 5vw, 4rem);
+		padding: var(--hero-content-padding-top, clamp(4rem, 9vw, 7rem)) 0 clamp(3rem, 5vw, 4rem);
 		gap: 1.1rem;
 	}
 
@@ -211,7 +209,9 @@ const canonical = new URL('/contact-us/', 'https://tinkercademy.com').toString()
 		font-weight: 500;
 		line-height: 1;
 		color: #fff;
+		max-width: var(--hero-title-max-width);
 		text-wrap: balance;
+		text-shadow: var(--hero-title-glow);
 	}
 
 	.contact-hero__subtitle {

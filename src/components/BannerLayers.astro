@@ -1,0 +1,126 @@
+---
+import { getBannerAsset } from '../lib/banner-assets';
+
+interface Props {
+	src: string;
+}
+
+const { src } = Astro.props;
+const asset = getBannerAsset(src);
+---
+
+{asset ? (
+	<div class="banner-layers" aria-hidden="true">
+		<img
+			class="banner-layers__background"
+			src={asset.background}
+			width={asset.backgroundWidth}
+			height={asset.backgroundHeight}
+			alt=""
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+		/>
+		<img
+			class="banner-layers__foreground"
+			src={asset.foreground}
+			width={asset.foregroundWidth}
+			height={asset.foregroundHeight}
+			alt=""
+			loading="eager"
+			fetchpriority="low"
+			decoding="async"
+		/>
+		{asset.stamp && (
+			<img
+				class="banner-layers__stamp"
+				src={asset.stamp}
+				width={asset.stampWidth}
+				height={asset.stampHeight}
+				alt=""
+				loading="eager"
+				fetchpriority="low"
+				decoding="async"
+			/>
+		)}
+	</div>
+) : (
+	<img
+		class="banner-layers__background"
+		src={src}
+		alt=""
+		loading="eager"
+		fetchpriority="high"
+		decoding="async"
+	/>
+)}
+
+<style>
+	.banner-layers {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	.banner-layers__background {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.banner-layers__foreground {
+		position: absolute;
+		bottom: calc(10pt - clamp(0px, 5vw, 72px));
+		right: clamp(0rem, 2vw, 2rem);
+		width: auto;
+		height: var(--banner-foreground-height, 101.25%);
+		max-width: min(46.8vw, 46.8rem);
+		object-fit: contain;
+	}
+
+	.banner-layers__stamp {
+		position: absolute;
+		right: clamp(1.5rem, 2vw, 2rem);
+		bottom: clamp(1.5rem, 2vw, 2rem);
+		width: clamp(5rem, 7.25vw, 6.5rem);
+		height: auto;
+		filter:
+			drop-shadow(1px 0 0 #0c0a09)
+			drop-shadow(-1px 0 0 #0c0a09)
+			drop-shadow(0 1px 0 #0c0a09)
+			drop-shadow(0 -1px 0 #0c0a09);
+	}
+
+	@media (min-width: 810px) and (max-width: 1199px) {
+		.banner-layers__foreground {
+			bottom: calc(-24px + 10pt);
+			height: 81%;
+			max-width: 42.3vw;
+		}
+	}
+
+	@media (max-width: 809px) {
+		.banner-layers__foreground {
+			top: var(--banner-foreground-mobile-top, 1.5rem);
+			bottom: auto;
+			left: 54%;
+			right: auto;
+			width: var(--banner-foreground-mobile-width, 68vw);
+			height: auto;
+			max-height: var(--banner-foreground-mobile-max-height, 50%);
+			max-width: none;
+			transform: translateX(-50%);
+		}
+
+		.banner-layers__stamp {
+			top: auto;
+			right: 1.5rem;
+			bottom: 1.5rem;
+			width: 4rem;
+		}
+	}
+</style>

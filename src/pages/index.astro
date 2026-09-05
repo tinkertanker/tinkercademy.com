@@ -366,9 +366,15 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: clamp(520px, 72vh, 720px);
+		min-height: 640px;
 		overflow: clip;
 		background: #0a0a0a;
+	}
+
+	@media (max-width: 809px) {
+		.home-hero {
+			min-height: clamp(520px, 72vh, 720px);
+		}
 	}
 
 	.home-hero__bg {
@@ -412,8 +418,9 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		letter-spacing: -0.03em;
 		color: #fff;
 		margin: 0;
-		max-width: 16ch;
+		max-width: min(16ch, var(--hero-title-max-width));
 		text-wrap: balance;
+		text-shadow: var(--hero-title-glow);
 		/* keeps the highlight's z-index:-1 light layer inside the title */
 		isolation: isolate;
 	}

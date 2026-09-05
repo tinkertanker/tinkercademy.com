@@ -2,7 +2,7 @@
 title: "Code For Fun AI Workshop"
 subtitle: "A CODE@SG initiative by IMDA and MOE."
 duration: "10 hours"
-heroImage: "/images/generated/hero-review/code-for-fun-ai-workshop/cdx_001.webp"
+heroImage: "/images/banners/code-for-fun-ai-workshop.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ml-ds", "cs"]
 platformIds: ["scratch", "python", "bbc-micro-bit", "makecode-arcade"]

@@ -2,7 +2,7 @@
 title: "RI FutureCreate Maker Programme 2025"
 subtitle: "A hands-on digital maker programme for RI students."
 duration: "4 years"
-heroImage: "/images/generated/hero-candidates/ri-futurecreate/ri-futurecreate-capstone-imagegen-pop.png"
+heroImage: "/images/banners/ri-futurecreate-maker-programme-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["making", "design-thinking"]
 platformIds: ["3d-printing", "arduino", "scratch"]

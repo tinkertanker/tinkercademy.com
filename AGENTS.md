@@ -63,7 +63,9 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 
 ### Hero / programme image generation
 
-- Any agent generating, regenerating, or replacing hero / flagship / programme images must read [docs/hero-image-brief.md](./docs/hero-image-brief.md) first. It is the canonical brief — art direction, the codex/imagegen invocation contract, the apply-picks workflow, and the running list of prompt-time pitfalls (brand-name leaks like "Tinkercademy" / "CT Hub", back-of-laptop framing, default tudung on Malay faces, composition-uniformity traps, etc.).
+- For **article/tutorial body illustrations** (hand-drawn 16:9 explainer images, xiaohei-style), use the `tkrobot-illustrations` skill in [tinkertanker/tkrobot-stickers](https://github.com/tinkertanker/tkrobot-stickers) under `docs/skills/tkrobot-illustrations/` — sketch-mode T Krobot performs the concept; save outputs under the consuming page's assets.
+- For **illustrated mascot banners** (the preferred direction per [docs/banner-unification-review.md](./docs/banner-unification-review.md)), use the deterministic compositor: read [docs/banner-system.md](./docs/banner-system.md), edit `src/data/banner-scenes.json`, run `node scripts/banner/generate-banners.mjs`. Do not use image generation for the mascot.
+- Hero/banner work goes through the compositor above; [docs/hero-image-brief.md](./docs/hero-image-brief.md) is the superseded historical brief for the AI-photo rounds. Read it only if generating photographic imagery (e.g. new faded-backdrop sources) — its "Confirmed prompt-time pitfalls" section (brand-name leaks, back-of-laptop framing, default tudung, composition uniformity) still applies to photo generation.
 - When the user rejects a single image, check the failure mode against the "Confirmed prompt-time pitfalls" section before re-rolling, and update that section if you discover a new failure mode.
 
 ### Proposal drafting

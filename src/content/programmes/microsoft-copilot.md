@@ -1,8 +1,8 @@
 ---
-title: "Microsoft Copilot"
+title: "AI and Productivity with Microsoft Copilot"
 subtitle: "An introductory course on leveraging Microsoft Copilot to enhance productivity."
 duration: "2 days"
-heroImage: "/images/generated/hero-review/microsoft-copilot/cdx_001.webp"
+heroImage: "/images/banners/microsoft-copilot.webp"
 audienceIds: ["tech-productivity", "businesses", "public"]
 domainIds: ["tech-productivity"]
 platformIds: ["microsoft-copilot"]
@@ -10,7 +10,7 @@ cardBlurb: "Microsoft Copilot is an advanced AI assistant integrated into Singap
 weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
-seoTitle: "Microsoft Copilot - Tinkercademy: Coding and Making for Schools and Professionals"
+seoTitle: "AI and Productivity with Microsoft Copilot - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
 ## Course Overview

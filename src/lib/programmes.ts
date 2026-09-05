@@ -211,7 +211,10 @@ function resolveProgramme(entry: ProgrammeEntry): ResolvedProgramme {
 
 function loadProgrammes() {
 	return getCollection('programmes').then((entries) =>
-		entries.map((entry) => resolveProgramme(entry)).sort(sortProgrammes),
+		entries
+			.filter((entry) => !entry.data.archived)
+			.map((entry) => resolveProgramme(entry))
+			.sort(sortProgrammes),
 	);
 }
 

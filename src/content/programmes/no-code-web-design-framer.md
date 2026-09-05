@@ -2,12 +2,13 @@
 title: "No-code Web Design (Framer)"
 subtitle: "An introductory course on building websites using Framer."
 duration: "2 days"
-heroImage: "/images/generated/hero-review/no-code-web-design-framer/cdx_001.webp"
+heroImage: "/images/banners/no-code-web-design-framer.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["uiux"]
 platformIds: ["framer"]
 cardBlurb: "In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and…"
 weight: 0
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals"

@@ -26,6 +26,7 @@ const programmes = defineCollection({
 		courseType: z.enum(['public']).optional(),
 		cardBlurb: z.string().min(1),
 		weight: z.number().int(),
+		archived: z.boolean().optional(),
 		homeFeaturedRank: z.number().int().positive().optional(),
 		signUpLabel: z.string().min(1).optional(),
 		signUpUrl: z.string().min(1).optional(),
