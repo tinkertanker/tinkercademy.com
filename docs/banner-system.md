@@ -165,8 +165,9 @@ Three registers, same system — pick per audience, don't invent new styles:
 2. **Accessory-led + professional stamp** — professional/corporate:
    task-specific screens or objects are the protagonist; the official
    Tinkertanker Primary icon is a small independent brand signature. On wide
-   heroes, give it equal bottom and right inset. On mobile, enlarge it and pin
-   it to the hero's top-right. Declare it with the scene's top-level `stamp`
+   heroes, give it equal bottom and right inset. On mobile, enlarge it and keep
+   it at the same bottom-right anchor. Use a thin dark keyline rather than a
+   glow so it stays crisp. Declare it with the scene's top-level `stamp`
    object, not as a foreground prop. No bubbles. The `/professionals`, Agentic
    Engineering, Microsoft Copilot, and Web Application Development scenes are
    the reference pilots.

@@ -88,6 +88,11 @@ const asset = getBannerAsset(src);
 		bottom: clamp(1.5rem, 2vw, 2rem);
 		width: clamp(5rem, 7.25vw, 6.5rem);
 		height: auto;
+		filter:
+			drop-shadow(1px 0 0 #0c0a09)
+			drop-shadow(-1px 0 0 #0c0a09)
+			drop-shadow(0 1px 0 #0c0a09)
+			drop-shadow(0 -1px 0 #0c0a09);
 	}
 
 	@media (min-width: 810px) and (max-width: 1199px) {
@@ -112,9 +117,9 @@ const asset = getBannerAsset(src);
 		}
 
 		.banner-layers__stamp {
-			top: 1.5rem;
+			top: auto;
 			right: 1.5rem;
-			bottom: auto;
+			bottom: 1.5rem;
 			width: 4rem;
 		}
 	}
