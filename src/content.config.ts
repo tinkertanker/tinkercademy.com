@@ -14,7 +14,7 @@ const programmes = defineCollection({
 	schema: z.object({
 		title: z.string().min(1),
 		subtitle: z.string().min(1),
-		duration: z.string().min(1),
+		duration: z.string().min(1).optional(),
 		heroImage: z.string().min(1),
 		heroObjectPosition: z
 			.string()
@@ -23,11 +23,18 @@ const programmes = defineCollection({
 		audienceIds: z.array(z.enum(audienceIds)).min(1),
 		domainIds: z.array(z.enum(domainIds)).min(1),
 		platformIds: z.array(z.enum(platformIds)).min(1),
+		courseType: z.enum(['public']).optional(),
 		cardBlurb: z.string().min(1),
 		weight: z.number().int(),
 		homeFeaturedRank: z.number().int().positive().optional(),
 		signUpLabel: z.string().min(1).optional(),
 		signUpUrl: z.string().min(1).optional(),
+		primaryCta: z
+			.object({
+				label: z.string().min(1),
+				url: z.url().refine((value) => value.startsWith('https://'), 'Use an HTTPS URL'),
+			})
+			.optional(),
 		seoTitle: z.string().min(1).optional(),
 		seoDescription: z.string().min(1).optional(),
 	}),

@@ -44,6 +44,16 @@
     "source_id": "D1a5e97XD"
   },
   {
+    "id": "esp32",
+    "label": "ESP32",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "domain_ids": [
+      "iot"
+    ],
+    "content_html": null,
+    "content_text": ""
+  },
+  {
     "id": "aws-partyrock",
     "label": "AWS PartyRock",
     "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",

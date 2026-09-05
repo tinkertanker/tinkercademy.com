@@ -51,19 +51,25 @@ const platforms = programme.platforms ?? [];
 const duration = programme.duration ?? '';
 const primaryAudience = programme.primaryAudience;
 const enquiryLabel = programme.signUpLabel ?? 'Enquire now';
+const primaryCtaLabel = programme.primaryCta?.label ?? enquiryLabel;
+const primaryCtaUrl = programme.primaryCta?.url ?? '#enquire';
 const typeLabel =
-	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
-		? 'Corporate training'
-		: domainLabels[0] ?? primaryAudience?.label ?? '';
+	programme.courseType === 'public'
+		? 'Public'
+		: primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
+			? 'Corporate training'
+			: domainLabels[0] ?? primaryAudience?.label ?? '';
 
 /* Structured data: Course + Breadcrumb */
 const SITE_BASE = 'https://tinkercademy.com';
 const audienceTypeName =
-	primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
-		? 'BusinessAudience'
-		: primaryAudience?.id === 'teachers' || primaryAudience?.id === 'students'
-			? 'EducationalAudience'
-			: undefined;
+	programme.courseType === 'public'
+		? 'Audience'
+		: primaryAudience?.id === 'businesses' || primaryAudience?.id === 'public'
+			? 'BusinessAudience'
+			: primaryAudience?.id === 'teachers' || primaryAudience?.id === 'students'
+				? 'EducationalAudience'
+				: undefined;
 const courseSchema: Record<string, unknown> = {
 	'@context': 'https://schema.org',
 	'@type': 'Course',
@@ -152,13 +158,19 @@ const breadcrumbSchema = {
 			<h1 class="prog-hero__title">{programme.title}</h1>
 			{duration && <p class="prog-hero__duration">{duration}</p>}
 			<div class="prog-hero__actions">
-				<a class="prog-hero__cta" href="#enquire">{enquiryLabel}</a>
-				<a
-					class="prog-hero__cta prog-hero__cta--secondary"
-					href="mailto:hello@tk.sg"
-				>
-					Email us
-				</a>
+				<a class="prog-hero__cta" href={primaryCtaUrl}>{primaryCtaLabel}</a>
+				{programme.primaryCta ? (
+					<a class="prog-hero__cta prog-hero__cta--secondary" href="#enquire">
+						{enquiryLabel}
+					</a>
+				) : (
+					<a
+						class="prog-hero__cta prog-hero__cta--secondary"
+						href="mailto:hello@tk.sg"
+					>
+						Email us
+					</a>
+				)}
 			</div>
 		</div>
 	</section>
@@ -576,6 +588,20 @@ const breadcrumbSchema = {
 
 	.prog-body :global(a) {
 		color: var(--accent-dark);
+	}
+
+	.prog-body :global(.prog-body__cta) {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 0.75rem;
+		padding: 0.75rem 1.1rem;
+		border-radius: 999px;
+		background: var(--accent-dark);
+		color: #fff;
+		text-decoration: none;
+		font-size: 0.92rem;
+		font-weight: 500;
 	}
 
 	.prog-body :global(strong) {
