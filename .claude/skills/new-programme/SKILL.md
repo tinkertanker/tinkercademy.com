@@ -1,13 +1,13 @@
 ---
 name: new-programme
-description: Create a new tinkercademy.com programme page end-to-end — frontmatter, body copy, hero image via mmx, and any missing platform entries. Use when the user says "new programme", "new course page", "add a course", "draft a programme", or similar. The skill quizzes the user for every required input before writing any files.
+description: Create a new tinkercademy.com programme page end-to-end — frontmatter, body copy, a composed layered banner, and any missing platform entries. Use when the user says "new programme", "new course page", "add a course", "draft a programme", or similar. The skill quizzes the user for every required input before writing any files.
 ---
 
 # New Programme Skill
 
 Tinkercademy programme pages live at `src/content/programmes/<slug>.md`. The filename is the URL slug (`/programmes/<slug>/`). The frontmatter is validated by a Zod schema in `src/content.config.ts:12` — missing or unknown enum values will fail the build.
 
-This skill walks the user through every field we've actually needed to author a page, generates a hero image with `mmx`, adds any missing platform entries to `src/data/pages/platforms.json`, and writes the file. It deliberately quizzes the user up front rather than inferring — so you always come back with a plan the user has signed off on before any files change.
+This skill walks the user through every field we've actually needed to author a page, creates its banner with the deterministic compositor, adds any missing platform entries to `src/data/pages/platforms.json`, and writes the file. It deliberately quizzes the user up front rather than inferring — so you always come back with a plan the user has signed off on before any files change.
 
 ## When to invoke
 
@@ -24,9 +24,9 @@ Do **not** invoke for:
 Run these checks in parallel and surface any failures before starting the quiz:
 
 1. **Working directory is this repo.** `git rev-parse --show-toplevel` ends in `tinkercademy.com`.
-2. **`mmx` is installed and authenticated.** `mmx auth status` should show a valid key. If `mmx` is not on PATH, tell the user:
-   > `mmx` isn't installed. Install with `npm install -g mmx-cli`, then run `mmx auth login` (or set an API key). The `mmx-cli` skill has more detail.
-3. **Branch is clean-ish.** `git status --porcelain` — if there are unrelated WIP changes, flag them so the user knows this programme's commits will be isolated.
+2. **Banner tooling is ready.** Read `docs/banner-system.md`, confirm `src/data/banner-scenes.json` and `scripts/banner/generate-banners.mjs` exist, and run `pnpm run banners:check` to establish a clean baseline.
+3. **Backdrop availability.** Prefer a real or already-approved course photograph. Only require `mmx` (`mmx auth status`) when the user needs a new photographic backdrop; the mascot and props must never be generated.
+4. **Branch is clean-ish.** `git status --porcelain` — if there are unrelated WIP changes, flag them so the user knows this programme's commits will be isolated.
 
 Do not start the quiz if preflight fails; fix or get user acknowledgment first.
 
@@ -85,10 +85,10 @@ cat src/data/pages/platforms.json  | python3 -c "import json,sys; [print(p['id']
     - **7→8 transition** — `7_or_fewer_flat` should be **slightly below** `8 × tier_8_11`. If not, warn the user: a group of 8 would pay _less_ than a group of 7, which is the opposite of how the flat fee is usually meant to work. Suggest a flat fee ≈ `(8 × tier_8_11) − ~$100` to restore the conventional relationship.
     Always quote prices in SGD, exclusive of GST. The fee block also ends with "Invoicing terms available."
 
-### Batch 6 — Hero image
+### Batch 6 — Banner direction
 
-15. **Hero image direction.** Ask for a short creative brief — mood, subject matter, any colour direction. Suggest 2–3 angles based on the course content if the user is unsure. Note that mmx images sometimes include garbled fake-text on signs/documents; editorial/abstract prompts work better than literal scenes with text.
-16. Generate with:
+15. **Scene story.** Ask which one or two concrete objects best identify the work participants will do. Follow `docs/banner-system.md`: schools/community use the full T Krobot plus a screen and meaningful props; professional/public courses use task-specific accessories with the independent Tinkertanker stamp and no full mascot.
+16. **Photographic backdrop.** Ask whether an approved source photograph already exists. If not, ask for a short brief and generate backdrop candidates with:
     ```bash
     mmx image generate \
       --prompt "<brief>" \
@@ -97,17 +97,18 @@ cat src/data/pages/platforms.json  | python3 -c "import json,sys; [print(p['id']
       --out-dir public/images \
       --out-prefix <slug>-hero
     ```
-    Read both candidates with the Read tool, show the user which you'd pick and why (usually: the one with less fake-text and clearer concept). Let them override. Trash the rejected candidate with `trash` (not `rm`).
+    Inspect both candidates, recommend the one with less fake text and a clear environment, and let the user override. Trash the rejected candidate with `trash` (not `rm`). The chosen image remains a source input referenced by `photo.src`; it is not used directly as `heroImage`.
+17. **Compose the banner.** Add a scene whose `id` exactly matches the programme slug to `src/data/banner-scenes.json`. Use the chosen photograph as `photo.src`, follow the audience register and prop grammar in `docs/banner-system.md`, then set frontmatter to `heroImage: "/images/banners/<slug>.webp"`. Do not add `heroObjectPosition` for a composed banner. Run `pnpm run banners:generate` and inspect the generated composite before proceeding.
 
 ### Batch 7 — Positioning (optional)
 
-17. **`weight`** (default `99` — alongside everything else). To guarantee this programme sorts **first** in any listing, use **200** (current max across all programme files is 100). Tell the user this is the knob for "make this stand out in the full programme list".
-18. **`homeFeaturedRank`** (optional, 1+). Adding this makes the card appear in the Popular Courses rail on the homepage. Lower number = earlier; the current range in use is 3–7 for the normal rail, so 1–2 are "jump the queue" slots. Skip if the user doesn't want home-page placement.
-19. **SEO overrides.** By convention `seoTitle` follows `"<Programme> - Tinkercademy: Coding and Making for Schools and Professionals"`. `seoDescription` is optional — if omitted, the programme page derives from `cardBlurb`.
+18. **`weight`** (default `99` — alongside everything else). To guarantee this programme sorts **first** in any listing, use **200** (current max across all programme files is 100). Tell the user this is the knob for "make this stand out in the full programme list".
+19. **`homeFeaturedRank`** (optional, 1+). Adding this makes the card appear in the Popular Courses rail on the homepage. Lower number = earlier; the current range in use is 3–7 for the normal rail, so 1–2 are "jump the queue" slots. Skip if the user doesn't want home-page placement.
+20. **SEO overrides.** By convention `seoTitle` follows `"<Programme> - Tinkercademy: Coding and Making for Schools and Professionals"`. `seoDescription` is optional — if omitted, the programme page derives from `cardBlurb`.
 
 ### Batch 8 — CTA
 
-20. **Sign-up CTA.** Defaults are `signUpLabel: "Enquire now"` and `signUpUrl: "https://form.jotform.com/232050520776450"` (the generic enquiry Jotform). Override only if there's a dedicated form for this course.
+21. **Sign-up CTA.** Defaults are `signUpLabel: "Enquire now"` and `signUpUrl: "https://form.jotform.com/232050520776450"` (the generic enquiry Jotform). Override only if there's a dedicated form for this course.
 
 ## Adding a missing platform
 
@@ -151,7 +152,7 @@ Frontmatter field order (match convention):
 title: "…"
 subtitle: "…"
 duration: "…"
-heroImage: "/images/…"
+heroImage: "/images/banners/<slug>.webp"
 audienceIds: […]
 domainIds: […]
 platformIds: […]
@@ -169,21 +170,25 @@ seoDescription: "…"           # optional
 
 ## After writing
 
-1. **Preview locally.** If the dev server is already running on `:4321`, verify:
+1. **Verify generated banner coverage.** Run `pnpm run banners:check`. It must reproduce all banner files and the complete manifest, and it rejects any programme whose `heroImage` is not manifest-backed.
+2. **Run repository checks.** Run `pnpm run check` and `pnpm run build`.
+3. **Preview locally.** If the dev server is already running on `:4321`, verify:
    ```bash
    curl -sI http://localhost:4321/programmes/<slug>/ | head -1
    ```
    Should be `200`. If it's `404`, double-check the filename (slug) and the trailing slash (`astro.config.mjs` has `trailingSlash: 'always'`).
-2. **Commit atomically**, per the repo's commit policy. A normal new programme is two commits:
+   Inspect the rendered route at desktop and mobile widths. Check title/art clearance, scrim readability, full-bleed background, foreground and stamp placement, and card usage of the flat composite.
+4. **Commit atomically**, per the repo's commit policy. A normal new programme is two commits:
    - `feat(platforms): add <Platform>` (only if you added a new platform entry)
-   - `feat(programmes): add <Programme Title>` — includes both the `.md` file and the hero image
+   - `feat(programmes): add <Programme Title>` — includes the Markdown, scene JSON, generated banner triplet, manifest, and any new backdrop or locked prop
    Use `-- <path>…` to scope commits to only the touched files.
-3. Don't push or deploy unless the user asks. "New programme" requests usually end with the user wanting to review locally first.
+5. Don't push or deploy unless the user asks. "New programme" requests usually end with the user wanting to review locally first.
 
 ## Things NOT to do
 
 - **Don't invent audience/domain/platform IDs.** Only use values from the three JSON files. Unknown enum values fail the build.
-- **Don't reuse another programme's hero image** unless the user explicitly asks. Generate a fresh one.
+- **Don't point `heroImage` directly at the backdrop.** It must use `/images/banners/<slug>.webp`; the backdrop belongs in the scene's `photo.src`.
+- **Don't reuse another programme's backdrop** unless the user explicitly asks. Generate a fresh one when no approved photograph exists.
 - **Don't forget the trailing slash** when quoting a preview URL. Astro dev server 404s without it.
 - **Don't auto-deploy.** The `deploy` skill is a separate, user-triggered step.
 - **Don't commit the generated `_001.jpg` / `_002.jpg` candidate you rejected.** Trash it first.

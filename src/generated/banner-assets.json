@@ -157,6 +157,17 @@
       "foregroundWidth": 824,
       "foregroundHeight": 489
     },
+    "/images/banners/from-prompting-to-pull-request.webp": {
+      "background": "/images/banners/from-prompting-to-pull-request-background.webp",
+      "foreground": "/images/banners/from-prompting-to-pull-request-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 624,
+      "foregroundHeight": 403,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
+    },
     "/images/banners/home.webp": {
       "background": "/images/banners/home-background.webp",
       "foreground": "/images/banners/home-foreground.webp",

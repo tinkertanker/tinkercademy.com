@@ -23,6 +23,7 @@ const SCENES = path.join(ROOT, 'src', 'data', 'banner-scenes.json');
 const STICKERS = path.join(ROOT, 'reference', 'stickers');
 const OUT_DIR = path.join(ROOT, 'public', 'images', 'banners');
 const ASSET_MANIFEST = path.join(ROOT, 'src', 'generated', 'banner-assets.json');
+const PROGRAMMES_DIR = path.join(ROOT, 'src', 'content', 'programmes');
 
 export const W = 1600;
 export const H = 900;
@@ -1015,15 +1016,35 @@ export async function renderScene(scene) {
 	return (await renderSceneLayers(scene)).composite;
 }
 
+function sortedManifest(manifest) {
+	return {
+		images: Object.fromEntries(Object.entries(manifest.images).sort(([a], [b]) => a.localeCompare(b))),
+	};
+}
+
+function validateProgrammeBannerCoverage(manifest) {
+	const missing = fs.readdirSync(PROGRAMMES_DIR)
+		.filter((name) => name.endsWith('.md'))
+		.flatMap((name) => {
+			const source = fs.readFileSync(path.join(PROGRAMMES_DIR, name), 'utf8');
+			const heroImage = source.match(/^heroImage:\s*["']([^"']+)["']/m)?.[1];
+			return heroImage && !manifest.images[heroImage] ? [`${name}: ${heroImage}`] : [];
+		});
+	if (missing.length) {
+		throw new Error(`programme hero images missing from banner manifest:\n${missing.join('\n')}`);
+	}
+}
+
 async function main() {
 	const args = process.argv.slice(2);
 	const check = args.includes('--check');
 	const only = args.filter((arg) => arg !== '--check');
 	const scenes = JSON.parse(fs.readFileSync(SCENES, 'utf8'));
 	fs.mkdirSync(OUT_DIR, { recursive: true });
-	const manifest = fs.existsSync(ASSET_MANIFEST)
+	const storedManifest = fs.existsSync(ASSET_MANIFEST)
 		? JSON.parse(fs.readFileSync(ASSET_MANIFEST, 'utf8'))
 		: { images: {} };
+	const manifest = only.length ? structuredClone(storedManifest) : { images: {} };
 	for (const scene of scenes) {
 		if (only.length && !only.includes(scene.id)) continue;
 		if (scene.accent && !ACCENTS.includes(scene.accent)) {
@@ -1060,9 +1081,14 @@ async function main() {
 		};
 		console.log(`${check ? '✓ checked' : '✓'} ${scene.id} (${(layers.background.length / 1024).toFixed(0)} KB background, ${(layers.foreground.length / 1024).toFixed(0)} KB foreground)`);
 	}
-	if (!check) {
-		manifest.images = Object.fromEntries(Object.entries(manifest.images).sort(([a], [b]) => a.localeCompare(b)));
-		fs.writeFileSync(ASSET_MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);
+	const sorted = sortedManifest(manifest);
+	if (!only.length) validateProgrammeBannerCoverage(sorted);
+	if (check) {
+		if (JSON.stringify(sortedManifest(storedManifest)) !== JSON.stringify(sorted)) {
+			throw new Error(`${path.relative(ROOT, ASSET_MANIFEST)} is not reproducible; regenerate banners`);
+		}
+	} else {
+		fs.writeFileSync(ASSET_MANIFEST, `${JSON.stringify(sorted, null, 2)}\n`);
 	}
 }
 

@@ -34,6 +34,7 @@ new files.
 | `design-app` | Design canvas with prototype arrow + cursor (Figma-style) |
 | `code-editor` | Dark editor with file tree (VS Code-style) |
 | `agent-cli` | AI coding agent terminal with prompts + spinner (Codex/Claude-style) |
+| `pull-request-merge` | GitHub-style branch, review, diff, and merge-flow window |
 | `app-builder` | Chat + live phone preview split (Lovable-style) |
 | `chat-app` | Chat assistant conversation window (ChatGPT/Copilot-style) |
 | `blockchain` | Three linked blocks (blockchain certificate) |

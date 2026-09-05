@@ -31,12 +31,25 @@ verify that committed outputs reproduce byte-for-byte without writing files.
 
 1. Pick a scene id — use the placement's slug.
 2. Append a scene object to `src/data/banner-scenes.json` (format below).
-3. Run the generator; look at the output image before declaring success.
-4. If the pose you want doesn't exist in `reference/stickers/`, copy it from
+3. Point the page's `heroImage` (or static page `hero_image`) at
+   `/images/banners/<scene-id>.webp`. Keep the source photograph in the
+   scene's `photo.src`; it is a backdrop input, not the rendered hero.
+4. Run `pnpm run banners:generate`; look at the composite before declaring
+   success.
+5. Run `pnpm run banners:check`. A full check verifies all three generated
+   files, the complete manifest, and that every programme hero is backed by a
+   manifest scene.
+6. Run `pnpm run check` and `pnpm run build`, then inspect the actual route at
+   desktop and mobile widths. Check title/art clearance, the full-bleed
+   background, foreground and stamp placement, scrim readability, and natural
+   growth for long mobile titles.
+7. Commit the scene JSON, generated background/foreground/composite, manifest,
+   page frontmatter, and any new locked prop together.
+8. If the pose you want doesn't exist in `reference/stickers/`, copy it from
    the canonical pack in [tinkertanker/tkrobot-stickers](https://github.com/tinkertanker/tkrobot-stickers)
    (`stickers/<slug>.png`, downscale to max 900px). Only poses in that repo's
    locked pack are allowed — never generate or redraw the mascot.
-5. If you need a prop that doesn't exist, add a function to the prop library in
+9. If you need a prop that doesn't exist, add a function to the prop library in
    `scripts/banner/generate-banners.mjs`, following the style contract below.
 
 ## Scene format
