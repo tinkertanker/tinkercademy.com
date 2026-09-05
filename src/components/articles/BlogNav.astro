@@ -17,9 +17,14 @@ const { active = null } = Astro.props as { active?: 'stories' | 'archives' | nul
 
 <style>
 	.blog-nav {
-		border-top: 1px solid rgba(0, 0, 0, 0.08);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		background: #fff;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		background: #000;
+		color: #fff;
+	}
+
+	.blog-nav a {
+		color: #fff;
 	}
 
 	.blog-nav__inner {
@@ -53,7 +58,6 @@ const { active = null } = Astro.props as { active?: 'stories' | 'archives' | nul
 	.blog-nav__links a:hover,
 	.blog-nav__links a:focus-visible,
 	.blog-nav__links a[aria-current='page'] {
-		color: var(--accent-dark);
 		text-decoration: underline;
 		text-decoration-thickness: 0.12em;
 		text-underline-offset: 0.3em;
