@@ -13,8 +13,11 @@
       "foreground": "/images/banners/advanced-agentic-coding-with-claude-code-or-codex-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 632,
-      "foregroundHeight": 562
+      "foregroundWidth": 624,
+      "foregroundHeight": 562,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
     },
     "/images/banners/agentic-ai-for-digital-builders.webp": {
       "background": "/images/banners/agentic-ai-for-digital-builders-background.webp",
@@ -253,8 +256,11 @@
       "foreground": "/images/banners/microsoft-copilot-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 640,
-      "foregroundHeight": 505
+      "foregroundWidth": 616,
+      "foregroundHeight": 505,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
     },
     "/images/banners/no-code-machine-learning.webp": {
       "background": "/images/banners/no-code-machine-learning-background.webp",
@@ -285,16 +291,22 @@
       "foreground": "/images/banners/professional-certificate-in-web-application-development-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 600,
-      "foregroundHeight": 505
+      "foregroundWidth": 584,
+      "foregroundHeight": 505,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
     },
     "/images/banners/professionals.webp": {
       "background": "/images/banners/professionals-background.webp",
       "foreground": "/images/banners/professionals-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
-      "foregroundWidth": 639,
-      "foregroundHeight": 462
+      "foregroundWidth": 637,
+      "foregroundHeight": 462,
+      "stamp": "/images/logos/tinkertanker-primary-icon-dark.png",
+      "stampWidth": 896,
+      "stampHeight": 896
     },
     "/images/banners/ri-futurecreate-maker-programme-2025.webp": {
       "background": "/images/banners/ri-futurecreate-maker-programme-2025-background.webp",

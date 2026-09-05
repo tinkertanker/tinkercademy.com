@@ -900,6 +900,10 @@ export async function renderSceneLayers(rawScene) {
 	setTheme(mode);
 	const props = (scene.props ?? []).map((p) => ({ accent: scene.accent ?? 'red', ...p }));
 	const mascot = scene.mascot ? await mascotImage(scene, mode) : '';
+	const stamp = scene.stamp ? await imagePropSVG(scene.stamp) : '';
+	const stampInfo = scene.stamp
+		? await sharp(path.join(ROOT, scene.stamp.src)).metadata()
+		: null;
 	const rendered = await Promise.all(
 		props.map((p) => p.type === 'image' ? imagePropSVG(p) : STICKER_PROPS[p.type] ? stickerPropSVG(p, mode) : Promise.resolve(propSVG(p)))
 	);
@@ -934,6 +938,7 @@ export async function renderSceneLayers(rawScene) {
 		${back.join('\n')}
 		${mascot}
 		${front.join('\n')}
+		${stamp}
 	</svg>`;
 
 	const [background, foregroundResult, composite] = await Promise.all([
@@ -950,6 +955,11 @@ export async function renderSceneLayers(rawScene) {
 		foreground: foregroundResult.data,
 		foregroundWidth: foregroundResult.info.width,
 		foregroundHeight: foregroundResult.info.height,
+		stamp: scene.stamp
+			? scene.stamp.src.replace(/^public\//, '/')
+			: undefined,
+		stampWidth: stampInfo?.width,
+		stampHeight: stampInfo?.height,
 		composite,
 	};
 }
@@ -996,6 +1006,11 @@ async function main() {
 			backgroundHeight: H,
 			foregroundWidth: layers.foregroundWidth,
 			foregroundHeight: layers.foregroundHeight,
+			...(layers.stamp ? {
+				stamp: layers.stamp,
+				stampWidth: layers.stampWidth,
+				stampHeight: layers.stampHeight,
+			} : {}),
 		};
 		console.log(`${check ? '✓ checked' : '✓'} ${scene.id} (${(layers.background.length / 1024).toFixed(0)} KB background, ${(layers.foreground.length / 1024).toFixed(0)} KB foreground)`);
 	}

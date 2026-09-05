@@ -31,6 +31,18 @@ const asset = getBannerAsset(src);
 			fetchpriority="low"
 			decoding="async"
 		/>
+		{asset.stamp && (
+			<img
+				class="banner-layers__stamp"
+				src={asset.stamp}
+				width={asset.stampWidth}
+				height={asset.stampHeight}
+				alt=""
+				loading="eager"
+				fetchpriority="low"
+				decoding="async"
+			/>
+		)}
 	</div>
 ) : (
 	<img
@@ -70,6 +82,14 @@ const asset = getBannerAsset(src);
 		object-fit: contain;
 	}
 
+	.banner-layers__stamp {
+		position: absolute;
+		right: clamp(1.5rem, 2vw, 2rem);
+		bottom: clamp(1.5rem, 2vw, 2rem);
+		width: clamp(5rem, 7.25vw, 6.5rem);
+		height: auto;
+	}
+
 	@media (min-width: 810px) and (max-width: 1199px) {
 		.banner-layers__foreground {
 			bottom: calc(-24px + 10pt);
@@ -89,6 +109,13 @@ const asset = getBannerAsset(src);
 			max-height: var(--banner-foreground-mobile-max-height, 50%);
 			max-width: none;
 			transform: translateX(-50%);
+		}
+
+		.banner-layers__stamp {
+			top: 1.5rem;
+			right: 1.5rem;
+			bottom: auto;
+			width: 4rem;
 		}
 	}
 </style>

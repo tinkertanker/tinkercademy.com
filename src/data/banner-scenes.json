@@ -74,7 +74,7 @@
  },
  {
   "id": "professionals",
-  "note": "Professionals — browser + terminal with a small face signature.",
+  "note": "Professionals — browser + terminal with the Tinkertanker icon as a professional signature.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
@@ -86,17 +86,15 @@
    {
     "type": "terminal",
     "layer": "front"
-   },
-   {
-    "type": "face",
-    "x": 0.79,
-    "y": 0.52,
-    "w": 0.07,
-    "layer": "front",
-    "shadow": false
    }
   ],
   "layout": "trio",
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/professionals/cdx_001.webp",
    "darken": 0.4,
@@ -520,7 +518,7 @@
  },
  {
   "id": "advanced-agentic-coding-with-claude-code-or-codex",
-  "note": "Agentic coding — agent windows with a small face signature.",
+  "note": "Agentic coding — agent windows with the Tinkertanker icon as a professional signature.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",
@@ -536,17 +534,15 @@
     "x": 0,
     "y": 0.05,
     "w": 0.18
-   },
-   {
-    "type": "face",
-    "x": 0.79,
-    "y": 0.52,
-    "w": 0.07,
-    "layer": "front",
-    "shadow": false
    }
   ],
   "layout": "trio",
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/advanced-agentic-coding-with-claude-code-or-codex/cdx_001.webp",
    "darken": 0.4,
@@ -1237,7 +1233,7 @@
  },
  {
   "id": "microsoft-copilot",
-  "note": "Copilot — workplace spreadsheet + assistant with a small face signature.",
+  "note": "Copilot — workplace spreadsheet + assistant with the Tinkertanker icon as a professional signature.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
@@ -1255,16 +1251,14 @@
     "y": 0.4,
     "w": 0.18,
     "layer": "front"
-   },
-   {
-    "type": "face",
-    "x": 0.83,
-    "y": 0.51,
-    "w": 0.07,
-    "layer": "front",
-    "shadow": false
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/microsoft-copilot/cdx_001.webp",
    "darken": 0.4,
@@ -1377,7 +1371,7 @@
  },
  {
   "id": "professional-certificate-in-web-application-development",
-  "note": "Web cert — editor + server with a small face signature.",
+  "note": "Web cert — editor + server with the Tinkertanker icon as a professional signature.",
   "mode": "dark",
   "accent": "teal",
   "headlineSide": "left",
@@ -1394,16 +1388,14 @@
     "y": 0.64,
     "w": 0.13,
     "ground": true
-   },
-   {
-    "type": "face",
-    "x": 0.82,
-    "y": 0.51,
-    "w": 0.07,
-    "layer": "front",
-    "shadow": false
    }
   ],
+  "stamp": {
+   "src": "public/images/logos/tinkertanker-primary-icon-dark.png",
+   "x": 0.91,
+   "y": 0.68,
+   "w": 0.075
+  },
   "photo": {
    "src": "/images/generated/hero-review/professional-certificate-in-web-application-development/cdx_001.webp",
    "darken": 0.4,

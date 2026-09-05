@@ -7,6 +7,9 @@ export type BannerAsset = {
 	backgroundHeight: number;
 	foregroundWidth: number;
 	foregroundHeight: number;
+	stamp?: string;
+	stampWidth?: number;
+	stampHeight?: number;
 };
 
 export function getBannerAsset(src: string | null | undefined): BannerAsset | null {

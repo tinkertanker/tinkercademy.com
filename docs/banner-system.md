@@ -80,8 +80,8 @@ catalogue consistent and snap grounded devices to the baseline automatically:
   spec order.
 - `"layout": "trio"` — bottom-right arrangement in three descending sizes:
   large floating window and medium window in front, with room for either a
-  mascot grounded at the right edge *behind* the work or a manually placed
-  `face` signature. For professional pages, prefer the accessory-led face
+  mascot grounded at the right edge *behind* the work or an independent
+  professional stamp. For professional pages, prefer the accessory-led stamp
   treatment described below. Pair with brand icons, no bubbles.
 
 Freeform x/y still works for scenes that need something bespoke.
@@ -96,14 +96,14 @@ Freeform x/y still works for scenes that need something bespoke.
    crops). Mascot: `y = 0.76 − h/2`. Sticker props take `"ground": true`;
    grounded vector props snap via BOTTOM_OFFSET; shadows are automatic. Only
    bubbles (y ≈ 0.29) and floating windows sit above the baseline.
-3. **The character signature is the rightmost element.** Content (device,
+3. **The character or stamp is the rightmost element.** Content (device,
    props) occupies the middle band (~x 0.45–0.75). School and community scenes
    put the full robot at x ≈ 0.84, engaging with the work; professional scenes
-   may instead attach a small `face` sticker to the accessory cluster. Poses
-   that point off-canvas get `flip: true`. (Centred compositions are for
-   `headlineSide: "none"` cards only.) Full-width internal-page heroes use a
-   480px desktop height; the
-   homepage alone retains 640px. On mobile, start at a 260px minimum and reserve
+   may instead use the official Tinkertanker Primary icon as an independent
+   corner stamp. Poses that point off-canvas get `flip: true`. (Centred
+   compositions are for `headlineSide: "none"` cards only.) Full-width
+   internal-page heroes use a 480px desktop height; the homepage alone retains
+   640px. On mobile, start at a 260px minimum and reserve
    roughly 200px above the text for the foreground. Let real title, lead, and
    action content grow the band naturally—never add a call to action merely to
    fill vertical space, and do not use JavaScript to calculate hero height.
@@ -125,17 +125,16 @@ Freeform x/y still works for scenes that need something bespoke.
    merely to equalise the layout.
 4. **The formula: one character signature, one screen, one-plus props.** For
    school and community scenes, use one mascot pose. For professional scenes,
-   let the task-specific screens and objects lead, then attach one small
-   `face` sticker as the proprietary signature. Add one or two *physical*
+   let the task-specific screens and objects lead, then add the shared
+   Tinkertanker icon as the proprietary stamp. Add one or two *physical*
    sticker-props that identify the course (prefer a minted object over another
    generic screen). At most one bubble. If a prop doesn't help a stranger
    guess the course, cut it.
 5. **Character scale.** Full mascots use `h` between 0.40 and 0.50 (trio 0.44)
    and read as a companion at ~55–60% of the cropped band, never the whole
-   banner. Wide poses need the smaller end; narrow poses the larger. A
-   professional `face` signature starts around `w: 0.07` (roughly 10–15% of
-   the accessory composition) and must overlap or touch a screen/object edge
-   like a brand seal; never leave it floating as a third subject.
+   banner. Wide poses need the smaller end; narrow poses the larger. Keep a
+   professional stamp independent from the movable foreground so its desktop
+   and mobile placement can differ without moving or scaling the course art.
 6. **Vary adjacent placements.** Cards that sit next to each other in a listing
    should differ in pose *and* silhouette (a floating window vs a big
    micro:bit vs a bubble cluster), not just accent.
@@ -163,12 +162,14 @@ contract natively:
 Three registers, same system — pick per audience, don't invent new styles:
 
 1. **Full mascot** (`h` 0.40–0.50) — schools, community pages.
-2. **Accessory-led + face seal** — professional/corporate: task-specific
-   screens or objects are the protagonist; a small real `face` sticker
-   overlaps the cluster as an understated brand signature. Keep its relative
-   scale and attachment treatment consistent across adjacent banners. No
-   bubbles. The `/professionals`, Agentic Engineering, Microsoft Copilot, and
-   Web Application Development scenes are the reference pilots.
+2. **Accessory-led + professional stamp** — professional/corporate:
+   task-specific screens or objects are the protagonist; the official
+   Tinkertanker Primary icon is a small independent brand signature. On wide
+   heroes, give it equal bottom and right inset. On mobile, enlarge it and pin
+   it to the hero's top-right. Declare it with the scene's top-level `stamp`
+   object, not as a foreground prop. No bubbles. The `/professionals`, Agentic
+   Engineering, Microsoft Copilot, and Web Application Development scenes are
+   the reference pilots.
 3. **No character signature** — most formal partner contexts: a restrained
    task-specific window/object collage, optionally with a low-opacity
    `diamond` brand cue.
