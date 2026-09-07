@@ -26,7 +26,19 @@ const date = article.date ? new Date(article.date) : null;
 const formattedDate = date
 	? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 	: null;
-const contentHtml = (article.content_html ?? '').replace(
+const articleSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Article',
+	headline: article.title,
+	description: metaDescription,
+	url: canonical,
+	mainEntityOfPage: canonical,
+	...(date ? { datePublished: date.toISOString() } : {}),
+	...(article.image ? { image: new URL(article.image, canonical).href } : {}),
+	publisher: { '@type': 'Organization', name: 'Tinkercademy', url: 'https://tinkercademy.com/' },
+};
+// The imported title duplicates the hero H1 and was previously hidden with CSS.
+const contentHtml = (article.content_html ?? '').replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/gi, '').replace(
 	/href="(\/(?!\/)[^"#?/.][^"#?]*?)(?<!\/)"/g,
 	'href="$1/"',
 );
@@ -38,6 +50,7 @@ const contentHtml = (article.content_html ?? '').replace(
 	canonical={canonical}
 	image={article.image ?? undefined}
 	ogType="article"
+	structuredData={articleSchema}
 >
 	<section class="article-hero">
 		{article.image && (
@@ -52,7 +65,7 @@ const contentHtml = (article.content_html ?? '').replace(
 		<div class="article-hero__text shell">
 			<p class="article-hero__eyebrow">Article</p>
 			<h1 class="article-hero__title">{article.title}</h1>
-			{formattedDate && <p class="article-hero__date">{formattedDate}</p>}
+			{formattedDate && <p class="article-hero__date"><time datetime={date!.toISOString()}>{formattedDate}</time></p>}
 		</div>
 	</section>
 
@@ -135,10 +148,6 @@ const contentHtml = (article.content_html ?? '').replace(
 		padding-top: 2.5rem;
 		padding-bottom: 2rem;
 		max-width: 720px;
-	}
-
-	.article-body :global(h1) {
-		display: none; /* already shown in hero */
 	}
 
 	.article-body :global(h2) {

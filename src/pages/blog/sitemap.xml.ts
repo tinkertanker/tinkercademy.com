@@ -6,8 +6,11 @@ function xmlEscape(value: string): string {
 
 export async function GET() {
 	const stories = await getBlogStories();
+	const latestChange = stories
+		.map((story) => story.data.updatedAt ?? story.data.publishedAt)
+		.sort((a, b) => b.getTime() - a.getTime())[0];
 	const urls = [
-		{ loc: `${BLOG_ORIGIN}/`, lastmod: stories[0]?.data.updatedAt ?? stories[0]?.data.publishedAt },
+		{ loc: `${BLOG_ORIGIN}/`, lastmod: latestChange },
 		...getBlogYears(stories).map((year) => ({ loc: `${BLOG_ORIGIN}/archive/${year}/`, lastmod: undefined })),
 		...stories.map((story) => ({ loc: story.data.canonicalUrl, lastmod: story.data.updatedAt ?? story.data.publishedAt })),
 	];

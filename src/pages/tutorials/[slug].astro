@@ -37,6 +37,16 @@ const rawDescription: string =
 		.filter((s: unknown) => typeof s === 'string' && (s as string).trim().length > 0)
 		.join(' — ');
 const metaDescription = clipDescription(rawDescription, 155);
+const tutorialSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'TechArticle',
+	headline: tutorial.title,
+	description: metaDescription,
+	url: canonical,
+	mainEntityOfPage: canonical,
+	...(tutorial.hero_image ? { image: new URL(tutorial.hero_image, canonical).href } : {}),
+	publisher: { '@type': 'Organization', name: 'Tinkercademy', url: 'https://tinkercademy.com/' },
+};
 const firstContentItem = tutorial.content?.[0];
 const contentItems =
 	firstContentItem?.type === 'image' &&
@@ -52,6 +62,7 @@ const contentItems =
 	canonical={canonical}
 	image={tutorial.hero_image ?? undefined}
 	ogType="article"
+	structuredData={tutorialSchema}
 >
 	<section class="tutorial-banner">
 		<div class="shell tutorial-banner__inner">

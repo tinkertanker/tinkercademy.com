@@ -47,3 +47,13 @@ jobs:
             exit 1
           fi
           npx --yes wrangler@4.123.0 versions deploy "${VERSION_ID}@100" --yes --message "Promote ${GIT_TAG} (${COMMIT_SHA})"
+
+      # Notify only after promotion, never for upload-only or staging builds.
+      - name: Notify IndexNow of production URLs
+        id: indexnow
+        continue-on-error: true
+        run: node scripts/indexnow.mjs --submit
+
+      - name: Report IndexNow failure without rolling back production
+        if: steps.indexnow.outcome == 'failure'
+        run: echo "::warning::IndexNow notification failed. Production is deployed; inspect the notification log and retry separately."
