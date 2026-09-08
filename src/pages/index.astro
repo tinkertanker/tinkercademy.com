@@ -96,7 +96,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 			sizes={HOME_HERO_IMAGE.sizes}
 			width={HOME_HERO_IMAGE.width}
 			height={HOME_HERO_IMAGE.height}
-			alt=""
+			alt="Learners exploring coding and digital making with Tinkercademy"
 			loading="eager"
 			fetchpriority="high"
 			decoding="async"
@@ -137,7 +137,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 							<img
 								class="home-partners__logo"
 								src={logo.src}
-								alt={idx < HOME_PARTNER_LOGOS.length ? logo.label : ''}
+								alt={logo.label}
 								width={logo.width}
 								height={logo.height}
 								loading="lazy"
@@ -206,7 +206,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 						<img
 							class="home-certs__badge"
 							src={logo.src}
-							alt={idx < HOME_CERTIFICATION_BADGES.length ? logo.label : ''}
+							alt={logo.label}
 							aria-hidden={idx >= HOME_CERTIFICATION_BADGES.length ? 'true' : undefined}
 							width={logo.width}
 							height={logo.height}

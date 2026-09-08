@@ -121,7 +121,7 @@ const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
 	'courses-all': {
 		title: 'All courses — Tinkercademy',
 		description:
-			'Browse every Tinkercademy programme in one place. Coding, AI, web and mobile development, digital making, and more — for schools, professionals, and individuals.',
+			'Browse every Tinkercademy programme in one place: coding, AI, web and mobile development, and digital making for schools, teams, and individuals.',
 	},
 	'courses-professionals': {
 		title: 'Professional courses — Tinkercademy',
@@ -158,7 +158,7 @@ const hasRichContent = contentBlocks.some(
 			{isCourseListing && (
 				<>
 					<section class="course-hero">
-						<BannerLayers src={courseAllHeroImage} />
+						<BannerLayers src={courseAllHeroImage} alt={displayTitle} />
 						<div class="course-hero__scrim"></div>
 						<div class="course-hero__content shell">
 							<h1 class="course-hero__title">{displayTitle}</h1>

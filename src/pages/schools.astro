@@ -80,14 +80,14 @@ const cards = (await getProgrammesBySlugs(cardSlugs)).map((programme) =>
 
 <ContentLayout
 	title="Courses for schools — Tinkercademy"
-	description="Coding, AI, and digital making programmes for MOE primary, secondary, and junior college schools — Code For Fun, the Infocomm LEARN Roadmap, and bespoke curricula."
+	description="Coding, AI, and digital making programmes for Singapore schools, including Code For Fun, the Infocomm LEARN Roadmap, and bespoke curricula."
 	canonical={canonical}
 	image={heroImage}
 	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="aud-hero">
 		{heroImage && (
-			<BannerLayers src={heroImage} />
+			<BannerLayers src={heroImage} alt={heroTitle} />
 		)}
 		<div class="aud-hero__scrim"></div>
 		<div class="aud-hero__content shell">

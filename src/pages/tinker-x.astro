@@ -156,7 +156,7 @@ const pricingTiers = [
 >
 	<section class="tx-hero">
 		{heroImage && (
-			<BannerLayers src={heroImage} />
+			<BannerLayers src={heroImage} alt={heroTitle} />
 		)}
 		<div class="tx-hero__scrim"></div>
 		<div class="tx-hero__content shell">
@@ -175,10 +175,10 @@ const pricingTiers = [
 						{paras.map((para) => <p>{para}</p>)}
 					</div>
 					<div class="tx-story__photo">
-						<img src={studentWorks[idx * 2]} alt="" loading="lazy" />
+						<img src={studentWorks[idx * 2]} alt={`Tinker X student project ${idx * 2 + 1}`} loading="lazy" />
 					</div>
 					<div class="tx-story__photo">
-						<img src={studentWorks[idx * 2 + 1]} alt="" loading="lazy" />
+						<img src={studentWorks[idx * 2 + 1]} alt={`Tinker X student project ${idx * 2 + 2}`} loading="lazy" />
 					</div>
 				</div>
 			))}
@@ -190,7 +190,7 @@ const pricingTiers = [
 			<div class="tx-pillars__grid">
 				{pillars.map((p) => (
 					<article class="tx-pillar">
-						<img class="tx-pillar__icon" src={p.icon} alt="" loading="lazy" />
+						<img class="tx-pillar__icon" src={p.icon} alt={`${p.title} icon`} loading="lazy" />
 						<h2 class="tx-pillar__title">{p.title}</h2>
 						<p class="tx-pillar__body">{p.body}</p>
 					</article>
@@ -205,9 +205,9 @@ const pricingTiers = [
 
 	<section class="tx-strip">
 		<div class="tx-strip__track">
-			{studentWorks.slice(6).map((src) => (
+			{studentWorks.slice(6).map((src, idx) => (
 				<div class="tx-strip__tile">
-					<img src={src} alt="" loading="lazy" />
+					<img src={src} alt={`Tinker X student project ${idx + 7}`} loading="lazy" />
 				</div>
 			))}
 		</div>

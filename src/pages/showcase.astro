@@ -105,7 +105,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 >
 	<section class="sc-hero">
 		{heroImage && (
-			<BannerLayers src={heroImage} />
+			<BannerLayers src={heroImage} alt="Tinkercademy showcase" />
 		)}
 		<div class="sc-hero__scrim"></div>
 		<div class="sc-hero__content shell">
@@ -138,7 +138,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 								<img
 									class="sc-carousel__img"
 									src={article.featureImage}
-									alt=""
+									alt={`${article.title} story image`}
 									loading="lazy"
 								/>
 							)}
@@ -171,7 +171,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 				{featuredOpenSourceTools.map((tool) => (
 					<article class="sc-project-card">
 						<div class="sc-project-card__media">
-							{tool.image && <img src={tool.image} alt="" loading="lazy" />}
+							{tool.image && <img src={tool.image} alt={`${tool.name} screenshot`} loading="lazy" />}
 						</div>
 						<div class="sc-project-card__body">
 							<h3 class="sc-project-card__name">

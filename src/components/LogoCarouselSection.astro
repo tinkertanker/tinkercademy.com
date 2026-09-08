@@ -51,7 +51,7 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 								class="logo-mark"
 								data-logo-id={logo.id}
 								src={logo.src}
-								alt={logo.setIndex === 0 ? logo.label : ''}
+								alt={logo.label}
 								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
 								width={dims?.width}
 								height={dims?.height}

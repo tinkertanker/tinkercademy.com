@@ -71,7 +71,7 @@ const signupLinks = [
 >
 	<section class="ic-hero">
 		{heroImage && (
-			<BannerLayers src={heroImage} />
+			<BannerLayers src={heroImage} alt={heroTitle} />
 		)}
 		<div class="ic-hero__scrim"></div>
 		<div class="ic-hero__content shell">
@@ -108,14 +108,14 @@ const signupLinks = [
 			<h2 class="ic-track__heading">Apple: App Development</h2>
 			<div class="ic-track__badges">
 				{appleBadges.map((src) => (
-					<img class="ic-track__badge" src={src} alt="" loading="lazy" />
+					<img class="ic-track__badge" src={src} alt="Apple education programme badge" loading="lazy" />
 				))}
 			</div>
 			<div class="ic-track__grid">
 				{appleCourses.map((course) => (
 					<a class="ic-course-card" href={course.href}>
 						<div class="ic-course-card__media">
-							<img src={course.image} alt="" loading="lazy" />
+							<img src={course.image} alt={`${course.title} course`} loading="lazy" />
 						</div>
 						<h3 class="ic-course-card__title">{course.title}</h3>
 						<p class="ic-course-card__body">{course.body}</p>
@@ -133,7 +133,7 @@ const signupLinks = [
 				{figmaCourses.map((course) => (
 					<a class="ic-course-card" href={course.href}>
 						<div class="ic-course-card__media ic-course-card__media--wide">
-							<img src={course.image} alt="" loading="lazy" />
+							<img src={course.image} alt={`${course.title} course`} loading="lazy" />
 						</div>
 						<h3 class="ic-course-card__title">{course.title}</h3>
 						<p class="ic-course-card__body">{course.body}</p>

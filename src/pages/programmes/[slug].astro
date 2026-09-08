@@ -165,7 +165,7 @@ const breadcrumbSchema = {
 			: undefined}
 	>
 		{heroBanner ? (
-			<BannerLayers src={programme.heroImage} />
+			<BannerLayers src={programme.heroImage} alt={programme.title} />
 		) : programme.heroImage ? (
 			<img
 				class="prog-hero__bg"
@@ -175,7 +175,7 @@ const breadcrumbSchema = {
 				sizes={heroResponsive?.srcset ? '100vw' : undefined}
 				width={heroResponsive?.width}
 				height={heroResponsive?.height}
-				alt=""
+				alt={`${programme.title} programme banner`}
 				loading="eager"
 				fetchpriority="high"
 				decoding="async"
@@ -285,7 +285,7 @@ const breadcrumbSchema = {
 												<img
 													class="prog-facts__icon"
 													src={platform.icon}
-													alt=""
+													alt={`${platform.label} logo`}
 													loading="lazy"
 												/>
 											)}

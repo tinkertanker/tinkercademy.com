@@ -65,7 +65,7 @@ const blogSchema = {
 						{story.data.heroImage && (
 							<img
 								src={story.data.heroImage}
-								alt=""
+								alt={`${story.data.title} story image`}
 								width={story.data.heroImageWidth}
 								height={story.data.heroImageHeight}
 								loading="lazy"

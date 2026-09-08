@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import test from 'node:test';
 import { load } from 'cheerio';
 
@@ -48,5 +48,36 @@ test('tutorials use truthful TechArticle schema without invented dates or steps'
 		assert.equal(schema.url, $('link[rel="canonical"]').attr('href'));
 		assert.equal(schema.dateModified, undefined);
 		assert.equal(schema.datePublished, undefined);
+		assert.equal($('h1').length, 1, `${tutorial.slug}: single H1`);
+		const description = $('meta[name="description"]').attr('content') ?? '';
+		assert.ok(description.length >= 50 && description.length <= 160, `${tutorial.slug}: description length ${description.length}`);
+	}
+});
+
+test('indexable HTML pages have complete image and search metadata', async () => {
+	const dist = new URL('../../dist/', import.meta.url);
+	const files = (await readdir(dist, { recursive: true })).filter((path) => path.endsWith('.html'));
+
+	for (const path of files) {
+		const $ = load(await readFile(new URL(path, dist), 'utf8'));
+		if (!$('link[rel="canonical"]').length || $('meta[http-equiv="refresh"]').length) continue;
+
+		assert.equal($('h1').length, 1, `${path}: single H1`);
+		const description = $('meta[name="description"]').attr('content') ?? '';
+		assert.ok(description.length >= 50 && description.length <= 160, `${path}: description length ${description.length}`);
+		assert.equal($('img:not([alt])').length, 0, `${path}: image alt attributes`);
+	}
+});
+
+test('Bing-reported pages give every image a non-empty alt attribute', async () => {
+	const paths = [
+		'index.html',
+		'programmes/swift-accelerator/index.html',
+		'articles/space-launch-system-strategies-corporate-learning/index.html',
+	];
+
+	for (const path of paths) {
+		const $ = load(await read(path));
+		assert.equal($('img:not([alt]), img[alt=""]').length, 0, path);
 	}
 });
