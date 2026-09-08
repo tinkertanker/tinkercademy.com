@@ -3,9 +3,10 @@ import { getBannerAsset } from '../lib/banner-assets';
 
 interface Props {
 	src: string;
+	alt: string;
 }
 
-const { src } = Astro.props;
+const { src, alt } = Astro.props;
 const asset = getBannerAsset(src);
 ---
 
@@ -16,7 +17,7 @@ const asset = getBannerAsset(src);
 			src={asset.background}
 			width={asset.backgroundWidth}
 			height={asset.backgroundHeight}
-			alt=""
+			alt={`${alt} banner background`}
 			loading="eager"
 			fetchpriority="high"
 			decoding="async"
@@ -26,7 +27,7 @@ const asset = getBannerAsset(src);
 			src={asset.foreground}
 			width={asset.foregroundWidth}
 			height={asset.foregroundHeight}
-			alt=""
+			alt={`${alt} banner illustration`}
 			loading="eager"
 			fetchpriority="low"
 			decoding="async"
@@ -37,7 +38,7 @@ const asset = getBannerAsset(src);
 				src={asset.stamp}
 				width={asset.stampWidth}
 				height={asset.stampHeight}
-				alt=""
+				alt={`${alt} banner badge`}
 				loading="eager"
 				fetchpriority="low"
 				decoding="async"
@@ -48,7 +49,7 @@ const asset = getBannerAsset(src);
 	<img
 		class="banner-layers__background"
 		src={src}
-		alt=""
+		alt={alt}
 		loading="eager"
 		fetchpriority="high"
 		decoding="async"

@@ -4,7 +4,7 @@ import HeroMedia from '../../components/HeroMedia.astro';
 import TutorialStory from '../../components/TutorialStory.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
-import { clipDescription } from '../../lib/seo.ts';
+import { completeDescription } from '../../lib/seo.ts';
 
 export function getStaticPaths() {
 	return getSiteData().tutorials.map((tutorial: any) => ({
@@ -36,7 +36,11 @@ const rawDescription: string =
 	[tutorial.subtitle, tutorial.description]
 		.filter((s: unknown) => typeof s === 'string' && (s as string).trim().length > 0)
 		.join(' — ');
-const metaDescription = clipDescription(rawDescription, 155);
+const metaDescription = completeDescription(
+	rawDescription,
+	`Follow this step-by-step Tinkercademy tutorial for ${tutorial.title}.`,
+	{ max: 155 },
+);
 const tutorialSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'TechArticle',
@@ -73,7 +77,7 @@ const contentItems =
 		</div>
 	</section>
 	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} compact />
-	<TutorialStory items={contentItems} />
+	<TutorialStory items={contentItems} imageAltFallback={tutorial.title} />
 	<CtaBanner />
 </ContentLayout>
 

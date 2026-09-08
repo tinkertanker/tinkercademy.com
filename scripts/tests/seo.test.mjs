@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import test from 'node:test';
 import { load } from 'cheerio';
+import { parse } from 'yaml';
 
 const read = (path) => readFile(new URL(`../../dist/${path}`, import.meta.url), 'utf8');
 const schemas = ($) => $('script[type="application/ld+json"]').toArray().map((el) => JSON.parse($(el).text()));
@@ -19,6 +20,26 @@ test('blog index freshness follows the latest story change, not publication orde
 	const storyDates = $('url').filter((_, el) => /\/blog\/\d{4}\//.test($(el).find('loc').text()))
 		.toArray().map((el) => Date.parse($(el).find('lastmod').text()));
 	assert.equal(Date.parse(indexDate), Math.max(...storyDates));
+});
+
+test('blog index preserves reviewed decorative hero images', async () => {
+	const medium = new URL('../../src/content/blog/medium/', import.meta.url);
+	const files = (await readdir(medium)).filter((path) => /\.mdx?$/.test(path));
+	const decorative = [];
+
+	for (const path of files) {
+		const source = await readFile(new URL(path, medium), 'utf8');
+		const frontmatter = parse(source.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '');
+		if (frontmatter.heroAltDecision === 'decorative') decorative.push(frontmatter);
+	}
+
+	const $ = load(await read('blog/index.html'));
+	assert.ok(decorative.length > 0, 'expected reviewed decorative hero records');
+	for (const story of decorative) {
+		const image = $(`a[href$="/${story.slug}/"] img`);
+		assert.equal(image.length, 1, `${story.slug}: blog index hero image`);
+		assert.equal(image.attr('alt'), '', `${story.slug}: decorative alt`);
+	}
 });
 
 test('articles expose their actual publication date and Article schema', async () => {
@@ -48,5 +69,36 @@ test('tutorials use truthful TechArticle schema without invented dates or steps'
 		assert.equal(schema.url, $('link[rel="canonical"]').attr('href'));
 		assert.equal(schema.dateModified, undefined);
 		assert.equal(schema.datePublished, undefined);
+		assert.equal($('h1').length, 1, `${tutorial.slug}: single H1`);
+		const description = $('meta[name="description"]').attr('content') ?? '';
+		assert.ok(description.length >= 50 && description.length <= 160, `${tutorial.slug}: description length ${description.length}`);
+	}
+});
+
+test('indexable HTML pages have complete image and search metadata', async () => {
+	const dist = new URL('../../dist/', import.meta.url);
+	const files = (await readdir(dist, { recursive: true })).filter((path) => path.endsWith('.html'));
+
+	for (const path of files) {
+		const $ = load(await readFile(new URL(path, dist), 'utf8'));
+		if (!$('link[rel="canonical"]').length || $('meta[http-equiv="refresh"]').length) continue;
+
+		assert.equal($('h1').length, 1, `${path}: single H1`);
+		const description = $('meta[name="description"]').attr('content') ?? '';
+		assert.ok(description.length >= 50 && description.length <= 160, `${path}: description length ${description.length}`);
+		assert.equal($('img:not([alt])').length, 0, `${path}: image alt attributes`);
+	}
+});
+
+test('Bing-reported pages give every image a non-empty alt attribute', async () => {
+	const paths = [
+		'index.html',
+		'programmes/swift-accelerator/index.html',
+		'articles/space-launch-system-strategies-corporate-learning/index.html',
+	];
+
+	for (const path of paths) {
+		const $ = load(await read(path));
+		assert.equal($('img:not([alt]), img[alt=""]').length, 0, path);
 	}
 });

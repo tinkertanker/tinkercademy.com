@@ -147,7 +147,7 @@ const heroTitleHtml = heroTitle
 >
 	{/* ═══════ 1. Hero (full-bleed image + centred type) ═════════════════ */}
 	<section class="about-hero">
-		<BannerLayers src={heroBgSrc} />
+		<BannerLayers src={heroBgSrc} alt="About Tinkercademy" />
 		<div class="about-hero__scrim"></div>
 		<div class="about-hero__content shell">
 			<h1 class="about-hero__title" set:html={heroTitleHtml} />
@@ -177,7 +177,7 @@ const heroTitleHtml = heroTitle
 			<h2 class="about-certs__heading">We are certified</h2>
 			<div class="about-certs__row">
 				{[...certLogosRow1, ...certLogosRow2].map((src) => (
-					<img class="about-certs__logo" src={src} alt="" loading="lazy" />
+					<img class="about-certs__logo" src={src} alt="Tinkercademy certification badge" loading="lazy" />
 				))}
 			</div>
 		</div>
@@ -192,7 +192,7 @@ const heroTitleHtml = heroTitle
 				<div class="about-logo-track about-logo-track--partners">
 					{partnerLogosMarquee.map((src, idx) => (
 						<div class="about-partners__disc">
-							<img class="about-partners__logo" src={src} alt={idx < partnerLogos.length ? 'Partner logo' : ''} aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} />
+							<img class="about-partners__logo" src={src} alt="Tinkercademy partner logo" aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} />
 						</div>
 					))}
 				</div>
@@ -208,7 +208,7 @@ const heroTitleHtml = heroTitle
 			<div class="about-logo-marquee about-logo-marquee--clients">
 				<div class="about-logo-track about-logo-track--clients">
 					{clientLogosMarquee.map((src, idx) => (
-						<img class="about-clients__logo" src={src} alt={idx < clientLogos.length ? 'Client logo' : ''} aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
+						<img class="about-clients__logo" src={src} alt="Tinkercademy client logo" aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
 					))}
 				</div>
 			</div>

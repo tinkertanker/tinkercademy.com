@@ -4,6 +4,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BlogNav from '../../../components/articles/BlogNav.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, SITE_ORIGIN, blogDateTime, formatBlogDate } from '../../../lib/blog';
+import { completeDescription } from '../../../lib/seo';
 
 export async function getStaticPaths() {
 	return (await getCollection('blog')).map((story) => ({
@@ -16,11 +17,15 @@ const { story } = Astro.props as { story: CollectionEntry<'blog'> };
 const { Content } = await render(story);
 const modifiedAt = story.data.updatedAt ?? story.data.publishedAt;
 const absoluteImage = story.data.heroImage ? new URL(story.data.heroImage, SITE_ORIGIN).toString() : undefined;
+const metaDescription = completeDescription(
+	story.data.description,
+	`Read this Tinkercademy Build Log story by ${story.data.author.name}.`,
+);
 const articleSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'BlogPosting',
 	headline: story.data.title,
-	description: story.data.description,
+	description: metaDescription,
 	url: story.data.canonicalUrl,
 	mainEntityOfPage: story.data.canonicalUrl,
 	datePublished: blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision),
@@ -39,7 +44,7 @@ const articleSchema = {
 
 <ContentLayout
 	title={`${story.data.title} — ${BLOG_TITLE}`}
-	description={story.data.description}
+	description={metaDescription}
 	canonical={story.data.canonicalUrl}
 	image={story.data.heroImage}
 	ogType="article"

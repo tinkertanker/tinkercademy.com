@@ -13,10 +13,17 @@ type StorySection = {
 	images: ContentItem[];
 };
 
-const props = Astro.props as { items?: ContentItem[] };
+const props = Astro.props as { items?: ContentItem[]; imageAltFallback?: string };
 const items = props.items ?? [];
+const imageAltFallback = props.imageAltFallback ?? 'Tutorial illustration';
 const sections: StorySection[] = [];
 let current: StorySection | null = null;
+
+function normaliseHeadings(html: string) {
+	return html
+		.replace(/<h1\b([^>]*)>/gi, '<h2 data-imported-h1$1>')
+		.replace(/<\/h1>/gi, '</h2>');
+}
 
 for (const item of items) {
 	if (item.type === 'richtext' && item.html) {
@@ -38,7 +45,7 @@ if (current?.copy || current?.images.length) sections.push(current);
 	{sections.map((section, index) => (
 		<article class:list={['tutorial-section', index % 2 === 1 && 'tutorial-section--reverse']}>
 			<div class="tutorial-section__copy">
-				{section.copy?.html && <div class="tutorial-section__body" set:html={section.copy.html} />}
+				{section.copy?.html && <div class="tutorial-section__body" set:html={normaliseHeadings(section.copy.html)} />}
 			</div>
 			{
 				section.images.length > 0 && (
@@ -47,7 +54,7 @@ if (current?.copy || current?.images.length) sections.push(current);
 							<figure class:list={['tutorial-media', imageIndex === 0 && section.images.length > 1 && 'tutorial-media--lead']}>
 								<img
 									src={image.src}
-									alt={section.copy?.label ?? ''}
+									alt={section.copy?.label ?? imageAltFallback}
 									loading="lazy"
 									decoding="async"
 									width={image.width ?? undefined}
@@ -113,7 +120,6 @@ if (current?.copy || current?.images.length) sections.push(current);
 		object-position: top left;
 	}
 
-	.tutorial-section__body :global(h1),
 	.tutorial-section__body :global(h2),
 	.tutorial-section__body :global(h3),
 	.tutorial-section__body :global(h4) {
@@ -123,7 +129,7 @@ if (current?.copy || current?.images.length) sections.push(current);
 		line-height: 1.05;
 	}
 
-	.tutorial-section__body :global(h1) {
+	.tutorial-section__body :global(h2[data-imported-h1]) {
 		font-size: clamp(1.8rem, 3.2vw, 2.8rem);
 	}
 

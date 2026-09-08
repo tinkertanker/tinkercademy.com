@@ -21,7 +21,11 @@ const titleBase = article.title.length > TITLE_MAX_BASE
 	: article.title;
 const pageTitle = `${titleBase}${TITLE_SUFFIX}`;
 
-const metaDescription = clipDescription(article.content_text, 155);
+const articleText = (article.content_text ?? '').trim();
+const descriptionSource = articleText.startsWith(article.title)
+	? articleText.slice(article.title.length).trim()
+	: articleText;
+const metaDescription = clipDescription(descriptionSource, 155);
 const date = article.date ? new Date(article.date) : null;
 const formattedDate = date
 	? date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -38,7 +42,16 @@ const articleSchema = {
 	publisher: { '@type': 'Organization', name: 'Tinkercademy', url: 'https://tinkercademy.com/' },
 };
 // The imported title duplicates the hero H1 and was previously hidden with CSS.
-const contentHtml = (article.content_html ?? '').replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/gi, '').replace(
+const articleImageAlts: Record<string, string> = {
+	'space-launch-system-strategies-corporate-learning':
+		'NASA Space Launch System rocket and Orion spacecraft inside an assembly building',
+};
+const contentImageAlt = articleImageAlts[article.slug] ?? 'Article illustration';
+const contentHtml = (article.content_html ?? '')
+	.replace(/<h1\b[^>]*>[\s\S]*?<\/h1>/gi, '')
+	.replace(/<img\b(?![^>]*\balt\s*=)([^>]*)>/gi, `<img alt="${contentImageAlt}"$1>`)
+	.replace(/<img\b([^>]*\balt\s*=\s*)(["'])\s*\2([^>]*)>/gi, `<img$1$2${contentImageAlt}$2$3>`)
+	.replace(
 	/href="(\/(?!\/)[^"#?/.][^"#?]*?)(?<!\/)"/g,
 	'href="$1/"',
 );

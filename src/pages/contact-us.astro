@@ -24,7 +24,7 @@ const heroBanner = getBannerAsset(heroImage);
 	preloadHero={heroBanner ? { src: heroBanner.background } : null}
 >
 	<section class="contact-hero">
-		<BannerLayers src={heroImage} />
+		<BannerLayers src={heroImage} alt="Contact Tinkercademy" />
 		<div class="contact-hero__scrim"></div>
 		<div class="contact-hero__content shell">
 			<h1 class="contact-hero__title">{page.hero_title ?? 'Get in touch'}</h1>
