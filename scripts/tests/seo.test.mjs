@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import test from 'node:test';
 import { load } from 'cheerio';
+import { parse } from 'yaml';
 
 const read = (path) => readFile(new URL(`../../dist/${path}`, import.meta.url), 'utf8');
 const schemas = ($) => $('script[type="application/ld+json"]').toArray().map((el) => JSON.parse($(el).text()));
@@ -19,6 +20,26 @@ test('blog index freshness follows the latest story change, not publication orde
 	const storyDates = $('url').filter((_, el) => /\/blog\/\d{4}\//.test($(el).find('loc').text()))
 		.toArray().map((el) => Date.parse($(el).find('lastmod').text()));
 	assert.equal(Date.parse(indexDate), Math.max(...storyDates));
+});
+
+test('blog index preserves reviewed decorative hero images', async () => {
+	const medium = new URL('../../src/content/blog/medium/', import.meta.url);
+	const files = (await readdir(medium)).filter((path) => /\.mdx?$/.test(path));
+	const decorative = [];
+
+	for (const path of files) {
+		const source = await readFile(new URL(path, medium), 'utf8');
+		const frontmatter = parse(source.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '');
+		if (frontmatter.heroAltDecision === 'decorative') decorative.push(frontmatter);
+	}
+
+	const $ = load(await read('blog/index.html'));
+	assert.ok(decorative.length > 0, 'expected reviewed decorative hero records');
+	for (const story of decorative) {
+		const image = $(`a[href$="/${story.slug}/"] img`);
+		assert.equal(image.length, 1, `${story.slug}: blog index hero image`);
+		assert.equal(image.attr('alt'), '', `${story.slug}: decorative alt`);
+	}
 });
 
 test('articles expose their actual publication date and Article schema', async () => {
