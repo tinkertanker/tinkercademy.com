@@ -145,6 +145,31 @@ try {
 	}
 	console.log('PASS nonshrinking header controls at 320/375/390/809/810/980/1280px with/without search');
 
+	visit();
+	for (const width of [375, 1280]) {
+		browser('set', 'viewport', String(width), '844', '2');
+		for (const mode of ['light', 'dark']) {
+			browser('set', 'media', mode);
+			settle();
+			const row = evaluate(`(() => {
+				const panel = document.querySelector('.home-educators__logos');
+				return { background: getComputedStyle(panel).backgroundColor,
+					logos: [...panel.querySelectorAll('img')].map(el => ({name: el.alt, height: el.getBoundingClientRect().height, slotHeight: el.offsetHeight,
+						background: getComputedStyle(el).backgroundColor})), overflow: document.documentElement.scrollWidth > innerWidth };
+			})()`);
+			assert.equal(row.background, mode === 'dark' ? 'rgb(255, 255, 255)' : 'rgba(0, 0, 0, 0)');
+			assert.equal(row.logos.length, 10);
+			for (const logo of row.logos) {
+				const scale = { 'Stanford University': 1.1, 'Wharton School': 1.1, MIT: 0.9 }[logo.name] ?? 1;
+				assert.equal(logo.slotHeight, 48, `${logo.name}: equal-height layout slot`);
+				assert.ok(Math.abs(logo.height - 48 * scale) < 0.01, `${logo.name}: requested optical scale`);
+				assert.equal(logo.background, 'rgba(0, 0, 0, 0)', `${logo.name}: no individual backplate`);
+			}
+			assert.equal(row.overflow, false, `${mode} ${width}px: logo panel stays within page`);
+		}
+	}
+	console.log('PASS shared institution logo panel, equal layout slots and optical sizing at desktop and mobile widths');
+
 	visit('/programmes/professional-certificate-in-mobile-application-development/');
 	browser('set', 'viewport', '375', '844', '2');
 	for (const mode of ['light', 'dark']) {
