@@ -63,7 +63,8 @@ function runTheme({ saved = null, systemDark = false, storageThrows = false, loa
 			for (const listener of mediaListeners) listener({ matches: value });
 		},
 		storageEvent(key, newValue) {
-			windowListeners.get('storage')({ key, newValue, storageArea: storage });
+			if (key === 'tinkercademy-theme' || key === null) storage.value = newValue;
+			windowListeners.get('storage')?.({ key, newValue, storageArea: storage });
 		},
 	};
 }
@@ -77,6 +78,40 @@ test('valid saved preference wins before controls are wired', () => {
 	assert.equal(theme.rootAttributes.get('data-theme-ready'), '');
 	assert.equal(theme.buttonAttributes.get('aria-label'), 'Switch to light mode');
 	assert.equal(theme.buttonAttributes.get('title'), 'Switch to light mode');
+});
+
+test('system changes during loading update the page before the toggle is wired', () => {
+	const theme = runTheme({ loading: true });
+	theme.setSystemDark(true);
+	assert.equal(theme.rootAttributes.get('data-theme'), 'dark');
+	assert.equal(theme.rootAttributes.has('data-theme-ready'), false);
+	theme.ready();
+	assert.equal(theme.buttonAttributes.get('aria-label'), 'Switch to light mode');
+	theme.click();
+	assert.equal(theme.rootAttributes.get('data-theme'), 'light');
+	assert.equal(theme.storage.value, 'light');
+});
+
+test('cross-tab set, invalidation, removal and clear during loading reconcile the page and toggle', () => {
+	for (const [saved, key, value, expected] of [
+		['light', 'tinkercademy-theme', 'dark', 'dark'],
+		['dark', 'tinkercademy-theme', 'light', 'light'],
+		['light', 'tinkercademy-theme', 'sepia', 'dark'],
+		['light', 'tinkercademy-theme', null, 'dark'],
+		['light', null, null, 'dark'],
+	]) {
+		const theme = runTheme({ saved, systemDark: true, loading: true });
+		theme.storageEvent(key, value);
+		assert.equal(theme.rootAttributes.get('data-theme'), expected, `loading: ${saved} → ${value}`);
+		assert.equal(theme.rootAttributes.has('data-theme-ready'), false);
+		theme.ready();
+		assert.equal(theme.rootAttributes.get('data-theme'), expected);
+		const action = expected === 'dark' ? 'light' : 'dark';
+		assert.equal(theme.buttonAttributes.get('aria-label'), `Switch to ${action} mode`);
+		theme.click();
+		assert.equal(theme.rootAttributes.get('data-theme'), action);
+		assert.equal(theme.storage.value, action);
+	}
 });
 
 test('invalid preference follows live system changes until clicked', () => {
