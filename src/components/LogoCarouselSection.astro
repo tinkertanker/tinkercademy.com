@@ -72,7 +72,7 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 	}
 
 	.logo-section--muted {
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.logo-section__heading {
@@ -80,7 +80,7 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1.5rem;
 	}
 
@@ -119,6 +119,24 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 
 	.logo-mark[data-logo-id='chij-secondary'] {
 		max-width: 96px;
+	}
+
+	/* Keep original brand artwork intact while ensuring dark marks retain
+	   contrast. Screen-gating leaves print on its original light treatment. */
+	@media screen {
+		:global(html[data-theme='dark']) .logo-mark {
+			background: #fff;
+			border-radius: 0.25rem;
+			box-shadow: 0 0 0 0.5rem #fff;
+		}
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		:global(html:not([data-theme])) .logo-mark {
+			background: #fff;
+			border-radius: 0.25rem;
+			box-shadow: 0 0 0 0.5rem #fff;
+		}
 	}
 
 	@keyframes logo-marquee {

@@ -100,8 +100,8 @@ const blogSchema = {
 		padding: clamp(4rem, 8vw, 7rem) 0 clamp(2.5rem, 4vw, 4rem);
 		background:
 			radial-gradient(circle at 83% 18%, rgba(240, 93, 87, 0.18), transparent 30%),
-			linear-gradient(145deg, #fff8f4, #f3e9e4);
-		color: var(--text);
+			linear-gradient(145deg, var(--theme-surface-muted, #fff8f4), var(--theme-tint, #f3e9e4));
+		color: var(--theme-text, var(--text));
 	}
 
 	.blog-hero h1 {
@@ -132,7 +132,7 @@ const blogSchema = {
 		margin: 0;
 		font-family: 'Fragment Mono', monospace;
 		font-size: 0.82rem;
-		color: rgb(90, 75, 70);
+		color: var(--theme-muted, rgb(90, 75, 70));
 	}
 
 	.blog-hero__controls {
@@ -150,14 +150,14 @@ const blogSchema = {
 	}
 
 	.blog-hero__nav a {
-		color: var(--text);
+		color: var(--theme-text, var(--text));
 		text-decoration: none;
 	}
 
 	.blog-hero__nav a:hover,
 	.blog-hero__nav a:focus-visible,
 	.blog-hero__nav a[aria-current='page'] {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		text-decoration: underline;
 		text-decoration-thickness: 0.12em;
 		text-underline-offset: 0.3em;
@@ -165,7 +165,7 @@ const blogSchema = {
 
 	.blog-hero__year-select {
 		position: relative;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.blog-hero__year-select::after {
@@ -184,11 +184,11 @@ const blogSchema = {
 	.blog-hero__year-select select {
 		min-width: 7.5rem;
 		padding: 0.55rem 2.4rem 0.55rem 0.9rem;
-		border: 1px solid rgba(189, 58, 52, 0.25);
+		border: 1px solid var(--theme-control-border, rgba(189, 58, 52, 0.25));
 		border-radius: 999px;
 		appearance: none;
-		background: rgba(255, 255, 255, 0.45);
-		color: var(--accent-dark);
+		background: var(--theme-surface, rgba(255, 255, 255, 0.45));
+		color: var(--theme-link, var(--accent-dark));
 		font: inherit;
 		font-size: 0.85rem;
 		font-weight: 600;
@@ -197,8 +197,8 @@ const blogSchema = {
 
 	.blog-hero__year-select select:hover,
 	.blog-hero__year-select select:focus-visible {
-		border-color: var(--accent-dark);
-		background: rgba(255, 255, 255, 0.75);
+		border-color: var(--theme-link, var(--accent-dark));
+		background: var(--theme-hover, rgba(255, 255, 255, 0.75));
 		outline: 2px solid transparent;
 		box-shadow: 0 0 0 3px rgba(189, 58, 52, 0.12);
 	}
@@ -222,9 +222,9 @@ const blogSchema = {
 		grid-template-rows: auto 1fr;
 		height: 100%;
 		overflow: hidden;
-		border: 1px solid rgba(0, 0, 0, 0.11);
+		border: 1px solid var(--theme-border, rgba(0, 0, 0, 0.11));
 		border-radius: 1rem;
-		background: #fff;
+		background: var(--theme-surface, #fff);
 		text-decoration: none;
 		box-shadow: 0 0.6rem 1.8rem rgba(55, 35, 25, 0.05);
 		transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
@@ -232,7 +232,7 @@ const blogSchema = {
 
 	.story-card:hover,
 	.story-card:focus-visible {
-		border-color: rgba(189, 58, 52, 0.5);
+		border-color: var(--theme-link, rgba(189, 58, 52, 0.5));
 		box-shadow: 0 1rem 2.4rem rgba(55, 35, 25, 0.1);
 		transform: translateY(-0.2rem);
 		outline: none;
@@ -258,11 +258,11 @@ const blogSchema = {
 		justify-content: space-between;
 		gap: 0.75rem;
 		font-size: 0.82rem;
-		color: rgb(95, 95, 95);
+		color: var(--theme-muted, rgb(95, 95, 95));
 	}
 
 	.story-card__meta > span {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		font-weight: 500;
 		text-align: right;
 	}
@@ -282,14 +282,14 @@ const blogSchema = {
 		-webkit-line-clamp: 3;
 		font-size: 0.9rem;
 		line-height: 1.45;
-		color: rgb(75, 75, 75);
+		color: var(--theme-text, rgb(75, 75, 75));
 	}
 
 	.story-card__author {
 		margin-top: auto;
 		padding-top: 0.25rem;
 		font-size: 0.82rem;
-		color: rgb(85, 85, 85);
+		color: var(--theme-muted, rgb(85, 85, 85));
 	}
 
 	@media (max-width: 720px) {

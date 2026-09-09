@@ -90,8 +90,8 @@ const articleSchema = {
 
 <style>
 	.blog-article__header {
-		background: linear-gradient(145deg, #f2e5de, #e7d6cd);
-		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		background: linear-gradient(145deg, var(--theme-surface-muted, #f2e5de), var(--theme-tint, #e7d6cd));
+		border-bottom: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
 	}
 
 	.blog-article__header-inner {
@@ -111,17 +111,17 @@ const articleSchema = {
 		margin: 1rem 0;
 		font-size: var(--lead-font-size);
 		line-height: var(--lead-line-height);
-		color: rgb(80, 80, 80);
+		color: var(--theme-text, rgb(80, 80, 80));
 	}
 
 	.blog-article__byline {
 		margin: 1rem 0 0;
-		color: rgb(85, 85, 85);
+		color: var(--theme-muted, rgb(85, 85, 85));
 	}
 
 	.blog-article__byline a,
 	.blog-article__footer a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		text-underline-offset: 0.18em;
 	}
 
@@ -160,23 +160,23 @@ const articleSchema = {
 		display: block;
 		margin: 1.75rem 0;
 		padding: 1.1rem 1.2rem;
-		border: 1px solid rgba(0, 0, 0, 0.12);
+		border: 1px solid var(--theme-border, rgba(0, 0, 0, 0.12));
 		border-radius: 0.75rem;
-		background: #fffaf7;
+		background: var(--theme-surface, #fffaf7);
 		line-height: 1.5;
 	}
 
 	.blog-article__body :global(.article-link-card a) {
-		color: var(--text);
-		text-decoration-color: var(--accent-dark);
+		color: var(--theme-text, var(--text));
+		text-decoration-color: var(--theme-link, var(--accent-dark));
 		text-underline-offset: 0.2em;
 	}
 
 	.blog-article__body :global(blockquote) {
 		margin: 1.5rem 0;
 		padding-left: 1rem;
-		border-left: 4px solid rgba(189, 58, 52, 0.55);
-		color: rgb(70, 70, 70);
+		border-left: 4px solid var(--theme-link, rgba(189, 58, 52, 0.55));
+		color: var(--theme-text, rgb(70, 70, 70));
 	}
 
 	.blog-article__body :global(pre) {
@@ -199,9 +199,9 @@ const articleSchema = {
 		max-width: 52rem;
 		padding-top: 1.5rem;
 		padding-bottom: 4rem;
-		border-top: 1px solid rgba(0, 0, 0, 0.12);
+		border-top: 1px solid var(--theme-border, rgba(0, 0, 0, 0.12));
 		font-size: 0.9rem;
-		color: rgb(75, 75, 75);
+		color: var(--theme-muted, rgb(75, 75, 75));
 	}
 
 	.blog-article__tags {
@@ -216,8 +216,8 @@ const articleSchema = {
 	.blog-article__tags li {
 		padding: 0.35rem 0.7rem;
 		border-radius: 999px;
-		background: rgba(189, 58, 52, 0.09);
-		color: var(--accent-dark);
+		background: var(--theme-tint, rgba(189, 58, 52, 0.09));
+		color: var(--theme-link, var(--accent-dark));
 		font-size: 0.8rem;
 		font-weight: 500;
 	}

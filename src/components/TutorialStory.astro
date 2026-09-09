@@ -80,7 +80,7 @@ if (current?.copy || current?.images.length) sections.push(current);
 		display: grid;
 		gap: 1.5rem;
 		padding: clamp(1.5rem, 4vw, 3rem) 0;
-		border-top: 1px solid rgba(45, 42, 38, 0.1);
+		border-top: 1px solid var(--theme-border, rgba(45, 42, 38, 0.1));
 	}
 
 	.tutorial-section:first-child {
@@ -102,8 +102,8 @@ if (current?.copy || current?.images.length) sections.push(current);
 		margin: 0;
 		padding: 0.8rem;
 		border-radius: 1.1rem;
-		border: 1px solid rgba(45, 42, 38, 0.1);
-		background: rgba(255, 255, 255, 0.9);
+		border: 1px solid var(--theme-border, rgba(45, 42, 38, 0.1));
+		background: var(--theme-surface, rgba(255, 255, 255, 0.9));
 		box-shadow: 0 16px 36px rgba(45, 42, 38, 0.07);
 	}
 
@@ -140,14 +140,14 @@ if (current?.copy || current?.images.length) sections.push(current);
 	.tutorial-section__body :global(h3),
 	.tutorial-section__body :global(h4) {
 		font-size: 1rem;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.tutorial-section__body :global(p),
 	.tutorial-section__body :global(li) {
 		margin: 0 0 1rem;
 		line-height: var(--body-line-height);
-		color: var(--text);
+		color: var(--theme-text, var(--text));
 	}
 
 	.tutorial-section__body :global(ul) {
@@ -156,7 +156,7 @@ if (current?.copy || current?.images.length) sections.push(current);
 	}
 
 	.tutorial-section__body :global(a) {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		text-decoration-thickness: 0.08em;
 	}
 

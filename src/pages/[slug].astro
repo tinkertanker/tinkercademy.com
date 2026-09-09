@@ -289,7 +289,7 @@ const hasRichContent = contentBlocks.some(
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -299,7 +299,7 @@ const hasRichContent = contentBlocks.some(
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
 	.course-proof__grid {
@@ -309,9 +309,9 @@ const hasRichContent = contentBlocks.some(
 	}
 
 	.course-proof__item {
-		border: 1px solid rgb(229, 229, 229);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 8px;
-		background: #fff;
+		background: var(--theme-surface, #fff);
 		padding: 1.25rem;
 	}
 
@@ -320,7 +320,7 @@ const hasRichContent = contentBlocks.some(
 		font-size: 0.78rem;
 		letter-spacing: 0.03em;
 		/* accent-dark, not accent: text on white needs 4.5:1 (WCAG AA) */
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		margin: 0 0 0.75rem;
 	}
 
@@ -329,7 +329,7 @@ const hasRichContent = contentBlocks.some(
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
 	@media (max-width: 809px) {

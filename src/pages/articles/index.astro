@@ -102,8 +102,8 @@ function formatDate(dateStr: string | null | undefined) {
 		flex-direction: column;
 		border-radius: 16px;
 		overflow: hidden;
-		background: #fff;
-		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
 		box-shadow: 0 4px 20px rgba(45, 42, 38, 0.06);
 		text-decoration: none;
 		color: inherit;
@@ -144,7 +144,7 @@ function formatDate(dateStr: string | null | undefined) {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.8rem;
 		font-weight: 400;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
 	}
@@ -156,7 +156,7 @@ function formatDate(dateStr: string | null | undefined) {
 		font-size: 1.2rem;
 		font-weight: 500;
 		line-height: 1.25;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 	}
 
 	.article-card__excerpt {
@@ -164,7 +164,7 @@ function formatDate(dateStr: string | null | undefined) {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.88rem;
 		line-height: var(--body-line-height);
-		color: rgb(100, 100, 100);
+		color: var(--theme-muted, rgb(100, 100, 100));
 		flex: 1;
 	}
 
@@ -172,7 +172,7 @@ function formatDate(dateStr: string | null | undefined) {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.88rem;
 		font-weight: 500;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	@media (max-width: 809px) {

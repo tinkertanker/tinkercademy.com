@@ -44,7 +44,7 @@ migration:
 
 <!-- medium-image:0*jCWabjyMj1bkYTZx alt-decision:meaningful -->
 
-<img src="/blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png" alt="Illustration of a digital certificate secured by fingerprint authentication and a padlock." width="1600" height="1066" loading="lazy" decoding="async" />
+<img class="illustration-panel" src="/blog-media/6871f9e2a8c324633883a77f42617cb07a54ecaa55e078199e65cf341687d239.png" alt="Illustration of a digital certificate secured by fingerprint authentication and a padlock." width="1600" height="1066" loading="lazy" decoding="async" />
 
 <p>Do you recall the very first time you attended a workshop or training course? Can you remember what you learnt? Or who your instructor was?</p>
 
