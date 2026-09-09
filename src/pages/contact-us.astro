@@ -241,7 +241,7 @@ const heroBanner = getBannerAsset(heroImage);
 	}
 
 	.visit-card {
-		background: #fff;
+		background: var(--theme-surface, #fff);
 		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
 		border-radius: 1.25rem;
 		padding: 2.25rem 2.25rem 2.5rem;
@@ -254,7 +254,7 @@ const heroBanner = getBannerAsset(heroImage);
 	.visit-block + .visit-block {
 		margin-top: 2.25rem;
 		padding-top: 2.25rem;
-		border-top: 1px solid rgba(0, 0, 0, 0.08);
+		border-top: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
 	}
 
 	.visit-block__heading {
@@ -271,14 +271,14 @@ const heroBanner = getBannerAsset(heroImage);
 		font-size: clamp(1.25rem, 2vw, 1.6rem);
 		font-weight: 600;
 		line-height: 1.2;
-		color: var(--text);
+		color: var(--theme-heading, var(--text));
 	}
 
 	.visit-block__icon {
 		display: inline-flex;
 		width: 1.6rem;
 		height: 1.6rem;
-		color: var(--accent);
+		color: var(--theme-link, var(--accent));
 		flex-shrink: 0;
 	}
 
@@ -296,7 +296,7 @@ const heroBanner = getBannerAsset(heroImage);
 		font-family: var(--meta);
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height-tight);
-		color: var(--text);
+		color: var(--theme-text, var(--text));
 	}
 
 	.visit-block__lead:first-of-type {
@@ -331,7 +331,7 @@ const heroBanner = getBannerAsset(heroImage);
 		border-radius: 1rem;
 		overflow: hidden;
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-		background: rgba(0, 0, 0, 0.04);
+		background: var(--theme-surface-muted, rgba(0, 0, 0, 0.04));
 	}
 
 	.carousel__track {
@@ -374,8 +374,8 @@ const heroBanner = getBannerAsset(heroImage);
 		padding: 0;
 		border: 0;
 		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.92);
-		color: var(--text);
+		background: var(--theme-surface, rgba(255, 255, 255, 0.92));
+		color: var(--theme-text, var(--text));
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -385,11 +385,11 @@ const heroBanner = getBannerAsset(heroImage);
 	}
 
 	.carousel__btn:hover {
-		background: #fff;
+		background: var(--theme-hover, #fff);
 	}
 
 	.carousel__btn:focus-visible {
-		outline: 2px solid var(--accent);
+		outline: 2px solid var(--theme-link, var(--accent));
 		outline-offset: 2px;
 	}
 

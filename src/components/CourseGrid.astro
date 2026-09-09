@@ -132,7 +132,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		letter-spacing: -0.03em;
 		font-weight: 500;
 		font-size: 1.6rem;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 		margin: 0;
 	}
 
@@ -140,18 +140,18 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
-		background: rgb(247, 247, 247);
-		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: var(--theme-surface-muted, rgb(247, 247, 247));
+		border: 1px solid var(--theme-control-border, rgba(0, 0, 0, 0.08));
 		border-radius: 999px;
 		padding: 0.5rem 0.9rem;
 		font-family: 'Rubik', sans-serif;
 		font-size: 14px;
-		color: rgb(117, 117, 117);
+		color: var(--theme-muted, rgb(117, 117, 117));
 		min-width: min(100%, 18rem);
 	}
 
 	.course-listing__search svg {
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, rgb(240, 93, 87));
 		flex-shrink: 0;
 	}
 
@@ -159,9 +159,14 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		border: 0;
 		background: transparent;
 		font: inherit;
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		width: 100%;
 		outline: none;
+	}
+
+	.course-listing__search:focus-within {
+		border-color: var(--theme-link, rgb(240, 93, 87));
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-link, rgb(240, 93, 87)) 22%, transparent);
 	}
 
 	.course-listing__filters {
@@ -179,14 +184,14 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		gap: 0.5rem;
 	}
 
-	.course-listing__filter-chip {
+	:global(.course-listing__filter-chip) {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.35rem;
 		padding: 0.45rem 0.8rem;
 		border-radius: 999px;
-		background: rgba(240, 93, 87, 0.1);
-		color: rgb(121, 49, 46);
+		background: var(--theme-tint, rgba(240, 93, 87, 0.1));
+		color: var(--theme-heading, rgb(121, 49, 46));
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.82rem;
 		line-height: 1;
@@ -194,7 +199,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 
 	.course-listing__clear {
 		/* accent-dark, not accent: text on white needs 4.5:1 (WCAG AA) */
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.9rem;
 		font-weight: 500;
@@ -206,7 +211,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 	}
 
 	.course-listing__search input::placeholder {
-		color: rgb(117, 117, 117);
+		color: var(--theme-muted, rgb(117, 117, 117));
 	}
 
 	/* ─── Grid ───────────────────────────────────────────── */
@@ -219,7 +224,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 	.course-listing__empty {
 		margin: 1rem 0 0;
 		font-family: 'Rubik', sans-serif;
-		color: rgb(117, 117, 117);
+		color: var(--theme-muted, rgb(117, 117, 117));
 	}
 
 	@media (min-width: 1600px) {
@@ -254,7 +259,7 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 		letter-spacing: -0.03em;
 		font-weight: 500;
 		font-size: 1.6rem;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 		text-align: center;
 		margin: 0 0 1.25rem;
 	}

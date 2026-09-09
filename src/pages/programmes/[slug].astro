@@ -422,8 +422,8 @@ const breadcrumbSchema = {
 	/* ─── Meta bar (live: pill audiences, inline meta) ─────── */
 	.prog-meta {
 		padding: 0;
-		border-bottom: 1px solid #e3e3e3;
-		background: #fff;
+		border-bottom: 1px solid var(--theme-border, #e3e3e3);
+		background: var(--theme-surface, #fff);
 	}
 
 	.prog-meta__inner {
@@ -445,7 +445,7 @@ const breadcrumbSchema = {
 		font-family: 'Rubik', sans-serif;
 		font-size: 13px;
 		font-weight: 400;
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 		margin: 0;
 		white-space: nowrap;
 	}
@@ -483,7 +483,7 @@ const breadcrumbSchema = {
 		font-family: 'Rubik', sans-serif;
 		font-size: 13px;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
 	.prog-facts {
@@ -507,7 +507,7 @@ const breadcrumbSchema = {
 		letter-spacing: -0.03em;
 		font-size: 1.05rem;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 	}
 
 	.prog-facts__chips {
@@ -522,22 +522,22 @@ const breadcrumbSchema = {
 		gap: 0.55rem;
 		padding: 0.55rem 0.85rem;
 		border-radius: 999px;
-		background: rgb(247, 247, 247);
-		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: var(--theme-surface-muted, rgb(247, 247, 247));
+		border: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.82rem;
 		line-height: 1.2;
-		color: rgb(61, 61, 61);
+		color: var(--theme-text, rgb(61, 61, 61));
 		text-decoration: none;
 	}
 
 	.prog-facts__chip--platform {
-		background: rgba(0, 153, 255, 0.06);
+		background: var(--theme-surface-muted, rgba(0, 153, 255, 0.06));
 	}
 
 	.prog-facts__chip:hover {
-		border-color: rgba(240, 93, 87, 0.28);
-		color: rgb(240, 93, 87);
+		border-color: var(--theme-link, rgba(240, 93, 87, 0.28));
+		color: var(--theme-link, rgb(240, 93, 87));
 	}
 
 	.prog-facts__icon {
@@ -581,7 +581,7 @@ const breadcrumbSchema = {
 		letter-spacing: -0.03em;
 		font-size: 1.35rem;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 		margin: 0 0 0.75rem;
 	}
 
@@ -590,7 +590,7 @@ const breadcrumbSchema = {
 		letter-spacing: 0;
 		font-size: 1.05rem;
 		font-weight: 300;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		margin: 1.35rem 0 0.5rem;
 	}
 
@@ -600,7 +600,7 @@ const breadcrumbSchema = {
 		letter-spacing: 0;
 		font-size: 1rem;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 		margin: 1.15rem 0 0.5rem;
 	}
 
@@ -608,7 +608,7 @@ const breadcrumbSchema = {
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0 0 0.75rem;
 	}
 
@@ -622,12 +622,13 @@ const breadcrumbSchema = {
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin-bottom: 0.35rem;
 	}
 
 	.prog-body :global(a) {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
+		overflow-wrap: anywhere;
 	}
 
 	.prog-body :global(.prog-body__cta) {
@@ -663,13 +664,13 @@ const breadcrumbSchema = {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.92rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
 	.prog-body :global(th),
 	.prog-body :global(td) {
 		padding: 0.5rem 0.65rem;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		border-bottom: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
 		text-align: left;
 		vertical-align: top;
 	}

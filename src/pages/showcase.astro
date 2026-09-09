@@ -350,7 +350,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	}
 
 	.sc-section--muted {
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.sc-section__heading {
@@ -358,7 +358,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.75rem;
 	}
 
@@ -366,13 +366,13 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0 0 2rem;
 		max-width: 60rem;
 	}
 
 	.sc-section__lead a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		font-weight: 500;
 		text-underline-offset: 3px;
 	}
@@ -388,16 +388,16 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		min-width: 0;
 		flex-direction: column;
 		overflow: hidden;
-		border: 1px solid rgb(229, 229, 229);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 14px;
-		background: #fff;
+		background: var(--theme-surface, #fff);
 		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease,
 			border-color 0.3s ease;
 	}
 
 	.sc-project-card:hover {
 		transform: translateY(-4px);
-		border-color: rgb(240, 93, 87);
+		border-color: var(--theme-link, rgb(240, 93, 87));
 		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 	}
 
@@ -405,7 +405,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		display: block;
 		aspect-ratio: 16 / 10;
 		overflow: hidden;
-		border-bottom: 1px solid rgb(235, 235, 235);
+		border-bottom: 1px solid var(--theme-border, rgb(235, 235, 235));
 		background: rgb(245, 245, 245);
 	}
 
@@ -440,7 +440,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	}
 
 	.sc-project-card__name a {
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		text-decoration: none;
 	}
 
@@ -449,7 +449,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.85rem;
 		line-height: 1.45;
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 	}
 
 	.sc-project-card__tags {
@@ -464,15 +464,15 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	.sc-project-card__tag {
 		padding: 0.25rem 0.5rem;
 		border-radius: 6px;
-		background: #f3f3f3;
-		color: rgb(95, 95, 95);
+		background: var(--theme-surface-muted, #f3f3f3);
+		color: var(--theme-muted, rgb(95, 95, 95));
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.66rem;
 	}
 
 	.sc-project-card__tag--platform {
-		background: rgba(240, 93, 87, 0.1);
-		color: var(--accent-dark);
+		background: var(--theme-tint, rgba(240, 93, 87, 0.1));
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.sc-project-card__footer {
@@ -480,7 +480,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	}
 
 	.sc-project-card__footer a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.8rem;
 		font-weight: 500;
@@ -623,8 +623,8 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	}
 
 	.sc-intern-card {
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
 		padding: 1.5rem;
 		display: flex;
@@ -640,7 +640,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0;
 	}
 
@@ -656,7 +656,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-size: 1.05rem;
 		font-weight: 500;
 		text-transform: uppercase;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 	}
 
 	.sc-intern-card__role {
@@ -665,7 +665,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-weight: 500;
 		text-transform: uppercase;
 		letter-spacing: 0.035em;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	/* ── Blog Carousel ── */
@@ -717,8 +717,8 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		border-radius: 14px;
 		overflow: hidden;
 		text-decoration: none;
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease,
 			border-color 0.35s ease;
 	}
@@ -726,7 +726,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	.sc-carousel__card:hover {
 		transform: translateY(-4px);
 		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
-		border-color: rgb(240, 93, 87);
+		border-color: var(--theme-link, rgb(240, 93, 87));
 	}
 
 	.sc-carousel__media {
@@ -760,7 +760,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-size: 0.98rem;
 		font-weight: 600;
 		line-height: 1.3;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -768,7 +768,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.82rem;
 		line-height: 1.45;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
@@ -788,7 +788,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 	.sc-carousel__byline {
 		font-family: var(--meta);
 		font-size: 0.78rem;
-		color: rgb(140, 140, 140);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -798,7 +798,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 		font-family: var(--meta);
 		font-size: 0.78rem;
 		font-weight: 500;
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, var(--accent-dark));
 		white-space: nowrap;
 		flex-shrink: 0;
 		transition: transform 0.2s ease;

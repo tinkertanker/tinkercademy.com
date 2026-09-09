@@ -53,7 +53,7 @@ const canonical = `${BLOG_ORIGIN}/archive/${year}/`;
 
 	.archive > p a,
 	.archive li a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		text-underline-offset: 0.18em;
 	}
 
@@ -68,13 +68,13 @@ const canonical = `${BLOG_ORIGIN}/archive/${year}/`;
 		grid-template-columns: 9rem minmax(0, 1fr) 10rem;
 		gap: 1rem;
 		padding: 1rem 0;
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		border-top: 1px solid var(--theme-border, rgba(0, 0, 0, 0.1));
 	}
 
 	.archive time,
 	.archive li span {
 		font-size: 0.88rem;
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 	}
 
 	@media (max-width: 650px) {

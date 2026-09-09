@@ -402,7 +402,7 @@ const pricingTiers = [
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0 0 1rem;
 	}
 
@@ -481,7 +481,7 @@ const pricingTiers = [
 
 	.tx-pillars {
 		padding: 3rem 0;
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.tx-pillars__grid {
@@ -491,8 +491,8 @@ const pricingTiers = [
 	}
 
 	.tx-pillar {
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
 		padding: 1.75rem;
 	}
@@ -518,7 +518,7 @@ const pricingTiers = [
 		letter-spacing: -0.03em;
 		font-size: 1.25rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.75rem;
 	}
 
@@ -526,7 +526,7 @@ const pricingTiers = [
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0;
 	}
 
@@ -534,11 +534,11 @@ const pricingTiers = [
 		margin: 2rem 0 0;
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 	}
 
 	.tx-pillars__blog a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	@media (max-width: 899px) {
@@ -556,7 +556,7 @@ const pricingTiers = [
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1.5rem;
 	}
 
@@ -567,9 +567,9 @@ const pricingTiers = [
 	}
 
 	.tx-faq__item {
-		border: 1px solid rgb(229, 229, 229);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 12px;
-		background: #fff;
+		background: var(--theme-surface, #fff);
 		overflow: hidden;
 	}
 
@@ -579,7 +579,7 @@ const pricingTiers = [
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		cursor: pointer;
 		position: relative;
 	}
@@ -595,7 +595,7 @@ const pricingTiers = [
 		right: 1.25rem;
 		top: 50%;
 		transform: translateY(-50%);
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, rgb(240, 93, 87));
 		font-size: 1.2rem;
 	}
 
@@ -609,12 +609,12 @@ const pricingTiers = [
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
 	.tx-pricing {
 		padding: 3rem 0;
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.tx-pricing__heading {
@@ -622,14 +622,14 @@ const pricingTiers = [
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.6vw, 1.9rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.75rem;
 	}
 
 	.tx-pricing__sub {
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0 0 1.75rem;
 		max-width: 62ch;
 	}
@@ -653,8 +653,8 @@ const pricingTiers = [
 	}
 
 	.tx-tier {
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
 		padding: 1.5rem 1.35rem;
 		display: flex;
@@ -663,7 +663,7 @@ const pricingTiers = [
 	}
 
 	.tx-tier--highlight {
-		border-color: rgb(240, 93, 87);
+		border-color: var(--theme-link, rgb(240, 93, 87));
 		box-shadow: 0 18px 36px rgba(240, 93, 87, 0.12);
 	}
 
@@ -672,7 +672,7 @@ const pricingTiers = [
 		letter-spacing: -0.03em;
 		font-size: 1.25rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -682,7 +682,7 @@ const pricingTiers = [
 		font-weight: 500;
 		text-transform: uppercase;
 		letter-spacing: 0.035em;
-		color: rgb(117, 117, 117);
+		color: var(--theme-muted, rgb(117, 117, 117));
 		margin: 0;
 	}
 
@@ -697,13 +697,13 @@ const pricingTiers = [
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		font-size: 2.2rem;
 		font-weight: 600;
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, rgb(240, 93, 87));
 	}
 
 	.tx-tier__currency {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.85rem;
-		color: rgb(117, 117, 117);
+		color: var(--theme-muted, rgb(117, 117, 117));
 	}
 
 	.tx-tier__perks {
@@ -717,7 +717,7 @@ const pricingTiers = [
 	.tx-tier__perks li {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.9rem;
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		padding-left: 1.1rem;
 		position: relative;
 	}
@@ -726,7 +726,7 @@ const pricingTiers = [
 		content: '✓';
 		position: absolute;
 		left: 0;
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, rgb(240, 93, 87));
 	}
 
 	.tx-tier__cta {
@@ -758,7 +758,7 @@ const pricingTiers = [
 		letter-spacing: -0.03em;
 		font-size: clamp(1.6rem, 2.8vw, 2.1rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.5rem;
 	}
 
@@ -766,7 +766,7 @@ const pricingTiers = [
 		font-family: 'Rubik', sans-serif;
 		font-size: 1.05rem;
 		line-height: var(--body-line-height);
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0 0 1.5rem;
 	}
 
@@ -774,11 +774,11 @@ const pricingTiers = [
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0 0 0.9rem;
 	}
 
 	.tx-scholars a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 </style>

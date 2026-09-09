@@ -232,13 +232,13 @@ const signupLinks = [
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0 0 0.9rem;
 		max-width: 70ch;
 	}
 
 	.ic-intro a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.ic-track {
@@ -246,7 +246,7 @@ const signupLinks = [
 	}
 
 	.ic-track--apple {
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.ic-track__heading {
@@ -254,7 +254,7 @@ const signupLinks = [
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1.5rem;
 	}
 
@@ -313,8 +313,8 @@ const signupLinks = [
 		flex-direction: column;
 		gap: 0.75rem;
 		padding: 1.5rem;
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 16px;
 		text-decoration: none;
 		color: inherit;
@@ -332,7 +332,7 @@ const signupLinks = [
 		letter-spacing: -0.03em;
 		font-size: 1.2rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -340,7 +340,7 @@ const signupLinks = [
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0;
 		flex: 1;
 	}
@@ -349,7 +349,7 @@ const signupLinks = [
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.85rem;
 		font-weight: 500;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.ic-signup {

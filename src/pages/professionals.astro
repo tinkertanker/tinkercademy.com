@@ -206,7 +206,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 	}
 
 	.aud-section--muted {
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.aud-section__heading {
@@ -214,7 +214,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1.5rem;
 	}
 
@@ -225,8 +225,8 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 	}
 
 	.aud-value-card {
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
 		padding: 1.5rem;
 	}
@@ -235,7 +235,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.78rem;
 		letter-spacing: 0.03em;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		margin: 0 0 0.75rem;
 	}
 
@@ -243,7 +243,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0;
 	}
 
@@ -262,7 +262,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		letter-spacing: -0.03em;
 		font-size: 1.6rem;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 		text-align: center;
 		margin: 0 0 1.25rem;
 	}
@@ -303,7 +303,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 		letter-spacing: -0.03em;
 		font-size: 1.6rem;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-heading, rgb(51, 51, 51));
 		margin: 0 0 1.5rem;
 	}
 

@@ -238,8 +238,8 @@ const githubOrg = 'https://github.com/tinkertanker';
 	.os-card {
 		display: flex;
 		flex-direction: column;
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
 		overflow: hidden;
 		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
@@ -253,9 +253,9 @@ const githubOrg = 'https://github.com/tinkertanker';
 	.os-card__media {
 		position: relative;
 		aspect-ratio: 16 / 10;
-		background: #f3f3f3;
+		background: var(--theme-surface-muted, #f3f3f3);
 		overflow: hidden;
-		border-bottom: 1px solid rgb(235, 235, 235);
+		border-bottom: 1px solid var(--theme-border, rgb(235, 235, 235));
 	}
 
 	.os-card__media img {
@@ -322,7 +322,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		letter-spacing: -0.03em;
 		font-size: 1.45rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -331,7 +331,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-size: 0.98rem;
 		font-weight: 500;
 		line-height: 1.4;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		margin: 0;
 	}
 
@@ -339,7 +339,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.92rem;
 		line-height: 1.55;
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 		margin: 0;
 	}
 
@@ -347,7 +347,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.88rem;
 		line-height: 1.45;
-		color: rgb(70, 70, 70);
+		color: var(--theme-text, rgb(70, 70, 70));
 		margin: 0.15rem 0 0;
 	}
 
@@ -359,7 +359,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-weight: 500;
 		letter-spacing: 0.035em;
 		text-transform: uppercase;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 	}
 
 	.os-card__tags {
@@ -375,15 +375,15 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.7rem;
 		letter-spacing: 0.01em;
-		color: rgb(95, 95, 95);
-		background: #f3f3f3;
+		color: var(--theme-muted, rgb(95, 95, 95));
+		background: var(--theme-surface-muted, #f3f3f3);
 		border-radius: 6px;
 		padding: 0.3rem 0.6rem;
 	}
 
 	.os-card__tag--platform {
-		color: var(--accent-dark);
-		background: rgba(240, 93, 87, 0.1);
+		color: var(--theme-link, var(--accent-dark));
+		background: var(--theme-tint, rgba(240, 93, 87, 0.1));
 	}
 
 	.os-card__footer {
@@ -419,12 +419,12 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.85rem;
 		font-weight: 500;
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 		text-decoration: none;
 	}
 
 	.os-card__source:hover {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	/* ── Outro ── */
@@ -439,8 +439,8 @@ const githubOrg = 'https://github.com/tinkertanker';
 		gap: 0.8rem;
 		padding: clamp(1.8rem, 4vw, 2.8rem);
 		border-radius: 20px;
-		background: #fafafa;
-		border: 1px solid rgb(235, 235, 235);
+		background: var(--theme-surface-muted, #fafafa);
+		border: 1px solid var(--theme-border, rgb(235, 235, 235));
 	}
 
 	.os-outro__heading {
@@ -448,7 +448,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 3vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -456,7 +456,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 		margin: 0;
 		max-width: 60ch;
 	}
@@ -465,7 +465,7 @@ const githubOrg = 'https://github.com/tinkertanker';
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.9rem;
 		font-weight: 500;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 		text-decoration: none;
 		margin-top: 0.4rem;
 	}

@@ -623,7 +623,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	/* ─── Partner strip ──────────────────────────────────────────────── */
 	.home-partners {
 		padding: 2.5rem 0;
-		background: #fff;
+		background: var(--theme-surface, #fff);
 	}
 
 	.home-partners__inner {
@@ -637,7 +637,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		font-size: clamp(1.05rem, 1.6vw, 1.35rem);
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0 0 0.5rem;
 		letter-spacing: 0.01em;
 		line-height: 1.35;
@@ -719,14 +719,14 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		letter-spacing: -0.03em;
 		font-size: clamp(1.6rem, 3.2vw, 2.3rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.75rem;
 	}
 
 	.home-educators__sub {
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0 0 1.5rem;
 	}
 
@@ -748,8 +748,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		display: inline-block;
 		padding: 0.5rem 0.9rem;
 		border-radius: 999px;
-		background: rgba(240, 93, 87, 0.09);
-		color: var(--accent-dark);
+		background: var(--theme-tint, rgba(240, 93, 87, 0.09));
+		color: var(--theme-link, var(--accent-dark));
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.88rem;
 		font-weight: 500;
@@ -777,7 +777,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
 	.home-educators__logos {
@@ -801,6 +801,40 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-educators__inst-logo[alt='Stanford University'] {
 		max-height: 60px;
+	}
+
+	/* Preserve original logo colours on dark surfaces. These backplates are
+	   screen-only and cover both explicit dark mode and the no-JS system fallback. */
+	@media screen {
+		:global(html[data-theme='dark']) .home-partners__logo-link {
+			opacity: 1;
+		}
+
+		:global(html[data-theme='dark']) .home-partners__logo,
+		:global(html[data-theme='dark']) .home-educators__inst-logo {
+			box-sizing: content-box;
+			padding: 6px 10px;
+			border-radius: 6px;
+			background: #fff;
+			opacity: 1;
+			filter: none;
+		}
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		:global(html:not([data-theme])) .home-partners__logo-link {
+			opacity: 1;
+		}
+
+		:global(html:not([data-theme])) .home-partners__logo,
+		:global(html:not([data-theme])) .home-educators__inst-logo {
+			box-sizing: content-box;
+			padding: 6px 10px;
+			border-radius: 6px;
+			background: #fff;
+			opacity: 1;
+			filter: none;
+		}
 	}
 
 	/* ─── Certification badges ────────────────────────────────────────── */
@@ -862,7 +896,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	/* ─── Flagship ───────────────────────────────────────────────────── */
 	.home-flagship {
 		padding: 3.5rem 0;
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.home-flagship__header {
@@ -875,7 +909,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		letter-spacing: -0.03em;
 		font-size: clamp(1.6rem, 3vw, 2.1rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.75rem;
 	}
 
@@ -883,7 +917,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
 		line-height: var(--body-line-height);
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0;
 	}
 
@@ -914,8 +948,8 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.flagship-card {
 		display: flex;
 		flex-direction: column;
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
 		overflow: hidden;
 	}
@@ -950,7 +984,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		width: 100%;
 		aspect-ratio: 25 / 16;
 		overflow: hidden;
-		background: rgb(245, 245, 245);
+		background: var(--theme-surface-muted, rgb(245, 245, 245));
 	}
 
 	.flagship-card__image img {
@@ -973,7 +1007,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		letter-spacing: -0.03em;
 		font-size: 1.25rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0;
 	}
 
@@ -993,7 +1027,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.92rem;
 		line-height: var(--body-line-height);
-		color: rgb(90, 90, 90);
+		color: var(--theme-muted, rgb(90, 90, 90));
 		margin: 0;
 		flex: 1;
 	}
@@ -1003,7 +1037,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.flagship-card:has(.flagship-card__link:hover) .flagship-card__title {
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, rgb(240, 93, 87));
 	}
 
 	@media (max-width: 560px) {
@@ -1035,7 +1069,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		letter-spacing: -0.03em;
 		font-size: clamp(1.6rem, 3vw, 2.1rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.75rem;
 	}
 
@@ -1043,7 +1077,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
 		line-height: var(--body-line-height);
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		margin: 0 auto;
 		max-width: 52rem;
 		text-wrap: balance;

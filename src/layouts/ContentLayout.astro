@@ -2,6 +2,7 @@
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { getSiteData } from '../lib/data.js';
+import { themeScript } from '../scripts/theme-inline.js';
 
 const site = getSiteData();
 const {
@@ -53,6 +54,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script is:inline set:html={themeScript}></script>
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
@@ -232,7 +234,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		--hero-mobile-content-top: 200px;
 		--hero-mobile-scrim: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.12) 38%, rgba(0, 0, 0, 0.62) 68%, rgba(0, 0, 0, 0.78) 100%);
 		--meta: 'Rubik', sans-serif;
-		--text: rgb(51, 51, 51);
+		--text: var(--theme-text, rgb(51, 51, 51));
 
 		/* Body typography tokens.
 		   Any body copy, paragraph, or lead/subtitle should prefer these
@@ -246,6 +248,58 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		--body-weight-medium: 500;
 		--lead-font-size: clamp(1rem, 1.4vw, 1.1rem);
 		--lead-line-height: 1.6;
+		color-scheme: light;
+	}
+
+	@media screen {
+		:root[data-theme='dark'] {
+			--theme-page: #171719;
+			--theme-surface: #222225;
+			--theme-surface-muted: #1c1c1f;
+			--theme-heading: #f5f2ee;
+			--theme-text: #d8d5d1;
+			--theme-muted: #b6b1ac;
+			--theme-border: #3a3a40;
+			--theme-control-border: #85818b;
+			--theme-link: #ff8179;
+			--theme-hover: #303035;
+			--theme-tint: #3a2628;
+			color-scheme: dark;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root:not([data-theme]) {
+				--theme-page: #171719;
+				--theme-surface: #222225;
+				--theme-surface-muted: #1c1c1f;
+				--theme-heading: #f5f2ee;
+				--theme-text: #d8d5d1;
+				--theme-muted: #b6b1ac;
+				--theme-border: #3a3a40;
+				--theme-control-border: #85818b;
+				--theme-link: #ff8179;
+				--theme-hover: #303035;
+				--theme-tint: #3a2628;
+				color-scheme: dark;
+			}
+		}
+	}
+
+	@media print {
+		:root {
+			--theme-page: initial;
+			--theme-surface: initial;
+			--theme-surface-muted: initial;
+			--theme-heading: initial;
+			--theme-text: initial;
+			--theme-muted: initial;
+			--theme-border: initial;
+			--theme-control-border: initial;
+			--theme-link: initial;
+			--theme-hover: initial;
+			--theme-tint: initial;
+			color-scheme: light;
+		}
 	}
 
 	@media (min-width: 810px) and (max-width: 1199px) {
@@ -289,8 +343,8 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 
 	html {
 		font-family: 'Rubik', sans-serif;
-		background: #ffffff;
-		color: rgb(23, 23, 23);
+		background: var(--theme-page, #ffffff);
+		color: var(--theme-text, rgb(23, 23, 23));
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -339,7 +393,8 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 	body {
 		margin: 0;
 		min-height: 100vh;
-		background: #ffffff;
+		background: var(--theme-page, #ffffff);
+		color: var(--theme-text, rgb(23, 23, 23));
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
 		font-weight: var(--body-weight);
@@ -370,6 +425,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
 		font-weight: 500;
+		color: var(--theme-heading, inherit);
 	}
 
 	.prose h3 {
@@ -377,7 +433,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		letter-spacing: 0;
 		font-weight: 300;
 		font-size: 1.05rem;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.prose h4 {
@@ -402,7 +458,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		font-size: 0.82rem;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.hero h1 {
@@ -419,7 +475,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		max-width: 68ch;
 		font-size: 1.15rem;
 		line-height: var(--body-line-height);
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 	}
 
 	.badge-row {
@@ -434,8 +490,8 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 	.badge-row li {
 		padding: 0.45rem 0.8rem;
 		border-radius: 999px;
-		background: rgba(240, 93, 87, 0.1);
-		color: var(--accent-dark);
+		background: var(--theme-tint, rgba(240, 93, 87, 0.1));
+		color: var(--theme-link, var(--accent-dark));
 		font-size: 0.92rem;
 	}
 
@@ -456,6 +512,10 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		line-height: var(--body-line-height);
 	}
 
+	.prose a {
+		color: var(--theme-link, inherit);
+	}
+
 	.prose ul {
 		padding-left: 1.2rem;
 	}
@@ -472,6 +532,15 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 	}
 
+	/* Some illustrations need their original white canvas: cutting it out
+	   damages fine lines or intentional white foreground details. */
+	.illustration-panel {
+		padding: 0.75rem;
+		border: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
+		border-radius: 0.75rem;
+		background: #fff;
+	}
+
 	.card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -482,8 +551,8 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 	.card {
 		padding: 1.25rem;
 		border-radius: 1.25rem;
-		background: rgba(255, 255, 255, 0.85);
-		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: var(--theme-surface, rgba(255, 255, 255, 0.85));
+		border: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
 		text-decoration: none;
 		box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
 	}
@@ -494,11 +563,12 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		letter-spacing: -0.03em;
 		font-weight: 500;
 		font-size: 1.25rem;
+		color: var(--theme-heading, inherit);
 	}
 
 	.card p {
 		margin: 0;
-		color: rgb(110, 110, 110);
+		color: var(--theme-muted, rgb(110, 110, 110));
 		line-height: var(--body-line-height);
 	}
 
@@ -512,5 +582,6 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		letter-spacing: -0.03em;
 		font-size: 2rem;
 		font-weight: 500;
+		color: var(--theme-heading, inherit);
 	}
 </style>

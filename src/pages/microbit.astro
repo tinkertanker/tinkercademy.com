@@ -285,7 +285,7 @@ const otherTutorials = (site.tutorials ?? [])
 		letter-spacing: -0.03em;
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1rem;
 	}
 
@@ -293,13 +293,13 @@ const otherTutorials = (site.tutorials ?? [])
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		max-width: 68ch;
 		margin: 0 0 0.9rem;
 	}
 
 	.mb-intro a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.mb-intro__actions {
@@ -326,8 +326,8 @@ const otherTutorials = (site.tutorials ?? [])
 
 	.mb-cta--secondary {
 		background: transparent;
-		border: 1px solid var(--accent-dark);
-		color: var(--accent-dark) !important;
+		border: 1px solid var(--theme-link, var(--accent-dark));
+		color: var(--theme-link, var(--accent-dark)) !important;
 	}
 
 	.mb-cta:hover {
@@ -336,7 +336,7 @@ const otherTutorials = (site.tutorials ?? [])
 
 	.mb-resources {
 		padding: 3rem 0;
-		background: #fafafa;
+		background: var(--theme-surface-muted, #fafafa);
 	}
 
 	.mb-resources__heading {
@@ -344,7 +344,7 @@ const otherTutorials = (site.tutorials ?? [])
 		letter-spacing: -0.03em;
 		font-size: 1.4rem;
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1rem;
 	}
 
@@ -352,14 +352,14 @@ const otherTutorials = (site.tutorials ?? [])
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		max-width: 70ch;
 		padding-left: 1.25rem;
 		margin: 0;
 	}
 
 	.mb-resources__list a {
-		color: var(--accent-dark);
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.mb-breakout {
@@ -402,7 +402,7 @@ const otherTutorials = (site.tutorials ?? [])
 		letter-spacing: -0.03em;
 		font-size: clamp(1.4rem, 2.6vw, 1.85rem);
 		font-weight: 500;
-		color: rgb(23, 23, 23);
+		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 1.5rem;
 	}
 
@@ -411,7 +411,7 @@ const otherTutorials = (site.tutorials ?? [])
 		letter-spacing: -0.03em;
 		font-size: 1.1rem;
 		font-weight: 500;
-		color: rgb(51, 51, 51);
+		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 2.5rem 0 1rem;
 	}
 
@@ -442,8 +442,8 @@ const otherTutorials = (site.tutorials ?? [])
 	.mb-tutorial-card {
 		display: flex;
 		flex-direction: column;
-		background: #fff;
-		border: 1px solid rgb(229, 229, 229);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 16px;
 		overflow: hidden;
 		text-decoration: none;
@@ -488,19 +488,19 @@ const otherTutorials = (site.tutorials ?? [])
 		font-size: 0.98rem;
 		font-weight: 600;
 		line-height: 1.35;
-		color: rgb(30, 30, 30);
+		color: var(--theme-heading, rgb(30, 30, 30));
 		margin: 0;
 	}
 
 	.mb-tutorial-card:hover .mb-tutorial-card__title {
-		color: rgb(240, 93, 87);
+		color: var(--theme-link, rgb(240, 93, 87));
 	}
 
 	.mb-tutorial-card__desc {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.82rem;
 		line-height: var(--body-line-height);
-		color: rgb(117, 117, 117);
+		color: var(--theme-muted, rgb(117, 117, 117));
 		margin: 0;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
