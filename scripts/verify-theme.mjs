@@ -148,27 +148,98 @@ try {
 	visit();
 	for (const width of [375, 1280]) {
 		browser('set', 'viewport', String(width), '844', '2');
+		let lightTrackWidth;
 		for (const mode of ['light', 'dark']) {
 			browser('set', 'media', mode);
 			settle();
 			const row = evaluate(`(() => {
 				const panel = document.querySelector('.home-educators__logos');
 				return { background: getComputedStyle(panel).backgroundColor,
+					width: panel.getBoundingClientRect().width, parentWidth: panel.parentElement.getBoundingClientRect().width,
+					centreOffset: panel.getBoundingClientRect().left + panel.getBoundingClientRect().width / 2 - innerWidth / 2,
 					logos: [...panel.querySelectorAll('img')].map(el => ({name: el.alt, height: el.getBoundingClientRect().height, slotHeight: el.offsetHeight,
 						background: getComputedStyle(el).backgroundColor})), overflow: document.documentElement.scrollWidth > innerWidth };
 			})()`);
-			assert.equal(row.background, mode === 'dark' ? 'rgb(255, 255, 255)' : 'rgba(0, 0, 0, 0)');
+			assert.equal(row.background, mode === 'dark' ? 'rgba(241, 240, 238, 0.91)' : 'rgba(0, 0, 0, 0)');
 			assert.equal(row.logos.length, 10);
+			assert.ok(Math.abs(row.centreOffset) < 1, 'qualifications panel stays centred');
+			if (width === 1280) assert.ok(row.width < row.parentWidth - 100, 'qualifications panel fits content instead of stretching full width');
 			for (const logo of row.logos) {
-				const scale = { 'Stanford University': 1.1, 'Wharton School': 1.1, MIT: 0.9 }[logo.name] ?? 1;
+				const scale = { 'Stanford University': 1.1 * 1.1, 'Wharton School': 160 / 124 * 0.97, MIT: 0.9 * 0.9 }[logo.name] ?? 1;
 				assert.equal(logo.slotHeight, 48, `${logo.name}: equal-height layout slot`);
 				assert.ok(Math.abs(logo.height - 48 * scale) < 0.01, `${logo.name}: requested optical scale`);
 				assert.equal(logo.background, 'rgba(0, 0, 0, 0)', `${logo.name}: no individual backplate`);
 			}
 			assert.equal(row.overflow, false, `${mode} ${width}px: logo panel stays within page`);
+			const partners = evaluate(`(() => {
+				const panel = document.querySelector('.home-partners__panel');
+				const track = panel.querySelector('.home-partners__track');
+				const links = [...track.children];
+				return { background: getComputedStyle(panel).backgroundColor, width: track.getBoundingClientRect().width,
+					repeat: links[10].getBoundingClientRect().left - links[0].getBoundingClientRect().left,
+					individualBackplates: [...track.querySelectorAll('img')].some(el => getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)') };
+			})()`);
+			assert.equal(partners.background, mode === 'dark' ? 'rgba(241, 240, 238, 0.91)' : 'rgba(0, 0, 0, 0)');
+			assert.equal(partners.individualBackplates, false);
+			assert.ok(Math.abs(partners.repeat - partners.width / 2) < 0.1, 'marquee loop has two equal repeat widths');
+			if (mode === 'light') lightTrackWidth = partners.width;
+			else assert.equal(partners.width, lightTrackWidth, 'theme change does not shift the marquee by resizing its track');
 		}
 	}
-	console.log('PASS shared institution logo panel, equal layout slots and optical sizing at desktop and mobile widths');
+	console.log('PASS shared logo panels, optical sizing and seamless theme-stable marquee geometry at desktop and mobile widths');
+
+	for (const route of ['/', '/about-us/']) {
+		visit(route);
+		for (const width of [375, 1280]) {
+			browser('set', 'viewport', String(width), '844', '2');
+			for (const mode of ['light', 'dark']) {
+				browser('set', 'media', mode);
+				settle();
+				const panels = evaluate(`([...document.querySelectorAll('.logo-panel')].map(panel => {
+					const track = panel.querySelector('.home-partners__track, .about-logo-track');
+					const items = track?.children;
+					return { background: getComputedStyle(panel).backgroundColor, sheen: getComputedStyle(panel, '::before').content,
+						glints: getComputedStyle(panel, '::after').content,
+						height: panel.getBoundingClientRect().height,
+						loopError: track ? Math.abs(items[items.length / 2].getBoundingClientRect().left - items[0].getBoundingClientRect().left - track.getBoundingClientRect().width / 2) : 0 };
+				}))`);
+				assert.equal(panels.length, 2);
+				for (const panel of panels) {
+					assert.equal(panel.background, mode === 'dark' ? 'rgba(241, 240, 238, 0.91)' : 'rgba(0, 0, 0, 0)');
+					assert.equal(panel.sheen, mode === 'dark' ? '""' : 'none');
+					assert.equal(panel.glints, mode === 'dark' ? '""' : 'none');
+					assert.ok(panel.loopError < 0.1, `${route}: complete repeat spacing`);
+				}
+				if (route === '/about-us/') {
+					for (const panel of panels) assert.equal(panel.height, mode === 'dark' ? 112 : 80);
+					assert.equal(evaluate(`([...document.querySelectorAll('.about-clients__logo')].every(img => {
+						const box = img.getBoundingClientRect();
+						return Math.round(box.width * 100) / 100 <= 180 && Math.round(box.height * 100) / 100 <= 64;
+					}))`), true, 'client logos stay within their optical size limits');
+					assert.equal(evaluate(`([2, 3].every(i => document.querySelectorAll('.about-partners__logo')[i].getBoundingClientRect().width >= 150))`), true,
+						'SMU and Apple wordmarks use wider space than the old discs');
+					assert.equal(evaluate(`document.querySelector('img[src="/images/partners/dunman-secondary.png"]').naturalWidth`), 64,
+						'Dunman uses the crest-only asset');
+				}
+				assert.equal(evaluate('document.documentElement.scrollWidth > innerWidth'), false);
+			}
+		}
+		connection = await cdp();
+		await connection.send('Emulation.setEmulatedMedia', { features: [
+			{ name: 'prefers-color-scheme', value: 'dark' }, { name: 'prefers-reduced-motion', value: 'reduce' },
+		] });
+		settle();
+		assert.equal(evaluate(`([...document.querySelectorAll('.logo-panel')].every(p =>
+			['::before', '::after'].every(pseudo => getComputedStyle(p, pseudo).animationName === 'none' && getComputedStyle(p, pseudo).display === 'none')))`), true);
+		await connection.send('Emulation.setEmulatedMedia', { media: 'print' });
+		settle();
+		assert.equal(evaluate(`([...document.querySelectorAll('.logo-panel')].every(p =>
+			getComputedStyle(p).backgroundColor === 'rgba(0, 0, 0, 0)' && ['::before', '::after'].every(pseudo => getComputedStyle(p, pseudo).content === 'none')))`), true);
+		await connection.send('Emulation.setEmulatedMedia', { media: '', features: [] });
+		connection.close();
+		connection = undefined;
+	}
+	console.log('PASS homepage/About glass panels, loop spacing, reduced motion and print fallback');
 
 	visit('/programmes/professional-certificate-in-mobile-application-development/');
 	browser('set', 'viewport', '375', '844', '2');
