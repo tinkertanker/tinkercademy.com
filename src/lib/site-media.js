@@ -44,10 +44,10 @@ export const HOME_PARTNER_LOGOS = [
 	},
 	{
 		label: "Raffles Girls' School (Secondary)",
-		src: '/images/partners/raffles-girls-school-secondary.webp',
+		src: '/images/partners/raffles-girls-school-crest.png',
 		url: 'https://www.rgs.edu.sg/',
-		width: 440,
-		height: 198,
+		width: 596,
+		height: 596,
 	},
 ];
 

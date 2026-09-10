@@ -14,6 +14,7 @@ import CtaBanner from '../components/CtaBanner.astro';
 import HomeProjectInfo from '../components/HomeProjectInfo.astro';
 import ProgrammeCard from '../components/ProgrammeCard.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import '../styles/logo-panels.css';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
 import { getAllProgrammes, getHomeFeaturedProgrammes, getProgrammeFilterOptions, toProgrammeCardData } from '../lib/programmes.ts';
@@ -122,29 +123,31 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	<section class="home-partners">
 		<div class="shell home-partners__inner">
 			<p class="home-partners__statement">{partnerStatement}</p>
-			<div class="home-partners__marquee">
-				<div class="home-partners__track">
-					{[...HOME_PARTNER_LOGOS, ...HOME_PARTNER_LOGOS].map((logo, idx) => (
-						<a
-							class="home-partners__logo-link"
-							href={logo.url}
-							target="_blank"
-							rel="noopener"
-							aria-label={idx < HOME_PARTNER_LOGOS.length ? logo.label : undefined}
-							aria-hidden={idx >= HOME_PARTNER_LOGOS.length ? 'true' : undefined}
-							tabindex={idx >= HOME_PARTNER_LOGOS.length ? -1 : undefined}
-						>
-							<img
-								class="home-partners__logo"
-								src={logo.src}
-								alt={logo.label}
-								width={logo.width}
-								height={logo.height}
-								loading="lazy"
-								decoding="async"
-							/>
-						</a>
-					))}
+			<div class="home-partners__panel logo-panel">
+				<div class="home-partners__marquee">
+					<div class="home-partners__track">
+						{[...HOME_PARTNER_LOGOS, ...HOME_PARTNER_LOGOS].map((logo, idx) => (
+							<a
+								class="home-partners__logo-link"
+								href={logo.url}
+								target="_blank"
+								rel="noopener"
+								aria-label={idx < HOME_PARTNER_LOGOS.length ? logo.label : undefined}
+								aria-hidden={idx >= HOME_PARTNER_LOGOS.length ? 'true' : undefined}
+								tabindex={idx >= HOME_PARTNER_LOGOS.length ? -1 : undefined}
+							>
+								<img
+									class="home-partners__logo"
+									src={logo.src}
+									alt={logo.label}
+									width={logo.width}
+									height={logo.height}
+									loading="lazy"
+									decoding="async"
+								/>
+							</a>
+						))}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -178,7 +181,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 				</ul>
 			)}
 
-			<div class="home-educators__logos">
+			<div class="home-educators__logos logo-panel">
 				{HOME_INSTITUTION_LOGOS.map((logo) => (
 					<img
 						class="home-educators__inst-logo"
@@ -650,6 +653,11 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		}
 	}
 
+	.home-partners__panel {
+		width: 100%;
+		min-width: 0;
+	}
+
 	.home-partners__marquee {
 		width: 100%;
 		overflow: hidden;
@@ -782,6 +790,9 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-educators__logos {
 		display: flex;
+		width: fit-content;
+		max-width: 100%;
+		margin-inline: auto;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
@@ -798,13 +809,19 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		filter: grayscale(0.25);
 	}
 
-	.home-educators__inst-logo[alt='Stanford University'],
-	.home-educators__inst-logo[alt='Wharton School'] {
-		transform: scale(1.1);
+	.home-educators__inst-logo[alt='Stanford University'] {
+		transform: scale(1.21);
+		margin-inline: -0.75rem;
 	}
 
 	.home-educators__inst-logo[alt='MIT'] {
-		transform: scale(0.9);
+		transform: scale(0.81);
+	}
+
+	.home-educators__inst-logo[alt='Wharton School'] {
+		/* The visible crest occupies 124 of the source's 160 vertical pixels. */
+		transform: scale(calc(160 / 124 * 0.97));
+		margin-inline-start: -1rem;
 	}
 
 	/* Preserve original logo colours on dark surfaces. These backplates are
@@ -812,21 +829,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	@media screen {
 		:global(html[data-theme='dark']) .home-partners__logo-link {
 			opacity: 1;
-		}
-
-		:global(html[data-theme='dark']) .home-partners__logo {
-			box-sizing: content-box;
-			padding: 6px 10px;
-			border-radius: 6px;
-			background: #fff;
-			opacity: 1;
-			filter: none;
-		}
-
-		:global(html[data-theme='dark']) .home-educators__logos {
-			padding: 1rem;
-			border-radius: 12px;
-			background: #fff;
 		}
 
 		:global(html[data-theme='dark']) .home-educators__inst-logo {
@@ -838,21 +840,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	@media screen and (prefers-color-scheme: dark) {
 		:global(html:not([data-theme])) .home-partners__logo-link {
 			opacity: 1;
-		}
-
-		:global(html:not([data-theme])) .home-partners__logo {
-			box-sizing: content-box;
-			padding: 6px 10px;
-			border-radius: 6px;
-			background: #fff;
-			opacity: 1;
-			filter: none;
-		}
-
-		:global(html:not([data-theme])) .home-educators__logos {
-			padding: 1rem;
-			border-radius: 12px;
-			background: #fff;
 		}
 
 		:global(html:not([data-theme])) .home-educators__inst-logo {
