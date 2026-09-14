@@ -204,7 +204,7 @@ const heroTitleHtml = heroTitle
 			<h2 class="about-section__heading">Partners</h2>
 			<p class="about-section__body">{partnersBlurb}</p>
 			<div class="logo-panel">
-				<div class="about-logo-marquee about-logo-marquee--partners">
+				<div class="about-logo-marquee about-logo-marquee--partners logo-panel__marquee">
 					<div class="about-logo-track about-logo-track--partners">
 						{partnerLogosMarquee.map(({ src, label }, idx) => (
 							<div class="about-partners__disc">
@@ -223,7 +223,7 @@ const heroTitleHtml = heroTitle
 			<h2 class="about-section__heading">Selected clients and partners</h2>
 			<p class="about-section__body">{clientsBlurb}</p>
 			<div class="logo-panel">
-				<div class="about-logo-marquee about-logo-marquee--clients">
+				<div class="about-logo-marquee about-logo-marquee--clients logo-panel__marquee">
 					<div class="about-logo-track about-logo-track--clients">
 						{clientLogosMarquee.map(({ src, label }, idx) => (
 							<img class="about-clients__logo" src={src} alt={idx < clientLogos.length ? label : ''} aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
@@ -467,7 +467,6 @@ const heroTitleHtml = heroTitle
 		height: 80px;
 		display: flex;
 		align-items: center;
-		overflow: hidden;
 	}
 
 	.about-logo-track {
@@ -486,7 +485,7 @@ const heroTitleHtml = heroTitle
 
 	.about-logo-track--partners {
 		--about-logo-gap: clamp(2rem, 4vw, 3rem);
-		animation: about-logo-marquee 26s linear infinite;
+		animation: about-logo-marquee 44s linear infinite;
 	}
 
 	.about-logo-track--clients {

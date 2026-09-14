@@ -122,7 +122,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		<div class="shell home-partners__inner">
 			<p class="home-partners__statement">{partnerStatement}</p>
 			<div class="home-partners__panel logo-panel">
-				<div class="home-partners__marquee">
+				<div class="home-partners__marquee logo-panel__marquee">
 					<div class="home-partners__track">
 						{[...HOME_PARTNER_LOGOS, ...HOME_PARTNER_LOGOS].map((logo, idx) => (
 							<a
@@ -657,8 +657,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	}
 
 	.home-partners__marquee {
-		width: 100%;
-		overflow: hidden;
 	}
 
 	.home-partners__track {
@@ -668,7 +666,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		align-items: center;
 		/* Trailing margin, not gap: flex gap has one fewer slot than items,
 		   so translateX(-50%) is short by half a gap and the loop snaps. */
-		animation: home-marquee 45s linear infinite;
+		animation: home-marquee 52s linear infinite;
 		will-change: transform;
 	}
 
@@ -688,7 +686,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-partners__logo {
 		/* Fixed height (not max-height): a lazy image with width/height
-		   auto has no box before load, and inside the clipped marquee
+		   auto has no box before load, and inside the mask-image'd marquee
 		   Chrome then never considers it in-viewport, so it never loads.
 		   object-fit keeps the rendered logo letterboxed to the old size. */
 		height: 44px;
@@ -794,6 +792,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		justify-content: center;
 		gap: clamp(1rem, 2.5vw, 2rem);
 		padding-top: 1rem;
+		--logo-panel-padding-inline: clamp(1.5rem, 3vw, 2.25rem);
 	}
 
 	.home-educators__inst-logo {
@@ -886,7 +885,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		display: flex;
 		width: max-content;
 		align-items: center;
-		animation: home-marquee 55s linear infinite;
+		animation: home-marquee 63s linear infinite;
 		will-change: transform;
 	}
 
