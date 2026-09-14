@@ -82,6 +82,20 @@ export const openSourceTools: OpenSourceTool[] = [
 		primaryHref: 'https://bamboobot.tk.sg',
 	},
 	{
+		name: 'code.tk.sg',
+		tagline: 'Paste code or text. Get a clean link to share.',
+		description:
+			'A lightweight, distraction-free pastebin for sharing code, notes and logs. Save a paste to get an unlisted link with syntax highlighting, raw-text view and a locally generated QR code. No account required; duplicate any paste when you want an editable copy.',
+		handyFor: 'Teachers, students and developers sharing snippets across devices.',
+		image: '/images/open-source/code-tk-sg.png',
+		platform: 'Web',
+		builtWith: 'Node.js',
+		access: 'Hosted',
+		repoUrl: 'https://github.com/tinkertanker/code.tk.sg',
+		primaryLabel: 'Open code.tk.sg',
+		primaryHref: 'https://code.tk.sg',
+	},
+	{
 		name: 'JustNow',
 		tagline: 'You just closed that window. Now get it back.',
 		description:
