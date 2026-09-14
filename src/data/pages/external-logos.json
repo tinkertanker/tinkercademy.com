@@ -26,7 +26,7 @@
   {
     "id": "cedar-primary-school",
     "label": "Cedar Primary School",
-    "logo": "/images/3403HTb7X83detosvH9J86FTE.png",
+    "logo": "/images/partners/transparent/cedar-primary-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -38,7 +38,7 @@
   {
     "id": "classroom-hk",
     "label": "Classroom HK",
-    "logo": "/images/m4aQlLtGTef2FbAG9CTD4ReFE.png",
+    "logo": "/images/partners/transparent/classroom-hk.png",
     "partner": true,
     "type": "Partner",
     "featured": false,
@@ -50,7 +50,7 @@
   {
     "id": "clementi-town-secondary-school",
     "label": "Clementi Town Secondary School",
-    "logo": "/images/C5u80qH09z3yPeGLW5Ha9m0Ahyg.png",
+    "logo": "/images/partners/transparent/clementi-town-secondary-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -62,7 +62,7 @@
   {
     "id": "commonwealth-secondary-school",
     "label": "Commonwealth Secondary School",
-    "logo": "/images/vIleRziUfN50M1xopUzpL6N7E.webp",
+    "logo": "/images/partners/transparent/commonwealth-secondary-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -73,8 +73,8 @@
   },
   {
     "id": "crescent-girls-school",
-    "label": "Crescent Girls School",
-    "logo": "/images/vwIzyDKnGvimoriXB6IVZqsE6U.jpg",
+    "label": "Crescent Girls’ School",
+    "logo": "/images/partners/crescent-girls-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -86,7 +86,7 @@
   {
     "id": "dbs",
     "label": "DBS",
-    "logo": "/images/BWsZ77XMQf1TA1kquWlIQvH278.webp",
+    "logo": "/images/partners/dbs-alternative.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -98,7 +98,7 @@
   {
     "id": "dunman-high-school",
     "label": "Dunman High School",
-    "logo": "/images/RUt6n9CGHU2JYlananDb4C4QLI.webp",
+    "logo": "/images/partners/transparent/dunman-high-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -110,7 +110,7 @@
   {
     "id": "dunman-secondary-school",
     "label": "Dunman Secondary School",
-    "logo": "/images/HEWUMM0ts0EHYszokOs3GXdUE.png",
+    "logo": "/images/partners/transparent/dunman-secondary-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -122,7 +122,7 @@
   {
     "id": "hwa-chong-institution",
     "label": "Hwa Chong Institution",
-    "logo": "/images/dM4W8pXFiSaisKiQ66aATgJ8ac.webp",
+    "logo": "/images/partners/hwa-chong-institution.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -158,7 +158,7 @@
   {
     "id": "methodist-girls-school",
     "label": "Methodist Girls School",
-    "logo": "/images/EeQgsZhGeo5B8SsOriPf6iEbpU.webp",
+    "logo": "/images/partners/transparent/methodist-girls-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -170,7 +170,7 @@
   {
     "id": "my-first-skool",
     "label": "my first skool",
-    "logo": "/images/9vhoMPV4uJM9DFnT5eXGEy1ONM.webp",
+    "logo": "/images/partners/transparent/my-first-skool.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -182,7 +182,7 @@
   {
     "id": "nan-hua-high-school",
     "label": "Nan Hua High School",
-    "logo": "/images/t0GECZGPjGmJ5PvurGo9m1Oaq7M.webp",
+    "logo": "/images/partners/transparent/nan-hua-high-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -194,7 +194,7 @@
   {
     "id": "ngee-ann-polytechnic",
     "label": "Ngee Ann Polytechnic",
-    "logo": "/images/Q26iqzgBEYDzlm8JjOdHP7xSE.webp",
+    "logo": "/images/partners/transparent/ngee-ann-polytechnic.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -206,7 +206,7 @@
   {
     "id": "ngee-ann-secondary",
     "label": "Ngee Ann Secondary",
-    "logo": "/images/xHwcdydT3oqZNLuEPhUYed1o.gif",
+    "logo": "/images/partners/ngee-ann-secondary.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -218,7 +218,7 @@
   {
     "id": "nus-high-school-of-math-science",
     "label": "NUS High School of Math & Science",
-    "logo": "/images/WgR1sP4O4uhgUKI9oibFEKUSQo.png",
+    "logo": "/images/partners/transparent/nus-high-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -230,7 +230,7 @@
   {
     "id": "phillipcapital",
     "label": "PhillipCapital",
-    "logo": "/images/khARVmoBLCZ3wl54aq5QXzPdq8.jpg",
+    "logo": "/images/partners/transparent/phillipcapital.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -242,7 +242,7 @@
   {
     "id": "raffles-girls-school",
     "label": "Raffles Girls School",
-    "logo": "/images/ZYZcVNiPEg6tMjHGhU520Ord5uI.webp",
+    "logo": "/images/partners/raffles-girls-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -266,7 +266,7 @@
   {
     "id": "regent-secondary-school",
     "label": "Regent Secondary School",
-    "logo": "/images/VSFWPAOUiTx7hAK2q6WSRDSe6Y.webp",
+    "logo": "/images/partners/transparent/regent-secondary-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -278,7 +278,7 @@
   {
     "id": "rosyth-school",
     "label": "Rosyth School",
-    "logo": "/images/h9pxErhdfEV9OM4Djs2TMOxmjuc.png",
+    "logo": "/images/partners/transparent/rosyth-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -350,7 +350,7 @@
   {
     "id": "temasek-polytechnic",
     "label": "Temasek Polytechnic",
-    "logo": "/images/ulfjKjqdhSNeeFUKfqy6m3G8X0Q.png",
+    "logo": "/images/partners/transparent/temasek-polytechnic-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -362,7 +362,7 @@
   {
     "id": "tinkermind",
     "label": "Tinkermind",
-    "logo": "/images/Rl2dNu7CjKUj50GoHP4FX8cpA.png",
+    "logo": "/images/partners/transparent/tinkermind.png",
     "partner": true,
     "type": "Partner",
     "featured": false,
@@ -386,7 +386,7 @@
   {
     "id": "chij-secondary",
     "label": "CHIJ Secondary",
-    "logo": "/images/partners/chij.png",
+    "logo": "/images/partners/transparent/chij-secondary.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -438,7 +438,7 @@
     "partner": false,
     "type": "Corporate Client",
     "featured": false,
-    "active": true,
+    "active": false,
     "content_html": null,
     "content_text": "",
     "source_id": "manual-sojitz-asia"
@@ -446,7 +446,7 @@
   {
     "id": "ministry-of-defence",
     "label": "Ministry of Defence",
-    "logo": "/images/partners/mindef.png",
+    "logo": "/images/partners/mindef-transparent.png",
     "partner": false,
     "type": "Corporate Client",
     "featured": false,
@@ -470,7 +470,7 @@
   {
     "id": "national-institute-of-education",
     "label": "National Institute of Education",
-    "logo": "/images/partners/nie-logo.png",
+    "logo": "/images/partners/transparent/national-institute-of-education.png",
     "partner": false,
     "type": "Corporate Client",
     "featured": false,
@@ -518,7 +518,7 @@
   {
     "id": "presbyterian-high-school",
     "label": "Presbyterian High School",
-    "logo": "/images/partners/presbyterian-high-school.jpg",
+    "logo": "/images/partners/transparent/presbyterian-high-school.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -542,7 +542,7 @@
   {
     "id": "yusof-ishak-secondary-school",
     "label": "Yusof Ishak Secondary School",
-    "logo": "/images/partners/yusof-ishak-secondary-school.png",
+    "logo": "/images/partners/transparent/yusof-ishak-secondary-school-crest.png",
     "partner": false,
     "type": "School Client",
     "featured": false,
@@ -562,5 +562,149 @@
     "content_html": null,
     "content_text": "",
     "source_id": "manual-metaskills"
+  },
+  {
+    "id": "bukit-view-secondary-school",
+    "label": "Bukit View Secondary School",
+    "logo": "/images/partners/bukit-view-secondary-school.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-bukit-view-secondary-school"
+  },
+  {
+    "id": "canossa-catholic-primary-school",
+    "label": "Canossa Catholic Primary School",
+    "logo": "/images/partners/transparent/canossa-catholic-primary-school.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-canossa-catholic-primary-school"
+  },
+  {
+    "id": "nan-chiau-high-school",
+    "label": "Nan Chiau High School",
+    "logo": "/images/partners/nan-chiau-high-school.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-nan-chiau-high-school"
+  },
+  {
+    "id": "nanyang-girls-high-school",
+    "label": "Nanyang Girls’ High School",
+    "logo": "/images/partners/transparent/nanyang-girls-high-school-crest.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-nanyang-girls-high-school"
+  },
+  {
+    "id": "nanyang-technological-university",
+    "label": "Nanyang Technological University",
+    "logo": "/images/institutions/ntu.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-nanyang-technological-university"
+  },
+  {
+    "id": "north-spring-primary-school",
+    "label": "North Spring Primary School",
+    "logo": "/images/partners/transparent/north-spring-primary-school-crest.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-north-spring-primary-school"
+  },
+  {
+    "id": "yuan-ching-secondary-school",
+    "label": "Yuan Ching Secondary School",
+    "logo": "/images/partners/yuan-ching-secondary-school.png",
+    "partner": false,
+    "type": "School Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-yuan-ching-secondary-school"
+  },
+  {
+    "id": "central-singapore-community-development-council",
+    "label": "Central Singapore Community Development Council",
+    "logo": "/images/partners/central-singapore-cdc.png",
+    "partner": false,
+    "type": "Corporate Client",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-central-singapore-cdc"
+  },
+  {
+    "id": "canva",
+    "label": "Canva",
+    "logo": "/images/partners/canva.svg",
+    "partner": true,
+    "type": "Partner",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-canva"
+  },
+  {
+    "id": "figma",
+    "label": "Figma",
+    "logo": "/images/partners/figma.png",
+    "partner": true,
+    "type": "Partner",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-figma"
+  },
+  {
+    "id": "lovable",
+    "label": "Lovable",
+    "logo": "/images/partners/lovable.svg",
+    "partner": true,
+    "type": "Partner",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-lovable"
+  },
+  {
+    "id": "microsoft-global-training-partner",
+    "label": "Microsoft Global Training Partner",
+    "logo": "/images/partners/microsoft-gtp.png",
+    "partner": true,
+    "type": "Partner",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "manual-microsoft-global-training-partner"
   }
 ]

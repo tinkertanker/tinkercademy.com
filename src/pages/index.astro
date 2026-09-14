@@ -37,9 +37,7 @@ const heroTitle = page.hero_title ?? 'Illuminate your journey into tech & AI';
 const heroLead =
 	page.hero_lead ?? 'Learn coding, digital making, and agentic engineering from expert teachers and builders.';
 
-const partnerStatement =
-	page.partner_statement ??
-	'Official training partner for tech companies, schools, and the Singapore government.';
+const partnerStatement = 'Selected clients and partners';
 
 const allProgrammes = await getAllProgrammes();
 const usedDomainIds = new Set(allProgrammes.flatMap((p) => p.domainIds));
@@ -661,8 +659,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	.home-partners__marquee {
 		width: 100%;
 		overflow: hidden;
-		mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
-		-webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
 	}
 
 	.home-partners__track {
@@ -692,7 +688,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 
 	.home-partners__logo {
 		/* Fixed height (not max-height): a lazy image with width/height
-		   auto has no box before load, and inside the mask-image'd marquee
+		   auto has no box before load, and inside the clipped marquee
 		   Chrome then never considers it in-viewport, so it never loads.
 		   object-fit keeps the rendered logo letterboxed to the old size. */
 		height: 44px;

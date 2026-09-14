@@ -10,6 +10,7 @@ import '../styles/logo-panels.css';
 import { getBannerAsset } from '../lib/banner-assets';
 import { getStaticPage } from '../lib/data.js';
 import { localiseFramerImage } from '../lib/media.js';
+import { SELECTED_CLIENT_LOGOS } from '../lib/site-media.js';
 import { parse as parseYaml } from 'yaml';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -73,25 +74,38 @@ const certLogosRow2 = [
 
 /* ── Partner marks (circular row on live) ── */
 const partnerLogos = [
-	'/images/ccAm2I4TKCuYyi1NVJdIrvzAw.png',
-	'/images/partners/tinkermind-symbol.png',
-	'/images/icLJqUI2otyj00sfJ4Dvlfxbo.webp',
-	'/images/partners/apple-consultants-network.png',
-	'/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png',
-];
+	{ label: 'Classroom HK', src: '/images/partners/transparent/classroom-hk.png' },
+	...SELECTED_CLIENT_LOGOS.filter(({ label }) => ['Canva', 'Figma', 'Lovable'].includes(label)),
+	{ label: 'Microsoft Global Training Partner', src: '/images/ccAm2I4TKCuYyi1NVJdIrvzAw.png' },
+	{ label: 'Tinkermind', src: '/images/partners/tinkermind-symbol.png' },
+	{ label: 'SMU Academy', src: '/images/icLJqUI2otyj00sfJ4Dvlfxbo.webp' },
+	{ label: 'Apple Consultants Network', src: '/images/partners/apple-consultants-network.png' },
+	{ label: 'Infocomm Media Development Authority', src: '/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png' },
+].sort((a, b) => a.label.localeCompare(b.label, 'en'));
 const partnerLogosMarquee = [...partnerLogos, ...partnerLogos];
 
 /* ── Client logo strip images ── */
 const clientLogos = [
-	'/images/partners/ngee-ann-secondary.png',
-	'/images/partners/crescent-girls-school.png',
-	'/images/partners/phillipcapital.png',
-	'/images/partners/dunman-secondary.png',
-	'/images/partners/raffles-girls-school-crest.png',
-	'/images/BDt3R80YV6FiInYlrnHOw8DQ.svg',
-	'/images/W5TrPI4TQ7ldyHjx1tFRClDkVI.png',
-	'/images/partners/methodist-girls-school.png',
-];
+	{ label: 'Ngee Ann Secondary School', src: '/images/partners/ngee-ann-secondary.png' },
+	{ label: 'Crescent Girls’ School', src: '/images/partners/crescent-girls-school.png' },
+	{ label: 'PhillipCapital', src: '/images/partners/phillipcapital.png' },
+	{ label: 'Dunman Secondary School', src: '/images/partners/dunman-secondary.png' },
+	{ label: 'Raffles Girls’ School (Secondary)', src: '/images/partners/raffles-girls-school-crest.png' },
+	{ label: 'Raffles Institution', src: '/images/BDt3R80YV6FiInYlrnHOw8DQ.svg' },
+	{ label: 'Institute of Singapore Chartered Accountants', src: '/images/W5TrPI4TQ7ldyHjx1tFRClDkVI.png' },
+	{ label: 'Methodist Girls’ School', src: '/images/partners/methodist-girls-school.png' },
+	...SELECTED_CLIENT_LOGOS.filter(({ label }) => !partnerLogos.some((partner) => partner.label === label)),
+	{ label: 'Hwa Chong Institution', src: '/images/partners/hwa-chong-institution.png' },
+	{ label: 'Defence Science and Technology Agency (DSTA)', src: '/images/partners/dsta.svg' },
+	{ label: 'Bukit View Secondary School', src: '/images/partners/bukit-view-secondary-school.png' },
+	{ label: 'Canossa Catholic Primary School', src: '/images/partners/transparent/canossa-catholic-primary-school.png' },
+	{ label: 'North Spring Primary School', src: '/images/partners/transparent/north-spring-primary-school-crest.png' },
+	{ label: 'Nan Chiau High School', src: '/images/partners/nan-chiau-high-school.png' },
+	{ label: 'Nanyang Girls’ High School', src: '/images/partners/transparent/nanyang-girls-high-school-crest.png' },
+	{ label: 'Nanyang Technological University', src: '/images/institutions/ntu.png' },
+	{ label: 'Singapore Business Federation', src: '/images/VZuEtnu1YA4Ok7MgE5wNo2A.svg' },
+	{ label: 'Ministry of Defence (MINDEF)', src: '/images/partners/mindef-transparent.png' },
+].sort((a, b) => a.label.localeCompare(b.label, 'en'));
 const clientLogosMarquee = [...clientLogos, ...clientLogos];
 
 const stats = [
@@ -192,9 +206,9 @@ const heroTitleHtml = heroTitle
 			<div class="logo-panel">
 				<div class="about-logo-marquee about-logo-marquee--partners">
 					<div class="about-logo-track about-logo-track--partners">
-						{partnerLogosMarquee.map((src, idx) => (
+						{partnerLogosMarquee.map(({ src, label }, idx) => (
 							<div class="about-partners__disc">
-								<img class="about-partners__logo" src={src} alt="Tinkercademy partner logo" aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} />
+								<img class="about-partners__logo" src={src} alt={idx < partnerLogos.length ? label : ''} aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} />
 							</div>
 						))}
 					</div>
@@ -206,13 +220,13 @@ const heroTitleHtml = heroTitle
 	{/* ═══════ 5. Our Clients ═══════════════════════════════════════════ */}
 	<section class="about-section">
 		<div class="shell">
-			<h2 class="about-section__heading">Our Clients</h2>
+			<h2 class="about-section__heading">Selected clients and partners</h2>
 			<p class="about-section__body">{clientsBlurb}</p>
 			<div class="logo-panel">
 				<div class="about-logo-marquee about-logo-marquee--clients">
 					<div class="about-logo-track about-logo-track--clients">
-						{clientLogosMarquee.map((src, idx) => (
-							<img class="about-clients__logo" src={src} alt="Tinkercademy client logo" aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
+						{clientLogosMarquee.map(({ src, label }, idx) => (
+							<img class="about-clients__logo" src={src} alt={idx < clientLogos.length ? label : ''} aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
 						))}
 					</div>
 				</div>
@@ -454,8 +468,6 @@ const heroTitleHtml = heroTitle
 		display: flex;
 		align-items: center;
 		overflow: hidden;
-		mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 	}
 
 	.about-logo-track {
@@ -473,13 +485,13 @@ const heroTitleHtml = heroTitle
 	}
 
 	.about-logo-track--partners {
-		--about-logo-gap: clamp(1.25rem, 3vw, 2.25rem);
+		--about-logo-gap: clamp(2rem, 4vw, 3rem);
 		animation: about-logo-marquee 26s linear infinite;
 	}
 
 	.about-logo-track--clients {
-		--about-logo-gap: 1.5rem;
-		animation: about-logo-marquee 40s linear infinite;
+		--about-logo-gap: clamp(2rem, 4vw, 3rem);
+		animation: about-logo-marquee 120s linear infinite;
 	}
 
 	.about-partners__disc {
@@ -503,7 +515,8 @@ const heroTitleHtml = heroTitle
 	/* ─── Client logos ─────────────────────────────────────── */
 	.about-clients__logo {
 		max-width: 180px;
-		height: auto;
+		/* A definite height includes viewBox-only SVGs in the track width. */
+		height: 64px;
 		max-height: 64px;
 		width: auto;
 		object-fit: contain;

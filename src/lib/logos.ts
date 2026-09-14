@@ -38,12 +38,23 @@ function toLogoItem(logo: ExternalLogo): LogoItem {
 	};
 }
 
+function sortByLabel(a: ExternalLogo, b: ExternalLogo) {
+	return (a.label ?? '').replace(/^the\s+/i, '').localeCompare(
+		(b.label ?? '').replace(/^the\s+/i, ''),
+		'en-SG',
+		{ sensitivity: 'base' },
+	);
+}
+
 export function getPartnerLogoItems(logos: ExternalLogo[]) {
-	return logos.filter(isPartnerLogo).map(toLogoItem);
+	return logos.filter(isPartnerLogo).sort(sortByLabel).map(toLogoItem);
 }
 
 export function getClientLogoItems(logos: ExternalLogo[]) {
-	return logos.filter((logo) => isRenderableLogo(logo) && !isPartnerLogo(logo)).map(toLogoItem);
+	return logos
+		.filter((logo) => isRenderableLogo(logo) && !isPartnerLogo(logo))
+		.sort(sortByLabel)
+		.map(toLogoItem);
 }
 
 export function getCorporateClientLogoItems(logos: ExternalLogo[]) {
@@ -54,13 +65,7 @@ export function getCorporateClientLogoItems(logos: ExternalLogo[]) {
 				(logo.type === 'Corporate Client' ||
 					(logo.id !== undefined && CORPORATE_CLIENT_IDS.has(logo.id))),
 		)
-		.sort((a, b) =>
-			(a.label ?? '')
-				.replace(/^the\s+/i, '')
-				.localeCompare((b.label ?? '').replace(/^the\s+/i, ''), 'en-SG', {
-					sensitivity: 'base',
-				}),
-		)
+		.sort(sortByLabel)
 		.map(toLogoItem);
 }
 
@@ -73,5 +78,6 @@ export function getSchoolClientLogoItems(logos: ExternalLogo[]) {
 				logo.type === 'School Client' &&
 				(logo.id === undefined || !CORPORATE_CLIENT_IDS.has(logo.id)),
 		)
+		.sort(sortByLabel)
 		.map(toLogoItem);
 }

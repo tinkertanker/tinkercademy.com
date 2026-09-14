@@ -7,9 +7,20 @@ export const LOGO_WHITE_SIZE = { width: 512, height: 80 };
 /* width/height are the files' intrinsic pixel dimensions — rendered as
    <img width/height> so the browser reserves space before load (CLS). */
 
-// ── Partner logos (official training partners) ────────────────────
+// Shared additions to the homepage and About Us mixed client/partner lists.
+export const SELECTED_CLIENT_LOGOS = [
+	{ label: 'Canva', src: '/images/partners/canva.svg', url: 'https://www.canva.com/', width: 2000, height: 642 },
+	{ label: 'Figma', src: '/images/partners/figma.png', url: 'https://figma.com/education', width: 400, height: 534 },
+	{ label: 'Lovable', src: '/images/partners/lovable.svg', url: 'https://lovable.dev/', width: 911, height: 155 },
+	{ label: 'Pathlight School', src: '/images/partners/pathlight-school.png', url: 'https://www.pathlight.org.sg/', width: 156, height: 120 },
+	{ label: 'AmCham Singapore', src: '/images/partners/amcham-singapore.webp', url: 'https://amcham.com.sg/', width: 288, height: 46 },
+	{ label: 'Central Singapore Community Development Council', src: '/images/partners/central-singapore-cdc.png', url: 'https://centralsingapore.cdc.gov.sg/programmes/lifelong-learning/mydigitalbootcamp/', width: 800, height: 339 },
+	{ label: 'Yuan Ching Secondary School', src: '/images/partners/yuan-ching-secondary-school.png', url: 'https://www.yuanchingsec.moe.edu.sg/', width: 565, height: 565 },
+	{ label: 'Jump Trading', src: '/images/partners/jump-trading.webp', url: 'https://www.jumptrading.com/', width: 366, height: 160 },
+];
+
+// ── Selected clients and partners ────────────────────────────────
 export const HOME_PARTNER_LOGOS = [
-	{ label: 'Unity', src: '/images/partners/unity.png', url: 'https://unity.com/', width: 99, height: 120 },
 	{
 		label: 'Microsoft Global Training Partner',
 		src: '/images/partners/microsoft-gtp.png',
@@ -17,7 +28,6 @@ export const HOME_PARTNER_LOGOS = [
 		width: 120,
 		height: 120,
 	},
-	{ label: 'Figma', src: '/images/partners/figma.png', url: 'https://figma.com/education', width: 400, height: 534 },
 	{
 		label: 'Apple Consultants Network',
 		src: '/images/partners/apple-consultant.svg',
@@ -49,7 +59,9 @@ export const HOME_PARTNER_LOGOS = [
 		width: 596,
 		height: 596,
 	},
-];
+	...SELECTED_CLIENT_LOGOS,
+	{ label: 'Crescent Girls’ School', src: '/images/partners/crescent-girls-school.png', url: 'https://www.crescent.edu.sg/', width: 114, height: 106 },
+].sort((a, b) => a.label.localeCompare(b.label, 'en'));
 
 // ── Institution logos (expertise / qualifications) ────────────────
 export const HOME_INSTITUTION_LOGOS = [

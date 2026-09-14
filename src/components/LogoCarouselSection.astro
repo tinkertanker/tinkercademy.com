@@ -1,6 +1,7 @@
 ---
 import type { LogoItem } from '../lib/logos';
 import { getLogoDimensions } from '../lib/responsive-images.js';
+import '../styles/logo-panels.css';
 
 interface Props {
 	title: string;
@@ -39,7 +40,7 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 	<section class:list={['logo-section', { 'logo-section--muted': muted }]}>
 		<div class="shell">
 			<h2 class="logo-section__heading">{title}</h2>
-			<div class="logo-marquee">
+			<div class="logo-marquee logo-panel">
 				<div
 					class:list={['logo-track', { 'is-static': !marquee.isAnimated }]}
 					style={`--marquee-duration: ${durationSeconds}s; --marquee-distance: ${marquee.distance};`}
@@ -51,7 +52,7 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 								class="logo-mark"
 								data-logo-id={logo.id}
 								src={logo.src}
-								alt={logo.label}
+								alt={logo.setIndex === 0 ? logo.label : ''}
 								aria-hidden={logo.setIndex === 0 ? undefined : 'true'}
 								width={dims?.width}
 								height={dims?.height}
@@ -87,17 +88,19 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 	.logo-marquee {
 		width: 100%;
 		overflow: hidden;
-		mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 	}
 
 	.logo-track {
 		display: flex;
 		width: max-content;
 		align-items: center;
-		gap: clamp(2.25rem, 5vw, 4.5rem);
 		animation: logo-marquee var(--marquee-duration, 80s) linear infinite;
 		will-change: transform;
+	}
+
+	/* Each repeated set includes its trailing space, keeping the loop exact. */
+	.logo-track > * {
+		margin-inline-end: clamp(2.25rem, 5vw, 4.5rem);
 	}
 
 	.logo-track.is-static {
@@ -108,7 +111,7 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 
 	.logo-mark {
 		/* Reserve space before lazy logos load. Without a fixed height, remote
-		   images have no box inside the masked marquee and Chromium can leave
+		   images have no box inside the clipped marquee and Chromium can leave
 		   them unloaded because it never considers them visible. */
 		height: 80px;
 		max-width: 170px;
@@ -119,24 +122,6 @@ const durationSeconds = Math.max(34, logos.length * secondsPerLogo);
 
 	.logo-mark[data-logo-id='chij-secondary'] {
 		max-width: 96px;
-	}
-
-	/* Keep original brand artwork intact while ensuring dark marks retain
-	   contrast. Screen-gating leaves print on its original light treatment. */
-	@media screen {
-		:global(html[data-theme='dark']) .logo-mark {
-			background: #fff;
-			border-radius: 0.25rem;
-			box-shadow: 0 0 0 0.5rem #fff;
-		}
-	}
-
-	@media screen and (prefers-color-scheme: dark) {
-		:global(html:not([data-theme])) .logo-mark {
-			background: #fff;
-			border-radius: 0.25rem;
-			box-shadow: 0 0 0 0.5rem #fff;
-		}
 	}
 
 	@keyframes logo-marquee {
