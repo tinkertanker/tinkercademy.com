@@ -9,9 +9,9 @@ export const LOGO_WHITE_SIZE = { width: 512, height: 80 };
 
 // Shared additions to the homepage and About Us mixed client/partner lists.
 export const SELECTED_CLIENT_LOGOS = [
+	{ label: 'Agentic Builders’ Collective', src: '/images/partners/agentic-builders-collective-logo.png', url: 'https://www.agenticbuilders.sg/', width: 699, height: 405 },
 	{ label: 'Canva', src: '/images/partners/canva.svg', url: 'https://www.canva.com/', width: 2000, height: 642 },
 	{ label: 'Figma', src: '/images/partners/figma.png', url: 'https://figma.com/education', width: 400, height: 534 },
-	{ label: 'Lovable', src: '/images/partners/lovable.svg', url: 'https://lovable.dev/', width: 911, height: 155 },
 	{ label: 'Pathlight School', src: '/images/partners/pathlight-school.png', url: 'https://www.pathlight.org.sg/', width: 156, height: 120 },
 	{ label: 'AmCham Singapore', src: '/images/partners/amcham-singapore.webp', url: 'https://amcham.com.sg/', width: 288, height: 46 },
 	{ label: 'Central Singapore Community Development Council', src: '/images/partners/central-singapore-cdc.png', url: 'https://centralsingapore.cdc.gov.sg/programmes/lifelong-learning/mydigitalbootcamp/', width: 800, height: 339 },

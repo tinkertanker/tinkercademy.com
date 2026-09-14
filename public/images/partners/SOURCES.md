@@ -19,6 +19,7 @@ Downloaded 2026-09-09. Original artwork, not generated or recoloured.
 - `canva.svg`: original gradient wordmark from [Canva's official logo guidelines](https://canvacreative.team/brand-logo), linked by the [Canva newsroom](https://www.canva.com/newsroom/). Guidelines link to the [official logo download folder](https://drive.google.com/drive/folders/1NKoY2Wbti9QLbpVBhHDtsSvoTqdTaS7W); used RGB → SVG → [WORDMARK LOGO - GRADIENT - RGB.svg](https://drive.google.com/file/d/1YntbB-NTPnQ52i1WyMziVv0TAp8ge5Vv/view) ([download](https://drive.google.com/uc?export=download&id=1YntbB-NTPnQ52i1WyMziVv0TAp8ge5Vv)). Original SVG, 2000×642, unchanged.
 - `lovable.svg`: [official documentation header logo](https://mintcdn.com/lovable-f9060f1e/lZT1ihBcprll2Agr/assets/logo/logoblack.svg), linked by https://docs.lovable.dev/introduction. Original SVG, 911×155, unchanged.
 - `dbs-alternative.png`: [user-selected Wikimedia Commons DBS alternative logo](https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/DBS_Bank_Logo_%28alternative%29.svg/3840px-DBS_Bank_Logo_%28alternative%29.svg.png). Proportionally reduced from 3840×1144 and given transparent outer padding so the edge-to-edge source artwork is not clipped in the carousel.
+- `agentic-builders-collective-logo.png`: user-supplied transparent PNG for [Agentic Builders’ Collective](https://www.agenticbuilders.sg/), trimmed to its artwork bounds with 8px transparent padding; artwork unchanged.
 
 ## Transparent versions of imported logos — 2026-09-14
 

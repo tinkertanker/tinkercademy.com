@@ -690,7 +690,7 @@
     "partner": true,
     "type": "Partner",
     "featured": false,
-    "active": true,
+    "active": false,
     "content_html": null,
     "content_text": "",
     "source_id": "manual-lovable"
@@ -706,5 +706,17 @@
     "content_html": null,
     "content_text": "",
     "source_id": "manual-microsoft-global-training-partner"
+  },
+  {
+    "id": "agentic-builders-collective",
+    "label": "Agentic Builders’ Collective",
+    "logo": "/images/partners/agentic-builders-collective-logo.png",
+    "partner": true,
+    "type": "Partner",
+    "featured": false,
+    "active": true,
+    "content_html": null,
+    "content_text": "",
+    "source_id": "user-supplied-agentic-builders-collective"
   }
 ]
