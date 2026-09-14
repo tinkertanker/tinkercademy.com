@@ -7,6 +7,20 @@
 	-webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
 }
 
+/* Balance visible artwork, not file dimensions: several source images include
+   different amounts of internal whitespace or unusually dominant marks. */
+.logo-panel img[src$='/microsoft-gtp.png'] { scale: 1.12; }
+.logo-panel img[src$='/smu-academy.webp'] { scale: 1.15; }
+.logo-panel img[src$='/pathlight-school.png'] { scale: 1.08; }
+.logo-panel img[src$='/cpf-board.png'] { scale: 1.15; }
+.logo-panel img[src$='/W5TrPI4TQ7ldyHjx1tFRClDkVI.png'] { scale: 1.1; }
+.logo-panel img[src$='/regent-secondary-school-crest.png'] { scale: 1.15; }
+.logo-panel img[src$='/temasek-polytechnic-crest.png'] { scale: 1.12; }
+.logo-panel img[src$='/hwa-chong-institution.png'] { scale: 0.82; }
+.logo-panel img[src$='/central-singapore-cdc.png'] { scale: 0.86; }
+.logo-panel img[src$='/jump-trading.webp'] { scale: 0.88; }
+.logo-panel img[src$='/VZuEtnu1YA4Ok7MgE5wNo2A.svg'] { scale: 0.9; }
+
 .logo-panel::before,
 .logo-panel::after {
 	content: var(--logo-panel-sheen, none);

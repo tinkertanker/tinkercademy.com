@@ -33,12 +33,8 @@ const heroSubtitle =
 	'We bring an unparalleled depth of experience in education and technology to our classes and curriculum.';
 const introBody =
 	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('Tinkertanker Pte Ltd'))) || '';
-const partnersBlurb =
-	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('industry leaders'))) ||
-	'We collaborate with industry leaders and educational institutions to drive innovation in learning. Our partners make it possible for us to create impactful solutions that empower educators and students alike.';
-const clientsBlurb =
-	blockText((b) => Boolean(b.tag === 'p' && b.text?.includes('had the privilege'))) ||
-	'We’ve had the privilege of teaching, and working with, many preschools, primary schools, secondary schools, IP schools, junior colleges, tertiary institutions, and companies. Here’s a random sample of our clients:';
+const organisationsBlurb =
+	'We’ve taught, built, and collaborated with organisations across Singapore and beyond, including preschools, primary and secondary schools, IP schools, junior colleges, tertiary institutions, SMEs, and multinational companies.';
 const teamIntro =
 	blockText((b) => Boolean(b.tag === 'p' && b.text?.startsWith('Tinkercademy comprises'))) ||
 	'Tinkercademy comprises a team of dedicated education specialists from top universities worldwide. With our extensive training in technology, design, and educational pedagogy, combined with years of experience creating real-world apps and electronics, we bring an unparalleled breadth and depth of technology education to our classes and curriculum.';
@@ -76,13 +72,12 @@ const certLogosRow2 = [
 const partnerLogos = [
 	{ label: 'Classroom HK', src: '/images/partners/transparent/classroom-hk.png' },
 	...SELECTED_CLIENT_LOGOS.filter(({ label }) => ['Agentic Builders’ Collective', 'Canva', 'Figma'].includes(label)),
-	{ label: 'Microsoft Global Training Partner', src: '/images/ccAm2I4TKCuYyi1NVJdIrvzAw.png' },
+	{ label: 'Microsoft Global Training Partner', src: '/images/partners/microsoft-gtp.png' },
 	{ label: 'Tinkermind', src: '/images/partners/tinkermind-symbol.png' },
-	{ label: 'SMU Academy', src: '/images/icLJqUI2otyj00sfJ4Dvlfxbo.webp' },
+	{ label: 'SMU Academy', src: '/images/partners/smu-academy.webp' },
 	{ label: 'Apple Consultants Network', src: '/images/partners/apple-consultants-network.png' },
 	{ label: 'Infocomm Media Development Authority', src: '/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png' },
 ].sort((a, b) => a.label.localeCompare(b.label, 'en'));
-const partnerLogosMarquee = [...partnerLogos, ...partnerLogos];
 
 /* ── Client logo strip images ── */
 const clientLogos = [
@@ -105,8 +100,11 @@ const clientLogos = [
 	{ label: 'Nanyang Technological University', src: '/images/institutions/ntu.png' },
 	{ label: 'Singapore Business Federation', src: '/images/VZuEtnu1YA4Ok7MgE5wNo2A.svg' },
 	{ label: 'Ministry of Defence (MINDEF)', src: '/images/partners/mindef-transparent.png' },
-].sort((a, b) => a.label.localeCompare(b.label, 'en'));
-const clientLogosMarquee = [...clientLogos, ...clientLogos];
+];
+const organisationLogos = [...partnerLogos, ...clientLogos]
+	.filter((logo, index, logos) => logos.findIndex(({ label }) => label === logo.label) === index)
+	.sort((a, b) => a.label.localeCompare(b.label, 'en'));
+const organisationLogosMarquee = [...organisationLogos, ...organisationLogos];
 
 const stats = [
 	{ number: '50+', description: 'Primary and Secondary Schools We\'ve Taught at for IMDA Infocomm Club' },
@@ -198,35 +196,16 @@ const heroTitleHtml = heroTitle
 		</div>
 	</section>
 
-	{/* ═══════ 4. Partners ══════════════════════════════════════════════ */}
-	<section class="about-section">
-		<div class="shell">
-			<h2 class="about-section__heading">Partners</h2>
-			<p class="about-section__body">{partnersBlurb}</p>
-			<div class="logo-panel">
-				<div class="about-logo-marquee about-logo-marquee--partners logo-panel__marquee">
-					<div class="about-logo-track about-logo-track--partners">
-						{partnerLogosMarquee.map(({ src, label }, idx) => (
-							<div class="about-partners__disc">
-								<img class="about-partners__logo" src={src} alt={idx < partnerLogos.length ? label : ''} aria-hidden={idx >= partnerLogos.length ? 'true' : undefined} />
-							</div>
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	{/* ═══════ 5. Our Clients ═══════════════════════════════════════════ */}
+	{/* ═══════ 4. Selected clients and partners ═════════════════════════ */}
 	<section class="about-section">
 		<div class="shell">
 			<h2 class="about-section__heading">Selected clients and partners</h2>
-			<p class="about-section__body">{clientsBlurb}</p>
+			<p class="about-section__body">{organisationsBlurb}</p>
 			<div class="logo-panel">
-				<div class="about-logo-marquee about-logo-marquee--clients logo-panel__marquee">
-					<div class="about-logo-track about-logo-track--clients">
-						{clientLogosMarquee.map(({ src, label }, idx) => (
-							<img class="about-clients__logo" src={src} alt={idx < clientLogos.length ? label : ''} aria-hidden={idx >= clientLogos.length ? 'true' : undefined} />
+				<div class="about-logo-marquee logo-panel__marquee">
+					<div class="about-logo-track">
+						{organisationLogosMarquee.map(({ src, label }, idx) => (
+							<img class="about-clients__logo" src={src} alt={idx < organisationLogos.length ? label : ''} aria-hidden={idx >= organisationLogos.length ? 'true' : undefined} />
 						))}
 					</div>
 				</div>
@@ -475,40 +454,14 @@ const heroTitleHtml = heroTitle
 		width: max-content;
 		align-items: center;
 		will-change: transform;
+		--about-logo-gap: clamp(2rem, 4vw, 3rem);
+		animation: about-logo-marquee 120s linear infinite;
 	}
 
 	/* Include a trailing space in each repeat so -50% lands on the next set. */
 	.about-logo-track > * {
 		margin-inline-end: var(--about-logo-gap);
 		flex-shrink: 0;
-	}
-
-	.about-logo-track--partners {
-		--about-logo-gap: clamp(2rem, 4vw, 3rem);
-		animation: about-logo-marquee 44s linear infinite;
-	}
-
-	.about-logo-track--clients {
-		--about-logo-gap: clamp(2rem, 4vw, 3rem);
-		animation: about-logo-marquee 120s linear infinite;
-	}
-
-	.about-partners__disc {
-		width: 160px;
-		height: 80px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.about-partners__logo {
-		max-width: 160px;
-		max-height: 64px;
-		width: auto;
-		height: auto;
-		object-fit: contain;
-		opacity: 1;
-		filter: none;
 	}
 
 	/* ─── Client logos ─────────────────────────────────────── */
@@ -649,8 +602,7 @@ const heroTitleHtml = heroTitle
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.about-logo-track--partners,
-		.about-logo-track--clients {
+		.about-logo-track {
 			animation: none;
 		}
 	}
