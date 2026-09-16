@@ -800,8 +800,6 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		width: auto;
 		height: 48px;
 		object-fit: contain;
-		opacity: 0.75;
-		filter: grayscale(0.25);
 	}
 
 	.home-educators__inst-logo[alt='Stanford University'] {
@@ -825,21 +823,11 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 		:global(html[data-theme='dark']) .home-partners__logo-link {
 			opacity: 1;
 		}
-
-		:global(html[data-theme='dark']) .home-educators__inst-logo {
-			opacity: 1;
-			filter: none;
-		}
 	}
 
 	@media screen and (prefers-color-scheme: dark) {
 		:global(html:not([data-theme])) .home-partners__logo-link {
 			opacity: 1;
-		}
-
-		:global(html:not([data-theme])) .home-educators__inst-logo {
-			opacity: 1;
-			filter: none;
 		}
 	}
 
