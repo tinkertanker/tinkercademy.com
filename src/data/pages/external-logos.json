@@ -1,8 +1,8 @@
 [
   {
-    "id": "apple-consultants-network",
-    "label": "Apple Consultants Network",
-    "logo": "/images/partners/apple-consultants-network.png",
+    "id": "apple-technical-partner",
+    "label": "Apple Technical Partner",
+    "logo": "/images/partners/apple-technical-partner.png",
     "partner": true,
     "type": "Partner",
     "featured": false,

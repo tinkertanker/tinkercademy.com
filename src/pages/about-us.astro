@@ -59,13 +59,13 @@ const team: TeamMember[] = parseYaml(teamYaml);
 /* ── Certification logos (row 1: cert badges; row 2: Apple programme) ── */
 const certLogosRow1 = [
 	'/images/ccAm2I4TKCuYyi1NVJdIrvzAw.png',
-	'/images/WswqYSt0BjIpB4AvjMlsljQ0JM.png',
 	'/images/gNg7rhp5eIX1new2SYkG6XIwg9Q.png',
+	'/images/WswqYSt0BjIpB4AvjMlsljQ0JM.png',
 ];
 const certLogosRow2 = [
 	'/images/apple-logo-certified-trainer.png',
 	'/images/apple-logo-professional-learning-specialist.png',
-	'/images/apple-logo-consultants-network.svg',
+	'/images/partners/apple-technical-partner.png',
 ];
 
 /* ── Partner marks (circular row on live) ── */
@@ -75,7 +75,7 @@ const partnerLogos = [
 	{ label: 'Microsoft Global Training Partner', src: '/images/partners/microsoft-gtp.png' },
 	{ label: 'Tinkermind', src: '/images/partners/tinkermind-symbol.png' },
 	{ label: 'SMU Academy', src: '/images/partners/smu-academy.webp' },
-	{ label: 'Apple Consultants Network', src: '/images/partners/apple-consultants-network.png' },
+	{ label: 'Apple Technical Partner', src: '/images/partners/apple-technical-partner.png' },
 	{ label: 'Infocomm Media Development Authority', src: '/images/Sq1AjGYrdMNfVm23qQ2XUHv90Cg.png' },
 ].sort((a, b) => a.label.localeCompare(b.label, 'en'));
 
@@ -190,7 +190,7 @@ const heroTitleHtml = heroTitle
 			<h2 class="about-certs__heading">We are certified</h2>
 			<div class="about-certs__row">
 				{[...certLogosRow1, ...certLogosRow2].map((src) => (
-					<img class="about-certs__logo" src={src} alt="Tinkercademy certification badge" loading="lazy" />
+					<img class="about-certs__logo" src={src} alt={src.endsWith('/apple-technical-partner.png') ? 'Apple Technical Partner' : 'Tinkercademy certification badge'} loading="lazy" />
 				))}
 			</div>
 		</div>
@@ -390,7 +390,7 @@ const heroTitleHtml = heroTitle
 		font-size: 1.5rem;
 		font-weight: 500;
 		color: #fff;
-		margin: 0 0 2rem;
+		margin: 0 0 1.2rem;
 		text-align: center;
 	}
 
@@ -399,7 +399,7 @@ const heroTitleHtml = heroTitle
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: clamp(1rem, 2.5vw, 2rem);
+		gap: 1rem;
 	}
 
 	.about-certs__logo {
@@ -408,10 +408,67 @@ const heroTitleHtml = heroTitle
 		object-fit: contain;
 	}
 
+	.about-certs__logo:nth-child(-n+3) {
+		width: clamp(64px, 7vw, 95px);
+		height: clamp(48px, 5.1vw, 71px);
+	}
+
+	.about-certs__logo:nth-child(-n+2) {
+		margin-right: -8px;
+	}
+
+	.about-certs__logo:nth-child(n+3):nth-child(-n+5) {
+		margin-right: 10pt;
+	}
+
+	.about-certs__logo[src$='/apple-logo-certified-trainer.png'] {
+		width: 190px;
+	}
+
+	.about-certs__logo[src$='/apple-logo-professional-learning-specialist.png'] {
+		width: 175px;
+	}
+
+	.about-certs__logo[src$='/apple-technical-partner.png'] {
+		width: 110px;
+		filter: brightness(0) invert(1);
+	}
+
 	@media (max-width: 809px) {
 		.about-certs__logo {
 			width: 96px;
 			height: 56px;
+		}
+
+		.about-certs__logo:nth-child(-n+3) {
+			width: 64px;
+			height: 48px;
+		}
+
+		.about-certs__logo[src$='/apple-logo-certified-trainer.png'] {
+			width: 120px;
+		}
+
+		.about-certs__logo[src$='/apple-logo-professional-learning-specialist.png'] {
+			width: 110px;
+		}
+
+		.about-certs__logo[src$='/apple-technical-partner.png'] {
+			width: 75px;
+		}
+	}
+
+	@media (min-width: 360px) and (max-width: 389px) {
+		.about-certs__logo[src$='/apple-logo-certified-trainer.png'] {
+			width: 109px;
+		}
+
+		.about-certs__logo[src$='/apple-logo-professional-learning-specialist.png'] {
+			width: 98px;
+		}
+
+		.about-certs__logo[src$='/apple-technical-partner.png'] {
+			width: 67px;
 		}
 	}
 

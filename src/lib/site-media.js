@@ -29,11 +29,11 @@ export const HOME_PARTNER_LOGOS = [
 		height: 120,
 	},
 	{
-		label: 'Apple Consultants Network',
-		src: '/images/partners/apple-consultant.svg',
-		url: 'https://consultants.apple.com/sg/profile/2408934',
-		width: 203,
-		height: 64,
+		label: 'Apple Technical Partner',
+		src: '/images/partners/apple-technical-partner.png',
+		url: 'https://partnernetwork.apple.com/sg/partnerresults/technical',
+		width: 714,
+		height: 264,
 	},
 	{ label: 'IMDA', src: '/images/partners/imda.svg', url: 'https://www.imda.gov.sg/', width: 340, height: 85 },
 	{

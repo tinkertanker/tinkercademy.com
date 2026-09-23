@@ -2,6 +2,7 @@
 
 Downloaded 2026-09-09. Original artwork, not generated or recoloured.
 
+- `apple-technical-partner.png`: user-supplied transparent 714×264 badge. Replaces Apple Consultants Network artwork in live logo rows; the About Us dark certification row displays it white using CSS. Apple's [Singapore partner programme](https://technicalpartners.apple.com/sg/join) describes its badge and partner-only marketing materials; no public official badge download was found.
 - `raffles-girls-school-crest.png`: user-supplied transparent 596×596 PNG.
 - `tinkermind-symbol.png`: [official website icon](https://static.wixstatic.com/media/875ffc_5dfb805d5c1e4acba7152af789cdbf52~mv2.png), linked by https://www.tinkermind.sg/. Uses the symbol because the current transparent wordmark is white.
 - `ngee-ann-secondary.png`: [Ngee Ann Kongsi school crest](https://thengeeannkongsi.com.sg/wp-content/uploads/2017/03/small-school-Logo-No-background-2.png). Crest-only variant.
