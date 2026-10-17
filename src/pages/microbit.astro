@@ -34,7 +34,7 @@ const featuredTutorials = (site.tutorials ?? [])
 	.map((t: any) => ({
 		slug: t.slug,
 		title: t.title,
-		heroImage: t.hero_image ? localiseFramerImage(t.hero_image) : null,
+		heroImage: localiseFramerImage(t.hero_poster ?? t.hero_image ?? null),
 		description: t.description ?? t.subtitle ?? '',
 	}));
 
@@ -43,7 +43,7 @@ const otherTutorials = (site.tutorials ?? [])
 	.map((t: any) => ({
 		slug: t.slug,
 		title: t.title,
-		heroImage: t.hero_image ? localiseFramerImage(t.hero_image) : null,
+		heroImage: localiseFramerImage(t.hero_poster ?? t.hero_image ?? null),
 		description: t.description ?? t.subtitle ?? '',
 	}));
 ---

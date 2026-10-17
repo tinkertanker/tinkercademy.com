@@ -11,6 +11,7 @@ test('large tutorial animations use smaller playable media and static social ima
 	const tutorials = JSON.parse(await readFile(new URL('../../src/data/pages/tutorials.json', import.meta.url), 'utf8'));
 	const animated = tutorials.filter((tutorial) => tutorial.hero_video);
 	assert.equal(animated.length, 2);
+	const listing = load(await read('microbit/index.html'));
 	for (const tutorial of animated) {
 		const $ = load(await read(`tutorials/${tutorial.slug}/index.html`));
 		const video = $('.hero-media video');
@@ -21,6 +22,7 @@ test('large tutorial animations use smaller playable media and static social ima
 		assert.equal(video.find('source').attr('src'), tutorial.hero_video);
 		assert.equal($(`img[src="${tutorial.hero_image}"]`).length, 0, 'original GIF is not downloaded');
 		assert.equal($('meta[property="og:image"]').attr('content'), `https://tinkercademy.com${tutorial.hero_poster}`);
+		assert.equal(listing(`a[href="/tutorials/${tutorial.slug}/"] img`).attr('src'), tutorial.hero_poster);
 		const size = async (path) => (await stat(new URL(`../../dist${path}`, import.meta.url))).size;
 		assert.ok(await size(tutorial.hero_video) + await size(tutorial.hero_poster) < await size(tutorial.hero_image) / 3);
 	}
