@@ -134,6 +134,18 @@
     "source_id": "s3JNytizE"
   },
   {
+    "id": "canva",
+    "label": "Canva",
+    "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
+    "domain_ids": [
+      "uiux",
+      "design-thinking"
+    ],
+    "content_html": null,
+    "content_text": "",
+    "source_id": null
+  },
+  {
     "id": "firebase",
     "label": "Firebase",
     "icon": "/images/SCbZqPZak9L4pDz7y9XT1mDI.svg",
