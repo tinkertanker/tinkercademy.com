@@ -124,9 +124,12 @@ if (current?.copy || current?.images.length) sections.push(current);
 		object-position: top left;
 	}
 
-	.tutorial-section__body :global(h2),
-	.tutorial-section__body :global(h3),
-	.tutorial-section__body :global(h4) {
+	.tutorial-section__body :global(h2:where(:not([data-heading-style]))),
+	.tutorial-section__body :global(h3:where(:not([data-heading-style]))),
+	.tutorial-section__body :global(h4:where(:not([data-heading-style]))),
+	.tutorial-section__body :global([data-heading-style="h2"]),
+	.tutorial-section__body :global([data-heading-style="h3"]),
+	.tutorial-section__body :global([data-heading-style="h4"]) {
 		margin: 0 0 0.85rem;
 		font-family: var(--heading);
 		letter-spacing: -0.03em;
@@ -141,12 +144,18 @@ if (current?.copy || current?.images.length) sections.push(current);
 		font-size: clamp(1.4rem, 2.4vw, 2rem);
 	}
 
-	.tutorial-section__body :global(h3),
-	.tutorial-section__body :global(h4),
+	.tutorial-section__body :global(h3:where(:not([data-heading-style]))),
+	.tutorial-section__body :global(h4:where(:not([data-heading-style]))),
 	.tutorial-section__body :global([data-heading-style="h3"]),
 	.tutorial-section__body :global([data-heading-style="h4"]) {
 		font-size: 1rem;
 		color: var(--theme-link, var(--accent-dark));
+	}
+
+	/* Source H5s used browser-default typography before rank correction. */
+	.tutorial-section__body :global([data-heading-style="h5"]) {
+		font-size: 0.83em;
+		margin: 1.67em 0;
 	}
 
 	.tutorial-section__body :global(p),
