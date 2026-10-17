@@ -1850,6 +1850,8 @@
     "subtitle": "\nUse a micro:bit and mini servo to make your very own Maneki-Neko, or Fortune Cat, who waves its hand when you press a button!\n\nDesigned and written by Tim Ho from the National University of Singapore",
     "description": "Step 1 – Choose a cat",
     "hero_image": "/images/pmsl1tHBnpSl79LDhU4ILYgiuVQ.gif",
+    "hero_video": "/images/tutorials/fortune-cat.mp4",
+    "hero_poster": "/images/tutorials/fortune-cat.webp",
     "audience_ids": [],
     "topic_ids": [
       "iot"
@@ -2718,6 +2720,8 @@
     "subtitle": "Communicate between two micro:bits using Morse code, fishing line, a servo and a sensor! Why use micro:bit’s radio when this is so much cooler?",
     "description": "Why Python?",
     "hero_image": "/images/DDl0KNXbAnRrmhYEZ1XM5mJvy40.gif",
+    "hero_video": "/images/tutorials/wire-transmission.mp4",
+    "hero_poster": "/images/tutorials/wire-transmission.webp",
     "audience_ids": [],
     "topic_ids": [
       "iot"

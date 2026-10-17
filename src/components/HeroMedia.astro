@@ -1,6 +1,7 @@
 ---
-const props = Astro.props as { src?: string | null; alt?: string; compact?: boolean };
+const props = Astro.props as { src?: string | null; video?: string; alt?: string; compact?: boolean };
 const src = props.src ?? null;
+const video = props.video;
 const alt = props.alt ?? '';
 const compact = props.compact ?? false;
 ---
@@ -9,11 +10,29 @@ const compact = props.compact ?? false;
 	src && (
 		<section class:list={['hero-media', compact && 'hero-media--compact']}>
 			<div class="shell">
-				<img src={src} alt={alt} loading="eager" />
+				{video ? (
+					<video data-hero-video poster={src} aria-label={alt} muted loop playsinline controls preload="metadata">
+						<source src={video} type="video/mp4" />
+						<a href={src}>View {alt}</a>
+					</video>
+				) : <img src={src} alt={alt} loading="eager" />}
 			</div>
 		</section>
 	)
 }
+
+<script>
+	const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+	document.querySelectorAll<HTMLVideoElement>('[data-hero-video]').forEach((video) => {
+		const syncMotion = () => {
+			video.muted = true;
+			if (reducedMotion.matches) video.pause();
+			else void video.play().catch(() => { /* Native controls remain available if autoplay is blocked. */ });
+		};
+		syncMotion();
+		reducedMotion.addEventListener('change', syncMotion);
+	});
+</script>
 
 <style>
 	.hero-media {
@@ -27,13 +46,16 @@ const compact = props.compact ?? false;
 		border: 1px solid var(--theme-border, rgba(45, 42, 38, 0.12));
 	}
 
-	.hero-media img {
+	.hero-media img,
+	.hero-media video {
+		display: block;
 		width: 100%;
 		height: clamp(280px, 48vw, 560px);
 		object-fit: cover;
 	}
 
-	.hero-media--compact img {
+	.hero-media--compact img,
+	.hero-media--compact video {
 		height: clamp(220px, 34vw, 420px);
 	}
 </style>

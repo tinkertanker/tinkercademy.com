@@ -421,14 +421,16 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 
 	/* ── Prose (used by sub-pages) ── */
 	.prose h1,
-	.prose h2 {
+	.prose h2:where(:not([data-heading-style])),
+	.prose [data-heading-style="h2"] {
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
 		font-weight: 500;
 		color: var(--theme-heading, inherit);
 	}
 
-	.prose h3 {
+	.prose h3:where(:not([data-heading-style])),
+	.prose [data-heading-style="h3"] {
 		font-family: 'Rubik', sans-serif;
 		letter-spacing: 0;
 		font-weight: 300;
@@ -436,7 +438,8 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		color: var(--theme-link, var(--accent-dark));
 	}
 
-	.prose h4 {
+	.prose h4:where(:not([data-heading-style])),
+	.prose [data-heading-style="h4"] {
 		font-family: 'Rubik', sans-serif;
 		letter-spacing: 0;
 		font-weight: 500;

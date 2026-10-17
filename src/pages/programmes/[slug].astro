@@ -3,6 +3,7 @@ import { render } from 'astro:content';
 import BannerLayers from '../../components/BannerLayers.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import HeadingOutline from '../../components/HeadingOutline.astro';
 import ProgrammeSeriesNav from '../../components/ProgrammeSeriesNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../../lib/banner-assets';
@@ -300,7 +301,7 @@ const breadcrumbSchema = {
 			)}
 
 			<article class="prog-body prose">
-				<Content />
+				<HeadingOutline><Content /></HeadingOutline>
 			</article>
 		</div>
 
@@ -576,7 +577,8 @@ const breadcrumbSchema = {
 		min-width: 0;
 	}
 
-	.prog-body :global(h2) {
+	.prog-body :global(h2:where(:not([data-heading-style]))),
+	.prog-body :global([data-heading-style="h2"]) {
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
 		font-size: 1.35rem;
@@ -585,7 +587,8 @@ const breadcrumbSchema = {
 		margin: 0 0 0.75rem;
 	}
 
-	.prog-body :global(h3) {
+	.prog-body :global(h3:where(:not([data-heading-style]))),
+	.prog-body :global([data-heading-style="h3"]) {
 		font-family: 'Rubik', sans-serif;
 		letter-spacing: 0;
 		font-size: 1.05rem;
@@ -595,7 +598,9 @@ const breadcrumbSchema = {
 	}
 
 	.prog-body :global(h4),
-	.prog-body :global(h5) {
+	.prog-body :global(h5),
+	.prog-body :global([data-heading-style="h4"]),
+	.prog-body :global([data-heading-style="h5"]) {
 		font-family: 'Rubik', sans-serif;
 		letter-spacing: 0;
 		font-size: 1rem;

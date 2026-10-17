@@ -77,7 +77,7 @@ const blogSchema = {
 								<time datetime={blogDateTime(story.data.publishedAt, story.data.publishedAtPrecision)}>{formatBlogDate(story.data.publishedAt, story.data.publishedAtPrecision)}</time>
 								{story.data.tags[0] && <span>{story.data.tags[0].name}</span>}
 							</span>
-							<h3>{story.data.title}</h3>
+							<h2>{story.data.title}</h2>
 							{story.data.subtitle && <span class="story-card__summary">{story.data.subtitle}</span>}
 							<span class="story-card__author">By {story.data.author.name}</span>
 						</div>
@@ -267,7 +267,7 @@ const blogSchema = {
 		text-align: right;
 	}
 
-	.story-card h3 {
+	.story-card h2 {
 		margin: 0.15rem 0 0;
 		font-family: var(--heading);
 		font-size: 1.2rem;

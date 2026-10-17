@@ -1,0 +1,22 @@
+---
+import { load } from 'cheerio';
+
+// These bodies sit beneath a page H1. Compact skipped ranks while retaining
+// the source's sibling/parent relationships, anchors, and visual heading style.
+// Working on rendered HTML also covers raw HTML and MDX legacy blocks.
+const $ = load(await Astro.slots.render('default'), {}, false);
+const ancestors: number[] = [];
+
+$('h1, h2, h3, h4, h5, h6').each((_, heading) => {
+	const sourceLevel = Number(heading.tagName.slice(1));
+	while (ancestors.length && ancestors[ancestors.length - 1] >= sourceLevel) ancestors.pop();
+	const level = Math.min(6, ancestors.length + 2);
+	ancestors.push(sourceLevel);
+	if (level !== sourceLevel) {
+		$(heading).attr('data-heading-style', heading.tagName);
+		heading.tagName = `h${level}`;
+	}
+});
+---
+
+<Fragment set:html={$.html()} />

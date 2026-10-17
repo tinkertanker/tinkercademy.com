@@ -1,11 +1,30 @@
 import assert from 'node:assert/strict';
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile, readdir, stat } from 'node:fs/promises';
 import test from 'node:test';
 import { load } from 'cheerio';
 import { parse } from 'yaml';
 
 const read = (path) => readFile(new URL(`../../dist/${path}`, import.meta.url), 'utf8');
 const schemas = ($) => $('script[type="application/ld+json"]').toArray().map((el) => JSON.parse($(el).text()));
+
+test('large tutorial animations use smaller playable media and static social images', async () => {
+	const tutorials = JSON.parse(await readFile(new URL('../../src/data/pages/tutorials.json', import.meta.url), 'utf8'));
+	const animated = tutorials.filter((tutorial) => tutorial.hero_video);
+	assert.equal(animated.length, 2);
+	for (const tutorial of animated) {
+		const $ = load(await read(`tutorials/${tutorial.slug}/index.html`));
+		const video = $('.hero-media video');
+		assert.equal(video.length, 1, tutorial.slug);
+		assert.equal(video.attr('aria-label'), tutorial.title);
+		for (const attr of ['controls', 'muted', 'loop', 'playsinline']) assert.ok(video.is(`[${attr}]`), attr);
+		assert.equal(video.attr('poster'), tutorial.hero_poster);
+		assert.equal(video.find('source').attr('src'), tutorial.hero_video);
+		assert.equal($(`img[src="${tutorial.hero_image}"]`).length, 0, 'original GIF is not downloaded');
+		assert.equal($('meta[property="og:image"]').attr('content'), `https://tinkercademy.com${tutorial.hero_poster}`);
+		const size = async (path) => (await stat(new URL(`../../dist${path}`, import.meta.url))).size;
+		assert.ok(await size(tutorial.hero_video) + await size(tutorial.hero_poster) < await size(tutorial.hero_image) / 3);
+	}
+});
 
 test('launch discovery fixes preserve crawlable destinations and distinct course summaries', async () => {
 	const notFound = load(await read('404.html'));
@@ -116,6 +135,12 @@ test('indexable HTML pages have complete image and search metadata', async () =>
 		const description = $('meta[name="description"]').attr('content') ?? '';
 		assert.ok(description.length >= 50 && description.length <= 160, `${path}: description length ${description.length}`);
 		assert.equal($('img:not([alt])').length, 0, `${path}: image alt attributes`);
+		let previousLevel = 0;
+		for (const heading of $('main h1, main h2, main h3, main h4, main h5, main h6').toArray()) {
+			const level = Number(heading.tagName.slice(1));
+			assert.ok(level <= previousLevel + 1, `${path}: skipped level before ${$(heading).text()}`);
+			previousLevel = level;
+		}
 	}
 });
 

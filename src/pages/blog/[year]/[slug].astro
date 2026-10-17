@@ -2,6 +2,7 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 
 import BlogNav from '../../../components/articles/BlogNav.astro';
+import HeadingOutline from '../../../components/HeadingOutline.astro';
 import ContentLayout from '../../../layouts/ContentLayout.astro';
 import { BLOG_FEED_URL, BLOG_ORIGIN, BLOG_TITLE, SITE_ORIGIN, blogDateTime, formatBlogDate } from '../../../lib/blog';
 import { completeDescription } from '../../../lib/seo';
@@ -71,7 +72,7 @@ const articleSchema = {
 		</header>
 
 		<div class="blog-article__body prose shell">
-			<Content />
+			<HeadingOutline><Content /></HeadingOutline>
 		</div>
 
 		<footer class="blog-article__footer shell">
@@ -139,11 +140,13 @@ const articleSchema = {
 		line-height: 1.7;
 	}
 
-	.blog-article__body :global(h2) {
+	.blog-article__body :global(h2:where(:not([data-heading-style]))),
+	.blog-article__body :global([data-heading-style="h2"]) {
 		font-size: 1.7rem;
 	}
 
-	.blog-article__body :global(h3) {
+	.blog-article__body :global(h3:where(:not([data-heading-style]))),
+	.blog-article__body :global([data-heading-style="h3"]) {
 		font-size: 1.2rem;
 		font-weight: 500;
 	}

@@ -41,6 +41,7 @@ const metaDescription = completeDescription(
 	`Follow this step-by-step Tinkercademy tutorial for ${tutorial.title}.`,
 	{ max: 155 },
 );
+const heroImage = tutorial.hero_poster ?? tutorial.hero_image;
 const tutorialSchema = {
 	'@context': 'https://schema.org',
 	'@type': 'TechArticle',
@@ -48,7 +49,7 @@ const tutorialSchema = {
 	description: metaDescription,
 	url: canonical,
 	mainEntityOfPage: canonical,
-	...(tutorial.hero_image ? { image: new URL(tutorial.hero_image, canonical).href } : {}),
+	...(heroImage ? { image: new URL(heroImage, canonical).href } : {}),
 	publisher: { '@type': 'Organization', name: 'Tinkercademy', url: 'https://tinkercademy.com/' },
 };
 const firstContentItem = tutorial.content?.[0];
@@ -64,7 +65,7 @@ const contentItems =
 	title={pageTitle}
 	description={metaDescription}
 	canonical={canonical}
-	image={tutorial.hero_image ?? undefined}
+	image={heroImage ?? undefined}
 	ogType="article"
 	structuredData={tutorialSchema}
 >
@@ -76,7 +77,7 @@ const contentItems =
 			{tutorial.description && <p class="tutorial-banner__lead">{tutorial.description}</p>}
 		</div>
 	</section>
-	<HeroMedia src={tutorial.hero_image} alt={tutorial.title} compact />
+	<HeroMedia src={heroImage} video={tutorial.hero_video} alt={tutorial.title} compact />
 	<TutorialStory items={contentItems} imageAltFallback={tutorial.title} />
 	<CtaBanner />
 </ContentLayout>

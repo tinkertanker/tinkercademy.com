@@ -1,5 +1,6 @@
 ---
 import CtaBanner from '../../components/CtaBanner.astro';
+import HeadingOutline from '../../components/HeadingOutline.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getSiteData } from '../../lib/data.js';
 import { clipDescription } from '../../lib/seo.ts';
@@ -83,7 +84,7 @@ const contentHtml = (article.content_html ?? '')
 	</section>
 
 	<article class="article-body shell prose">
-		<div set:html={contentHtml} />
+		<HeadingOutline><div set:html={contentHtml} /></HeadingOutline>
 	</article>
 
 	<CtaBanner />
@@ -163,7 +164,8 @@ const contentHtml = (article.content_html ?? '')
 		max-width: 720px;
 	}
 
-	.article-body :global(h2) {
+	.article-body :global(h2:where(:not([data-heading-style]))),
+	.article-body :global([data-heading-style="h2"]) {
 		font-family: 'IBM Plex Serif', Georgia, serif;
 		letter-spacing: -0.03em;
 		font-weight: 500;
@@ -172,7 +174,8 @@ const contentHtml = (article.content_html ?? '')
 		margin: 1.75rem 0 0.5rem;
 	}
 
-	.article-body :global(h3) {
+	.article-body :global(h3:where(:not([data-heading-style]))),
+	.article-body :global([data-heading-style="h3"]) {
 		font-family: 'Rubik', sans-serif;
 		letter-spacing: 0;
 		font-weight: 300;
@@ -181,7 +184,8 @@ const contentHtml = (article.content_html ?? '')
 		margin: 1.75rem 0 0.5rem;
 	}
 
-	.article-body :global(h4) {
+	.article-body :global(h4:where(:not([data-heading-style]))),
+	.article-body :global([data-heading-style="h4"]) {
 		font-family: 'Rubik', sans-serif;
 		letter-spacing: 0;
 		font-weight: 500;
