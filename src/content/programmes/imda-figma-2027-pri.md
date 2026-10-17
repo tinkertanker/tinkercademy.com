@@ -10,6 +10,9 @@ cardBlurb: "Primary school students learn that apps are designed around real use
 weight: 79
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Figma+UI%2FUX+(Primary)"
+primaryCta:
+  label: "Apply via IMDA LEARN Roadmaps"
+  url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "UI/UX Design with Figma (Primary) - Tinkercademy"
 seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for primary school Infocomm Clubs. Students go from idea canvas to wireframes, Figma screens, peer testing, and presentation."
 ---

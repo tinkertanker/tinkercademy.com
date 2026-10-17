@@ -10,6 +10,9 @@ cardBlurb: "Secondary and JC students learn industry-grade UI/UX: personas, user
 weight: 80
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Figma+UI%2FUX+(Sec/JC)"
+primaryCta:
+  label: "Apply via IMDA LEARN Roadmaps"
+  url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "UI/UX Design with Figma (Secondary/JC) - Tinkercademy"
 seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students design and test interactive Figma prototypes, with a guided lesson in AI-enabled prototyping using Figma Make."
 ---

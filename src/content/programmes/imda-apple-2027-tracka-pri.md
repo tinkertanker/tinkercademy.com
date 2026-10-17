@@ -10,6 +10,9 @@ cardBlurb: "A friendly, structured introduction to app design for primary school
 weight: 66
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Apple+App+Development+Track+A+(Primary)"
+primaryCta:
+  label: "Apply via IMDA LEARN Roadmaps"
+  url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track A: App Design and Prototyping (Primary) - Tinkercademy"
 seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for primary school Infocomm Clubs. Students design and prototype a real app idea using Keynote and Swift Playgrounds on iPad — no coding experience needed."
 ---

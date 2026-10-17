@@ -10,6 +10,9 @@ cardBlurb: "App development from a product and user-experience perspective for s
 weight: 67
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Apple+App+Development+Track+A+(Sec/JC)"
+primaryCta:
+  label: "Apply via IMDA LEARN Roadmaps"
+  url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track A: App Design and Prototyping (Secondary/JC) - Tinkercademy"
 seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students design and prototype a real app idea, then connect app behaviours to Swift programming concepts."
 ---

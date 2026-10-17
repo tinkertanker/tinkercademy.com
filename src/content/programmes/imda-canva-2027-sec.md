@@ -10,6 +10,9 @@ cardBlurb: "Secondary and JC students build a working digital product in Canva C
 weight: 81
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Canva+AI+Product+Design"
+primaryCta:
+  label: "Apply via IMDA LEARN Roadmaps"
+  url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "AI Product Design with Canva Code (Secondary/JC) - Tinkercademy"
 seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students build a working digital product through AI-assisted product design with Canva Code."
 ---

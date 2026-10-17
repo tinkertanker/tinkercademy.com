@@ -10,6 +10,9 @@ cardBlurb: "Secondary and JC students build real apps in Swift Playgrounds — S
 weight: 69
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Apple+App+Development+Track+B+(Sec/JC)"
+primaryCta:
+  label: "Apply via IMDA LEARN Roadmaps"
+  url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track B: Swift App Development (Secondary/JC) - Tinkercademy"
 seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students build working Swift apps with SwiftUI in Swift Playgrounds on iPad."
 ---
