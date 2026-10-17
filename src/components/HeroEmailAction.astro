@@ -1,5 +1,9 @@
+---
+const { href = 'mailto:hello@tinkercademy.com', label = 'Email us' } = Astro.props;
+---
+
 <div class="hero-email-action">
-	<a href="mailto:hello@tinkercademy.com">Email us</a>
+	<a href={href}>{label}</a>
 </div>
 
 <style>

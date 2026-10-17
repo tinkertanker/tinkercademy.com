@@ -1,6 +1,7 @@
 ---
 /**
- * /infocomm-club — Astro-native rebuild of the Infocomm Club Courses page.
+ * /infocomm-club — Infocomm Club courses listing (IMDA LEARN Roadmaps 2027).
+ * infocomm.club redirects here.
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import BannerLayers from '../components/BannerLayers.astro';
@@ -18,53 +19,90 @@ const canonical = 'https://tinkercademy.com/infocomm-club/';
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroBanner = getBannerAsset(heroImage);
 const heroTitle = page.hero_title ?? 'Infocomm Club Courses';
-const heroLead = 'App development, UI/UX, and digital making programmes for school Infocomm Clubs.';
+const heroLead =
+	'IMDA LEARN Roadmaps 2027 programmes for school Infocomm Clubs — app development, UI/UX, and AI product design, fully funded by IMDA.';
 
-const appleCourses = [
+const tracks = [
 	{
-		title: 'App Development — Prototype',
-		body: 'Apply Apple\'s design principles and create beautiful prototypes using Keynote.',
-		href: '/programmes/imda-apple-2025-a/',
-		image: '/images/Tbd2iDiGCy90PETNYs9UPYft3fs.png',
+		heading: 'Apple App Development',
+		note: 'Design and build apps on iPad. Two tracks, each 26 hours — pick Track A for design-first prototyping, Track B for Swift development, or run both across the year.',
+		courses: [
+			{
+				title: 'Track A — App Design & Prototyping',
+				level: 'Primary 4–6',
+				duration: '26 hours',
+				body: 'Identify user needs, plan screens and user flows, then build and present a clickable app prototype in Keynote on iPad.',
+				href: '/programmes/imda-apple-2027-tracka-pri/',
+				image: '/images/banners/imda-apple-2027-tracka-pri.webp',
+			},
+			{
+				title: 'Track A — App Design & Prototyping',
+				level: 'Secondary 1–5, JC 1–2',
+				duration: '26 hours',
+				body: 'Frame problems, design user flows with accessibility in mind, and build a high-fidelity prototype connected to Swift programming concepts.',
+				href: '/programmes/imda-apple-2027-tracka-sec/',
+				image: '/images/banners/imda-apple-2027-tracka-sec.webp',
+			},
+			{
+				title: 'Track B — Swift App Development',
+				level: 'Primary 4–6',
+				duration: '26 hours',
+				body: 'Move from prototype thinking into real app development: layouts, buttons, state, and navigation through guided SwiftUI mini-projects in Swift Playgrounds.',
+				href: '/programmes/imda-apple-2027-trackb-pri/',
+				image: '/images/banners/imda-apple-2027-trackb-pri.webp',
+			},
+			{
+				title: 'Track B — Swift App Development',
+				level: 'Secondary 1–5, JC 1–2',
+				duration: '26 hours',
+				body: 'Build working apps in Swift Playgrounds: SwiftUI views, state, navigation, and data modelling, ending in a capstone app presented to the class.',
+				href: '/programmes/imda-apple-2027-trackb-sec/',
+				image: '/images/banners/imda-apple-2027-trackb-sec.webp',
+			},
+		],
 	},
 	{
-		title: 'App Development on iPad with Swift Playground',
-		body: 'Learn Swift & SwiftUI on iPad and build real apps — from UI design and navigation through to AR, machine learning, and APIs.',
-		href: '/programmes/imda-apple-2025-c/',
-		image: '/images/cqnxe0aFRed2z9pPOVAT1OYUDQ.png',
-	},
-];
-
-const appleBadges = [
-	'/images/zoEuPfoFyUypOVJmnUfxZgZgcc.png',
-	'/images/Zg926MlOSHqoFw57CYanmzmIY.svg',
-	'/images/XzY3fFO6arK8Ng7Ti9ArzsM1TDs.webp',
-];
-
-const figmaCourses = [
-	{
-		title: 'UI/UX Design',
-		body: 'Learn design thinking and UI/UX tools. Create interactive prototypes! No coding experience needed!',
-		href: '/programmes/imda-figma-2025/',
-		image: '/images/Z7BJ3azplvkMs5Ng0yeGKgpE.jpg',
-	},
-];
-
-const signupLinks = [
-	{
-		label: 'Registration for MOE Primary Schools',
-		href: 'https://form.gov.sg/6704f86a5c3070b1b3c9c1b2',
+		heading: 'Figma UI/UX Design',
+		note: 'Industry-grade design thinking and prototyping, on free Figma Education accounts. Secondary and JC students also get a guided introduction to AI-enabled prototyping with Figma Make.',
+		courses: [
+			{
+				title: 'UI/UX Design',
+				level: 'Primary 4–6',
+				duration: '26 hours',
+				body: 'Turn a school, home, or community problem into a persona, screen flow, and clickable Figma prototype — from idea canvas to presentation.',
+				href: '/programmes/imda-figma-2027-pri/',
+				image: '/images/banners/imda-figma-2027-pri.webp',
+			},
+			{
+				title: 'UI/UX Design',
+				level: 'Secondary 1–5, JC 1–2',
+				duration: '26 hours',
+				body: 'User research, wireframes, visual systems, and interactive prototypes — plus a guided lesson exploring AI-enabled prototyping with Figma Make.',
+				href: '/programmes/imda-figma-2027-sec/',
+				image: '/images/banners/imda-figma-2027-sec.webp',
+			},
+		],
 	},
 	{
-		label: 'Registration for MOE Secondary Schools / Junior College',
-		href: 'https://form.gov.sg/6704f97536fa07f9b3e3a283',
+		heading: 'Canva AI Product Design',
+		note: 'AI-assisted product design that keeps human judgement at the centre — students explain what they intend to build before they prompt.',
+		courses: [
+			{
+				title: 'AI Product Design with Canva Code',
+				level: 'Secondary 1–5, JC 1–2',
+				duration: '26 hours',
+				body: 'Build a working digital product through structured prompting, user-centred interface design, structured data, and dashboards in Canva.',
+				href: '/programmes/imda-canva-2027-sec/',
+				image: '/images/banners/imda-canva-2027-sec.webp',
+			},
+		],
 	},
 ];
 ---
 
 <ContentLayout
 	title="Infocomm Club courses — Tinkercademy"
-	description="IMDA Infocomm Club training courses for MOE primary, secondary, and junior college students — from Apple Swift Playgrounds to UI/UX with Figma."
+	description="IMDA LEARN Roadmaps 2027 Infocomm Club courses for MOE primary, secondary, and junior college students — Apple app development, Figma UI/UX design, and Canva AI product design."
 	canonical={canonical}
 	image={heroImage}
 	preloadHero={heroBanner ? { src: heroBanner.background } : null}
@@ -77,17 +115,16 @@ const signupLinks = [
 		<div class="ic-hero__content shell">
 			<h1 class="ic-hero__title">{heroTitle}</h1>
 			<p class="ic-hero__lead">{heroLead}</p>
-			<HeroEmailAction />
+			<HeroEmailAction href="mailto:learn@tinkertanker.com" />
 		</div>
 	</section>
 
 	<section class="ic-intro">
 		<div class="shell">
 			<p>
-				We've created training courses designed specifically for Infocomm Club students. These
-				courses are held during CCA hours at MOE schools. They help build fundamental skills
-				in topics across tech and media domains such as App Design, Development, and UI/UX.
-				Each MOE school receives support for up to two classes annually, where
+				These courses are held during CCA hours at MOE schools and build fundamental skills
+				across app design, development, UI/UX, and AI-assisted product design. Each MOE school
+				receives support for up to two classes annually, where
 				<a
 					href="https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 					target="_blank"
@@ -97,68 +134,59 @@ const signupLinks = [
 				</a>
 			</p>
 			<p>
-				To find out more, speak to us at
-				<a href="mailto:hello@tinkercademy.com">hello@tinkercademy.com</a>. 🙋🏻‍♀️
+				Schools apply through IMDA's LEARN Roadmaps application exercise — we're listed on the
+				roadmap as Tinkertanker. To find out more, speak to us at
+				<a href="mailto:learn@tinkertanker.com">learn@tinkertanker.com</a>. 🙋🏻‍♀️
 			</p>
 		</div>
 	</section>
 
-	<section class="ic-track ic-track--apple">
-		<div class="shell">
-			<h2 class="ic-track__heading">Apple: App Development</h2>
-			<div class="ic-track__badges">
-				{appleBadges.map((src) => (
-					<img class="ic-track__badge" src={src} alt="Apple education programme badge" loading="lazy" />
-				))}
+	{tracks.map((track, i) => (
+		<section class:list={['ic-track', { 'ic-track--alt': i % 2 === 0 }]}>
+			<div class="shell">
+				<h2 class="ic-track__heading">{track.heading}</h2>
+				<p class="ic-track__note">{track.note}</p>
+				<div class="ic-track__grid">
+					{track.courses.map((course) => (
+						<a class="ic-course-card" href={course.href}>
+							<div class="ic-course-card__media">
+								<img src={course.image} alt={`${course.title} course`} loading="lazy" />
+							</div>
+							<div class="ic-course-card__meta">
+								<span class="ic-course-card__pill">{course.level}</span>
+								<span class="ic-course-card__pill ic-course-card__pill--muted">{course.duration}</span>
+							</div>
+							<h3 class="ic-course-card__title">{course.title}</h3>
+							<p class="ic-course-card__body">{course.body}</p>
+							<span class="ic-course-card__cta">Read more →</span>
+						</a>
+					))}
+				</div>
 			</div>
-			<div class="ic-track__grid">
-				{appleCourses.map((course) => (
-					<a class="ic-course-card" href={course.href}>
-						<div class="ic-course-card__media">
-							<img src={course.image} alt={`${course.title} course`} loading="lazy" />
-						</div>
-						<h3 class="ic-course-card__title">{course.title}</h3>
-						<p class="ic-course-card__body">{course.body}</p>
-						<span class="ic-course-card__cta">Read more →</span>
-					</a>
-				))}
-			</div>
-		</div>
-	</section>
-
-	<section class="ic-track ic-track--figma">
-		<div class="shell">
-			<h2 class="ic-track__heading">Figma: UI/UX Design</h2>
-			<div class="ic-track__grid ic-track__grid--single">
-				{figmaCourses.map((course) => (
-					<a class="ic-course-card" href={course.href}>
-						<div class="ic-course-card__media ic-course-card__media--wide">
-							<img src={course.image} alt={`${course.title} course`} loading="lazy" />
-						</div>
-						<h3 class="ic-course-card__title">{course.title}</h3>
-						<p class="ic-course-card__body">{course.body}</p>
-						<span class="ic-course-card__cta">Read more →</span>
-					</a>
-				))}
-			</div>
-		</div>
-	</section>
+		</section>
+	))}
 
 	<section class="ic-signup">
 		<div class="shell">
-			<h2 class="ic-signup__heading">Sign up today!</h2>
+			<h2 class="ic-signup__heading">Bring a course to your Infocomm Club</h2>
+			<p class="ic-signup__note">
+				Apply for these programmes through IMDA's LEARN Roadmaps application exercise, or write to
+				us to plan the right track and level for your students.
+			</p>
 			<div class="ic-signup__grid">
-				{signupLinks.map((link) => (
-					<a
-						class="ic-signup__card"
-						href={link.href}
-						target="_blank"
-						rel="noopener"
-					>
-						<span class="ic-signup__label">{link.label}</span>
-						<span class="ic-signup__arrow">→</span>
-					</a>
-				))}
+				<a
+					class="ic-signup__card"
+					href="https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
+					target="_blank"
+					rel="noopener"
+				>
+					<span class="ic-signup__label">IMDA LEARN Roadmaps — how funding works</span>
+					<span class="ic-signup__arrow">→</span>
+				</a>
+				<a class="ic-signup__card" href="mailto:learn@tinkertanker.com">
+					<span class="ic-signup__label">Enquire — learn@tinkertanker.com</span>
+					<span class="ic-signup__arrow">→</span>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -245,7 +273,7 @@ const signupLinks = [
 		padding: 3rem 0;
 	}
 
-	.ic-track--apple {
+	.ic-track--alt {
 		background: var(--theme-surface-muted, #fafafa);
 	}
 
@@ -255,33 +283,24 @@ const signupLinks = [
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
 		color: var(--theme-heading, rgb(23, 23, 23));
-		margin: 0 0 1.5rem;
-	}
-
-	.ic-track__badges {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.5rem;
-		align-items: center;
-		margin: 0 0 1.5rem;
-	}
-
-	.ic-track__badge {
-		height: clamp(36px, 3.5vw, 48px);
-		width: auto;
-		object-fit: contain;
-	}
-
-	.ic-course-card__media {
-		aspect-ratio: 4 / 3;
-		overflow: hidden;
-		border-radius: 12px;
-		background: rgb(245, 245, 245);
 		margin: 0 0 0.5rem;
 	}
 
-	.ic-course-card__media--wide {
-		aspect-ratio: 4 / 3;
+	.ic-track__note {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.98rem;
+		line-height: var(--body-line-height);
+		color: var(--theme-muted, rgb(110, 110, 110));
+		margin: 0 0 1.5rem;
+		max-width: 70ch;
+	}
+
+	.ic-course-card__media {
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+		border-radius: 12px;
+		background: rgb(245, 245, 245);
+		margin: 0 0 0.25rem;
 	}
 
 	.ic-course-card__media img {
@@ -291,15 +310,33 @@ const signupLinks = [
 		display: block;
 	}
 
-	.ic-track__grid {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 1rem;
+	.ic-course-card__meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
 	}
 
-	.ic-track__grid--single {
-		grid-template-columns: minmax(0, 1fr);
-		max-width: 38rem;
+	.ic-course-card__pill {
+		display: inline-block;
+		padding: 0.22rem 0.6rem;
+		border-radius: 999px;
+		background: var(--theme-tint, rgba(240, 93, 87, 0.09));
+		color: var(--theme-link, var(--accent-dark));
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.75rem;
+		font-weight: 500;
+		line-height: 1.3;
+	}
+
+	.ic-course-card__pill--muted {
+		background: rgb(245, 245, 245);
+		color: var(--theme-muted, rgb(110, 110, 110));
+	}
+
+	.ic-track__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
 	}
 
 	@media (max-width: 899px) {
@@ -311,7 +348,7 @@ const signupLinks = [
 	.ic-course-card {
 		display: flex;
 		flex-direction: column;
-		gap: 0.75rem;
+		gap: 0.65rem;
 		padding: 1.5rem;
 		background: var(--theme-surface, #fff);
 		border: 1px solid var(--theme-border, rgb(229, 229, 229));
@@ -364,7 +401,16 @@ const signupLinks = [
 		font-size: clamp(1.5rem, 2.8vw, 2rem);
 		font-weight: 500;
 		color: #fff;
+		margin: 0 0 0.5rem;
+	}
+
+	.ic-signup__note {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.98rem;
+		line-height: var(--body-line-height);
+		color: rgba(255, 255, 255, 0.85);
 		margin: 0 0 1.5rem;
+		max-width: 70ch;
 	}
 
 	.ic-signup__grid {
