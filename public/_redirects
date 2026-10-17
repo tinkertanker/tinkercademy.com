@@ -20,6 +20,11 @@
 /x/tcx20/ /tinker-x/ 301
 /x/xcode/ /tinker-x/ 301
 
+# Variants still linked from imported tutorial and blog content.
+/painttinkerer /showcase/ 301
+/tutorials/finger-dexterity-game/tutorials/quick-maths /tutorials/quick-maths/ 301
+/tutorials/finger-dexterity-game/tutorials/quick-maths/ /tutorials/quick-maths/ 301
+
 # Renamed tutorial slugs.
 /tutorials/ang_bao_collector/ /tutorials/ang-bao-collector/ 301
 /tutorials/electro-theremin/ /tutorials/create-an-electro-theremin/ 301

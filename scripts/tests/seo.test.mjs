@@ -7,6 +7,35 @@ import { parse } from 'yaml';
 const read = (path) => readFile(new URL(`../../dist/${path}`, import.meta.url), 'utf8');
 const schemas = ($) => $('script[type="application/ld+json"]').toArray().map((el) => JSON.parse($(el).text()));
 
+test('launch discovery fixes preserve crawlable destinations and distinct course summaries', async () => {
+	const notFound = load(await read('404.html'));
+	assert.match(notFound('meta[name="robots"]').attr('content') ?? '', /\bnoindex\b/);
+	const redirects = await read('_redirects');
+	assert.match(redirects, /^\/painttinkerer \/showcase\/ 301$/m);
+	assert.match(redirects, /^\/tutorials\/finger-dexterity-game\/tutorials\/quick-maths\/ \/tutorials\/quick-maths\/ 301$/m);
+	for (const path of ['showcase/index.html', 'tutorials/quick-maths/index.html']) {
+		assert.equal(load(await read(path))('h1').length, 1);
+	}
+	const descriptions = [];
+	for (const slug of ['code-for-fun-baseline-workshop', 'code-for-fun-ai-workshop']) {
+		const $ = load(await read(`programmes/${slug}/index.html`));
+		const description = $('meta[name="description"]').attr('content');
+		assert.ok(description?.includes('schools'));
+		assert.ok(!description.includes('Scheme of Work'));
+		descriptions.push(description);
+	}
+	assert.notEqual(descriptions[0], descriptions[1]);
+	const llms = await read('llms.txt');
+	assert.match(llms, /^# Tinkercademy\n/);
+	const links = [...llms.matchAll(/\]\((https:\/\/tinkercademy\.com\/[^)]*)\)/g)];
+	assert.ok(links.length >= 5);
+	for (const [, href] of links) {
+		const path = new URL(href).pathname.slice(1);
+		const $ = load(await read(`${path}index.html`));
+		assert.equal($('link[rel="canonical"]').attr('href'), href);
+	}
+});
+
 test('production permits crawlers and advertises both sitemaps', async () => {
 	const robots = await read('robots.txt');
 	assert.match(robots, /User-agent: \*\nAllow: \/\nDisallow: \/review\//);
@@ -90,7 +119,7 @@ test('indexable HTML pages have complete image and search metadata', async () =>
 	}
 });
 
-test('Bing-reported pages give every image a non-empty alt attribute', async () => {
+test('Bing-reported pages label images except explicitly hidden decorative copies', async () => {
 	const paths = [
 		'index.html',
 		'programmes/swift-accelerator/index.html',
@@ -99,6 +128,6 @@ test('Bing-reported pages give every image a non-empty alt attribute', async () 
 
 	for (const path of paths) {
 		const $ = load(await read(path));
-		assert.equal($('img:not([alt]), img[alt=""]').length, 0, path);
+		assert.equal($('img:not([alt]), img[alt=""]:not([aria-hidden="true"])').length, 0, path);
 	}
 });
