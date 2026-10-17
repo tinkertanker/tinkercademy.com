@@ -1673,5 +1673,252 @@
     "ground": true
    }
   ]
+ },
+ {
+  "id": "imda-apple-2027-tracka-pri",
+  "note": "IMDA 2027 Apple Track A (Pri) — prototype on iPad.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "happy",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "canvas",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "tablet",
+    "screen": "canvas",
+    "x": 0.7,
+    "y": 0.63,
+    "w": 0.11
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-apple-2027-tracka-sec",
+  "note": "IMDA 2027 Apple Track A (Sec/JC) — prototype on iPad.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-left",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "canvas",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "tablet",
+    "screen": "canvas",
+    "x": 0.7,
+    "y": 0.63,
+    "w": 0.11
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-apple-2027-trackb-pri",
+  "note": "IMDA 2027 Apple Track B (Pri) — Swift to device.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "thumbsup",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "phone",
+    "x": 0.7,
+    "y": 0.653,
+    "w": 0.06
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-apple-2027-trackb-sec",
+  "note": "IMDA 2027 Apple Track B (Sec/JC) — Swift to device.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "salute",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "laptop",
+    "screen": "code",
+    "x": 0.53,
+    "y": 0.74,
+    "w": 0.21,
+    "logo": "swift"
+   },
+   {
+    "type": "phone",
+    "x": 0.7,
+    "y": 0.653,
+    "w": 0.06
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-figma-2027-pri",
+  "note": "IMDA 2027 Figma (Pri) — prototype canvas.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "greetings",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.55,
+    "y": 0.38,
+    "w": 0.19
+   },
+   {
+    "type": "bubble",
+    "kind": "dots",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.085,
+    "tail": "right"
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-figma-2027-sec",
+  "note": "IMDA 2027 Figma (Sec/JC) — prototype canvas.",
+  "mode": "dark",
+  "accent": "teal",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "point-right",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44,
+   "flip": true
+  },
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.55,
+    "y": 0.38,
+    "w": 0.19
+   },
+   {
+    "type": "bubble",
+    "kind": "dots",
+    "x": 0.72,
+    "y": 0.27,
+    "w": 0.085,
+    "tail": "right"
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
+ },
+ {
+  "id": "imda-canva-2027-sec",
+  "note": "IMDA 2027 Canva (Sec/JC) — AI product design.",
+  "mode": "dark",
+  "accent": "red",
+  "headlineSide": "left",
+  "mascot": {
+   "pose": "handraise",
+   "x": 0.84,
+   "y": 0.54,
+   "h": 0.44
+  },
+  "props": [
+   {
+    "type": "design-app",
+    "x": 0.55,
+    "y": 0.38,
+    "w": 0.19
+   },
+   {
+    "type": "app-builder",
+    "x": 0.72,
+    "y": 0.5,
+    "w": 0.1,
+    "ground": true
+   }
+  ],
+  "photo": {
+   "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
+   "darken": 0.4,
+   "sat": 0.25,
+   "tint": 0.78
+  }
  }
 ]
