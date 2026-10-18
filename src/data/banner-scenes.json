@@ -420,10 +420,14 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/infocomm-club/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#2E1608",
+   "#A84E14"
+  ]
  },
  {
   "id": "microbit",
@@ -1678,7 +1682,7 @@
   "id": "imda-apple-2027-tracka-pri",
   "note": "IMDA 2027 Apple Track A (Pri) — prototype on iPad.",
   "mode": "dark",
-  "accent": "teal",
+  "accent": "red",
   "headlineSide": "left",
   "mascot": {
    "pose": "happy",
@@ -1705,16 +1709,20 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#38070C",
+   "#A8232F"
+  ]
  },
  {
   "id": "imda-apple-2027-tracka-sec",
   "note": "IMDA 2027 Apple Track A (Sec/JC) — prototype on iPad.",
   "mode": "dark",
-  "accent": "teal",
+  "accent": "orange",
   "headlineSide": "left",
   "mascot": {
    "pose": "point-left",
@@ -1741,16 +1749,20 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-apple-2025-a/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#351304",
+   "#D07A10"
+  ]
  },
  {
   "id": "imda-apple-2027-trackb-pri",
   "note": "IMDA 2027 Apple Track B (Pri) — Swift to device.",
   "mode": "dark",
-  "accent": "teal",
+  "accent": "orange",
   "headlineSide": "left",
   "mascot": {
    "pose": "thumbsup",
@@ -1776,10 +1788,14 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#2E2006",
+   "#B08712"
+  ]
  },
  {
   "id": "imda-apple-2027-trackb-sec",
@@ -1811,10 +1827,14 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-apple-2025-c/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#12260F",
+   "#3F7E26"
+  ]
  },
  {
   "id": "imda-figma-2027-pri",
@@ -1846,10 +1866,14 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#1E1035",
+   "#6B2FC0"
+  ]
  },
  {
   "id": "imda-figma-2027-sec",
@@ -1882,16 +1906,20 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#0E1E38",
+   "#2557D6"
+  ]
  },
  {
   "id": "imda-canva-2027-sec",
   "note": "IMDA 2027 Canva (Sec/JC) — AI product design.",
   "mode": "dark",
-  "accent": "red",
+  "accent": "teal",
   "headlineSide": "left",
   "mascot": {
    "pose": "handraise",
@@ -1916,9 +1944,13 @@
   ],
   "photo": {
    "src": "/images/generated/hero-review/imda-figma-2025/cdx_001.webp",
-   "darken": 0.4,
-   "sat": 0.25,
-   "tint": 0.78
-  }
+   "darken": 0.55,
+   "sat": 0.6,
+   "tint": 0.55
+  },
+  "ground": [
+   "#06282C",
+   "#0E8A96"
+  ]
  }
 ]

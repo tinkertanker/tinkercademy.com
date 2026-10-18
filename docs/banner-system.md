@@ -74,6 +74,10 @@ verify that committed outputs reproduce byte-for-byte without writing files.
 - `accent` is one of `red` / `orange` / `teal` and cascades to every prop that
   doesn't set its own. Choose per domain: red = flagship/AI, orange = schools
   and making, teal = professional/web. Keep this mapping when adding scenes.
+- `ground` optionally overrides the dark-mode gradient as `[darkHex, brightHex]`
+  (diagonal, top-left → bottom-right). Keep the left stop dark — the hero scrim
+  and white headline live there; the right stop can be a saturated hue. Use it
+  to give a related family of scenes distinct palettes (e.g. the IMDA 2027 set).
 - `mascot.pose` must be a filename in `reference/stickers/`. `flip: true`
   mirrors it.
 - Props render in array order, **behind** the mascot; add `layer: "front"` to
