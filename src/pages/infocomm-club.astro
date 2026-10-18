@@ -24,7 +24,8 @@ const heroLead =
 
 const tracks = [
 	{
-		heading: 'Apple App Development',
+		brand: 'Apple',
+		heading: 'App Development',
 		note: 'Design and build apps on iPad. Two tracks, each 26 hours — pick Track A for design-first prototyping, Track B for Swift development, or run both across the year.',
 		courses: [
 			{
@@ -62,7 +63,8 @@ const tracks = [
 		],
 	},
 	{
-		heading: 'Figma UI/UX Design',
+		brand: 'Figma',
+		heading: 'UI/UX Design',
 		note: 'Industry-grade design thinking and prototyping, on free Figma Education accounts. Secondary and JC students also get a guided introduction to AI-enabled prototyping with Figma Make.',
 		courses: [
 			{
@@ -84,7 +86,8 @@ const tracks = [
 		],
 	},
 	{
-		heading: 'Canva AI Product Design',
+		brand: 'Canva',
+		heading: 'AI Product Design',
 		note: 'AI-assisted product design that keeps human judgement at the centre — students explain what they intend to build before they prompt.',
 		courses: [
 			{
@@ -144,7 +147,9 @@ const tracks = [
 	{tracks.map((track, i) => (
 		<section class:list={['ic-track', { 'ic-track--alt': i % 2 === 0 }]}>
 			<div class="shell">
-				<h2 class="ic-track__heading">{track.heading}</h2>
+				<h2 class="ic-track__heading">
+					<em class="ic-track__brand">{track.brand}</em> {track.heading}
+				</h2>
 				<p class="ic-track__note">{track.note}</p>
 				<div class="ic-track__grid">
 					{track.courses.map((course) => (
@@ -284,6 +289,12 @@ const tracks = [
 		font-weight: 500;
 		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.5rem;
+	}
+
+	.ic-track__brand {
+		font-style: italic;
+		font-weight: 600;
+		color: var(--accent, #f05d57);
 	}
 
 	.ic-track__note {
