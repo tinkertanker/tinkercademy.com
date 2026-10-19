@@ -1,339 +1,568 @@
 ---
 /**
- * /tinker-x — Astro-native rebuild of the Tinker X programme page.
+ * /tinker-x — Saturday open makerspace sessions with a mentor.
  */
 import CtaBanner from '../components/CtaBanner.astro';
-import BannerLayers from '../components/BannerLayers.astro';
-import HeroEmailAction from '../components/HeroEmailAction.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
-import { getBannerAsset } from '../lib/banner-assets';
-import { getStaticPage } from '../lib/data.js';
-import { localiseFramerImage } from '../lib/media.js';
-
-const page = getStaticPage('/tinker-x');
-if (!page) return Astro.redirect('/404');
 
 const canonical = 'https://tinkercademy.com/tinker-x/';
 
-const heroImage = localiseFramerImage(page.hero_image ?? '');
-const heroBanner = getBannerAsset(heroImage);
-const heroTitle = page.hero_title ?? 'Tinker X';
-const heroLead =
-	page.hero_lead ?? 'A flexible program for hands-on learning in coding and making.';
+// Illustrated in the same palette as "What's in the room", rather than the
+// shared T Krobot banner system. The site theme picks the day or dusk art.
+const hero = {
+	day: '/images/tinker-x/hero-day.webp',
+	dusk: '/images/tinker-x/hero-dusk.webp',
+	width: 1600,
+	height: 900,
+};
 
-const intro: string[][] = [
-	[
-		'Welcome to Tinker X, an open-ended program for anyone interested in coding and engineering. Unlike a traditional classroom, we offer a flexible mix of hands-on instruction and independent work.',
-		'We give you the resources and support to learn at your own pace, whether you\'re following a structured curriculum or bringing your own project to life.',
-	],
-	[
-		'AI is already disrupting traditional education, moving it away from a rigid, one-size-fits-all model toward a more personalized and efficient system. We\'ve embraced this change.',
-		'Our program uses a flipped classroom approach where you actively engage with materials on your own, applying a "just-in-time" learning approach. This means you focus on learning the skills you need to complete a project you\'re excited about.',
-	],
-	[
-		'This process is designed to be challenging and, at times, frustrating—and that\'s by design.',
-		'By learning to push through obstacles and solve problems on your own, you\'ll develop grit, critical thinking, and initiative — skills that are essential for a future where technology is constantly changing.',
-	],
+const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=59+Jalan+Pemimpin+%2304-01+Singapore+577218';
+
+const facts = [
+	{ label: 'When', value: 'Saturdays, 10am–4pm', note: 'Book a day, then arrive any time.' },
+	{ label: 'Where', value: '59 Jalan Pemimpin, #04‑01', note: 'Singapore 577218', href: mapsUrl },
+	{ label: 'How long', value: '2–3 hours', note: 'What most members stay for.' },
+	{ label: 'Cost', value: 'First session free', note: 'Then $50 a session.' },
 ];
 
-const pillars = [
+const steps = [
 	{
-		title: 'Extensive Materials',
-		icon: '/images/FpohkStZvk0gR2Nq3kguZF36w4.png',
-		body:
-			'We offer a wide range of course materials for all skill levels and interests, from introductory coding to data science and AI. Our curriculum has been used with thousands of students, and we also curate high-quality online content to fit your needs.',
+		title: 'Talk',
+		body: 'Tell Akmal what you want to make, or what you\'re curious about. If you\'re not sure yet, that\'s the first conversation.',
 	},
 	{
-		title: 'Maker Library',
-		icon: '/images/aEj0OcmEq9r7bC2Tt5G9mAwFQ.png',
-		body:
-			'Don\'t have the space (or you\'re just too sensible) to put a laser cutter at home? No problem. We have the equipment you need to make and tinker: electronics modules, laser cutter, 3D printer, soldering station, miter saw, and much more — plus a kit and robot library.',
+		title: 'Point',
+		body: 'He points you to a tutorial, our course notes, a kit from the library, or the right machine.',
 	},
 	{
-		title: 'Community',
-		icon: '/images/hmHMpidMcuxsdcTJFmNEZb8CY.png',
-		body:
-			'Learning on your own can get lonely. Joining a community of like-minded tinkerers is inspirational and motivational — people who just want to see what happens when you connect this to that and spend hours tinkering with code and electronics.',
+		title: 'Build',
+		body: 'You work on it. He checks in now and then, and you ask when you\'re stuck.',
+	},
+	{
+		title: 'Reflect',
+		body: 'Before you leave, you talk through what you learnt and what comes next.',
 	},
 ];
 
-const studentWorks = [
-	'/images/aDMlAfr1wDRgD0kYOnqRfrsYPWA.jpg',
-	'/images/9NO4kHaPZA5ZVeKMmeHbbqHY.jpg',
-	'/images/rvcP8r6eJeXlJJospq0hlIC8kb4.jpg',
-	'/images/7cRxG8FAtvLFi4k7hPB4h4sNtQ.jpg',
-	'/images/SJRBZb9o5rRON6eqDxyAND8PME.jpg',
-	'/images/hzbnpzSMsraQyambZtZiJlTgT4.jpg',
-	'/images/Oaxksci0HVWffjcZeHoMeLqQm5o.jpg',
-	'/images/5MEzqXIGdWHTEKNjM6MMNimMU8.jpg',
-	'/images/JYaZeJHT5IIylCsQBHRPvZ62E3Q.jpg',
-	'/images/3giBkE2iEVEPlhpuuIvcBqFDw.jpg',
-	'/images/kdn7iQjSIDerFNsu6vJ1UWSV8.jpg',
-	'/images/FMIpMq9ppOwe5S3iYTbjC5fhfs.jpg',
+const mentor = {
+	name: 'Akmal',
+	photo: '/images/Pu1dBwUoLq1avwW9evSZnAQ.jpg',
+	bio: 'Cornell grad (CS & EE) and former MOE Physics and Maths teacher. Co-founded Tinkercademy and runs Tinker X every Saturday. Spends the rest of the week vibe coding side projects, building electronics, and 3D printing and laser cutting on the same machines you\'ll use.',
+};
+
+const habits = [
+	{ title: 'Curiosity:', body: 'wanting to know why the sensor reads nonsense, not just making it stop.' },
+	{ title: 'Grit:', body: 'staying with a problem through the fourth failed attempt.' },
+	{ title: 'Systematic troubleshooting:', body: 'changing one thing at a time and testing each change.' },
+	{ title: 'Reflective practice:', body: 'looking back at what worked, what didn\'t, and what to try next.' },
+	{ title: 'Documentation:', body: 'writing the project up so someone else could build it.' },
 ];
 
-const scholarsImage = '/images/Lr9F4nS0jKHbnDjx2xFbejNdIts.png';
+const practices = [
+	{ title: 'Deciding', body: 'what to build, and cutting it down to something they can finish.' },
+	{ title: 'Developing judgement', body: 'about when and how to use AI: what to hand over, and what to work out themselves.' },
+	{ title: 'Asking good questions', body: 'of a mentor, a datasheet, or an AI.' },
+	{ title: 'Checking the AI\'s work', body: 'instead of trusting it: testing, reading the code, asking why.' },
+	{ title: 'Explaining', body: 'what they built and how it works, out loud, to a person.' },
+];
+
+const projects = [
+	{
+		name: 'Aidan',
+		title: 'Berlin clock',
+		body: 'A clock that tells the time in rows of coloured LEDs, run by a Raspberry Pi Pico. He debugged it until the lights came on in the right order.',
+		image: '/images/tinker-x/project-berlin-clock.webp',
+		url: 'https://ghost.tk.sg/berlin-clock/',
+	},
+	{
+		name: 'Raphael',
+		title: 'Arduino coffee machine',
+		body: 'Learnt to solder while wiring an Arduino into a Gaggia coffee machine.',
+		image: '/images/tinker-x/project-coffee-machine.webp',
+		url: 'https://ghost.tk.sg/arduino-powered-coffee-machine/',
+	},
+	{
+		name: 'Dhruv',
+		title: 'Word clock',
+		body: 'Worked out the hardware and wrote the code for a word clock, with no instructions to follow.',
+		image: '/images/tinker-x/project-word-clock.webp',
+		url: 'https://ghost.tk.sg/word-clock/',
+	},
+	{
+		name: 'Pin Hua',
+		title: 'Laser-cut alarm clock',
+		body: 'Designed the housing in Inkscape and laser cut it, fixing the file each time the pieces didn\'t fit.',
+		image: '/images/tinker-x/project-alarm-clock.webp',
+		url: 'https://ghost.tk.sg/alarm-clock/',
+	},
+	{
+		name: 'Kevin',
+		title: 'Class sign',
+		body: 'An engraved, LED-lit sign for his classroom door.',
+		image: '/images/tinker-x/project-class-sign.webp',
+		url: 'https://ghost.tk.sg/class-sign/',
+	},
+	{
+		name: 'Kavi',
+		title: 'Minecraft city builder',
+		body: 'Programmed an agent in Minecraft: Education Edition to build a city for him.',
+		image: '/images/tinker-x/project-minecraft.webp',
+		url: 'https://ghost.tk.sg/minecraft/',
+	},
+];
+
+const room = [
+	{
+		title: 'Laser cutter',
+		body: 'Cuts and engraves wood and acrylic. Most enclosures and signs start here.',
+		image: '/images/tinker-x/room-laser.webp',
+	},
+	{
+		title: 'Electronics library',
+		body: 'Hundreds of labelled boxes of boards, sensors, motors, LEDs and cables.',
+		image: '/images/tinker-x/room-parts.webp',
+	},
+	{
+		title: 'Electronics bench',
+		body: 'Soldering stations, hand tools, a bench power supply and an oscilloscope.',
+		image: '/images/tinker-x/room-bench.webp',
+	},
+	{
+		title: '3D printers',
+		body: 'For printing enclosures, mounts and custom parts.',
+		image: '/images/tinker-x/room-printer-k1.webp',
+	},
+	{
+		title: 'Materials and woodwork',
+		body: 'Sheet materials and the hand and power tools to cut, shape and join them.',
+		image: '/images/tinker-x/room-materials.webp',
+	},
+	{
+		title: 'Books',
+		body: 'Reference books and magazines on programming, electronics and making.',
+		image: '/images/tinker-x/room-books.webp',
+	},
+];
+
+// Two steps rather than tier cards: there are no packages to compare, so
+// the panel shows the path (free, then per Saturday) and what each day includes.
+const pricingSteps = [
+	{
+		label: 'Your first Saturday',
+		price: 'Free',
+		note: 'Write in and we\'ll find a Saturday that suits you.',
+		ctaLabel: 'Book a free trial',
+		ctaUrl: '/contact-us/',
+		primary: true,
+	},
+	{
+		label: 'Every Saturday after',
+		price: '$50',
+		unit: 'a day',
+		note: 'Book each Saturday online, whenever you want to come.',
+		ctaLabel: 'Book a day pass',
+		ctaUrl: 'https://tidycal.com/tinkerx/day-pass',
+		primary: false,
+	},
+];
+
+const included = [
+	'A mentor in the room all day',
+	'The laser cutter, 3D printers and electronics bench, after a safety briefing',
+	'The parts library, kits and our course notes',
+	'AI tools, and a laptop to borrow if you need one',
+	'Stay as long as you like, 10am–4pm',
+];
 
 const faqs = [
 	{
-		question: 'Is there a curriculum?',
+		question: 'How old does my child need to be?',
 		answer:
-			'Yes. We have a wide library of self-paced course materials, and we\'ll guide you through what to take on based on your interests and skill level.',
+			'There\'s no minimum age. Most members are in secondary school, and the youngest who get a lot out of it are around 11 or 12.',
 	},
 	{
-		question: 'What can I choose to learn?',
-		answer:
-			'Anything from introductory coding and web development, to data science, AI, game development, robotics, and physical computing with micro:bits, Arduinos, and more.',
+		question: 'Do they need coding experience?',
+		answer: 'No. Beginners start with a guided project, and experienced members bring their own.',
 	},
 	{
-		question: 'Is this suitable for my child?',
+		question: 'What if they don\'t know what to build?',
 		answer:
-			'Tinker X works best for motivated learners who enjoy exploring. Younger learners who can work independently for an hour or so at a time tend to get the most out of it.',
+			'That\'s the first conversation of every session. We\'ll suggest something based on what they like and what past members have made.',
 	},
 	{
-		question: 'Am I too old for your program?',
-		answer:
-			'No. We have members of all ages — adults, professionals, hobbyists, and retirees who just want to tinker with technology.',
+		question: 'Do they need a laptop?',
+		answer: 'Bring one if you can. We can lend one if not.',
 	},
 	{
-		question: 'Why should I go for this over a traditional enrichment centre?',
+		question: 'Do parents stay?',
+		answer: 'Your choice. Stay, drop them off, or let them come on their own.',
+	},
+	{
+		question: 'How does booking work?',
 		answer:
-			'Traditional enrichment teaches to a fixed syllabus. Tinker X teaches you to learn — giving you the resources, mentors, and space to build what you care about.',
+			'Book a Saturday, then arrive any time between 10am and 4pm that day. Most people stay 2–3 hours.',
+	},
+	{
+		question: 'Can adults join?',
+		answer: 'Yes. Tinker X isn\'t only for kids.',
+	},
+	{
+		question: 'How is this different from an enrichment class?',
+		answer:
+			'There\'s no fixed syllabus. Members pick a project and learn what they need to finish it, with help when they get stuck.',
 	},
 ];
 
-const pricingTiers = [
-	{
-		name: 'Trial Session',
-		cadence: 'New to us',
-		price: '$0',
-		currency: 'SGD',
-		perks: ['New here? Try us out!', 'Write in to us for details'],
-		ctaLabel: 'Get Started',
-		ctaUrl: '/contact-us/',
-		highlight: false,
-	},
-	{
-		name: 'Single Session',
-		cadence: 'Weekly',
-		price: '$50',
-		currency: 'SGD',
-		perks: ['Full access for one day', 'Great for small projects'],
-		ctaLabel: 'Get Started',
-		ctaUrl:
-			'https://app.acuityscheduling.com/schedule/b7469ae8/category/Tinker%2520X%2520Single%2520Sessions/appointment/9896622/calendar/2925143',
-		highlight: false,
-	},
-	{
-		name: '4 Sessions',
-		cadence: 'Monthly',
-		price: '$180',
-		currency: 'SGD',
-		perks: ['Save $20!', '120-day validity'],
-		ctaLabel: 'Get Started',
-		ctaUrl: 'https://app.acuityscheduling.com/catalog/b7469ae8?categories=Packages',
-		highlight: true,
-	},
-	{
-		name: '12 Sessions',
-		cadence: 'Quarterly',
-		price: '$480',
-		currency: 'SGD',
-		perks: ['Save $120!!', '180-day validity'],
-		ctaLabel: 'Get Started',
-		ctaUrl: 'https://app.acuityscheduling.com/catalog/b7469ae8?categories=Packages',
-		highlight: false,
-	},
-];
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map((faq) => ({
+		'@type': 'Question',
+		name: faq.question,
+		acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+	})),
+};
+
+const isExternal = (url: string) => url.startsWith('http');
 ---
 
 <ContentLayout
-	title="Tinker X — Self-paced coding and making — Tinkercademy"
-	description="A flexible, self-paced programme for curious learners. Coding and making with access to our maker library, mentors, and a community of tinkerers."
+	title="Tinker X — Saturday makerspace sessions — Tinkercademy"
+	description="Open makerspace sessions every Saturday in Singapore. Build your own projects with a mentor, a laser cutter, 3D printers, an electronics library and AI tools. First session free."
 	canonical={canonical}
-	image={heroImage}
-	preloadHero={heroBanner ? { src: heroBanner.background } : null}
+	image={hero.day}
+	preloadHero={{ src: hero.day }}
 >
+	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
 	<section class="tx-hero">
-		{heroImage && (
-			<BannerLayers src={heroImage} alt={heroTitle} />
-		)}
-		<div class="tx-hero__scrim"></div>
+		<img
+			class="tx-hero__art tx-hero__art--day"
+			src={hero.day}
+			alt=""
+			width={hero.width}
+			height={hero.height}
+			fetchpriority="high"
+		/>
+		<img
+			class="tx-hero__art tx-hero__art--dusk"
+			src={hero.dusk}
+			alt=""
+			width={hero.width}
+			height={hero.height}
+			loading="lazy"
+		/>
 		<div class="tx-hero__content shell">
-			<p class="tx-hero__eyebrow">An open-ended tinkering programme</p>
-			<h1 class="tx-hero__title">{heroTitle}</h1>
-			<p class="tx-hero__lead">{heroLead}</p>
-			<HeroEmailAction />
+			<p class="tx-hero__eyebrow">Saturdays, 10am–4pm · Jalan Pemimpin</p>
+			<h1 class="tx-hero__title">Tinker X</h1>
+			<p class="tx-hero__lead">
+				An open makerspace for kids (and grown-ups) who want to build their own projects. Drop
+				in on a Saturday, pick something to make, and work on it with a mentor in the room and
+				AI tools on hand.
+			</p>
+			<div class="tx-hero__actions">
+				<a class="tx-btn tx-btn--primary" href="/contact-us/">Try a free session</a>
+				<a class="tx-btn tx-btn--ghost" href="#pricing">See prices</a>
+			</div>
 		</div>
 	</section>
 
-	<section class="tx-story">
+	<section class="tx-facts" aria-label="Session details">
 		<div class="shell">
-			{intro.map((paras, idx) => (
-				<div class:list={['tx-story__row', idx % 2 === 1 && 'tx-story__row--reverse']}>
-					<div class="tx-story__text">
-						{paras.map((para) => <p>{para}</p>)}
+			<dl class="tx-facts__grid">
+				{facts.map((fact) => (
+					<div class="tx-fact">
+						<dt>{fact.label}</dt>
+						<dd class="tx-fact__value">
+							{fact.href ? (
+								<a href={fact.href} target="_blank" rel="noopener noreferrer">{fact.value}</a>
+							) : (
+								fact.value
+							)}
+						</dd>
+						<dd class="tx-fact__note">{fact.note}</dd>
 					</div>
-					<div class="tx-story__photo">
-						<img src={studentWorks[idx * 2]} alt={`Tinker X student project ${idx * 2 + 1}`} loading="lazy" />
-					</div>
-					<div class="tx-story__photo">
-						<img src={studentWorks[idx * 2 + 1]} alt={`Tinker X student project ${idx * 2 + 2}`} loading="lazy" />
-					</div>
-				</div>
-			))}
+				))}
+			</dl>
 		</div>
 	</section>
 
-	<section class="tx-pillars">
+	<section class="tx-section">
 		<div class="shell">
-			<div class="tx-pillars__grid">
-				{pillars.map((p) => (
-					<article class="tx-pillar">
-						<img class="tx-pillar__icon" src={p.icon} alt={`${p.title} icon`} loading="lazy" />
-						<h2 class="tx-pillar__title">{p.title}</h2>
-						<p class="tx-pillar__body">{p.body}</p>
-					</article>
+			<h2 class="tx-h2">How a Saturday works</h2>
+			<ol class="tx-steps">
+				{steps.map((step, idx) => (
+					<li class="tx-step">
+						<span class="tx-step__num" aria-hidden="true">{idx + 1}</span>
+						<h3 class="tx-step__title">{step.title}</h3>
+						<p>{step.body}</p>
+					</li>
+				))}
+			</ol>
+		</div>
+	</section>
+
+	<section class="tx-section tx-section--muted">
+		<div class="shell tx-mentor">
+			<img class="tx-mentor__photo" src={mentor.photo} alt={mentor.name} loading="lazy" />
+			<div>
+				<p class="tx-kicker">Your mentor</p>
+				<h2 class="tx-h2">{mentor.name}</h2>
+				<p class="tx-mentor__bio">{mentor.bio}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="tx-section">
+		<div class="shell tx-split tx-split--reverse">
+			<div class="tx-split__text">
+				<h2 class="tx-h2">Making real things, and getting them to work</h2>
+				<p>
+					Members build what they want to build, not what they're told to. There's no curriculum and
+					no set project, so one member makes a word clock while another wires an Arduino into a
+					coffee machine. Choosing a project, planning it and seeing it through are things most
+					students never get to practise in a classroom.
+				</p>
+				<p>
+					Physical computing is code that does something in the room: it lights an LED, turns a
+					motor, reads a sensor, or sounds an alarm at 7am. Digital making covers the rest of the
+					project, like designing a case on a laptop, then laser cutting it from plywood or 3D printing it.
+				</p>
+				<p>
+					Real things don't behave like a screen. Parts don't fit, wires come loose, and a sensor
+					reads nonsense until you find out why. So a good part of every Saturday goes into
+					troubleshooting: checking one thing at a time, measuring instead of guessing, and trying again.
+				</p>
+				<p>
+					For a curious kid, that's the fun part. Each problem is a puzzle, and they pick up the
+					theory (Ohm's law, loops, tolerances) because the project won't work without it.
+				</p>
+			</div>
+			<aside class="tx-split__card">
+				<h3>What making builds</h3>
+				<ul>
+					{habits.map((item) => (
+						<li><strong>{item.title}</strong> {item.body}</li>
+					))}
+				</ul>
+				<p class="tx-split__note">
+					These habits are what a strong maker portfolio shows. MIT, Tufts and Columbia accept maker
+					portfolios with applications, and MIT
+					<a href="https://mitadmissions.org/apply/firstyear/portfolios-additional-material/" target="_blank" rel="noopener noreferrer">tells applicants</a>
+					it's "more interested in your build process than your end results." Members write up each
+					project on the Tinker X blog, so they have a record to build one from.
+				</p>
+			</aside>
+		</div>
+	</section>
+
+	<section class="tx-section tx-section--muted">
+		<div class="shell tx-split">
+			<div class="tx-split__text">
+				<h2 class="tx-h2">Building with AI, thinking for yourself</h2>
+				<p>
+					Agentic coding tools (Claude Code, Codex, Cursor) can now build a working app from a
+					paragraph of instructions. Professional developers use them every day, and so do our
+					members. We're still working out, session by session, where they help a learner and
+					where they get in the way.
+				</p>
+				<p>
+					What we've seen so far: the AI will happily write code a 13-year-old can't read, and fix
+					a bug they never understood. So we let it handle the parts that would stall a project (a
+					library they've never used, an error message that makes no sense) and keep the thinking
+					with the member.
+				</p>
+				<p>
+					Before ChatGPT, I was the one answering those questions. AI answers most of them now. It
+					won't notice you've been stuck on the same bug for 40 minutes. It won't tell you the
+					project you picked is really three projects. And it won't ask, at the end of the day,
+					what you actually learnt.
+				</p>
+			</div>
+			<aside class="tx-split__card">
+				<h3>What members practise</h3>
+				<ul>
+					{practices.map((item) => (
+						<li><strong>{item.title}</strong> {item.body}</li>
+					))}
+				</ul>
+			</aside>
+		</div>
+	</section>
+
+	<section class="tx-section">
+		<div class="shell">
+			<h2 class="tx-h2">What members have built</h2>
+			<p class="tx-sub">A few past projects, each written up by the member who made it.</p>
+			<div class="tx-projects">
+				{projects.map((project) => (
+					<a class="tx-project" href={project.url} target="_blank" rel="noopener">
+						<img src={project.image} alt={`${project.title} by ${project.name}`} loading="lazy" width="1000" height="750" />
+						<div class="tx-project__text">
+							<h3>{project.title}</h3>
+							<p class="tx-project__name">{project.name}</p>
+							<p>{project.body}</p>
+						</div>
+					</a>
 				))}
 			</div>
-			<p class="tx-pillars__blog">
-				Read more project updates on our
-				<a href="https://ghost.tk.sg/" target="_blank" rel="noopener">blog</a>.
+			<p class="tx-more">
+				More past projects on the <a href="https://ghost.tk.sg/" target="_blank" rel="noopener">Tinker X blog</a>.
 			</p>
 		</div>
 	</section>
 
-	<section class="tx-strip">
-		<div class="tx-strip__track">
-			{studentWorks.slice(6).map((src, idx) => (
-				<div class="tx-strip__tile">
-					<img src={src} alt={`Tinker X student project ${idx + 7}`} loading="lazy" />
-				</div>
-			))}
+	<section class="tx-section tx-section--muted">
+		<div class="shell">
+			<h2 class="tx-h2">What's in the room</h2>
+			<p class="tx-sub">
+				Members can use everything here (with a safety briefing for the machines), plus our
+				course notes and a library of kits.
+			</p>
+			<div class="tx-room">
+				{room.map((item, idx) => (
+					<figure class:list={['tx-room__item', idx === 0 && 'tx-room__item--feature']}>
+						<img src={item.image} alt={`Illustration of the ${item.title.toLowerCase()}`} loading="lazy" width="1200" height="900" />
+						<figcaption>
+							<strong>{item.title}</strong>
+							<span>{item.body}</span>
+						</figcaption>
+					</figure>
+				))}
+			</div>
 		</div>
 	</section>
 
-	<section class="tx-faq">
+	<section class="tx-section" id="pricing">
 		<div class="shell">
-			<h2 class="tx-faq__heading">Frequently Asked Questions</h2>
-			<div class="tx-faq__list">
+			<h2 class="tx-h2">Try it free, then pay per session</h2>
+			<p class="tx-sub">
+				No membership and no packages. You pay only for the Saturdays you come.
+			</p>
+			<div class="tx-price">
+				<ol class="tx-price__steps">
+					{pricingSteps.map((step, idx) => (
+						<li class="tx-price__step">
+							<span class="tx-price__num" aria-hidden="true">{idx + 1}</span>
+							<div class="tx-price__body">
+								<h3 class="tx-price__label">{step.label}</h3>
+								<p class="tx-price__amount">
+									{step.price}
+									{step.unit && <span class="tx-price__unit">{step.unit}</span>}
+								</p>
+								<p class="tx-price__note">{step.note}</p>
+								<a
+									class:list={['tx-price__cta', !step.primary && 'tx-price__cta--ghost']}
+									href={step.ctaUrl}
+									target={isExternal(step.ctaUrl) ? '_blank' : undefined}
+									rel={isExternal(step.ctaUrl) ? 'noopener noreferrer' : undefined}
+								>
+									{step.ctaLabel}
+								</a>
+							</div>
+						</li>
+					))}
+				</ol>
+				<div class="tx-price__included">
+					<h3>Every session includes</h3>
+					<ul>
+						{included.map((item) => <li>{item}</li>)}
+					</ul>
+					<p class="tx-price__fine">
+						Prices in SGD. If cost is a barrier, see <a href="#scholars">Tinker X Scholars</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="tx-section tx-section--muted">
+		<div class="shell">
+			<h2 class="tx-h2">Questions parents ask</h2>
+			<div class="tx-faq">
 				{faqs.map((faq) => (
 					<details class="tx-faq__item">
-						<summary class="tx-faq__question">{faq.question}</summary>
-						<p class="tx-faq__answer">{faq.answer}</p>
+						<summary>{faq.question}</summary>
+						<p>{faq.answer}</p>
 					</details>
 				))}
 			</div>
 		</div>
 	</section>
 
-	<section class="tx-pricing">
+	<section class="tx-section tx-section--tight">
 		<div class="shell">
-			<h2 class="tx-pricing__heading">
-				Try a free trial session, then pick the package that fits.
-			</h2>
-			<p class="tx-pricing__sub">
-				Try a free trial session and see what we're all about! After that, you can continue with
-				individual sessions, or sign up for a package for additional savings.
-			</p>
-			<div class="tx-pricing__grid">
-				{pricingTiers.map((tier) => (
-					<article class:list={['tx-tier', tier.highlight && 'tx-tier--highlight']}>
-						<h3 class="tx-tier__name">{tier.name}</h3>
-						<p class="tx-tier__cadence">{tier.cadence}</p>
-						<p class="tx-tier__price">
-							<span class="tx-tier__amount">{tier.price}</span>
-							<span class="tx-tier__currency">{tier.currency}</span>
-						</p>
-						<ul class="tx-tier__perks">
-							{tier.perks.map((perk) => (
-								<li>{perk}</li>
-							))}
-						</ul>
-						<a
-							class="tx-tier__cta"
-							href={tier.ctaUrl}
-							target={tier.ctaUrl.startsWith('http') ? '_blank' : undefined}
-							rel={tier.ctaUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
-						>
-							{tier.ctaLabel}
-						</a>
-					</article>
-				))}
+			<div class="tx-scholars" id="scholars">
+				<img
+					class="tx-scholars__art"
+					src="/images/tinker-x/scholars-mentor.webp"
+					alt="Illustration of an older student showing a younger one how to solder"
+					width="1200"
+					height="900"
+					loading="lazy"
+				/>
+				<div>
+					<h2>Tinker X Scholars</h2>
+					<p>
+						If cost is what's stopping a student who already builds things, we offer heavily
+						subsidised membership. Send us a portfolio at
+						<a href="mailto:hello@tinkercademy.com">hello@tinkercademy.com</a> (effort counts more
+						than polish). In return, scholars help newer members or find another way to use their skills for the community.
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="tx-scholars">
-		<div class="shell tx-scholars__inner">
-			<img class="tx-scholars__image" src={scholarsImage} alt="Tinker X Scholars" loading="lazy" />
-			<h2 class="tx-scholars__title">Tinker X Scholars</h2>
-			<p class="tx-scholars__lead">
-				A scholarship opportunity for students who demonstrate a passion for technology.
-			</p>
-			<p>
-				Technology education is often treated as an enrichment activity, which can create
-				inequality in who has access to it. To help make technology education more equitable
-				and accessible, we are offering Tinker X scholarships for students.
-			</p>
-			<p>
-				These scholarships provide highly subsidized membership to students who are passionate
-				about technology but lack access to expert mentors, guidance, or tools.
-			</p>
-			<p>
-				To be considered, students should submit a portfolio of their previous tech-related
-				work. We're not looking for perfect results, but rather a clear demonstration of effort
-				and passion. Applicants must also show a need for financial assistance.
-			</p>
-			<p>
-				In return, Tinker X scholars will be expected to give back to the community, helping to
-				inspire the next generation of learners.
-			</p>
-			<p>
-				If you or someone you know might be a good fit, please contact us at
-				<a href="mailto:hello@tinkercademy.com">hello@tinkercademy.com</a>
-				to learn more or to apply. We are accepting applications now.
-			</p>
-		</div>
-	</section>
-
-	<CtaBanner />
+	<CtaBanner
+		text="Come down on a Saturday and build something. Your first session is free."
+		ctas={[
+			{ label: 'Book a free trial', url: '/contact-us/' },
+			{ label: 'See prices', url: '#pricing' },
+		]}
+	/>
 </ContentLayout>
 
 <style>
+	/* ── Hero ── */
 	.tx-hero {
+		--hero-bg: #f4ede2;
+		--hero-ink: #2b2724;
+		--hero-ink-soft: rgba(43, 39, 36, 0.78);
+		--hero-btn-bg: #2b2724;
+		--hero-btn-fg: #f4eee3;
+		--hero-btn-line: rgba(43, 39, 36, 0.45);
+		--hero-btn-hover: rgba(43, 39, 36, 0.08);
 		position: relative;
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
-		min-height: 480px;
+		min-height: clamp(480px, 38vw, 600px);
 		overflow: clip;
-		background: #161111;
+		background: var(--hero-bg);
 	}
 
-	.tx-hero__scrim {
+	.tx-hero__art {
 		position: absolute;
-		inset: 0;
-		background: var(--hero-desktop-scrim);
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: auto;
+		max-width: none;
+		mask-image: linear-gradient(90deg, transparent 0%, #000 22%);
 	}
 
-	@media (max-width: 809px) {
-		.tx-hero {
-			min-height: var(--hero-mobile-min-height);
-			--hero-content-padding-top: var(--hero-mobile-content-top);
-		}
-
-		.tx-hero__scrim {
-			background: var(--hero-mobile-scrim);
-		}
+	.tx-hero__art--dusk {
+		display: none;
 	}
 
 	.tx-hero__content {
 		position: relative;
+		z-index: 1;
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: center;
 		min-height: inherit;
-		padding: var(--hero-content-padding-top, clamp(4rem, 8vw, 6rem)) 0 clamp(2.5rem, 4vw, 3.5rem);
+		padding: 3.5rem 0;
 		gap: 0.75rem;
 	}
 
@@ -342,7 +571,7 @@ const pricingTiers = [
 		font-size: 0.82rem;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.8);
+		color: var(--hero-ink-soft);
 		margin: 0;
 	}
 
@@ -352,218 +581,786 @@ const pricingTiers = [
 		font-size: var(--page-title-font-size);
 		font-weight: 500;
 		line-height: 1;
-		color: #fff;
+		color: var(--hero-ink);
 		margin: 0;
-		max-width: var(--hero-title-max-width);
-		text-shadow: var(--hero-title-glow);
+	}
+
+	/* The shared red title glow is tuned for dark heroes; dark theme restores it. */
+	.tx-hero__title {
+		animation: none;
+		text-shadow: none;
 	}
 
 	.tx-hero__lead {
 		font-family: 'Rubik', sans-serif;
 		font-size: var(--lead-font-size);
 		line-height: var(--lead-line-height);
-		color: rgba(255, 255, 255, 0.92);
+		color: var(--hero-ink-soft);
 		margin: 0;
-		max-width: 56ch;
+		max-width: min(34rem, 38vw);
 	}
 
-	.tx-story {
-		padding: 3rem 0;
-	}
-
-	.tx-story__row {
-		display: grid;
-		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
-		gap: clamp(1rem, 2.5vw, 1.75rem);
-		align-items: start;
-		padding: 1.75rem 0;
-	}
-
-	.tx-story__row--reverse {
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
-	}
-
-	.tx-story__row--reverse .tx-story__text {
-		grid-column: 3;
-		grid-row: 1;
-	}
-
-	.tx-story__row--reverse .tx-story__photo:nth-of-type(2) {
-		grid-column: 1;
-		grid-row: 1;
-	}
-
-	.tx-story__row--reverse .tx-story__photo:nth-of-type(3) {
-		grid-column: 2;
-		grid-row: 1;
-	}
-
-	.tx-story__text p {
-		font-family: 'Rubik', sans-serif;
-		font-size: var(--body-font-size);
-		line-height: var(--body-line-height);
-		color: var(--theme-text, rgb(51, 51, 51));
-		margin: 0 0 1rem;
-	}
-
-	.tx-story__text p:last-child {
-		margin-bottom: 0;
-	}
-
-	.tx-story__photo {
-		aspect-ratio: 4 / 3;
-		overflow: hidden;
-		border-radius: 14px;
-		background: rgb(245, 245, 245);
-	}
-
-	.tx-story__photo img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		display: block;
-	}
-
-	@media (max-width: 899px) {
-		.tx-story__row,
-		.tx-story__row--reverse {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		.tx-story__text,
-		.tx-story__row--reverse .tx-story__text {
-			grid-column: 1 / -1;
-			grid-row: auto;
-		}
-
-		.tx-story__row--reverse .tx-story__photo:nth-of-type(2),
-		.tx-story__row--reverse .tx-story__photo:nth-of-type(3) {
-			grid-column: auto;
-			grid-row: auto;
-		}
-	}
-
-	.tx-strip {
-		width: 100vw;
-		margin-inline: calc(50% - 50vw);
-		padding: 1rem 0 2.5rem;
-		overflow: hidden;
-	}
-
-	.tx-strip__track {
+	.tx-hero__actions {
 		display: flex;
-		gap: 0.75rem;
-		padding: 0 clamp(1rem, 4vw, 3rem);
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-		scrollbar-width: none;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		margin-top: 0.5rem;
 	}
 
-	.tx-strip__track::-webkit-scrollbar {
+	.tx-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 42px;
+		padding: 0.65rem 1.15rem;
+		border-radius: 999px;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		font-weight: 500;
+		transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+	}
+
+	.tx-btn--primary {
+		background: var(--hero-btn-bg);
+		color: var(--hero-btn-fg);
+		border: 1px solid var(--hero-btn-bg);
+	}
+
+	.tx-btn--primary:hover {
+		opacity: 0.86;
+	}
+
+	.tx-btn--ghost {
+		border: 1px solid var(--hero-btn-line);
+		color: var(--hero-ink);
+	}
+
+	.tx-btn--ghost:hover {
+		border-color: var(--hero-ink);
+		background: var(--hero-btn-hover);
+	}
+
+	.tx-btn:focus-visible {
+		outline: 2px solid var(--hero-ink);
+		outline-offset: 3px;
+	}
+
+	/* Dark theme (explicit toggle, or system preference with no toggle set) */
+	:global(:root[data-theme='dark']) .tx-hero {
+		--hero-bg: #2a2622;
+		--hero-ink: #fff;
+		--hero-ink-soft: rgba(255, 255, 255, 0.88);
+		--hero-btn-bg: #fff;
+		--hero-btn-fg: #2b2724;
+		--hero-btn-line: rgba(255, 255, 255, 0.7);
+		--hero-btn-hover: rgba(255, 255, 255, 0.12);
+	}
+
+	:global(:root[data-theme='dark']) .tx-hero::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(90deg, rgba(43, 39, 36, 0.6) 0%, rgba(43, 39, 36, 0) 55%);
+		pointer-events: none;
+	}
+
+	:global(:root[data-theme='dark']) .tx-hero__art--day {
 		display: none;
 	}
 
-	.tx-strip__tile {
-		flex: 0 0 clamp(220px, 26vw, 340px);
-		aspect-ratio: 4 / 3;
-		overflow: hidden;
-		border-radius: 12px;
-		background: rgb(245, 245, 245);
-		scroll-snap-align: start;
-	}
-
-	.tx-strip__tile img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	:global(:root[data-theme='dark']) .tx-hero__art--dusk {
 		display: block;
 	}
 
-	.tx-pillars {
-		padding: 3rem 0;
-		background: var(--theme-surface-muted, #fafafa);
+	:global(:root[data-theme='dark']) .tx-hero__title {
+		animation: hero-title-glow-pulse 4.5s ease-in-out infinite;
 	}
 
-	.tx-pillars__grid {
+	@media (prefers-color-scheme: dark) {
+		:global(:root:not([data-theme])) .tx-hero {
+			--hero-bg: #2a2622;
+			--hero-ink: #fff;
+			--hero-ink-soft: rgba(255, 255, 255, 0.88);
+			--hero-btn-bg: #fff;
+			--hero-btn-fg: #2b2724;
+			--hero-btn-line: rgba(255, 255, 255, 0.7);
+			--hero-btn-hover: rgba(255, 255, 255, 0.12);
+		}
+
+		:global(:root:not([data-theme])) .tx-hero::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(90deg, rgba(43, 39, 36, 0.6) 0%, rgba(43, 39, 36, 0) 55%);
+			pointer-events: none;
+		}
+
+		:global(:root:not([data-theme])) .tx-hero__art--day {
+			display: none;
+		}
+
+		:global(:root:not([data-theme])) .tx-hero__art--dusk {
+			display: block;
+		}
+
+		:global(:root:not([data-theme])) .tx-hero__title {
+			animation: hero-title-glow-pulse 4.5s ease-in-out infinite;
+		}
+	}
+
+	@media (max-width: 809px) {
+		.tx-hero {
+			min-height: 0;
+		}
+
+		.tx-hero__art {
+			position: static;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 10;
+			object-fit: cover;
+			object-position: right center;
+			mask-image: none;
+		}
+
+		.tx-hero::after {
+			display: none;
+		}
+
+		.tx-hero__content {
+			padding: 1.5rem 0 2.5rem;
+		}
+
+		.tx-hero__lead {
+			max-width: none;
+		}
+	}
+
+	/* ── Shared section scaffolding ── */
+	.tx-section {
+		padding: clamp(2.5rem, 5vw, 4rem) 0;
+	}
+
+	.tx-section--tight {
+		padding-top: 1rem;
+	}
+
+	.tx-section--muted {
+		background: var(--theme-surface-muted, #fafafa);
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+	}
+
+	.tx-h2 {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.03em;
+		font-size: clamp(1.5rem, 2.8vw, 2rem);
+		font-weight: 500;
+		line-height: 1.15;
+		color: var(--theme-heading, rgb(23, 23, 23));
+		margin: 0 0 1.25rem;
+	}
+
+	.tx-sub {
+		font-family: 'Rubik', sans-serif;
+		font-size: 1rem;
+		line-height: var(--body-line-height);
+		color: var(--theme-muted, rgb(110, 110, 110));
+		margin: -0.5rem 0 1.75rem;
+		max-width: 62ch;
+	}
+
+	.tx-kicker {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.75rem;
+		font-weight: 500;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--theme-link, var(--accent-dark));
+		margin: 0 0 0.35rem;
+	}
+
+	/* ── Facts strip ── */
+	.tx-facts {
+		border-bottom: 1px solid var(--theme-border, rgb(229, 229, 229));
+	}
+
+	.tx-facts__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		margin: 0;
+	}
+
+	.tx-fact {
+		padding: 1.5rem 1.25rem;
+		border-left: 1px solid var(--theme-border, rgb(229, 229, 229));
+	}
+
+	.tx-fact:first-child {
+		border-left: 0;
+		padding-left: 0;
+	}
+
+	.tx-fact dt {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.72rem;
+		font-weight: 500;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--theme-muted, rgb(117, 117, 117));
+		margin: 0 0 0.35rem;
+	}
+
+	.tx-fact dd {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+	}
+
+	.tx-fact__value {
+		font-size: 1.05rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(23, 23, 23));
+	}
+
+	.tx-fact__value a {
+		color: inherit;
+		text-decoration-color: var(--theme-link, var(--accent));
+		text-underline-offset: 3px;
+	}
+
+	.tx-fact__note {
+		font-size: 0.88rem;
+		color: var(--theme-muted, rgb(110, 110, 110));
+		margin-top: 0.2rem !important;
+	}
+
+	@media (max-width: 899px) {
+		.tx-facts__grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.tx-fact,
+		.tx-fact:first-child {
+			border-left: 0;
+			padding: 1.1rem 0;
+		}
+
+		.tx-fact:nth-child(even) {
+			padding-left: 1rem;
+		}
+	}
+
+	/* ── Steps ── */
+	.tx-steps {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.tx-step {
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
+		border-radius: 18px;
+		padding: 1.4rem;
+	}
+
+	.tx-step__num {
+		display: inline-grid;
+		place-items: center;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 999px;
+		background: var(--theme-tint, rgb(253, 236, 235));
+		color: var(--theme-link, var(--accent-dark));
+		font-family: 'Fragment Mono', monospace;
+		font-size: 0.9rem;
+		margin-bottom: 0.9rem;
+	}
+
+	.tx-step__title {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.02em;
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(23, 23, 23));
+		margin: 0 0 0.4rem;
+	}
+
+	.tx-step p {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 0;
+	}
+
+	@media (max-width: 999px) {
+		.tx-steps {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 559px) {
+		.tx-steps {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* ── Mentor ── */
+	.tx-mentor {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+		align-items: center;
+	}
+
+	.tx-mentor__photo {
+		width: clamp(120px, 16vw, 180px);
+		aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 999px;
+	}
+
+	.tx-mentor .tx-h2 {
+		margin-bottom: 0.6rem;
+	}
+
+	.tx-mentor__bio {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--lead-font-size);
+		line-height: var(--lead-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 0;
+		max-width: 60ch;
+	}
+
+	@media (max-width: 599px) {
+		.tx-mentor {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* ── Text + side card (making, AI) ── */
+	.tx-split {
+		display: grid;
+		grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+		gap: clamp(1.5rem, 4vw, 3.5rem);
+		align-items: start;
+	}
+
+	.tx-split--reverse {
+		grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+	}
+
+	.tx-split--reverse .tx-split__card {
+		order: -1;
+	}
+
+	.tx-split__text p {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--body-font-size);
+		line-height: 1.65;
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 0 0 1rem;
+		max-width: 62ch;
+	}
+
+	.tx-split__card {
+		background: var(--theme-tint, rgb(253, 240, 238));
+		border-radius: 18px;
+		padding: 1.5rem 1.6rem;
+	}
+
+	.tx-split__card h3 {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.02em;
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(23, 23, 23));
+		margin: 0 0 1rem;
+	}
+
+	.tx-split__card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		gap: 0.85rem;
+	}
+
+	.tx-split__card li {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+		padding-left: 1.1rem;
+		position: relative;
+	}
+
+	.tx-split__card li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.55em;
+		width: 6px;
+		height: 6px;
+		border-radius: 999px;
+		background: var(--theme-link, var(--accent));
+	}
+
+	.tx-split__note {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 1.1rem 0 0;
+		padding-top: 1rem;
+		border-top: 1px solid var(--theme-border, rgba(0, 0, 0, 0.08));
+	}
+
+	.tx-split__card strong {
+		font-weight: 500;
+		color: var(--theme-heading, rgb(23, 23, 23));
+	}
+
+	@media (max-width: 899px) {
+		.tx-split,
+		.tx-split--reverse {
+			grid-template-columns: 1fr;
+		}
+
+		.tx-split--reverse .tx-split__card {
+			order: 0;
+		}
+	}
+
+	/* ── Projects ── */
+	.tx-projects {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 1.25rem;
 	}
 
-	.tx-pillar {
+	.tx-project {
+		display: flex;
+		flex-direction: column;
 		background: var(--theme-surface, #fff);
 		border: 1px solid var(--theme-border, rgb(229, 229, 229));
 		border-radius: 18px;
-		padding: 1.75rem;
+		overflow: hidden;
+		text-decoration: none;
+		transition: transform 0.15s ease, box-shadow 0.15s ease;
 	}
 
-	.tx-pillar__icon {
-		width: clamp(96px, 10vw, 160px);
-		height: clamp(96px, 10vw, 160px);
-		object-fit: contain;
-		margin: 0 0 1rem;
-		display: block;
+	.tx-project:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
 	}
 
-	.tx-scholars__image {
-		width: clamp(160px, 20vw, 260px);
+	.tx-project img {
+		width: 100%;
 		height: auto;
-		border-radius: 18px;
-		margin: 0 0 1.5rem;
-		display: block;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
 	}
 
-	.tx-pillar__title {
+	.tx-project__text {
+		padding: 1.1rem 1.25rem 1.3rem;
+	}
+
+	.tx-project h3 {
 		font-family: 'IBM Plex Serif', Georgia, serif;
-		letter-spacing: -0.03em;
-		font-size: 1.25rem;
+		letter-spacing: -0.02em;
+		font-size: 1.15rem;
 		font-weight: 500;
 		color: var(--theme-heading, rgb(23, 23, 23));
-		margin: 0 0 0.75rem;
+		margin: 0;
 	}
 
-	.tx-pillar__body {
+	.tx-project p {
 		font-family: 'Rubik', sans-serif;
-		font-size: 0.95rem;
+		font-size: 0.92rem;
 		line-height: var(--body-line-height);
 		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0;
 	}
 
-	.tx-pillars__blog {
-		margin: 2rem 0 0;
+	.tx-project .tx-project__name {
+		font-size: 0.82rem;
+		color: var(--theme-link, var(--accent-dark));
+		margin: 0.15rem 0 0.5rem;
+	}
+
+	.tx-more {
 		font-family: 'Rubik', sans-serif;
 		font-size: 0.95rem;
 		color: var(--theme-muted, rgb(110, 110, 110));
+		margin: 1.75rem 0 0;
 	}
 
-	.tx-pillars__blog a {
+	.tx-more a,
+	.tx-scholars a {
 		color: var(--theme-link, var(--accent-dark));
 	}
 
 	@media (max-width: 899px) {
-		.tx-pillars__grid {
+		.tx-projects {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 559px) {
+		.tx-projects {
 			grid-template-columns: 1fr;
 		}
 	}
 
-	.tx-faq {
-		padding: 3rem 0;
+	/* ── Room ── */
+	.tx-room {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.25rem;
 	}
 
-	.tx-faq__heading {
-		font-family: 'IBM Plex Serif', Georgia, serif;
-		letter-spacing: -0.03em;
-		font-size: clamp(1.5rem, 2.8vw, 2rem);
+	.tx-room__item {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+	}
+
+	.tx-room__item--feature {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+
+	.tx-room__item img {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+		border-radius: 16px;
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
+	}
+
+	.tx-room__item--feature img {
+		flex: 1;
+		min-height: 0;
+	}
+
+	.tx-room__item figcaption {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+	}
+
+	.tx-room__item figcaption strong {
+		display: block;
 		font-weight: 500;
 		color: var(--theme-heading, rgb(23, 23, 23));
-		margin: 0 0 1.5rem;
 	}
 
-	.tx-faq__list {
+	@media (max-width: 899px) {
+		.tx-room {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
+	@media (max-width: 559px) {
+		.tx-room {
+			grid-template-columns: 1fr;
+		}
+
+		.tx-room__item--feature {
+			grid-column: auto;
+			grid-row: auto;
+		}
+	}
+
+	/* ── Pricing ── */
+	.tx-price {
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+		background: var(--theme-surface, #fff);
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
+		border-radius: 18px;
+		overflow: hidden;
+		max-width: 60rem;
+	}
+
+	.tx-price__steps {
+		list-style: none;
+		margin: 0;
+		padding: 1.75rem 1.5rem;
+		display: grid;
+		gap: 1.75rem;
+	}
+
+	.tx-price__step {
+		display: grid;
+		grid-template-columns: 2rem minmax(0, 1fr);
+		gap: 1rem;
+		position: relative;
+	}
+
+	/* Line joining the two step numbers. */
+	.tx-price__step:first-child::after {
+		content: '';
+		position: absolute;
+		left: calc(1rem - 1px);
+		top: 2.4rem;
+		bottom: -1.4rem;
+		border-left: 2px dashed var(--theme-border, rgb(229, 229, 229));
+	}
+
+	.tx-price__num {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		background: var(--accent-dark);
+		color: #fff;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+
+	.tx-price__label {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.8rem;
+		font-weight: 500;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--theme-muted, rgb(117, 117, 117));
+		margin: 0.35rem 0 0;
+	}
+
+	.tx-price__amount {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 1.1;
+		color: var(--theme-heading, rgb(23, 23, 23));
+		margin: 0.3rem 0 0;
+	}
+
+	.tx-price__unit {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
+		font-weight: 400;
+		color: var(--theme-muted, rgb(117, 117, 117));
+		margin-left: 0.35rem;
+	}
+
+	.tx-price__note {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 0.35rem 0 0.9rem;
+	}
+
+	.tx-price__cta {
+		display: inline-flex;
+		align-items: center;
+		height: 40px;
+		padding: 0 1.1rem;
+		border-radius: 999px;
+		border: 1px solid var(--accent-dark);
+		background: var(--accent-dark);
+		color: #fff;
+		text-decoration: none;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+		font-weight: 500;
+	}
+
+	.tx-price__cta:hover {
+		background: rgb(154, 44, 39);
+		border-color: rgb(154, 44, 39);
+	}
+
+	.tx-price__cta--ghost {
+		background: transparent;
+		color: var(--theme-heading, rgb(23, 23, 23));
+		border-color: var(--theme-border, rgb(229, 229, 229));
+	}
+
+	.tx-price__cta--ghost:hover {
+		background: var(--theme-surface-muted, rgb(245, 245, 245));
+		border-color: var(--theme-muted, rgb(117, 117, 117));
+	}
+
+	.tx-price__included {
+		padding: 1.75rem 1.5rem;
+		background: var(--theme-surface-muted, rgb(250, 248, 245));
+		border-left: 1px solid var(--theme-border, rgb(229, 229, 229));
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tx-price__included h3 {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.02em;
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(23, 23, 23));
+		margin: 0 0 0.9rem;
+	}
+
+	.tx-price__included ul {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1.25rem;
+		display: grid;
+		gap: 0.6rem;
+	}
+
+	.tx-price__included li {
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.92rem;
+		line-height: 1.45;
+		color: var(--theme-text, rgb(51, 51, 51));
+		padding-left: 1.4rem;
+		position: relative;
+	}
+
+	.tx-price__included li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: var(--theme-link, rgb(240, 93, 87));
+		font-weight: 600;
+	}
+
+	.tx-price__fine {
+		margin: auto 0 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.82rem;
+		color: var(--theme-muted, rgb(117, 117, 117));
+	}
+
+	@media (max-width: 719px) {
+		.tx-price {
+			grid-template-columns: 1fr;
+		}
+
+		.tx-price__included {
+			border-left: 0;
+			border-top: 1px solid var(--theme-border, rgb(229, 229, 229));
+		}
+	}
+
+	/* ── FAQ ── */
+	.tx-faq {
 		display: grid;
 		gap: 0.75rem;
-		max-width: 70rem;
+		max-width: 52rem;
 	}
 
 	.tx-faq__item {
@@ -573,9 +1370,9 @@ const pricingTiers = [
 		overflow: hidden;
 	}
 
-	.tx-faq__question {
+	.tx-faq__item summary {
 		list-style: none;
-		padding: 1.1rem 1.25rem;
+		padding: 1.1rem 3rem 1.1rem 1.25rem;
 		font-family: 'Rubik', sans-serif;
 		font-size: 1rem;
 		font-weight: 500;
@@ -584,12 +1381,12 @@ const pricingTiers = [
 		position: relative;
 	}
 
-	.tx-faq__question::marker,
-	.tx-faq__question::-webkit-details-marker {
+	.tx-faq__item summary::marker,
+	.tx-faq__item summary::-webkit-details-marker {
 		display: none;
 	}
 
-	.tx-faq__question::after {
+	.tx-faq__item summary::after {
 		content: '+';
 		position: absolute;
 		right: 1.25rem;
@@ -599,11 +1396,11 @@ const pricingTiers = [
 		font-size: 1.2rem;
 	}
 
-	.tx-faq__item[open] .tx-faq__question::after {
+	.tx-faq__item[open] summary::after {
 		content: '–';
 	}
 
-	.tx-faq__answer {
+	.tx-faq__item p {
 		margin: 0;
 		padding: 0 1.25rem 1.1rem;
 		font-family: 'Rubik', sans-serif;
@@ -612,173 +1409,45 @@ const pricingTiers = [
 		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
-	.tx-pricing {
-		padding: 3rem 0;
-		background: var(--theme-surface-muted, #fafafa);
-	}
-
-	.tx-pricing__heading {
-		font-family: 'IBM Plex Serif', Georgia, serif;
-		letter-spacing: -0.03em;
-		font-size: clamp(1.5rem, 2.6vw, 1.9rem);
-		font-weight: 500;
-		color: var(--theme-heading, rgb(23, 23, 23));
-		margin: 0 0 0.75rem;
-	}
-
-	.tx-pricing__sub {
-		font-family: 'Rubik', sans-serif;
-		font-size: 1rem;
-		color: var(--theme-muted, rgb(110, 110, 110));
-		margin: 0 0 1.75rem;
-		max-width: 62ch;
-	}
-
-	.tx-pricing__grid {
+	/* ── Scholars ── */
+	.tx-scholars {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		gap: 1rem;
+		grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+		gap: clamp(1.25rem, 3vw, 2rem);
+		align-items: center;
+		border: 1px dashed var(--theme-control-border, rgb(200, 200, 200));
+		border-radius: 18px;
+		padding: 1.5rem 1.6rem;
+		max-width: 60rem;
 	}
 
-	@media (max-width: 1199px) {
-		.tx-pricing__grid {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
+	.tx-scholars__art {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 12px;
 	}
 
-	@media (max-width: 599px) {
-		.tx-pricing__grid {
+	@media (max-width: 639px) {
+		.tx-scholars {
 			grid-template-columns: 1fr;
 		}
 	}
 
-	.tx-tier {
-		background: var(--theme-surface, #fff);
-		border: 1px solid var(--theme-border, rgb(229, 229, 229));
-		border-radius: 18px;
-		padding: 1.5rem 1.35rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.85rem;
-	}
-
-	.tx-tier--highlight {
-		border-color: var(--theme-link, rgb(240, 93, 87));
-		box-shadow: 0 18px 36px rgba(240, 93, 87, 0.12);
-	}
-
-	.tx-tier__name {
+	.tx-scholars h2 {
 		font-family: 'IBM Plex Serif', Georgia, serif;
-		letter-spacing: -0.03em;
+		letter-spacing: -0.02em;
 		font-size: 1.25rem;
-		font-weight: 500;
-		color: var(--theme-heading, rgb(23, 23, 23));
-		margin: 0;
-	}
-
-	.tx-tier__cadence {
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.72rem;
-		font-weight: 500;
-		text-transform: uppercase;
-		letter-spacing: 0.035em;
-		color: var(--theme-muted, rgb(117, 117, 117));
-		margin: 0;
-	}
-
-	.tx-tier__price {
-		display: flex;
-		align-items: baseline;
-		gap: 0.35rem;
-		margin: 0.5rem 0 0;
-	}
-
-	.tx-tier__amount {
-		font-family: 'IBM Plex Serif', Georgia, serif;
-		font-size: 2.2rem;
-		font-weight: 600;
-		color: var(--theme-link, rgb(240, 93, 87));
-	}
-
-	.tx-tier__currency {
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.85rem;
-		color: var(--theme-muted, rgb(117, 117, 117));
-	}
-
-	.tx-tier__perks {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: grid;
-		gap: 0.35rem;
-	}
-
-	.tx-tier__perks li {
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.9rem;
-		color: var(--theme-text, rgb(51, 51, 51));
-		padding-left: 1.1rem;
-		position: relative;
-	}
-
-	.tx-tier__perks li::before {
-		content: '✓';
-		position: absolute;
-		left: 0;
-		color: var(--theme-link, rgb(240, 93, 87));
-	}
-
-	.tx-tier__cta {
-		margin-top: auto;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		height: 40px;
-		padding: 0 1rem;
-		border-radius: 999px;
-		background: var(--accent-dark);
-		color: #fff;
-		text-decoration: none;
-		font-family: 'Rubik', sans-serif;
-		font-size: 0.88rem;
-		font-weight: 500;
-	}
-
-	.tx-tier__cta:hover {
-		background: rgb(154, 44, 39);
-	}
-
-	.tx-scholars {
-		padding: 3rem 0;
-	}
-
-	.tx-scholars__title {
-		font-family: 'IBM Plex Serif', Georgia, serif;
-		letter-spacing: -0.03em;
-		font-size: clamp(1.6rem, 2.8vw, 2.1rem);
 		font-weight: 500;
 		color: var(--theme-heading, rgb(23, 23, 23));
 		margin: 0 0 0.5rem;
 	}
 
-	.tx-scholars__lead {
-		font-family: 'Rubik', sans-serif;
-		font-size: 1.05rem;
-		line-height: var(--body-line-height);
-		color: var(--theme-muted, rgb(110, 110, 110));
-		margin: 0 0 1.5rem;
-	}
-
 	.tx-scholars p {
 		font-family: 'Rubik', sans-serif;
-		font-size: var(--body-font-size);
+		font-size: 0.95rem;
 		line-height: var(--body-line-height);
 		color: var(--theme-text, rgb(51, 51, 51));
-		margin: 0 0 0.9rem;
-	}
-
-	.tx-scholars a {
-		color: var(--theme-link, var(--accent-dark));
+		margin: 0;
 	}
 </style>
