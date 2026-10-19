@@ -22,7 +22,7 @@ fit:
 
 ## Course Overview
 
-<p dir="auto">You might have heard of vibe coding, or you might have asked ChatGPT/Gemini/Lovable to build you a widget. Welcome to vibe coding! This is the next step. In this course, you'll learn enough to ship a full web app like a real engineer, to a GitHub repository and hosted on a live URL.</p>
+<p dir="auto">From Prompting to Pull Request is a two-day workshop for people who've built something with ChatGPT, Gemini, Lovable, or another vibe coding tool and want to work like an engineer. You'll learn the terminal, Git, and GitHub, build a web app with Claude or Codex, and ship it to a GitHub repository and a live URL.</p>
 
 ## Lesson Outcomes
 

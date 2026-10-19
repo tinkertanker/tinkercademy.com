@@ -6,7 +6,7 @@ audienceIds: ["public", "businesses"]
 domainIds: ["iot"]
 platformIds: ["esp32"]
 courseType: "public"
-cardBlurb: "More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance…"
+cardBlurb: "An SMU Academy module where participants program ESP32 microcontrollers in blocks and Python, and build connected prototypes that respond to sound, touch, and light."
 weight: 81
 signUpLabel: "Enquire now"
 signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Harnessing%20the%20Power%20of%20Internet%20of%20Things%20and%20Creative%20Digital%20Making&nid=80496"

@@ -6,7 +6,7 @@ heroImage: "/images/banners/unityarvr.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["gamedev"]
 platformIds: ["unity", "ar-vr"]
-cardBlurb: "Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working…"
+cardBlurb: "A two-day Unity course: the editor, C# scripting, and interactive 3D scenes on day 1; AR and VR experiences on day 2."
 weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -24,7 +24,7 @@ fit:
 
 ## Course Overview
 
-<p>Unity isn't just the world's leading mobile game development engine — it's a gateway to the future of immersive technology. Whether you're dreaming up AR/VR experiences or working on detailed digital twins, Unity is the tool you need to turn your big ideas into reality.</p><p>In this course, we'll guide you through Unity's core features and functionalities. On Day 1, you'll get familiar with the Unity interface, learn some C# scripting, and start creating interactive 3D environments. Then on Day 2, we'll dive into advanced AR/VR techniques and show you how to build amazing experiences for the metaverse.</p><p>This hands-on, intuitive course is perfect for aspiring developers, tech enthusiasts, and innovators. By the end, you'll have the skills to make the most of Unity, whether you're aiming to develop the next hit game, an innovative AR app, or a captivating virtual world.</p><p>Join us and transform your ideas into reality with Unity! Find out more <a href="https://unityarvr.tk.sg/" target="_blank">here</a>.</p>
+<p>Enter the Metaverse is a two-day introduction to Unity, the game engine behind many mobile games, for building augmented reality (AR) and virtual reality (VR) experiences. It suits people planning AR/VR projects or digital twins.</p><p>In this course, we'll guide you through Unity's core features and functionalities. On Day 1, you'll get familiar with the Unity interface, learn some C# scripting, and start creating interactive 3D environments. Then on Day 2, we'll dive into advanced AR/VR techniques and show you how to build amazing experiences for the metaverse.</p><p>By the end, you'll know your way around Unity well enough to start your own game, AR app, or virtual world. There's more detail on the <a href="https://unityarvr.tk.sg/" target="_blank">Unity AR/VR course site</a>.</p>
 
 ## Lesson Outcomes
 

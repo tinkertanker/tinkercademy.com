@@ -6,7 +6,7 @@ heroImage: "/images/banners/certificate-in-technology-foundations-unleash-the-po
 audienceIds: ["businesses", "public"]
 domainIds: ["cryptography"]
 platformIds: ["stellar"]
-cardBlurb: "Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and…"
+cardBlurb: "An SMU Academy course on how blockchains work: cryptography and signatures, Bitcoin, Ethereum, and Stellar compared, and a simple decentralised app built on Stellar."
 weight: 80
 signUpLabel: "Enquire now"
 signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Unleash%20the%20Potential%20of%20Blockchain%20Technology&nid=80491"
@@ -19,7 +19,7 @@ fit:
 
 ## Course Overview
 
-<p>Blockchain has garnered worldwide attention since the birth of cryptocurrency. Through an interactive exploration on its building blocks, discover how blockchain came about and what makes it so intriguing. This programme discusses real-world examples and contrasts between specific blockchain implementations, such as Bitcoin, Ethereum and Stellar, for a better understanding to the concept of blockchain technology. Click <a href="https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology" target="_blank">here</a> to find out more.</p>
+<p>Unleash the Potential of Blockchain Technology is an SMU Academy course, taught by Tinkercademy, on how blockchains work and where they're used. You'll take apart the building blocks (cryptography, signatures, and consensus), compare real implementations such as Bitcoin, Ethereum, and Stellar, and build a simple decentralised app on Stellar. Enrolment is through the <a href="https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology" target="_blank">SMU Academy course page</a>.</p>
 
 ## Lesson Outcomes
 

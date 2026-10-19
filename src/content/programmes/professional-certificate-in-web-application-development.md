@@ -6,7 +6,7 @@ heroImage: "/images/banners/professional-certificate-in-web-application-developm
 audienceIds: ["public", "businesses"]
 domainIds: ["uiux"]
 platformIds: ["bubble", "framer", "html-css", "javascript"]
-cardBlurb: "In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to…"
+cardBlurb: "An SMU Academy certificate in seven modules, taught online: prototyping, UI design, front-end and back-end web development, databases, and frameworks."
 weight: 82
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -21,7 +21,7 @@ fit:
 
 ## Course Overview
 
-<p>In today's digital age, a well-designed and intuitive user interface is crucial for the success of any web application. This course will equip you with the essential skills to create stunning and functional user interfaces using powerful no-code tools like Framer and Bubble. By mastering prototyping techniques and UI/UX design principles, you'll be able to build exceptional web applications that captivate your users and drive business results.</p><p><strong>PREREQUISITES</strong></p><ul style="--framer-text-color: rgb(0, 0, 0); --framer-font-size: 16px; --framer-text-transform: none; --framer-text-stroke-width: 0px; --framer-text-alignment: start;"><li data-preset-tag="p"><p>Must have at least a Polytechnic Diploma</p></li><li data-preset-tag="p"><p>Must have basic HTML/ CSS knowledge</p></li><li data-preset-tag="p"><p>Must be computer literate</p></li></ul><p><strong>SYSTEM REQUIREMENTS</strong></p><p>Functional Laptop: (1) CPU must be of at least intel core I3, (2) GPU must have an integrated graphics card and (3) RAM must be of at least 4GB&nbsp;</p>
+<p>The Professional Certificate in Web Application Development is a seven-module SMU Academy programme, taught online by Tinkercademy, that covers how to design, prototype, and build web applications. You'll start with UI/UX design and prototyping in tools such as Framer and Bubble, then move through front-end and back-end development, databases, and frameworks.</p><p><strong>PREREQUISITES</strong></p><ul style="--framer-text-color: rgb(0, 0, 0); --framer-font-size: 16px; --framer-text-transform: none; --framer-text-stroke-width: 0px; --framer-text-alignment: start;"><li data-preset-tag="p"><p>Must have at least a Polytechnic Diploma</p></li><li data-preset-tag="p"><p>Must have basic HTML/ CSS knowledge</p></li><li data-preset-tag="p"><p>Must be computer literate</p></li></ul><p><strong>SYSTEM REQUIREMENTS</strong></p><p>Functional Laptop: (1) CPU must be of at least intel core I3, (2) GPU must have an integrated graphics card and (3) RAM must be of at least 4GB&nbsp;</p>
 
 ## Lesson Outcomes
 

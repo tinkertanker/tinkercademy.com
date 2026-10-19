@@ -6,7 +6,7 @@ heroImage: "/images/banners/imda-microbit-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["iot", "making"]
 platformIds: ["makecode-arcade", "bbc-micro-bit"]
-cardBlurb: "In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to…"
+cardBlurb: "A 24-hour course for primary schools: students program the micro:bit in block-based MakeCode to control servos, LED strips, and buzzers."
 weight: 86
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
@@ -21,7 +21,7 @@ fit:
 
 ## Course Overview
 
-<p>In this programme, students will get started with the micro:bit, a programmable microcontroller that serves to introduce coding, electronics, and hands-on digital making to learners of all ages. The micro:bit can be easily programmed through a block-based coding language called MakeCode. Students will explore computational thinking through the use of the micro:bit and various other external components designed to engage and enthrall students. With components that move (servo), light up (LED strip) and make noise (buzzer), students will wield the power to control the physical world in code.</p>
+<p>Digital Making with micro:bit is a 24-hour course that introduces primary school students to coding and electronics with the micro:bit, a pocket-sized programmable microcontroller. Students program it in MakeCode, a block-based language, and practise computational thinking by wiring up components that move (servos), light up (LED strips), and make noise (buzzers).</p>
 
 ## Lesson Outcomes
 

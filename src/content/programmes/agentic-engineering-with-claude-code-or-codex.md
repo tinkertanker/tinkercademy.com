@@ -6,7 +6,7 @@ heroImage: "/images/banners/advanced-agentic-coding-with-claude-code-or-codex.we
 audienceIds: ["businesses", "public"]
 domainIds: ["ai-engineering", "software-engineering"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js", "python"]
-cardBlurb: "Take an idea from problem framing to a working AI product with Claude Code or Codex. Practise planning, context, tools, collaboration, and review…"
+cardBlurb: "A two-day workshop for experienced developers: direct Claude Code or Codex through five projects, from problem framing to a reviewed, working AI product."
 weight: 210
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"

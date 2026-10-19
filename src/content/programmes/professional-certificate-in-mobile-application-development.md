@@ -6,7 +6,7 @@ heroImage: "/images/banners/professional-certificate-in-mobile-application-devel
 audienceIds: ["public", "businesses"]
 domainIds: ["appdev", "uiux"]
 platformIds: ["android-studio", "javascript", "sql"]
-cardBlurb: "In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps…"
+cardBlurb: "An SMU Academy certificate in seven two-day modules: design, build, and deploy full-stack iOS and Android apps. For people who already code."
 weight: 88
 homeFeaturedRank: 7
 signUpLabel: "Enquire now"
@@ -22,7 +22,7 @@ fit:
 
 ## Course Overview
 
-<p>In today's digital age, mobile apps have become an integral part of our daily lives. This course empowers you to harness the power of mobile technology and create innovative apps for iOS and Android platforms. You'll learn essential programming languages, design principles, and development tools to bring your app ideas to life.</p><h3>Who Should Attend</h3><p>Aspiring app developers who want to build full-stack mobile applications that can be published online for download or saleAnyone with an interest in learning the fundamentals of mobile app design and developmentProfessionals with coding experience, but new to mobile app development.</p><p><strong>PREREQUISITES: </strong>Experience in other programming languages</p>
+<p>The Professional Certificate in Mobile Application Development is a seven-module SMU Academy programme, taught by Tinkercademy, for people who already code and want to build full-stack apps for iOS and Android. You'll learn app design and prototyping, mobile development tools, databases, and web back-ends, and finish with a project.</p><h3>Who Should Attend</h3><p>Aspiring app developers who want to build full-stack mobile applications that can be published online for download or saleAnyone with an interest in learning the fundamentals of mobile app design and developmentProfessionals with coding experience, but new to mobile app development.</p><p><strong>PREREQUISITES: </strong>Experience in other programming languages</p>
 
 ## Lesson Outcomes
 

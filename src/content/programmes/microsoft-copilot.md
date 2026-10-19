@@ -1,12 +1,12 @@
 ---
 title: "AI and Productivity with Microsoft Copilot"
-subtitle: "An introductory course on leveraging Microsoft Copilot to enhance productivity."
+subtitle: "An introductory course on using Microsoft Copilot at work."
 duration: "2 days"
 heroImage: "/images/banners/microsoft-copilot.webp"
 audienceIds: ["tech-productivity", "businesses", "public"]
 domainIds: ["tech-productivity"]
 platformIds: ["microsoft-copilot"]
-cardBlurb: "Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of…"
+cardBlurb: "A 1 to 2 day course for staff: how AI works, and how to use Microsoft Copilot to draft, summarise, analyse, and automate everyday tasks."
 weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -23,7 +23,7 @@ fit:
 
 ## Course Overview
 
-<p>Microsoft Copilot is an advanced AI assistant integrated into Singapore’s Ministry of Education (MOE) and other leading corporations. This innovative tool harnesses the power of artificial intelligence to revolutionize the way you work. By automating routine tasks, providing intelligent suggestions, and enhancing creativity, Copilot empowers you to focus on strategic initiatives and achieve greater productivity.</p>
+<p>AI and Productivity with Microsoft Copilot is a one- or two-day course for staff who want to use Copilot, Microsoft's AI assistant, in their everyday work. Copilot is in use at Singapore's Ministry of Education (MOE) and many companies. You'll learn how it drafts, summarises, and suggests, and use it to take routine tasks off your plate.</p>
 
 ## Lesson Outcomes
 

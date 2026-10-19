@@ -6,7 +6,7 @@ heroImage: "/images/banners/digital-making-with-micro-bit-iot.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["iot", "cs"]
 platformIds: ["bbc-micro-bit"]
-cardBlurb: "Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the…"
+cardBlurb: "An introductory course for adults: program a micro:bit, learn how IoT devices share data, and build a small connected project over 1 to 2 days."
 weight: 0
 homeFeaturedRank: 6
 signUpLabel: "Enquire now"
@@ -24,7 +24,7 @@ fit:
 
 ## Course Overview
 
-<p>Dive into the exciting world of digital making with micro:bit and IoT! This powerful combination empowers you to create interactive projects that bridge the gap between the digital and physical world. With micro:bit's user-friendly interface and IoT's vast connectivity, learners can build smart devices, automate tasks, and explore endless possibilities.</p>
+<p>Digital Making with micro:bit &amp; IoT is an introductory course for adults on coding physical devices. You'll program the micro:bit, a pocket-sized microcontroller, and connect it to the Internet of Things (IoT) to build small smart devices: things that sense their surroundings, respond, and send data online.</p>
 
 ## Lesson Outcomes
 

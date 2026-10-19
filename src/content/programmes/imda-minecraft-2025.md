@@ -6,7 +6,7 @@ heroImage: "/images/banners/imda-minecraft-2025.webp"
 audienceIds: ["students"]
 domainIds: ["design-thinking", "gamedev"]
 platformIds: ["makecode-arcade", "minecraft"]
-cardBlurb: "In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a…"
+cardBlurb: "A 24-hour block-coding course: students make retro games in MakeCode Arcade and build 3D worlds in Minecraft Education, at beginner and intermediate levels."
 weight: 85
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"

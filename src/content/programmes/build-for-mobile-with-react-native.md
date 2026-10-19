@@ -6,7 +6,7 @@ heroImage: "/images/banners/build-for-mobile-with-react-native.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["software-engineering", "appdev"]
 platformIds: ["javascript", "react-native"]
-cardBlurb: "Jump into mobile app development and build real apps that work on both iOS and Android!Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences…"
+cardBlurb: "A two-day React Native course: build three iOS and Android apps with JavaScript and Expo, and test them on your own phone."
 weight: 93
 homeFeaturedRank: 5
 signUpLabel: "Enquire now"
@@ -25,7 +25,7 @@ fit:
 
 ## Course Overview
 
-<p>Jump into mobile app development and build real apps that work on both iOS and Android!</p><p>Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences that run seamlessly across platforms? The secret is React Native: Meta's powerful framework that lets you write code once, and deploy everywhere.</p><p>This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality.</p><p>Perfect for web developers looking to expand into mobile, or anyone wanting to prototype app ideas quickly. By the end, you'll have three working apps in your portfolio and the confidence to build your own mobile projects. No prior mobile development experience required; just bring your curiosity and a laptop.</p>
+<p>Build for Mobile is a two-day course in React Native, Meta's framework for building iOS and Android apps from one JavaScript codebase. It's the same framework behind apps such as Instagram, Airbnb, and Discord.</p><p>This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality.</p><p>It suits web developers moving into mobile, and anyone who wants to prototype app ideas quickly. By the end, you'll have three working apps and the basics to start your own. No mobile development experience is needed; bring a laptop.</p>
 
 ## Lesson Outcomes
 

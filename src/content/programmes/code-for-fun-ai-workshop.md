@@ -6,7 +6,7 @@ heroImage: "/images/banners/code-for-fun-ai-workshop.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ml-ds", "cs"]
 platformIds: ["scratch", "python", "bbc-micro-bit", "makecode-arcade"]
-cardBlurb: "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…"
+cardBlurb: "AI for Fun modules for MOE schools: generative AI and smart robots for primary students, and a 10-hour module on data, bias, LLMs, and chatbots for secondary students."
 weight: 100
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:imda_codesg@imda.gov.sg"
@@ -22,7 +22,7 @@ fit:
 
 ## Course Overview
 
-<p><strong>Our CFF 2025 Scheme of Work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>
+<p>AI for Fun is a CODE@SG programme by IMDA and MOE that teaches primary and secondary students how artificial intelligence works, through hands-on lessons on generative AI, chatbots, and smart robots. This page describes how we teach it.</p><p><strong>Our scheme of work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>
 
 ## Lesson Outcomes
 

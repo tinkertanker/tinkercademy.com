@@ -6,7 +6,7 @@ heroImage: "/images/banners/swift-accelerator.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]
-cardBlurb: "The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications.…"
+cardBlurb: "An eight-month programme, fully subsidised by IMDA for successful applicants, where students learn Swift and publish an iOS app on the App Store."
 weight: 67
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -24,7 +24,7 @@ fit:
 
 ## Course Overview
 
-<p>The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications. Through hands-on projects and expert mentorship, participants will master the Swift programming language, adhere to Apple's Human Interface Guidelines, and leverage the latest development tools. The program culminates in the development and publishing of a fully functional iOS app on the App Store.</p>
+<p>Swift Accelerator is an eight-month app development programme for students, fully subsidised by IMDA for successful applicants and held at Apple's Singapore office. Through hands-on projects and mentoring, participants learn the Swift programming language, design to Apple's Human Interface Guidelines, and finish by publishing a working iOS app on the App Store.</p>
 
 ## Lesson Outcomes
 

@@ -6,7 +6,7 @@ heroImage: "/images/banners/iotmaker.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["making", "iot"]
 platformIds: ["3d-printing", "m5stack"]
-cardBlurb: "Ever wondered how things are made, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are…"
+cardBlurb: "A 1 to 2 day course: program microcontrollers to sense sound, touch, and light, send data online, and design and 3D print your own parts."
 weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -24,7 +24,7 @@ fit:
 
 ## Course Overview
 
-<p>Ever wondered how things are <em>made</em>, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other "Internet of Things" tech gadgets work? These devices are transforming our daily routines, making life more convenient and connected.</p><p>In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing. </p><p>This course is perfect whether you’re looking to start a new project, boost your tech skills, or just have some fun creating. It’s practical, engaging, and designed to help you bring your ideas to life. Come join us and experience the thrill of digital making! Find out more <a href="https://iotmaker.tk.sg/" target="_blank">here</a>.</p>
+<p>Digital Maker is an introductory course in how smart devices are built and made. Smart fridges, doorbells, Amazon Echo, and Google Home are all Internet of Things (IoT) devices: small computers that sense the world and share data online. You'll build simple versions of your own.</p><p>In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing. </p><p>It suits anyone starting a hardware project, building tech skills, or making things for fun. There's more detail on the <a href="https://iotmaker.tk.sg/" target="_blank">Digital Maker course site</a>.</p>
 
 ## Lesson Outcomes
 

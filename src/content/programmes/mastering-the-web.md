@@ -6,7 +6,7 @@ heroImage: "/images/banners/mastering-the-web.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["webdev", "software-engineering"]
 platformIds: ["html-css", "javascript", "sql", "flask"]
-cardBlurb: "Discover the inner workings of web applications in just 1-2 days!Web apps are part of everyday life, from banking, to email, to shopping, and productivity. What actually happens,…"
+cardBlurb: "A 1 to 2 day course on how web apps work: HTML, CSS, and JavaScript on day 1; servers, databases, and APIs with Python and Flask on day 2."
 weight: 93
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -24,7 +24,7 @@ fit:
 
 ## Course Overview
 
-<p>Discover the inner workings of web applications in just 1-2 days!</p><p>Web apps are part of everyday life, from banking, to email, to shopping, and productivity. What actually happens, though, between the moment you click on a URL, and when a fully-fledged web app shows up in your favourite browser?</p><p>This programme takes you from the basics of HTML, CSS, and JavaScript on the frontend (day 1), to servers and databases on the backend (day 2). Get a taste of web development, and gain the skills to communicate effectively with tech teams and understand the web's potential.</p><p>Perfect for fuelling your startup idea or web app prototype, this hands-on, intuitive course will have you interfacing confidently with developers in no time. Join us and unlock the power of web technologies! Find out more <a href="https://webmaster.tk.sg/" target="_blank">here</a>.</p>
+<p>Mastering the Web is a one- or two-day course on how web applications work, from the page in your browser to the server and database behind it. It answers a simple question: what actually happens between clicking a link and seeing a working web app?</p><p>This programme takes you from the basics of HTML, CSS, and JavaScript on the frontend (day 1), to servers and databases on the backend (day 2). Get a taste of web development, and gain the skills to communicate effectively with tech teams and understand the web's potential.</p><p>It suits founders with a web app idea, and anyone who works with developers and wants to follow the conversation. There's more detail on the <a href="https://webmaster.tk.sg/" target="_blank">Mastering the Web course site</a>.</p>
 
 ## Lesson Outcomes
 

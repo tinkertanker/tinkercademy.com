@@ -6,7 +6,7 @@ heroImage: "/images/banners/ri-futurecreate-maker-programme-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["making", "design-thinking"]
 platformIds: ["3d-printing", "arduino", "scratch"]
-cardBlurb: "The RI FutureCreate Maker Programme is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven…"
+cardBlurb: "A four-year maker programme for Raffles Institution students, from hand tools and electronics to a self-directed project in Year 4."
 weight: 89
 seoTitle: "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a cardboard marble run and a cardboard house, over a faded photo of a school campus."
@@ -19,7 +19,7 @@ fit:
 
 ## Course Overview
 
-<p>The <strong>RI</strong> <strong>FutureCreate Maker Programme</strong> is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven interactive sessions, participants will dive into fabrication techniques, structural design, motion mechanics, and sensory experiences like sound and light. From crafting everyday solutions to building whimsical contraptions, students will experiment with materials, tools, and innovative processes to bring their visions to life. Whether shaping, assembling, coding, or storytelling through movement, this programme encourages a maker’s mindset—blending art, science, and problem-solving to inspire the next generation of inventors.</p>
+<p>The <strong>RI</strong> <strong>FutureCreate Maker Programme</strong> is a hands-on exploration of creativity, design, and engineering, where students transform ideas into tangible creations. Across seven interactive sessions, participants will dive into fabrication techniques, structural design, motion mechanics, and sensory experiences like sound and light. From crafting everyday solutions to building whimsical contraptions, students will experiment with materials, tools, and innovative processes to bring their visions to life. Whether they're shaping, assembling, coding, or telling stories through movement, students practise a maker's habits: trying things first, and mixing art, science, and problem-solving.</p>
 
 ## Lesson Outcomes
 

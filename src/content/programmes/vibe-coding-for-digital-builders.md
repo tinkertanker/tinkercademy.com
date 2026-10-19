@@ -6,7 +6,7 @@ heroImage: "/images/banners/vibe-coding-for-digital-builders.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["ai-engineering"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
-cardBlurb: "Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in…"
+cardBlurb: "A two-day workshop: research a problem with ChatGPT, design it in Figma, and build a working web app with Lovable and Supabase, without writing code by hand."
 weight: 99
 homeFeaturedRank: 3
 signUpLabel: "Enquire now"
@@ -25,7 +25,7 @@ fit:
 
 ## Course Overview
 
-<p>Generative AI is reshaping the way organisations approach digital transformation, product design, and application development. This workshop provides hands-on experience in leveraging AI-driven tools like ChatGPT, Figma, and Lovable to rapidly prototype, design, and deploy web applications.</p><p>In this practical two-day course, you'll explore how generative AI can be effectively integrated into your organisation's workflow. </p><ul><li data-preset-tag="p"><p>Starting with problem discovery and analysis, you'll harness ChatGPT for deep research, solution proposals, user persona creation, and user acceptance testing (UAT) writing. </p></li><li data-preset-tag="p"><p>You'll then transition into visual design with Figma, creating user-centric prototypes and UI definitions. </p></li><li data-preset-tag="p"><p>Finally, you'll employ Lovable, a powerful vibe-coding platform, to build and debug a complete web app, backed by Supabase, using natural language prompts.</p></li></ul>
+<p>Vibe Coding for Digital Builders is a two-day workshop where non-programmers build and deploy a working web app with AI tools. You'll use ChatGPT, Figma, and Lovable to go from a problem to a designed, deployed prototype, describing what you want in plain language instead of writing code by hand.</p><p>In this practical two-day course, you'll explore how generative AI can be effectively integrated into your organisation's workflow. </p><ul><li data-preset-tag="p"><p>Starting with problem discovery and analysis, you'll use ChatGPT for deep research, solution proposals, user persona creation, and user acceptance testing (UAT) writing. </p></li><li data-preset-tag="p"><p>You'll then transition into visual design with Figma, creating user-centric prototypes and UI definitions. </p></li><li data-preset-tag="p"><p>Finally, you'll employ Lovable, a powerful vibe-coding platform, to build and debug a complete web app, backed by Supabase, using natural language prompts.</p></li></ul>
 
 ## Lesson Outcomes
 

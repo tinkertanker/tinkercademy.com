@@ -6,7 +6,7 @@ heroImage: "/images/banners/imda-phaser-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["gamedev"]
 platformIds: ["html-css", "javascript", "git-github", "microsoft-copilot"]
-cardBlurb: "Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design…"
+cardBlurb: "A 24-hour course where students learn HTML, JavaScript, and VS Code, then build 2D browser games with Phaser and AI-assisted coding."
 weight: 75
 seoTitle: "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, running past a laptop showing a 2D game and a handheld game console, over a faded photo of a classroom."

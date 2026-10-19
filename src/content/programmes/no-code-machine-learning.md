@@ -6,7 +6,7 @@ heroImage: "/images/banners/no-code-machine-learning.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ml-ds"]
 platformIds: ["orange"]
-cardBlurb: "No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and…"
+cardBlurb: "Machine learning without code: build classification, regression, and clustering workflows in Orange, a free visual tool, and apply them to real problems."
 weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
@@ -23,7 +23,7 @@ fit:
 
 ## Course Overview
 
-<p>No-code machine learning empowers you to harness the power of AI without writing a single line of code. With user-friendly platforms like Orange, you can easily build, train, and deploy sophisticated machine learning models. This course will guide you through the entire process, from data preparation to model deployment, enabling you to unlock the potential of AI and drive data-driven insights.</p>
+<p>No-Code Machine Learning is a one- or two-day course on how machine learning works, taught without programming. You'll use Orange, a free visual tool, to prepare data, then build, train, and evaluate models by connecting blocks on screen, all the way from raw data to predictions.</p>
 
 ## Lesson Outcomes
 
