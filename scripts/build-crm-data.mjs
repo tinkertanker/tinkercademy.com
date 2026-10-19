@@ -581,6 +581,12 @@ async function writeJsonFile(fileName, value) {
 
 const crawl = JSON.parse(await readFile(CRAWL_FILE, 'utf8'));
 const pages = crawl.pages ?? [];
+/* Every output below is regenerated from Framer handover data. Without it the
+   script would overwrite the committed data with empty collections. */
+if (!pages.some((page) => page.framer?.hasHandover)) {
+	console.error(`${CRAWL_FILE} has ${pages.length} page(s) and none carry Framer handover data; refusing to overwrite src/data.`);
+	process.exit(1);
+}
 const programmePages = pages.filter((page) => page.type === 'programme');
 const tutorialPages = pages.filter((page) => page.type === 'tutorial');
 const staticPages = pages.filter((page) => page.type === 'static' || page.type === 'root');

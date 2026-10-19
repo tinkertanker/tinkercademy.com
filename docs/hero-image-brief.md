@@ -171,6 +171,11 @@ Re-running:
 
 ## Applying picks (2026-04-30)
 
+> **Retired (Oct 2026).** `apply-hero-picks.py`, `optimise-heroes.py` and the
+> `screenshot-pages` helpers were removed once every hero moved to the banner
+> compositor; re-applying this manifest would overwrite the composed banners.
+> Recover them from git history only for archaeology.
+
 The user reviewed `/review/hero-proposals/` and froze a manifest of decisions in `src/data/hero-image-decisions.json`. Each entry is `{"id": "...", "image": "..."}` (new hero) or `{"id": "...", "keep": true}` (retain current). Optional `alternates` carries any non-picked candidates the user wanted preserved on the review page.
 
 Apply / re-apply the manifest:

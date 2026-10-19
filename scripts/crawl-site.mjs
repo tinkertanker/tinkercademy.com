@@ -83,8 +83,13 @@ async function fetchText(url) {
 }
 
 async function getSitemapUrls() {
-	const { text } = await fetchText(`${SITE_ORIGIN}/sitemap.xml`);
+	const sitemapUrl = `${SITE_ORIGIN}/sitemap.xml`;
+	const { status, text } = await fetchText(sitemapUrl);
+	if (status < 200 || status >= 300) {
+		throw new Error(`${sitemapUrl} returned HTTP ${status}; the Framer site this crawler targets may be retired.`);
+	}
 	const urls = [...text.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]).filter(Boolean);
+	if (urls.length === 0) throw new Error(`${sitemapUrl} listed no URLs.`);
 	return uniqueBy(urls, (url) => url);
 }
 

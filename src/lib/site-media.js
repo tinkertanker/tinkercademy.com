@@ -129,11 +129,3 @@ export const HOME_FLAGSHIP_IMAGES = /** @type {Record<string, string>} */ ({
 	'IMDA LEARN Roadmap': '/images/banners/flagship-imda-learn.webp',
 	'Code For Fun': '/images/banners/flagship-code-for-fun.webp',
 });
-
-// ── Popular course card images ────────────────────────────────────
-export const HOME_POPULAR_COURSE_ICONS = /** @type {Record<string, string>} */ ({
-	'vibe-coding-for-digital-builders-lovable-replit': '/images/courses/lovable.png',
-	'vibe-coding-for-digital-builders': '/images/courses/lovable.png',
-	'knowledge-powered-ai-with-chatgpt': '/images/courses/chatgpt.png',
-	'build-for-mobile-with-react-native': '/images/courses/react-native.png',
-});

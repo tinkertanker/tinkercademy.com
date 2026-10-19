@@ -1,13 +1,8 @@
 ---
-import ContentBlocks from '../components/ContentBlocks.astro';
 import BannerLayers from '../components/BannerLayers.astro';
 import CourseGrid from '../components/CourseGrid.astro';
-import CtaBanner from '../components/CtaBanner.astro';
 import HeroEmailAction from '../components/HeroEmailAction.astro';
-import HeroMedia from '../components/HeroMedia.astro';
 import LogoCarouselSection from '../components/LogoCarouselSection.astro';
-import PageHero from '../components/PageHero.astro';
-import RichContent from '../components/RichContent.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../lib/banner-assets';
 import { getSiteData, getNavPillsForPage } from '../lib/data.js';
@@ -20,17 +15,13 @@ import {
 	toProgrammeCardData,
 } from '../lib/programmes.ts';
 
+/* Only the course listings render here; every other static page has a
+   dedicated .astro file. */
 export function getStaticPaths() {
-	/* Pages with dedicated .astro files — exclude from the dynamic catch-all */
-	const dedicatedPages = new Set([
-		'about-us', 'contact-us', 'showcase', 'microbit', 'tinker-x', 'infocomm-club', 'professionals', 'schools', 'individuals',
-	]);
+	const courseListingSlugs = ['courses-all', 'courses-professionals', 'courses-schools'];
 	const site = getSiteData();
 	return site.staticPages
-		.filter((page: any) => page.path !== '/')
-		.filter((page: any) => !page.path.startsWith('/programmes/') && !page.path.startsWith('/tutorials/'))
-		.filter((page: any) => page.path.split('/').filter(Boolean).length === 1)
-		.filter((page: any) => !dedicatedPages.has(page.slug))
+		.filter((page: any) => courseListingSlugs.includes(page.slug) && page.path === `/${page.slug}`)
 		.map((page: any) => ({
 			params: { slug: page.slug },
 			props: { page },
@@ -42,31 +33,21 @@ const site = getSiteData();
 const canonicalPath = page.path.endsWith('/') ? page.path : `${page.path}/`;
 const canonical = new URL(canonicalPath, 'https://tinkercademy.com').toString();
 
-/* ─── Classify page type ────────────────────────────────────────────── */
-const COURSE_LISTING_SLUGS = ['courses-all', 'courses-professionals', 'courses-schools'];
-const isCourseListing = COURSE_LISTING_SLUGS.includes(page.slug);
-
-/* ─── Data for course listing / audience pages ──────────────────────── */
+/* ─── Data for course listing pages ─────────────────────────────────── */
 const listingSurfaceBySlug = {
 	'courses-all': 'all',
 	'courses-professionals': 'professionals',
 	'courses-schools': 'schools',
 } as const;
-const listingSurface = isCourseListing
-	? listingSurfaceBySlug[page.slug as keyof typeof listingSurfaceBySlug]
-	: 'all';
-const cardOverrides = isCourseListing ? buildProgrammeCardOverrides(page.course_cards ?? []) : null;
-const programmes = isCourseListing
-	? (await getProgrammesForSurface(listingSurface)).map((programme) =>
-			toProgrammeCardData(programme, cardOverrides?.get(programme.slug), {
-				badgeBasePath: canonicalPath,
-			}),
-		)
-	: [];
-const navPills = isCourseListing
-	? getNavPillsForPage(page)
-	: [];
-const filterLabels = isCourseListing ? getProgrammeFilterLabels() : null;
+const listingSurface = listingSurfaceBySlug[page.slug as keyof typeof listingSurfaceBySlug];
+const cardOverrides = buildProgrammeCardOverrides(page.course_cards ?? []);
+const programmes = (await getProgrammesForSurface(listingSurface)).map((programme) =>
+	toProgrammeCardData(programme, cardOverrides.get(programme.slug), {
+		badgeBasePath: canonicalPath,
+	}),
+);
+const navPills = getNavPillsForPage(page);
+const filterLabels = getProgrammeFilterLabels();
 const partnerLogos = page.slug === 'courses-all' ? getPartnerLogoItems(site.externalLogos) : [];
 const clientLogos = page.slug === 'courses-all' ? getClientLogoItems(site.externalLogos) : [];
 const courseAllHeroImage = page.hero_image ?? '/images/banners/courses-all.webp';
@@ -108,9 +89,7 @@ const COURSE_PAGE_TITLES: Record<string, string> = {
 	'courses-professionals': 'Professional Courses',
 	'courses-schools': 'School Courses',
 };
-const displayTitle = isCourseListing
-	? COURSE_PAGE_TITLES[page.slug] ?? page.title
-	: page.title;
+const displayTitle = COURSE_PAGE_TITLES[page.slug] ?? page.title;
 
 /* ─── Per-route SEO overrides ───────────────────────────────────────────
    Intentionally not sourced from `page.seo` — the imported Framer data
@@ -138,12 +117,6 @@ const seoOverride = SEO_OVERRIDES[page.slug as string];
 const seoTitle = seoOverride?.title ?? page.seo?.title ?? displayTitle;
 const seoDescription =
 	seoOverride?.description ?? page.seo?.description ?? page.description ?? '';
-
-/* ─── Determine if content has rich types (image / richtext) ────────── */
-const contentBlocks = page.content ?? [];
-const hasRichContent = contentBlocks.some(
-	(block: any) => block.type === 'image' || block.type === 'richtext',
-);
 ---
 
 <ContentLayout
@@ -153,75 +126,54 @@ const hasRichContent = contentBlocks.some(
 	image={page.hero_image ?? undefined}
 	preloadHero={courseHeroPreload}
 >
-	{isCourseListing ? (
-		<>
-			{isCourseListing && (
-				<>
-					<section class="course-hero">
-						<BannerLayers src={courseAllHeroImage} alt={displayTitle} />
-						<div class="course-hero__scrim"></div>
-						<div class="course-hero__content shell">
-							<h1 class="course-hero__title">{displayTitle}</h1>
-							<p class="course-hero__lead">{coursePageLead}</p>
-							<HeroEmailAction />
-						</div>
-					</section>
-					<LogoCarouselSection
-						title="Our Partners"
-						logos={partnerLogos}
-						minItems={24}
-						secondsPerLogo={6}
-					/>
-					<section class="course-proof">
-						<div class="shell">
-							<div class="course-proof__intro">
-								<h2>Courses That Meet Learners Where They Are</h2>
-								<p>
-									Our catalogue brings together the formats we deliver most often, from MOE
-									classrooms to corporate workshops and public learning programmes.
-								</p>
-							</div>
-							<div class="course-proof__grid">
-								{courseAllHighlights.map((item) => (
-									<article class="course-proof__item">
-										<h3>{item.title}</h3>
-										<p>{item.body}</p>
-									</article>
-								))}
-							</div>
-						</div>
-					</section>
-					<LogoCarouselSection
-						title="Our Clients"
-						logos={clientLogos}
-						muted={true}
-						minItems={30}
-						secondsPerLogo={4}
-					/>
-				</>
-			)}
-			<CourseGrid
-				programmes={programmes}
-				pageTitle={displayTitle}
-				navPills={navPills}
-				pagePath={canonicalPath}
-				filterLabels={filterLabels ?? undefined}
-			/>
-		</>
-	) : (
-		<>
-			<PageHero title={displayTitle} lead={page.description} />
-			{page.hero_image && (
-				<HeroMedia src={page.hero_image} alt={displayTitle} compact={true} />
-			)}
-			{contentBlocks.length > 0 && (
-				hasRichContent
-					? <RichContent items={contentBlocks} />
-					: <ContentBlocks blocks={contentBlocks} />
-			)}
-			<CtaBanner />
-		</>
-	)}
+	<section class="course-hero">
+		<BannerLayers src={courseAllHeroImage} alt={displayTitle} />
+		<div class="course-hero__scrim"></div>
+		<div class="course-hero__content shell">
+			<h1 class="course-hero__title">{displayTitle}</h1>
+			<p class="course-hero__lead">{coursePageLead}</p>
+			<HeroEmailAction />
+		</div>
+	</section>
+	<LogoCarouselSection
+		title="Our Partners"
+		logos={partnerLogos}
+		minItems={24}
+		secondsPerLogo={6}
+	/>
+	<section class="course-proof">
+		<div class="shell">
+			<div class="course-proof__intro">
+				<h2>Courses That Meet Learners Where They Are</h2>
+				<p>
+					Our catalogue brings together the formats we deliver most often, from MOE
+					classrooms to corporate workshops and public learning programmes.
+				</p>
+			</div>
+			<div class="course-proof__grid">
+				{courseAllHighlights.map((item) => (
+					<article class="course-proof__item">
+						<h3>{item.title}</h3>
+						<p>{item.body}</p>
+					</article>
+				))}
+			</div>
+		</div>
+	</section>
+	<LogoCarouselSection
+		title="Our Clients"
+		logos={clientLogos}
+		muted={true}
+		minItems={30}
+		secondsPerLogo={4}
+	/>
+	<CourseGrid
+		programmes={programmes}
+		pageTitle={displayTitle}
+		navPills={navPills}
+		pagePath={canonicalPath}
+		filterLabels={filterLabels}
+	/>
 </ContentLayout>
 
 <style>

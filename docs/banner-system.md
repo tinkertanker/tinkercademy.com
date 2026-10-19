@@ -238,8 +238,7 @@ The library is organised by **role**, and the roles combine:
    instead of hand-drawing.
 6. **Dressing** — `blocks`, `mug`, `books`, `sticky`, `trophy`.
    (No sparkles — retired; emphasis comes from the glow and accent colour.)
-7. **Backdrops & brand** — `skyline` (Singapore silhouette band, use
-   `opacity` 0.1–0.2), `diamond` (filled or `outline: true`), and `face` —
+7. **Backdrops & brand** — `diamond` (filled or `outline: true`) and `face` —
    the actual T Krobot face sticker from the pack, placed as a prop. Never
    redraw the character's anatomy as vectors; use the real sticker assets.
 8. **Sticker props** — every PNG in `reference/stickers/props/` is
@@ -351,8 +350,8 @@ Remaining work, in order:
 1. ~~Programme wiring~~ — DONE 28 Aug (user approved): all 29 programmes
    serve `/images/banners/<slug>.webp`; verified in built output. Every hero
    on the site except home is now on the system.
-2. **Popular-course tiles** — `HOME_POPULAR_COURSE_ICONS` in site-media.js
-   still points at white-logo-on-black tiles (lovable/chatgpt/react-native).
+2. ~~Popular-course tiles~~ — moot: the home page no longer renders them, and
+   the unused `HOME_POPULAR_COURSE_ICONS` map was removed in Oct 2026.
 3. **Asset retirement** — `public/images/generated/hero-review/` holds ~44
    dirs of AI-photo candidates. Many now serve as faded backdrops
    (`scene.photo.src`) — check `banner-scenes.json` before deleting anything.

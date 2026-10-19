@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 /* SITE_URL is set per environment:
-   - Cloudflare Pages (production):   SITE_URL=https://tinkercademy.com
+   - Cloudflare Worker (production):  SITE_URL=https://tinkercademy.com
    - GitHub Pages (webstaging):       unset → default below
    - Local dev / PR previews:         unset → default below (or override) */
 const SITE_URL = process.env.SITE_URL?.trim() || 'https://webstaging.tinkercademy.com';
@@ -42,7 +42,6 @@ export default defineConfig({
 				if (path.startsWith('/blog/')) return false;
 				if (/\/courses\/?$/.test(path)) return false;
 				if (/\/programmes\/advanced-agentic-coding-with-claude-code-or-codex\/?$/.test(path)) return false;
-				if (/\/programmes\/agentic-ai-for-digital-builders\/?$/.test(path)) return false;
 				if (path.startsWith('/review/')) return false;
 				return true;
 			},
