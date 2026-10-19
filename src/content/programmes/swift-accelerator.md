@@ -32,4 +32,4 @@ fit:
 
 ## Details
 
-<p><strong>Location:</strong> Apple Singapore Office </p><p><strong>Fees:</strong> This innovative program is fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants.</p>
+<p><strong>Location:</strong> Apple Singapore Office </p><p><strong>Fees:</strong> Fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants, as of October 2026.</p>
