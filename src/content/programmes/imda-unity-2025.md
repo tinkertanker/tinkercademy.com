@@ -8,6 +8,7 @@ domainIds: ["gamedev"]
 platformIds: ["unity"]
 cardBlurb: "In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates.Unity is a powerful and versatile game engine,…"
 weight: 78
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tinkercademy.com"
 seoTitle: "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals"

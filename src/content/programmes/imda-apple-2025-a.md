@@ -8,6 +8,7 @@ domainIds: ["uiux", "cs"]
 platformIds: ["swift", "keynote"]
 cardBlurb: "Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines. This programme is suitable for students who are…"
 weight: 60
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "App Prototyping with Keynote and Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals"

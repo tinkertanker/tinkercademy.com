@@ -8,6 +8,7 @@ domainIds: ["appdev"]
 platformIds: ["swift"]
 cardBlurb: "Build real iOS apps in Swift Playgrounds. Start with Swift and SwiftUI fundamentals — UI design, navigation, app state, interactivity, databases — then push into Augmented Reality, Machine Learning, and APIs to ship more ambitious apps on iPhone, iPad, and Apple Vision Pro."
 weight: 65
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "App Development on iPad with Swift Playground - Tinkercademy: Coding and Making for Schools and Professionals"

@@ -8,6 +8,7 @@ domainIds: ["uiux"]
 platformIds: ["figma"]
 cardBlurb: "Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX…"
 weight: 78
+archived: true
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "UI/UX Design with Figma - Tinkercademy: Coding and Making for Schools and Professionals"
