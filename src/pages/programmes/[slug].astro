@@ -114,7 +114,7 @@ if (audienceTypeName && primaryAudience?.label) {
 if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
-const { fee, location, courseMode, sessions, fit } = programme.entry.data;
+const { fee, location, courseMode, sessions, fit, testimonials } = programme.entry.data;
 if (fee) {
 	courseSchema.offers = {
 		'@type': 'Offer',
@@ -348,6 +348,22 @@ const breadcrumbSchema = {
 			<article class="prog-body prose">
 				<HeadingOutline><Content /></HeadingOutline>
 			</article>
+
+			{testimonials && testimonials.length > 0 && (
+				<section class="prog-quotes">
+					<h2 class="prog-quotes__heading">What participants say</h2>
+					{testimonials.map((testimonial) => (
+						<figure class="prog-quote">
+							<blockquote class="prog-quote__text">
+								<p>{testimonial.quote}</p>
+							</blockquote>
+							<figcaption class="prog-quote__source">
+								{testimonial.name ? `${testimonial.name}, ${testimonial.role}` : testimonial.role}
+							</figcaption>
+						</figure>
+					))}
+				</section>
+			)}
 		</div>
 
 		<aside class="prog-aside">
@@ -720,6 +736,49 @@ const breadcrumbSchema = {
 
 	.prog-body :global(strong) {
 		font-weight: 600;
+	}
+
+	/* ─── Testimonials ──────────────────────────────────────── */
+	.prog-quotes {
+		margin-top: 2rem;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.prog-quotes__heading {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.03em;
+		font-size: 1.35rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(51, 51, 51));
+		margin: 0;
+	}
+
+	.prog-quote {
+		margin: 0;
+		padding: 1rem 1.25rem;
+		border-left: 3px solid var(--accent-dark);
+		background: var(--theme-surface-muted, rgb(247, 247, 247));
+		border-radius: 0 8px 8px 0;
+	}
+
+	.prog-quote__text {
+		margin: 0;
+	}
+
+	.prog-quote__text p {
+		margin: 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+	}
+
+	.prog-quote__source {
+		margin-top: 0.6rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.85rem;
+		color: var(--theme-muted, rgb(90, 90, 90));
 	}
 
 	/* ─── Tables (fees, schedules, etc.) ────────────────────── */
