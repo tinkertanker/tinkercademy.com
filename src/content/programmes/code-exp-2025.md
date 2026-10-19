@@ -9,6 +9,7 @@ platformIds: ["react-native", "tensorflow"]
 cardBlurb: "BrainHack CODE_EXP is a mobile dev hackathon held annually in May–June, spread over three phases: Phase 1: Training sessions, Phase 2: Qualifiers, Phase 3: Finals."
 weight: 30
 seoTitle: "BrainHack CODE_EXP - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, jumping beside a code editor, a web page and a trophy, over a faded photo of a hackathon hall."
 ---
 
 ## Course Overview

@@ -11,6 +11,7 @@ weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Enter the Metaverse: Get started with Unity for AR/VR - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a VR headset beside a monitor showing a 3D scene, over a faded photo of a class trying VR."
 ---
 
 ## Course Overview

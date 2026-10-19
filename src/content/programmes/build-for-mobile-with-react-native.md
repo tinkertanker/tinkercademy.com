@@ -12,6 +12,7 @@ homeFeaturedRank: 5
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a laptop running code, wired to a phone showing an app, over a faded photo of a React Native class."
 ---
 
 ## Course Overview

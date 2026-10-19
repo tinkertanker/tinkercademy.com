@@ -12,6 +12,7 @@ homeFeaturedRank: 3
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of an app-builder window with a chat on one side and the generated app on the other, over a faded photo of a workshop."
 ---
 
 ## Course Overview

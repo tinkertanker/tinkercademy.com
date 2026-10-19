@@ -14,6 +14,7 @@ primaryCta:
   label: "View course at SMU Academy"
   url: "https://academy.smu.edu.sg/courses/harnessing-power-internet-things-and-creative-digital-making"
 seoTitle: "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a microcontroller wired to a breadboard, over a faded photo of a maker workshop."
 ---
 
 ## Course Overview

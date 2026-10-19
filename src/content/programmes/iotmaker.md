@@ -11,6 +11,7 @@ weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a micro:bit wired to a breadboard, over a faded photo of a maker workshop."
 ---
 
 ## Course Overview

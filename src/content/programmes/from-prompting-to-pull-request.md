@@ -12,6 +12,7 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "From Prompting to Pull Request - Tinkercademy"
 seoDescription: "A public 2-day workshop. Learn the terminal, Git, and Claude or Codex, then ship a web app to GitHub and a live URL."
+heroAlt: "Illustration of an AI terminal window next to a GitHub pull request being merged, over a faded photo of a workshop."
 ---
 
 ## Course Overview

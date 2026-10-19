@@ -11,6 +11,7 @@ weight: 93
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Mastering the Web: Understand Full-Stack Development - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a web page window above a laptop showing JavaScript code, over a faded photo of developers at work."
 ---
 
 ## Course Overview

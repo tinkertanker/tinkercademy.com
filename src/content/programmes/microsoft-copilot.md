@@ -11,6 +11,7 @@ weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "AI and Productivity with Microsoft Copilot - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a spreadsheet with charts beside an AI assistant chat window, over a faded photo of an office."
 ---
 
 ## Course Overview

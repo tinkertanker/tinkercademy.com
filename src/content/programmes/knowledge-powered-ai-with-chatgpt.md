@@ -12,6 +12,7 @@ homeFeaturedRank: 4
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of an AI chat on a laptop beside a stack of documents, over a faded photo of an office workshop."
 ---
 
 ## Course Overview

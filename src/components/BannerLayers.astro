@@ -4,20 +4,28 @@ import { getBannerAsset } from '../lib/banner-assets';
 interface Props {
 	src: string;
 	alt: string;
+	/* When set, the layered banner is exposed as one labelled image instead
+	   of being hidden from assistive tech as decoration. */
+	description?: string;
 }
 
-const { src, alt } = Astro.props;
+const { src, alt, description } = Astro.props;
 const asset = getBannerAsset(src);
 ---
 
 {asset ? (
-	<div class="banner-layers" aria-hidden="true">
+	<div
+		class="banner-layers"
+		role={description ? 'img' : undefined}
+		aria-label={description}
+		aria-hidden={description ? undefined : 'true'}
+	>
 		<img
 			class="banner-layers__background"
 			src={asset.background}
 			width={asset.backgroundWidth}
 			height={asset.backgroundHeight}
-			alt={`${alt} banner background`}
+			alt=""
 			loading="eager"
 			fetchpriority="high"
 			decoding="async"
@@ -27,7 +35,7 @@ const asset = getBannerAsset(src);
 			src={asset.foreground}
 			width={asset.foregroundWidth}
 			height={asset.foregroundHeight}
-			alt={`${alt} banner illustration`}
+			alt=""
 			loading="eager"
 			fetchpriority="low"
 			decoding="async"
@@ -38,7 +46,7 @@ const asset = getBannerAsset(src);
 				src={asset.stamp}
 				width={asset.stampWidth}
 				height={asset.stampHeight}
-				alt={`${alt} banner badge`}
+				alt=""
 				loading="eager"
 				fetchpriority="low"
 				decoding="async"
@@ -49,7 +57,7 @@ const asset = getBannerAsset(src);
 	<img
 		class="banner-layers__background"
 		src={src}
-		alt={alt}
+		alt={description ?? alt}
 		loading="eager"
 		fetchpriority="high"
 		decoding="async"

@@ -12,6 +12,7 @@ signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Agentic Engineering with Claude Code or Codex - Tinkercademy"
 seoDescription: "A two-day workshop for software developers to plan, build, review, and improve useful software with Claude Code or Codex."
+heroAlt: "Illustration of an AI coding agent's terminal window beside a code editor, over a faded photo of developers working on laptops."
 ---
 
 ## Course Overview

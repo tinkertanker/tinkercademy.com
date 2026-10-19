@@ -16,6 +16,8 @@ const programmes = defineCollection({
 		subtitle: z.string().min(1),
 		duration: z.string().min(1).optional(),
 		heroImage: z.string().min(1),
+		// Describes the banner for screen readers and AI agents; falls back to the title.
+		heroAlt: z.string().min(1).optional(),
 		heroObjectPosition: z
 			.string()
 			.regex(/^\d{1,3}(?:\.\d+)?%\s+\d{1,3}(?:\.\d+)?%$/, 'Use a CSS object-position pair such as 50% 15%')

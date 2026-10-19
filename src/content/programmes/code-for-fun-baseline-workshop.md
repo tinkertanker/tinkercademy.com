@@ -12,6 +12,7 @@ signUpLabel: "Enquire now"
 signUpUrl: "mailto:imda_codesg@imda.gov.sg"
 seoTitle: "Code For Fun Baseline Workshop - Tinkercademy: Coding and Making for Schools and Professionals"
 seoDescription: "Code for Fun for primary and secondary schools: computational thinking, coding fundamentals, and digital making with microcontrollers in 10 hours."
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, waving beside a laptop showing block code and a micro:bit, over a faded photo of a classroom."
 ---
 
 ## Course Overview

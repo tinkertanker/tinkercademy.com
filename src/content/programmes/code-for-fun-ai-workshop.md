@@ -12,6 +12,7 @@ signUpLabel: "Enquire now"
 signUpUrl: "mailto:imda_codesg@imda.gov.sg"
 seoTitle: "Code For Fun AI Workshop - Tinkercademy: Coding and Making for Schools and Professionals"
 seoDescription: "AI workshops for primary and secondary schools, covering generative AI, smart robots, training data, bias, and responsible use through hands-on learning."
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a laptop showing block code and a webcam, over a faded photo of a classroom."
 ---
 
 ## Course Overview

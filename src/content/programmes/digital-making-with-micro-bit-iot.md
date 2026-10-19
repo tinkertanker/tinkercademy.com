@@ -12,6 +12,7 @@ homeFeaturedRank: 6
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a micro:bit with a battery pack, over a faded photo of a maker classroom."
 ---
 
 ## Course Overview

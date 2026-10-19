@@ -11,6 +11,7 @@ weight: 0
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "No-Code Machine Learning - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, with hands on hips beside a visual workflow that goes from a dataset to a decision tree to a chart, over a faded photo of a classroom."
 ---
 
 ## Course Overview

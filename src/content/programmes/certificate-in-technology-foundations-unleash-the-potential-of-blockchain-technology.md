@@ -11,6 +11,7 @@ weight: 80
 signUpLabel: "Enquire now"
 signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Unleash%20the%20Potential%20of%20Blockchain%20Technology&nid=80491"
 seoTitle: "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of three linked blocks above a spreadsheet on a laptop, over a faded photo of a classroom."
 ---
 
 ## Course Overview

@@ -134,6 +134,7 @@ const seriesCourses = programme.series
 const heroResponsive = getResponsiveImage(programme.heroImage);
 const heroBanner = getBannerAsset(programme.heroImage);
 const heroObjectPosition = programme.entry.data.heroObjectPosition;
+const heroAlt = programme.entry.data.heroAlt ?? `${programme.title} programme banner`;
 const heroPreload = heroBanner
 	? { src: heroBanner.background }
 	: heroResponsive
@@ -166,7 +167,7 @@ const breadcrumbSchema = {
 			: undefined}
 	>
 		{heroBanner ? (
-			<BannerLayers src={programme.heroImage} alt={programme.title} />
+			<BannerLayers src={programme.heroImage} alt={programme.title} description={heroAlt} />
 		) : programme.heroImage ? (
 			<img
 				class="prog-hero__bg"
@@ -176,7 +177,7 @@ const breadcrumbSchema = {
 				sizes={heroResponsive?.srcset ? '100vw' : undefined}
 				width={heroResponsive?.width}
 				height={heroResponsive?.height}
-				alt={`${programme.title} programme banner`}
+				alt={heroAlt}
 				loading="eager"
 				fetchpriority="high"
 				decoding="async"
@@ -286,7 +287,7 @@ const breadcrumbSchema = {
 												<img
 													class="prog-facts__icon"
 													src={platform.icon}
-													alt={`${platform.label} logo`}
+													alt=""
 													loading="lazy"
 												/>
 											)}
