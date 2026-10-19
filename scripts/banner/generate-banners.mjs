@@ -840,7 +840,7 @@ function propSVG(p) {
 // pool behind the subject, a faint dot-grid texture, and a floor glow.
 function darkGround(scene) {
 	const accent = scene.accent ?? 'red';
-	const [g0, g1] = DARK_GROUNDS[accent];
+	const [g0, g1] = scene.ground ?? DARK_GROUNDS[accent];
 	const spotX = scene.spotlight?.x ?? scene.mascot?.x ?? 0.66;
 	const spotY = scene.spotlight?.y ?? 0.45;
 	const spotR = scene.spotlight?.r ?? 0.52;
@@ -1049,6 +1049,9 @@ async function main() {
 		if (only.length && !only.includes(scene.id)) continue;
 		if (scene.accent && !ACCENTS.includes(scene.accent)) {
 			throw new Error(`${scene.id}: accent must be one of ${ACCENTS.join(', ')}`);
+		}
+		if (scene.ground && (!Array.isArray(scene.ground) || scene.ground.length !== 2)) {
+			throw new Error(`${scene.id}: ground must be [darkHex, brightHex]`);
 		}
 		const layers = await renderSceneLayers(scene);
 		const files = [

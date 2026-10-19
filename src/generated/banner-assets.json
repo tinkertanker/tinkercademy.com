@@ -192,9 +192,65 @@
       "foregroundWidth": 907,
       "foregroundHeight": 474
     },
+    "/images/banners/imda-apple-2027-tracka-pri.webp": {
+      "background": "/images/banners/imda-apple-2027-tracka-pri-background.webp",
+      "foreground": "/images/banners/imda-apple-2027-tracka-pri-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 895,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-apple-2027-tracka-sec.webp": {
+      "background": "/images/banners/imda-apple-2027-tracka-sec-background.webp",
+      "foreground": "/images/banners/imda-apple-2027-tracka-sec-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 927,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-apple-2027-trackb-pri.webp": {
+      "background": "/images/banners/imda-apple-2027-trackb-pri-background.webp",
+      "foreground": "/images/banners/imda-apple-2027-trackb-pri-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 920,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-apple-2027-trackb-sec.webp": {
+      "background": "/images/banners/imda-apple-2027-trackb-sec-background.webp",
+      "foreground": "/images/banners/imda-apple-2027-trackb-sec-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 901,
+      "foregroundHeight": 474
+    },
+    "/images/banners/imda-canva-2027-sec.webp": {
+      "background": "/images/banners/imda-canva-2027-sec-background.webp",
+      "foreground": "/images/banners/imda-canva-2027-sec-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 765,
+      "foregroundHeight": 517
+    },
     "/images/banners/imda-figma-2025.webp": {
       "background": "/images/banners/imda-figma-2025-background.webp",
       "foreground": "/images/banners/imda-figma-2025-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 872,
+      "foregroundHeight": 525
+    },
+    "/images/banners/imda-figma-2027-pri.webp": {
+      "background": "/images/banners/imda-figma-2027-pri-background.webp",
+      "foreground": "/images/banners/imda-figma-2027-pri-foreground.webp",
+      "backgroundWidth": 1600,
+      "backgroundHeight": 900,
+      "foregroundWidth": 872,
+      "foregroundHeight": 525
+    },
+    "/images/banners/imda-figma-2027-sec.webp": {
+      "background": "/images/banners/imda-figma-2027-sec-background.webp",
+      "foreground": "/images/banners/imda-figma-2027-sec-foreground.webp",
       "backgroundWidth": 1600,
       "backgroundHeight": 900,
       "foregroundWidth": 872,
