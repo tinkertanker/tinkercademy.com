@@ -14,6 +14,9 @@ seoTitle: "Professional Certificate in Web Application Development - Tinkercadem
 heroAlt: "Illustration of a code editor beside a server, over a faded photo of developers at work."
 location: "Singapore Management University (SMU Academy)"
 courseMode: online
+fit:
+  question: "What do I need before joining SMU's Professional Certificate in Web Application Development?"
+  answer: "SMU Academy asks for at least a polytechnic diploma, basic HTML and CSS, and a laptop with an Intel Core i3 or better and 4 GB of RAM. The certificate suits people who want a structured, part-time route into web app development: seven modules covering prototyping and UI design, front-end and back-end development, databases, and frameworks, taught online on weeknights and Saturday mornings. Enrolment and SkillsFuture funding go through SMU Academy. If you want a two-day overview instead, take Mastering the Web."
 ---
 
 ## Course Overview

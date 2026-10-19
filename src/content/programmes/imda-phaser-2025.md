@@ -12,6 +12,9 @@ seoTitle: "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Makin
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, running past a laptop showing a 2D game and a handheld game console, over a faded photo of a classroom."
 location: "At your school in Singapore"
 courseMode: onsite
+fit:
+  question: "Should our school choose Phaser, or MakeCode Arcade and Minecraft?"
+  answer: "Choose Phaser if your students are ready to type real code. Over 24 hours they learn HTML, JavaScript, and VS Code, then build 2D browser games with sprites, physics, scoring, and levels. They also sign up for the free GitHub Education pack, which includes GitHub Copilot for AI-assisted coding. No programming experience is needed. If your students are younger or would rather start with blocks, MakeCode Arcade and Minecraft is the gentler option. Both are delivered under our partner Zenitant Pte Ltd."
 ---
 
 ## Course Overview

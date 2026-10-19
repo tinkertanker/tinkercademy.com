@@ -12,6 +12,9 @@ seoTitle: "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Makin
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a cardboard marble run and a cardboard house, over a faded photo of a school campus."
 location: "Raffles Institution, Singapore"
 courseMode: onsite
+fit:
+  question: "Can other schools run a programme like RI FutureCreate?"
+  answer: "RI FutureCreate is a four-year maker programme we run for Raffles Institution students. It moves from hand tools and analog fabrication in Year 1, to electronics and digital fabrication in Year 2, focused skill projects in Year 3, and a self-directed project in Year 4. This page describes RI's programme specifically. If your school wants a multi-year maker programme of its own, write in and we'll talk through how it could fit your timetable and facilities."
 ---
 
 ## Course Overview

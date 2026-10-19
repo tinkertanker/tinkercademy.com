@@ -15,6 +15,9 @@ seoDescription: "AI workshops for primary and secondary schools, covering genera
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a laptop showing block code and a webcam, over a faded photo of a classroom."
 location: "At your school in Singapore"
 courseMode: onsite
+fit:
+  question: "Which AI for Fun module is right for our school?"
+  answer: "It depends on your level. Primary schools can take two 5-hour modules: Generative AI, and AI with Smart Robots, which covers computer vision and sensors. Secondary schools take one 10-hour module on training data, bias, large language models, custom chatbots, and prompting. Students need to have completed Code for Fun, or a comparable programme, first. AI for Fun is an IMDA and MOE programme, and MOE schools apply during the annual September to October window."
 ---
 
 ## Course Overview

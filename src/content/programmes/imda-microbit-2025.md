@@ -14,6 +14,9 @@ seoTitle: "Digital Making with micro:bit - Tinkercademy: Coding and Making for S
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, raising a hand beside a micro:bit and a small robot buggy, over a faded photo of a classroom."
 location: "At your school in Singapore"
 courseMode: onsite
+fit:
+  question: "Does our school need its own micro:bits for this course?"
+  answer: "Yes. Schools need their own micro:bit kits, which Tinker Class sells at education pricing. The 24-hour course suits primary schools that want a hands-on start to coding and electronics: students program the micro:bit in block-based MakeCode and use it to control servos, LED strips, and buzzers. It works with PCs, Macs, iPads, and Chromebooks. Training is delivered under our partner Zenitant Pte Ltd. If you'd rather not buy hardware, look at our IMDA LEARN Roadmaps 2027 courses on Apple, Figma, or Canva."
 ---
 
 ## Course Overview

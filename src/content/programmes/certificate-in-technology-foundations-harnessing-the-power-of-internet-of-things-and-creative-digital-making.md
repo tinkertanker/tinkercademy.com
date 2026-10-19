@@ -15,6 +15,9 @@ primaryCta:
   url: "https://academy.smu.edu.sg/courses/harnessing-power-internet-things-and-creative-digital-making"
 seoTitle: "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a microcontroller wired to a breadboard, over a faded photo of a maker workshop."
+fit:
+  question: "Who is this SMU Academy IoT module for?"
+  answer: "It's a module in SMU Academy's Industry Practice Master of Digital Economy, so it suits participants in that programme who want hands-on experience with connected devices, not just theory. You'll learn coding concepts in block-based languages and Python, program ESP32 microcontrollers, and build prototypes that send sensor data online. Enrolment runs through SMU Academy. If you'd like a standalone two-day version for your own team, Digital Maker: Create with 3D Printing and IoT covers similar ground and adds 3D printing."
 ---
 
 ## Course Overview

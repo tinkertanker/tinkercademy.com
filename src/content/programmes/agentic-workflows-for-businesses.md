@@ -19,6 +19,9 @@ fee:
   basis: "Per participant for the 1-day format, before 9% GST"
 location: "CT Hub, Singapore, or on request"
 courseMode: onsite
+fit:
+  question: "Should my team learn agentic workflows or vibe coding first?"
+  answer: "Choose Agentic Workflows if your team's time goes into recurring knowledge work (reviewing submissions, pulling figures, drafting documents, updating trackers) and you want to redesign those processes before handing parts of them to governed AI agents. It runs as a 1-, 2-, or 3-day workshop; the 3-day version ends with a working capstone built on one of your own workflows. If your goal is a web app or prototype, start with Vibe Coding for Digital Builders. Some hands-on experience with generative AI tools helps either way."
 ---
 
 ## Course Overview

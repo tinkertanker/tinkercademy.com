@@ -114,7 +114,7 @@ if (audienceTypeName && primaryAudience?.label) {
 if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
-const { fee, location, courseMode, sessions } = programme.entry.data;
+const { fee, location, courseMode, sessions, fit } = programme.entry.data;
 if (fee) {
 	courseSchema.offers = {
 		'@type': 'Offer',
@@ -164,6 +164,20 @@ const heroPreload = heroBanner
 	: heroResponsive
 		? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
 		: null;
+
+const faqSchema = fit
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'FAQPage',
+			mainEntity: [
+				{
+					'@type': 'Question',
+					name: fit.question,
+					acceptedAnswer: { '@type': 'Answer', text: fit.answer },
+				},
+			],
+		}
+	: null;
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -280,12 +294,18 @@ const breadcrumbSchema = {
 	{/* ════════ Facts + content + enquiry form sidebar ═══════════════ */}
 	<div class="prog-main shell">
 		<div class="prog-main__body">
+			{fit && (
+				<section class="prog-fit">
+					<h2 class="prog-fit__question">{fit.question}</h2>
+					<p class="prog-fit__answer">{fit.answer}</p>
+				</section>
+			)}
 			{(domainLabels.length > 0 || platforms.length > 0) && (
 				<section class="prog-facts">
 					<div class="prog-facts__inner">
 						{domainLabels.length > 0 && (
 							<div class="prog-facts__group">
-								<h2 class="prog-facts__heading">Domains</h2>
+								<p class="prog-facts__heading">Domains</p>
 								<div class="prog-facts__chips">
 									{domains.map((domain) => (
 										<a
@@ -300,7 +320,7 @@ const breadcrumbSchema = {
 						)}
 						{platforms.length > 0 && (
 							<div class="prog-facts__group">
-								<h2 class="prog-facts__heading">Platforms</h2>
+								<p class="prog-facts__heading">Platforms</p>
 								<div class="prog-facts__chips">
 									{platforms.map((platform) => (
 										<a
@@ -343,6 +363,7 @@ const breadcrumbSchema = {
 
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	{faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 </ContentLayout>
 
 <style>
@@ -510,6 +531,28 @@ const breadcrumbSchema = {
 		font-size: 13px;
 		font-weight: 500;
 		color: var(--theme-text, rgb(51, 51, 51));
+	}
+
+	/* ─── Reader question: the first H2 under the title ────── */
+	.prog-fit {
+		margin-bottom: 1.75rem;
+	}
+
+	.prog-fit__question {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.03em;
+		font-size: 1.35rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(51, 51, 51));
+		margin: 0 0 0.75rem;
+	}
+
+	.prog-fit__answer {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 0;
 	}
 
 	.prog-facts {

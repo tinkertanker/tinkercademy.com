@@ -17,6 +17,9 @@ fee:
   basis: "Per participant for an individual sign-up, before 9% GST"
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
+fit:
+  question: "Do I need to know how to code to take Mastering the Web?"
+  answer: "No. It's for people who work with developers, or want to start building, and need to understand how web apps actually work. Day 1 covers HTML, CSS, and JavaScript in the browser; day 2 covers servers, databases, and APIs with Python and Flask. You can take one day or both. If you'd rather build a working app quickly with AI tools than learn the underlying technologies, Vibe Coding for Digital Builders is the better fit."
 ---
 
 ## Course Overview

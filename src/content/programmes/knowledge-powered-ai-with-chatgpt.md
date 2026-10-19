@@ -18,6 +18,9 @@ fee:
   basis: "Flat fee for a half-day session with up to 9 participants, before 9% GST"
 location: "CT Hub 2, 114 Lavender Street, Singapore, or your preferred venue"
 courseMode: onsite
+fit:
+  question: "Is Knowledge-Powered AI with ChatGPT right for our leadership team?"
+  answer: "It suits senior leaders, innovation teams, and decision-makers who need a practical feel for what ChatGPT can do with their organisation's own knowledge. You'll cover how large language models work and where they fail, prompting, Deep Research, data analysis, Projects, and retrieval-augmented generation (RAG), and build a prototype web app powered by generative AI. It runs as a half-day, 1-day, or 2-day session tailored to your team. If your staff want to automate their own recurring work, Agentic Workflows for Businesses goes further into building agents."
 ---
 
 ## Course Overview

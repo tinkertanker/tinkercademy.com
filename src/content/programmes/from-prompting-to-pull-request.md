@@ -15,6 +15,9 @@ seoDescription: "A public 2-day workshop. Learn the terminal, Git, and Claude or
 heroAlt: "Illustration of an AI terminal window next to a GitHub pull request being merged, over a faded photo of a workshop."
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
+fit:
+  question: "Should I take From Prompting to Pull Request or Vibe Coding for Digital Builders?"
+  answer: "Take From Prompting to Pull Request if you've already built something with ChatGPT, Gemini, Lovable, or a similar tool and want to work the way engineers do: in the terminal, with Git and GitHub pull requests, shipping a web app to a live URL with Claude or Codex. If you haven't used an AI building tool yet, start with Vibe Coding for Digital Builders. If you already use the terminal and GitHub every day, skip ahead to Agentic Engineering."
 ---
 
 ## Course Overview

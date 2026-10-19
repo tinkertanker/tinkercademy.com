@@ -17,6 +17,9 @@ fee:
   basis: "Per participant for an individual sign-up, before 9% GST"
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
+fit:
+  question: "Should I take Digital Maker or Digital Making with micro:bit and IoT?"
+  answer: "Take Digital Maker if you want to build physical things end to end. You'll program microcontrollers such as the M5Go to react to sound, touch, and light, send sensor data online, and design and 3D print your own parts. Take Digital Making with micro:bit and IoT if you only want the coding and IoT side, without 3D printing. Both are introductory, run over 1 to 2 days, and start with 5 sign-ups."
 ---
 
 ## Course Overview

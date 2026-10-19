@@ -17,6 +17,9 @@ fee:
   amount: 1600
   basis: "Per participant for an individual sign-up, before 9% GST"
 courseMode: onsite
+fit:
+  question: "Do I need coding experience for Digital Making with micro:bit and IoT?"
+  answer: "No. It's an introductory course for adults and teams who want to learn coding and electronics hands-on. You'll program a micro:bit, learn how Internet of Things devices collect and share data, and build a small IoT project such as a remote-controlled device or a sensor-triggered automation. It runs over 1 to 2 days and starts with 5 sign-ups. If you also want to design and 3D print your own parts, take Digital Maker: Create with 3D Printing and IoT instead."
 ---
 
 ## Course Overview

@@ -17,6 +17,9 @@ fee:
   basis: "Per participant for an individual sign-up, before 9% GST"
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
+fit:
+  question: "Do I need game development experience for the Unity AR/VR course?"
+  answer: "No game development experience is needed, but you should be comfortable picking up some C# scripting. Day 1 covers the Unity interface, C# basics, and interactive 3D scenes; day 2 moves to AR and VR, with physics, animation, and user interaction. It suits developers, designers, and innovation teams exploring immersive experiences or digital twins. You'll need a Windows, Mac, or Linux laptop that meets Unity's hardware requirements, because iPads and Chromebooks won't run it."
 ---
 
 ## Course Overview

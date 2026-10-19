@@ -18,6 +18,9 @@ fee:
   basis: "Per participant for groups of 16 or more, before 9% GST"
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
+fit:
+  question: "Is Vibe Coding for Digital Builders right for my team?"
+  answer: "It suits people who want to turn ideas into working web prototypes without writing code by hand: product owners, designers, analysts, and managers. Over two days you'll research a problem with ChatGPT, design screens in Figma, and build a working app in Lovable backed by Supabase. If your team already writes code and wants to work with Git and pull requests, From Prompting to Pull Request is a better fit. If you want to automate business processes rather than build apps, look at Agentic Workflows for Businesses."
 ---
 
 ## Course Overview

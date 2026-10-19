@@ -38,6 +38,14 @@ const programmes = defineCollection({
 				url: z.url().refine((value) => value.startsWith('https://'), 'Use an HTTPS URL'),
 			})
 			.optional(),
+		// The reader's main question and a short "it depends" answer, shown as
+		// the first H2 under the title.
+		fit: z
+			.object({
+				question: z.string().min(1),
+				answer: z.string().min(1).refine((value) => value.split(/\s+/).length <= 100, 'Keep the answer to 100 words or fewer'),
+			})
+			.optional(),
 		// Machine-readable copies of facts stated in the Details section; they feed
 		// the Course structured data so crawlers don't have to parse prose.
 		fee: z

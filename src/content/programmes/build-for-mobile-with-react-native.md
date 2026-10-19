@@ -18,6 +18,9 @@ fee:
   basis: "Per participant for an individual sign-up, before 9% GST"
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
+fit:
+  question: "Is React Native the right way to start building mobile apps?"
+  answer: "It's a good fit if you've done some web development, or are happy to pick up JavaScript quickly, and want one codebase for both iOS and Android. In two days you'll build three apps with React Native and Expo and test them on your own phone. No mobile experience is needed. If you only want to build for Apple devices, Swift is the more direct route. If you've never coded at all, Mastering the Web or Vibe Coding for Digital Builders is a gentler start."
 ---
 
 ## Course Overview
