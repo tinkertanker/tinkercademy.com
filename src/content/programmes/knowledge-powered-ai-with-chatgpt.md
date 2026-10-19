@@ -13,6 +13,11 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of an AI chat on a laptop beside a stack of documents, over a faded photo of an office workshop."
+fee:
+  amount: 1980
+  basis: "Flat fee for a half-day session with up to 9 participants, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore, or your preferred venue"
+courseMode: onsite
 ---
 
 ## Course Overview

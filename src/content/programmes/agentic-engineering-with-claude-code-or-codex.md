@@ -13,6 +13,16 @@ signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Agentic Engineering with Claude Code or Codex - Tinkercademy"
 seoDescription: "A two-day workshop for software developers to plan, build, review, and improve useful software with Claude Code or Codex."
 heroAlt: "Illustration of an AI coding agent's terminal window beside a code editor, over a faded photo of developers working on laptops."
+fee:
+  amount: 1710
+  basis: "Per participant, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
+sessions:
+  - { start: 2026-09-24, end: 2026-09-25 }
+  - { start: 2026-10-01, end: 2026-10-02 }
+  - { start: 2026-10-06, end: 2026-10-07 }
+  - { start: 2026-10-20, end: 2026-10-21 }
 ---
 
 ## Course Overview

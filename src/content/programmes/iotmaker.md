@@ -12,6 +12,11 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a micro:bit wired to a breadboard, over a faded photo of a maker workshop."
+fee:
+  amount: 1600
+  basis: "Per participant for an individual sign-up, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

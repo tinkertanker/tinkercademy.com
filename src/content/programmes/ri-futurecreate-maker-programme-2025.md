@@ -10,6 +10,8 @@ cardBlurb: "The RI FutureCreate Maker Programme is a hands-on exploration of cre
 weight: 89
 seoTitle: "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a cardboard marble run and a cardboard house, over a faded photo of a school campus."
+location: "Raffles Institution, Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

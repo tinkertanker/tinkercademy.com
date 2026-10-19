@@ -12,6 +12,8 @@ signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Digital Making with micro:bit - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, raising a hand beside a micro:bit and a small robot buggy, over a faded photo of a classroom."
+location: "At your school in Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

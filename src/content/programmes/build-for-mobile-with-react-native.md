@@ -13,6 +13,11 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a laptop running code, wired to a phone showing an app, over a faded photo of a React Native class."
+fee:
+  amount: 1600
+  basis: "Per participant for an individual sign-up, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

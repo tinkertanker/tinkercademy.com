@@ -12,6 +12,8 @@ signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Game Development in MakeCode Arcade & MineCraft - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside stacked voxel blocks and a laptop showing a platform game, over a faded photo of a classroom."
+location: "At your school in Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

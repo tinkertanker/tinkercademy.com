@@ -38,6 +38,17 @@ const programmes = defineCollection({
 				url: z.url().refine((value) => value.startsWith('https://'), 'Use an HTTPS URL'),
 			})
 			.optional(),
+		// Machine-readable copies of facts stated in the Details section; they feed
+		// the Course structured data so crawlers don't have to parse prose.
+		fee: z
+			.object({
+				amount: z.number().nonnegative(),
+				basis: z.string().min(1),
+			})
+			.optional(),
+		location: z.string().min(1).optional(),
+		courseMode: z.enum(['onsite', 'online', 'blended']).optional(),
+		sessions: z.array(z.object({ start: z.coerce.date(), end: z.coerce.date() })).optional(),
 		seoTitle: z.string().min(1).optional(),
 		seoDescription: z.string().min(1).optional(),
 	}),

@@ -13,6 +13,8 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a laptop wired to a phone, beside a code editor, over a faded photo of a classroom."
+location: "Singapore Management University (SMU Academy)"
+courseMode: onsite
 ---
 
 ## Course Overview

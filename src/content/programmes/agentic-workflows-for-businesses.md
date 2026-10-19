@@ -14,6 +14,11 @@ signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Agentic Workflows for Businesses - Tinkercademy: Coding and Making for Schools and Professionals"
 seoDescription: "A 1-, 2-, or 3-day workshop for business teams to redesign recurring processes and build practical, governed AI agents."
 heroAlt: "Illustration of an AI chat on a laptop next to an agent terminal window, over a faded photo of a team workshop."
+fee:
+  amount: 500
+  basis: "Per participant for the 1-day format, before 9% GST"
+location: "CT Hub, Singapore, or on request"
+courseMode: onsite
 ---
 
 ## Course Overview

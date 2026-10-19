@@ -10,6 +10,8 @@ cardBlurb: "Students will learn game development using Phaser.js, a powerful HTM
 weight: 75
 seoTitle: "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, running past a laptop showing a 2D game and a handheld game console, over a faded photo of a classroom."
+location: "At your school in Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

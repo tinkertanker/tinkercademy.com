@@ -12,6 +12,10 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "AI and Productivity with Microsoft Copilot - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a spreadsheet with charts beside an AI assistant chat window, over a faded photo of an office."
+fee:
+  amount: 1600
+  basis: "Per participant for an individual sign-up, before 9% GST"
+courseMode: onsite
 ---
 
 ## Course Overview

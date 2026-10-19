@@ -114,6 +114,30 @@ if (audienceTypeName && primaryAudience?.label) {
 if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
+const { fee, location, courseMode, sessions } = programme.entry.data;
+if (fee) {
+	courseSchema.offers = {
+		'@type': 'Offer',
+		category: fee.amount === 0 ? 'Free' : 'Paid',
+		price: fee.amount,
+		priceCurrency: 'SGD',
+		description: fee.basis,
+		url: canonical,
+	};
+}
+if (location || courseMode) {
+	const instanceBase: Record<string, unknown> = { '@type': 'CourseInstance' };
+	if (courseMode) instanceBase.courseMode = courseMode;
+	if (location) instanceBase.location = location;
+	const toIsoDate = (date: Date) => date.toISOString().slice(0, 10);
+	courseSchema.hasCourseInstance = sessions?.length
+		? sessions.map((session) => ({
+				...instanceBase,
+				startDate: toIsoDate(session.start),
+				endDate: toIsoDate(session.end),
+			}))
+		: [instanceBase];
+}
 
 const seriesCourses = programme.series
 	? (await getAllProgrammes())

@@ -12,6 +12,11 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Swift Accelerator - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a rocket and a laptop with Swift code, over a faded photo of a large group of students."
+fee:
+  amount: 0
+  basis: "Fully subsidised by IMDA for successful applicants"
+location: "Apple Singapore office"
+courseMode: onsite
 ---
 
 ## Course Overview

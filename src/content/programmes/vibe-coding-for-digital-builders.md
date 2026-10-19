@@ -13,6 +13,11 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of an app-builder window with a chat on one side and the generated app on the other, over a faded photo of a workshop."
+fee:
+  amount: 650
+  basis: "Per participant for groups of 16 or more, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
 ---
 
 ## Course Overview

@@ -12,6 +12,8 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Professional Certificate in Web Application Development - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a code editor beside a server, over a faded photo of developers at work."
+location: "Singapore Management University (SMU Academy)"
+courseMode: online
 ---
 
 ## Course Overview
