@@ -176,20 +176,7 @@ Re-running:
 > compositor; re-applying this manifest would overwrite the composed banners.
 > Recover them from git history only for archaeology.
 
-The user reviewed `/review/hero-proposals/` and froze a manifest of decisions in `src/data/hero-image-decisions.json`. Each entry is `{"id": "...", "image": "..."}` (new hero) or `{"id": "...", "keep": true}` (retain current). Optional `alternates` carries any non-picked candidates the user wanted preserved on the review page.
-
-Apply / re-apply the manifest:
-
-- `python3 scripts/apply-hero-picks.py` — rewrites three places idempotently:
-  - `src/data/pages/static-pages.json` → `hero_image` field per top-level page (home, about-us, schools, etc.)
-  - `src/content/programmes/<slug>.md` → `heroImage:` frontmatter line per programme. Two manifest ids map to long slug names (`certificate-iot-creative-digital-making`, `certificate-blockchain-technology`); the script handles the mapping.
-  - `src/lib/site-media.js` → `HOME_FLAGSHIP_IMAGES` for the three flagship cards on /schools.
-- After editing the JSON, rerun `apply-hero-picks.py`. The picker page reflects the manifest live (no localStorage state).
-
-Page-screenshot previews on the review page:
-
-- `python3 scripts/screenshot-pages.py` — uses headless Chrome (`/Applications/Google Chrome.app/...`) against `http://localhost:4321` to capture each placement's route to `public/images/generated/hero-page-screenshots/<id>.png`. Runs `CONCURRENCY=3` Chromes in parallel by default; `TIMEOUT=120` seconds each (data-heavy pages like /schools and /courses-* need the long deadline). Idempotent — delete a `.png` to re-screenshot that placement.
-- The dev server must be running before invoking the script. The `/review/hero-proposals/` page reads screenshots from disk; missing ones surface a "No screenshot yet" placeholder.
+The user reviewed `/review/hero-proposals/` and froze the decisions in `src/data/hero-image-decisions.json` (`{"id", "image"}` for a new hero, `{"id", "keep": true}` to retain one). That manifest is now historical: banners come from the compositor described in [banner-system.md](./banner-system.md).
 
 ## Round 2.5 (2026-05-01) — single-placement re-spins
 

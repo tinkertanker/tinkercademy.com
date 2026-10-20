@@ -390,6 +390,11 @@ const pages = await mapPool(urls, 6, async (url, index) => {
 	return crawlPage(url);
 });
 
+const failedPages = pages.filter((page) => page.status < 200 || page.status >= 300);
+if (failedPages.length) {
+	throw new Error(`${failedPages.length} page(s) failed: ${failedPages.map((page) => `${page.url} (HTTP ${page.status})`).join(', ')}`);
+}
+
 const assetReferences = new Map();
 for (const page of pages) {
 	for (const asset of page.assets) {

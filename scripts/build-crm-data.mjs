@@ -581,14 +581,21 @@ async function writeJsonFile(fileName, value) {
 
 const crawl = JSON.parse(await readFile(CRAWL_FILE, 'utf8'));
 const pages = crawl.pages ?? [];
-/* Every output below is regenerated from Framer handover data. Without it the
-   script would overwrite the committed data with empty collections. */
-if (!pages.some((page) => page.framer?.hasHandover)) {
-	console.error(`${CRAWL_FILE} has ${pages.length} page(s) and none carry Framer handover data; refusing to overwrite src/data.`);
-	process.exit(1);
-}
 const programmePages = pages.filter((page) => page.type === 'programme');
 const tutorialPages = pages.filter((page) => page.type === 'tutorial');
+/* Every output below is regenerated wholesale from this crawl, so an empty,
+   partial, or non-Framer crawl would overwrite the committed data. */
+const crawlProblems = [
+	...pages.filter((page) => page.status < 200 || page.status >= 300).map((page) => `${page.path} returned HTTP ${page.status}`),
+	...(pages.some((page) => page.path === '/') ? [] : ['no homepage']),
+	...(programmePages.length ? [] : ['no programme pages']),
+	...(tutorialPages.length ? [] : ['no tutorial pages']),
+	...(pages.some((page) => page.framer?.structured) ? [] : ['no parseable Framer handover data']),
+];
+if (crawlProblems.length) {
+	console.error(`${CRAWL_FILE} is not a usable Framer crawl (${crawlProblems.join('; ')}); refusing to overwrite src/data.`);
+	process.exit(1);
+}
 const staticPages = pages.filter((page) => page.type === 'static' || page.type === 'root');
 
 const contactPage = pages.find((page) => page.path === '/contact-us');
