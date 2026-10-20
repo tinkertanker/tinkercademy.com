@@ -57,6 +57,10 @@ const programmes = defineCollection({
 				}),
 			)
 			.optional(),
+		// Shown as "Published" / "Updated" on the page and in structured data.
+		// Bump updatedAt whenever the course content changes.
+		publishedAt: z.coerce.date().optional(),
+		updatedAt: z.coerce.date().optional(),
 		// Machine-readable copies of facts stated in the Details section; they feed
 		// the Course structured data so crawlers don't have to parse prose.
 		fee: z

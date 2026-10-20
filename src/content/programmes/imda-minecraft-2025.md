@@ -17,6 +17,8 @@ courseMode: onsite
 fit:
   question: "Should our school choose MakeCode Arcade and Minecraft, or Phaser?"
   answer: "Choose MakeCode Arcade and Minecraft if your students are beginners who'll learn best with block-based coding: they make retro-style games in MakeCode Arcade and build 3D worlds in Minecraft Education. There are beginner and intermediate levels of 24 hours each. Choose AI-Driven Game Development on Phaser if your students are ready to type real code: they build browser games in JavaScript with Phaser and VS Code. Both are delivered under our partner Zenitant Pte Ltd."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

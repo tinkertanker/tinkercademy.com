@@ -15,6 +15,8 @@ courseMode: onsite
 fit:
   question: "Can other schools run a programme like RI FutureCreate?"
   answer: "RI FutureCreate is a four-year maker programme we run for Raffles Institution students. It moves from hand tools and analog fabrication in Year 1, to electronics and digital fabrication in Year 2, focused skill projects in Year 3, and a self-directed project in Year 4. This page describes RI's programme specifically. If your school wants a multi-year maker programme of its own, write in and we'll talk through how it could fit your timetable and facilities."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

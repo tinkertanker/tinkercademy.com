@@ -19,6 +19,8 @@ courseMode: onsite
 fit:
   question: "Can students learn machine learning without coding?"
   answer: "Yes. This course uses Orange, a free visual tool where you build machine learning workflows by connecting blocks instead of writing code. Students and teachers learn supervised and unsupervised learning, classification, regression, and clustering, then apply them to problems such as predicting customer churn or sorting text documents. It suits schools that want to teach how AI makes predictions before, or instead of, teaching programming. It runs over 1 to 2 days and starts with 5 sign-ups."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

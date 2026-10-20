@@ -17,6 +17,8 @@ courseMode: onsite
 fit:
   question: "Does our school need its own micro:bits for this course?"
   answer: "Yes. Schools need their own micro:bit kits, which Tinker Class sells at education pricing. The 24-hour course suits primary schools that want a hands-on start to coding and electronics: students program the micro:bit in block-based MakeCode and use it to control servos, LED strips, and buzzers. It works with PCs, Macs, iPads, and Chromebooks. Training is delivered under our partner Zenitant Pte Ltd. If you'd rather not buy hardware, look at our IMDA LEARN Roadmaps 2027 courses on Apple, Figma, or Canva."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

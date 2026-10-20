@@ -13,6 +13,8 @@ heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, jumping beside 
 fit:
   question: "Is BrainHack CODE_EXP right for our students?"
   answer: "It suits students who want to learn mobile app development fast and test it in competition. BrainHack CODE_EXP is a hackathon held every May and June: teams attend training on React Native, generative AI, and on-device LLMs, then submit a proposal deck, a one-minute pitch video, an architecture, and a wireframe to qualify. Forty teams go on to build and pitch live at the finals for cash prizes. The schedule below is from the 2025 run. For a classroom course instead, see Build for Mobile with React Native."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

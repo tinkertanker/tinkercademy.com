@@ -20,6 +20,8 @@ courseMode: onsite
 fit:
   question: "Who is Swift Accelerator for?"
   answer: "Swift Accelerator is an eight-month programme for students who want to build and publish their own iOS app. Places go to successful applicants, who are fully subsidised by IMDA, and sessions run at Apple's Singapore office. You'll learn Swift, design to Apple's Human Interface Guidelines, and finish by publishing a working app on the App Store. If you'd like a shorter start with app development through your school, look at the Apple App Development tracks for Infocomm Clubs."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

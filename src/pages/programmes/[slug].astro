@@ -114,7 +114,12 @@ if (audienceTypeName && primaryAudience?.label) {
 if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
-const { fee, location, courseMode, sessions, fit, testimonials } = programme.entry.data;
+const { fee, location, courseMode, sessions, fit, testimonials, publishedAt, updatedAt } = programme.entry.data;
+const toIsoDate = (date: Date) => date.toISOString().slice(0, 10);
+const formatDate = (date: Date) =>
+	date.toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+if (publishedAt) courseSchema.datePublished = toIsoDate(publishedAt);
+if (updatedAt) courseSchema.dateModified = toIsoDate(updatedAt);
 if (fee) {
 	courseSchema.offers = {
 		'@type': 'Offer',
@@ -129,7 +134,6 @@ if (location || courseMode) {
 	const instanceBase: Record<string, unknown> = { '@type': 'CourseInstance' };
 	if (courseMode) instanceBase.courseMode = courseMode;
 	if (location) instanceBase.location = location;
-	const toIsoDate = (date: Date) => date.toISOString().slice(0, 10);
 	courseSchema.hasCourseInstance = sessions?.length
 		? sessions.map((session) => ({
 				...instanceBase,
@@ -288,6 +292,26 @@ const breadcrumbSchema = {
 				<div class="prog-meta__group">
 					<dt class="prog-meta__label">Type:</dt>
 					<dd class="prog-meta__value">{typeLabel}</dd>
+				</div>
+			)}
+			{(publishedAt || updatedAt) && (
+				<div class="prog-meta__group prog-meta__group--dates">
+					{publishedAt && (
+						<>
+							<dt class="prog-meta__label">Published:</dt>
+							<dd class="prog-meta__value">
+								<time datetime={toIsoDate(publishedAt)}>{formatDate(publishedAt)}</time>
+							</dd>
+						</>
+					)}
+					{updatedAt && (
+						<>
+							<dt class="prog-meta__label">Updated:</dt>
+							<dd class="prog-meta__value">
+								<time datetime={toIsoDate(updatedAt)}>{formatDate(updatedAt)}</time>
+							</dd>
+						</>
+					)}
 				</div>
 			)}
 		</dl>
@@ -520,6 +544,11 @@ const breadcrumbSchema = {
 	.prog-meta__series,
 	.prog-meta__value {
 		margin: 0;
+	}
+
+	/* Keep both dates together when the meta bar wraps. */
+	.prog-meta__group--dates .prog-meta__value:not(:last-child) {
+		margin-right: 0.75rem;
 	}
 
 	.prog-meta__tags {

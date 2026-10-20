@@ -18,6 +18,8 @@ courseMode: onsite
 fit:
   question: "Do I need coding experience for SMU's Professional Certificate in Mobile Application Development?"
   answer: "Yes. It's for people who already program in another language and want to build full-stack mobile apps. Over seven two-day modules, you'll design and prototype apps, build them for Android and iOS, connect them to databases and web back-ends, and complete a project. You have up to three years to finish all seven modules. Enrolment and SkillsFuture funding go through SMU Academy. If you're new to coding, start with Mastering the Web, or try Build for Mobile with React Native for a two-day introduction."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

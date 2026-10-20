@@ -18,6 +18,8 @@ courseMode: onsite
 fit:
   question: "Is Code for Fun right for our students?"
   answer: "Code for Fun is a 10-hour IMDA and MOE programme. For upper primary students, it covers computational thinking and basic programming (events, loops, variables, conditionals) plus an introduction to AI. For secondary students, it focuses on digital making with microcontrollers, with a block-based or text-based track for your school to choose. If your students have already done Code for Fun, the AI for Fun module is the natural next step. MOE schools apply during the annual September to October window."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

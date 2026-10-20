@@ -15,6 +15,8 @@ courseMode: onsite
 fit:
   question: "Should our school choose Phaser, or MakeCode Arcade and Minecraft?"
   answer: "Choose Phaser if your students are ready to type real code. Over 24 hours they learn HTML, JavaScript, and VS Code, then build 2D browser games with sprites, physics, scoring, and levels. They also sign up for the free GitHub Education pack, which includes GitHub Copilot for AI-assisted coding. No programming experience is needed. If your students are younger or would rather start with blocks, MakeCode Arcade and Minecraft is the gentler option. Both are delivered under our partner Zenitant Pte Ltd."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

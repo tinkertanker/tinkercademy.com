@@ -15,6 +15,8 @@ heroAlt: "Illustration of three linked blocks above a spreadsheet on a laptop, o
 fit:
   question: "Is this blockchain course right for me?"
   answer: "It suits professionals who want to understand how blockchains work rather than just follow the headlines. You'll look at the cryptography and digital signatures underneath, compare Bitcoin, Ethereum, and Stellar, build a simple decentralised app on Stellar, and discuss real applications across industries. It's offered through SMU Academy as part of its Certificate in Technology Foundations, so enrolment and SkillsFuture funding go through SMU. If you'd rather build general software skills first, look at Mastering the Web."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
