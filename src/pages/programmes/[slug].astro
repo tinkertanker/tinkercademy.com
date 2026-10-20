@@ -248,11 +248,11 @@ const breadcrumbSchema = {
 
 	{/* ════════ Meta bar ═════════════════════════════════════════════ */}
 	<section class="prog-meta">
-		<div class="shell prog-meta__inner">
+		<dl class="shell prog-meta__inner">
 			{audiences.length > 0 && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Audiences:</span>
-					<div class="prog-meta__tags">
+					<dt class="prog-meta__label">Audiences:</dt>
+					<dd class="prog-meta__tags">
 						{audiences.map((aud) => (
 							<a
 								class:list={[
@@ -264,31 +264,33 @@ const breadcrumbSchema = {
 								{aud.label}
 							</a>
 						))}
-					</div>
+					</dd>
 				</div>
 			)}
 			{seriesCourses.length > 0 && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Series:</span>
-					<ProgrammeSeriesNav
-						label={programme.series?.label ?? 'Series'}
-						courses={seriesCourses}
-					/>
+					<dt class="prog-meta__label">Series:</dt>
+					<dd class="prog-meta__series">
+						<ProgrammeSeriesNav
+							label={programme.series?.label ?? 'Series'}
+							courses={seriesCourses}
+						/>
+					</dd>
 				</div>
 			)}
 			{duration && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Duration:</span>
-					<span class="prog-meta__value">{duration}</span>
+					<dt class="prog-meta__label">Duration:</dt>
+					<dd class="prog-meta__value">{duration}</dd>
 				</div>
 			)}
 			{typeLabel && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Type:</span>
-					<span class="prog-meta__value">{typeLabel}</span>
+					<dt class="prog-meta__label">Type:</dt>
+					<dd class="prog-meta__value">{typeLabel}</dd>
 				</div>
 			)}
-		</div>
+		</dl>
 	</section>
 
 	{/* ════════ Facts + content + enquiry form sidebar ═══════════════ */}
@@ -302,11 +304,11 @@ const breadcrumbSchema = {
 			)}
 			{(domainLabels.length > 0 || platforms.length > 0) && (
 				<section class="prog-facts">
-					<div class="prog-facts__inner">
+					<dl class="prog-facts__inner">
 						{domainLabels.length > 0 && (
 							<div class="prog-facts__group">
-								<p class="prog-facts__heading">Domains</p>
-								<div class="prog-facts__chips">
+								<dt class="prog-facts__heading">Domains</dt>
+								<dd class="prog-facts__chips">
 									{domains.map((domain) => (
 										<a
 											class="prog-facts__chip"
@@ -315,13 +317,13 @@ const breadcrumbSchema = {
 											{domain.label}
 										</a>
 									))}
-								</div>
+								</dd>
 							</div>
 						)}
 						{platforms.length > 0 && (
 							<div class="prog-facts__group">
-								<p class="prog-facts__heading">Platforms</p>
-								<div class="prog-facts__chips">
+								<dt class="prog-facts__heading">Platforms</dt>
+								<dd class="prog-facts__chips">
 									{platforms.map((platform) => (
 										<a
 											class="prog-facts__chip prog-facts__chip--platform"
@@ -338,10 +340,10 @@ const breadcrumbSchema = {
 											<span>{platform.label}</span>
 										</a>
 									))}
-								</div>
+								</dd>
 							</div>
 						)}
-					</div>
+					</dl>
 				</section>
 			)}
 
@@ -490,6 +492,7 @@ const breadcrumbSchema = {
 	}
 
 	.prog-meta__inner {
+		margin-block: 0;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem 2.5rem;
@@ -511,6 +514,12 @@ const breadcrumbSchema = {
 		color: var(--theme-muted, rgb(90, 90, 90));
 		margin: 0;
 		white-space: nowrap;
+	}
+
+	.prog-meta__tags,
+	.prog-meta__series,
+	.prog-meta__value {
+		margin: 0;
 	}
 
 	.prog-meta__tags {
@@ -577,6 +586,7 @@ const breadcrumbSchema = {
 	}
 
 	.prog-facts__inner {
+		margin: 0;
 		display: grid;
 		gap: 1.25rem;
 	}
@@ -596,6 +606,7 @@ const breadcrumbSchema = {
 	}
 
 	.prog-facts__chips {
+		margin: 0;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.65rem;
