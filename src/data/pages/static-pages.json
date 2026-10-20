@@ -1646,7 +1646,7 @@
       },
       {
         "label": "Microsoft MakeCode",
-        "url": "http://pxt.microbit.org/",
+        "url": "https://makecode.microbit.org/",
         "type": "external"
       },
       {
