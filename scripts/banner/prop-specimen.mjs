@@ -104,7 +104,7 @@ for (const item of ITEMS) {
 }
 
 function sheetSVG(mode) {
-	const T = setTheme(mode);
+	setTheme(mode);
 	const cols = 6;
 	const rows = Math.ceil(ITEMS.length / cols);
 	const width = cols * (CELL + PAD) + PAD;

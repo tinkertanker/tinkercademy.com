@@ -29,7 +29,3 @@ export function createProgrammeFilterHref(
 	const query = params.toString();
 	return query ? `${normalisedBasePath}?${query}` : normalisedBasePath;
 }
-
-export function serialiseProgrammeIds(ids: string[]) {
-	return ids.filter(Boolean).join(' ');
-}

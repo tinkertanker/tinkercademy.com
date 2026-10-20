@@ -23,12 +23,13 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 
 - Node.js >= 22.12.0 and pnpm (pinned via `packageManager` in `package.json`) are required.
 - Programmes now live in the Astro content collection under `src/content/programmes/`, so the old `[content] Content config not loaded` warning note is obsolete.
-- `pnpm run check` reports only hints (CommonJS warnings on Playwright helper scripts in `docs/`, a deprecated `frameborder` attribute); there are zero errors.
+- `pnpm run check` should report zero errors and zero warnings (a few async-function hints remain).
+- `pnpm test` runs the source-level tests. `pnpm run test:seo` inspects built HTML and needs a production build first: `SITE_URL=https://tinkercademy.com pnpm run build`. A default (staging) build correctly emits `Disallow: /`, which fails the production robots assertion.
 - Normal dev/build work does not need any environment variables.
 - `pnpm run import:framer` loads `FRAMER_API_KEY` and `FRAMER_PROJECT_URL` from `.env.local` or `.env` in the active worktree. These files are git-ignored; `.env.example` documents the required keys.
 - Normal dev/build work does not require `pnpm run import:live` or `pnpm run import:framer`; treat both as legacy migration utilities unless you are deliberately refreshing imported data.
 - Programme authoring is Astro-first. Do not extend the Framer programme pipeline unless the user explicitly asks for migration work.
-- `pnpm run import:live` still hits the live `tinkercademy.com` site and regenerates legacy structured data for non-programme content.
+- `pnpm run import:live` was built to crawl the retired Framer site. `tinkercademy.com` now serves this Astro build (no `/sitemap.xml`, no Framer handover data), so the crawl fails and `build:crm` refuses to overwrite `src/data/` without Framer handover data. Do not try to work around this; edit the JSON in `src/data/pages/` directly.
 - Page rendering is now Astro-native; `downloads/rehosted_site/` is no longer a build input.
 - The former high-fidelity document renderer and `src/generated/route-documents.js` payload have been removed. Do not infer current design choices from leftover migration data or public asset files.
 - The Framer enrichment step currently backfills richer programme/tutorial metadata and writes additional collections under `src/data/pages/` and `src/data/crm/`, including `platforms`, `domains`, `articles`, and `external-logos`.

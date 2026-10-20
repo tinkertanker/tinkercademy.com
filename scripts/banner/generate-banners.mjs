@@ -564,40 +564,6 @@ function trophy(w, { accent = 'orange' }) {
 		${star(w * 0.12, T.screen).replace('<path', `<path transform="translate(0,${-h * 0.24})"`)}`;
 }
 
-// Singapore skyline silhouette band — background dressing for home /
-// showcase / event scenes. Draw with `opacity` ≈ 0.1–0.2.
-function skyline(w, { accent }) {
-	const c = accent ? PALETTE[accent] : T.line;
-	const h = w * 0.22;
-	const g = [];
-	// Marina Bay Sands: three towers + deck
-	for (let i = 0; i < 3; i++)
-		g.push(
-			`<rect x="${-w * 0.5 + i * w * 0.075}" y="${-h * 0.63}" width="${w * 0.05}" height="${h * 0.63}" fill="${c}"/>`
-		);
-	g.push(
-		`<rect x="${-w * 0.52}" y="${-h * 0.72}" width="${w * 0.24}" height="${h * 0.1}" rx="${h * 0.05}" fill="${c}"/>`
-	);
-	// Singapore Flyer: wheel + spokes + stand
-	const fx = -w * 0.1;
-	const fr = h * 0.42;
-	g.push(
-		`<circle cx="${fx}" cy="${-h * 0.5}" r="${fr}" fill="none" stroke="${c}" stroke-width="${h * 0.05}"/>`,
-		`<line x1="${fx - fr * 0.7}" y1="${-h * 0.5 - fr * 0.7}" x2="${fx + fr * 0.7}" y2="${-h * 0.5 + fr * 0.7}" stroke="${c}" stroke-width="${h * 0.04}"/>`,
-		`<line x1="${fx + fr * 0.7}" y1="${-h * 0.5 - fr * 0.7}" x2="${fx - fr * 0.7}" y2="${-h * 0.5 + fr * 0.7}" stroke="${c}" stroke-width="${h * 0.04}"/>`,
-		`<line x1="${fx}" y1="${-h * 0.5 + fr}" x2="${fx}" y2="0" stroke="${c}" stroke-width="${h * 0.05}"/>`
-	);
-	// generic CBD blocks
-	const blocksSpec = [
-		[0.06, 0.75], [0.14, 0.5], [0.2, 0.9], [0.28, 0.62], [0.35, 0.8], [0.43, 0.45],
-	];
-	for (const [bx, bh] of blocksSpec)
-		g.push(`<rect x="${w * bx}" y="${-h * bh}" width="${w * 0.055}" height="${h * bh}" fill="${c}"/>`);
-	// ground line
-	g.push(`<line x1="${-w * 0.54}" y1="0" x2="${w * 0.52}" y2="0" stroke="${c}" stroke-width="${h * 0.05}" stroke-linecap="round"/>`);
-	return g.join('');
-}
-
 function diamond(w, { accent = 'red', outline = false }) {
 	const h = w * 1.45;
 	const fill = outline ? 'none' : PALETTE[accent];
@@ -665,7 +631,7 @@ async function stickerPropSVG(p, mode) {
 // ── Scene assembly ────────────────────────────────────────────────
 
 // Background-dressing prop types: skipped by margin validation and shadows.
-const BACKGROUND_TYPES = new Set(['diamond', 'skyline', 'wire', 'face', 'image']);
+const BACKGROUND_TYPES = new Set(['diamond', 'wire', 'face', 'image']);
 
 function propExtent(p) {
 	return (p.w * W) / 2 + 8;

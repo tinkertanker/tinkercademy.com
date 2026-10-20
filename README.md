@@ -16,7 +16,8 @@ The crawl and Framer import scripts remain in the repo as legacy migration infra
 - `pnpm run dev` starts the Astro dev server.
 - `pnpm run build` builds the site.
 - `pnpm run check` runs `astro check`.
-- `pnpm run import:live` re-crawls the public site and regenerates legacy structured data files.
+- `pnpm test` runs the source-level tests; `pnpm run test:seo` checks a production build (`SITE_URL=https://tinkercademy.com pnpm run build` first).
+- `pnpm run import:live` crawled the retired Framer site. It now fails closed because `tinkercademy.com` serves this Astro build; edit `src/data/pages/*.json` directly.
 - `pnpm run import:framer` refreshes legacy Framer-backed structured data from `.env.local` or `.env`.
 
 ## Current design source of truth

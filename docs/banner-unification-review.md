@@ -62,7 +62,7 @@ Current craft issues to fix in round 3, so the illustrations become "great" rath
 1. **Home** — still on a Framer CDN image. Highest-traffic banner on the site; `home/cdx-icon_001.webp` (mascot + kids + SG skyline) is a strong baseline to iterate from with the new stickers.
 2. Remaining Framer-CDN pages (microbit, tinker-x, contact-us) — replace and rehost; external CDN dependency should go regardless of art direction.
 3. The five live mascot pages — regenerate to round-3 spec with the new sticker refs.
-4. Programme pages in batches (schools tracks first, then professional tracks), via the existing `/review/hero-proposals/` picker + `hero-image-decisions.json` + `apply-hero-picks.py` workflow.
+4. Programme pages in batches (schools tracks first, then professional tracks), via the `/review/hero-proposals/` picker + `hero-image-decisions.json` + `apply-hero-picks.py` workflow (since retired; programmes now use compositor banners).
 5. Swap real photos into showcase / code-exp / ri-futurecreate as they're sourced.
 6. Retire `cdx_` photos as each placement flips; keep on disk for comparison as before.
 
