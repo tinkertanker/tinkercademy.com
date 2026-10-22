@@ -14,7 +14,7 @@ primaryCta:
   label: "Apply via IMDA LEARN Roadmaps"
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "UI/UX Design with Figma (Secondary/JC) - Tinkercademy"
-seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students design and test interactive Figma prototypes, with a guided lesson in AI-enabled prototyping using Figma Make."
+seoDescription: "An IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students design and test Figma prototypes, with guided AI prototyping in Figma Make."
 ---
 
 ## Course Overview

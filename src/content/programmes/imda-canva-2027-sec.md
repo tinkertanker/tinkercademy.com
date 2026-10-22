@@ -14,7 +14,7 @@ primaryCta:
   label: "Apply via IMDA LEARN Roadmaps"
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "AI Product Design with Canva Code (Secondary/JC) - Tinkercademy"
-seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students build a working digital product through AI-assisted product design with Canva Code."
+seoDescription: "An IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students build a working digital product with AI-assisted design in Canva Code."
 ---
 
 ## Course Overview

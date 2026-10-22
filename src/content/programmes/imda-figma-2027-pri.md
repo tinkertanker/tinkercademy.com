@@ -14,7 +14,7 @@ primaryCta:
   label: "Apply via IMDA LEARN Roadmaps"
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "UI/UX Design with Figma (Primary) - Tinkercademy"
-seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for primary school Infocomm Clubs. Students go from idea canvas to wireframes, Figma screens, peer testing, and presentation."
+seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for primary Infocomm Clubs. Students go from idea canvas to wireframes, Figma screens, peer testing and presentation."
 ---
 
 ## Course Overview

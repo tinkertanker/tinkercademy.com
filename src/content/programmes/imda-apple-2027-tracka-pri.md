@@ -14,7 +14,7 @@ primaryCta:
   label: "Apply via IMDA LEARN Roadmaps"
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track A: App Design and Prototyping (Primary) - Tinkercademy"
-seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for primary school Infocomm Clubs. Students design and prototype a real app idea using Keynote and Swift Playgrounds on iPad — no coding experience needed."
+seoDescription: "An IMDA LEARN Roadmaps 2027 course for primary Infocomm Clubs. Students prototype an app idea in Keynote and Swift Playgrounds. No coding experience needed."
 ---
 
 ## Course Overview
