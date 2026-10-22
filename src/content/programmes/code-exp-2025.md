@@ -1,25 +1,25 @@
 ---
 title: "BrainHack CODE_EXP"
-subtitle: "May–June annually"
+subtitle: "Run in May–June 2025 as a mobile app hackathon."
 duration: "4 days"
 heroImage: "/images/banners/code-exp-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["ai-engineering", "appdev"]
 platformIds: ["react-native", "tensorflow"]
-cardBlurb: "BrainHack CODE_EXP is a mobile dev hackathon held annually in May–June, spread over three phases: Phase 1: Training sessions, Phase 2: Qualifiers, Phase 3: Finals."
+cardBlurb: "A mobile app hackathon we ran in May–June 2025: React Native and generative AI training, qualifiers, and live finals for 40 teams."
 weight: 30
 seoTitle: "BrainHack CODE_EXP - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, jumping beside a code editor, a web page and a trophy, over a faded photo of a hackathon hall."
 fit:
-  question: "Is BrainHack CODE_EXP right for our students?"
-  answer: "It suits students who want to learn mobile app development fast and test it in competition. BrainHack CODE_EXP is a hackathon held every May and June: teams attend training on React Native, generative AI, and on-device LLMs, then submit a proposal deck, a one-minute pitch video, an architecture, and a wireframe to qualify. Forty teams go on to build and pitch live at the finals for cash prizes. The schedule below is from the 2025 run. For a classroom course instead, see Build for Mobile with React Native."
+  question: "What was BrainHack CODE_EXP?"
+  answer: "BrainHack CODE_EXP is a mobile app development hackathon. In our May–June 2025 run, teams attended training on React Native, generative AI, and on-device LLMs, then submitted a proposal deck, a one-minute pitch video, an architecture, and a wireframe to qualify. Forty teams went on to build and pitch live at the finals at Marina Bay Sands for cash prizes. The schedule below is from that run. For a classroom course in the same skills, see Build for Mobile with React Native."
 publishedAt: 2026-04-18
-updatedAt: 2026-10-20
+updatedAt: 2026-10-22
 ---
 
 ## Course Overview
 
-<p>BrainHack CODE_EXP is a <strong>mobile dev hackathon </strong>held annually in May–June, spread over three phases:</p><ul><li data-preset-tag="p"><p>Phase 1: <strong>Training sessions</strong></p></li><li data-preset-tag="p"><p>Phase 2: <strong>Qualifiers</strong></p></li><li data-preset-tag="p"><p>Phase 3: <strong>Finals</strong></p></li></ul>
+<p>BrainHack CODE_EXP is a <strong>mobile dev hackathon </strong>that we ran in May–June 2025, over three phases:</p><ul><li data-preset-tag="p"><p>Phase 1: <strong>Training sessions</strong></p></li><li data-preset-tag="p"><p>Phase 2: <strong>Qualifiers</strong></p></li><li data-preset-tag="p"><p>Phase 3: <strong>Finals</strong></p></li></ul>
 
 ## Lesson Outcomes
 
@@ -27,4 +27,4 @@ updatedAt: 2026-10-20
 
 ## Details
 
-<h2>Phase 1: Levelling Up</h2><p>Training Schedule:</p><ul><li data-preset-tag="p"><p>Welcome Brief and Intro to Prototyping • 11 May (Sun) • 9:30am-12:30pm</p></li><li data-preset-tag="p"><p>React Native 1 • 11 May (Sun) • 2pm - 5pm</p></li><li data-preset-tag="p"><p>React Native 2 • 12 May (Mon) • 9:30am-12:30pm</p></li><li data-preset-tag="p"><p>React Native 3 • 12 May (Mon) • 2pm - 5pm</p></li><li data-preset-tag="p"><p>Working with Generative AI • 13 May (Tue) • 9:30am-12:30pm</p></li><li data-preset-tag="p"><p>Edge LLMs • 14 May (Wed) • 9:30am-12:30pm</p></li></ul><h2>Phase 2: Qualifiers</h2><p><strong>Deadline:</strong> 1200hrs, 24 May 2025</p><p><strong>Submission: </strong><a href="https://tk.sg/codeexp25_qualifiers">https://tk.sg/codeexp25_qualifiers</a></p><p><strong>Submission requirements:</strong></p><ol><li data-preset-tag="p"><p>Proposal (Value proposition slide deck, no more than 15 slides)</p></li><li data-preset-tag="p"><p>Elevator Pitch (1-minute video)</p></li><li data-preset-tag="p"><p>Architecture</p></li><li data-preset-tag="p"><p>Wireframe</p></li></ol><h2>Phase 3: Finals</h2><p><strong>Marina Bay Sands Expo &amp; Convention Centre</strong></p><p><strong>11 &amp; 12 June 2025</strong></p><ul><li data-preset-tag="p"><p>40 teams will compete live for cash prizes</p></li><li data-preset-tag="p"><p>Put in the final touches to your mobile app</p></li><li data-preset-tag="p"><p>Pitch and impress the Panel of Judges</p></li></ul>
+<h2>Phase 1: Levelling Up</h2><p>Training Schedule:</p><ul><li data-preset-tag="p"><p>Welcome Brief and Intro to Prototyping • 11 May (Sun) • 9:30am-12:30pm</p></li><li data-preset-tag="p"><p>React Native 1 • 11 May (Sun) • 2pm - 5pm</p></li><li data-preset-tag="p"><p>React Native 2 • 12 May (Mon) • 9:30am-12:30pm</p></li><li data-preset-tag="p"><p>React Native 3 • 12 May (Mon) • 2pm - 5pm</p></li><li data-preset-tag="p"><p>Working with Generative AI • 13 May (Tue) • 9:30am-12:30pm</p></li><li data-preset-tag="p"><p>Edge LLMs • 14 May (Wed) • 9:30am-12:30pm</p></li></ul><h2>Phase 2: Qualifiers</h2><p><strong>Deadline:</strong> 1200hrs, 24 May 2025</p><p><strong>Submission: </strong><a href="https://tk.sg/codeexp25_qualifiers">https://tk.sg/codeexp25_qualifiers</a></p><p><strong>Submission requirements:</strong></p><ol><li data-preset-tag="p"><p>Proposal (Value proposition slide deck, no more than 15 slides)</p></li><li data-preset-tag="p"><p>Elevator Pitch (1-minute video)</p></li><li data-preset-tag="p"><p>Architecture</p></li><li data-preset-tag="p"><p>Wireframe</p></li></ol><h2>Phase 3: Finals</h2><p><strong>Marina Bay Sands Expo &amp; Convention Centre</strong></p><p><strong>11 &amp; 12 June 2025</strong></p><ul><li data-preset-tag="p"><p>40 teams competed live for cash prizes</p></li><li data-preset-tag="p"><p>Put in the final touches to your mobile app</p></li><li data-preset-tag="p"><p>Pitch and impress the Panel of Judges</p></li></ul>

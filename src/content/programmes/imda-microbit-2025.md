@@ -1,12 +1,12 @@
 ---
 title: "Digital Making with micro:bit"
-subtitle: "An IMDA Infocom LEARN Roadmap course with micro:bit."
+subtitle: "Run in 2025 for primary schools as an IMDA LEARN Roadmaps course, with micro:bit."
 duration: "24 hours"
 heroImage: "/images/banners/imda-microbit-2025.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["iot", "making"]
 platformIds: ["makecode-arcade", "bbc-micro-bit"]
-cardBlurb: "A 24-hour course for primary schools: students program the micro:bit in block-based MakeCode to control servos, LED strips, and buzzers."
+cardBlurb: "Run in 2025 for primary schools: students programmed the micro:bit in block-based MakeCode to control servos, LED strips, and buzzers."
 weight: 86
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
@@ -15,10 +15,10 @@ heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, raising a hand 
 location: "At your school in Singapore"
 courseMode: onsite
 fit:
-  question: "Does our school need its own micro:bits for this course?"
-  answer: "Yes. Schools need their own micro:bit kits, which Tinker Class sells at education pricing. The 24-hour course suits primary schools that want a hands-on start to coding and electronics: students program the micro:bit in block-based MakeCode and use it to control servos, LED strips, and buzzers. It works with PCs, Macs, iPads, and Chromebooks. Training is delivered under our partner Zenitant Pte Ltd. If you'd rather not buy hardware, look at our IMDA LEARN Roadmaps 2027 courses on Apple, Figma, or Canva."
+  question: "Could our school run Digital Making with micro:bit?"
+  answer: "We ran this 24-hour course in 2025 for primary schools under IMDA's LEARN Roadmaps, delivered under our partner Zenitant Pte Ltd. Students programmed the micro:bit in block-based MakeCode and used it to control servos, LED strips, and buzzers, on PCs, Macs, iPads, or Chromebooks. This page describes that run. If you'd like a similar course for your school, write in; you'll need your own micro:bit kits. For our current IMDA LEARN Roadmaps 2027 courses, see the Apple, Figma, and Canva tracks."
 publishedAt: 2026-04-18
-updatedAt: 2026-10-20
+updatedAt: 2026-10-22
 ---
 
 ## Course Overview
@@ -31,4 +31,4 @@ updatedAt: 2026-10-20
 
 ## Details
 
-<p><a href="https://zenitanteducation.com/">Zenitant</a> is a fellow Microsoft Global Training Partner, with whom we are happy to partner to offer these courses to primary schools. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Please note that for the microcontroller course, schools will need to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at <a href="mailto:hello@tinkerclass.tech">hello@tinkerclass.tech</a> to place orders at a discounted education pricing. Training is provided under Zenitant Pte Ltd. — <a href="mailto:yjsoon@tk.sg">email us</a> to find out more.</p><figure><table><tbody><tr><th><p>Course</p></th><th><p>Course Code</p></th><th><p>Hours</p></th><th><p>Details</p></th></tr><tr><td><p>Digital Making with micro:bit</p></td><td><p>P-MICROSOFT-MAKE-BASIC / P-MICROSOFT-MAKE-INTM</p></td><td><p>24 hours</p></td><td><p>Suitable for schools with PCs, Macs, iPads, and Chromebooks. micro:bit required.</p></td></tr></tbody></table></figure>
+<p><a href="https://zenitanteducation.com/">Zenitant</a> is a fellow Microsoft Global Training Partner, with whom we partnered to offer these courses to primary schools in 2025. Through our close collaboration, we have brought the annual 3d-tronics Micro-controller Challenge from 2018 to 2022. Please note that for the microcontroller course, schools needed to have their own micro:bit kits. Tinker Class is a distributor for micro:bit and accessories; please contact us at <a href="mailto:hello@tinkerclass.tech">hello@tinkerclass.tech</a> to place orders at a discounted education pricing. Training was provided under Zenitant Pte Ltd. — <a href="mailto:yjsoon@tk.sg">email us</a> to find out more.</p><figure><table><tbody><tr><th><p>Course</p></th><th><p>Course Code</p></th><th><p>Hours</p></th><th><p>Details</p></th></tr><tr><td><p>Digital Making with micro:bit</p></td><td><p>P-MICROSOFT-MAKE-BASIC / P-MICROSOFT-MAKE-INTM</p></td><td><p>24 hours</p></td><td><p>Suitable for schools with PCs, Macs, iPads, and Chromebooks. micro:bit required.</p></td></tr></tbody></table></figure>

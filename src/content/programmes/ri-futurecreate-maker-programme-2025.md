@@ -1,6 +1,6 @@
 ---
-title: "RI FutureCreate Maker Programme 2025"
-subtitle: "A hands-on digital maker programme for RI students."
+title: "RI FutureCreate Maker Programme"
+subtitle: "A hands-on digital maker programme, run for Raffles Institution students from 2025."
 duration: "4 years"
 heroImage: "/images/banners/ri-futurecreate-maker-programme-2025.webp"
 audienceIds: ["students", "teachers"]
@@ -8,7 +8,7 @@ domainIds: ["making", "design-thinking"]
 platformIds: ["3d-printing", "arduino", "scratch"]
 cardBlurb: "A four-year maker programme for Raffles Institution students, from hand tools and electronics to a self-directed project in Year 4."
 weight: 89
-seoTitle: "RI FutureCreate Maker Programme 2025 - Tinkercademy: Coding and Making for Schools and Professionals"
+seoTitle: "RI FutureCreate Maker Programme - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a cardboard marble run and a cardboard house, over a faded photo of a school campus."
 location: "Raffles Institution, Singapore"
 courseMode: onsite
@@ -16,7 +16,7 @@ fit:
   question: "Can other schools run a programme like RI FutureCreate?"
   answer: "RI FutureCreate is a four-year maker programme we run for Raffles Institution students. It moves from hand tools and analog fabrication in Year 1, to electronics and digital fabrication in Year 2, focused skill projects in Year 3, and a self-directed project in Year 4. This page describes RI's programme specifically. If your school wants a multi-year maker programme of its own, write in and we'll talk through how it could fit your timetable and facilities."
 publishedAt: 2026-04-18
-updatedAt: 2026-10-20
+updatedAt: 2026-10-22
 ---
 
 ## Course Overview
