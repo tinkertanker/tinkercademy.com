@@ -14,7 +14,7 @@ primaryCta:
   label: "Apply via IMDA LEARN Roadmaps"
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track B: Swift App Development (Primary) - Tinkercademy"
-seoDescription: "An IMDA LEARN Roadmaps 2027 course for primary Infocomm Clubs. Students learn SwiftUI through guided mini-projects in Swift Playgrounds. No coding needed."
+seoDescription: "An IMDA LEARN Roadmaps 2027 course for primary Infocomm Clubs. Students learn SwiftUI through mini-projects in Swift Playgrounds. No coding experience needed."
 ---
 
 ## Course Overview
