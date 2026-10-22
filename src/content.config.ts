@@ -46,17 +46,6 @@ const programmes = defineCollection({
 				answer: z.string().min(1).refine((value) => value.split(/\s+/).length <= 100, 'Keep the answer to 100 words or fewer'),
 			})
 			.optional(),
-		// Real participant quotes, rendered as plain text. Only attribute by name
-		// when the person agreed to be quoted; otherwise give the role alone.
-		testimonials: z
-			.array(
-				z.object({
-					quote: z.string().min(1),
-					name: z.string().min(1).optional(),
-					role: z.string().min(1),
-				}),
-			)
-			.optional(),
 		// Shown as "Published" / "Updated" on the page and in structured data.
 		// Bump updatedAt whenever the course content changes.
 		publishedAt: z.coerce.date().optional(),

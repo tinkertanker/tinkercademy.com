@@ -1,0 +1,47 @@
+{
+	"_note": "Verbatim, unattributed participant quotes. `source` is for our records only and is never rendered.",
+	"schools": [
+		{
+			"quote": "The Swift Accelerator Programme taught me that anything is possible. To be able to learn, from scratch, how to code an entire app and publish it on the App Store ― it's an experience that I'd recommend to anyone who's interested in coding! The community also kept me coming back long after I graduated. Truly a great programme.",
+			"source": "CODE_EXP 2026 proposal, post-event feedback (Swift Accelerator participant)"
+		},
+		{
+			"quote": "Tinkercademy is a flexible, responsive and innovative partner, ready to always collaborate to develop cutting-edge coding programmes together with the school. They have depth of expertise, in both technology skills and pedagogy, to understand the needs of our students and engage them holistically.",
+			"source": "RGS Synapse 2026 proposal, client testimonials (senior teacher)"
+		},
+		{
+			"quote": "My past year with the Swift Accelerator Program has been an incredible journey that I will cherish forever. I've always dreamt of sharing my work with the world, and thanks to the program's supportive mentors, I turned that dream into reality by publishing my app on the App Store for everyone to use. Along the way, I made unforgettable memories and gained hands-on experience in app development.",
+			"source": "Jotform swiftinsg.org testimonial form 233398737931065, submission 6125020047227348171 (excerpt)"
+		},
+		{
+			"quote": "Very useful workshop. Guidance and examples were very beginner friendly and easy for participants to follow and try during the workshop. Good to build confidence especially for absolute beginners.",
+			"source": "Jotform teacher workshop survey 260992333231050 (quote-consent field)"
+		},
+		{
+			"quote": "Having the experience as ex-school teachers, Tinkercademy is able to utilise sound educational pedagogy… We continually receive good feedback from students… An Arduino teachers' workshop with Tinkercademy even inspired a couple of our Science teachers to design a term-long performance task.",
+			"source": "RGS Synapse 2026 proposal / testimonials sheet (CS teacher, IP school; abridged)"
+		},
+		{
+			"quote": "Most of the time i didn't feel lost, it was thoroughly well explained. I also like the Kahoot quizzes at the end of each session.",
+			"source": "CODE_EXP proposal, participant feedback"
+		}
+	],
+	"adults": [
+		{
+			"quote": "This was one of the most engaging and practical training sessions I've attended. The trainer explained concepts clearly, encouraged active participation, and shared real-world examples that made the learning immediately applicable.",
+			"source": "Jotform feedback form, AI & Productivity Tools Workshop (wider-audience consent field)"
+		},
+		{
+			"quote": "Sessions have been great, they are flexible and allow for a lot of creativity. We always practise what we learn by building mini apps, which has helped the steep learning curve feel less steep.",
+			"source": "Jotform 252940700350044, SMU mobile app certificate trainee (excerpt)"
+		},
+		{
+			"quote": "Vibe-coding opens up the opportunity for us to create solutions for our personal pain points.",
+			"source": "Jotform teacher workshop survey 260992333231050 (quote-consent field)"
+		},
+		{
+			"quote": "Great workshop session with lots of examples shared, and time set aside to try out the various tools",
+			"source": "Jotform teacher workshop survey 260992333231050 (quote-consent field)"
+		}
+	]
+}
