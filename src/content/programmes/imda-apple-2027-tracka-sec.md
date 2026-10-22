@@ -14,7 +14,7 @@ primaryCta:
   label: "Apply via IMDA LEARN Roadmaps"
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track A: App Design and Prototyping (Secondary/JC) - Tinkercademy"
-seoDescription: "A 26-hour IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students design and prototype a real app idea, then connect app behaviours to Swift programming concepts."
+seoDescription: "An IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students design and prototype an app idea, then connect it to Swift programming."
 ---
 
 ## Course Overview
