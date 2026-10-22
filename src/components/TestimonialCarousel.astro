@@ -17,9 +17,9 @@ const pageCount = Math.ceil(quotes.length / PER_PAGE);
 ---
 
 {quotes.length > 0 && (
-	<section class="quotes" data-quotes data-per-page={PER_PAGE} aria-roledescription="carousel" aria-label="What participants say">
+	<section class="quotes" data-quotes data-per-page={PER_PAGE} aria-roledescription="carousel" aria-label="What people say about our courses">
 		<div class="quotes__header">
-			<h2 class="quotes__heading">What participants say</h2>
+			<h2 class="quotes__heading">What people say about our courses</h2>
 			{pageCount > 1 && (
 				<div class="quotes__controls" hidden data-quotes-controls>
 					<button type="button" class="quotes__button" data-quotes-prev aria-label="Previous quotes">
