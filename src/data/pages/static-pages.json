@@ -5721,14 +5721,14 @@
         "title": "Code For Fun AI Workshop",
         "audience_label": "Students",
         "duration": "10 hours",
-        "blurb": "Age Group A CODE@SG initiative by IMDA and MOE."
+        "blurb": "A CODE@SG initiative by IMDA and MOE."
       },
       {
         "slug": "code-for-fun-baseline-workshop",
         "title": "Code For Fun Baseline Workshop",
         "audience_label": "Students",
         "duration": "10 hours",
-        "blurb": "Age Group A CODE@SG initiative by IMDA and MOE."
+        "blurb": "A CODE@SG initiative by IMDA and MOE."
       },
       {
         "slug": "building-agents-with-openclaw",
@@ -5875,42 +5875,42 @@
         "title": "Digital Maker: Create with 3D Printing and IOT",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Age Group Corporate training"
+        "blurb": "Corporate training"
       },
       {
         "slug": "unityarvr",
         "title": "Enter the Metaverse: Get started with Unity for AR/VR",
         "audience_label": "Businesses",
         "duration": "2 days",
-        "blurb": "Age Group Corporate training"
+        "blurb": "Corporate training"
       },
       {
         "slug": "no-code-machine-learning",
         "title": "No-Code Machine Learning",
         "audience_label": "Teachers",
         "duration": "2 days",
-        "blurb": "Age Group An introductory course on machine learning models using Orange."
+        "blurb": "An introductory course on machine learning models using Orange."
       },
       {
         "slug": "no-code-web-design-framer",
         "title": "No-code Web Design (Framer)",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Age Group An introductory course on building websites using Framer."
+        "blurb": "An introductory course on building websites using Framer."
       },
       {
         "slug": "microsoft-copilot",
         "title": "Microsoft Copilot",
         "audience_label": "Businesses",
         "duration": "2 days",
-        "blurb": "Age Group An introductory course on leveraging Microsoft Copilot to enhance productivity."
+        "blurb": "An introductory course on leveraging Microsoft Copilot to enhance productivity."
       },
       {
         "slug": "digital-making-with-micro-bit-iot",
         "title": "Digital Making with micro:bit & IoT",
         "audience_label": "Businesses",
         "duration": "2 days",
-        "blurb": "Age Group An introductory course on digital making with Micro:bit & IoT."
+        "blurb": "An introductory course on digital making with Micro:bit & IoT."
       }
     ]
   },
