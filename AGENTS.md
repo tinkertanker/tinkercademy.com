@@ -10,6 +10,8 @@ This is a static Astro site (no backend, no database, no Docker). Production dep
 | Dev server | `pnpm run dev` (port 4321) |
 | Build | `pnpm run build` |
 | Type check | `pnpm run check` (runs `astro check`) |
+| Link check | `pnpm run check:links` (after a build; fails on broken internal links or redirect targets) |
+| Course freshness | `pnpm run check:freshness` (lists live courses with `updatedAt` older than 90 days) |
 | Re-crawl live data | `pnpm run import:live` (requires internet; data already committed) |
 | Enrich from Framer CMS | `pnpm run import:framer` (requires local Framer credentials) |
 

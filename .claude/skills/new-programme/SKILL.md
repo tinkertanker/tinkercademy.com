@@ -68,6 +68,7 @@ cat src/data/pages/platforms.json  | python3 -c "import json,sys; [print(p['id']
     - Whether the outcomes should be **generic** (recommended — use phrases like "your company", "a finance system", "public statistical sources") or **customer-specific** (only if the page is explicitly for one organisation's internal use).
     - If generic: ask if Tinkercademy will supply the sample data / templates during the session (if yes, tag each bullet with "_(We'll supply …)_" so participants know the artefacts are provided).
 12. **Prerequisites** (optional). E.g. "Participants should have completed _Vibe Coding for Digital Builders_ or have equivalent hands-on experience with generative AI tools." If this course stands alone, skip.
+12a. **Reader question (`fit`).** Ask what a prospective participant or school would most want to know before choosing this course — usually "should I take this or <sibling course>?" or "do I need experience?". Write it as `fit.question` in the reader's own words, and `fit.answer` as a plain "it depends" answer of **100 words or fewer** (the schema rejects longer). Name the sibling course that suits other readers. It renders as the first H2 on the page and as FAQPage structured data.
 13. **Requirements** (bundled tools/accounts). The pattern is: "Participants will be provided with **[tool]** for the duration of the course." Ask what's bundled (e.g. "Claude Cowork (1 month)", "paid ChatGPT Business and Lovable plans", "Figma Professional"). Laptop boilerplate is standard.
 
 ### Batch 5 — Fees
@@ -83,7 +84,9 @@ cat src/data/pages/platforms.json  | python3 -c "import json,sys; [print(p['id']
     Whatever the user picks, **compute the full table and sanity-check two things**:
     - **Tier cliffs** — at each boundary (8, 12, 16), does moving up a tier mean a lower _total_ than the previous tier's max? (Yes is the normal topology — same as every other programme.)
     - **7→8 transition** — `7_or_fewer_flat` should be **slightly below** `8 × tier_8_11`. If not, warn the user: a group of 8 would pay _less_ than a group of 7, which is the opposite of how the flat fee is usually meant to work. Suggest a flat fee ≈ `(8 × tier_8_11) − ~$100` to restore the conventional relationship.
-    Always quote prices in SGD, exclusive of GST. The fee block also ends with "Invoicing terms available."
+    Always quote prices in SGD, exclusive of GST, and date the fee line (e.g. `<strong>Fees</strong> (excl. GST, as of <Month YYYY>)`). The fee block also ends with "Invoicing terms available."
+    Mirror the headline figure in frontmatter as `fee: { amount: <number>, basis: "<who pays what, before GST>" }` — it feeds the schema.org Offer. Omit `fee` when fees are "write in" or set by a partner (e.g. SMU Academy); point to the partner's site instead.
+14a. **Venue, format, and runs.** Set `location` (e.g. `"CT Hub 2, 114 Lavender Street, Singapore"`, `"At your school in Singapore"`), `courseMode` (`onsite`, `online`, or `blended`), and, for scheduled public runs, `sessions` as `- { start: YYYY-MM-DD, end: YYYY-MM-DD }`. They must match the Details text. Leave `location`/`courseMode` off pages that describe a past run only.
 
 ### Batch 6 — Banner direction
 
@@ -98,6 +101,7 @@ cat src/data/pages/platforms.json  | python3 -c "import json,sys; [print(p['id']
       --out-prefix <slug>-hero
     ```
     Inspect both candidates, recommend the one with less fake text and a clear environment, and let the user override. Trash the rejected candidate with `trash` (not `rm`). The chosen image remains a source input referenced by `photo.src`; it is not used directly as `heroImage`.
+16a. **Banner description (`heroAlt`).** One sentence describing the composed banner for screen readers and AI agents, e.g. "Illustration of T Krobot, Tinkercademy's robot mascot, beside a laptop with Swift code, over a faded photo of students in class."
 17. **Compose the banner.** Add a scene whose `id` exactly matches the programme slug to `src/data/banner-scenes.json`. Use the chosen photograph as `photo.src`, follow the audience register and prop grammar in `docs/banner-system.md`, then set frontmatter to `heroImage: "/images/banners/<slug>.webp"`. Do not add `heroObjectPosition` for a composed banner. Run `pnpm run banners:generate` and inspect the generated composite before proceeding.
 
 ### Batch 7 — Positioning (optional)
@@ -143,7 +147,9 @@ Body-copy conventions (match existing programmes — this is a Framer-migrated c
 - The Details block is a single `<p>` chain, not sub-headers — each line is `<strong>Dates and Times</strong>: …`, `<strong>Location</strong>: …`, etc.
 - British spelling everywhere (`organisation`, `recognise`, `visualisation`).
 - Currency: always `$` with SGD numbers; include the line `"All quoted prices are in SGD. Invoicing terms available."` after the fee block.
-- Keep `cardBlurb` truncated with a trailing `…` — it's displayed in list cards with a max length around 140 chars.
+- Write `cardBlurb` as one complete sentence (around 140 characters, no trailing `…`) that says what the course is and what participants do. It feeds course cards, meta descriptions, and `llms.txt`.
+- Open Course Overview with a plain definition — "<Course> is a <length> course for <audience> on <topic>" — not a slogan. Avoid "empower", "harness", "unlock", "leverage", "cutting-edge", and "In today's digital age".
+- Use descriptive link text, never "click here" or "find out more here".
 
 Frontmatter field order (match convention):
 
@@ -163,6 +169,19 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "…"                 # optional
 seoDescription: "…"           # optional
+heroAlt: "…"
+fee:                          # optional; omit for write-in or partner-set fees
+  amount: 1600
+  basis: "Per participant, before 9% GST"
+location: "…"                 # optional
+courseMode: onsite            # onsite | online | blended
+sessions:                     # optional, scheduled runs only
+  - { start: YYYY-MM-DD, end: YYYY-MM-DD }
+fit:
+  question: "…"
+  answer: "…"                 # 100 words or fewer
+publishedAt: YYYY-MM-DD       # today
+updatedAt: YYYY-MM-DD         # bump whenever the course content changes
 ---
 ```
 
@@ -171,7 +190,7 @@ seoDescription: "…"           # optional
 ## After writing
 
 1. **Verify generated banner coverage.** Run `pnpm run banners:check`. It must reproduce all banner files and the complete manifest, and it rejects any programme whose `heroImage` is not manifest-backed.
-2. **Run repository checks.** Run `pnpm run check` and `pnpm run build`.
+2. **Run repository checks.** Run `pnpm run check`, `pnpm run build`, then `pnpm run check:links` (fails on broken internal links or redirect targets). `pnpm run check:freshness` lists live course pages whose `updatedAt` is over 90 days old.
 3. **Preview locally.** If the dev server is already running on `:4321`, verify:
    ```bash
    curl -sI http://localhost:4321/programmes/<slug>/ | head -1
