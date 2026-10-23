@@ -1,22 +1,33 @@
 ---
 title: "Build for Mobile: App Development with React Native"
-subtitle: "Corporate training, 21 & 22 August 2025"
+subtitle: "Corporate training"
 duration: "2 days"
 heroImage: "/images/banners/build-for-mobile-with-react-native.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["software-engineering", "appdev"]
 platformIds: ["javascript", "react-native"]
-cardBlurb: "Jump into mobile app development and build real apps that work on both iOS and Android!Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences…"
+cardBlurb: "A two-day React Native course: build three iOS and Android apps with JavaScript and Expo, and test them on your own phone."
 weight: 93
 homeFeaturedRank: 5
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a laptop running code, wired to a phone showing an app, over a faded photo of a React Native class."
+fee:
+  amount: 1600
+  basis: "Per participant for an individual sign-up, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
+fit:
+  question: "Is React Native the right way to start building mobile apps?"
+  answer: "It's a good fit if you've done some web development, or are happy to pick up JavaScript quickly, and want one codebase for both iOS and Android. In two days you'll build three apps with React Native and Expo and test them on your own phone. No mobile experience is needed. If you only want to build for Apple devices, Swift is the more direct route. If you've never coded at all, Mastering the Web or Vibe Coding for Digital Builders is a gentler start."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
 
-<p>Jump into mobile app development and build real apps that work on both iOS and Android!</p><p>Ever wondered how apps like Instagram, Airbnb, and Discord create native mobile experiences that run seamlessly across platforms? The secret is React Native: Meta's powerful framework that lets you write code once, and deploy everywhere.</p><p>This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality.</p><p>Perfect for web developers looking to expand into mobile, or anyone wanting to prototype app ideas quickly. By the end, you'll have three working apps in your portfolio and the confidence to build your own mobile projects. No prior mobile development experience required; just bring your curiosity and a laptop.</p>
+<p>Build for Mobile is a two-day course in React Native, Meta's framework for building iOS and Android apps from one JavaScript codebase. It's the same framework behind apps such as Instagram, Airbnb, and Discord.</p><p>This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality.</p><p>It suits web developers moving into mobile, and anyone who wants to prototype app ideas quickly. By the end, you'll have three working apps and the basics to start your own. No mobile development experience is needed; bring a laptop.</p>
 
 ## Lesson Outcomes
 
@@ -24,4 +35,4 @@ seoTitle: "Build for Mobile: App Development with React Native - Tinkercademy: C
 
 ## Details
 
-<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)</p><p><strong>Fees</strong> (figures in parantheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD, with 9% GST shown in parentheses. Invoicing terms available.</p>
+<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows, Mac or Linux laptops are supported, as development will take place in the browser. (iPads and Chromebooks provide suboptimal experiences, and are discouraged.)</p><p><strong>Fees</strong> (as of October 2026; figures in parentheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD, with 9% GST shown in parentheses. Invoicing terms available.</p>

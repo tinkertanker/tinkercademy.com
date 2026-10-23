@@ -24,6 +24,8 @@
     "test:medium": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/worker-routing.test.mjs",
     "smoke:blog": "node scripts/smoke-blog-cutover.mjs",
     "check": "astro check",
+    "check:links": "node scripts/check-links.mjs",
+    "check:freshness": "node scripts/check-freshness.mjs",
     "banners:generate": "node scripts/banner/generate-banners.mjs",
     "banners:check": "node scripts/banner/generate-banners.mjs --check",
     "smoke": "node scripts/smoke-check.mjs",

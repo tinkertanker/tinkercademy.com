@@ -6,16 +6,27 @@ heroImage: "/images/banners/swift-accelerator.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["appdev"]
 platformIds: ["swift"]
-cardBlurb: "The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications.…"
+cardBlurb: "An eight-month programme, fully subsidised by IMDA for successful applicants, where students learn Swift and publish an iOS app on the App Store."
 weight: 67
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Swift Accelerator - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside a rocket and a laptop with Swift code, over a faded photo of a large group of students."
+fee:
+  amount: 0
+  basis: "Fully subsidised by IMDA for successful applicants"
+location: "Apple Singapore office"
+courseMode: onsite
+fit:
+  question: "Who is Swift Accelerator for?"
+  answer: "Swift Accelerator is an eight-month programme for students who want to build and publish their own iOS app. Places go to successful applicants, who are fully subsidised by IMDA, and sessions run at Apple's Singapore office. You'll learn Swift, design to Apple's Human Interface Guidelines, and finish by publishing a working app on the App Store. If you'd like a shorter start with app development through your school, look at the Apple App Development tracks for Infocomm Clubs."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
 
-<p>The Swift Accelerator is a rigorous program designed to empower aspiring developers with the skills and knowledge necessary to create exceptional iOS and macOS applications. Through hands-on projects and expert mentorship, participants will master the Swift programming language, adhere to Apple's Human Interface Guidelines, and leverage the latest development tools. The program culminates in the development and publishing of a fully functional iOS app on the App Store.</p>
+<p>Swift Accelerator is an eight-month app development programme for students, fully subsidised by IMDA for successful applicants and held at Apple's Singapore office. Through hands-on projects and mentoring, participants learn the Swift programming language, design to Apple's Human Interface Guidelines, and finish by publishing a working iOS app on the App Store.</p>
 
 ## Lesson Outcomes
 
@@ -23,4 +34,4 @@ seoTitle: "Swift Accelerator - Tinkercademy: Coding and Making for Schools and P
 
 ## Details
 
-<p><strong>Location:</strong> Apple Singapore Office </p><p><strong>Fees:</strong> This innovative program is fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants.</p>
+<p><strong>Location:</strong> Apple Singapore Office </p><p><strong>Fees:</strong> Fully subsidised by the Infocomm Media Development Authority (IMDA) for eligible participants, as of October 2026.</p>

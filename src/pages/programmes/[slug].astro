@@ -4,6 +4,7 @@ import BannerLayers from '../../components/BannerLayers.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import HeadingOutline from '../../components/HeadingOutline.astro';
+import TestimonialCarousel from '../../components/TestimonialCarousel.astro';
 import ProgrammeSeriesNav from '../../components/ProgrammeSeriesNav.astro';
 import ContentLayout from '../../layouts/ContentLayout.astro';
 import { getBannerAsset } from '../../lib/banner-assets';
@@ -114,6 +115,37 @@ if (audienceTypeName && primaryAudience?.label) {
 if (domainLabels.length > 0) {
 	courseSchema.about = domainLabels;
 }
+const { fee, location, courseMode, sessions, fit, publishedAt, updatedAt } = programme.entry.data;
+// Courses only for students or teachers get the schools quotes; anything
+// open to businesses or the public gets the adult quotes.
+const quoteSet = programme.audienceIds.every((id) => id === 'students' || id === 'teachers') ? 'schools' : 'adults';
+const toIsoDate = (date: Date) => date.toISOString().slice(0, 10);
+const formatDate = (date: Date) =>
+	date.toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+if (publishedAt) courseSchema.datePublished = toIsoDate(publishedAt);
+if (updatedAt) courseSchema.dateModified = toIsoDate(updatedAt);
+if (fee) {
+	courseSchema.offers = {
+		'@type': 'Offer',
+		category: fee.amount === 0 ? 'Free' : 'Paid',
+		price: fee.amount,
+		priceCurrency: 'SGD',
+		description: fee.basis,
+		url: canonical,
+	};
+}
+if (location || courseMode) {
+	const instanceBase: Record<string, unknown> = { '@type': 'CourseInstance' };
+	if (courseMode) instanceBase.courseMode = courseMode;
+	if (location) instanceBase.location = location;
+	courseSchema.hasCourseInstance = sessions?.length
+		? sessions.map((session) => ({
+				...instanceBase,
+				startDate: toIsoDate(session.start),
+				endDate: toIsoDate(session.end),
+			}))
+		: [instanceBase];
+}
 
 const seriesCourses = programme.series
 	? (await getAllProgrammes())
@@ -134,11 +166,26 @@ const seriesCourses = programme.series
 const heroResponsive = getResponsiveImage(programme.heroImage);
 const heroBanner = getBannerAsset(programme.heroImage);
 const heroObjectPosition = programme.entry.data.heroObjectPosition;
+const heroAlt = programme.entry.data.heroAlt ?? `${programme.title} programme banner`;
 const heroPreload = heroBanner
 	? { src: heroBanner.background }
 	: heroResponsive
 		? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
 		: null;
+
+const faqSchema = fit
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'FAQPage',
+			mainEntity: [
+				{
+					'@type': 'Question',
+					name: fit.question,
+					acceptedAnswer: { '@type': 'Answer', text: fit.answer },
+				},
+			],
+		}
+	: null;
 
 const breadcrumbSchema = {
 	'@context': 'https://schema.org',
@@ -166,7 +213,7 @@ const breadcrumbSchema = {
 			: undefined}
 	>
 		{heroBanner ? (
-			<BannerLayers src={programme.heroImage} alt={programme.title} />
+			<BannerLayers src={programme.heroImage} alt={programme.title} description={heroAlt} />
 		) : programme.heroImage ? (
 			<img
 				class="prog-hero__bg"
@@ -176,7 +223,7 @@ const breadcrumbSchema = {
 				sizes={heroResponsive?.srcset ? '100vw' : undefined}
 				width={heroResponsive?.width}
 				height={heroResponsive?.height}
-				alt={`${programme.title} programme banner`}
+				alt={heroAlt}
 				loading="eager"
 				fetchpriority="high"
 				decoding="async"
@@ -209,11 +256,11 @@ const breadcrumbSchema = {
 
 	{/* ════════ Meta bar ═════════════════════════════════════════════ */}
 	<section class="prog-meta">
-		<div class="shell prog-meta__inner">
+		<dl class="shell prog-meta__inner">
 			{audiences.length > 0 && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Audiences:</span>
-					<div class="prog-meta__tags">
+					<dt class="prog-meta__label">Audiences:</dt>
+					<dd class="prog-meta__tags">
 						{audiences.map((aud) => (
 							<a
 								class:list={[
@@ -225,43 +272,67 @@ const breadcrumbSchema = {
 								{aud.label}
 							</a>
 						))}
-					</div>
+					</dd>
 				</div>
 			)}
 			{seriesCourses.length > 0 && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Series:</span>
-					<ProgrammeSeriesNav
-						label={programme.series?.label ?? 'Series'}
-						courses={seriesCourses}
-					/>
+					<dt class="prog-meta__label">Series:</dt>
+					<dd class="prog-meta__series">
+						<ProgrammeSeriesNav
+							label={programme.series?.label ?? 'Series'}
+							courses={seriesCourses}
+						/>
+					</dd>
 				</div>
 			)}
 			{duration && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Duration:</span>
-					<span class="prog-meta__value">{duration}</span>
+					<dt class="prog-meta__label">Duration:</dt>
+					<dd class="prog-meta__value">{duration}</dd>
 				</div>
 			)}
 			{typeLabel && (
 				<div class="prog-meta__group">
-					<span class="prog-meta__label">Type:</span>
-					<span class="prog-meta__value">{typeLabel}</span>
+					<dt class="prog-meta__label">Type:</dt>
+					<dd class="prog-meta__value">{typeLabel}</dd>
 				</div>
 			)}
-		</div>
+			{publishedAt && (
+				<div class="prog-meta__group">
+					<dt class="prog-meta__label">Published:</dt>
+					<dd class="prog-meta__value">
+						<time datetime={toIsoDate(publishedAt)}>{formatDate(publishedAt)}</time>
+					</dd>
+				</div>
+			)}
+			{updatedAt && (
+				<div class="prog-meta__group">
+					<dt class="prog-meta__label">Updated:</dt>
+					<dd class="prog-meta__value">
+						<time datetime={toIsoDate(updatedAt)}>{formatDate(updatedAt)}</time>
+					</dd>
+				</div>
+			)}
+		</dl>
 	</section>
 
 	{/* ════════ Facts + content + enquiry form sidebar ═══════════════ */}
 	<div class="prog-main shell">
 		<div class="prog-main__body">
+			{fit && (
+				<section class="prog-fit">
+					<h2 class="prog-fit__question">{fit.question}</h2>
+					<p class="prog-fit__answer">{fit.answer}</p>
+				</section>
+			)}
 			{(domainLabels.length > 0 || platforms.length > 0) && (
 				<section class="prog-facts">
-					<div class="prog-facts__inner">
+					<dl class="prog-facts__inner">
 						{domainLabels.length > 0 && (
 							<div class="prog-facts__group">
-								<h2 class="prog-facts__heading">Domains</h2>
-								<div class="prog-facts__chips">
+								<dt class="prog-facts__heading">Domains</dt>
+								<dd class="prog-facts__chips">
 									{domains.map((domain) => (
 										<a
 											class="prog-facts__chip"
@@ -270,13 +341,13 @@ const breadcrumbSchema = {
 											{domain.label}
 										</a>
 									))}
-								</div>
+								</dd>
 							</div>
 						)}
 						{platforms.length > 0 && (
 							<div class="prog-facts__group">
-								<h2 class="prog-facts__heading">Platforms</h2>
-								<div class="prog-facts__chips">
+								<dt class="prog-facts__heading">Platforms</dt>
+								<dd class="prog-facts__chips">
 									{platforms.map((platform) => (
 										<a
 											class="prog-facts__chip prog-facts__chip--platform"
@@ -286,23 +357,26 @@ const breadcrumbSchema = {
 												<img
 													class="prog-facts__icon"
 													src={platform.icon}
-													alt={`${platform.label} logo`}
+													alt=""
+													aria-hidden="true"
 													loading="lazy"
 												/>
 											)}
 											<span>{platform.label}</span>
 										</a>
 									))}
-								</div>
+								</dd>
 							</div>
 						)}
-					</div>
+					</dl>
 				</section>
 			)}
 
 			<article class="prog-body prose">
 				<HeadingOutline><Content /></HeadingOutline>
 			</article>
+
+			<TestimonialCarousel set={quoteSet} />
 		</div>
 
 		<aside class="prog-aside">
@@ -318,6 +392,7 @@ const breadcrumbSchema = {
 
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+	{faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 </ContentLayout>
 
 <style>
@@ -428,6 +503,7 @@ const breadcrumbSchema = {
 	}
 
 	.prog-meta__inner {
+		margin-block: 0;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem 2.5rem;
@@ -449,6 +525,12 @@ const breadcrumbSchema = {
 		color: var(--theme-muted, rgb(90, 90, 90));
 		margin: 0;
 		white-space: nowrap;
+	}
+
+	.prog-meta__tags,
+	.prog-meta__series,
+	.prog-meta__value {
+		margin: 0;
 	}
 
 	.prog-meta__tags {
@@ -487,12 +569,35 @@ const breadcrumbSchema = {
 		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
+	/* ─── Reader question: the first H2 under the title ────── */
+	.prog-fit {
+		margin-bottom: 1.75rem;
+	}
+
+	.prog-fit__question {
+		font-family: 'IBM Plex Serif', Georgia, serif;
+		letter-spacing: -0.03em;
+		font-size: 1.35rem;
+		font-weight: 500;
+		color: var(--theme-heading, rgb(51, 51, 51));
+		margin: 0 0 0.75rem;
+	}
+
+	.prog-fit__answer {
+		font-family: 'Rubik', sans-serif;
+		font-size: var(--body-font-size);
+		line-height: var(--body-line-height);
+		color: var(--theme-text, rgb(51, 51, 51));
+		margin: 0;
+	}
+
 	.prog-facts {
 		padding: 0;
 		margin-bottom: 1.5rem;
 	}
 
 	.prog-facts__inner {
+		margin: 0;
 		display: grid;
 		gap: 1.25rem;
 	}
@@ -512,6 +617,7 @@ const breadcrumbSchema = {
 	}
 
 	.prog-facts__chips {
+		margin: 0;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.65rem;

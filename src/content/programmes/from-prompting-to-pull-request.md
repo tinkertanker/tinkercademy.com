@@ -12,11 +12,19 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "From Prompting to Pull Request - Tinkercademy"
 seoDescription: "A public 2-day workshop. Learn the terminal, Git, and Claude or Codex, then ship a web app to GitHub and a live URL."
+heroAlt: "Illustration of an AI terminal window next to a GitHub pull request being merged, over a faded photo of a workshop."
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
+fit:
+  question: "Should I take From Prompting to Pull Request or Vibe Coding for Digital Builders?"
+  answer: "Take From Prompting to Pull Request if you've already built something with ChatGPT, Gemini, Lovable, or a similar tool and want to work the way engineers do: in the terminal, with Git and GitHub pull requests, shipping a web app to a live URL with Claude or Codex. If you haven't used an AI building tool yet, start with Vibe Coding for Digital Builders. If you already use the terminal and GitHub every day, skip ahead to Agentic Engineering."
+publishedAt: 2026-08-15
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
 
-<p dir="auto">You might have heard of vibe coding, or you might have asked ChatGPT/Gemini/Lovable to build you a widget. Welcome to vibe coding! This is the next step. In this course, you'll learn enough to ship a full web app like a real engineer, to a GitHub repository and hosted on a live URL.</p>
+<p dir="auto">From Prompting to Pull Request is a two-day workshop for people who've built something with ChatGPT, Gemini, Lovable, or another vibe coding tool and want to work like an engineer. You'll learn the terminal, Git, and GitHub, build a web app with Claude or Codex, and ship it to a GitHub repository and a live URL.</p>
 
 ## Lesson Outcomes
 

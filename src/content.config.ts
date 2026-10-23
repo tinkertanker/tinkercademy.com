@@ -16,6 +16,8 @@ const programmes = defineCollection({
 		subtitle: z.string().min(1),
 		duration: z.string().min(1).optional(),
 		heroImage: z.string().min(1),
+		// Describes the banner for screen readers and AI agents; falls back to "<title> programme banner".
+		heroAlt: z.string().min(1).optional(),
 		heroObjectPosition: z
 			.string()
 			.regex(/^\d{1,3}(?:\.\d+)?%\s+\d{1,3}(?:\.\d+)?%$/, 'Use a CSS object-position pair such as 50% 15%')
@@ -36,6 +38,29 @@ const programmes = defineCollection({
 				url: z.url().refine((value) => value.startsWith('https://'), 'Use an HTTPS URL'),
 			})
 			.optional(),
+		// The reader's main question and a short "it depends" answer, shown as
+		// the first H2 under the title.
+		fit: z
+			.object({
+				question: z.string().min(1),
+				answer: z.string().min(1).refine((value) => value.split(/\s+/).length <= 100, 'Keep the answer to 100 words or fewer'),
+			})
+			.optional(),
+		// Shown as "Published" / "Updated" on the page and in structured data.
+		// Bump updatedAt whenever the course content changes.
+		publishedAt: z.coerce.date().optional(),
+		updatedAt: z.coerce.date().optional(),
+		// Machine-readable copies of facts stated in the Details section; they feed
+		// the Course structured data so crawlers don't have to parse prose.
+		fee: z
+			.object({
+				amount: z.number().nonnegative(),
+				basis: z.string().min(1),
+			})
+			.optional(),
+		location: z.string().min(1).optional(),
+		courseMode: z.enum(['onsite', 'online', 'blended']).optional(),
+		sessions: z.array(z.object({ start: z.coerce.date(), end: z.coerce.date() })).optional(),
 		seoTitle: z.string().min(1).optional(),
 		seoDescription: z.string().min(1).optional(),
 	}),

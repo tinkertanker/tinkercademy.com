@@ -266,7 +266,7 @@
   {
     "id": "microsoft-makecode-http-pxt-microbit-org",
     "label": "Microsoft MakeCode",
-    "url": "http://pxt.microbit.org/",
+    "url": "https://makecode.microbit.org/",
     "type": "external"
   },
   {

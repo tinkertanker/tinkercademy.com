@@ -1,21 +1,32 @@
 ---
 title: "Digital Maker: Create with 3D Printing and IOT"
-subtitle: "14 - 15 January 2025"
+subtitle: "Corporate training"
 duration: "2 days"
 heroImage: "/images/banners/iotmaker.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["making", "iot"]
 platformIds: ["3d-printing", "m5stack"]
-cardBlurb: "Ever wondered how things are made, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other \"Internet of Things\" tech gadgets work? These devices are…"
+cardBlurb: "A 1 to 2 day course: program microcontrollers to sense sound, touch, and light, send data online, and design and 3D print your own parts."
 weight: 30
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a micro:bit wired to a breadboard, over a faded photo of a maker workshop."
+fee:
+  amount: 1600
+  basis: "Per participant for an individual sign-up, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
+fit:
+  question: "Should I take Digital Maker or Digital Making with micro:bit and IoT?"
+  answer: "Take Digital Maker if you want to build physical things end to end. You'll program microcontrollers such as the M5Go to react to sound, touch, and light, send sensor data online, and design and 3D print your own parts. Take Digital Making with micro:bit and IoT if you only want the coding and IoT side, without 3D printing. Both are introductory, run over 1 to 2 days, and start with 5 sign-ups."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
 
-<p>Ever wondered how things are <em>made</em>, or how smart fridges, smart doorbells, Amazon Echo, Google Home devices, and other "Internet of Things" tech gadgets work? These devices are transforming our daily routines, making life more convenient and connected.</p><p>In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing. </p><p>This course is perfect whether you’re looking to start a new project, boost your tech skills, or just have some fun creating. It’s practical, engaging, and designed to help you bring your ideas to life. Come join us and experience the thrill of digital making! Find out more <a href="https://iotmaker.tk.sg/" target="_blank">here</a>.</p>
+<p>Digital Maker is an introductory course in how smart devices are built and made. Smart fridges, doorbells, Amazon Echo, and Google Home are all Internet of Things (IoT) devices: small computers that sense the world and share data online. You'll build simple versions of your own.</p><p>In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing. </p><p>It suits anyone starting a hardware project, building tech skills, or making things for fun. There's more detail on the <a href="https://iotmaker.tk.sg/" target="_blank">Digital Maker course site</a>.</p>
 
 ## Lesson Outcomes
 
@@ -23,4 +34,4 @@ seoTitle: "Digital Maker: Create with 3D Printing and IOT - Tinkercademy: Coding
 
 ## Details
 
-<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)</p><p><strong>Fees</strong> (figures in parantheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD, with 9% GST shown in parentheses. Invoicing terms available.</p>
+<p><strong>Dates and Times</strong>: 1-2 days; can be configured over multiple sessions. Please write in to enquire. We start a class with a minimum of 5 sign-ups.</p><p><strong>Location</strong>: CT HUB 2, 114 Lavender Street.</p><p><strong>Requirements</strong>: Bring your own laptop! Modern Windows or Mac laptops are supported. (iPads and Chromebooks are supported, though not for all applications.)</p><p><strong>Fees</strong> (as of October 2026; figures in parentheses include GST)<br>• Individual sign-up: $1,600 ($1,744)<br>• Groups of up to 7: $11,200 ($12,208)<br>• Groups of 8-15: $12,400 ($13,516)<br>•&nbsp;Groups of 16 and above: Please email for more information</p><p>All quoted prices are in SGD, with 9% GST shown in parentheses. Invoicing terms available.</p>

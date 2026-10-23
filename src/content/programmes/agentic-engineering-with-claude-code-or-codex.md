@@ -6,12 +6,27 @@ heroImage: "/images/banners/advanced-agentic-coding-with-claude-code-or-codex.we
 audienceIds: ["businesses", "public"]
 domainIds: ["ai-engineering", "software-engineering"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js", "python"]
-cardBlurb: "Take an idea from problem framing to a working AI product with Claude Code or Codex. Practise planning, context, tools, collaboration, and review…"
+cardBlurb: "A two-day workshop for experienced developers: direct Claude Code or Codex through five projects, from problem framing to a reviewed, working AI product."
 weight: 210
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Agentic Engineering with Claude Code or Codex - Tinkercademy"
 seoDescription: "A two-day workshop for software developers to plan, build, review, and improve useful software with Claude Code or Codex."
+heroAlt: "Illustration of an AI coding agent's terminal window beside a code editor, over a faded photo of developers working on laptops."
+fee:
+  amount: 1710
+  basis: "Per participant, before 9% GST"
+location: "CT Hub 2, 114 Lavender Street, Singapore"
+courseMode: onsite
+sessions:
+  - { start: 2026-11-10, end: 2026-11-11 }
+  - { start: 2026-11-19, end: 2026-11-20 }
+  - { start: 2026-12-02, end: 2026-12-03 }
+fit:
+  question: "Should I take Agentic Engineering or From Prompting to Pull Request?"
+  answer: "It depends on where you're starting. Take Agentic Engineering if you already write software for a living and are comfortable with a terminal, Git, pull requests, and at least one AI coding tool. You'll spend two days directing Claude Code or Codex through five projects, including an unfamiliar codebase and a team AI product. If you've only used chat tools or vibe coding apps so far, start with From Prompting to Pull Request, which teaches the terminal, Git, and GitHub first."
+publishedAt: 2026-08-13
+updatedAt: 2026-10-22
 ---
 
 ## Course Overview
@@ -40,4 +55,4 @@ seoDescription: "A two-day workshop for software developers to plan, build, revi
 
 ## Details
 
-<p><strong>Dates and Times</strong>: 24-25 Sep 2026, 1-2 Oct 2026, 6-7 Oct 2026 or 20-21 Oct 2026 (2 full-day sessions, 9:00 to 17:00).</p><p><strong>Location</strong>: CT Hub 2, Lavender.</p><p><strong>Requirements</strong>: Bring your own laptop. Modern Mac, Windows, or Linux laptops are supported. Participants should be comfortable using a terminal, Git, GitHub, and at least one AI coding tool such as Claude Code or Codex.</p><p><strong>Prerequisites</strong>: Experienced software developers. Comfortable debugging, reviewing pull requests, and working in a team.</p><p><strong>Tools and accounts</strong>: The course uses Claude Code or Codex as the main coding tool, with a second tool for comparison. The course setup provides six months of access to the selected 5x plan, using either Claude Code or Codex depending on final setup.</p><p><strong>Fees</strong> (excl. GST): S$1,710 per participant. Minimum 10 participants to start.</p><p>All quoted prices are in SGD and are before 9% GST. Invoicing terms available.</p>
+<p><strong>Dates and Times</strong>: 10–11 Nov 2026, 19–20 Nov 2026 or 2–3 Dec 2026 (2 full-day sessions, 9:00 to 17:00).</p><p><strong>Location</strong>: CT Hub 2, Lavender.</p><p><strong>Requirements</strong>: Bring your own laptop. Modern Mac, Windows, or Linux laptops are supported. Participants should be comfortable using a terminal, Git, GitHub, and at least one AI coding tool such as Claude Code or Codex.</p><p><strong>Prerequisites</strong>: Experienced software developers. Comfortable debugging, reviewing pull requests, and working in a team.</p><p><strong>Tools and accounts</strong>: The course uses Claude Code or Codex as the main coding tool, with a second tool for comparison. The course setup provides six months of access to the selected 5x plan, using either Claude Code or Codex depending on final setup.</p><p><strong>Fees</strong> (excl. GST, as of October 2026): S$1,710 per participant. Minimum 10 participants to start.</p><p>All quoted prices are in SGD and are before 9% GST. Invoicing terms available.</p>

@@ -6,7 +6,7 @@ audienceIds: ["public", "businesses"]
 domainIds: ["iot"]
 platformIds: ["esp32"]
 courseType: "public"
-cardBlurb: "More companies are integrating technology into their products through innovative ways. From home appliances to lifestyle products, we are surrounded by digital toys that enhance…"
+cardBlurb: "An SMU Academy module where participants program ESP32 microcontrollers in blocks and Python, and build connected prototypes that respond to sound, touch, and light."
 weight: 81
 signUpLabel: "Enquire now"
 signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Harnessing%20the%20Power%20of%20Internet%20of%20Things%20and%20Creative%20Digital%20Making&nid=80496"
@@ -14,6 +14,12 @@ primaryCta:
   label: "View course at SMU Academy"
   url: "https://academy.smu.edu.sg/courses/harnessing-power-internet-things-and-creative-digital-making"
 seoTitle: "Certificate in Technology Foundations: Harnessing the Power of Internet of Things and Creative Digital Making - Tinkercademy: Coding and Making for Schools and Professionals"
+heroAlt: "Illustration of a microcontroller wired to a breadboard, over a faded photo of a maker workshop."
+fit:
+  question: "Who is this SMU Academy IoT module for?"
+  answer: "It's a module in SMU Academy's Industry Practice Master of Digital Economy, so it suits participants in that programme who want hands-on experience with connected devices, not just theory. You'll learn coding concepts in block-based languages and Python, program ESP32 microcontrollers, and build prototypes that send sensor data online. Enrolment runs through SMU Academy. If you'd like a standalone two-day version for your own team, Digital Maker: Create with 3D Printing and IoT covers similar ground and adds 3D printing."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview

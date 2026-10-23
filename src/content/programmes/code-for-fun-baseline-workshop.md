@@ -6,17 +6,25 @@ heroImage: "/images/banners/code-for-fun-baseline-workshop.webp"
 audienceIds: ["students", "teachers"]
 domainIds: ["cs", "design-thinking"]
 platformIds: ["makecode-arcade", "python", "scratch", "bbc-micro-bit"]
-cardBlurb: "Our CFF 2025 Scheme of WorkOur programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and…"
+cardBlurb: "A 10-hour IMDA and MOE programme: computational thinking and basic coding for upper primary students, and microcontroller digital making for secondary students."
 weight: 100
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:imda_codesg@imda.gov.sg"
 seoTitle: "Code For Fun Baseline Workshop - Tinkercademy: Coding and Making for Schools and Professionals"
 seoDescription: "Code for Fun for primary and secondary schools: computational thinking, coding fundamentals, and digital making with microcontrollers in 10 hours."
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, waving beside a laptop showing block code and a micro:bit, over a faded photo of a classroom."
+location: "At your school in Singapore"
+courseMode: onsite
+fit:
+  question: "Is Code for Fun right for our students?"
+  answer: "Code for Fun is a 10-hour IMDA and MOE programme. For upper primary students, it covers computational thinking and basic programming (events, loops, variables, conditionals) plus an introduction to AI. For secondary students, it focuses on digital making with microcontrollers, with a block-based or text-based track for your school to choose. If your students have already done Code for Fun, the AI for Fun module is the natural next step. MOE schools apply during the annual September to October window."
+publishedAt: 2026-04-18
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
 
-<p><strong>Our CFF 2025 Scheme of Work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>
+<p>Code for Fun is a 10-hour coding and digital making programme for upper primary and secondary students, run by IMDA and MOE under CODE@SG. This page describes how we teach it.</p><p><strong>Our scheme of work</strong><br>Our programme is designed around the See, Think and Act framework. This is a structured approach used to enhance understanding, decision-making, and action whilst helping students develop critical thinking and problem-solving skills. We believe adoption of this framework will help spark curiosity about technology and allows students to see how technology is used in the real world, providing them confidence in using technology in work and life and to solve problems for their community. We will be using Padlet for all lessons. We believe that using Padlet in the classroom can significantly enhance student engagement, provide flexibility for different learning abilities, and support meaningful formative assessments.</p>
 
 ## Lesson Outcomes
 

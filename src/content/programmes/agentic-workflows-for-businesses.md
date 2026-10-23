@@ -13,6 +13,17 @@ signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Agentic Workflows for Businesses - Tinkercademy: Coding and Making for Schools and Professionals"
 seoDescription: "A 1-, 2-, or 3-day workshop for business teams to redesign recurring processes and build practical, governed AI agents."
+heroAlt: "Illustration of an AI chat on a laptop next to an agent terminal window, over a faded photo of a team workshop."
+fee:
+  amount: 500
+  basis: "Per participant for the 1-day format, before 9% GST"
+location: "CT Hub, Singapore, or on request"
+courseMode: onsite
+fit:
+  question: "Should my team learn agentic workflows or vibe coding first?"
+  answer: "Choose Agentic Workflows if your team's time goes into recurring knowledge work (reviewing submissions, pulling figures, drafting documents, updating trackers) and you want to redesign those processes before handing parts of them to governed AI agents. It runs as a 1-, 2-, or 3-day workshop; the 3-day version ends with a working capstone built on one of your own workflows. If your goal is a web app or prototype, start with Vibe Coding for Digital Builders. Some hands-on experience with generative AI tools helps either way."
+publishedAt: 2026-04-23
+updatedAt: 2026-10-20
 ---
 
 ## Course Overview
@@ -53,4 +64,4 @@ By the end of this course, you will be able to:
 
 ## Details
 
-<p><strong>Dates and Times</strong>: 1-, 2-, and 3-day formats are available. Write in to enquire.</p><p><strong>Location</strong>: CT Hub, or on request.</p><p><strong>Requirements</strong>: Bring your own laptop. Modern Windows, Mac, or Linux laptops are supported. Access to the selected enterprise AI environments and required connectors will be confirmed before the workshop.</p><p><strong>Recommended</strong>: Vibe coding or equivalent hands-on experience with generative AI tools. See <a href="/programmes/vibe-coding-for-digital-builders/"><em>Vibe Coding for Digital Builders</em></a>.</p><p><strong>Fees</strong> (excl. GST) per participant:</p><ul><li data-preset-tag="p"><p>1 day: S$500</p></li><li data-preset-tag="p"><p>2 days: S$960</p></li><li data-preset-tag="p"><p>3 days: S$1,380</p></li></ul><p>All quoted prices are in SGD and are before 9% GST. Invoicing terms available.</p>
+<p><strong>Dates and Times</strong>: 1-, 2-, and 3-day formats are available. Write in to enquire.</p><p><strong>Location</strong>: CT Hub, or on request.</p><p><strong>Requirements</strong>: Bring your own laptop. Modern Windows, Mac, or Linux laptops are supported. Access to the selected enterprise AI environments and required connectors will be confirmed before the workshop.</p><p><strong>Recommended</strong>: Vibe coding or equivalent hands-on experience with generative AI tools. See <a href="/programmes/vibe-coding-for-digital-builders/"><em>Vibe Coding for Digital Builders</em></a>.</p><p><strong>Fees</strong> (excl. GST, as of October 2026) per participant:</p><ul><li data-preset-tag="p"><p>1 day: S$500</p></li><li data-preset-tag="p"><p>2 days: S$960</p></li><li data-preset-tag="p"><p>3 days: S$1,380</p></li></ul><p>All quoted prices are in SGD and are before 9% GST. Invoicing terms available.</p>

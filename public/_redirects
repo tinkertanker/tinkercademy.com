@@ -58,6 +58,26 @@
 /programmes/minecraft-hacker-camp/python-icon/ /programmes/imda-minecraft-2025/ 301
 /student-showcase/img_3104-2/ /showcase/ 301
 
+# Archived programmes and legacy paths still linked from old posts.
+/programmes/no-code-web-design-framer /courses-professionals/ 301
+/programmes/no-code-web-design-framer/ /courses-professionals/ 301
+/programmes/vibe-coding-for-digital-builders-lovable-replit /programmes/vibe-coding-for-digital-builders/ 301
+/programmes/vibe-coding-for-digital-builders-lovable-replit/ /programmes/vibe-coding-for-digital-builders/ 301
+/public-classes /individuals/ 301
+/public-classes/ /individuals/ 301
+/tanktinkerer /blog/2018/tank-tinkerer-a-micro-bit-competition/ 301
+/tanktinkerer/ /blog/2018/tank-tinkerer-a-micro-bit-competition/ 301
+
+# 2025 IMDA LEARN courses superseded by the 2027 roadmap.
+/programmes/imda-apple-2025-a /infocomm-club/ 301
+/programmes/imda-apple-2025-a/ /infocomm-club/ 301
+/programmes/imda-apple-2025-c /infocomm-club/ 301
+/programmes/imda-apple-2025-c/ /infocomm-club/ 301
+/programmes/imda-figma-2025 /infocomm-club/ 301
+/programmes/imda-figma-2025/ /infocomm-club/ 301
+/programmes/imda-unity-2025 /infocomm-club/ 301
+/programmes/imda-unity-2025/ /infocomm-club/ 301
+
 # IMDA LEARN Roadmaps 2027 courses: per-level slugs merged into one page per course.
 /programmes/imda-apple-2027-tracka-pri /programmes/imda-apple-2027-tracka/ 301
 /programmes/imda-apple-2027-tracka-pri/ /programmes/imda-apple-2027-tracka/ 301

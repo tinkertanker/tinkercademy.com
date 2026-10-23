@@ -15,6 +15,14 @@ primaryCta:
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "Apple App Development Track A: App Design and Prototyping - Tinkercademy"
 seoDescription: "An IMDA LEARN Roadmaps 2027 course for primary, secondary, and JC Infocomm Clubs. Students design and present a clickable app prototype on iPad."
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, pointing at a laptop and an iPad showing app prototype screens, over a faded photo of secondary school students in class."
+location: "At your school in Singapore"
+courseMode: onsite
+fit:
+  question: "Should our school choose Track A or Track B?"
+  answer: "Choose Track A if your students are new to apps and you'd like them to build design confidence before coding. Over 26 hours they plan screens, test user flows, and present a clickable prototype made in Keynote on iPad, with an introduction to Swift concepts. Secondary and JC students go further into accessibility and high-fidelity prototypes. Choose Track B if you want students writing real Swift code from the start. Neither track needs coding experience, and both run on iPads with iPadOS 17 or later."
+publishedAt: 2026-10-17
+updatedAt: 2026-10-23
 ---
 
 ## Course Overview
