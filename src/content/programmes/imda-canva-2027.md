@@ -15,6 +15,14 @@ primaryCta:
   url: "https://www.imda.gov.sg/how-we-can-help/infocomm-media-clubs/learn-roadmaps"
 seoTitle: "AI Product Design with Canva Code (Secondary/JC) - Tinkercademy"
 seoDescription: "An IMDA LEARN Roadmaps 2027 course for secondary and JC Infocomm Clubs. Students build a working digital product with AI-assisted design in Canva Code."
+heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, raising a hand beside a wireframe design canvas and an app-builder screen, over a faded photo of students at work."
+location: "At your school in Singapore"
+courseMode: onsite
+fit:
+  question: "Should our school choose Canva Code or Figma for IMDA LEARN Roadmaps?"
+  answer: "Choose AI Product Design with Canva Code if you want students to build a working digital product (forms, data records, and a dashboard) by directing AI with structured prompts, explaining their logic before they generate anything. Choose UI/UX Design with Figma if you want the focus on user research, screen design, and clickable prototypes, with AI used in only one guided lesson. Both are 26-hour courses for secondary and JC students that run in the browser on laptops or Chromebooks. Neither needs prior experience."
+publishedAt: 2026-10-17
+updatedAt: 2026-10-23
 ---
 
 ## Course Overview
