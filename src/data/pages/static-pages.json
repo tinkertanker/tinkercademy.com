@@ -1505,14 +1505,14 @@
         "title": "Build for Mobile: App Development with React Native",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Corporate training, 21 & 22 August 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "mastering-the-web",
         "title": "Mastering the Web: Understand Full-Stack Development",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Corporate training, 3 & 4 July 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "professional-certificate-in-mobile-application-development",
@@ -1547,14 +1547,14 @@
         "title": "Digital Maker: Create with 3D Printing and IOT",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "14 - 15 January 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "unityarvr",
         "title": "Enter the Metaverse: Get started with Unity for AR/VR",
         "audience_label": "Businesses",
         "duration": "2 days",
-        "blurb": "11 - 12 February 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "no-code-web-design-framer",
@@ -3946,7 +3946,7 @@
       },
       {
         "slug": "ri-futurecreate-maker-programme-2025",
-        "title": "RI FutureCreate Maker Programme 2025",
+        "title": "RI FutureCreate Maker Programme",
         "audience_label": "Students",
         "duration": "4 years",
         "blurb": "A hands-on digital maker programme for RI students."
@@ -3956,14 +3956,14 @@
         "title": "Digital Making with micro:bit",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+        "blurb": "Run in 2025 for primary schools, with micro:bit."
       },
       {
         "slug": "imda-minecraft-2025",
         "title": "Game Development in MakeCode Arcade & MineCraft",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+        "blurb": "Run in 2025 for primary schools, with MakeCode Arcade & Minecraft."
       },
       {
         "slug": "imda-unity-2025",
@@ -3984,7 +3984,7 @@
         "title": "AI-Driven Game Development on Phaser",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Phaser."
+        "blurb": "Run in 2025 for schools, with Phaser."
       },
       {
         "slug": "swift-accelerator",
@@ -4012,7 +4012,7 @@
         "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
-        "blurb": "11 May 2025"
+        "blurb": "Run in May–June 2025"
       },
       {
         "slug": "no-code-machine-learning",
@@ -4760,14 +4760,14 @@
         "title": "Build for Mobile: App Development with React Native",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Corporate training, 21 & 22 August 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "mastering-the-web",
         "title": "Mastering the Web: Understand Full-Stack Development",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Corporate training, 3 & 4 July 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "professional-certificate-in-mobile-application-development",
@@ -4802,14 +4802,14 @@
         "title": "Digital Maker: Create with 3D Printing and IOT",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "14 - 15 January 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "unityarvr",
         "title": "Enter the Metaverse: Get started with Unity for AR/VR",
         "audience_label": "Businesses",
         "duration": "2 days",
-        "blurb": "11 - 12 February 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "no-code-web-design-framer",
@@ -5763,18 +5763,18 @@
         "title": "Build for Mobile: App Development with React Native",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Corporate training, 21 & 22 August 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "mastering-the-web",
         "title": "Mastering the Web: Understand Full-Stack Development",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Corporate training, 3 & 4 July 2025"
+        "blurb": "Corporate training"
       },
       {
         "slug": "ri-futurecreate-maker-programme-2025",
-        "title": "RI FutureCreate Maker Programme 2025",
+        "title": "RI FutureCreate Maker Programme",
         "audience_label": "Students",
         "duration": "4 years",
         "blurb": "A hands-on digital maker programme for RI students."
@@ -5791,14 +5791,14 @@
         "title": "Digital Making with micro:bit",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+        "blurb": "Run in 2025 for primary schools, with micro:bit."
       },
       {
         "slug": "imda-minecraft-2025",
         "title": "Game Development in MakeCode Arcade & MineCraft",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+        "blurb": "Run in 2025 for primary schools, with MakeCode Arcade & Minecraft."
       },
       {
         "slug": "professional-certificate-in-web-application-development",
@@ -5840,7 +5840,7 @@
         "title": "AI-Driven Game Development on Phaser",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Phaser."
+        "blurb": "Run in 2025 for schools, with Phaser."
       },
       {
         "slug": "swift-accelerator",
@@ -5868,21 +5868,21 @@
         "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
-        "blurb": "11 May 2025"
+        "blurb": "Run in May–June 2025"
       },
       {
         "slug": "iotmaker",
         "title": "Digital Maker: Create with 3D Printing and IOT",
         "audience_label": "Public",
         "duration": "2 days",
-        "blurb": "Age Group 14 - 15 January 2025"
+        "blurb": "Age Group Corporate training"
       },
       {
         "slug": "unityarvr",
         "title": "Enter the Metaverse: Get started with Unity for AR/VR",
         "audience_label": "Businesses",
         "duration": "2 days",
-        "blurb": "Age Group 11 - 12 February 2025"
+        "blurb": "Age Group Corporate training"
       },
       {
         "slug": "no-code-machine-learning",
@@ -6851,14 +6851,14 @@
         "title": "Digital Making with micro:bit",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with micro:bit."
+        "blurb": "Run in 2025 for primary schools, with micro:bit."
       },
       {
         "slug": "imda-minecraft-2025",
         "title": "Game Development in MakeCode Arcade & MineCraft",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with MakeCode Arcade & MineCraft."
+        "blurb": "Run in 2025 for primary schools, with MakeCode Arcade & Minecraft."
       },
       {
         "slug": "imda-unity-2025",
@@ -6879,7 +6879,7 @@
         "title": "AI-Driven Game Development on Phaser",
         "audience_label": "Students",
         "duration": "24 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Phaser."
+        "blurb": "Run in 2025 for schools, with Phaser."
       },
       {
         "slug": "swift-accelerator",
@@ -6907,7 +6907,7 @@
         "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
-        "blurb": "11 May 2025"
+        "blurb": "Run in May–June 2025"
       },
       {
         "slug": "code-for-fun-ai-workshop",
