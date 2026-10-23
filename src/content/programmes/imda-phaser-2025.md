@@ -10,8 +10,6 @@ cardBlurb: "Run in 2025 for schools: students learned HTML, JavaScript, and VS C
 weight: 75
 seoTitle: "AI-Driven Game Development on Phaser - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, running past a laptop showing a 2D game and a handheld game console, over a faded photo of a classroom."
-location: "At your school in Singapore"
-courseMode: onsite
 fit:
   question: "Could our school run AI-Driven Game Development on Phaser?"
   answer: "We ran this 24-hour course in 2025 under IMDA's LEARN Roadmaps, delivered under our partner Zenitant Pte Ltd. with a curriculum we designed. Students with no programming experience learned HTML, JavaScript, and VS Code, then built 2D browser games with sprites, physics, scoring, and levels, using GitHub Copilot from the free GitHub Education pack. This page describes that run. If you'd like a similar course for your school, write in. For younger students, see Game Development in MakeCode Arcade and Minecraft."

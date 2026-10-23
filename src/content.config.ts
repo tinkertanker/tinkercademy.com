@@ -16,7 +16,7 @@ const programmes = defineCollection({
 		subtitle: z.string().min(1),
 		duration: z.string().min(1).optional(),
 		heroImage: z.string().min(1),
-		// Describes the banner for screen readers and AI agents; falls back to the title.
+		// Describes the banner for screen readers and AI agents; falls back to "<title> programme banner".
 		heroAlt: z.string().min(1).optional(),
 		heroObjectPosition: z
 			.string()

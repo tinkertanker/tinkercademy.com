@@ -12,8 +12,6 @@ signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Game Development in MakeCode Arcade & MineCraft - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside stacked voxel blocks and a laptop showing a platform game, over a faded photo of a classroom."
-location: "At your school in Singapore"
-courseMode: onsite
 fit:
   question: "Could our school run Game Development in MakeCode Arcade and Minecraft?"
   answer: "We ran this course in 2025 for primary schools under IMDA's LEARN Roadmaps, at beginner and intermediate levels of 24 hours each, delivered under our partner Zenitant Pte Ltd. Students made retro-style games in MakeCode Arcade and built 3D worlds with block-based code in Minecraft Education. This page describes that run. If you'd like a similar course for your school, write in. For students ready to type real code, see AI-Driven Game Development on Phaser."
