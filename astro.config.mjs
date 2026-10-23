@@ -16,7 +16,7 @@ const programmeLastmod = new Map();
 for (const name of readdirSync('./src/content/programmes')) {
 	if (!name.endsWith('.md')) continue;
 	const source = readFileSync(`./src/content/programmes/${name}`, 'utf8');
-	const updatedAt = source.match(/^updatedAt:\s*(\S+)/m)?.[1];
+	const updatedAt = source.match(/^updatedAt:\s*["']?(\d{4}-\d{2}-\d{2})/m)?.[1];
 	if (updatedAt) programmeLastmod.set(name.replace(/\.md$/, ''), updatedAt);
 }
 

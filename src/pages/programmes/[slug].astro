@@ -298,24 +298,20 @@ const breadcrumbSchema = {
 					<dd class="prog-meta__value">{typeLabel}</dd>
 				</div>
 			)}
-			{(publishedAt || updatedAt) && (
-				<div class="prog-meta__group prog-meta__group--dates">
-					{publishedAt && (
-						<>
-							<dt class="prog-meta__label">Published:</dt>
-							<dd class="prog-meta__value">
-								<time datetime={toIsoDate(publishedAt)}>{formatDate(publishedAt)}</time>
-							</dd>
-						</>
-					)}
-					{updatedAt && (
-						<>
-							<dt class="prog-meta__label">Updated:</dt>
-							<dd class="prog-meta__value">
-								<time datetime={toIsoDate(updatedAt)}>{formatDate(updatedAt)}</time>
-							</dd>
-						</>
-					)}
+			{publishedAt && (
+				<div class="prog-meta__group">
+					<dt class="prog-meta__label">Published:</dt>
+					<dd class="prog-meta__value">
+						<time datetime={toIsoDate(publishedAt)}>{formatDate(publishedAt)}</time>
+					</dd>
+				</div>
+			)}
+			{updatedAt && (
+				<div class="prog-meta__group">
+					<dt class="prog-meta__label">Updated:</dt>
+					<dd class="prog-meta__value">
+						<time datetime={toIsoDate(updatedAt)}>{formatDate(updatedAt)}</time>
+					</dd>
 				</div>
 			)}
 		</dl>
@@ -362,6 +358,7 @@ const breadcrumbSchema = {
 													class="prog-facts__icon"
 													src={platform.icon}
 													alt=""
+													aria-hidden="true"
 													loading="lazy"
 												/>
 											)}
@@ -534,11 +531,6 @@ const breadcrumbSchema = {
 	.prog-meta__series,
 	.prog-meta__value {
 		margin: 0;
-	}
-
-	/* Keep both dates together when the meta bar wraps. */
-	.prog-meta__group--dates .prog-meta__value:not(:last-child) {
-		margin-right: 0.75rem;
 	}
 
 	.prog-meta__tags {

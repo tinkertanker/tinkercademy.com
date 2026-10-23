@@ -12,7 +12,7 @@ const stale = readdirSync(DIR)
 	.map((name) => ({ slug: name.replace(/\.md$/, ''), source: readFileSync(`${DIR}/${name}`, 'utf8') }))
 	.filter(({ source }) => !/^archived:\s*true/m.test(source))
 	.map(({ slug, source }) => {
-		const updated = source.match(/^updatedAt:\s*(\S+)/m)?.[1];
+		const updated = source.match(/^updatedAt:\s*["']?(\d{4}-\d{2}-\d{2})/m)?.[1];
 		const ageDays = updated ? Math.floor((now - new Date(updated).getTime()) / 86_400_000) : Infinity;
 		return { slug, updated: updated ?? 'never', ageDays };
 	})
