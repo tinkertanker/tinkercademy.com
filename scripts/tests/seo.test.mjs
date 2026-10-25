@@ -52,9 +52,56 @@ test('launch discovery fixes preserve crawlable destinations and distinct course
 	assert.ok(links.length >= 5);
 	for (const [, href] of links) {
 		const path = new URL(href).pathname.slice(1);
+		if (path.endsWith('/index.md')) {
+			assert.match(await read(path), /^# .+\n/);
+			continue;
+		}
 		const $ = load(await read(`${path}index.html`));
 		assert.equal($('link[rel="canonical"]').attr('href'), href);
 	}
+});
+
+test('programme Markdown alternatives preserve content and are discoverable', async () => {
+	const sourceDir = new URL('../../src/content/programmes/', import.meta.url);
+	const llms = await read('llms.txt');
+	for (const file of await readdir(sourceDir)) {
+		if (!file.endsWith('.md')) continue;
+		const source = await readFile(new URL(file, sourceDir), 'utf8');
+		const data = parse(source.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '');
+		const slug = file.slice(0, -3);
+		const path = `programmes/${slug}/index.md`;
+		if (data.archived) {
+			await assert.rejects(read(path), { code: 'ENOENT' });
+			assert.ok(!llms.includes(`/${slug}/index.md`));
+			continue;
+		}
+		const markdown = await read(path);
+		const canonical = `https://tinkercademy.com/programmes/${slug}/`;
+		const $ = load(await read(`programmes/${slug}/index.html`));
+		assert.ok(markdown.startsWith(`# ${data.title}\n`), slug);
+		assert.ok(markdown.includes(`[View programme page](${canonical})`), slug);
+		assert.ok(markdown.includes(data.cardBlurb), slug);
+		if (data.duration) assert.ok(markdown.includes(`Duration: ${data.duration}`), slug);
+		if (data.fit) {
+			assert.ok(markdown.includes(`## ${data.fit.question}`), slug);
+			assert.ok(markdown.includes(data.fit.answer), slug);
+		}
+		assert.match(markdown, /## Course Overview/);
+		assert.doesNotMatch(markdown, /<(?:p|ul|li|table|div)\b|heroImage:|audienceIds:/);
+		assert.equal($('head link[rel="alternate"][type="text/markdown"]').attr('href'), `${canonical}index.md`);
+		assert.equal($('head link[rel="describedby"]').attr('href'), 'https://tinkercademy.com/llms.txt');
+		assert.ok(llms.includes(`${canonical}index.md`), slug);
+	}
+	const workflows = await read('programmes/agentic-workflows-for-businesses/index.md');
+	assert.match(workflows, /### Day 2: Build a reusable agent toolkit/);
+	assert.match(workflows, /2 days: S\$960/);
+	assert.match(workflows, /\(https:\/\/tinkercademy.com\/programmes\/vibe-coding-for-digital-builders\/\)/);
+	const microbit = await read('programmes/imda-microbit-2025/index.md');
+	assert.match(microbit, /\| Course \| Course Code \| Hours \| Details \|/);
+	assert.match(microbit, /P-MICROSOFT-MAKE-BASIC \/ P-MICROSOFT-MAKE-INTM/);
+	const schools = await read('programmes/code-for-fun-ai-workshop/index.md');
+	assert.match(schools, /!\[Illustration of an AI chip connected to robotics and data icons\]\(https:\/\/tinkercademy.com\/images\//);
+	assert.match(schools, /\(mailto:imda_codesg@imda.gov.sg\)/);
 });
 
 test('production permits crawlers and advertises both sitemaps', async () => {
