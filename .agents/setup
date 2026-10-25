@@ -4,6 +4,13 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 node_home="$HOME/.local/share/node-v22"
 
+# Asset authoring only; ordinary Astro builds consume the generated files.
+if ! command -v ffmpeg >/dev/null || ! command -v woff2_decompress >/dev/null; then
+  echo "Installing social-preview video and font tools..."
+  sudo apt-get update -qq
+  sudo apt-get install -y -qq ffmpeg woff2
+fi
+
 install_node() {
   local architecture archive checksum_file download_dir filename
 

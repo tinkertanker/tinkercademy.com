@@ -27,6 +27,49 @@ page `hero_image` at the composite path; `BannerLayers.astro` resolves the two
 independent render assets from that path. Run the generator with `--check` to
 verify that committed outputs reproduce byte-for-byte without writing files.
 
+## Social-preview image and video
+
+`node scripts/banner/generate-social.mjs` composes the homepage share card
+and eight-second silent loop from the locked `greetings` sticker, the banner
+compositor's palette/bubble, and the site's logo and fonts. The
+sticker is clipped into a torso and four overlapping limb layers, articulated
+at the shoulders and hips; the source PNG is never redrawn or edited. Keep
+the clip coordinates in the source's 900×900 space. Motion is restrained and
+periodic: no entrance, pose swaps, leaps, ground shadow or dot particles.
+
+Inside the stationary bubble, Lucide-derived symbols flip every two seconds:
+branching workflow, advancing prompt caret, propagating AI circuit, then
+`{` typed before `}`. Each symbol holds for 1.6 seconds, followed by a
+0.4-second flip that swaps faces edge-on. The mascot retains its four-second
+motion cycle. The static fallback has no speech bubble or symbols; a wider
+glow fills the space to the robot's left. Both exports place the red accent
+below the headline. The video's last source frame exactly matches its first,
+including the symbol, glow and limbs, so repeat playback has no reset jump.
+
+`reference/social/illumination.webp` is a Painter-generated transparent wash
+of amber, yellow and peach light, padded and blurred before export. Only this
+abstract backdrop was generated, not the mascot. Its alpha edges were checked
+over light and dark backgrounds. It expands and contracts on a four-second
+cycle, anchored on the right so the glow reaches further left as it expands.
+Copy uses the existing homepage headline and lead verbatim, with only line
+breaks changed.
+
+Outputs are `public/images/social/tinkercademy-v1.jpg` and
+`public/videos/tinkercademy-v1.mp4`, both 1200×630. Generation needs `ffmpeg`
+and `woff2_decompress` (`sudo apt-get install ffmpeg woff2` on Debian; also
+installed by `.agents/setup`). WOFF2 fonts are temporarily expanded to TTF
+for Sharp; without this conversion its bundled FreeType silently substitutes
+system fonts. Ordinary builds need neither tool and use the checked-in assets.
+
+The default image and its dimensions/alt text live in
+`src/data/pages/site-settings.json`. Only `src/pages/index.astro` opts into
+video through `ContentLayout`'s `video` prop; course artwork and the visible
+homepage hero are independent. X retains `summary_large_image`, not a Player
+Card. `og:video` is a progressive enhancement, not a promise that every app
+plays it. Inspect both exports, run a production build and `pnpm run test:seo`,
+then test a real Messages share after deployment. Bump asset filenames and
+their metadata references for future revisions to avoid stale media caches.
+
 ## How to add a banner (agent workflow)
 
 1. Pick a scene id — use the placement's slug.

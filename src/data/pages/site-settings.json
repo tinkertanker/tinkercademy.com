@@ -8,7 +8,11 @@
     "openGraph": {
       "title": "Tinkercademy — Coding and digital making for schools and professionals",
       "description": "Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals.",
-      "image": "/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg"
+      "image": "/images/social/tinkercademy-v1.jpg",
+      "type": "image/jpeg",
+      "width": 1200,
+      "height": 630,
+      "alt": "T Krobot waves in a broad, soft wash of golden light. Tinkercademy: Illuminate your journey into tech & AI. Learn coding, digital making, and agentic engineering from expert teachers and builders."
     },
     "twitter": {
       "title": "Tinkercademy — Coding and digital making for schools and professionals",

@@ -471,6 +471,9 @@ function gamepad(w, { accent = 'red' }) {
 // Glyphs come from Lucide (open-source) instead of hand-drawn marks.
 const BUBBLE_ICONS = {
 	code: 'code',
+	workflow: 'workflow',
+	prompt: 'text-cursor-input',
+	brain: 'brain-circuit',
 	heart: 'heart',
 	question: 'circle-help',
 	bulb: 'lightbulb',
@@ -489,7 +492,7 @@ function bubble(w, { kind = 'dots', accent = 'red', tail = 'left' }) {
 		inner = [-1, 0, 1]
 			.map((i) => `<circle cx="${i * w * 0.14}" cy="0" r="${w * 0.038}" fill="${PALETTE.ink}"/>`)
 			.join('');
-	} else {
+	} else if (kind !== 'none') {
 		const icon = BUBBLE_ICONS[kind];
 		if (!icon) throw new Error(`Unknown bubble kind "${kind}"`);
 		const colored = kind === 'heart' || kind === 'bulb' || kind === 'zap';
@@ -681,7 +684,7 @@ async function stickerHalo(trimmedPng, info) {
 // marks, exclamation bursts) so the mascot reads clean in banner scenes.
 // The character itself has no orange — gem is red, limbs grey — so hue
 // filtering is safe. Re-trims afterwards since marks often set the bbox.
-async function stripEmanata(pngBuffer) {
+export async function stripEmanata(pngBuffer) {
 	const { data, info } = await sharp(pngBuffer)
 		.ensureAlpha()
 		.raw()
