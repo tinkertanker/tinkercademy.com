@@ -39,11 +39,14 @@
     "astro": "^6.1.5",
     "cheerio": "^1.2.0",
     "framer-api": "^0.1.4",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
     "yaml": "^2.8.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
     "@types/node": "^25.6.0",
+    "@types/turndown": "^5.0.6",
     "lucide-static": "^1.31.0",
     "sharp": "^0.35.3",
     "simple-icons": "^16.28.0",

@@ -15,13 +15,15 @@ export const GET: APIRoute = async () => {
 		programmes
 			.map((programme) => {
 				const duration = programme.duration ? ` (${programme.duration})` : '';
-				return `- [${programme.title}](${SITE_BASE}/programmes/${programme.slug}/)${duration}: ${programme.cardBlurb}`;
+				return `- [${programme.title}](${SITE_BASE}/programmes/${programme.slug}/index.md)${duration}: ${programme.cardBlurb}`;
 			})
 			.join('\n');
 
 	const body = `# Tinkercademy
 
 > Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals. Courses in micro:bit, Swift, Python, and AI.
+
+Programme links below provide Markdown versions of the website's course content, with links back to the original pages.
 
 ## Company and programmes
 

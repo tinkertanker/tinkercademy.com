@@ -10,6 +10,12 @@ Programme content is now Astro-first:
 
 The crawl and Framer import scripts remain in the repo as legacy migration infrastructure for other structured data and audit snapshots. They are no longer the source of truth for programme authoring.
 
+### Markdown programme pages
+
+Each published programme also builds to `/programmes/<slug>/index.md`, generated from the same Astro content and taxonomy labels as its HTML page. The export includes the course summary, dates, fit question, full article body, and enquiry links; embedded HTML is converted to Markdown, including tables, and links use absolute URLs. Archived programmes are excluded from both formats.
+
+Programme HTML advertises this alternative with `rel="alternate" type="text/markdown"`, and `/llms.txt` links directly to the Markdown versions. The HTML page remains canonical. Cloudflare's `public/_headers` supplies the Markdown content type and canonical link on static responses, since build-time endpoint headers are not retained in static files. No separately authored copy or extra generation command is needed.
+
 ## Commands
 
 - `pnpm install` installs dependencies.
