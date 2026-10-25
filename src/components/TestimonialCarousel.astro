@@ -14,10 +14,11 @@ const { set } = Astro.props;
 const quotes = testimonials[set];
 const PER_PAGE = 2;
 const pageCount = Math.ceil(quotes.length / PER_PAGE);
+const pages = Array.from({ length: pageCount }, (_, index) => quotes.slice(index * PER_PAGE, (index + 1) * PER_PAGE));
 ---
 
 {quotes.length > 0 && (
-	<section class="quotes" data-quotes data-per-page={PER_PAGE} aria-roledescription="carousel" aria-label="What people say about our courses">
+	<section class="quotes" data-quotes aria-roledescription="carousel" aria-label="What people say about our courses">
 		<div class="quotes__header">
 			<h2 class="quotes__heading">What people say about our courses</h2>
 			{pageCount > 1 && (
@@ -33,12 +34,16 @@ const pageCount = Math.ceil(quotes.length / PER_PAGE);
 			)}
 		</div>
 		<div class="quotes__list">
-			{quotes.map(({ quote }) => (
-				<figure class="quotes__item" data-quotes-item>
-					<blockquote>
-						<p>{quote}</p>
-					</blockquote>
-				</figure>
+			{pages.map((quotes) => (
+				<div class="quotes__page" data-quotes-page>
+					{quotes.map(({ quote }) => (
+						<figure class="quotes__item">
+							<blockquote>
+								<p>{quote}</p>
+							</blockquote>
+						</figure>
+					))}
+				</div>
 			))}
 		</div>
 	</section>
@@ -46,24 +51,24 @@ const pageCount = Math.ceil(quotes.length / PER_PAGE);
 
 <script>
 	for (const root of document.querySelectorAll<HTMLElement>('[data-quotes]')) {
-		const items = [...root.querySelectorAll<HTMLElement>('[data-quotes-item]')];
+		const pages = [...root.querySelectorAll<HTMLElement>('[data-quotes-page]')];
 		const controls = root.querySelector<HTMLElement>('[data-quotes-controls]');
 		const status = root.querySelector<HTMLElement>('[data-quotes-status]');
-		const perPage = Number(root.dataset.perPage) || 2;
-		const pageCount = Math.ceil(items.length / perPage);
+		const pageCount = pages.length;
 		if (!controls || pageCount < 2) continue;
 
 		let page = 0;
 		const show = (next: number) => {
 			page = (next + pageCount) % pageCount;
-			items.forEach((item, index) => {
-				item.hidden = Math.floor(index / perPage) !== page;
+			pages.forEach((item, index) => {
+				item.hidden = index !== page;
 			});
 			if (status) status.textContent = `${page + 1} / ${pageCount}`;
 		};
 
 		root.querySelector('[data-quotes-prev]')?.addEventListener('click', () => show(page - 1));
 		root.querySelector('[data-quotes-next]')?.addEventListener('click', () => show(page + 1));
+		root.dataset.quotesReady = '';
 		controls.hidden = false;
 		show(0);
 	}
@@ -136,8 +141,24 @@ const pageCount = Math.ceil(quotes.length / PER_PAGE);
 
 	.quotes__list {
 		display: grid;
+		gap: 1rem;
+	}
+
+	.quotes__page {
+		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 1rem;
+	}
+
+	/* Overlapping pages size the grid to the tallest pair, including after
+	   wrapping or font changes. Without JS, all pages remain in normal flow. */
+	[data-quotes-ready] .quotes__page {
+		grid-area: 1 / 1;
+	}
+
+	.quotes__page[hidden] {
+		display: grid;
+		visibility: hidden;
 	}
 
 	.quotes__item {
@@ -145,10 +166,6 @@ const pageCount = Math.ceil(quotes.length / PER_PAGE);
 		padding: 1.25rem 1.4rem;
 		border-radius: 12px;
 		background: var(--theme-surface-muted, rgb(247, 247, 247));
-	}
-
-	.quotes__item[hidden] {
-		display: none;
 	}
 
 	.quotes__item blockquote {
@@ -174,7 +191,7 @@ const pageCount = Math.ceil(quotes.length / PER_PAGE);
 	}
 
 	@media (max-width: 720px) {
-		.quotes__list {
+		.quotes__page {
 			grid-template-columns: 1fr;
 		}
 	}
