@@ -13,6 +13,7 @@ const {
 	ogType = 'website',
 	noindex = false,
 	alternateFeed = null,
+	alternateMarkdown = null,
 	structuredData = [],
 	internalLinkOrigin = null,
 	showSearch = true,
@@ -59,6 +60,8 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		<meta name="description" content={description} />
 		{canonical && <link rel="canonical" href={canonical} />}
 		{alternateFeed && <link rel="alternate" type="application/rss+xml" title={alternateFeed.title} href={alternateFeed.href} />}
+		{alternateMarkdown && <link rel="alternate" type="text/markdown" href={alternateMarkdown} />}
+		{alternateMarkdown && <link rel="describedby" href="https://tinkercademy.com/llms.txt" />}
 		{noindex && <meta name="robots" content="noindex,nofollow" />}
 
 		<link rel="preconnect" href="https://www.googletagmanager.com" />
