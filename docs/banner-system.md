@@ -61,6 +61,12 @@ installed by `.agents/setup`). WOFF2 fonts are temporarily expanded to TTF
 for Sharp; without this conversion its bundled FreeType silently substitutes
 system fonts. Ordinary builds need neither tool and use the checked-in assets.
 
+`worker.mjs` supplies byte-range responses for `/videos/*.mp4`, because the
+Assets binding can ignore Range and omit Content-Length. Full downloads remain
+streamed; range requests buffer the small social clip to derive its size and
+return exact bytes with 206 (or 416 for an unsatisfiable range). Keep these clips
+within the SEO test's size budget; large media needs a streaming range service.
+
 The default image and its dimensions/alt text live in
 `src/data/pages/site-settings.json`. Only `src/pages/index.astro` opts into
 video through `ContentLayout`'s `video` prop; course artwork and the visible
