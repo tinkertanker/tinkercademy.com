@@ -5,11 +5,13 @@ import { getSiteData } from '../lib/data.js';
 import { themeScript } from '../scripts/theme-inline.js';
 
 const site = getSiteData();
+const defaultOpenGraph = site.siteSettings?.default_seo?.openGraph;
 const {
 	title = site.siteSettings?.default_seo?.title ?? 'Tinkercademy',
 	description = site.siteSettings?.default_seo?.description ?? '',
 	canonical = null,
-	image = site.siteSettings?.default_seo?.openGraph?.image ?? null,
+	image = defaultOpenGraph?.image ?? null,
+	video = null,
 	ogType = 'website',
 	noindex = false,
 	alternateFeed = null,
@@ -34,6 +36,8 @@ if (image) {
 		: new URL(image, ogImageBase).toString();
 }
 
+const imageDetails = image === defaultOpenGraph?.image ? defaultOpenGraph : null;
+const ogVideo = video ? new URL(video.src, ogImageBase ?? siteUrl).toString() : null;
 const siteName = site.siteSettings?.site_name ?? 'Tinkercademy';
 const twitterCard = ogImage ? 'summary_large_image' : 'summary';
 const organisationSchema = {
@@ -97,11 +101,25 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 		<meta property="og:description" content={description} />
 		{canonical && <meta property="og:url" content={canonical} />}
 		{ogImage && <meta property="og:image" content={ogImage} />}
+		{ogImage && imageDetails && <>
+			<meta property="og:image:type" content={imageDetails.type} />
+			<meta property="og:image:width" content={imageDetails.width} />
+			<meta property="og:image:height" content={imageDetails.height} />
+			<meta property="og:image:alt" content={imageDetails.alt} />
+		</>}
+		{ogVideo && <>
+			<meta property="og:video" content={ogVideo} />
+			<meta property="og:video:secure_url" content={ogVideo} />
+			<meta property="og:video:type" content={video.type} />
+			<meta property="og:video:width" content={video.width} />
+			<meta property="og:video:height" content={video.height} />
+		</>}
 
 		<meta name="twitter:card" content={twitterCard} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		{ogImage && <meta name="twitter:image" content={ogImage} />}
+		{ogImage && imageDetails && <meta name="twitter:image:alt" content={imageDetails.alt} />}
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />

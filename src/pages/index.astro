@@ -32,8 +32,6 @@ if (!page) return Astro.redirect('/404');
 
 const canonical = 'https://tinkercademy.com/';
 
-const heroImage = localiseFramerImage(page.hero_image ?? '');
-
 const partnerStatement = 'Selected clients and partners';
 
 const allProgrammes = await getAllProgrammes();
@@ -80,7 +78,7 @@ const popularCourses = (await getHomeFeaturedProgrammes()).map((programme) =>
 	title="Tinkercademy — Coding and making for schools and professionals"
 	description="Singapore-based coders and makers teaching coding and digital making to schools, companies, and individuals. Courses in micro:bit, Swift, Python, and AI."
 	canonical={canonical}
-	image={heroImage}
+	video={{ src: '/videos/tinkercademy-v1.mp4', type: 'video/mp4', width: 1200, height: 630 }}
 	preloadHero={HOME_HERO_IMAGE}
 >
 	{/* ═══════════ 1. Hero ═══════════════════════════════════════════════ */}

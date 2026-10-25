@@ -7,6 +7,39 @@ import { parse } from 'yaml';
 const read = (path) => readFile(new URL(`../../dist/${path}`, import.meta.url), 'utf8');
 const schemas = ($) => $('script[type="application/ld+json"]').toArray().map((el) => JSON.parse($(el).text()));
 
+test('mascot social previews retain a static fallback and limit video to the homepage', async () => {
+	const image = 'https://tinkercademy.com/images/social/tinkercademy-v1.jpg';
+	const video = 'https://tinkercademy.com/videos/tinkercademy-v1.mp4';
+	for (const path of ['index.html', 'articles/index.html', 'programmes/iotmaker/index.html']) {
+		const $ = load(await read(path));
+		const customImage = path.startsWith('programmes/');
+		const expectedImage = customImage ? 'https://tinkercademy.com/images/banners/iotmaker.webp' : image;
+		assert.equal($('meta[property="og:image"]').attr('content'), expectedImage);
+		assert.equal($('meta[name="twitter:image"]').attr('content'), expectedImage);
+		assert.equal($('meta[name="twitter:card"]').attr('content'), 'summary_large_image');
+		if (!customImage) {
+			assert.equal($('meta[property="og:image:width"]').attr('content'), '1200');
+			assert.equal($('meta[property="og:image:height"]').attr('content'), '630');
+			assert.match($('meta[property="og:image:alt"]').attr('content'), /T Krobot/);
+		} else {
+			assert.equal($('meta[property="og:image:width"]').length, 0, 'do not attach default dimensions to course art');
+		}
+		if (path === 'index.html') {
+			assert.equal($('meta[property="og:video"]').attr('content'), video);
+			assert.equal($('meta[property="og:video:type"]').attr('content'), 'video/mp4');
+			assert.equal($('meta[property="og:video:width"]').attr('content'), '1200');
+			assert.equal($('meta[property="og:video:height"]').attr('content'), '630');
+			assert.equal($('video').length, 0, 'social video must not add an autoplaying homepage element');
+		} else {
+			assert.equal($('meta[property^="og:video"]').length, 0);
+		}
+	}
+	const sizes = await Promise.all([image, video].map(async (url) =>
+		(await stat(new URL(`../../dist${new URL(url).pathname}`, import.meta.url))).size));
+	assert.ok(sizes.every((size) => size > 0));
+	assert.ok(sizes.reduce((sum, size) => sum + size, 0) < 2_000_000, 'keep share downloads small');
+});
+
 test('large tutorial animations use smaller playable media and static social images', async () => {
 	const tutorials = JSON.parse(await readFile(new URL('../../src/data/pages/tutorials.json', import.meta.url), 'utf8'));
 	const animated = tutorials.filter((tutorial) => tutorial.hero_video);
