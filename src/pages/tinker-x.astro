@@ -4,6 +4,7 @@
  */
 import CtaBanner from '../components/CtaBanner.astro';
 import ContentLayout from '../layouts/ContentLayout.astro';
+import { serializeJsonLd } from '../lib/seo.ts';
 
 const canonical = 'https://tinkercademy.com/tinker-x/';
 
@@ -233,7 +234,7 @@ const isExternal = (url: string) => url.startsWith('http');
 	image={hero.day}
 	preloadHero={{ src: hero.day }}
 >
-	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+	<script type="application/ld+json" set:html={serializeJsonLd(faqSchema)} />
 
 	<section class="tx-hero">
 		<img

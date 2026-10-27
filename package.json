@@ -19,7 +19,7 @@
     "import:medium": "node scripts/import-medium.mjs",
     "review:medium": "node scripts/review-medium-migration.mjs",
     "verify:medium": "node scripts/verify-medium-migration.mjs",
-    "test": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/indexnow.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/theme.test.mjs scripts/tests/worker-routing.test.mjs",
+    "test": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/indexnow.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/security-boundaries.test.mjs scripts/tests/theme.test.mjs scripts/tests/worker-routing.test.mjs",
     "test:seo": "node --test scripts/tests/seo.test.mjs",
     "test:medium": "node --test scripts/tests/blog-host-routing.test.mjs scripts/tests/medium-import.test.mjs scripts/tests/worker-routing.test.mjs",
     "smoke:blog": "node scripts/smoke-blog-cutover.mjs",

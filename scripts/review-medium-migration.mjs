@@ -16,8 +16,13 @@ const REVIEW_PATH = path.join(ROOT, 'docs', 'migrations', 'medium', 'review-deci
 const RAW_STORIES_DIR = path.join(SCRIPTS_DIR, '_artifacts', 'medium', 'raw', 'stories');
 const BLOG_MEDIA_DIR = path.join(ROOT, 'public', 'blog-media');
 const PORT = Number(process.env.PORT || 4174);
-const HOST = process.env.HOST || '0.0.0.0';
+const HOST = process.env.HOST || '127.0.0.1';
 const MAX_BODY_BYTES = 2 * 1024 * 1024;
+
+// This is a trusted local operator tool, not a shared authenticated service.
+if (!['127.0.0.1', '::1'].includes(HOST)) {
+	throw new Error('Medium review requires a loopback HOST (127.0.0.1 or ::1). Do not expose it through a public proxy.');
+}
 
 async function readJson(file) {
 	return JSON.parse(await readFile(file, 'utf8'));
@@ -432,7 +437,17 @@ const HTML = String.raw`<!doctype html>
 
 const server = createServer(async (request, response) => {
 	try {
-		const url = new URL(request.url, `http://${request.headers.host || 'localhost'}`);
+		const port = server.address().port;
+		const host = request.headers.host;
+		const allowedHosts = ['127.0.0.1', '[::1]', 'localhost'].map((name) => `${name}:${port}`);
+		// Host validation blocks DNS rebinding; Origin/Fetch Metadata block foreign pages.
+		if (!allowedHosts.includes(host)
+			|| (request.headers.origin !== undefined && request.headers.origin !== `http://${host}`)
+			|| request.headers['sec-fetch-site'] === 'cross-site') {
+			sendJson(response, 403, { error: 'Review access requires the local origin' });
+			return;
+		}
+		const url = new URL(request.url, `http://${host}`);
 		if (request.method === 'GET' && url.pathname === '/') {
 			response.writeHead(200, {
 				'Content-Type': 'text/html; charset=utf-8',
@@ -461,5 +476,5 @@ const server = createServer(async (request, response) => {
 });
 
 server.listen(PORT, HOST, () => {
-	console.log(`Medium migration review listening on http://${HOST}:${PORT}`);
+	console.log(`Medium migration review listening on http://${HOST === '::1' ? '[::1]' : HOST}:${server.address().port}`);
 });

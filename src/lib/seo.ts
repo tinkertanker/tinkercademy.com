@@ -1,3 +1,8 @@
+/** Keep JSON-LD data from terminating its HTML script element. */
+export function serializeJsonLd(schema: object): string {
+	return JSON.stringify(schema).replace(/</g, '\\u003c');
+}
+
 /**
  * Clip a long description string to fit inside Google's SERP snippet budget
  * without cutting mid-word. Prefers a sentence boundary if one falls within

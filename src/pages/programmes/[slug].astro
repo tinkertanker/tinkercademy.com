@@ -11,7 +11,7 @@ import { getBannerAsset } from '../../lib/banner-assets';
 import { createProgrammeFilterHref } from '../../lib/programme-filters.ts';
 import { getAllProgrammes, getProgrammeBySlug } from '../../lib/programmes.ts';
 import { getResponsiveImage } from '../../lib/responsive-images.js';
-import { clipDescription } from '../../lib/seo.ts';
+import { clipDescription, serializeJsonLd } from '../../lib/seo.ts';
 
 export async function getStaticPaths() {
 	const programmes = await getAllProgrammes();
@@ -391,9 +391,9 @@ const breadcrumbSchema = {
 
 	<CtaBanner />
 
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
-	<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
-	{faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(courseSchema)} />
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(breadcrumbSchema)} />
+	{faqSchema && <script is:inline type="application/ld+json" set:html={serializeJsonLd(faqSchema)} />}
 </ContentLayout>
 
 <style>
