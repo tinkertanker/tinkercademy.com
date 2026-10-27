@@ -98,13 +98,20 @@ the next import overwrites them. Use the repository-local review application:
 pnpm run review:medium
 ```
 
-It serves a private review UI (port 4174 by default) for all 72 story rights
+It serves a local-only review UI at `http://127.0.0.1:4174` by default for all 72 story rights
 records and 415 image placements, defaulting to unresolved images. It
 shows local thumbnails, source captions and alt, nearby story text, exact
 attribution, and original Medium links. Completed decisions require a reviewer
 name; rights decisions require an evidence reference. Bulk-by-author and
 identical-image actions are available, but should be used only when the same
 evidence or contextual description genuinely applies.
+
+The server accepts only loopback bindings (`HOST=127.0.0.1` or `HOST=::1`),
+and rejects foreign Host/Origin headers and cross-site browser requests. It
+trusts local processes; reviewer names are operator-entered provenance, not
+authenticated identities. Do not publish it through a portal or reverse proxy.
+Remote operators can use an SSH local-port tunnel on a trusted machine. Shared
+web access needs a separately authenticated and authorized service before use.
 
 **Rights statuses:**
 

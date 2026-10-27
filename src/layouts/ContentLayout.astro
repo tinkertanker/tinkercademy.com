@@ -2,6 +2,7 @@
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import { getSiteData } from '../lib/data.js';
+import { serializeJsonLd } from '../lib/seo.ts';
 import { themeScript } from '../scripts/theme-inline.js';
 
 const site = getSiteData();
@@ -138,9 +139,9 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 			gtag('js', new Date());
 			gtag('config', gaMeasurementId);
 		</script>
-		<script is:inline type="application/ld+json" set:html={JSON.stringify(organisationSchema)}></script>
+		<script is:inline type="application/ld+json" set:html={serializeJsonLd(organisationSchema)}></script>
 		{additionalSchemas.filter(Boolean).map((schema) => (
-			<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+			<script is:inline type="application/ld+json" set:html={serializeJsonLd(schema)}></script>
 		))}
 	</head>
 	<body>
