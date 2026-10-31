@@ -18,6 +18,7 @@ courseMode: onsite
 fit:
   question: "Should I take From Prompting to Pull Request or Vibe Coding for Digital Builders?"
   answer: "Take From Prompting to Pull Request if you've already built something with ChatGPT, Gemini, Lovable, or a similar tool and want to work the way engineers do: in the terminal, with Git and GitHub pull requests, shipping a web app to a live URL with Claude or Codex. If you haven't used an AI building tool yet, start with Vibe Coding for Digital Builders. If you already use the terminal and GitHub every day, skip ahead to Agentic Engineering."
+  compare: ["vibe-coding-for-digital-builders", "agentic-engineering-with-claude-code-or-codex"]
 publishedAt: 2026-08-15
 updatedAt: 2026-10-20
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Agentic Workflows for Businesses"
 subtitle: "Corporate training"
-duration: "1, 2, or 3 days"
+duration: "3 days"
 heroImage: "/images/banners/agentic-ai-for-digital-builders.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["ai-engineering"]
@@ -12,25 +12,26 @@ homeFeaturedRank: 1
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Agentic Workflows for Businesses - Tinkercademy: Coding and Making for Schools and Professionals"
-seoDescription: "A 1-, 2-, or 3-day workshop for business teams to redesign recurring processes and build practical, governed AI agents."
+seoDescription: "A 3-day workshop for business teams to redesign recurring processes and build practical, governed AI agents."
 heroAlt: "Illustration of an AI chat on a laptop next to an agent terminal window, over a faded photo of a team workshop."
 fee:
-  amount: 500
-  basis: "Per participant for the 1-day format, before 9% GST"
+  amount: 1380
+  basis: "Per participant, before 9% GST"
 location: "CT Hub, Singapore, or on request"
 courseMode: onsite
 fit:
   question: "Should my team learn agentic workflows or vibe coding first?"
-  answer: "Choose Agentic Workflows if your team's time goes into recurring knowledge work (reviewing submissions, pulling figures, drafting documents, updating trackers) and you want to redesign those processes before handing parts of them to governed AI agents. It runs as a 1-, 2-, or 3-day workshop; the 3-day version ends with a working capstone built on one of your own workflows. If your goal is a web app or prototype, start with Vibe Coding for Digital Builders. Some hands-on experience with generative AI tools helps either way."
+  answer: "Choose Agentic Workflows if your team's time goes into recurring knowledge work (reviewing submissions, pulling figures, drafting documents, updating trackers) and you want to redesign those processes before handing parts of them to governed AI agents. It runs as a 3-day workshop that ends with a working capstone built on one of your own workflows. If your goal is a web app or prototype, start with Vibe Coding for Digital Builders. Some hands-on experience with generative AI tools helps either way."
+  compare: ["vibe-coding-for-digital-builders"]
 publishedAt: 2026-04-23
-updatedAt: 2026-10-20
+updatedAt: 2026-10-31
 ---
 
 ## Course Overview
 
 Knowledge-work teams spend hours on the same loops: reviewing submissions, pulling figures, drafting documents, updating trackers, and preparing briefings. Automating a poor process only makes its problems run faster. This workshop starts with business process re-engineering, then introduces agents where they can genuinely reduce handoffs, waiting time, and repetitive work.
 
-Participants first work with the same realistic, deliberately messy simulated organisation: a shared mailbox, document store, submissions database, and survey data. Together, they map and redesign its processes before building governed agentic workflows. In the full three-day format, participants then apply the same method to a real workflow of their own and ship a working capstone.
+Participants first work with the same realistic, deliberately messy simulated organisation: a shared mailbox, document store, submissions database, and survey data. Together, they map and redesign its processes before building governed agentic workflows. On the third day, participants apply the same method to a real workflow of their own and ship a working capstone.
 
 ## Lesson Outcomes
 
@@ -64,4 +65,4 @@ By the end of this course, you will be able to:
 
 ## Details
 
-<p><strong>Dates and Times</strong>: 1-, 2-, and 3-day formats are available. Write in to enquire.</p><p><strong>Location</strong>: CT Hub, or on request.</p><p><strong>Requirements</strong>: Bring your own laptop. Modern Windows, Mac, or Linux laptops are supported. Access to the selected enterprise AI environments and required connectors will be confirmed before the workshop.</p><p><strong>Recommended</strong>: Vibe coding or equivalent hands-on experience with generative AI tools. See <a href="/programmes/vibe-coding-for-digital-builders/"><em>Vibe Coding for Digital Builders</em></a>.</p><p><strong>Fees</strong> (excl. GST, as of October 2026) per participant:</p><ul><li data-preset-tag="p"><p>1 day: S$500</p></li><li data-preset-tag="p"><p>2 days: S$960</p></li><li data-preset-tag="p"><p>3 days: S$1,380</p></li></ul><p>All quoted prices are in SGD and are before 9% GST. Invoicing terms available.</p>
+<p><strong>Dates and Times</strong>: Write in to enquire.</p><p><strong>Location</strong>: CT Hub, or on request.</p><p><strong>Requirements</strong>: Bring your own laptop. Modern Windows, Mac, or Linux laptops are supported. Access to the selected enterprise AI environments and required connectors will be confirmed before the workshop.</p><p><strong>Recommended</strong>: Vibe coding or equivalent hands-on experience with generative AI tools. See <a href="/programmes/vibe-coding-for-digital-builders/"><em>Vibe Coding for Digital Builders</em></a>.</p><p><strong>Fees</strong>: $1,380</p><p>All quoted prices are in SGD and are before 9% GST. Invoicing terms available.</p>

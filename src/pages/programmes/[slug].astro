@@ -173,6 +173,16 @@ const heroPreload = heroBanner
 		? { src: heroResponsive.src, srcset: heroResponsive.srcset, sizes: '100vw' }
 		: null;
 
+const fitCompare = fit?.compare?.length
+	? await Promise.all(
+			fit.compare.map(async ({ id }) => {
+				const item = await getProgrammeBySlug(id);
+				if (!item) throw new Error(`${programme.slug}: fit.compare links to archived programme ${id}`);
+				return { title: item.title, href: `/programmes/${item.slug}/` };
+			}),
+		)
+	: [];
+
 const faqSchema = fit
 	? {
 			'@context': 'https://schema.org',
@@ -322,10 +332,22 @@ const breadcrumbSchema = {
 	<div class="prog-main shell">
 		<div class="prog-main__body">
 			{fit && (
-				<section class="prog-fit">
-					<h2 class="prog-fit__question">{fit.question}</h2>
-					<p class="prog-fit__answer">{fit.answer}</p>
-				</section>
+				<details class="prog-fit">
+					<summary class="prog-fit__summary">
+						<h2 class="prog-fit__question">{fit.question}</h2>
+					</summary>
+					<div class="prog-fit__body">
+						<p class="prog-fit__answer">{fit.answer}</p>
+						{fitCompare.length > 0 && (
+							<p class="prog-fit__compare">
+								<span class="prog-fit__compare-label">Compare:</span>
+								{fitCompare.map((item) => (
+									<a class="prog-fit__link" href={item.href}>{item.title}</a>
+								))}
+							</p>
+						)}
+					</div>
+				</details>
 			)}
 			{(domainLabels.length > 0 || platforms.length > 0) && (
 				<section class="prog-facts">
@@ -570,26 +592,89 @@ const breadcrumbSchema = {
 		color: var(--theme-text, rgb(51, 51, 51));
 	}
 
-	/* ─── Reader question: the first H2 under the title ────── */
+	/* ─── Reader question: collapsed box, the first H2 under the title ── */
 	.prog-fit {
-		margin-bottom: 1.75rem;
+		margin-bottom: 1.5rem;
+		border: 1px solid var(--theme-border, rgb(229, 229, 229));
+		border-radius: 12px;
+		/* Same off-white as the testimonial cards (.quotes__item). */
+		background: var(--theme-surface-muted, rgb(247, 247, 247));
+	}
+
+	.prog-fit__summary {
+		list-style: none;
+		position: relative;
+		padding: 0.8rem 2.75rem 0.8rem 1rem;
+		cursor: pointer;
+	}
+
+	.prog-fit__summary::marker,
+	.prog-fit__summary::-webkit-details-marker {
+		display: none;
+	}
+
+	/* Chevron: points down when closed, up when open. */
+	.prog-fit__summary::after {
+		content: '';
+		position: absolute;
+		right: 1.1rem;
+		top: 50%;
+		width: 0.45rem;
+		height: 0.45rem;
+		border-right: 2px solid var(--theme-link, var(--accent-dark));
+		border-bottom: 2px solid var(--theme-link, var(--accent-dark));
+		transform: translateY(-70%) rotate(45deg);
+		transition: transform 0.15s ease;
+	}
+
+	.prog-fit[open] .prog-fit__summary::after {
+		transform: translateY(-30%) rotate(-135deg);
+	}
+
+	.prog-fit__summary:focus-visible {
+		outline: 2px solid var(--theme-link, var(--accent-dark));
+		outline-offset: 2px;
+		border-radius: 12px;
 	}
 
 	.prog-fit__question {
-		font-family: 'IBM Plex Serif', Georgia, serif;
-		letter-spacing: -0.03em;
-		font-size: 1.35rem;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.95rem;
 		font-weight: 500;
+		line-height: 1.4;
 		color: var(--theme-heading, rgb(51, 51, 51));
-		margin: 0 0 0.75rem;
+		margin: 0;
+	}
+
+	.prog-fit__body {
+		padding: 0 1rem 1rem;
 	}
 
 	.prog-fit__answer {
 		font-family: 'Rubik', sans-serif;
-		font-size: var(--body-font-size);
+		font-size: 0.92rem;
 		line-height: var(--body-line-height);
 		color: var(--theme-text, rgb(51, 51, 51));
 		margin: 0;
+	}
+
+	.prog-fit__compare {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.35rem 1rem;
+		margin: 0.75rem 0 0;
+		font-family: 'Rubik', sans-serif;
+		font-size: 0.88rem;
+	}
+
+	.prog-fit__compare-label {
+		font-weight: 500;
+		color: var(--theme-heading, rgb(51, 51, 51));
+	}
+
+	.prog-fit__link {
+		color: var(--theme-link, var(--accent-dark));
 	}
 
 	.prog-facts {

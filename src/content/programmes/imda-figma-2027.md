@@ -21,6 +21,7 @@ courseMode: onsite
 fit:
   question: "Should our school choose Figma or Canva Code for IMDA LEARN Roadmaps?"
   answer: "Choose UI/UX Design with Figma if you want students to learn how product teams design: personas, user flows, wireframes, visual systems, and clickable prototypes tested with real users. It runs at primary and secondary/JC levels; only the secondary/JC level adds a guided introduction to Figma Make. Choose AI Product Design with Canva Code if you want secondary or JC students to build a working product with forms, data, and dashboards by directing AI throughout. Both are 26-hour courses, and neither needs prior experience."
+  compare: ["imda-canva-2027"]
 publishedAt: 2026-10-17
 updatedAt: 2026-10-23
 ---

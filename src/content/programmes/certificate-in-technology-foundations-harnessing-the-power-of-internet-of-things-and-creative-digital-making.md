@@ -18,6 +18,7 @@ heroAlt: "Illustration of a microcontroller wired to a breadboard, over a faded 
 fit:
   question: "Who is this SMU Academy IoT module for?"
   answer: "It's a module in SMU Academy's Industry Practice Master of Digital Economy, so it suits participants in that programme who want hands-on experience with connected devices, not just theory. You'll learn coding concepts in block-based languages and Python, program ESP32 microcontrollers, and build prototypes that send sensor data online. Enrolment runs through SMU Academy. If you'd like a standalone two-day version for your own team, Digital Maker: Create with 3D Printing and IoT covers similar ground and adds 3D printing."
+  compare: ["iotmaker"]
 publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---

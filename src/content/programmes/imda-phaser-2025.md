@@ -13,6 +13,7 @@ heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, running past a 
 fit:
   question: "Could our school run AI-Driven Game Development on Phaser?"
   answer: "We ran this 24-hour course in 2025 under IMDA's LEARN Roadmaps, delivered under our partner Zenitant Pte Ltd. with a curriculum we designed. Students with no programming experience learned HTML, JavaScript, and VS Code, then built 2D browser games with sprites, physics, scoring, and levels, using GitHub Copilot from the free GitHub Education pack. This page describes that run. If you'd like a similar course for your school, write in. For younger students, see Game Development in MakeCode Arcade and Minecraft."
+  compare: ["imda-minecraft-2025"]
 publishedAt: 2026-04-18
 updatedAt: 2026-10-22
 ---
