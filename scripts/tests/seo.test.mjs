@@ -127,7 +127,8 @@ test('programme Markdown alternatives preserve content and are discoverable', as
 	}
 	const workflows = await read('programmes/agentic-workflows-for-businesses/index.md');
 	assert.match(workflows, /### Day 2: Build a reusable agent toolkit/);
-	assert.match(workflows, /2 days: S\$960/);
+	assert.match(workflows, /\*\*Fees\*\*: \$1,380/);
+	assert.doesNotMatch(workflows, /S\$500|S\$960/);
 	assert.match(workflows, /\(https:\/\/tinkercademy.com\/programmes\/vibe-coding-for-digital-builders\/\)/);
 	const microbit = await read('programmes/imda-microbit-2025/index.md');
 	assert.match(microbit, /\| Course \| Course Code \| Hours \| Details \|/);

@@ -15,6 +15,7 @@ heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, raising a hand 
 fit:
   question: "Could our school run Digital Making with micro:bit?"
   answer: "We ran this 24-hour course in 2025 for primary schools under IMDA's LEARN Roadmaps, delivered under our partner Zenitant Pte Ltd. Students programmed the micro:bit in block-based MakeCode and used it to control servos, LED strips, and buzzers, on PCs, Macs, iPads, or Chromebooks. This page describes that run. If you'd like a similar course for your school, write in; you'll need your own micro:bit kits. For our current IMDA LEARN Roadmaps 2027 courses, see the Apple, Figma, and Canva tracks."
+  compare: ["imda-apple-2027-tracka", "imda-apple-2027-trackb", "imda-figma-2027", "imda-canva-2027"]
 publishedAt: 2026-04-18
 updatedAt: 2026-10-22
 ---

@@ -15,6 +15,7 @@ heroAlt: "Illustration of T Krobot, Tinkercademy's robot mascot, beside stacked 
 fit:
   question: "Could our school run Game Development in MakeCode Arcade and Minecraft?"
   answer: "We ran this course in 2025 for primary schools under IMDA's LEARN Roadmaps, at beginner and intermediate levels of 24 hours each, delivered under our partner Zenitant Pte Ltd. Students made retro-style games in MakeCode Arcade and built 3D worlds with block-based code in Minecraft Education. This page describes that run. If you'd like a similar course for your school, write in. For students ready to type real code, see AI-Driven Game Development on Phaser."
+  compare: ["imda-phaser-2025"]
 publishedAt: 2026-04-18
 updatedAt: 2026-10-22
 ---

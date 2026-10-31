@@ -13,9 +13,15 @@ export async function getStaticPaths() {
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-export const GET: APIRoute<Props> = ({ props: { programme } }) => {
+export const GET: APIRoute<Props> = async ({ props: { programme } }) => {
 	const canonical = `https://tinkercademy.com/programmes/${programme.slug}/`;
 	const { fit, publishedAt, updatedAt } = programme.entry.data;
+	const programmeBySlug = new Map((await getAllProgrammes()).map((item) => [item.slug, item]));
+	const compareLinks = fit?.compare
+		?.map(({ id }) => programmeBySlug.get(id))
+		.filter((item) => item !== undefined)
+		.map((item) => `[${item.title}](https://tinkercademy.com/programmes/${item.slug}/)`)
+		.join(', ');
 	const html = programme.entry.rendered?.html;
 	if (!html) throw new Error(`Missing rendered content for programme: ${programme.slug}`);
 
@@ -52,6 +58,7 @@ export const GET: APIRoute<Props> = ({ props: { programme } }) => {
 		`[View programme page](${canonical})`,
 		facts,
 		fit && `## ${fit.question}\n\n${fit.answer}`,
+		compareLinks && `Compare: ${compareLinks}`,
 		converter.turndown($.html()),
 		`## Enquiries\n\n[${programme.signUpLabel ?? 'Enquire now'}](${canonical}#enquire)`,
 		programme.primaryCta && `[${programme.primaryCta.label}](${programme.primaryCta.url})`,

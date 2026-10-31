@@ -1,4 +1,4 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, reference } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import audiences from './data/pages/audiences.json';
@@ -38,12 +38,14 @@ const programmes = defineCollection({
 				url: z.url().refine((value) => value.startsWith('https://'), 'Use an HTTPS URL'),
 			})
 			.optional(),
-		// The reader's main question and a short "it depends" answer, shown as
-		// the first H2 under the title.
+		// The reader's main question and a short "it depends" answer, shown as a
+		// collapsed disclosure under the title. `compare` lists the sibling
+		// courses the answer mentions, rendered as links.
 		fit: z
 			.object({
 				question: z.string().min(1),
 				answer: z.string().min(1).refine((value) => value.split(/\s+/).length <= 100, 'Keep the answer to 100 words or fewer'),
+				compare: z.array(reference('programmes')).optional(),
 			})
 			.optional(),
 		// Shown as "Published" / "Updated" on the page and in structured data.

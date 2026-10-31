@@ -21,6 +21,7 @@ courseMode: onsite
 fit:
   question: "Should our school choose Track A or Track B?"
   answer: "Choose Track B if you want students to build and present a working Swift app. Primary students work through guided mini-projects with layouts, buttons, state, navigation, and lists; secondary and JC students add data modelling and a capstone app. Choose Track A if you'd rather they start with app design and prototyping in Keynote. Track B builds naturally on Track A, but no coding experience is needed to start. Both run for 26 hours on iPads with iPadOS 17 or later."
+  compare: ["imda-apple-2027-tracka"]
 publishedAt: 2026-10-17
 updatedAt: 2026-10-23
 ---

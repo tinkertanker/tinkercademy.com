@@ -19,6 +19,7 @@ courseMode: onsite
 fit:
   question: "Is this Copilot course right for our staff?"
   answer: "It suits staff who use Microsoft tools at work and want to use Copilot well in everyday tasks: drafting, summarising, analysing information, and automating routine work. You'll start with how AI works and where it falls short, then apply Copilot to real tasks from your own job. It runs over 1 to 2 days and starts with 5 sign-ups. If your team uses ChatGPT rather than Microsoft tools, take Knowledge-Powered AI with ChatGPT instead."
+  compare: ["knowledge-powered-ai-with-chatgpt"]
 publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
