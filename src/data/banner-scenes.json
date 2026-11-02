@@ -825,8 +825,8 @@
   }
  },
  {
-  "id": "from-prompting-to-pull-request",
-  "note": "Prompting to pull request — AI terminal flowing into GitHub review with the Tinkertanker professional stamp.",
+  "id": "prompt-to-production",
+  "note": "Prompt to production — AI terminal flowing into GitHub review with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "red",
   "headlineSide": "left",

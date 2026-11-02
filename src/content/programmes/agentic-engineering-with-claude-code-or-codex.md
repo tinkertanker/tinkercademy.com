@@ -23,9 +23,9 @@ sessions:
   - { start: 2026-11-19, end: 2026-11-20 }
   - { start: 2026-12-02, end: 2026-12-03 }
 fit:
-  question: "Should I take Agentic Engineering or From Prompting to Pull Request?"
-  answer: "It depends on where you're starting. Take Agentic Engineering if you already write software for a living and are comfortable with a terminal, Git, pull requests, and at least one AI coding tool. You'll spend two days directing Claude Code or Codex through five projects, including an unfamiliar codebase and a team AI product. If you've only used chat tools or vibe coding apps so far, start with From Prompting to Pull Request, which teaches the terminal, Git, and GitHub first."
-  compare: ["from-prompting-to-pull-request"]
+  question: "Should I take Agentic Engineering or Prompt to Production?"
+  answer: "It depends on where you're starting. Take Agentic Engineering if you already write software for a living and are comfortable with a terminal, Git, pull requests, and at least one AI coding tool. You'll spend two days directing Claude Code or Codex through five projects, including an unfamiliar codebase and a team AI product. If you've only used chat tools or vibe coding apps so far, start with Prompt to Production, which teaches the terminal, Git, and GitHub first."
+  compare: ["prompt-to-production"]
 publishedAt: 2026-08-13
 updatedAt: 2026-10-22
 ---

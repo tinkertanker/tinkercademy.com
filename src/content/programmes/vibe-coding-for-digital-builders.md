@@ -4,7 +4,7 @@ subtitle: "Corporate training"
 duration: "2 days"
 heroImage: "/images/banners/vibe-coding-for-digital-builders.webp"
 audienceIds: ["public", "businesses"]
-domainIds: ["ai-engineering"]
+domainIds: ["ai-engineering", "uiux", "webdev"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
 cardBlurb: "A two-day workshop: research a problem with ChatGPT, design it in Figma, and build a working web app with Lovable and Supabase, without writing code by hand."
 weight: 99
@@ -20,8 +20,8 @@ location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
 fit:
   question: "Is Vibe Coding for Digital Builders right for my team?"
-  answer: "It suits people who want to turn ideas into working web prototypes without writing code by hand: product owners, designers, analysts, and managers. Over two days you'll research a problem with ChatGPT, design screens in Figma, and build a working app in Lovable backed by Supabase. If your team already writes code and wants to work with Git and pull requests, From Prompting to Pull Request is a better fit. If you want to automate business processes rather than build apps, look at Agentic Workflows for Businesses."
-  compare: ["from-prompting-to-pull-request", "agentic-workflows-for-businesses"]
+  answer: "It suits people who want to turn ideas into working web prototypes without writing code by hand: product owners, designers, analysts, and managers. Over two days you'll research a problem with ChatGPT, design screens in Figma, and build a working app in Lovable backed by Supabase. If your team already writes code and wants to work with Git and pull requests, Prompt to Production is a better fit. If you want to automate business processes rather than build apps, look at Agentic Workflows for Businesses."
+  compare: ["prompt-to-production", "agentic-workflows-for-businesses"]
 publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---

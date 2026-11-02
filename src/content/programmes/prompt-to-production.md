@@ -1,23 +1,23 @@
 ---
-title: "From Prompting to Pull Request"
+title: "Prompt to Production"
 subtitle: "Public workshop"
 duration: "2 days"
-heroImage: "/images/banners/from-prompting-to-pull-request.webp"
+heroImage: "/images/banners/prompt-to-production.webp"
 audienceIds: ["public", "businesses"]
-domainIds: ["ai-engineering", "software-engineering"]
+domainIds: ["ai-engineering", "software-engineering", "webdev"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js"]
 cardBlurb: "Learn the terminal, Git, and Claude or Codex. Then put a small web app on GitHub and a live URL."
 weight: 150
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
-seoTitle: "From Prompting to Pull Request - Tinkercademy"
+seoTitle: "Prompt to Production - Tinkercademy"
 seoDescription: "A public 2-day workshop. Learn the terminal, Git, and Claude or Codex, then ship a web app to GitHub and a live URL."
 heroAlt: "Illustration of an AI terminal window next to a GitHub pull request being merged, over a faded photo of a workshop."
 location: "CT Hub 2, 114 Lavender Street, Singapore"
 courseMode: onsite
 fit:
-  question: "Should I take From Prompting to Pull Request or Vibe Coding for Digital Builders?"
-  answer: "Take From Prompting to Pull Request if you've already built something with ChatGPT, Gemini, Lovable, or a similar tool and want to work the way engineers do: in the terminal, with Git and GitHub pull requests, shipping a web app to a live URL with Claude or Codex. If you haven't used an AI building tool yet, start with Vibe Coding for Digital Builders. If you already use the terminal and GitHub every day, skip ahead to Agentic Engineering."
+  question: "Should I take Prompt to Production or Vibe Coding for Digital Builders?"
+  answer: "Take Prompt to Production if you've already built something with ChatGPT, Gemini, Lovable, or a similar tool and want to work the way engineers do: in the terminal, with Git and GitHub pull requests, shipping a web app to a live URL with Claude or Codex. If you haven't used an AI building tool yet, start with Vibe Coding for Digital Builders. If you already use the terminal and GitHub every day, skip ahead to Agentic Engineering."
   compare: ["vibe-coding-for-digital-builders", "agentic-engineering-with-claude-code-or-codex"]
 publishedAt: 2026-08-15
 updatedAt: 2026-10-20
@@ -25,7 +25,7 @@ updatedAt: 2026-10-20
 
 ## Course Overview
 
-<p dir="auto">From Prompting to Pull Request is a two-day workshop for people who've built something with ChatGPT, Gemini, Lovable, or another vibe coding tool and want to work like an engineer. You'll learn the terminal, Git, and GitHub, build a web app with Claude or Codex, and ship it to a GitHub repository and a live URL.</p>
+<p dir="auto">Prompt to Production is a two-day workshop for people who've built something with ChatGPT, Gemini, Lovable, or another vibe coding tool and want to work like an engineer. You'll learn the terminal, Git, and GitHub, build a web app with Claude or Codex, and ship it to a GitHub repository and a live URL.</p>
 
 ## Lesson Outcomes
 
