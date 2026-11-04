@@ -1,28 +1,30 @@
 ---
-title: "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology"
-subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
-duration: "17 days"
+title: "Unleash the Potential of Blockchain Technology"
+subtitle: "An SMU Academy module for Industry Practice Master of Digital Economy participants"
+duration: "3 days"
 heroImage: "/images/banners/certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology.webp"
 audienceIds: ["businesses", "public"]
 domainIds: ["cryptography"]
 platformIds: ["stellar"]
 cardBlurb: "An SMU Academy course on how blockchains work: cryptography and signatures, Bitcoin, Ethereum, and Stellar compared, and a simple decentralised app built on Stellar."
 weight: 80
-signUpLabel: "Enquire now"
-signUpUrl: "https://academy.smu.edu.sg/programme-enquiry?course=Certificate%20in%20Technology%20Foundations:%20Unleash%20the%20Potential%20of%20Blockchain%20Technology&nid=80491"
-seoTitle: "Certificate in Technology Foundations: Unleash the Potential of Blockchain Technology - Tinkercademy: Coding and Making for Schools and Professionals"
+externalEnquiries:
+  provider: "SMU Academy"
+  url: "https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology"
+  email: "enquiries.academy@smu.edu.sg"
 heroAlt: "Illustration of three linked blocks above a spreadsheet on a laptop, over a faded photo of a classroom."
 fit:
   question: "Is this blockchain course right for me?"
-  answer: "It suits professionals who want to understand how blockchains work rather than just follow the headlines. You'll look at the cryptography and digital signatures underneath, compare Bitcoin, Ethereum, and Stellar, build a simple decentralised app on Stellar, and discuss real applications across industries. It's offered through SMU Academy as part of its Certificate in Technology Foundations, so enrolment and SkillsFuture funding go through SMU. If you'd rather build general software skills first, look at Mastering the Web."
-  compare: ["mastering-the-web"]
+  answer: "SMU Academy currently offers this module only to participants taking its Industry Practice Master of Digital Economy. It covers blockchain fundamentals, prototype decentralised apps and industry applications. Enquiries and enrolment are handled directly by SMU Academy. Please check its course page for current availability, fees and eligibility."
 publishedAt: 2026-04-18
-updatedAt: 2026-10-20
+updatedAt: 2026-11-02
 ---
 
 ## Course Overview
 
 <p>Unleash the Potential of Blockchain Technology is an SMU Academy course, taught by Tinkercademy, on how blockchains work and where they're used. You'll take apart the building blocks (cryptography, signatures, and consensus), compare real implementations such as Bitcoin, Ethereum, and Stellar, and build a simple decentralised app on Stellar. Enrolment is through the <a href="https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology" target="_blank">SMU Academy course page</a>.</p>
+
+<p>This module is only offered to participants taking SMU Academy’s Industry Practice Master of Digital Economy. Enquiries and registration are handled directly by SMU Academy; refer to its course page for current intakes, fees and eligibility.</p>
 
 ## Lesson Outcomes
 

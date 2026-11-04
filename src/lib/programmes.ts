@@ -303,7 +303,9 @@ export function toProgrammeCardData(
 	override?: ProgrammeCardOverride | null,
 	options: ProgrammeCardOptions = {},
 ): ProgrammeCardData {
-	const normalisedOverride = override ? normaliseOverride(override) : null;
+	// Availability and provider routing must not be obscured by imported marketing copy.
+	const useAuthoredCopy = programme.entry.data.externalEnquiries;
+	const normalisedOverride = override && !useAuthoredCopy ? normaliseOverride(override) : null;
 	const audience = resolveAudienceFromOverride(normalisedOverride?.audience_label, programme);
 	const badgeHref = audience
 		? createProgrammeFilterHref({ audience: audience.id }, options.badgeBasePath ?? '/courses-all')

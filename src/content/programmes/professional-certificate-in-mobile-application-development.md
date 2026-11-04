@@ -1,36 +1,42 @@
 ---
-title: "Professional Certificate in Mobile Application Development"
-subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
-duration: "2 days/module"
+title: "Mobile Application Development"
+subtitle: "Design and build full-stack mobile applications"
 heroImage: "/images/banners/professional-certificate-in-mobile-application-development.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["appdev", "uiux"]
 platformIds: ["android-studio", "javascript", "sql"]
-cardBlurb: "An SMU Academy certificate in seven two-day modules: design, build, and deploy full-stack iOS and Android apps. For people who already code."
+cardBlurb: "Design, prototype and build mobile apps for iOS and Android, with databases, APIs and web back-ends. For people with programming experience."
 weight: 88
 homeFeaturedRank: 7
 signUpLabel: "Enquire now"
-signUpUrl: "https://form.jotform.com/232050520776450"
-seoTitle: "Professional Certificate in Mobile Application Development - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a laptop wired to a phone, beside a code editor, over a faded photo of a classroom."
-location: "Singapore Management University (SMU Academy)"
-courseMode: onsite
 fit:
-  question: "Do I need coding experience for SMU's Professional Certificate in Mobile Application Development?"
-  answer: "Yes. It's for people who already program in another language and want to build full-stack mobile apps. Over seven two-day modules, you'll design and prototype apps, build them for Android and iOS, connect them to databases and web back-ends, and complete a project. You have up to three years to finish all seven modules. Enrolment and SkillsFuture funding go through SMU Academy. If you're new to coding, start with Mastering the Web, or try Build for Mobile with React Native for a two-day introduction."
-  compare: ["mastering-the-web", "build-for-mobile-with-react-native"]
+  question: "Do I need programming experience?"
+  answer: "Yes. This course is for people who already code and want to build full-stack mobile apps. You'll work on app interfaces, databases, APIs and web back-ends. If you'd prefer a shorter course focused on building iOS and Android apps with JavaScript and Expo, try Build for Mobile with React Native."
+  compare: ["build-for-mobile-with-react-native"]
 publishedAt: 2026-04-18
-updatedAt: 2026-10-22
+updatedAt: 2026-11-02
 ---
 
 ## Course Overview
 
-<p>The Professional Certificate in Mobile Application Development is a seven-module SMU Academy programme, taught by Tinkercademy, for people who already code and want to build full-stack apps for iOS and Android. You'll learn app design and prototyping, mobile development tools, databases, and web back-ends, and finish with a project.</p><h3>Who Should Attend</h3><p>Aspiring app developers who want to build full-stack mobile applications that can be published online for download or saleAnyone with an interest in learning the fundamentals of mobile app design and developmentProfessionals with coding experience, but new to mobile app development.</p><p><strong>PREREQUISITES: </strong>Experience in other programming languages</p>
+Build mobile apps that connect useful interfaces to real data. Learn to design and prototype apps for iOS and Android, work with databases and APIs, and connect mobile clients to web back-ends.
 
-## Lesson Outcomes
+This hands-on course is for people who already code and want to move into mobile development. Bring the pieces together in a full-stack app project.
 
-<ul><li data-preset-tag="p"><p>Understand and apply basic app design and prototyping concepts such as mock-ups, typography, iconography</p></li><li data-preset-tag="p"><p>Install and run a basic app using Android Studio on PC or Mac, and (if available) Xcode on Mac</p></li><li data-preset-tag="p"><p>Explain the difference between a relational (SQL) and document-based (No SQL) database, and be able to select one for a given project</p></li><li data-preset-tag="p"><p>Understand what an Application Programming Interface (API) is, and how to read the documentation when working with common APIs</p></li><li data-preset-tag="p"><p>Understand how apps and websites use APIs and Representational State Transfer (REST) web services to communicate</p></li><li data-preset-tag="p"><p>Understand and use modern JavaScript language features from the ES6 specification, such as arrow functions, spread operators, and destructuring</p></li><li data-preset-tag="p"><p>Demonstrate a solid foundation in back-end and front-end mobile app development</p></li><li data-preset-tag="p"><p>Master Mobile App Development Fundamentals: Learn the core concepts of mobile app development, including programming languages like Swift (for iOS) and Kotlin/Java (for Android), as well as essential frameworks and tools. </p></li><li data-preset-tag="p"><p>Design User-Centric Mobile Apps: Understand the principles of user interface and user experience design, and apply them to create intuitive and visually appealing mobile apps. </p></li><li data-preset-tag="p"><p>Build and Deploy Mobile Apps: Learn how to build, test, and deploy mobile apps to the Apple App Store and Google Play Store</p></li></ul>
+## What you'll learn
 
-## Details
+- Design and prototype mobile app interfaces
+- Set up mobile development tools
+- Build mobile interfaces that work with stored data
+- Work with databases and APIs
+- Connect mobile apps to web back-ends
+- Plan and build a full-stack mobile app project
 
-<p><strong>Topic/Structure:</strong></p><p><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-designing-and-prototyping">Module 1: Designing and Prototyping App User Interfaces for Mobile App Development</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-introduction-mobile-app">Module 2: Introduction to Mobile App Development</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-building-database-driven">Module 3: Building Database-Driven Mobile Apps</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-interfacing-mobile-apps-web">Module 4: Interfacing Mobile Apps with Web Back-Ends</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-building-full-stack-mobile">Module 5: Building a Full-Stack Mobile Application</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-further-mobile-app">Module 6: Further Mobile App Development</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-module-executing-projects-mobile">Module 7: Executing Projects in Mobile App Development</a><br><br>This course is also a part of the following programmes: <a href="https://academy.smu.edu.sg/advanced-diploma-mobile-web-application-development-4131">Advanced Diploma in Web &amp; Mobile&nbsp;Application Development</a><br><a href="https://academy.smu.edu.sg/advanced-diploma-multiplatform-mobile-app-development-and-cloud-management-7886">Advanced Diploma in Multiplatform Mobile App Development and Cloud Management</a></p><p><strong>Assessment: </strong>Individual assessment, project presentations.<br><br><strong>Certification: </strong>Upon completion of all 7 modules within a maximum duration of 3 years, participants will be awarded a digital Professional Certificate in Mobile Application Development.</p><p><strong>Dates and Times:</strong> Please write in to enquire. </p><p><strong>Location:</strong> Singapore Management University (SMU) </p><p><strong>Fees:</strong> See the <a href="https://academy.smu.edu.sg/courses/professional-certificate-mobile-application-development-pcmob#fee-table" target="_blank">SMU Academy website</a> for current fees and funding.</p>
+## Who should attend?
+
+Developers and professionals with programming experience who want to build mobile applications. Bring a laptop for the hands-on exercises.
+
+## Enquiries
+
+[Enquire now](#enquire) to discuss course dates, fees and training for your team.

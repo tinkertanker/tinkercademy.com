@@ -1,35 +1,41 @@
 ---
-title: "Professional Certificate in Web Application Development"
-subtitle: "A SkillsFuture-Supported Course Offered by SMU Academy"
-duration: "2 days/module"
+title: "Web Application Development"
+subtitle: "Design and build full-stack web applications"
 heroImage: "/images/banners/professional-certificate-in-web-application-development.webp"
 audienceIds: ["public", "businesses"]
 domainIds: ["uiux"]
 platformIds: ["bubble", "framer", "html-css", "javascript"]
-cardBlurb: "An SMU Academy certificate in seven modules, taught online: prototyping, UI design, front-end and back-end web development, databases, and frameworks."
+cardBlurb: "Design and build web applications, from UI prototypes and front-end code to databases, back-end services and full-stack projects."
 weight: 82
 signUpLabel: "Enquire now"
-signUpUrl: "https://form.jotform.com/232050520776450"
-seoTitle: "Professional Certificate in Web Application Development - Tinkercademy: Coding and Making for Schools and Professionals"
 heroAlt: "Illustration of a code editor beside a server, over a faded photo of developers at work."
-location: "Online, via SMU Academy"
-courseMode: online
 fit:
-  question: "What do I need before joining SMU's Professional Certificate in Web Application Development?"
-  answer: "SMU Academy asks for at least a polytechnic diploma, basic HTML and CSS, and a laptop with an Intel Core i3 or better and 4 GB of RAM. The certificate suits people who want a structured, part-time route into web app development: seven modules covering prototyping and UI design, front-end and back-end development, databases, and frameworks, taught online on weeknights and Saturday mornings. Enrolment and SkillsFuture funding go through SMU Academy. If you want a two-day overview instead, take Mastering the Web."
+  question: "What should I know before taking this course?"
+  answer: "Basic HTML and CSS knowledge will help you get started. This course takes you through prototyping, front-end and back-end development, databases and full-stack projects. If you want a shorter introduction to how web applications work, try Mastering the Web."
   compare: ["mastering-the-web"]
 publishedAt: 2026-04-18
-updatedAt: 2026-10-22
+updatedAt: 2026-11-02
 ---
 
 ## Course Overview
 
-<p>The Professional Certificate in Web Application Development is a seven-module SMU Academy programme, taught online by Tinkercademy, that covers how to design, prototype, and build web applications. You'll start with UI/UX design and prototyping in tools such as Framer and Bubble, then move through front-end and back-end development, databases, and frameworks.</p><p><strong>PREREQUISITES</strong></p><ul style="--framer-text-color: rgb(0, 0, 0); --framer-font-size: 16px; --framer-text-transform: none; --framer-text-stroke-width: 0px; --framer-text-alignment: start;"><li data-preset-tag="p"><p>Must have at least a Polytechnic Diploma</p></li><li data-preset-tag="p"><p>Must have basic HTML/ CSS knowledge</p></li><li data-preset-tag="p"><p>Must be computer literate</p></li></ul><p><strong>SYSTEM REQUIREMENTS</strong></p><p>Functional Laptop: (1) CPU must be of at least intel core I3, (2) GPU must have an integrated graphics card and (3) RAM must be of at least 4GB&nbsp;</p>
+Learn to design and build web applications, from the interface people use to the server and database behind it. Start with UI design and prototypes, then work through front-end code, back-end services and full-stack projects.
 
-## Lesson Outcomes
+You'll use tools such as Framer and Bubble to prototype ideas, write HTML, CSS and JavaScript, and learn how databases and web frameworks fit together.
 
-<ul><li data-preset-tag="p"><p>Introduction to CSS Syntax, and how to select HTML with classes and IDs</p></li><li data-preset-tag="p"><p>Design fundamentals and resources for icons and typography</p></li><li data-preset-tag="p"><p>Getting started with Bubble to build simple web app prototypes</p></li><li data-preset-tag="p"><p>A brief introduction to JavaScript and jQuery for simple manipulation</p></li><li data-preset-tag="p"><p>Understand the need for software source control, and how it applies to usage in teams</p></li><li data-preset-tag="p"><p>Understand and implement roles in a software development team</p></li><li data-preset-tag="p"><p>Master Prototyping Techniques: Learn how to create interactive prototypes using Framer to visualize and validate your web application ideas. </p></li><li data-preset-tag="p"><p>Understand UI/UX Design Principles: Gain a solid understanding of user interface and user experience design principles, including layout, typography, color theory, and information architecture. </p></li><li data-preset-tag="p"><p>Build Functional Web Applications with Bubble &amp; Framer: Learn how to use web tools to build fully functional web applications without writing code, focusing on user interface design and data management.</p></li></ul>
+## What you'll learn
 
-## Details
+- Prototype app interfaces with Framer and Bubble
+- Build front-end pages with HTML, CSS and JavaScript
+- Store and retrieve data with databases
+- Connect front-end interfaces to back-end services
+- Use web frameworks to build full-stack applications
+- Work with source control and team development workflows
 
-<p><strong>Topic/Structure:</strong></p><p><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-prototyping-and-user-interface">Module 1: Prototyping and User Interface Design for Web App Development</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-introduction-front-end-web-app">Module 2: Introduction to Front End Web App Development</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-building-database-driven-web">Module 3: Building Database-Driven Web Apps</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-back-end-web-app-development">Module 4: Back-End Web App Development with Databases</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-building-full-stack-web">Module 5: Building a Full-Stack Web Application</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-frameworks-full-stack-web-app">Module 6: Frameworks for Full-Stack Web App Development</a><br><a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-module-practical-tools-web-app">Module 7: Practical Tools for Web App Development Project</a></p><p>This course is also a part of the following programmes: <a href="https://academy.smu.edu.sg/courses/advanced-diploma-web-and-mobile-application-development">Advanced Diploma in Web &amp; Mobile Application Development</a><br><a href="https://academy.smu.edu.sg/courses/advanced-diploma-full-stack-web-app-development-and-cloud-management">Advanced Diploma in Full Stack Web App Development and Cloud Management</a></p><p><strong>Assessment:</strong> Individual assessments, project presentations. </p><p><strong>Dates and Times</strong>: Weeknights&nbsp;(7pm&nbsp;- 10:30pm), Saturday (9am - 12.30pm). Please write in to enquire.</p><p><strong>Location:</strong> Singapore Management University (SMU). This programme is conducted online.</p><p><strong>Fees:</strong> See the <a href="https://academy.smu.edu.sg/courses/professional-certificate-web-application-development-pcweb#fee-table" target="_blank">SMU Academy website</a> for current fees and funding.</p>
+## Who should attend?
+
+People with basic HTML and CSS knowledge who want to build complete web applications. Bring a laptop for the hands-on exercises.
+
+## Enquiries
+
+[Enquire now](#enquire) to discuss course dates, fees and training for your team.

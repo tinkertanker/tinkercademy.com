@@ -32,6 +32,11 @@ const programmes = defineCollection({
 		homeFeaturedRank: z.number().int().positive().optional(),
 		signUpLabel: z.string().min(1).optional(),
 		signUpUrl: z.string().min(1).optional(),
+		externalEnquiries: z.object({
+			provider: z.string().min(1),
+			url: z.url().refine((value) => value.startsWith('https://'), 'Use an HTTPS URL'),
+			email: z.email(),
+		}).optional(),
 		primaryCta: z
 			.object({
 				label: z.string().min(1),

@@ -239,3 +239,71 @@ test('Bing-reported pages label images except explicitly hidden decorative copie
 		assert.equal($('img:not([alt]), img[alt=""]:not([aria-hidden="true"])').length, 0, path);
 	}
 });
+
+test('SMU course enquiries go directly to SMU without Tinkercademy lead collection', async () => {
+	for (const [slug, destination] of [
+		['certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making', 'harnessing-power-internet-things-and-creative-digital-making'],
+		['certificate-in-technology-foundations-unleash-the-potential-of-blockchain-technology', 'certificate-technology-foundations-unleash-potential-blockchain-technology'],
+	]) {
+		const $ = load(await read(`programmes/${slug}/index.html`));
+		const url = `https://academy.smu.edu.sg/courses/${destination}`;
+		assert.equal($('form, iframe').length, 0, slug);
+		assert.equal($('a[href*="jotform"], a[href^="mailto:hello@"], a[href^="tel:"], a[href="/contact-us/"]').length, 0, slug);
+		assert.equal($('.prog-hero__actions a').first().attr('href'), url);
+		assert.equal($('.prog-hero__actions a').last().attr('href'), 'mailto:enquiries.academy@smu.edu.sg');
+		assert.equal(schemas($).find((schema) => schema['@type'] === 'Course').provider.name, 'SMU Academy');
+		const markdown = await read(`programmes/${slug}/index.md`);
+		assert.ok(markdown.includes(url));
+		assert.ok(markdown.includes('mailto:enquiries.academy@smu.edu.sg'));
+		assert.ok(!markdown.includes('#enquire'));
+	}
+	const control = load(await read('programmes/mastering-the-web/index.html'));
+	assert.equal(control('form.contact-form').length, 1, 'independent course enquiries stay intact');
+	assert.ok(control('a[href="mailto:hello@tk.sg"]').length > 0);
+});
+
+test('web/mobile are ordinary Tinkercademy courses with normal enquiries and no SMU or historical framing', async () => {
+	const unwantedCopy = /\bSMU\b|SkillsFuture|legacy|archiv|former|future interest|possible future|independent course|previous outline/i;
+	const searchIndex = JSON.parse(await read('programme-search-index.json'));
+	for (const type of ['web', 'mobile']) {
+		const slug = `professional-certificate-in-${type}-application-development`;
+		const title = `${type === 'web' ? 'Web' : 'Mobile'} Application Development`;
+		const html = await read(`programmes/${slug}/index.html`);
+		const $ = load(html);
+		assert.equal($('h1').text(), title);
+		assert.doesNotMatch(html, unwantedCopy, 'visible copy, metadata, forms and structured data');
+		assert.equal($('.prog-hero__actions a').first().text().trim(), 'Enquire now');
+		assert.equal($('.prog-hero__actions a').first().attr('href'), '#enquire');
+		assert.equal($('.prog-hero__actions a').last().attr('href'), 'mailto:hello@tk.sg');
+		assert.equal($('#enquire h2').text(), 'Submit Enquiry');
+		assert.equal($('form.contact-form').length, 1);
+		assert.equal($('input[name="q40_course"]').attr('value'), title);
+		assert.equal($('a[href*="academy.smu.edu.sg"]').length, 0);
+		const schema = schemas($).find((schema) => schema['@type'] === 'Course');
+		assert.equal(schema.provider.name, 'Tinkercademy');
+		assert.equal(schema.hasCourseInstance, undefined);
+		assert.equal(schema.offers, undefined);
+		for (const page of ['courses-all', 'courses-professionals', 'professionals', 'individuals']) {
+			const listing = load(await read(`${page}/index.html`));
+			const card = listing(`[data-programme-card]:has(a[href="/programmes/${slug}/"])`);
+			assert.equal(card.length, 1, `${page}: ${slug}`);
+			assert.equal(card.find('h2').text(), title);
+			assert.doesNotMatch(card.text(), unwantedCopy);
+			assert.doesNotMatch(card.text(), /2 days\/module/);
+		}
+		const markdown = await read(`programmes/${slug}/index.md`);
+		assert.doesNotMatch(markdown, unwantedCopy);
+		assert.match(markdown, /Enquire now/);
+		const searchResult = searchIndex.find((item) => item.slug === slug);
+		assert.equal(searchResult.title, title);
+		assert.doesNotMatch(JSON.stringify(searchResult), unwantedCopy);
+	}
+	const home = load(await read('index.html'));
+	const mobileCard = home('[data-programme-card]:has(a[href="/programmes/professional-certificate-in-mobile-application-development/"])');
+	assert.equal(mobileCard.length, 1, 'mobile retains its normal homepage feature');
+	assert.doesNotMatch(mobileCard.text(), unwantedCopy);
+	for (const path of ['about-us/index.html', 'professionals/index.html']) {
+		const $ = load(await read(path));
+		assert.equal($('img[alt="SMU Academy"]').length, 0, 'disputed logo is not displayed');
+	}
+});

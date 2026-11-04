@@ -10,10 +10,12 @@ const props = Astro.props as {
 	locations?: Location[];
 	socialLinks?: SocialLink[];
 	internalLinkOrigin?: string | null;
+	externalEnquiries?: { provider: string; url: string; email: string } | null;
 };
 const contacts = props.contacts ?? [];
 const locations = props.locations ?? [];
 const socialLinks = props.socialLinks ?? [];
+const externalEnquiries = props.externalEnquiries;
 const internalLinkOrigin = props.internalLinkOrigin ?? null;
 const siteHomeHref = internalLinkOrigin ? new URL('/', internalLinkOrigin).toString() : '/';
 const contactHref = internalLinkOrigin ? new URL('/contact-us/', internalLinkOrigin).toString() : '/contact-us/';
@@ -71,8 +73,17 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 			</p>
 		</div>
 
-		<div class="site-footer__columns">
+		<div class:list={['site-footer__columns', externalEnquiries && 'site-footer__columns--external']}>
 			<div class="site-footer__col">
+				{externalEnquiries ? (
+					<>
+						<h2 class="site-footer__heading">{externalEnquiries.provider} course enquiries</h2>
+						<p class="site-footer__body">Please contact {externalEnquiries.provider} directly about this programme.</p>
+						<p class="site-footer__body"><a class="site-footer__link" href={`mailto:${externalEnquiries.email}`}>{externalEnquiries.email}</a></p>
+						<a class="site-footer__cta" href={externalEnquiries.url}>View course</a>
+					</>
+				) : (
+				<>
 				<h2 class="site-footer__heading">Sign up for our mailing list!</h2>
 				<p class="site-footer__body">
 					Teachers will receive a monthly (or so we hope) email with news & thoughts on
@@ -85,6 +96,8 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 					offerings.
 				</p>
 				<a class="site-footer__cta" href="https://form.jotform.com/223001013827440">Sign Up</a>
+				</>
+				)}
 			</div>
 
 			<div class="site-footer__col">
@@ -102,7 +115,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 				</p>
 			</div>
 
-			<div class="site-footer__col site-footer__col--contact">
+			{!externalEnquiries && <div class="site-footer__col site-footer__col--contact">
 				<h2 class="site-footer__heading">Get in touch!</h2>
 				<p class="site-footer__body site-footer__address">{address}</p>
 				<p class="site-footer__body">
@@ -112,7 +125,7 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 					<a href={`tel:${phone}`} class="site-footer__link">{phoneDisplay}</a>
 				</p>
 				<a class="site-footer__cta" href={contactHref}>Contact Us</a>
-			</div>
+			</div>}
 		</div>
 	</div>
 
@@ -157,6 +170,11 @@ function getSocialIcon(link: { id?: string; platform?: string; label: string }):
 		column-gap: clamp(3rem, 5vw, 8rem);
 		align-items: start;
 		justify-content: space-between;
+	}
+
+	.site-footer__columns--external {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		overflow-wrap: anywhere;
 	}
 
 	.site-footer__logo {

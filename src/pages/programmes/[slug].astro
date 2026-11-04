@@ -54,9 +54,10 @@ const domainLabels = domains.map((domain) => domain.label);
 const platforms = programme.platforms ?? [];
 const duration = programme.duration ?? '';
 const primaryAudience = programme.primaryAudience;
+const { externalEnquiries } = programme.entry.data;
 const enquiryLabel = programme.signUpLabel ?? 'Enquire now';
-const primaryCtaLabel = programme.primaryCta?.label ?? enquiryLabel;
-const primaryCtaUrl = programme.primaryCta?.url ?? '#enquire';
+const primaryCtaLabel = externalEnquiries ? `View course at ${externalEnquiries.provider}` : programme.primaryCta?.label ?? enquiryLabel;
+const primaryCtaUrl = externalEnquiries?.url ?? programme.primaryCta?.url ?? '#enquire';
 const certificateEyebrow = 'Certificate in Technology Foundations';
 const certificateTitlePrefix = `${certificateEyebrow}:`;
 const isTechnologyFoundationsCertificate = programme.title.startsWith(certificateTitlePrefix);
@@ -98,8 +99,8 @@ const courseSchema: Record<string, unknown> = {
 	url: canonical,
 	provider: {
 		'@type': 'Organization',
-		name: 'Tinkercademy',
-		sameAs: SITE_BASE,
+		name: externalEnquiries?.provider ?? 'Tinkercademy',
+		sameAs: externalEnquiries ? new URL(externalEnquiries.url).origin : SITE_BASE,
 	},
 	inLanguage: 'en',
 };
@@ -215,6 +216,7 @@ const breadcrumbSchema = {
 	alternateMarkdown={`${canonical}index.md`}
 	image={programme.heroImage ?? undefined}
 	preloadHero={heroPreload}
+	externalEnquiries={externalEnquiries}
 >
 	{/* ════════ Hero: full-bleed image with dark overlay + text ════════ */}
 	<section
@@ -249,7 +251,11 @@ const breadcrumbSchema = {
 			{duration && <p class="prog-hero__duration">{duration}</p>}
 			<div class="prog-hero__actions">
 				<a class="prog-hero__cta" href={primaryCtaUrl}>{primaryCtaLabel}</a>
-				{programme.primaryCta ? (
+				{externalEnquiries ? (
+					<a class="prog-hero__cta prog-hero__cta--secondary" href={`mailto:${externalEnquiries.email}`}>
+						Email {externalEnquiries.provider}
+					</a>
+				) : programme.primaryCta ? (
 					<a class="prog-hero__cta prog-hero__cta--secondary" href="#enquire">
 						{enquiryLabel}
 					</a>
@@ -399,19 +405,28 @@ const breadcrumbSchema = {
 				<HeadingOutline><Content /></HeadingOutline>
 			</article>
 
-			<TestimonialCarousel set={quoteSet} />
+			{!externalEnquiries && <TestimonialCarousel set={quoteSet} />}
 		</div>
 
 		<aside class="prog-aside">
-			<ContactForm
-				id="enquire"
-				heading="Submit Enquiry"
-				prefillCourse={programme.title}
-			/>
+			{externalEnquiries ? (
+				<section class="prog-fit prog-external-enquiries" id="enquire" aria-label="Course enquiries">
+					<h2>Enquiries and registration</h2>
+					<p>Enquiries and registration for this programme are handled directly by {externalEnquiries.provider}. Check their website for current availability, fees and eligibility.</p>
+					<p><a href={externalEnquiries.url}>View course at {externalEnquiries.provider}</a></p>
+					<p><a href={`mailto:${externalEnquiries.email}`}>{externalEnquiries.email}</a></p>
+				</section>
+			) : (
+				<ContactForm
+					id="enquire"
+					heading="Submit Enquiry"
+					prefillCourse={programme.title}
+				/>
+			)}
 		</aside>
 	</div>
 
-	<CtaBanner />
+	{!externalEnquiries && <CtaBanner />}
 
 	<script is:inline type="application/ld+json" set:html={serializeJsonLd(courseSchema)} />
 	<script is:inline type="application/ld+json" set:html={serializeJsonLd(breadcrumbSchema)} />
@@ -749,6 +764,16 @@ const breadcrumbSchema = {
 
 	.prog-main__body {
 		min-width: 0;
+	}
+
+	.prog-external-enquiries {
+		padding: 1.25rem;
+		overflow-wrap: anywhere;
+	}
+
+	.prog-external-enquiries h2 {
+		margin-top: 0;
+		font-size: 1.35rem;
 	}
 
 	@media (min-width: 960px) {

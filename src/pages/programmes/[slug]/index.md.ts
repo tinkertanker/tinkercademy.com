@@ -15,7 +15,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export const GET: APIRoute<Props> = async ({ props: { programme } }) => {
 	const canonical = `https://tinkercademy.com/programmes/${programme.slug}/`;
-	const { fit, publishedAt, updatedAt } = programme.entry.data;
+	const { fit, publishedAt, updatedAt, externalEnquiries } = programme.entry.data;
 	const programmeBySlug = new Map((await getAllProgrammes()).map((item) => [item.slug, item]));
 	const compareLinks = fit?.compare
 		?.map(({ id }) => programmeBySlug.get(id))
@@ -60,7 +60,9 @@ export const GET: APIRoute<Props> = async ({ props: { programme } }) => {
 		fit && `## ${fit.question}\n\n${fit.answer}`,
 		compareLinks && `Compare: ${compareLinks}`,
 		converter.turndown($.html()),
-		`## Enquiries\n\n[${programme.signUpLabel ?? 'Enquire now'}](${canonical}#enquire)`,
+		externalEnquiries
+			? `## Enquiries\n\n[View course at ${externalEnquiries.provider}](${externalEnquiries.url})\n\n[${externalEnquiries.email}](mailto:${externalEnquiries.email})`
+			: `## Enquiries\n\n[${programme.signUpLabel ?? 'Enquire now'}](${canonical}#enquire)`,
 		programme.primaryCta && `[${programme.primaryCta.label}](${programme.primaryCta.url})`,
 	].filter(Boolean).join('\n\n');
 

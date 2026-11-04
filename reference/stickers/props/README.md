@@ -10,6 +10,7 @@ new files.
 | Prop | Subject |
 | --- | --- |
 | `microbit` | BBC micro:bit board, heart LED pattern, die-cut border |
+| `m5go-sensors` | M5GO controller connected to environmental and PIR motion sensor units (IoT certificate) |
 | `robot-buggy` | Two-wheeled classroom robot buggy with board slot |
 | `printer3d` | Open-frame desktop 3D printer mid-print |
 | `vr-headset` | VR headset, teal faceplate |
@@ -50,6 +51,11 @@ drones, Space Camp, 3D Pen Art, High Tech Maker, Makedo, MakeCode Arcade).
 Round-7 replaced the ambiguous webcam/data pairing for no-code ML with a coherent dataset → model training → prediction workflow. Round-6 filled programme-coverage gaps (blockchain, RPA, Minecraft, RAG, no-code ML, battery pack) and re-minted code-editor (stray window dots) and agent-cli (now: user bubble, bullet response with inline chips, bottom prompt box per YJ's reference). Round-5 added professional app-window stickers — deliberately unbranded (no fake logos/text) so scenes can pair them with real simple-icons logo badges. Round-4 added connected software setups (laptop+device composites, server). Round-3 subjects came from gethacking.com stock (ElecFreaks smart kits, Tinker Kit). Shortlist for the next round: battery-pack, robot arm (RPA),
 KTANE-style defusal box (Digital Making), blockchain cubes, sensor modules.
 Process a new batch with `python3 scripts/banner/process-mint.py <dir> <names>`.
+
+`m5go-sensors` was minted with Painter using the [official M5GO kit photo](https://shop.m5stack.com/products/m5go-iot-starter-kit-v2-7)
+as the hardware reference and `microbit.png` as the style reference. Its native
+transparent PNG was trimmed and resized to 900px with Sharp, then checked over
+light and dark backgrounds. No chroma-key processing was needed.
 
 **Flatness rule (from review):** props must match the pack's flat 2D language —
 straight-on front view, no perspective, no foreshortening, no three-quarter

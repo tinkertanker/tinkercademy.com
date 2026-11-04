@@ -55,6 +55,7 @@ const ITEMS = [
 	{ label: 'diamond·outline', type: 'diamond', outline: true, w: 80 },
 	{ label: 'face (sticker)', type: 'face', w: 150 },
 	{ label: 'microbit (minted)', type: 'microbit', w: 190 },
+	{ label: 'M5GO + sensors', type: 'm5go-sensors', w: 200 },
 	{ label: 'robot-buggy (minted)', type: 'robot-buggy', w: 170 },
 	{ label: 'printer3d (minted)', type: 'printer3d', w: 130 },
 	{ label: 'vr-headset (minted)', type: 'vr-headset', w: 170 },

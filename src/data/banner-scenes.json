@@ -618,13 +618,13 @@
  },
  {
   "id": "certificate-in-technology-foundations-harnessing-the-power-of-internet-of-things-and-creative-digital-making",
-  "note": "IoT certificate — wired build with the Tinkertanker professional stamp.",
+  "note": "IoT certificate — M5GO with environmental and motion sensors, with the Tinkertanker professional stamp.",
   "mode": "dark",
   "accent": "orange",
   "headlineSide": "left",
   "props": [
    {
-    "type": "microbit-circuit",
+    "type": "m5go-sensors",
     "x": 0.6,
     "y": 0.63,
     "w": 0.34

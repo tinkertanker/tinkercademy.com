@@ -20,6 +20,7 @@ const {
 	structuredData = [],
 	internalLinkOrigin = null,
 	showSearch = true,
+	externalEnquiries = null,
 	/* Optional LCP hero image preload: { src, srcset?, sizes? } */
 	preloadHero = null,
 } = Astro.props;
@@ -146,7 +147,11 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 	</head>
 	<body>
 		<a class="skip-link" href="#main-content">Skip to main content</a>
-		<SiteHeader navigation={site.siteSettings?.navigation ?? []} internalLinkOrigin={internalLinkOrigin} showSearch={showSearch} />
+		<SiteHeader navigation={(site.siteSettings?.navigation ?? []).map((link: { label: string; href: string }) =>
+			externalEnquiries && link.href.replace(/\/$/, '') === '/contact-us'
+				? { label: externalEnquiries.provider, href: externalEnquiries.url }
+				: link
+		)} internalLinkOrigin={internalLinkOrigin} showSearch={showSearch} />
 		<main id="main-content" tabindex="-1">
 			<slot />
 		</main>
@@ -155,6 +160,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
 			locations={site.locations}
 			socialLinks={site.socialLinks ?? []}
 			internalLinkOrigin={internalLinkOrigin}
+			externalEnquiries={externalEnquiries}
 		/>
 	</body>
 </html>
