@@ -30,6 +30,7 @@ Static Astro site (no backend, no database). Production is a Cloudflare Worker s
 
 ## Deploy
 
+- Every push to `main` also publishes the staging site, `webstaging.tinkercademy.com`, to GitHub Pages (`.github/workflows/deploy.yml`, domain from `public/CNAME`). Production is the Cloudflare Worker below.
 - **Every push to `main` that changes build inputs builds and uploads a new Worker version but does NOT serve it.** Live traffic moves only when a `v*` tag is pushed. Commits touching only the Workers Builds watch-path excludes (configured in the Cloudflare dashboard and listed in the `deploy` skill: `README.md`, `AGENTS.md`, `docs/**`, `.github/**`, `.claude/**`) create no Worker version, so a tag on such a commit fails the promote workflow on purpose.
 - When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback" or similar, follow `.claude/skills/deploy/SKILL.md`. In short: tag the commit you want live and push the tag (`git tag vYYYY.MM.DD && git push origin vYYYY.MM.DD`). The Action waits for the Workers Builds upload of that commit, then runs `npx wrangler versions deploy <id>@100`.
 - Rollback: tag an older known-good commit (it must already contain the promote workflow), or run `npx wrangler versions deploy <old-id>@100 --yes`.
