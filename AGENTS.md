@@ -23,14 +23,14 @@ Static Astro site (no backend, no database). Production is a Cloudflare Worker s
 
 ## Programme authoring
 
-- One Markdown file per programme; the filename is the canonical slug.
+- Each programme is one Markdown file at `src/content/programmes/<slug>.md`; the filename is the canonical slug.
 - Frontmatter must use the stable taxonomy IDs from `src/data/pages/audiences.json`, `domains.json` and `platforms.json`.
 - Taxonomy pills link into listing filters via `/courses-all?audience=<id>&domain=<id>&platform=<id>`; the same query works on `/courses-schools` and `/courses-professionals`.
 - Homepage featuring comes from `homeFeaturedRank`; list ordering is `weight desc, title asc`.
 
 ## Deploy
 
-- **Every push to `main` that changes build inputs builds and uploads a new Worker version but does NOT serve it.** Live traffic moves only when a `v*` tag is pushed. Commits touching only the Workers Builds excluded paths (`README.md`, `AGENTS.md`, `docs/**`, `.github/**`, `.claude/**`) create no Worker version, so a tag on such a commit fails the promote workflow on purpose.
+- **Every push to `main` that changes build inputs builds and uploads a new Worker version but does NOT serve it.** Live traffic moves only when a `v*` tag is pushed. Commits touching only the Workers Builds watch-path excludes (configured in the Cloudflare dashboard and listed in the `deploy` skill: `README.md`, `AGENTS.md`, `docs/**`, `.github/**`, `.claude/**`) create no Worker version, so a tag on such a commit fails the promote workflow on purpose.
 - When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback" or similar, follow `.claude/skills/deploy/SKILL.md`. In short: tag the commit you want live and push the tag (`git tag vYYYY.MM.DD && git push origin vYYYY.MM.DD`). The Action waits for the Workers Builds upload of that commit, then runs `npx wrangler versions deploy <id>@100`.
 - Rollback: tag an older known-good commit (it must already contain the promote workflow), or run `npx wrangler versions deploy <old-id>@100 --yes`.
 - `wrangler.jsonc` pins the production account ID (`b8b1032c61d9475cd00229c74db7ec72`, Tinkertanker). The Action's `CLOUDFLARE_API_TOKEN` repo secret must be **user-scoped** (My Profile → API Tokens) with **Workers Builds Configuration: Edit** and **Workers Scripts: Edit**; account-owned tokens and the Edit Cloudflare Workers template are rejected or incomplete for the Builds API. Never put the token in the repo. Locally, if you can access multiple Cloudflare accounts, prefer an account-scoped token via `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` over whichever OAuth context is active.
