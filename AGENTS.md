@@ -1,81 +1,60 @@
-## Cursor Cloud specific instructions
+# Agent notes
 
-This is a static Astro site (no backend, no database, no Docker). Production deploys to a Cloudflare Worker (static assets) via `wrangler.jsonc`; see `docs/deployment.md`. See `README.md` for the full command reference.
+Static Astro site (no backend, no database). Production is a Cloudflare Worker serving static assets. `README.md` has the command reference; `docs/deployment.md` has full deploy setup.
 
-### Key commands
+## Checks and tooling
 
-| Task | Command |
-|---|---|
-| Install deps | `pnpm install` |
-| Dev server | `pnpm run dev` (port 4321) |
-| Build | `pnpm run build` |
-| Type check | `pnpm run check` (runs `astro check`) |
-| Link check | `pnpm run check:links` (after a build; fails on broken internal links or redirect targets) |
-| Course freshness | `pnpm run check:freshness` (lists live courses with no `updatedAt` or one older than 90 days; exits 1 if any) |
-| Re-crawl live data | `pnpm run import:live` (requires internet; data already committed) |
-| Enrich from Framer CMS | `pnpm run import:framer` (requires local Framer credentials) |
-
-### Checking the current design
-
-- Build and render the Astro site before making claims about its current fonts, casing, colours, animations, or layout. Source files and historical screenshots are not substitutes for computed styles.
-- `docs/screenshots/live/` and `prompt-exports/` preserve the pre-rebuild Framer site and migration work. Despite the directory name, they are not evidence of the current design.
-- Current typography is declared in `src/layouts/ContentLayout.astro`: IBM Plex Serif for headings, Rubik for body and UI, Fragment Mono for code accents, and a Lora ampersand subset.
-
-### Non-obvious notes
-
-- Node.js >= 22.12.0 and pnpm (pinned via `packageManager` in `package.json`) are required.
-- Programmes now live in the Astro content collection under `src/content/programmes/`, so the old `[content] Content config not loaded` warning note is obsolete.
+- Node.js >= 22.12.0 and the pnpm version pinned in `package.json` are required. Normal dev/build work needs no environment variables.
 - `pnpm run check` should report zero errors and zero warnings (a few async-function hints remain).
-- `pnpm test` runs the source-level tests. `pnpm run test:seo` inspects built HTML and needs a production build first: `SITE_URL=https://tinkercademy.com pnpm run build`. A default (staging) build correctly emits `Disallow: /`, which fails the production robots assertion.
-- Normal dev/build work does not need any environment variables.
-- `pnpm run import:framer` loads `FRAMER_API_KEY` and `FRAMER_PROJECT_URL` from `.env.local` or `.env` in the active worktree. These files are git-ignored; `.env.example` documents the required keys.
-- Normal dev/build work does not require `pnpm run import:live` or `pnpm run import:framer`; treat both as legacy migration utilities unless you are deliberately refreshing imported data.
+- `pnpm run check:links` runs after a build and fails on broken internal links or redirect targets. `pnpm run check:freshness` exits 1 if any live course has no `updatedAt` or one older than 90 days.
+- `pnpm run test:seo` needs a production build first: `SITE_URL=https://tinkercademy.com pnpm run build`. A default (staging) build correctly emits `Disallow: /`, which fails the production robots assertion.
+
+## Checking the current design
+
+- Build and render the site before making claims about its current fonts, casing, colours, animations or layout; check computed styles. Source files, historical screenshots, `docs/screenshots/live/`, `prompt-exports/`, leftover migration data and public asset files preserve the pre-rebuild Framer site and are not evidence of the current design.
+- Current typography: IBM Plex Serif for headings, Rubik for body and UI, Fragment Mono for code accents, and a Lora ampersand subset.
+
+## Legacy Framer data
+
 - Programme authoring is Astro-first. Do not extend the Framer programme pipeline unless the user explicitly asks for migration work.
-- `pnpm run import:live` was built to crawl the retired Framer site. `tinkercademy.com` now serves this Astro build (no `/sitemap.xml`, no Framer handover data), so the crawl fails and `build:crm` refuses to overwrite `src/data/` without Framer handover data. Do not try to work around this; edit the JSON in `src/data/pages/` directly.
-- Page rendering is now Astro-native; `downloads/rehosted_site/` is no longer a build input.
-- The former high-fidelity document renderer and `src/generated/route-documents.js` payload have been removed. Do not infer current design choices from leftover migration data or public asset files.
-- The Framer enrichment step currently backfills richer programme/tutorial metadata and writes additional collections under `src/data/pages/` and `src/data/crm/`, including `platforms`, `domains`, `articles`, and `external-logos`.
-- `pnpm run import:framer` also writes a raw inspection snapshot to `scripts/_artifacts/framer-api/export.json`.
-- Current page integrations that still depend on imported Framer data:
-  homepage uses live domains and platform data;
-  `/professionals` uses imported external logos for partner/client bands;
-  tutorials and article pages still render imported Framer-backed content.
+- `pnpm run import:live` and `pnpm run import:framer` are legacy migration utilities. `import:live` crawled the retired Framer site and now fails, and `build:crm` refuses to overwrite `src/data/` without Framer handover data. Do not work around this; edit the JSON in `src/data/pages/` directly.
+- `import:framer` reads `FRAMER_API_KEY` and `FRAMER_PROJECT_URL` from git-ignored `.env.local` or `.env`. It backfills programme/tutorial metadata and the `platforms`, `domains`, `articles` and `external-logos` collections.
+- Pages that still depend on imported Framer data: the homepage (live domains and platforms), `/professionals` (partner/client logo bands), and tutorial and article pages.
 
-### Programme authoring notes
+## Programme authoring
 
-- Each programme is one Markdown file under `src/content/programmes/<slug>.md`; the filename is the canonical slug.
-- Frontmatter must use stable taxonomy IDs from `src/data/pages/audiences.json`, `domains.json`, and `platforms.json`.
-- Programme taxonomy pills and badges link into listing filters via `/courses-all?audience=<id>&domain=<id>&platform=<id>`. The same query format works on `/courses-schools` and `/courses-professionals`.
-- Homepage featuring comes from `homeFeaturedRank`; generic list ordering comes from `weight desc, title asc`.
+- Each programme is one Markdown file at `src/content/programmes/<slug>.md`; the filename is the canonical slug.
+- Frontmatter must use the stable taxonomy IDs from `src/data/pages/audiences.json`, `domains.json` and `platforms.json`.
+- Taxonomy pills link into listing filters via `/courses-all?audience=<id>&domain=<id>&platform=<id>`; the same query works on `/courses-schools` and `/courses-professionals`.
+- Homepage featuring comes from `homeFeaturedRank`; list ordering is `weight desc, title asc`.
 
-### Deploy
+## Deploy
 
-- Production runs on a Cloudflare Worker (static assets). **Every push to `main` builds and uploads a new Worker version but does NOT serve it.** Live traffic moves only when a `v*` tag is pushed (`.github/workflows/promote-production.yml`).
-- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback", or similar, follow `.claude/skills/deploy/SKILL.md`. The short version: tag the commit you want live and push the tag (`git tag vYYYY.MM.DD && git push origin vYYYY.MM.DD`). The Action waits for the Workers Builds upload of that commit, then runs `npx wrangler versions deploy <id>@100`.
-- Rollback: tag an older known-good commit (the commit must already contain the promote workflow), or run `npx wrangler versions deploy <old-id>@100 --yes`.
-- `wrangler.jsonc` pins the production account ID (`b8b1032c61d9475cd00229c74db7ec72`, Tinkertanker). The GitHub Action authenticates with the `CLOUDFLARE_API_TOKEN` repo secret. That token must be **user-scoped** (My Profile → API Tokens) with **Workers Builds Configuration: Edit** and **Workers Scripts: Edit**. Account-owned tokens and the Edit Cloudflare Workers template are rejected or incomplete for the Builds API. Do not put the token in the repo. Local Wrangler commands still need your own token or `wrangler login`; if you have access to multiple Cloudflare accounts, prefer an account-scoped token via `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` rather than whichever OAuth context is active.
-- "Build" is automatic on push. The user typing "build this" probably means `pnpm run build` locally or a `git push` — not a deploy.
-- Full setup details: `docs/deployment.md`.
+- Every push to `main` also publishes the staging site, `webstaging.tinkercademy.com`, to GitHub Pages (`.github/workflows/deploy.yml`, domain from `public/CNAME`). Production is the Cloudflare Worker below.
+- **Every push to `main` that changes build inputs builds and uploads a new Worker version but does NOT serve it.** Live traffic moves only when a `v*` tag is pushed. Commits touching only the Workers Builds watch-path excludes (configured in the Cloudflare dashboard and listed in the `deploy` skill: `README.md`, `AGENTS.md`, `docs/**`, `.github/**`, `.claude/**`) create no Worker version, so a tag on such a commit fails the promote workflow on purpose.
+- When the user says "deploy", "ship it", "go live", "promote", "push to prod", "rollback" or similar, follow `.claude/skills/deploy/SKILL.md`. In short: make sure the commit you want live is on `origin/main` and has a successful Workers Build (not a preview build, and not an excluded-paths-only commit), then tag it and push the tag (`git tag vYYYY.MM.DD && git push origin vYYYY.MM.DD`). The Action waits for the Workers Builds upload of that commit, then runs `npx wrangler versions deploy <id>@100`.
+- Rollback: tag an older known-good commit on `origin/main` that has a successful Workers Build and already contains the promote workflow, or run `npx wrangler versions deploy <old-id>@100 --yes`.
+- `wrangler.jsonc` pins the production account ID (`b8b1032c61d9475cd00229c74db7ec72`, Tinkertanker). The Action's `CLOUDFLARE_API_TOKEN` repo secret must be **user-scoped** (My Profile → API Tokens) with **Workers Builds Configuration: Edit** and **Workers Scripts: Edit**; account-owned tokens and the Edit Cloudflare Workers template are rejected or incomplete for the Builds API. Never put the token in the repo. Local Wrangler commands (including the rollback above) need your own `CLOUDFLARE_API_TOKEN` or `wrangler login`; if you can access multiple Cloudflare accounts, prefer an account-scoped token via `CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` over whichever OAuth context is active.
+- "Build this" probably means `pnpm run build` locally or a `git push`, not a deploy.
 
-### Shared shell parity
+## Shared shell parity
 
-- When the user says to apply page A's design onto page B, treat page A as the canonical visual source. Do not "standardise" by changing page A to match page B unless the user explicitly asks for that reversal.
-- For shared shell work such as headers, footers, or nav bars, do not rely on generic utility wrappers like `.shell` inside the shared component if those wrappers are also defined by page layouts. Use component-scoped wrappers so all Astro page types render identically.
-- Header and nav links must use absolute site paths such as `/contact-us`, not relative `contact-us` or `./contact-us`, to avoid route-dependent navigation bugs.
-- For parity fixes, verify both `pnpm run dev` and built output in a real browser on representative routes before declaring success. Check computed styles and layout metrics, not just screenshots.
+- When the user says to apply page A's design onto page B, page A is the canonical visual source. Do not change page A to match page B unless the user explicitly asks.
+- In shared shell components (headers, footers, nav), use component-scoped wrappers, not generic utilities like `.shell` that page layouts also define, so all Astro page types render identically.
+- Header and nav links use absolute site paths such as `/contact-us`, never relative ones.
+- For parity fixes, verify both `pnpm run dev` and built output in a real browser on representative routes; check computed styles and layout metrics, not just screenshots.
 
-### Hero / programme image generation
+## Hero and programme images
 
-- For **article/tutorial body illustrations** (hand-drawn 16:9 explainer images, xiaohei-style), use the `tkrobot-illustrations` skill in [tinkertanker/tkrobot-stickers](https://github.com/tinkertanker/tkrobot-stickers) under `docs/skills/tkrobot-illustrations/` — sketch-mode T Krobot performs the concept; save outputs under the consuming page's assets.
-- For **illustrated mascot banners** (the preferred direction per [docs/banner-unification-review.md](./docs/banner-unification-review.md)), use the deterministic compositor: read [docs/banner-system.md](./docs/banner-system.md), edit `src/data/banner-scenes.json`, run `node scripts/banner/generate-banners.mjs`. Do not use image generation for the mascot.
-- Hero/banner work goes through the compositor above; [docs/hero-image-brief.md](./docs/hero-image-brief.md) is the superseded historical brief for the AI-photo rounds. Read it only if generating photographic imagery (e.g. new faded-backdrop sources) — its "Confirmed prompt-time pitfalls" section (brand-name leaks, back-of-laptop framing, default tudung, composition uniformity) still applies to photo generation.
-- When the user rejects a single image, check the failure mode against the "Confirmed prompt-time pitfalls" section before re-rolling, and update that section if you discover a new failure mode.
+- Article/tutorial body illustrations (hand-drawn 16:9 explainers, xiaohei-style): use the `tkrobot-illustrations` skill in [tinkertanker/tkrobot-stickers](https://github.com/tinkertanker/tkrobot-stickers); sketch-mode T Krobot performs the concept. Save outputs with the consuming page's assets.
+- Mascot banners (the preferred direction per `docs/banner-unification-review.md`): use the deterministic compositor described in `docs/banner-system.md`. Edit `src/data/banner-scenes.json` and run `node scripts/banner/generate-banners.mjs`. Do not use image generation for the mascot.
+- `docs/hero-image-brief.md` is the superseded brief for AI-photo rounds. Read it only when generating photographic imagery; its "Confirmed prompt-time pitfalls" section (brand-name leaks, back-of-laptop framing, default tudung, composition uniformity) still applies. When the user rejects an image, check that section before re-rolling and add any new failure mode.
 
-### Proposal drafting
+## Proposal drafting
 
-- For proposal or quotation drafting, use [docs/writing-style-guide.md](./docs/writing-style-guide.md) as the tone reference, but keep proposals slightly more formal than the website.
-- Lead with substance: say what the programme is, who it is for, what participants will do, and why the format fits the audience.
-- Prefer concrete outcomes, tools, constraints, and delivery details over broad claims about innovation or transformation.
-- Keep reusable company boilerplate consistent, but tailor the overview, outcomes, curriculum shape, and rationale to the client context rather than pasting a generic block.
-- Use proof points sparingly and specifically: relevant partners, prior programmes, comparable audiences, or delivery experience. Do not dump the full track record when a shorter tailored proof section will do.
-- When reusing proposal copy on the website, strip procurement, admin, and quotation language; keep only the sharp, practical, evidence-backed parts.
+- Use `docs/writing-style-guide.md` for tone, but keep proposals slightly more formal than the website.
+- Lead with substance: what the programme is, who it is for, what participants will do, and why the format fits the audience.
+- Prefer concrete outcomes, tools, constraints and delivery details over broad claims about innovation or transformation.
+- Keep company boilerplate consistent, but tailor the overview, outcomes, curriculum shape and rationale to the client.
+- Use proof points sparingly and specifically (relevant partners, prior programmes, comparable audiences); do not dump the full track record.
+- When reusing proposal copy on the website, strip procurement, admin and quotation language.
