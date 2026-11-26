@@ -8,7 +8,7 @@ domainIds: ["ai-engineering"]
 platformIds: []
 cardBlurb: "Re-engineer recurring business processes, then build governed AI agents that reduce handoffs, shorten cycle time, and support everyday knowledge work."
 weight: 200
-homeFeaturedRank: 1
+homeFeaturedRank: 2
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Agentic Workflows for Businesses - Tinkercademy: Coding and Making for Schools and Professionals"

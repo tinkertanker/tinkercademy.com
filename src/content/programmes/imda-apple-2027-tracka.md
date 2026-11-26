@@ -8,6 +8,7 @@ domainIds: ["uiux", "design-thinking"]
 platformIds: ["keynote", "swift"]
 cardBlurb: "A friendly, structured introduction to app design: students identify user needs, plan screens, test flows, and present a clickable app prototype built in Keynote on iPad — with content scaled for primary and secondary/JC levels."
 weight: 66
+homeFeaturedRank: 4
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Apple+App+Development+Track+A"
 primaryCta:

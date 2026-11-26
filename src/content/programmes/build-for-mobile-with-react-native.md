@@ -8,7 +8,6 @@ domainIds: ["software-engineering", "appdev"]
 platformIds: ["javascript", "react-native"]
 cardBlurb: "A two-day React Native course: build three iOS and Android apps with JavaScript and Expo, and test them on your own phone."
 weight: 93
-homeFeaturedRank: 5
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Build for Mobile: App Development with React Native - Tinkercademy: Coding and Making for Schools and Professionals"

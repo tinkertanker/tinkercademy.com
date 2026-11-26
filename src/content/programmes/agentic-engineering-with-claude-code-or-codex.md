@@ -8,6 +8,7 @@ domainIds: ["ai-engineering", "software-engineering"]
 platformIds: ["claude", "chatgpt", "git-github", "node-js", "python"]
 cardBlurb: "A two-day workshop for experienced developers: direct Claude Code or Codex through five projects, from problem framing to a reviewed, working AI product."
 weight: 210
+homeFeaturedRank: 3
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:hello@tk.sg"
 seoTitle: "Agentic Engineering with Claude Code or Codex - Tinkercademy"

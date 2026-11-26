@@ -8,7 +8,6 @@ domainIds: ["iot", "cs"]
 platformIds: ["bbc-micro-bit"]
 cardBlurb: "An introductory course for adults: program a micro:bit, learn how IoT devices share data, and build a small connected project over 1 to 2 days."
 weight: 0
-homeFeaturedRank: 6
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Digital Making with micro:bit & IoT - Tinkercademy: Coding and Making for Schools and Professionals"

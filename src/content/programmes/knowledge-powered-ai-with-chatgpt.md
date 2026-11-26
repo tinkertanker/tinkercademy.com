@@ -8,7 +8,6 @@ domainIds: ["ai-engineering"]
 platformIds: ["chatgpt"]
 cardBlurb: "A half-day to 2-day workshop for leaders: how ChatGPT works, prompting, Deep Research, data analysis, and RAG, ending with a prototype AI web app."
 weight: 98
-homeFeaturedRank: 4
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Knowledge-Powered AI with ChatGPT - Tinkercademy: Coding and Making for Schools and Professionals"

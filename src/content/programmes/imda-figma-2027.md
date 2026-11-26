@@ -8,6 +8,7 @@ domainIds: ["uiux", "design-thinking"]
 platformIds: ["figma"]
 cardBlurb: "Students learn industry-grade UI/UX — personas, user flows, visual systems, and interactive prototypes in Figma — with projects scaled for primary and secondary/JC levels, plus a guided introduction to AI-enabled prototyping at the upper levels."
 weight: 79
+homeFeaturedRank: 6
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Figma+UI%2FUX"
 primaryCta:

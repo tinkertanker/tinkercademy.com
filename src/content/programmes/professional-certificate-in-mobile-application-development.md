@@ -7,7 +7,6 @@ domainIds: ["appdev", "uiux"]
 platformIds: ["android-studio", "javascript", "sql"]
 cardBlurb: "Design, prototype and build mobile apps for iOS and Android, with databases, APIs and web back-ends. For people with programming experience."
 weight: 88
-homeFeaturedRank: 7
 signUpLabel: "Enquire now"
 heroAlt: "Illustration of a laptop wired to a phone, beside a code editor, over a faded photo of a classroom."
 fit:

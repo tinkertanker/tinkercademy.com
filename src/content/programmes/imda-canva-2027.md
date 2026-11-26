@@ -8,6 +8,7 @@ domainIds: ["uiux", "design-thinking", "cs"]
 platformIds: ["canva"]
 cardBlurb: "Secondary and JC students build a working digital product in Canva Code through a disciplined design process — structured prompting, user-centred interfaces, structured data, dashboards, and product presentation."
 weight: 81
+homeFeaturedRank: 5
 signUpLabel: "Enquire now"
 signUpUrl: "mailto:learn@tinkertanker.com?subject=LEARN+Roadmaps+2027+-+Canva+AI+Product+Design"
 primaryCta:

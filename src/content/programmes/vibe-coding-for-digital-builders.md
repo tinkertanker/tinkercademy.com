@@ -8,7 +8,7 @@ domainIds: ["ai-engineering", "uiux", "webdev"]
 platformIds: ["html-css", "javascript", "chatgpt", "figma"]
 cardBlurb: "A two-day workshop: research a problem with ChatGPT, design it in Figma, and build a working web app with Lovable and Supabase, without writing code by hand."
 weight: 99
-homeFeaturedRank: 3
+homeFeaturedRank: 1
 signUpLabel: "Enquire now"
 signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "Vibe Coding for Digital Builders - Tinkercademy: Coding and Making for Schools and Professionals"
