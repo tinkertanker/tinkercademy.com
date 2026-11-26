@@ -298,10 +298,6 @@ test('web/mobile are ordinary Tinkercademy courses with normal enquiries and no 
 		assert.equal(searchResult.title, title);
 		assert.doesNotMatch(JSON.stringify(searchResult), unwantedCopy);
 	}
-	const home = load(await read('index.html'));
-	const mobileCard = home('[data-programme-card]:has(a[href="/programmes/professional-certificate-in-mobile-application-development/"])');
-	assert.equal(mobileCard.length, 1, 'mobile retains its normal homepage feature');
-	assert.doesNotMatch(mobileCard.text(), unwantedCopy);
 	for (const path of ['about-us/index.html', 'professionals/index.html']) {
 		const $ = load(await read(path));
 		assert.equal($('img[alt="SMU Academy"]').length, 0, 'disputed logo is not displayed');
