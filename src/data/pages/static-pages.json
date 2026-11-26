@@ -3917,6 +3917,22 @@
     ],
     "course_cards": [
       {
+        "slug": "imda-apple-2027-tracka",
+        "audience_label": "Students"
+      },
+      {
+        "slug": "imda-apple-2027-trackb",
+        "audience_label": "Students"
+      },
+      {
+        "slug": "imda-figma-2027",
+        "audience_label": "Students"
+      },
+      {
+        "slug": "imda-canva-2027",
+        "audience_label": "Students"
+      },
+      {
         "slug": "code-for-fun-ai-workshop",
         "title": "Code For Fun AI Workshop",
         "audience_label": "Students",
@@ -3952,20 +3968,6 @@
         "blurb": "Run in 2025 for primary schools, with MakeCode Arcade & Minecraft."
       },
       {
-        "slug": "imda-unity-2025",
-        "title": "Game Development Bootcamp with Unity",
-        "audience_label": "Students",
-        "duration": "32 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap bootcamp with Unity."
-      },
-      {
-        "slug": "imda-figma-2025",
-        "title": "UI/UX Design with Figma",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Figma."
-      },
-      {
         "slug": "imda-phaser-2025",
         "title": "AI-Driven Game Development on Phaser",
         "audience_label": "Students",
@@ -3980,32 +3982,11 @@
         "blurb": "An IMDA-Supported Course: Fully Subsidized for Successful Applicants"
       },
       {
-        "slug": "imda-apple-2025-c",
-        "title": "Swift Playground",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
-        "slug": "imda-apple-2025-a",
-        "title": "App Prototyping with Keynote and Swift Playgrounds",
-        "audience_label": "Students",
-        "duration": "26 hours",
-        "blurb": "An IMDA Infocom LEARN Roadmap course with Apple Singapore."
-      },
-      {
         "slug": "code-exp-2025",
         "title": "BrainHack CODE_EXP",
         "audience_label": "Students",
         "duration": "4 days",
         "blurb": "Run in May–June 2025"
-      },
-      {
-        "slug": "no-code-machine-learning",
-        "title": "No-Code Machine Learning",
-        "audience_label": "Teachers",
-        "duration": "2 days",
-        "blurb": "An introductory course on machine learning models using Orange. Our Courses Our Projects"
       }
     ]
   },

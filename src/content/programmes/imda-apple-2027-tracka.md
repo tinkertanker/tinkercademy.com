@@ -1,5 +1,5 @@
 ---
-title: "Apple App Development — Track A: App Design & Prototyping"
+title: "App Design and Prototyping (Infocomm LEARN Track A with Apple)"
 subtitle: "An IMDA LEARN Roadmaps 2027 course for primary, secondary, and junior college Infocomm Clubs, with Apple."
 duration: "26 hours"
 heroImage: "/images/banners/imda-apple-2027-tracka-sec.webp"

@@ -1,5 +1,5 @@
 ---
-title: "AI Product Design with Canva Code"
+title: "AI Product Design with Canva Code (Infocomm LEARN Roadmap)"
 subtitle: "An IMDA LEARN Roadmaps 2027 course for secondary school and junior college Infocomm Clubs, with Canva."
 duration: "26 hours"
 heroImage: "/images/banners/imda-canva-2027-sec.webp"

@@ -1,5 +1,5 @@
 ---
-title: "UI/UX Design with Figma"
+title: "UI/UX Design with Figma (Infocomm LEARN Roadmap)"
 subtitle: "An IMDA LEARN Roadmaps 2027 course for primary, secondary, and junior college Infocomm Clubs, with Figma."
 duration: "26 hours"
 heroImage: "/images/banners/imda-figma-2027-sec.webp"
