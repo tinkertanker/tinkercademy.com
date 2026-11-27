@@ -19,7 +19,7 @@ const canonical = 'https://tinkercademy.com/showcase/';
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroBanner = getBannerAsset(heroImage);
 const heroTitle =
-	page.hero_title ?? 'Apps, bots, circuits\nand the makers behind them.';
+	page.hero_title ?? 'Apps, bots, circuits\nand the makers behind them';
 
 type Block = { tag?: string; text?: string };
 const blocks: Block[] = (page.blocks ?? []) as Block[];

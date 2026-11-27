@@ -2,9 +2,9 @@
   {
     "path": "/",
     "slug": "home",
-    "title": "Illuminate your journey into tech & AI.",
+    "title": "Illuminate your journey into tech & AI",
     "description": "Learn coding, digital making, and agentic engineering from expert teachers and builders.",
-    "hero_title": "Illuminate your journey into tech & AI.",
+    "hero_title": "Illuminate your journey into tech & AI",
     "hero_lead": "Learn coding, digital making, and agentic engineering from expert teachers and builders.",
     "hero_image": "/images/zsqswc6Bglsfla2SlsbfXQbK7yY.jpg",
     "seo": {
@@ -2540,7 +2540,7 @@
     "slug": "showcase",
     "title": "Showcase of Our Coders, Tinkerers, Makers, and their Journeys",
     "description": "Swift Accelerator Programme Trainer at Tinkertanker",
-    "hero_title": "Apps, bots, circuits\nand the makers behind them.",
+    "hero_title": "Apps, bots, circuits\nand the makers behind them",
     "hero_lead": "Swift Accelerator Programme Trainer at Tinkertanker",
     "hero_image": "/images/banners/showcase.webp",
     "seo": {
@@ -2871,7 +2871,7 @@
     "slug": "about-us",
     "title": "We’re coders and tinkerers who teach coding and tinkering to schools, corporations, and the public in Singapore.",
     "description": "50+",
-    "hero_title": "We're coders and builders\nwho teach coding and building.",
+    "hero_title": "We're coders and builders\nwho teach coding and building",
     "hero_lead": "50+",
     "hero_image": "/images/banners/about-us.webp",
     "seo": {
@@ -3339,9 +3339,9 @@
   {
     "path": "/schools",
     "slug": "schools",
-    "title": "Code, Tinker, and Make with Us.",
+    "title": "Code, Tinker, and Make with Us",
     "description": "Real skills for real impact.",
-    "hero_title": "Code, Tinker, and Make with Us.",
+    "hero_title": "Code, Tinker, and Make with Us",
     "hero_lead": "Real skills for real impact.",
     "hero_image": "/images/banners/schools.webp",
     "seo": {
