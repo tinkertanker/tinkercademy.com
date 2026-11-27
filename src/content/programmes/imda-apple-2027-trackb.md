@@ -26,7 +26,7 @@ publishedAt: 2026-10-17
 updatedAt: 2026-10-23
 ---
 
-## Course Overview
+## Course overview
 
 <p>Authentic app development in a manageable classroom format. Using Swift Playgrounds on iPad, primary, secondary, and junior college students build functional apps with a clear user purpose. It builds naturally on Track A, but no prior coding experience is needed.</p>
 <p>Students learn SwiftUI fundamentals — views, layout, state, navigation, data modelling, lists, interactivity, feedback, and debugging — through guided mini-projects, then develop a capstone app while strengthening computational thinking, problem decomposition, and presentation skills.</p>
@@ -37,7 +37,7 @@ updatedAt: 2026-10-23
 	<li data-preset-tag="p"><p><strong>Secondary 1–5, JC 1–2:</strong> SwiftUI views, state, navigation, and data modelling, ending in a capstone app presented to the class.</p></li>
 </ul>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul>
 	<li data-preset-tag="p"><p>Build SwiftUI interfaces using views, stacks, modifiers, images, and shapes.</p></li>

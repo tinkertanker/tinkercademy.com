@@ -25,11 +25,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Swift Accelerator is an eight-month app development programme for students, fully subsidised by IMDA for successful applicants and held at Apple's Singapore office. Through hands-on projects and mentoring, participants learn the Swift programming language, design to Apple's Human Interface Guidelines, and finish by publishing a working iOS app on the App Store.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Master Swift Programming: Gain a deep understanding of the Swift programming language, including its syntax, data structures, control flow, and object-oriented programming principles. </p></li><li data-preset-tag="p"><p>Apply Apple's Human Interface Guidelines: Learn how to design and develop user-friendly and visually appealing iOS and macOS apps that adhere to Apple's design standards and best practices. </p></li><li data-preset-tag="p"><p>Build and Deploy iOS Apps: Develop and test iOS apps, integrate with Apple's frameworks and APIs, and successfully deploy them to the App Store.</p></li></ul>
 

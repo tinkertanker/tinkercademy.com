@@ -4,8 +4,8 @@
  *
  * Sections:
  *   1. Hero
- *   2. Programme Types (micro:bit, Tinker X cards)
- *   3. Courses for Individuals (all programmes marked for public audience)
+ *   2. Programme types (micro:bit, Tinker X cards)
+ *   3. Courses for individuals (all programmes marked for public audience)
  *   4. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
@@ -25,7 +25,7 @@ const canonical = 'https://tinkercademy.com/individuals/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroBanner = getBannerAsset(heroImage);
-const heroTitle = page.hero_title ?? 'Self-directed Learning Opportunities';
+const heroTitle = page.hero_title ?? 'Self-directed learning opportunities';
 const heroLead =
 	page.hero_lead ??
 	'Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses.';
@@ -45,7 +45,7 @@ const programmeTypes = [
 	},
 ];
 
-/* Public-audience programmes for the "Courses for Individuals" grid. */
+/* Public-audience programmes for the "Courses for individuals" grid. */
 const publicProgrammes = (await getProgrammesForSurface('individuals')).map((programme) =>
 	toProgrammeCardData(programme),
 );
@@ -72,7 +72,7 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 
 	<section class="ind-types">
 		<div class="shell">
-			<h2 class="ind-types__heading">Programme Types</h2>
+			<h2 class="ind-types__heading">Programme types</h2>
 			<div class="ind-types__grid">
 				{programmeTypes.map((t) => (
 					<a class="ind-type" href={t.url}>
@@ -91,7 +91,7 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 	{publicProgrammes.length > 0 && (
 		<section class="aud-courses">
 			<div class="shell">
-				<h2 class="aud-courses__heading">Courses for Individuals</h2>
+				<h2 class="aud-courses__heading">Courses for individuals</h2>
 				<div class="aud-courses__grid">
 					{publicProgrammes.map((card: any) => (
 						<ProgrammeCard
@@ -116,7 +116,7 @@ const publicProgrammes = (await getProgrammesForSurface('individuals')).map((pro
 
 	<section class="aud-pivot">
 		<div class="shell">
-			<h2 class="aud-pivot__heading">Let's Work Together!</h2>
+			<h2 class="aud-pivot__heading">Let's work together!</h2>
 			<div class="aud-pivot__pills">
 				<a class="aud-pivot__pill" href="/professionals/">Professionals</a>
 				<a class="aud-pivot__pill" href="/schools/">Schools</a>

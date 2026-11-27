@@ -25,11 +25,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Knowledge-Powered AI with ChatGPT is a workshop for leaders and teams on using generative AI with their organisation's own knowledge: documents, data, and expertise. It covers practical uses such as customer service, content drafting, and internal knowledge systems.</p><p>The course runs as a half-day, one-day, or two-day session. You'll start by understanding the digital landscape and exploring how large language models like ChatGPT function, before diving into practical applications of ChatGPT and other AI tools:</p><ul><li data-preset-tag="p"><p>Understanding Large Language Models (LLMs), generative AI possibilities and limitations</p></li><li data-preset-tag="p"><p>Prompt engineering</p></li><li data-preset-tag="p"><p>Image generation with GPT-4o</p></li><li data-preset-tag="p"><p>Canvas for collaborative writing and coding with AI</p></li><li data-preset-tag="p"><p>Data analysis tools</p></li><li data-preset-tag="p"><p>Projects</p></li><li data-preset-tag="p"><p>Deep Research</p></li><li data-preset-tag="p"><p>Retrieval-Augmented Generation</p></li></ul><p>This hands-on, executive-focused workshop is perfect for senior leaders, innovation teams, and decision-makers. By the end, you'll have created a prototype web app powered by generative AI, and developed a concrete understanding of how these technologies can transform your operations.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p>Through this programme, you will:</p><ul><li data-preset-tag="p"><p>Understand the fundamentals of generative AI, including how large language models work, their capabilities, limitations, and ethical consideration</p></li><li data-preset-tag="p"><p>Create product concepts, marketing materials, and business strategies using AI tools</p></li><li data-preset-tag="p"><p>Explore digital presence creation with AI-assisted development tools</p></li><li data-preset-tag="p"><p>Evaluate the potential of AI integration in your own organization's workflows and knowledge management systems</p></li><li data-preset-tag="p"><p>Experience how RAG technology enhances AI responses by grounding them in specific knowledge bases and data sources</p></li></ul><p>For ½-day, 1-day, and 2-day course formats, we're happy to collaborate with you to tailor content and focus areas to your specific needs.</p>
 

@@ -24,11 +24,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>AI and Productivity with Microsoft Copilot is a one- or two-day course for staff who want to use Copilot, Microsoft's AI assistant, in their everyday work. Copilot is in use at Singapore's Ministry of Education (MOE) and many companies. You'll learn how it drafts, summarises, and suggests, and use it to take routine tasks off your plate.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Understand the basics of AI and its applications: Learn about the fundamentals of artificial intelligence, its capabilities, and how it can be used to enhance productivity and decision-making. </p></li><li data-preset-tag="p"><p>Explore the features and benefits of Microsoft Copilot: Discover the various features of Microsoft Copilot, including its ability to generate text, summarize information, and provide intelligent suggestions. </p></li><li data-preset-tag="p"><p>Apply Copilot to real-world tasks: Learn how to effectively use Copilot to automate routine tasks, improve efficiency, and enhance creativity in your daily work.</p></li></ul>
 

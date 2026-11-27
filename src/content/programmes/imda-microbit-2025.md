@@ -20,11 +20,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-22
 ---
 
-## Course Overview
+## Course overview
 
 <p>Digital Making with micro:bit is a 24-hour course that introduces primary school students to coding and electronics with the micro:bit, a pocket-sized programmable microcontroller. Students program it in MakeCode, a block-based language, and practise computational thinking by wiring up components that move (servos), light up (LED strips), and make noise (buzzers).</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Program microcontrollers</p></li><li data-preset-tag="p"><p>Introduce coding, electronics, and hands-on digital making</p></li><li data-preset-tag="p"><p>Learn MakeCode</p></li><li data-preset-tag="p"><p>Reinforce design thinking, creativity, and maker principles</p></li></ul>
 

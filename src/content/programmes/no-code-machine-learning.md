@@ -23,11 +23,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>No-Code Machine Learning is a one- or two-day course on how machine learning works, taught without programming. You'll use Orange, a free visual tool, to prepare data, then build, train, and evaluate models by connecting blocks on screen, all the way from raw data to predictions.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Master the fundamentals of machine learning: Understand core concepts such as supervised and unsupervised learning, classification, regression, and clustering. </p></li><li data-preset-tag="p"><p>Gain proficiency in using Orange: Learn how to navigate the Orange interface, import and clean data, build and train machine learning models, and evaluate their performance. </p></li><li data-preset-tag="p"><p>Apply machine learning to real-world problems: Use Orange to solve practical problems, such as predicting customer churn, identifying fraudulent transactions, or categorising text documents.</p></li></ul>
 

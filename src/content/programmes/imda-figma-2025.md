@@ -14,11 +14,11 @@ signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "UI/UX Design with Figma - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
-## Course Overview
+## Course overview
 
 <p>Students will learn visual and interactive prototyping through a design thinking process involving brainstorming, idea generation, and prototyping. They will make use of UI/UX tools utilised by professionals: FigJam for collaborative brainstorming, Figma for creating visually appealing interactive UI/UX designs, and Figma Slides to effectively communicate their design solutions. </p><p>This course is suitable for students with no programming or design experience, but are interested in developing instincts for building web and mobile applications for users.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Understand the design thinking process</p></li><li data-preset-tag="p"><p>Explore FigJam for brainstorming</p></li><li data-preset-tag="p"><p>Utilise Figma for visual and interactive prototyping</p></li><li data-preset-tag="p"><p>Explore and understand UI/UX concepts</p></li><li data-preset-tag="p"><p>Create visually appealing and intuitive digital designs for web and mobile apps</p></li><li data-preset-tag="p"><p>Communicate design solutions</p></li></ul>
 

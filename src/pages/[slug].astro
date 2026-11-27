@@ -70,24 +70,24 @@ const COURSE_PAGE_LEADS: Record<string, string> = {
 const coursePageLead = COURSE_PAGE_LEADS[page.slug as string];
 const courseAllHighlights = [
 	{
-		title: 'For Classrooms and Teams',
+		title: 'For classrooms and teams',
 		body: 'Run a structured school programme, upskill a professional team, or bring hands-on technology learning to a public or community audience.',
 	},
 	{
-		title: 'Across Modern Tech',
+		title: 'Across modern tech',
 		body: 'Explore AI, data, app development, web, robotics, digital making, micro:bit, Arduino, Raspberry Pi, and other practical platforms.',
 	},
 	{
-		title: 'Taught by Builders',
+		title: 'Taught by builders',
 		body: 'Learn from coders, makers, and curriculum designers who build real projects and translate that practice into clear, usable lessons.',
 	},
 ];
 
 /* ─── Course listing page titles (the title field is a slug in the data) */
 const COURSE_PAGE_TITLES: Record<string, string> = {
-	'courses-all': 'All Courses',
-	'courses-professionals': 'Professional Courses',
-	'courses-schools': 'School Courses',
+	'courses-all': 'All courses',
+	'courses-professionals': 'Professional courses',
+	'courses-schools': 'School courses',
 };
 const displayTitle = COURSE_PAGE_TITLES[page.slug] ?? page.title;
 
@@ -136,7 +136,7 @@ const seoDescription =
 		</div>
 	</section>
 	<LogoCarouselSection
-		title="Our Partners"
+		title="Our partners"
 		logos={partnerLogos}
 		minItems={24}
 		secondsPerLogo={6}
@@ -144,7 +144,7 @@ const seoDescription =
 	<section class="course-proof">
 		<div class="shell">
 			<div class="course-proof__intro">
-				<h2>Courses That Meet Learners Where They Are</h2>
+				<h2>Courses that meet learners where they are</h2>
 				<p>
 					Our catalogue brings together the formats we deliver most often, from MOE
 					classrooms to corporate workshops and public learning programmes.
@@ -161,7 +161,7 @@ const seoDescription =
 		</div>
 	</section>
 	<LogoCarouselSection
-		title="Our Clients"
+		title="Our clients"
 		logos={clientLogos}
 		muted={true}
 		minItems={30}

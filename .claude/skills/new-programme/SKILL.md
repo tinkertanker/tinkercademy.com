@@ -143,12 +143,12 @@ Body-copy conventions (match existing programmes — this is a Framer-migrated c
 
 - Paragraphs use `<p dir="auto">…</p>`.
 - Lists use `<ul dir="auto">` with each item as `<li data-preset-tag="p"><p>…</p></li>`. Keep the `data-preset-tag="p"` attribute.
-- Three H2 sections, in order: **Course Overview**, **Lesson Outcomes**, **Details**.
+- Three H2 sections, in order: **Course overview**, **Lesson outcomes**, **Details**.
 - The Details block is a single `<p>` chain, not sub-headers — each line is `<strong>Dates and Times</strong>: …`, `<strong>Location</strong>: …`, etc.
 - British spelling everywhere (`organisation`, `recognise`, `visualisation`).
 - Currency: always `$` with SGD numbers; include the line `"All quoted prices are in SGD. Invoicing terms available."` after the fee block.
 - Write `cardBlurb` as one complete sentence (around 140 characters, no trailing `…`) that says what the course is and what participants do. It feeds course cards, meta descriptions, and `llms.txt`.
-- Open Course Overview with a plain definition — "<Course> is a <length> course for <audience> on <topic>" — not a slogan. Avoid "empower", "harness", "unlock", "leverage", "cutting-edge", and "In today's digital age".
+- Open Course overview with a plain definition — "<Course> is a <length> course for <audience> on <topic>" — not a slogan. Avoid "empower", "harness", "unlock", "leverage", "cutting-edge", and "In today's digital age".
 - Use descriptive link text, never "click here" or "find out more here".
 
 Frontmatter field order (match convention):

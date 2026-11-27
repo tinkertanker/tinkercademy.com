@@ -4,10 +4,10 @@
  *
  * Sections:
  *   1. Hero
- *   2. Our Value Proposition (3-up cards)
- *   3. Our Corporate Clients (logo strip)
- *   4. Let's Work Together! (pivot pills)
- *   5. Professional Courses (programme cards)
+ *   2. Our value proposition (3-up cards)
+ *   3. Our corporate clients (logo strip)
+ *   4. Let's work together! (pivot pills)
+ *   5. Professional courses (programme cards)
  *   6. Closing CTA banner
  */
 import CtaBanner from '../components/CtaBanner.astro';
@@ -34,20 +34,20 @@ const canonical = 'https://tinkercademy.com/professionals/';
 
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroBanner = getBannerAsset(heroImage);
-const heroTitle = page.hero_title ?? 'Data, Coding, IoT Tinkering, and Tech Productivity Training';
+const heroTitle = page.hero_title ?? 'Data, coding, IoT tinkering, and tech productivity training';
 const heroLead = page.hero_lead ?? 'Real skills for real impact.';
 
 const valueProps = [
 	{
-		title: 'Customised Tech Upskilling',
+		title: 'Customised tech upskilling',
 		body: 'Your business goals are unique. So is our training. We design learning experiences (GenAI, vibe coding, tech training) precisely for your team and your objectives in Singapore. They get the skills to make a real impact.',
 	},
 	{
-		title: 'Expert Instructors',
+		title: 'Expert instructors',
 		body: "Your team will be guided by experts from the world's top universities and leading tech companies. They bring powerful insights to inspire innovation within your office.",
 	},
 	{
-		title: 'Track Record',
+		title: 'Track record',
 		body: 'Singapore companies trust us. Consistently rated 5 stars. Client partnerships over 8 years strong. We ensure learning turns into action, helping your team meet your business objectives.',
 	},
 ];
@@ -82,7 +82,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 
 	<section class="aud-section aud-section--muted">
 		<div class="shell">
-			<h2 class="aud-section__heading">Our Value Proposition</h2>
+			<h2 class="aud-section__heading">Our value proposition</h2>
 			<div class="aud-value-grid">
 				{valueProps.map((v) => (
 					<article class="aud-value-card">
@@ -95,7 +95,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 	</section>
 
 	<LogoCarouselSection
-		title="Our Corporate Clients"
+		title="Our corporate clients"
 		logos={corporateClientLogos}
 		minItems={30}
 		secondsPerLogo={4}
@@ -103,7 +103,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 
 	<section class="aud-pivot">
 		<div class="shell">
-			<h2 class="aud-pivot__heading">Let's Work Together!</h2>
+			<h2 class="aud-pivot__heading">Let's work together!</h2>
 			<div class="aud-pivot__pills">
 				<a class="aud-pivot__pill" href="/schools/">Schools</a>
 				<a class="aud-pivot__pill" href="/individuals/">Individuals</a>
@@ -115,7 +115,7 @@ const cards = (await getProgrammesForSurface('professionals')).map((programme) =
 	{cards.length > 0 && (
 		<section class="aud-courses">
 			<div class="shell">
-				<h2 class="aud-courses__heading">Professional Courses</h2>
+				<h2 class="aud-courses__heading">Professional courses</h2>
 				<div class="aud-courses__grid">
 					{cards.map((card: any) => (
 						<ProgrammeCard

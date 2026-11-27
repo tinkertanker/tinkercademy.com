@@ -21,13 +21,13 @@ publishedAt: 2026-04-18
 updatedAt: 2026-11-02
 ---
 
-## Course Overview
+## Course overview
 
 <p>Tinkercademy runs this hands-on module for SMU Academy’s <a href="https://academy.smu.edu.sg/courses/industry-practice-master-digital-economy-ipmde">Industry Practice Master of Digital Economy</a>. Participants learn the building blocks of digital making through coding concepts and ESP32 microcontrollers, then create connected prototypes that respond to sound, touch, and light.</p>
 
 <p>Enquiries and registration are handled directly by SMU Academy. Please refer to its course page for current intakes, fees and eligibility.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Understand what “digital making” is, and how it applies to modern prototyping with electronics</p></li><li data-preset-tag="p"><p>Appreciate the world of&nbsp;“Internet of Things” by sending sensor data online for practical applications</p></li></ul>
 

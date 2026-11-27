@@ -8,7 +8,7 @@ interface Props {
 
 const {
 	id,
-	heading = 'Tinkercademy Course Enquiry Form',
+	heading = 'Tinkercademy course enquiry form',
 	subheading,
 	prefillCourse,
 } = Astro.props;
@@ -46,7 +46,7 @@ const {
 			</label>
 
 			<label class="contact-field">
-				<span>School/Organisation</span>
+				<span>School/organisation</span>
 				<input type="text" name="q31_org" autocomplete="organization" />
 			</label>
 
@@ -56,18 +56,18 @@ const {
 			</label>
 
 			<label class="contact-field">
-				<span>Phone Number</span>
+				<span>Phone number</span>
 				<input type="tel" name="q42_phoneNumber[full]" autocomplete="tel" inputmode="numeric" placeholder="00000000" />
 				<small>Optional, if you prefer to be contacted via phone.</small>
 			</label>
 
 			<label class="contact-field contact-field--full">
-				<span>Course Name or Topic</span>
+				<span>Course name or topic</span>
 				<input type="text" name="q40_course" value={prefillCourse ?? ''} />
 			</label>
 
 			<label class="contact-field contact-field--full">
-				<span>Comments/Questions</span>
+				<span>Comments/questions</span>
 				<textarea name="q41_comments" rows="7"></textarea>
 			</label>
 		</div>

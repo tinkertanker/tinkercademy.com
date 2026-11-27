@@ -19,7 +19,7 @@ const canonical = 'https://tinkercademy.com/showcase/';
 const heroImage = localiseFramerImage(page.hero_image ?? '');
 const heroBanner = getBannerAsset(heroImage);
 const heroTitle =
-	page.hero_title ?? 'Apps, bots, circuits\nand the makers behind them.';
+	page.hero_title ?? 'Apps, bots, circuits\nand the makers behind them';
 
 type Block = { tag?: string; text?: string };
 const blocks: Block[] = (page.blocks ?? []) as Block[];
@@ -197,7 +197,7 @@ const featuredOpenSourceTools = openSourceTools.slice(0, 4);
 
 	<section class="sc-section">
 		<div class="shell">
-			<h2 class="sc-section__heading">Our Interns</h2>
+			<h2 class="sc-section__heading">Our interns</h2>
 			<p class="sc-section__lead">
 				Through hands-on experience and mentorship, our interns work on real projects that shape
 				the future of education and technology. Here are what they have to say about their

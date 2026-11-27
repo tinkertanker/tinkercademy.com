@@ -14,11 +14,11 @@ signUpUrl: "https://form.jotform.com/232050520776450"
 seoTitle: "No-code Web Design (Framer) - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
-## Course Overview
+## Course overview
 
 <p>In today's digital age, a strong online presence is essential for organisations of all sizes. A well-designed website can captivate your audience, enhance user experience, and drive conversions. This course empowers you to create stunning, user-friendly websites without writing a single line of code. Learn the principles of UI/UX design and leverage the power of no-code tools like Framer to bring your digital visions to life.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Master the fundamentals of UI/UX design: Students will learn the core principles of user interface and user experience design, including layout, typography, color theory, and information hierarchy. </p></li><li data-preset-tag="p"><p>Gain proficiency in using no-code tools, specifically Framer: Students will develop practical skills in using Framer to create interactive prototypes and design web applications without coding. </p></li><li data-preset-tag="p"><p>Design and prototype a functional website or web application: Students will apply their knowledge of UI/UX design and no-code tools to create a real-world project, showcasing their ability to design user-centered digital experiences.</p></li></ul>
 

@@ -115,11 +115,11 @@ seoDescription: Short search description.
 3. Write the long-form body in Markdown. The current convention is:
 
 ```md
-## Course Overview
+## Course overview
 
 ...
 
-## Lesson Outcomes
+## Lesson outcomes
 
 ...
 

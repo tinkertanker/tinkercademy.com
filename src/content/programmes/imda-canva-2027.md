@@ -27,13 +27,13 @@ publishedAt: 2026-10-17
 updatedAt: 2026-10-23
 ---
 
-## Course Overview
+## Course overview
 
 <p>AI-assisted product design using Canva Code and the Canva ecosystem. Students build a working digital product through a disciplined design process: structured prompting, user-centred interface design, interaction design, structured data, dashboards, public API concepts, and product presentation.</p>
 <p>The course is deliberately framed as AI-assisted product design rather than AI application development. Students learn that AI can help generate and revise prototypes, but they must first explain what they intend to build. Before prompting, students describe flows such as user input to logic to output, user to interface to API to data to interface, or form to fields to records to dashboard — keeping the learning centred on computational thinking, product reasoning, and human judgement.</p>
 <p>Later lessons cover structured data, forms, dashboards, and presentation, ending with a product showcase. No prior coding or design experience is needed.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul>
 	<li data-preset-tag="p"><p>Use structured prompting frameworks to direct Canva Code with clear audience, context, constraints, and examples.</p></li>

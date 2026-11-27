@@ -26,11 +26,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Vibe Coding for Digital Builders is a two-day workshop where non-programmers build and deploy a working web app with AI tools. You'll use ChatGPT, Figma, and Lovable to go from a problem to a designed, deployed prototype, describing what you want in plain language instead of writing code by hand.</p><p>In this practical two-day course, you'll explore how generative AI can be effectively integrated into your organisation's workflow. </p><ul><li data-preset-tag="p"><p>Starting with problem discovery and analysis, you'll use ChatGPT for deep research, solution proposals, user persona creation, and user acceptance testing (UAT) writing. </p></li><li data-preset-tag="p"><p>You'll then transition into visual design with Figma, creating user-centric prototypes and UI definitions. </p></li><li data-preset-tag="p"><p>Finally, you'll employ Lovable, a powerful vibe-coding platform, to build and debug a complete web app, backed by Supabase, using natural language prompts.</p></li></ul>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p>By the end of this course, you will:</p><ul><li data-preset-tag="p"><p>Understand the fundamentals and practical applications of generative AI tools like ChatGPT.</p></li><li data-preset-tag="p"><p>Conduct in-depth problem analysis and generate comprehensive solution proposals.</p></li><li data-preset-tag="p"><p>Develop responsive user interface designs and wireframes using Figma.</p></li><li data-preset-tag="p"><p>Rapidly build and deploy web applications through vibe coding with Lovable and Supabase.</p></li><li data-preset-tag="p"><p>Evaluate the impact and integration strategies of AI tools within your organisation’s digital transformation initiatives, and for your personal development.</p></li></ul>
 

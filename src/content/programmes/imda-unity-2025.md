@@ -14,11 +14,11 @@ signUpUrl: "mailto:hello@tinkercademy.com"
 seoTitle: "Game Development Bootcamp with Unity - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
-## Course Overview
+## Course overview
 
 <p>In 2023 and 2024, we ran a 5-day holiday bootcamp for students, teaching game development with Unity! Please stay tuned for updates.</p><p>Unity is a powerful and versatile game engine, with cross-platform features that appeal to both small developers and large game studios. 40% of the top 1000 mobile games and 50% of all new mobile games are built with Unity. By learning Unity, students will be better poised to enter and contribute to these industries.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p><strong>Understand Unity’s interface</strong> and workflow (scenes, GameObjects, components).</p></li><li data-preset-tag="p"><p><strong>Design 2D/3D game levels</strong> using Unity’s tools (Tilemap, ProBuilder, or basic primitives).</p></li><li data-preset-tag="p"><p><strong>Implement game mechanics</strong> (player movement, collisions, physics, scoring systems).</p></li><li data-preset-tag="p"><p><strong>Script in C#</strong> to create interactivity (variables, loops, conditionals, functions).</p></li><li data-preset-tag="p"><p><strong>Work with assets</strong> (import sprites, 3D models, audio) and optimize them for games.</p></li><li data-preset-tag="p"><p><strong>Debug and test</strong> games using Unity’s Console and Play Mode.</p></li><li data-preset-tag="p"><p><strong>Publish a standalone game</strong> (build for WebGL, PC, or mobile).</p></li><li data-preset-tag="p"><p><strong>Apply iterative design</strong> through prototyping, playtesting, and feedback.</p></li></ul>
 

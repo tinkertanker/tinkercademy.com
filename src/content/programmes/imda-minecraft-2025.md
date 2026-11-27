@@ -20,11 +20,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-22
 ---
 
-## Course Overview
+## Course overview
 
 <p>In this programme, students will learn computational thinking skills and develop their own games on two widely popular platforms. Using the MakeCode Arcade platform, a beginner-friendly game development platform from Microsoft, students will be exposed to basic coding concepts and challenged to use code to solve logic programming problems in order to create their own retro-style games. Using Minecraft: Education's integrated coding editor, students will apply block-based coding to create exciting virtual 3D world environments. We believe that as students see their code take effect in a virtual 3D world environment, they will be excited to understand, explore and exploit the full capabilities of coding constructs such as variables, iterations and conditionals to create complex interactions. In 2025, schools could take beginner- and intermediate-level courses, for a total of 2 × 24-hour programmes.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Equip computational thinking skills</p></li><li data-preset-tag="p"><p>Learn the MakeCode Arcade platform and explore basic doing concepts</p></li><li data-preset-tag="p"><p>Use Minecraft: Education's coding editor to apply block-based coding to create virtual 3D world environments</p></li><li data-preset-tag="p"><p>Explore variables, iterations, and conditionals to create complex interactions</p></li></ul>
 

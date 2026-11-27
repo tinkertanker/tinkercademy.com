@@ -23,11 +23,11 @@ publishedAt: 2026-08-15
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p dir="auto">Prompt to Production is a two-day workshop for people who've built something with ChatGPT, Gemini, Lovable, or another vibe coding tool and want to work like an engineer. You'll learn the terminal, Git, and GitHub, build a web app with Claude or Codex, and ship it to a GitHub repository and a live URL.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p dir="auto">By the end, you can:</p><ul dir="auto"><li data-preset-tag="p"><p>Use the terminal to navigate your filesystem, install and run command line apps, and manage your project</p></li><li data-preset-tag="p"><p>Understand Git terminology, and make use of Git and GitHub to host your code and run automations</p></li><li data-preset-tag="p"><p>Pair with Claude or Codex, and review what it writes before you keep it</p></li><li data-preset-tag="p"><p>Open a pull request, review a change, and merge it</p></li><li data-preset-tag="p"><p>Build a database-driven web app running on your laptop, then hosted at a live URL</p></li></ul>
 

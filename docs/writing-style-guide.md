@@ -24,6 +24,7 @@ Used on: homepage, about-us body copy, programme category pages, landing pages.
 - First-person plural "we" for Tinkercademy.
 - Second-person "you" for the visitor.
 - Short sentences, short paragraphs (1–3 sentences).
+- Use sentence case for page and section headings. Keep proper names and acronyms as written.
 - Zero boilerplate. Zero mission-statement cadence. No "Our vision is…".
 - Concrete: name the tool, name the school, name what gets built.
 - One small dry line per page section, maximum. Earn it.

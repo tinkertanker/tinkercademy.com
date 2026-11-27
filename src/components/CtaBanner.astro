@@ -4,7 +4,7 @@
  *
  * Props:
  *   text?  — closing statement (defaults to the standard Tinkercademy blurb)
- *   ctas?  — array of { label, url } pill links (defaults to Our Courses / Our Projects / Contact Us)
+ *   ctas?  — array of { label, url } pill links (defaults to Our courses / Our projects / Contact us)
  */
 import { toSiteHref } from '../lib/links.js';
 
@@ -19,9 +19,9 @@ const DEFAULT_TEXT =
 	'Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond.';
 
 const DEFAULT_CTAS: Cta[] = [
-	{ label: 'Our Courses', url: '/courses-all/' },
-	{ label: 'Our Projects', url: '/showcase/' },
-	{ label: 'Contact Us', url: '/contact-us/' },
+	{ label: 'Our courses', url: '/courses-all/' },
+	{ label: 'Our projects', url: '/showcase/' },
+	{ label: 'Contact us', url: '/contact-us/' },
 ];
 
 const text = Astro.props.text ?? DEFAULT_TEXT;
