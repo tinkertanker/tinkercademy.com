@@ -25,11 +25,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Digital Maker is an introductory course in how smart devices are built and made. Smart fridges, doorbells, Amazon Echo, and Google Home are all Internet of Things (IoT) devices: small computers that sense the world and share data online. You'll build simple versions of your own.</p><p>In this programme, you’ll start by learning the basics of coding and get hands-on with programmable microcontrollers such as the M5Go to craft practical prototypes that react to sound, touch, and light. Then, you'll have a chance to build your own physical devices with 3D printing. </p><p>It suits anyone starting a hardware project, building tech skills, or making things for fun. There's more detail on the <a href="https://iotmaker.tk.sg/" target="_blank">Digital Maker course site</a>.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p>In this introductory course to digital making, you'll dive into the core technologies that power smart devices like smart fridges, smart doorbells, Amazon Echo, and Google Home first using programmable microcontrollers. </p><p>For a complete learning journey, you'll also explore beginning techniques in 3D printing and digital fabrication, with an interactive experience designing, sourcing, and fabricating practical projects. This hands-on approach ensures you gain practical experience and a solid foundation in digital maker development.</p><p>By the end of the program, you will have learned to:</p><ul><li data-preset-tag="p"><p>﻿﻿Understand what "digital making" is, and how it applies to modern prototyping and crafting</p></li><li data-preset-tag="p"><p>﻿﻿Appreciate the world of "Internet of Things" (loT) by sending sensor data online for practical applications</p></li><li data-preset-tag="p"><p>﻿﻿Learn and apply introductory coding concepts to program microcontrollers</p></li><li data-preset-tag="p"><p>Understand the fundamentals of 3D modelling for practical applications</p></li><li data-preset-tag="p"><p>﻿﻿Design and 3D print custom components</p></li></ul>
 

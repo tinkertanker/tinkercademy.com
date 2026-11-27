@@ -25,11 +25,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Build for Mobile is a two-day course in React Native, Meta's framework for building iOS and Android apps from one JavaScript codebase. It's the same framework behind apps such as Instagram, Airbnb, and Discord.</p><p>This hands-on course takes you from JavaScript fundamentals through building complete mobile applications. You'll start with React Native basics and styling, then dive into interactive features with state management, before finally creating a full multi-screen info app with navigation and real-world functionality.</p><p>It suits web developers moving into mobile, and anyone who wants to prototype app ideas quickly. By the end, you'll have three working apps and the basics to start your own. No mobile development experience is needed; bring a laptop.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p>This comprehensive React Native program will teach you modern mobile app development using JavaScript and industry-standard tools.</p><p>You'll gain practical experience building three progressively complex applications, learning essential mobile development patterns and best practices along the way. The course emphasises hands-on coding with immediate feedback through live device testing.</p><p><strong>By the end of the program, you will:</strong></p><ul><li data-preset-tag="p"><p><strong>Try React Native fundamentals</strong> including components, JSX syntax, and styling with React Native's CSS-like StyleSheet system</p></li><li data-preset-tag="p"><p><strong>Build interactive mobile UIs</strong> using state management with React hooks, event handling, and conditional rendering</p></li><li data-preset-tag="p"><p><strong>Navigate between screens</strong> using React Navigation with stack and tab navigators for professional app flows</p></li><li data-preset-tag="p"><p><strong>Work with real data</strong> by importing JSON data, mapping arrays to UI components, and building dynamic lists</p></li><li data-preset-tag="p"><p><strong>Create reusable components</strong> following React patterns for maintainable, scalable mobile applications</p></li><li data-preset-tag="p"><p><strong>Deploy and test apps</strong> on physical devices using Expo, plus set up local development environments</p></li><li data-preset-tag="p"><p><strong>Integrate third-party libraries</strong> like React Native Paper for polished UI components and vector icons</p></li><li data-preset-tag="p"><p><strong>Use modern JavaScript features</strong> including ES6+ syntax, destructuring, template literals, and arrow functions</p></li></ul>
 

@@ -18,11 +18,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-22
 ---
 
-## Course Overview
+## Course overview
 
 <p>Students will learn game development using Phaser.js, a powerful HTML5 framework for creating interactive 2D games. Through hands-on projects, they will explore game design fundamentals, including sprite animation, physics, user input, and level creation. They will apply structured development workflows—planning, prototyping, and testing—to build engaging browser-based games from scratch.</p><p>This course is designed for beginners with no prior programming or game development experience but are eager to learn how to craft fun, playable games. By the end, students will have the skills to bring their game ideas to life and share them with others.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Familiarize with HTML, JavaScript, VSCode</p></li><li data-preset-tag="p"><p>Design and build 2D games using Phaser.js</p></li><li data-preset-tag="p"><p>Implement game mechanics like character movement, scoring systems, and level transitions.</p></li><li data-preset-tag="p"><p>Work with assets (images, animations, sound) and optimize them for web-based games.</p></li><li data-preset-tag="p"><p>Debug and test games to ensure smooth gameplay and fix common issues.</p></li></ul>
 

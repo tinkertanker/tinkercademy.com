@@ -27,13 +27,13 @@ publishedAt: 2026-04-23
 updatedAt: 2026-10-31
 ---
 
-## Course Overview
+## Course overview
 
 Knowledge-work teams spend hours on the same loops: reviewing submissions, pulling figures, drafting documents, updating trackers, and preparing briefings. Automating a poor process only makes its problems run faster. This workshop starts with business process re-engineering, then introduces agents where they can genuinely reduce handoffs, waiting time, and repetitive work.
 
 Participants first work with the same realistic, deliberately messy simulated organisation: a shared mailbox, document store, submissions database, and survey data. Together, they map and redesign its processes before building governed agentic workflows. On the third day, participants apply the same method to a real workflow of their own and ship a working capstone.
 
-## Lesson Outcomes
+## Lesson outcomes
 
 By the end of this course, you will be able to:
 
@@ -43,7 +43,7 @@ By the end of this course, you will be able to:
 - Build reusable agent skills for common knowledge-work tasks, document them clearly, and adapt them across platforms.
 - Turn a real workflow into a working capstone with before-and-after maps, a governance block, and an estimate of time saved.
 
-## Course Outline
+## Course outline
 
 ### Day 1: Redesign first, automate second
 

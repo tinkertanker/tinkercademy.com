@@ -101,11 +101,11 @@ Optional fields:
 Use normal Markdown for the body. The current convention is:
 
 ```md
-## Course Overview
+## Course overview
 
 ...
 
-## Lesson Outcomes
+## Lesson outcomes
 
 ...
 

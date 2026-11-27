@@ -24,11 +24,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Enter the Metaverse is a two-day introduction to Unity, the game engine behind many mobile games, for building augmented reality (AR) and virtual reality (VR) experiences. It suits people planning AR/VR projects or digital twins.</p><p>In this course, we'll guide you through Unity's core features and functionalities. On Day 1, you'll get familiar with the Unity interface, learn some C# scripting, and start creating interactive 3D environments. Then on Day 2, we'll dive into advanced AR/VR techniques and show you how to build amazing experiences for the metaverse.</p><p>By the end, you'll know your way around Unity well enough to start your own game, AR app, or virtual world. There's more detail on the <a href="https://unityarvr.tk.sg/" target="_blank">Unity AR/VR course site</a>.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p>In this broad introduction to Unity development, you'll dive into the core technologies that power interactive 3D experiences and get hands-on experience building your own versatile projects using Unity.</p><p>For a complete learning journey, you'll also explore advanced techniques in AR/VR development through practical projects, gaining exposure to Unity's powerful capabilities for creating immersive experiences. This hands-on approach ensures you gain practical experience and a solid foundation in Unity development.</p><p>By the end of the programme, you will learn to:</p><ul><li data-preset-tag="p"><p>Understand the fundamentals of Unity development, including the Unity interface, C# scripting, and creating interactive 3D environments.</p></li><li data-preset-tag="p"><p>Create a basic AR/VR application using Unity's advanced features (Day 2).</p></li><li data-preset-tag="p" style="--framer-text-color: rgb(255, 255, 255); --framer-font-size: 17.3333px; --framer-text-transform: none; --framer-text-stroke-width: 0px;"><p>Learn how to integrate physics, animations, and user interactions to create compelling and immersive experiences (Day 2).</p></li></ul>
 

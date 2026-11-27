@@ -14,11 +14,11 @@ signUpUrl: "mailto:yjsoon@tk.sg?subject=Infocomm+LEARN+Roadmap"
 seoTitle: "App Prototyping with Keynote and Swift Playgrounds - Tinkercademy: Coding and Making for Schools and Professionals"
 ---
 
-## Course Overview
+## Course overview
 
 <p>Get started with prototyping for building mobile apps using real-world design principles from Apple’s Human Interface Guidelines. </p><p>This programme is suitable for students who are new to coding, and are interested in designing and prototyping mobile apps using Keynote. </p><p>Beyond no-code prototyping, students can learn some syntax-based programming in Apple’s Swift language by solving fun, interactive coding puzzles and creating simple apps in SwiftUI.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Know and implement app design concepts from Apple’s Human Interface Guidelines</p></li><li data-preset-tag="p"><p>Understand the design thinking process in relation to app development</p></li><li data-preset-tag="p"><p>Create low-fidelity and high-fidelity app prototype designs</p></li><li data-preset-tag="p"><p>Create interactive app prototypes to showcase ideas</p></li><li data-preset-tag="p"><p>Read and write basic Swift code to solve coding puzzles and create simple apps.</p></li></ul>
 

@@ -27,7 +27,7 @@ publishedAt: 2026-10-17
 updatedAt: 2026-10-23
 ---
 
-## Course Overview
+## Course overview
 
 <p>UI/UX design and Figma prototyping for primary, secondary, and junior college students. Students begin with user needs, personas, user flows, and wireframes, then design app screens, apply visual-system principles, and build clickable prototypes tested with real users.</p>
 <p>These are the same research, design, and prototyping practices used by product teams in industry, and the skills involved — understanding users, organising ideas, communicating visually, and improving work through feedback — carry into computing, design, and project work at every level. No design or coding experience is needed.</p>
@@ -37,7 +37,7 @@ updatedAt: 2026-10-23
 	<li data-preset-tag="p"><p><strong>Secondary 1–5, JC 1–2:</strong> industry-grade UI/UX plus a guided introduction to AI-enabled prototyping with Figma Make — students practise a prompt-and-evaluate cycle, comparing AI-generated outputs against their own intentions rather than accepting them wholesale.</p></li>
 </ul>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul>
 	<li data-preset-tag="p"><p>Frame digital product challenges around users, personas, needs, and constraints.</p></li>

@@ -24,11 +24,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Digital Making with micro:bit &amp; IoT is an introductory course for adults on coding physical devices. You'll program the micro:bit, a pocket-sized microcontroller, and connect it to the Internet of Things (IoT) to build small smart devices: things that sense their surroundings, respond, and send data online.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Understand the fundamentals of micro:bit programming: Students will learn basic programming concepts and how to use the micro:bit's built-in features to create simple interactive projects. </p></li><li data-preset-tag="p"><p>Explore the basics of IoT and its applications: Students will gain knowledge about the Internet of Things, its components, and real-world examples of IoT devices. </p></li><li data-preset-tag="p"><p>Design and implement a small-scale IoT project: Students will apply their understanding of micro:bit programming and IoT concepts to create a functional IoT project, such as a remote-controlled device or a sensor-based automation system.</p></li></ul>
 

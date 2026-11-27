@@ -20,13 +20,13 @@ publishedAt: 2026-04-18
 updatedAt: 2026-11-02
 ---
 
-## Course Overview
+## Course overview
 
 <p>Unleash the Potential of Blockchain Technology is an SMU Academy course, taught by Tinkercademy, on how blockchains work and where they're used. You'll take apart the building blocks (cryptography, signatures, and consensus), compare real implementations such as Bitcoin, Ethereum, and Stellar, and build a simple decentralised app on Stellar. Enrolment is through the <a href="https://academy.smu.edu.sg/courses/certificate-technology-foundations-unleash-potential-blockchain-technology" target="_blank">SMU Academy course page</a>.</p>
 
 <p>This module is only offered to participants taking SMU Academy’s Industry Practice Master of Digital Economy. Enquiries and registration are handled directly by SMU Academy; refer to its course page for current intakes, fees and eligibility.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul><li data-preset-tag="p"><p>Understand what is a blockchain, how&nbsp;and why it works</p></li><li data-preset-tag="p"><p>Explain relevant concepts such as cryptography and signatures that make blockchain relevant</p></li></ul>
 

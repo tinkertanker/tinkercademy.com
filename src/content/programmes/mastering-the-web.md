@@ -25,11 +25,11 @@ publishedAt: 2026-04-18
 updatedAt: 2026-10-20
 ---
 
-## Course Overview
+## Course overview
 
 <p>Mastering the Web is a one- or two-day course on how web applications work, from the page in your browser to the server and database behind it. It answers a simple question: what actually happens between clicking a link and seeing a working web app?</p><p>This programme takes you from the basics of HTML, CSS, and JavaScript on the frontend (day 1), to servers and databases on the backend (day 2). Get a taste of web development, and gain the skills to communicate effectively with tech teams and understand the web's potential.</p><p>It suits founders with a web app idea, and anyone who works with developers and wants to follow the conversation. There's more detail on the <a href="https://webmaster.tk.sg/" target="_blank">Mastering the Web course site</a>.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p>In this broad web development programme, you will learn to appreciate core technologies that power the internet, and get hands-on building your own versatile websites with core front-end web technologies: HTML, CSS, and JavaScript.</p><p>Gain exposure too to server-side web development through hands-on projects involving Python and Flask, a flexible web development framework. Through this process, you will gain practical experience and a solid foundation in web development.</p><p>By the end of the programme, you will learn:</p><ul><li data-preset-tag="p"><p>Understand the fundamentals of front-end web development with the HTML, CSS, and JavaScript languages</p></li><li data-preset-tag="p"><p>Create a basic back-end web application using Flask and Python programming (day 2)</p></li><li data-preset-tag="p"><p>What application programming interfaces (APIs) are, and how they let you access complex capabilities from providers such as Google and OpenAI (day 2)</p></li></ul>
 

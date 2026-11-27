@@ -887,17 +887,17 @@
     "closing_statement": "Join us for the best coding and digital making experiences for students, teachers, and professionals in Singapore and beyond.",
     "closing_ctas": [
       {
-        "label": "Our Courses",
+        "label": "Our courses",
         "url": "https://tinkercademy.com/courses-all",
         "type": "internal"
       },
       {
-        "label": "Our Projects",
+        "label": "Our projects",
         "url": "https://tinkercademy.com/showcase",
         "type": "internal"
       },
       {
-        "label": "Contact Us",
+        "label": "Contact us",
         "url": "https://tinkercademy.com/contact-us",
         "type": "internal"
       }
@@ -906,9 +906,9 @@
   {
     "path": "/professionals",
     "slug": "professionals",
-    "title": "Data, Coding, IoT Tinkering, and Tech Productivity Training",
+    "title": "Data, coding, IoT tinkering, and tech productivity training",
     "description": "Real skills for real impact.",
-    "hero_title": "Data, Coding, IoT Tinkering, and Tech Productivity Training",
+    "hero_title": "Data, coding, IoT tinkering, and tech productivity training",
     "hero_lead": "Real skills for real impact.",
     "hero_image": "/images/banners/professionals.webp",
     "seo": {
@@ -1568,9 +1568,9 @@
   {
     "path": "/microbit",
     "slug": "microbit",
-    "title": "micro:bit Tutorials",
+    "title": "micro:bit tutorials",
     "description": "Get started with our BBC Micro:bit Kit and the Breakout Board here!",
-    "hero_title": "micro:bit Tutorials",
+    "hero_title": "micro:bit tutorials",
     "hero_lead": "Get started with our BBC Micro:bit Kit and the Breakout Board here!",
     "hero_image": "/images/banners/microbit.webp",
     "seo": {
@@ -3339,9 +3339,9 @@
   {
     "path": "/schools",
     "slug": "schools",
-    "title": "Code, Tinker, and Make with Us",
+    "title": "Code, tinker, and make with us",
     "description": "Real skills for real impact.",
-    "hero_title": "Code, Tinker, and Make with Us",
+    "hero_title": "Code, tinker, and make with us",
     "hero_lead": "Real skills for real impact.",
     "hero_image": "/images/banners/schools.webp",
     "seo": {
@@ -5856,9 +5856,9 @@
   {
     "path": "/individuals",
     "slug": "individuals",
-    "title": "Self-directed Learning Opportunities",
+    "title": "Self-directed learning opportunities",
     "description": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses",
-    "hero_title": "Self-directed Learning Opportunities",
+    "hero_title": "Self-directed learning opportunities",
     "hero_lead": "Stay ahead of disruptive technologies and drive digital transformation with our expert-led technical training courses",
     "hero_image": "/images/banners/individuals.webp",
     "seo": {
@@ -6780,7 +6780,7 @@
     "course_cards": [
       {
         "slug": "ri-futurecreate-maker-programme-2025",
-        "title": "Popular Courses",
+        "title": "Popular courses",
         "audience_label": "Students",
         "duration": "",
         "blurb": ""
@@ -7052,9 +7052,9 @@
   {
     "path": "/infocomm-club",
     "slug": "infocomm-club",
-    "title": "Infocomm Club Courses",
+    "title": "Infocomm Club courses",
     "description": "Apply Apple’s design principles and create beautiful prototypes using Keynote.",
-    "hero_title": "Infocomm Club Courses",
+    "hero_title": "Infocomm Club courses",
     "hero_lead": "Apply Apple’s design principles and create beautiful prototypes using Keynote.",
     "hero_image": "/images/banners/infocomm-club.webp",
     "seo": {

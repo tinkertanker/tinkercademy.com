@@ -31,11 +31,11 @@ publishedAt: 2026-08-13
 updatedAt: 2026-10-22
 ---
 
-## Course Overview
+## Course overview
 
 <p dir="auto">AI coding agents can now plan, edit, test, and review software inside a development environment. This two-day workshop teaches you how to direct that work, keep it grounded in a real user need, and decide whether the result is ready to ship.</p><p dir="auto">It's for experienced software developers. Through five practical projects with <strong>Claude Code or Codex</strong>, you'll move from small individual builds to an unfamiliar agentic codebase and a team AI product. Along the way, you'll work with live data, persistent project instructions, reusable capabilities, parallel workflows, external tools, and structured review.</p><p dir="auto">The workshop combines product thinking with hands-on engineering. You'll spend less time typing every line and more time framing the problem, setting useful constraints, inspecting the agent's work, testing assumptions, and improving what you build.</p>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <p dir="auto">By the end of this course, you will be able to:</p><ul dir="auto"><li data-preset-tag="p"><p><strong>Frame a useful product before building it.</strong> Identify the user, clarify the problem, control scope, and turn an idea into a plan an agent can act on.</p></li><li data-preset-tag="p"><p><strong>Direct an agent through a real codebase.</strong> Provide durable context and constraints, manage long-running work, and choose when to prompt, plan, intervene, or rewind.</p></li><li data-preset-tag="p"><p><strong>Connect software to the wider world.</strong> Work with live data, AI models, external tools, and reusable agent capabilities while handling configuration and secrets responsibly.</p></li><li data-preset-tag="p"><p><strong>Collaborate safely with people and agents.</strong> Divide work, use branches and worktrees, review pull requests, and set clear goals and limits for parallel or cloud-based agents.</p></li><li data-preset-tag="p"><p><strong>Judge and improve the result.</strong> Reproduce problems, test important assumptions, use evidence to prioritise changes, and polish a working product for its intended audience.</p></li></ul>
 

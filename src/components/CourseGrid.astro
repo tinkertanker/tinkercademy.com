@@ -1,11 +1,11 @@
 ---
 /**
  * CourseGrid — programme card grid with page title, search placeholder,
- * and the "Let's Work Together!" nav pill section at the bottom.
+ * and the "Let's work together!" nav pill section at the bottom.
  *
  * Props:
  *   programmes     — array of { slug, title, heroImage, audienceLabel, audienceId, duration, shortDescription }
- *   pageTitle      — heading above the grid (e.g. "All Courses")
+ *   pageTitle      — heading above the grid (e.g. "All courses")
  *   navPills?      — array of { label, url } for the bottom navigation row
  */
 import ProgrammeCard from './ProgrammeCard.astro';
@@ -44,7 +44,7 @@ interface Props {
 
 const {
 	programmes,
-	pageTitle = 'All Courses',
+	pageTitle = 'All courses',
 	navPills = [],
 	pagePath = '/courses-all',
 	filterLabels = { audience: {}, domain: {}, platform: {} },
@@ -98,11 +98,11 @@ const searchId = `course-search-${pageTitle.toLowerCase().replace(/[^a-z0-9]+/g,
 	</div>
 </section>
 
-{/* Bottom "Let's Work Together!" nav section */}
+{/* Bottom "Let's work together!" nav section */}
 {navPills.length > 0 && (
 	<section class="pivot-section">
 		<div class="shell">
-			<h2 class="pivot-section__heading">Let's Work Together!</h2>
+			<h2 class="pivot-section__heading">Let's work together!</h2>
 			<div class="pivot-section__pills">
 				{navPills.map((pill) => (
 					<a class="pivot-pill" href={pill.url}>{pill.label}</a>

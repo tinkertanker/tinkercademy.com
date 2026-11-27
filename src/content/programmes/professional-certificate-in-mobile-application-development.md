@@ -17,7 +17,7 @@ publishedAt: 2026-04-18
 updatedAt: 2026-11-02
 ---
 
-## Course Overview
+## Course overview
 
 Build mobile apps that connect useful interfaces to real data. Learn to design and prototype apps for iOS and Android, work with databases and APIs, and connect mobile clients to web back-ends.
 

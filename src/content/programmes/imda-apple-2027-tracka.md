@@ -27,7 +27,7 @@ publishedAt: 2026-10-17
 updatedAt: 2026-10-23
 ---
 
-## Course Overview
+## Course overview
 
 <p>A friendly, structured introduction to app design for primary, secondary, and junior college students. Track A is ideal for schools that want students to build app-design confidence before deeper coding begins: students learn to identify user needs, plan screens, test flows, and present a clickable prototype.</p>
 <p>Students explore design thinking, user journeys, visual storytelling, accessibility, and interactive prototyping using Keynote on iPad. They learn to break down app ideas into screens, actions, and user flows, while building confidence in computational thinking.</p>
@@ -38,7 +38,7 @@ updatedAt: 2026-10-23
 	<li data-preset-tag="p"><p><strong>Secondary 1–5, JC 1–2:</strong> frame problems, design user flows with accessibility in mind, build a high-fidelity prototype, and connect it to Swift programming concepts.</p></li>
 </ul>
 
-## Lesson Outcomes
+## Lesson outcomes
 
 <ul>
 	<li data-preset-tag="p"><p>Apply design thinking to identify user needs and app opportunities.</p></li>

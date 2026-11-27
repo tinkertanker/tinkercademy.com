@@ -17,7 +17,7 @@ publishedAt: 2026-04-18
 updatedAt: 2026-11-02
 ---
 
-## Course Overview
+## Course overview
 
 Learn to design and build web applications, from the interface people use to the server and database behind it. Start with UI design and prototypes, then work through front-end code, back-end services and full-stack projects.
 

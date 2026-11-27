@@ -119,7 +119,7 @@ test('programme Markdown alternatives preserve content and are discoverable', as
 			assert.ok(markdown.includes(`## ${data.fit.question}`), slug);
 			assert.ok(markdown.includes(data.fit.answer), slug);
 		}
-		assert.match(markdown, /## Course Overview/);
+		assert.match(markdown, /## Course overview/);
 		assert.doesNotMatch(markdown, /<(?:p|ul|li|table|div)\b|heroImage:|audienceIds:/);
 		assert.equal($('head link[rel="alternate"][type="text/markdown"]').attr('href'), `${canonical}index.md`);
 		assert.equal($('head link[rel="describedby"]').attr('href'), 'https://tinkercademy.com/llms.txt');
