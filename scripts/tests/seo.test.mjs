@@ -275,7 +275,7 @@ test('web/mobile are ordinary Tinkercademy courses with normal enquiries and no 
 		assert.equal($('.prog-hero__actions a').first().text().trim(), 'Enquire now');
 		assert.equal($('.prog-hero__actions a').first().attr('href'), '#enquire');
 		assert.equal($('.prog-hero__actions a').last().attr('href'), 'mailto:hello@tk.sg');
-		assert.equal($('#enquire h2').text(), 'Submit Enquiry');
+		assert.equal($('#enquire h2').text(), 'Submit enquiry');
 		assert.equal($('form.contact-form').length, 1);
 		assert.equal($('input[name="q40_course"]').attr('value'), title);
 		assert.equal($('a[href*="academy.smu.edu.sg"]').length, 0);
